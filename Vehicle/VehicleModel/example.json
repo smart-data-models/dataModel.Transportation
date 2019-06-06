@@ -1,0 +1,11 @@
+{
+      "id": "vehiclemodel:econic",
+      "type": "VehicleModel",
+      "name": "MBenz-Econic2014",
+      "brandName": "Mercedes Benz",
+      "modelName": "Econic",
+      "manufacturerName": "Daimler",
+      "vehicleType": "lorry",
+      "cargoVolume": 1000,
+      "fuelType": "diesel"
+}
