@@ -18,25 +18,25 @@ A JSON Schema corresponding to this data model can be found
 
 -   `source` : A sequence of characters giving the source of the entity data.
 
-    -   Attribute type: Text or URL
+    -   Attribute type: Property. Text or URL
     -   Optional
 
 -   `dataProvider` : Specifies the URL to information about the provider of this
     information
 
-    -   Attribute type: URL
+    -   Attribute type: Property. URL
     -   Optional
 
 -   `dateCreated` : Entity's creation timestamp.
 
-    -   Attribute type: [DateTime](https://schema.org/DateTime)
+    -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
     -   Normative References:
         [http://schema.org/DateTime](http://schema.org/DateTime)
     -   Read-Only. Automatically generated.
 
 -   `dateModified` : Last update timestamp of this entity.
 
-    -   Attribute type: [DateTime](https://schema.org/DateTime)
+    -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
     -   Normative References:
         [http://schema.org/DateTime](http://schema.org/DateTime)
     -   Read-Only. Automatically generated.
@@ -44,7 +44,7 @@ A JSON Schema corresponding to this data model can be found
 -   `location` : Geolocation of the station represented by a GeoJSON
     (Multi)Polygon or Point.
 
-    -   Attribute type: `geo:json`.
+    -   Attribute type: GeoProperty. `geo:json`.
     -   Normative References:
         [https://tools.ietf.org/html/rfc7946](https://tools.ietf.org/html/rfc7946)
     -   Mandatory if `address` is not defined.
@@ -57,20 +57,20 @@ A JSON Schema corresponding to this data model can be found
 
 -   `name` : Name given to the docking station.
 
-    -   Attribute type: [Text](http://schema.org/Number)
+    -   Attribute type: Property. [Text](http://schema.org/Number)
     -   Normative References: [https://schema.org/name](https://schema.org/name)
     -   Mandatory
 
 -   `description` : Description about the bike hire docking station.
 
-    -   Attribute type: [Text](http://schema.org/Number)
+    -   Attribute type: Property. [Text](http://schema.org/Number)
     -   Normative References:
         [https://schema.org/description](https://schema.org/description)
     -   Optional
 
 -   `image` : A URL containing a photo of this docking station.
 
-    -   Attribute type: [image (URL)](http://schema.org/Number)
+    -   Attribute type: Property. [image (URL)](http://schema.org/Number)
     -   Normative References:
         [https://schema.org/image](https://schema.org/image)
     -   Optional
@@ -78,14 +78,14 @@ A JSON Schema corresponding to this data model can be found
 -   `totalSlotNumber` : The total number of slots offered by this bike docking
     station.
 
-    -   Attribute type: [Number](http://schema.org/Number)
+    -   Attribute type: Property. [Number](http://schema.org/Number)
     -   Allowed values: Any positive integer number or 0.
     -   Optional
 
 -   `freeSlotNumber` : The number of slots available for returning and parking
     bikes. It must lower or equal than `totalSlotNumber`.
 
-    -   Attribute type: [Number](http://schema.org/Number)
+    -   Attribute type: Property. [Number](http://schema.org/Number)
     -   Allowed values: A positive integer number, including 0. It must lower or
         equal than `totalSlotNumber`.
     -   Metadata:
@@ -97,7 +97,7 @@ A JSON Schema corresponding to this data model can be found
     cannot be used to hire or park a bike. It must lower or equal than
     `totalSlotNumber`.
 
-    -   Attribute type: [Number](http://schema.org/Number)
+    -   Attribute type: Property. [Number](http://schema.org/Number)
     -   Allowed values: A positive integer number, including 0.
     -   Metadata:
         -   `timestamp` : Timestamp of the last attribute update
@@ -107,7 +107,7 @@ A JSON Schema corresponding to this data model can be found
 -   `availableBikeNumber` : The number of bikes available in the bike hire
     docking station to be hired by users.
 
-    -   Attribute type: [Number](http://schema.org/Number)
+    -   Attribute type: Property. [Number](http://schema.org/Number)
     -   Allowed values: A positive integer number, including 0.
     -   Metadata:
         -   `timestamp` : Timestamp of the last attribute update.
@@ -122,7 +122,7 @@ A JSON Schema corresponding to this data model can be found
 
 -   `status` : Status of the bike hire docking station.
 
-    -   Attribute type: List of [Text](http://schema.org/Text)
+    -   Attribute type: Property. List of [Text](http://schema.org/Text)
     -   Metadata:
         -   `timestamp` : Timestamp of the last attribute update.
             -   Type: [DateTime](https://schema.org/DateTime)
@@ -136,12 +136,12 @@ A JSON Schema corresponding to this data model can be found
     depend on the application or target city. For instance, it can be a
     neighbourhood, burough or district.
 
-    -   Attribute type: [Text](http://schema.org/Text)
+    -   Attribute type: Property. [Text](http://schema.org/Text)
     -   Optional
 
 -   `owner` : Bike hire docking station's owner.
 
-    -   Attribute type: [Text](http://schema.org/Text)
+    -   Attribute type: Property. List of [Text](http://schema.org/Text) or List of URIs
     -   Optional
 
 -   `provider` : Bike hire service provider.
@@ -155,10 +155,9 @@ A JSON Schema corresponding to this data model can be found
         [https://schema.org/contactPoint](https://schema.org/contactPoint)
     -   Optional
 
-**Note**: JSON Schemas only capture the NGSI simplified representation, this
-means that to test the JSON schema examples with a
-[FIWARE NGSI version 2](http://fiware.github.io/specifications/ngsiv2/stable)
-API implementation, you need to use the `keyValues` mode (`options=keyValues`).
+**Note**: JSON Schemas are intended to capture the data type and associated
+constraints of the different Attributes, regardless their final representation
+format in NGSI(v2, LD).
 
 ## Examples
 
@@ -211,22 +210,66 @@ Bike hire docking station real time data in Malaga
 
 ```json
 {
-   "id": "malaga-bici-7",
-   "type": "BikeHireDockingStation",
-   "name": "07-Diputacion",
-   "location": {
-	 "coordinates": [-4.43573, 36.699694],
-	  "type": "Point"
-   },
-   "availableBikeNumber": 18,
-   "freeSlotNumber": 10,
-   "address": {
-	  "streetAddress": "Paseo Antonio Banderas (Diputación)",
-	  "addressLocality": "Malaga",
-	  "addressCountry": "España"
-   },
-   "description": "Punto de alquiler de bicicletas próximo a Diputación",
-   "dateModified": "2017-05-09T09:25:55.00Z"
+    "id": "malaga-bici-7",
+    "type": "BikeHireDockingStation",
+    "name": "07-Diputacion",
+    "location": {
+        "coordinates": [-4.43573, 36.699694],
+        "type": "Point"
+    },
+    "availableBikeNumber": 18,
+    "freeSlotNumber": 10,
+    "address": {
+        "streetAddress": "Paseo Antonio Banderas (Diputación)",
+        "addressLocality": "Malaga",
+        "addressCountry": "España"
+    },
+    "description": "Punto de alquiler de bicicletas próximo a Diputación",
+    "dateModified": "2017-05-09T09:25:55.00Z"
+}
+```
+
+### LD Example
+
+Sample uses the NGSI-LD representation
+
+```json
+{
+    "id": "urn:ngsi-ld:BikeHireDockingStation:Bcn-BikeHireDockingStation-1",
+    "type": "BikeHireDockingStation",
+    "status": {
+        "type": "Property",
+        "value": "working"
+    },
+    "availableBikeNumber": {
+        "type": "Property",
+        "value": 20,
+        "observedAt": "2018-09-25T12:00:00Z"
+    },
+    "freeSlotNumber": {
+        "type": "Property",
+        "value": 10
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [2.180042, 41.397952]
+        }
+    },
+    "address": {
+        "type": "Property",
+        "value": {
+            "addressCountry": "ES",
+            "addressLocality": "Barcelona",
+            "streetAddress": "Gran Via Corts Catalanes,760",
+            "type": "PostalAddress"
+        }
+    },
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://schema.lab.fiware.org/ld/context"
+    ]
 }
 ```
 

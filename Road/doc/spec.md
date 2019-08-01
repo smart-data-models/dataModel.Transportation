@@ -14,7 +14,7 @@ This entity is primarily associated with the Automotive and Smart City vertical
 segments and related IoT applications.
 
 This data model has been developed in cooperation with mobile operators and the
-[GSMA](http://www.gsma.com/connectedliving/iot-big-data/).
+[GSMA](https://www.gsma.com/iot/iot-big-data/).
 
 ## Data Model
 
@@ -26,23 +26,23 @@ The data model is defined as shown below:
 
 -   `source` : A sequence of characters giving the source of the entity data.
 
-    -   Attribute type: Text or URL
+    -   Attribute type: Property. Text or URL
     -   Optional
 
 -   `dataProvider` : Specifies the URL to information about the provider of this
     information
 
-    -   Attribute type: URL
+    -   Attribute type: Property. URL
     -   Optional
 
 -   `dateCreated` : Entity's creation timestamp.
 
-    -   Attribute type: [DateTime](https://schema.org/DateTime)
+    -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
     -   Read-Only. Automatically generated.
 
 -   `dateModified` : Last update timestamp of this entity.
 
-    -   Attribute type: [DateTime](https://schema.org/DateTime)
+    -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
     -   Read-Only. Automatically generated.
 
 -   `name` : Name given to this road, for instance `M-30`.
@@ -64,14 +64,14 @@ The data model is defined as shown below:
 
 -   `roadClass` : The classification of this road.
 
-    -   Attribute type: [Text](https://schema.org/Text)
+    -   Attribute type: Property. [Text](https://schema.org/Text)
     -   Allowed values: Those described by
         [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Key:highway).
     -   Mandatory
 
 -   `refRoadSegment` : Road segments which define this road.
 
-    -   Attribute type: List of references to entities of type
+    -   Attribute type: Relationship. List of references to entities of type
         [RoadSegment](../../RoadSegment/doc/spec.md).
     -   Mandatory if `location` is not defined
 
@@ -79,25 +79,24 @@ The data model is defined as shown below:
 
     -   Normative References:
         [https://tools.ietf.org/html/rfc7946](https://tools.ietf.org/html/rfc7946)
-    -   Attribute type: `geo:json`
+    -   Attribute type: GeoProperty. `geo:json`
     -   Mandatory if `refRoadSegment` is not defined
 
 -   `length` : Total length of this road in kilometers.
 
-    -   Attribute type: [Number](https://schema.org/Number)
+    -   Attribute type: Property. [Number](https://schema.org/Number)
     -   See also [https://schema.org/length](https://schema.org/length)
     -   Default unit: Kilometer (Km)
     -   Optional
 
 -   `responsible` : Responsible for the raod i.e. the organism or company in
     charge of its maintenance.
-    -   Attribute type: [Text](https://schema.org/Text)
+    -   Attribute type: Property. [Text](https://schema.org/Text)
     -   Optional
 
-**Note**: JSON Schemas only capture the NGSI simplified representation, this
-means that to test the JSON schema examples with a
-[FIWARE NGSI version 2](http://fiware.github.io/specifications/ngsiv2/stable)
-API implementation, you need to use the `keyValues` mode (`options=keyValues`).
+**Note**: JSON Schemas are intended to capture the data type and associated
+constraints of the different Attributes, regardless their final representation
+format in NGSI(v2, LD).
 
 ## Examples
 
@@ -155,6 +154,52 @@ Sample uses simplified representation for data consumers `?options=keyValues`
         "Spain-RoadSegment-A62-0-355-backwards"
     ],
     "responsible": "Ministerio de Fomento - Gobierno de España"
+}
+```
+
+### LD Example
+
+Sample uses the NGSI-LD representation
+
+```json
+{
+    "id": "urn:ngsi-ld:Road:Spain-Road-A62",
+    "type": "Road",
+    "refRoadSegment": {
+        "type": "Relationship",
+        "object": [
+            "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-forwards",
+            "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-backwards"
+        ]
+    },
+    "roadClass": {
+        "type": "Property",
+        "value": "motorway"
+    },
+    "description": {
+        "type": "Property",
+        "value": "Autov\u00eda de Castilla"
+    },
+    "responsible": {
+        "type": "Property",
+        "value": "Ministerio de Fomento - Gobierno de Espa\u00f1a"
+    },
+    "length": {
+        "type": "Property",
+        "value": 355
+    },
+    "alternateName": {
+        "type": "Property",
+        "value": "E-80"
+    },
+    "name": {
+        "type": "Property",
+        "value": "A-62"
+    },
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://schema.lab.fiware.org/ld/context"
+    ]
 }
 ```
 

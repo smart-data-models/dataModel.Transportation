@@ -20,26 +20,26 @@ A JSON Schema corresponding to this data model can be found
 -   `dataProvider` : Specifies the URL to information about the provider of this
     information
 
-    -   Attribute type: URL
+    -   Attribute type: Property. URL
     -   Optional
 
 -   `dateCreated` : Entity's creation timestamp.
 
-    -   Attribute type: [DateTime](https://schema.org/DateTime)
+    -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
     -   Normative References:
         [http://schema.org/DateTime](http://schema.org/DateTime)
     -   Read-Only. Automatically generated.
 
 -   `dateModified` : Last update timestamp of this entity.
 
-    -   Attribute type: [DateTime](https://schema.org/DateTime)
+    -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
     -   Normative References:
         [http://schema.org/DateTime](http://schema.org/DateTime)
     -   Read-Only. Automatically generated.
 
 -   `source` : A sequence of characters giving the source of the entity data.
 
-    -   Attribute type: [Text](https://schema.org/Text) or
+    -   Attribute type: Property. [Text](https://schema.org/Text) or
         [URL](https://schema.org/URL)
     -   Optional
 
@@ -85,7 +85,7 @@ A JSON Schema corresponding to this data model can be found
     -   Mandatory
 
 -   `allowedVehicleType` : Vehicle type(s) which can be charged.
-    -   Attribute type: List of [Text](http://schema.org/Text)
+    -   Attribute type: GeoProperty. List of [Text](http://schema.org/Text)
     -   Allowed Values: ( `bicycle`, `bus`, `car`, `caravan`, `motorcycle`,
         `motorscooter`, `truck`)
     -   Mandatory
@@ -106,7 +106,7 @@ A JSON Schema corresponding to this data model can be found
 
 -   `availableCapacity` : The number of vehicles which currently can be charged.
 
-    -   Attribute type: [Number](http://schema.org/Number)
+    -   Attribute type: Property. [Number](http://schema.org/Number)
     -   Allowed values: A positive integer number, including 0. It must lower or
         equal than `capacity`.
     -   Metadata:
@@ -157,8 +157,8 @@ A JSON Schema corresponding to this data model can be found
 
 -   `owner` : Charging station's owner.
 
-    -   Attribute type: Property. [Text](http://schema.org/Text) or
-        [URL](http://schema.org/URL)
+    -   Attribute type: Property. List of [Text](http://schema.org/Text) or List
+        of URIs
     -   Optional
 
 -   `operator` : Charging station's operator.
@@ -192,10 +192,9 @@ A JSON Schema corresponding to this data model can be found
         [https://schema.org/acceptedPaymentMethod](https://schema.org/acceptedPaymentMethod)
     -   Optional
 
-**Note**: JSON Schemas only capture the NGSI simplified representation, this
-means that to test the JSON schema examples with a
-[FIWARE NGSI version 2](http://fiware.github.io/specifications/ngsiv2/stable)
-API implementation, you need to use the `keyValues` mode (`options=keyValues`).
+**Note**: JSON Schemas are intended to capture the data type and associated
+constraints of the different Attributes, regardless their final representation
+format in NGSI(v2, LD).
 
 ## Examples
 
@@ -278,6 +277,71 @@ Sample uses simplified representation for data consumers `?options=keyValues`
     "allowedVehicleType": ["car"],
     "chargeType": ["free"],
     "source": "https://openchargemap.org/"
+}
+```
+
+### LD Example
+
+Sample uses the NGSI-LD representation
+
+```json
+{
+    "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",
+    "type": "EVChargingStation",
+    "socketType": {
+        "type": "Property",
+        "value": ["Wall_Euro"]
+    },
+    "capacity": {
+        "type": "Property",
+        "value": 2
+    },
+    "name": {
+        "type": "Property",
+        "value": "Agencia de Innovaci\u00f3n"
+    },
+    "allowedVehicleType": {
+        "type": "Property",
+        "value": ["car"]
+    },
+    "source": {
+        "type": "Property",
+        "value": "https://openchargemap.org/"
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [-4.747901, 41.618265]
+        }
+    },
+    "chargeType": {
+        "type": "Property",
+        "value": ["free"]
+    },
+    "address": {
+        "type": "Property",
+        "value": {
+            "addressLocality": "Valladolid",
+            "addressCountry": "Espa\u00f1a",
+            "streetAddress": "Paseo de Zorrilla, 191",
+            "type": "PostalAddress"
+        }
+    },
+    "operator": {
+        "type": "Property",
+        "value": "Iberdrola"
+    },
+    "contactPoint": {
+        "type": "Property",
+        "value": {
+            "email": "vehiculoelectrico@ava.es"
+        }
+    },
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://schema.lab.fiware.org/ld/context"
+    ]
 }
 ```
 

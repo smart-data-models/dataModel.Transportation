@@ -20,24 +20,24 @@ The data model is defined as shown below:
 -   `dataProvider` : Specifies the URL to information about the provider of this
     information
 
-    -   Attribute type: URL
+    -   Attribute type: Property. URL
     -   Optional
 
 -   `dateCreated` : Entity's creation timestamp. (`createdAt` in NGSI-LD)
 
-    -   Attribute type: [DateTime](https://schema.org/DateTime)
+    -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
     -   Read-Only. Automatically generated.
 
 -   `dateModified` : Last update timestamp of this Entity. (`modifiedAt` in
     NGSI-LD)
 
-    -   Attribute type: [DateTime](https://schema.org/DateTime)
+    -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
     -   Read-Only. Automatically generated.
 
 -   `source` : A sequence of characters giving the original source of the Entity
     data as a URL.
 
-    -   Attribute type: [URL](https://schema.org/URL)
+    -   Attribute type: Property. [URL](https://schema.org/URL)
     -   Mandatory
 
 -   `location` : Location of this crowd flow observation represented by a
@@ -67,7 +67,7 @@ The data model is defined as shown below:
     for datetime intervals, it can be used two separate attributes:
     `dateObservedFrom`, `dateObservedTo`.
 
-    -   Attribute type: [DateTime](https://schema.org/DateTime) or an ISO8601
+    -   Attribute type: GeoProperty. [DateTime](https://schema.org/DateTime) or an ISO8601
         interval represented as [Text](https://schema.org/Text).
     -   Mandatory
 
@@ -98,7 +98,7 @@ The data model is defined as shown below:
 -   `peopleCount` : Total number of people detected during this observation
     period.
 
-    -   Attribute type: [Number](https://schema.org/Number). Positive integer.
+    -   Attribute type: Property. [Number](https://schema.org/Number). Positive integer.
     -   Optional
 
 -   `occupancy` : Fraction of the observation time where a person has been
@@ -204,6 +204,66 @@ Sample uses simplified representation for data consumers `?options=keyValues`
             [-4.73447575302641, 41.659585195093]
         ]
     }
+}
+```
+
+### LD Example
+
+Sample uses the NGSI-LD representation
+
+```json
+{
+    "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",
+    "type": "CrowdFlowObserved",
+    "dateObserved": {
+        "type": "Property",
+        "value": "2018-08-07T11:10:00/2018-08-07T11:15:00"
+    },
+    "direction": {
+        "type": "Property",
+        "value": "inbound"
+    },
+    "dateObservedFrom": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2018-08-07T11:10:00Z"
+        }
+    },
+    "peopleCount": {
+        "type": "Property",
+        "value": 100
+    },
+    "averageHeadwayTime": {
+        "type": "Property",
+        "value": 5
+    },
+    "dateObservedTo": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2018-08-07T11:15:00Z"
+        }
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "LineString",
+            "coordinates": [
+                [-4.73735395519672, 41.6538181849672],
+                [-4.73414858659993, 41.6600594193478],
+                [-4.73447575302641, 41.659585195093]
+            ]
+        }
+    },
+    "congested": {
+        "type": "Property",
+        "value": false
+    },
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://schema.lab.fiware.org/ld/context"
+    ]
 }
 ```
 

@@ -51,9 +51,6 @@
 						"almostEmpty"
 					]
 				},
-				"owner": {
-					"type": "string"
-				},
 				"provider": {
 					"type": "object"
 				},

@@ -64,19 +64,29 @@
           }
         },
         "previousLocation": {
-          "$ref": "http://json-schema.org/geojson/geometry.json#",
+          "$ref": "http://geojson.org/schema/Geometry.json#",
           "description": "The start point of this road segment encoded as a GeoJSON point"
         },
         "speed": {
-          "type": "number"
+          "type": "number",
+          "minimum": 0
         },
         "heading": {
-          "type": "number",
-          "minimum": 0,
-          "maximum": 360
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 360
+            },
+            {
+              "type": "number",
+              "const": -1
+            }
+          ]
         },
         "cargoWeight": {
-          "type": "number"
+          "type": "number",
+          "exclusiveMinimum": 0
         },
         "vehicleIdentificationNumber": {
           "type": "string"
@@ -106,9 +116,6 @@
           "type": "string"
         },
         "color": {
-          "type": "string"
-        },
-        "owner": {
           "type": "string"
         },
         "feature": {

@@ -14,13 +14,13 @@ The data model is defined as shown below:
 
 -   `source` : A sequence of characters giving the source of the entity data.
 
-    -   Attribute type: Text or URL
+    -   Attribute type: Property. Text or URL
     -   Optional
 
 -   `dataProvider` : Specifies the URL to information about the provider of this
     information
 
-    -   Attribute type: URL
+    -   Attribute type: Property. URL
     -   Optional
 
 -   `name` : Name given to this vehicle
@@ -28,7 +28,7 @@ The data model is defined as shown below:
     -   Normative References: [https://schema.org/name](https://schema.org/name)
     -   Optional
 
-    -   Attribute type: Text or URL
+    -   Attribute type: Property. Text or URL
     -   Optional
 
 -   `description` : Vehicle description.
@@ -40,7 +40,7 @@ The data model is defined as shown below:
 -   `vehicleType` : Type of vehicle from the point of view of its structural
     characteristics. This is different than the vehicle category (see below).
 
-    -   Attribute type: [Text](https://schema.org/Text)
+    -   Attribute type: Property. [Text](https://schema.org/Text)
     -   Allowed Values: The following values defined by _VehicleTypeEnum_ and
         _VehicleTypeEnum2_,
         [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm):
@@ -56,7 +56,7 @@ The data model is defined as shown below:
     different than the vehicle type (car, lorry, etc.) represented by the
     `vehicleType` property.
 
-    -   Attribute type: List of [Text](https:/schema.org/Text)
+    -   Attribute type: Property. List of [Text](https:/schema.org/Text)
     -   Allowed values:
         -   (`public`, `private`, `municipalServices`, `specialUsage`).
         -   (`tracked`, `nonTracked`). Tracked vehicles are those vehicles which
@@ -70,7 +70,7 @@ The data model is defined as shown below:
     Such point may contain the vehicle's _altitude_ as the third component of
     the `coordinates` array.
 
-    -   Attribute type: `geo:json`.
+    -   Attribute type: GeoProperty. `geo:json`.
     -   Normative References:
         [https://tools.ietf.org/html/rfc7946](https://tools.ietf.org/html/rfc7946)
     -   Attribute metadata:
@@ -85,7 +85,7 @@ The data model is defined as shown below:
     Point. Such point may contain the previous vehicle's _altitude_ as the third
     component of the`coordinates` array.
 
-    -   Attribute type: `geo:json`.
+    -   Attribute type: Property. `geo:json`.
     -   Normative References:
     -   Attribute metadata:
         -   `timestamp`: Timestamp which captures when the vehicle was at that
@@ -96,10 +96,10 @@ The data model is defined as shown below:
 
 -   `speed` : Denotes the magnitude of the horizontal component of the vehicle's
     current velocity and is specified in Kilometers per Hour. If provided, the
-    value of the speed attribute must be a non-negative real number. `null`
-    _MAY_ be used if `speed` is transiently unknown for some reason.
+    value of the speed attribute must be a non-negative real number. `-1` MAY be
+    used if speed is transiently unknown for some reason.
 
-    -   Attribute type: [Number](https:/schema.org/Number)
+    -   Attribute type: Property. [Number](https:/schema.org/Number)
     -   Default unit: Kilometers per hour
     -   Attribute metadata:
         -   `timestamp` : Timestamp which captures when the vehicle was moving
@@ -113,10 +113,9 @@ The data model is defined as shown below:
     in decimal degrees, where 0° ≤ `heading` < 360°, counting clockwise relative
     to the true north. If the vehicle is stationary (i.e. the value of the
     `speed` attribute is `0`), then the value of the heading attribute must be
-    equal to `null`. `null` _MAY_ be used if `heading` is transiently unknown
-    for some reason.
+    equal to `-1`.
 
-    -   Attribute type: [Number](https://schema.org)
+    -   Attribute type: Property. [Number](https://schema.org)
     -   Attribute metadata:
         -   `timestamp` : Timestamp which captures when the vehicle was heading
             towards such direction. This value can also appear as a FIWARE
@@ -127,7 +126,7 @@ The data model is defined as shown below:
 
 -   `cargoWeight` : Current weight of the vehicle's cargo.
 
-    -   Attribute type: [Number](https:/schema.org/Number)
+    -   Attribute type: Property. [Number](https:/schema.org/Number)
     -   Attribute metadata:
         -   `timestamp`: Timestamp associated to this measurement. This value
             can also appear as a FIWARE
@@ -173,7 +172,7 @@ The data model is defined as shown below:
 
 -   `dateFirstUsed` : Timestamp which denotes when the vehicle was first used.
 
-    -   Attribute type: [DateTime](https://schema.org/DateTime)
+    -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
     -   Optional
 
 -   `purchaseDate` : The date the item e.g. vehicle was purchased by the current
@@ -212,13 +211,15 @@ The data model is defined as shown below:
 
 -   `owner` : Vehicle's owner.
 
-    -   Attribute Type: [https://schema.org/Person](https://schema.org/Person)
-        or [https://schema.org/Organization](https://schema.org/Organization)
+    -   Attribute Type: list of references to entities of type
+        [https://schema.org/Person](https://schema.org/Person) or
+        [https://schema.org/Organization](https://schema.org/Organization) or
+        List of URIs
     -   Optional
 
 -   `feature` : Feature(s) incorporated by the vehicle.
 
-    -   Attribute type: List of [Text](https://schema.org/Text)
+    -   Attribute type: Property. List of [Text](https://schema.org/Text)
     -   Allowed values: (`gps`, `airbag`, `overspeed`, `abs`, `wifi`,
         `backCamera`, `proximitySensor`, `disabledRamp`, `alarm`,
         `internetConnection`) or any other needed by the application.
@@ -230,7 +231,7 @@ The data model is defined as shown below:
 -   `serviceProvided` : Service(s) the vehicle is capable of providing or it is
     assigned to.
 
-    -   Attribute type: List of [Text](https:/schema.org/Text)
+    -   Attribute type: Property. List of [Text](https:/schema.org/Text)
     -   Allowed values: (`garbageCollection`, `parksAndGardens`, `construction`,
         `streetLighting`, `roadSignalling`, `cargoTransport`, `urbanTransit`,
         `maintenance`, `streetCleaning`, `wasteContainerCleaning`,
@@ -251,14 +252,14 @@ The data model is defined as shown below:
 
 -   `refVehicleModel` : Vehicle's model.
 
-    -   Attribute type: Reference to a
+    -   Attribute type: Property. Reference to a
         [VehicleModel](../../VehicleModel/doc/spec.md) entity.
     -   Optional
 
 -   `areaServed` : Higher level area served by this vehicle. It can be used to
     group vehicles per responsible, district, neighbourhood, etc.
 
-    -   Attribute type: [Text](https://schema.org/Text)
+    -   Attribute type: Property. [Text](https://schema.org/Text)
     -   Optional
 
 -   `serviceStatus` : Vehicle status (from the point of view of the service
@@ -275,7 +276,7 @@ The data model is defined as shown below:
         -   `broken` : Vehicle is suffering a temporary breakdown.
         -   `outOfService` : Vehicle is on the road but not performing any
             mission, probably going to its parking area.
-    -   Attribute type: [Text](https://schema.org/Text)
+    -   Attribute type: Property. [Text](https://schema.org/Text)
     -   Attribute metadata:
         -   `timestamp` : Timestamp which reflects when the referred service
             status was captured.
@@ -285,17 +286,16 @@ The data model is defined as shown below:
 
 -   `dateModified` : Last update timestamp of this entity.
 
-    -   Attribute type: [DateTime](https://schema.org/DateTime)
+    -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
     -   Read-Only. Automatically generated.
 
 -   `dateCreated` : Creation timestamp of this entity.
-    -   Attribute type: [DateTime](https://schema.org/DateTime)
+    -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
     -   Read-Only. Automatically generated.
 
-**Note**: JSON Schemas only capture the NGSI simplified representation, this
-means that to test the JSON schema examples with a
-[FIWARE NGSI version 2](http://fiware.github.io/specifications/ngsiv2/stable)
-API implementation, you need to use the `keyValues` mode (`options=keyValues`).
+**Note**: JSON Schemas are intended to capture the data type and associated
+constraints of the different Attributes, regardless their final representation
+format in NGSI(v2, LD).
 
 ## Examples
 
@@ -382,6 +382,70 @@ Sample uses simplified representation for data consumers `?options=keyValues`
     "areaServed": "Centro",
     "refVehicleModel": "vehiclemodel:econic",
     "vehiclePlateIdentifier": "3456ABC"
+}
+```
+
+### LD Example
+
+Sample uses the NGSI-LD representation
+
+```json
+{
+    "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",
+    "type": "Vehicle",
+    "category": {
+        "type": "Property",
+        "value": ["municipalServices"]
+    },
+    "vehicleType": {
+        "type": "Property",
+        "value": "lorry"
+    },
+    "name": {
+        "type": "Property",
+        "value": "C Recogida 1"
+    },
+    "vehiclePlateIdentifier": {
+        "type": "Property",
+        "value": "3456ABC"
+    },
+    "refVehicleModel": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic"
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [-3.164485591715449, 40.62785133667262]
+        },
+        "observedAt": "2018-09-27T12:00:00Z"
+    },
+    "areaServed": {
+        "type": "Property",
+        "value": "Centro"
+    },
+    "serviceStatus": {
+        "type": "Property",
+        "value": "onRoute"
+    },
+    "cargoWeight": {
+        "type": "Property",
+        "value": 314
+    },
+    "speed": {
+        "type": "Property",
+        "value": 50,
+        "observedAt": "2018-09-27T12:00:00Z"
+    },
+    "serviceProvided": {
+        "type": "Property",
+        "value": ["gargabeCollection", "wasteContainerCleaning"]
+    },
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://schema.lab.fiware.org/ld/context"
+    ]
 }
 ```
 

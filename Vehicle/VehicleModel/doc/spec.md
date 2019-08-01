@@ -15,13 +15,13 @@ The data model is defined as shown below:
 
 -   `source` : A sequence of characters giving the source of the entity data.
 
-    -   Attribute type: Text or URL
+    -   Attribute type: Property. Text or URL
     -   Optional
 
 -   `dataProvider` : Specifies the URL to information about the provider of this
     information
 
-    -   Attribute type: URL
+    -   Attribute type: Property. URL
     -   Optional
 
 -   `name` : Name given to this vehicle model.
@@ -43,19 +43,19 @@ The data model is defined as shown below:
 
 -   `brandName` : Vehicle's brand name.
 
-    -   Attribute type: [Text](https://schema.org/Text)
+    -   Attribute type: Property. [Text](https://schema.org/Text)
     -   See also: [https://schema.org/brand](https://schema.org/brand)
     -   Mandatory
 
 -   `modelName` : Vehicle's model name.
 
-    -   Attribute type: [Text](https://schema.org/Text)
+    -   Attribute type: Property. [Text](https://schema.org/Text)
     -   See also: [https://schema.org/model](https://schema.org/model)
     -   Mandatory
 
 -   `manufacturerName` : Vehicle's manufacturer name.
 
-    -   Attribute type: [Text](https://schema.org/Text)
+    -   Attribute type: Property. [Text](https://schema.org/Text)
     -   See also: [https://schema.org/model](https://schema.org/model)
     -   Mandatory
 
@@ -140,17 +140,16 @@ The data model is defined as shown below:
 
 -   `dateModified` : Last update timestamp of this entity.
 
-    -   Attribute type: [DateTime](https://schema.org/DateTime)
+    -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
     -   Read-Only. Automatically generated.
 
 -   `dateCreated` : Creation timestamp of this entity.
-    -   Attribute type: [DateTime](https://schema.org/DateTime)
+    -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
     -   Read-Only. Automatically generated.
 
-**Note**: JSON Schemas only capture the NGSI simplified representation, this
-means that to test the JSON schema examples with a
-[FIWARE NGSI version 2](http://fiware.github.io/specifications/ngsiv2/stable)
-API implementation, you need to use the `keyValues` mode (`options=keyValues`).
+**Note**: JSON Schemas are intended to capture the data type and associated
+constraints of the different Attributes, regardless their final representation
+format in NGSI(v2, LD).
 
 ## Examples
 
@@ -201,6 +200,49 @@ Sample uses simplified representation for data consumers `?options=keyValues`
     "vehicleType": "lorry",
     "cargoVolume": 1000,
     "fuelType": "diesel"
+}
+```
+
+### LD Example
+
+Sample uses the NGSI-LD representation
+
+```json
+{
+    "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",
+    "type": "VehicleModel",
+    "name": {
+        "type": "Property",
+        "value": "MBenz-Econic2014"
+    },
+    "cargoVolume": {
+        "type": "Property",
+        "value": 1000
+    },
+    "modelName": {
+        "type": "Property",
+        "value": "Econic"
+    },
+    "brandName": {
+        "type": "Property",
+        "value": "Mercedes Benz"
+    },
+    "manufacturerName": {
+        "type": "Property",
+        "value": "Daimler"
+    },
+    "fuelType": {
+        "type": "Property",
+        "value": "diesel"
+    },
+    "vehicleType": {
+        "type": "Property",
+        "value": "lorry"
+    },
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://schema.lab.fiware.org/ld/context"
+    ]
 }
 ```
 

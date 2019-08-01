@@ -1,0 +1,99 @@
+{
+    "id": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-osm-24702186",
+    "type": "RoadSegment",
+    "category": {
+        "type": "Property",
+        "value": "oneway"
+    },
+    "endPoint": {
+        "type": "Property",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -4.55167335377909,
+                41.8570461783071
+            ]
+        }
+    },
+    "name": {
+        "type": "Property",
+        "value": "Valladolid-Due\u00f1as"
+    },
+    "startPoint": {
+        "type": "Property",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -4.7299180606009,
+                41.6844918725019
+            ]
+        }
+    },
+    "allowedVehicleType": {
+        "type": "Property",
+        "value": [
+            "car",
+            "bus",
+            "lorry",
+            "trailer",
+            "tanker",
+            "van",
+            "caravan"
+        ]
+    },
+    "source": {
+        "type": "Property",
+        "value": "http://wwww.openstreetmap.org"
+    },
+    "totalLaneNumber": {
+        "type": "Property",
+        "value": 2
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "LineString",
+            "coordinates": [
+                [
+                    -4.7299180606009,
+                    41.6844918725019
+                ],
+                [
+                    -4.72855890957602,
+                    41.6860596957855
+                ],
+                [
+                    -4.5520357341647,
+                    41.8569278186523
+                ],
+                [
+                    -4.55167335377909,
+                    41.8570461783071
+                ]
+            ]
+        }
+    },
+    "minimumAllowedSpeed": {
+        "type": "Property",
+        "value": 60
+    },
+    "refRoad": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Road:Spain-Road-A62"
+    },
+    "maximumAllowedSpeed": {
+        "type": "Property",
+        "value": 120
+    },
+    "laneUsage": {
+        "type": "Property",
+        "value": [
+            "forward",
+            "forward"
+        ]
+    },
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://schema.lab.fiware.org/ld/context"
+    ]
+}
