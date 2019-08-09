@@ -22,21 +22,21 @@ deal with different scenarios:
 
 The main entities identified are:
 
--   [TrafficFlowObserved](../TrafficFlowObserved/doc/spec.md). It represents an
+-   [TrafficFlowObserved](./TrafficFlowObserved/doc/spec.md). It represents an
     observation about flow of traffic.
--   [CrowdFlowObserved](../CrowdFlowObserved/doc/spec.md). It represents an
+-   [CrowdFlowObserved](./CrowdFlowObserved/doc/spec.md). It represents an
     observation related to the movement of people at a certain place and time.
--   [BikeHireDockingStation](../Bike/BikeHireDockingStation/doc/spec.md). It
+-   [BikeHireDockingStation](./Bike/BikeHireDockingStation/doc/spec.md). It
     represents an a bike hire docking station where subscribed users can hire
     and return a bike.
--   [EVChargingStation](../EVChargingStation/doc/spec.md). It represents a
+-   [EVChargingStation](./EVChargingStation/doc/spec.md). It represents a
     public charging station supplying energy to electrical vehicles.
--   [Road](../Road/doc/spec.md). It contains a harmonised geographic and
+-   [Road](./Road/doc/spec.md). It contains a harmonised geographic and
     contextual description of a Road.
--   [RoadSegment](../RoadSegment/doc/spec.md). It contains a harmonised
+-   [RoadSegment](./RoadSegment/doc/spec.md). It contains a harmonised
     geographic and contextual description of a road segment.
--   [Vehicle](../Vehicle/Vehicle/doc/spec.md). It represents a vehicle with all
+-   [Vehicle](./Vehicle/Vehicle/doc/spec.md). It represents a vehicle with all
     its individual characteristics.
--   [VehicleModel](../Vehicle/VehicleModel/doc/spec.md). It represents a model
+-   [VehicleModel](./Vehicle/VehicleModel/doc/spec.md). It represents a model
     of vehicle, capturing its static properties such as dimensions, materials or
     features.
