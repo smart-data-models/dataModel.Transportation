@@ -245,7 +245,7 @@ The data model is defined as shown below:
     offering a car for sale.
 
     -   Normative References:
-        [https://auto.schema.org/vehicleSpecialUsage](https://auto.schema.org/vehicleSpecialUsage)
+        [https://schema.org/vehicleSpecialUsage](https://schema.org/vehicleSpecialUsage)
     -   Allowed values: (`taxi`, `ambulance`, `police`, `fireBrigade`,
         `schoolTransportation`, `military`)
     -   Optional
