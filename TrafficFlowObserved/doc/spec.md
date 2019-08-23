@@ -16,7 +16,7 @@ The data model is defined as shown below:
 
 -   `source` : A sequence of characters giving the source of the entity data.
 
-    -   Attribute type: Property. Text or URL
+    -   Attribute type: Property. [Text](https://schema.org/Text) or [URL](https://schema.org/URL)
     -   Optional
 
 -   `vehicleType` : Type of vehicle from the point of view of its structural
@@ -33,7 +33,7 @@ The data model is defined as shown below:
 -   `dataProvider` : Specifies the URL to information about the provider of this
     information
 
-    -   Attribute type: Property. URL
+    -   Attribute type: Property. [URL](https://schema.org/URL)
     -   Optional
 
 -   `location` : Location of this traffic flow observation represented by a
@@ -46,6 +46,7 @@ The data model is defined as shown below:
 
 -   `address` : Civic address of this traffic flow observation.
 
+    -   Attribute type: Property. [Address](https://schema.org/address)
     -   Normative References:
         [https://schema.org/address](https://schema.org/address)
     -   Optional
@@ -75,9 +76,9 @@ The data model is defined as shown below:
     format. It can be represented by an specific time instant or by an ISO8601
     interval. As a workaround for the lack of support of Orion Context Broker
     for datetime intervals, it can be used two separate attributes:
-    `dateObservedFrom`, `dateObservedTo`. 
+    `dateObservedFrom`, `dateObservedTo`.
     -   Attribute type: Property. [DateTime](https://schema.org/DateTime) or an ISO8601 interval represented
-    as [Text](https://schema.org/Text). 
+    as [Text](https://schema.org/Text).
     -   Mandatory
 
 -   `dateObservedFrom` : Observation period start date and time. See
@@ -98,13 +99,16 @@ The data model is defined as shown below:
 
 -   `name` : Name given to this observation.
 
-    -   Normative References: [https://schema.org/name](https://schema.org/name)
+    -   Attribute type: Property. [Text](https://schema.org/Text)
+    -   Normative References:
+        `https://uri.etsi.org/ngsi-ld/name` equivalent to [name](https://schema.org/name)
     -   Optional
 
 -   `description` : Description of this observation.
 
+    -   Attribute type: Property. [Text](https://schema.org/Text)
     -   Normative References:
-        [https://schema.org/description](https://schema.org/description)
+        `https://uri.etsi.org/ngsi-ld/description` equivalent to [description](https://schema.org/description)
     -   Optional
 
 -   `intensity` : Total number of vehicles detected during this observation
@@ -135,9 +139,9 @@ The data model is defined as shown below:
 
 -   `congested` : Flags whether there was a traffic congestion during the
     observation period in the referred lane. The absence of this attribute means
-    no traffic congestion. 
+    no traffic congestion.
     
-    -   Attribute type: Property. [Boolean](https://schema.org/Boolean) 
+    -   Attribute type: Property. [Boolean](https://schema.org/Boolean)
     -   Optional
 
 -   `averageHeadwayTime` : Average headway time. Headaway time is the time
