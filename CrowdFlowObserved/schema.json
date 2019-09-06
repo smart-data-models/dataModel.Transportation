@@ -1,15 +1,15 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://fiware.github.io/dataModels/specs/Transportation/CrowdFlowObserved/schema.json",
-  "title": "FIWARE - SynchroniCity - Transportation / CrowdFlowObserved",
+  "$id": "https://smart-data-models.github.io/dataModels/specs/Transportation/CrowdFlowObserved/schema.json",
+  "title": " - SynchroniCity - Transportation / CrowdFlowObserved",
   "description": "CrowdFlowObserved",
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://fiware.github.io/dataModels/common-schema.json#/definitions/GSMA-Commons"
+      "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/GSMA-Commons"
     },
     {
-      "$ref": "https://fiware.github.io/dataModels/common-schema.json#/definitions/Location-Commons"
+      "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/Location-Commons"
     },
     {
       "properties": {

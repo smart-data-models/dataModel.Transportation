@@ -1,15 +1,15 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://fiware.github.io/dataModels/specs/Transportation/TrafficFlowObserved/schema.json",
-  "title": "FIWARE - Transportation / TrafficFlowObserved",
+  "$id": "https://smart-data-models.github.io/dataModels/specs/Transportation/TrafficFlowObserved/schema.json",
+  "title": " - Transportation / TrafficFlowObserved",
   "description": "TrafficFlowObserved",
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://fiware.github.io/dataModels/common-schema.json#/definitions/GSMA-Commons"
+      "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/GSMA-Commons"
     },
     {
-      "$ref": "https://fiware.github.io/dataModels/common-schema.json#/definitions/Location-Commons"
+      "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/Location-Commons"
     },
     {
       "properties": {
