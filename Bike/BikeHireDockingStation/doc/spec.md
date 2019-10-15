@@ -10,7 +10,7 @@ features and availability of bikes and free slots.
 ## Data Model
 
 A JSON Schema corresponding to this data model can be found
-[here](https://fiware.github.io/dataModels/specs/Transportation/Bike/BikeHireDockingStation/schema.json).
+[here](https://fiware.github.io/data-models/specs/Transportation/Bike/BikeHireDockingStation/schema.json).
 
 -   `id` : Unique identifier.
 
