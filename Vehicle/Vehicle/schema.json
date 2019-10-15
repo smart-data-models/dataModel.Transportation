@@ -1,17 +1,17 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://github.com/Fiware/dataModels/tree/master/Transportation/Vehicle/VehicleModel/schema.json",
+  "$id": "https://github.com/Fiware/data-models/tree/master/Transportation/Vehicle/VehicleModel/schema.json",
   "title": " - Vehicle / Vehicle Model",
   "description": "This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.",
   "type": "object",
   "allOf": [{
-      "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/GSMA-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
     {
-      "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/Location-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
-      "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/PhysicalObject-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/PhysicalObject-Commons"
     },
     {
       "properties": {
@@ -170,7 +170,7 @@
           ]
         },
         "refVehicleModel": {
-          "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/EntityIdentifierType"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
         },
         "areaServed": {
           "type": "string"

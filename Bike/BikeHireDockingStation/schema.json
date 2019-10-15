@@ -1,15 +1,15 @@
 {
 	"$schema": "http://json-schema.org/schema#",
-	"$id": "https://smart-data-models.github.io/dataModels/specs/Transportation/BikeHire/schema.json",
+	"$id": "https://smart-data-models.github.io/data-models/specs/Transportation/BikeHire/schema.json",
 	"title": " - Transportation / Bike Hire Docking Station",
 	"description": "Bike Hire Docking Station",
 	"type": "object",
 	"allOf": [
 		{
-			"$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/GSMA-Commons"
+			"$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
 		},
 		{
-			"$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/Location-Commons"
+			"$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
 		},
 		{
 			"properties": {
