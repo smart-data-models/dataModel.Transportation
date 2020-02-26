@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://fiware.github.io/data-models/specs/AgriFood/AgriApp/schema.json",
+  "title": " [FIWARE - domain]",
+  "description": "[This entity describes an object of the domain ]",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "$ref": "https://fiware.github.io/data-models/specs/AgriFood/agrifood-schema.json#/definitions/AgriFood-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["opcion1"],
+          "description": "[NGSI Entity Type]"
+        },
+        "version": {
+          "type": "string"
+        },
+        "hasProvider": {
+          "$ref": "[https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType]",
+          "description": "[Provider (Person or Organization) of the application]"
+        },
+        "endpoint": {
+          "type": "string",
+          "format": "uri"
+        },
+        "category": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string",
+              "enum": ["TBD"]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "required": ["id", "type"]
+}
