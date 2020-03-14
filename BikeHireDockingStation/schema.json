@@ -1,66 +1,66 @@
 {
-	"$schema": "http://json-schema.org/schema#",
-	"$id": "https://smart-data-models.github.io/data-models/specs/Transportation/BikeHire/schema.json",
-	"title": " - Transportation / Bike Hire Docking Station",
-	"description": "Bike Hire Docking Station",
-	"type": "object",
-	"allOf": [
-		{
-			"$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-		},
-		{
-			"$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-		},
-		{
-			"properties": {
-				"type": {
-					"type": "string",
-					"enum": [
-						"BikeHireDockingStation"
-					],
-					"description": "NGSI Entity type"
-				},
-				"totalSlotNumber": {
-					"type": "integer",
-					"minimum": 1
-				},
-				"freeSlotNumber": {
-					"type": "integer",
-					"minimum": 0
-				},
-				"availableBikeNumber": {
-					"type": "integer",
-					"minimum": 0
-				},
-				"outOfServiceSlotNumber": {
-					"type": "integer",
-					"minimum": 0
-				},
-				"openingHours": {
-					"type": "string"
-				},
-				"status": {
-					"type": "string",
-					"enum": [
-						"working",
-						"outOfService",
-						"withIncidence",
-						"full",
-						"almostFull",
-						"empty",
-						"almostEmpty"
-					]
-				},
-				"provider": {
-					"type": "object"
-				},
-				"contactPoint": {
-					"type": "object"
-				}
-			}
-	}],
-	"required": [
-		"id",
-		"type"
-	]
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://smart-data-models.github.io/dataModel.Transportation/BikeHireDockingStation/schema.json",
+    "title": " - Transportation / Bike Hire Docking Station",
+    "description": "Bike Hire Docking Station",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+        },
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+        },
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "BikeHireDockingStation"
+                    ],
+                    "description": "NGSI Entity type"
+                },
+                "totalSlotNumber": {
+                    "type": "integer",
+                    "minimum": 1
+                },
+                "freeSlotNumber": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "availableBikeNumber": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "outOfServiceSlotNumber": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "openingHours": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string",
+                    "enum": [
+                        "working",
+                        "outOfService",
+                        "withIncidence",
+                        "full",
+                        "almostFull",
+                        "empty",
+                        "almostEmpty"
+                    ]
+                },
+                "provider": {
+                    "type": "object"
+                },
+                "contactPoint": {
+                    "type": "object"
+                }
+            }
+    }],
+    "required": [
+        "id",
+        "type"
+    ]
 }
