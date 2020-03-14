@@ -1,48 +1,197 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://fiware.github.io/data-models/specs/AgriFood/AgriApp/schema.json",
-  "title": " [FIWARE - domain]",
-  "description": "[This entity describes an object of the domain ]",
+  "$id": "https://smart-data-models.github.io/dataModel.Transportation/Vehicle/schema.json",
+  "title": " - Vehicle - ",
+  "description": "This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.",
   "type": "object",
-  "allOf": [
-    {
-      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+  "allOf": [{
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
     {
-      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
-      "$ref": "https://fiware.github.io/data-models/specs/AgriFood/agrifood-schema.json#/definitions/AgriFood-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/PhysicalObject-Commons"
     },
     {
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["opcion1"],
-          "description": "[NGSI Entity Type]"
+          "enum": [
+            "Vehicle"
+          ],
+          "description": "NGSI Entity type"
         },
-        "version": {
-          "type": "string"
-        },
-        "hasProvider": {
-          "$ref": "[https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType]",
-          "description": "[Provider (Person or Organization) of the application]"
-        },
-        "endpoint": {
+        "vehicleType": {
           "type": "string",
-          "format": "uri"
+          "enum": [
+            "agriculturalVehicle",
+            "bicycle",
+            "bus",
+            "minibus",
+            "car",
+            "caravan",
+            "tram",
+            "tanker",
+            "carWithCaravan",
+            "carWithTrailer",
+            "lorry",
+            "moped",
+            "motorcycle",
+            "motorcycleWithSideCar",
+            "motorscooter",
+            "trailer",
+            "van",
+            "constructionOrMaintenanceVehicle",
+            "trolley",
+            "binTrolley",
+            "sweepingMachine",
+            "cleaningTrolley"
+          ]
         },
         "category": {
           "type": "array",
-          "items": [
+          "items": {
+            "type": "string",
+            "enum": [
+              "public",
+              "private",
+              "municipalServices",
+              "specialUsage",
+              "tracked",
+              "nonTracked"
+            ]
+          }
+        },
+        "previousLocation": {
+          "$ref": "http://geojson.org/schema/Geometry.json#",
+          "description": "The start point of this road segment encoded as a GeoJSON point"
+        },
+        "speed": {
+          "type": "number",
+          "minimum": 0
+        },
+        "heading": {
+          "oneOf": [
             {
-              "type": "string",
-              "enum": ["TBD"]
+              "type": "number",
+              "minimum": 0,
+              "maximum": 360
+            },
+            {
+              "type": "number",
+              "const": -1
             }
+          ]
+        },
+        "cargoWeight": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "vehicleIdentificationNumber": {
+          "type": "string"
+        },
+        "vehiclePlateIdentifier": {
+          "type": "string"
+        },
+        "fleetVehicleId": {
+          "type": "string"
+        },
+        "dateVehicleFirstRegistered": {
+          "type": "string",
+          "format": "date"
+        },
+        "dateFirstUsed": {
+          "type": "string",
+          "format": "date"
+        },
+        "purchaseDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "mileageFromOdometer": {
+          "type": "number"
+        },
+        "vehicleConfiguration": {
+          "type": "string"
+        },
+        "color": {
+          "type": "string"
+        },
+        "feature": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "gps",
+              "airbag",
+              "overspeed",
+              "abs",
+              "wifi",
+              "backCamera",
+              "proximitySensor",
+              "disabledRamp",
+              "alarm",
+              "internetConnection"
+            ]
+          }
+        },
+        "serviceProvided": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "garbageCollection",
+              "parksAndGardens",
+              "construction",
+              "streetLighting",
+              "roadSignalling",
+              "cargoTransport",
+              "urbanTransit",
+              "maintenance",
+              "streetCleaning",
+              "wasteContainerCleaning",
+              "auxiliaryServices",
+              "goodsSelling",
+              "fairground",
+              "specialTransport"
+            ]
+          }
+        },
+        "vehicleSpecialUsage": {
+          "type": "string",
+          "enum": [
+            "taxi",
+            "ambulance",
+            "police",
+            "fireBrigade",
+            "schoolTransportation",
+            "military"
+          ]
+        },
+        "refVehicleModel": {
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+        },
+        "areaServed": {
+          "type": "string"
+        },
+        "serviceStatus": {
+          "type": "string",
+          "enum": [
+            "parked",
+            "onRoute",
+            "broken",
+            "outOfService"
           ]
         }
       }
     }
   ],
-  "required": ["id", "type"]
+  "required": [
+    "id",
+    "type",
+    "vehicleType",
+    "category",
+    "location"
+  ]
 }

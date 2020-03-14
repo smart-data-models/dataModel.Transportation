@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://smart-data-models.github.io/data-models/specs/Transportation/EVChargingStation/schema.json",
+  "$id": "https://smart-data-models.github.io/dataModel.Transportation/EVChargingStation/schema.json",
   "title": " - Transportation / EV Charging Station",
   "description": "EV Charging Station",
   "type": "object",
