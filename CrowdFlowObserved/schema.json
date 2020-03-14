@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://smart-data-models.github.io/data-models/specs/Transportation/CrowdFlowObserved/schema.json",
+  "$id": "https://smart-data-models.github.io/dataModel.Transportation/CrowdFlowObserved/schema.json",
   "title": " - SynchroniCity - Transportation / CrowdFlowObserved",
   "description": "CrowdFlowObserved",
   "type": "object",
