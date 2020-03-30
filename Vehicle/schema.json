@@ -68,8 +68,16 @@
           "description": "The start point of this road segment encoded as a GeoJSON point"
         },
         "speed": {
-          "type": "number",
-          "minimum": 0
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": 0
+            },
+            {
+              "type": "number",
+              "enum": [-1]
+            }
+          ]
         },
         "heading": {
           "oneOf": [
