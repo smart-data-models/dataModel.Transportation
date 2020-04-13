@@ -1,0 +1,2 @@
+"id", "type", "address__addressCountry", "address__addressLocality", "address__streetAddress", "availableBikeNumber", "freeSlotNumber", "location__coordinates", "status"
+"Bcn-BikeHireDockingStation-1", "BikeHireDockingStation", "ES", "Barcelona", "Gran Via Corts Catalanes,760", "20", "10", "[2.180042, 41.397952]", "working"

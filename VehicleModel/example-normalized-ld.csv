@@ -1,0 +1,2 @@
+"id", "type", "name__value", "cargoVolume__value", "modelName__value", "brandName__value", "manufacturerName__value", "fuelType__value", "vehicleType__value", "@context"
+"urn:ngsi-ld:VehicleModel:vehiclemodel:econic", "VehicleModel", "MBenz-Econic2014", "1000", "Econic", "Mercedes Benz", "Daimler", "diesel", "lorry", "['https://schema.lab.fiware.org/ld/context', 'https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld']"

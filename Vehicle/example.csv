@@ -1,0 +1,2 @@
+"id", "type", "vehicleType", "category", "location__coordinates", "name", "speed", "cargoWeight", "serviceStatus", "serviceProvided", "areaServed", "refVehicleModel", "vehiclePlateIdentifier"
+"vehicle:WasteManagement:1", "Vehicle", "lorry", "['municipalServices']", "[-3.164485591715449, 40.62785133667262]", "C Recogida 1", "50", "314", "onRoute", "['garbageCollection', 'wasteContainerCleaning']", "Centro", "vehiclemodel:econic", "3456ABC"
