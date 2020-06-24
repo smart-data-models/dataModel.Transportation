@@ -1,0 +1,152 @@
+TrafficFlowObserved:
+  required:
+    - id
+    - type
+    - dateObserved
+  allOf:
+    - $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+  type: object
+  description: TrafficFlowObserved
+  properties:
+    address:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
+    alternateName:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    areaServed:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    averageGapDistance:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    averageHeadwayTime:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    averageVehicleLength:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    averageVehicleSpeed:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    congested:
+      x-ngsi:
+        type: Property
+      type: boolean
+      description: ''
+    dataProvider:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    dateObserved:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    dateObservedFrom:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: ''
+      format: date-time
+    dateObservedTo:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: ''
+      format: date-time
+    description:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+    intensity:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    laneDirection:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    laneId:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: ''
+      format: int32
+    location:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
+    name:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+    occupancy:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    owner:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        anyOf:
+          - type: string
+            minLength: 1
+            maxLength: 256
+            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+          - type: string
+            format: uri
+    refRoadSegment:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/URL'
+      type: string
+      description: ''
+      format: uri
+    reversedLane:
+      x-ngsi:
+        type: Property
+      type: boolean
+      description: ''
+    source:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    vehicleSubType:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    vehicleType:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''

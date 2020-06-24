@@ -1,0 +1,109 @@
+BikeHireDockingStation:
+  required:
+    - id
+    - type
+  allOf:
+    - $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+  type: object
+  description: Bike Hire Docking Station
+  properties:
+    address:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
+    alternateName:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    areaServed:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    availableBikeNumber:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: ''
+      format: int32
+    contactPoint:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    dataProvider:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    description:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+    freeSlotNumber:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: ''
+      format: int32
+    location:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
+    name:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+    openingHours:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    outOfServiceSlotNumber:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: ''
+      format: int32
+    owner:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        anyOf:
+          - type: string
+            minLength: 1
+            maxLength: 256
+            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+          - type: string
+            format: uri
+    provider:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    source:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    status:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    totalSlotNumber:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: ''
+      format: int32

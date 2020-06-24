@@ -1,0 +1,184 @@
+EVChargingStation:
+  required:
+    - id
+    - type
+    - name
+    - socketType
+    - capacity
+    - allowedVehicleType
+  allOf:
+    - $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+  type: object
+  description: EV Charging Station
+  properties:
+    acceptedPaymentMethod:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+        enum:
+          - ByBankTransferInAdvance
+          - ByInvoice
+          - Cash
+          - CheckInAdvance
+          - COD
+          - DirectDebit
+          - GoogleCheckout
+          - PayPal
+          - PaySwarm
+    address:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
+    allowedVehicleType:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+        enum:
+          - bicycle
+          - bus
+          - car
+          - caravan
+          - motorcycle
+          - motorscooter
+          - truck
+    alternateName:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    amperage:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    areaServed:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    availableCapacity:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: ''
+      format: int32
+    capacity:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: ''
+      format: int32
+    chargeType:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+        enum:
+          - flat
+          - annualPayment
+          - monthlyPayment
+          - free
+          - other
+    contactPoint:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    dataProvider:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    description:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+    image:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/URL'
+      type: string
+      description: ''
+      format: uri
+    location:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
+    name:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+    openingHours:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    owner:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        anyOf:
+          - type: string
+            minLength: 1
+            maxLength: 256
+            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+          - type: string
+            format: uri
+    socketNumber:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: ''
+      format: int32
+    socketType:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+        enum:
+          - Type2
+          - CHAdeMO
+          - CCS/SAE
+          - Type3
+          - Tesla
+          - J-1772
+          - Wall_Euro
+          - Caravan_Mains_Socket
+          - Dual_J-1772
+          - Dual_CHAdeMO
+          - Mennekes
+          - Dual_Mennekes
+          - Other
+    source:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    status:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    voltage:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
