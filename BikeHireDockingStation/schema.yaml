@@ -72,7 +72,8 @@ BikeHireDockingStation:
       format: int32
     owner:
       x-ngsi:
-        type: Property
+        type: Relationship
+        model: https://schema.org/URL  
       type: array
       description: ''
       items:
