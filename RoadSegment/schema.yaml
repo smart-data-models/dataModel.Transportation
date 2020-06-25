@@ -56,24 +56,15 @@ RoadSegment:
           - van
           - anyVehicle
     alternateName:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
     annotations:
-      x-ngsi:
-        type: Property
-      type: array
-      description: ''
-      items:
-        type: string
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/annotations
+
     areaServed:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/areaServed
     category:
       x-ngsi:
         type: Property
@@ -81,11 +72,9 @@ RoadSegment:
       type: string
       description: ''
     color:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/color
+
     dataProvider:
       x-ngsi:
         type: Property
@@ -163,11 +152,8 @@ RoadSegment:
           - type: string
             format: uri
     source:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
     startKilometer:
       x-ngsi:
         type: Property

@@ -48,22 +48,16 @@ EVChargingStation:
           - motorscooter
           - truck
     alternateName:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
     amperage:
       x-ngsi:
         type: Property
       type: number
       description: ''
     areaServed:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/areaServed
     availableCapacity:
       x-ngsi:
         type: Property
@@ -92,10 +86,8 @@ EVChargingStation:
           - free
           - other
     contactPoint:
-      x-ngsi:
-        type: Property
-      type: object
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/contactPoint
     dataProvider:
       x-ngsi:
         type: Property
@@ -119,11 +111,9 @@ EVChargingStation:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
     openingHours:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/openingHours
+
     owner:
       x-ngsi:
         type: Relationship
@@ -167,11 +157,8 @@ EVChargingStation:
           - Dual_Mennekes
           - Other
     source:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
     status:
       x-ngsi:
         type: Property

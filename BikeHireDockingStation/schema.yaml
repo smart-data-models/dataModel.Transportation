@@ -12,17 +12,11 @@ BikeHireDockingStation:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
     alternateName:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
     areaServed:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/areaServed
     availableBikeNumber:
       x-ngsi:
         type: Property
@@ -31,10 +25,8 @@ BikeHireDockingStation:
       description: ''
       format: int32
     contactPoint:
-      x-ngsi:
-        type: Property
-      type: object
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/contactPoint
     dataProvider:
       x-ngsi:
         type: Property
@@ -58,11 +50,9 @@ BikeHireDockingStation:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
     openingHours:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/openingHours
+
     outOfServiceSlotNumber:
       x-ngsi:
         type: Property
@@ -90,11 +80,8 @@ BikeHireDockingStation:
       type: object
       description: ''
     source:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
     status:
       x-ngsi:
         type: Property
