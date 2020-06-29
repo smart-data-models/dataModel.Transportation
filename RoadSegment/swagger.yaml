@@ -2,7 +2,7 @@
 components: 
   schemas: 
     RoadSegment: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/RoadSegment/schema.yaml#/RoadSegment"
+      $ref: "https://smart-data-models.github.io/dataModel.Transportation/RoadSegment/schema.yaml#/RoadSegment"
 info: 
   description: ""
   title: RoadSegment
@@ -46,12 +46,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/RoadSegment/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.Transportation/RoadSegment/examples/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/RoadSegment/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.Transportation/RoadSegment/examples/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld
