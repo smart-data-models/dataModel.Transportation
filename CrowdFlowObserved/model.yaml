@@ -1,39 +1,29 @@
-TrafficFlowObserved:
+CrowdFlowObserved:
   required:
     - id
     - type
     - dateObserved
   allOf:
     - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
-  description: TrafficFlowObserved
+  description: CrowdFlowObserved
   properties:
     address:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/address
     alternateName:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
     areaServed:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/areaServed
-    averageGapDistance:
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/areaServed
+    averageCrowdSpeed:
       x-ngsi:
         type: Property
       type: number
       description: ''
     averageHeadwayTime:
-      x-ngsi:
-        type: Property
-      type: number
-      description: ''
-    averageVehicleLength:
-      x-ngsi:
-        type: Property
-      type: number
-      description: ''
-    averageVehicleSpeed:
       x-ngsi:
         type: Property
       type: number
@@ -71,31 +61,19 @@ TrafficFlowObserved:
       format: date-time
     description:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
-    intensity:
-      x-ngsi:
-        type: Property
-      type: number
-      description: ''
-    laneDirection:
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
+    direction:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
       description: ''
-    laneId:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Integer'
-      type: integer
-      description: ''
-      format: int32
     location:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
     name:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     occupancy:
       x-ngsi:
         type: Property
@@ -115,6 +93,13 @@ TrafficFlowObserved:
             pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
           - type: string
             format: uri
+    peopleCount:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: ''
+      format: int32
     refRoadSegment:
       x-ngsi:
         type: Property
@@ -122,23 +107,6 @@ TrafficFlowObserved:
       type: string
       description: ''
       format: uri
-    reversedLane:
-      x-ngsi:
-        type: Property
-      type: boolean
-      description: ''
     source:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
-    vehicleSubType:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
-    vehicleType:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source

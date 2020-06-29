@@ -11,7 +11,7 @@ RoadSegment:
     - laneUsage
   allOf:
     - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
   description: >-
     This entity contains a harmonised geographic and contextual description of a
@@ -29,7 +29,7 @@ RoadSegment:
   properties:
     address:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/address
     allowedVehicleType:
       x-ngsi:
         type: Property
@@ -57,14 +57,14 @@ RoadSegment:
           - anyVehicle
     alternateName:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
     annotations:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/annotations
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/annotations
 
     areaServed:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/areaServed
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/areaServed
     category:
       x-ngsi:
         type: Property
@@ -73,7 +73,7 @@ RoadSegment:
       description: ''
     color:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/color
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/color
 
     dataProvider:
       x-ngsi:
@@ -83,7 +83,7 @@ RoadSegment:
       description: ''
     description:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
     endKilometer:
       x-ngsi:
         type: Property
@@ -113,7 +113,7 @@ RoadSegment:
       description: ''
     location:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
     maximumAllowedHeight:
       x-ngsi:
         type: Property
@@ -136,7 +136,7 @@ RoadSegment:
       description: ''
     name:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     owner:
       x-ngsi:
         type: Relationship
@@ -153,7 +153,7 @@ RoadSegment:
             format: uri
     source:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
     startKilometer:
       x-ngsi:
         type: Property

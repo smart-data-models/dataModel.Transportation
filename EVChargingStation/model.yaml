@@ -8,7 +8,7 @@ EVChargingStation:
     - allowedVehicleType
   allOf:
     - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
   description: EV Charging Station
   properties:
@@ -31,7 +31,7 @@ EVChargingStation:
           - PaySwarm
     address:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/address
     allowedVehicleType:
       x-ngsi:
         type: Property
@@ -49,7 +49,7 @@ EVChargingStation:
           - truck
     alternateName:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
     amperage:
       x-ngsi:
         type: Property
@@ -57,7 +57,7 @@ EVChargingStation:
       description: ''
     areaServed:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/areaServed
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/areaServed
     availableCapacity:
       x-ngsi:
         type: Property
@@ -87,7 +87,7 @@ EVChargingStation:
           - other
     contactPoint:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/contactPoint
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/contactPoint
     dataProvider:
       x-ngsi:
         type: Property
@@ -96,7 +96,7 @@ EVChargingStation:
       description: ''
     description:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
     image:
       x-ngsi:
         type: Property
@@ -106,13 +106,13 @@ EVChargingStation:
       format: uri
     location:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
     name:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     openingHours:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/openingHours
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/openingHours
 
     owner:
       x-ngsi:
@@ -158,7 +158,7 @@ EVChargingStation:
           - Other
     source:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
     status:
       x-ngsi:
         type: Property
