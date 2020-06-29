@@ -2,7 +2,7 @@
 components: 
   schemas: 
     TrafficFlowObserved: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/TrafficFlowObserved/schema.yaml#/TrafficFlowObserved"
+      $ref: "https://smart-data-models.github.io/dataModel.Transportation/TrafficFlowObserved/model.yaml#/TrafficFlowObserved"
 info: 
   description: ""
   title: TrafficFlowObserved
@@ -13,8 +13,8 @@ openapi: "3.0.0"
 paths: 
   /ngsi-ld/v1/entities: 
     get: 
-      description: "TrafficFlowObserved"
-    
+      description: ->
+        An observation of traffic flow conditions at a certain place and time. This entity is primarily associated with the Automotive and Smart City vertical segments and related IoT applications.
       parameters: 
         - 
           in: query
@@ -34,12 +34,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/TrafficFlowObserved/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.Transportation/TrafficFlowObserved/examples/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/TrafficFlowObserved/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.Transportation/TrafficFlowObserved/examples/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld
