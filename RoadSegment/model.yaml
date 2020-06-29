@@ -1,0 +1,171 @@
+RoadSegment:
+  required:
+    - id
+    - name
+    - type
+    - refRoad
+    - startPoint
+    - endPoint
+    - allowedVehicleType
+    - totalLaneNumber
+    - laneUsage
+  allOf:
+    - $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
+  type: object
+  description: >-
+    This entity contains a harmonised geographic and contextual description of a
+    road segment. A collection of road segments are used to describe a Road.
+    Road segments can include several lanes. This data model allows to convey
+    road segments made up of heterogeneous lanes (different in their usage,
+    speed, height, etc.). Lanes are identified by using integer numbers between
+    1 and n, being number 1 the lane to the right when going forwards. The
+    forward direction is the direction denoted by the vector which goes from the
+    segment"s start point to the segment"s end point. This is the same
+    convention as the one used by OpenStreetMap. This entity is primarily
+    associated with the Automotive and Smart City vertical segments and related
+    IoT applications. This data model has been developed in cooperation with
+    mobile operators and the GSMA.
+  properties:
+    address:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/address
+    allowedVehicleType:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+        enum:
+          - agriculturalVehicle
+          - bicycle
+          - bus
+          - car
+          - caravan
+          - carWithCaravan
+          - carWithTrailer
+          - constructionOrMaintenanceVehicle
+          - lorry
+          - moped
+          - motorcycle
+          - motorcycleWithSideCar
+          - motorscooter
+          - tanker
+          - trailer
+          - van
+          - anyVehicle
+    alternateName:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
+    annotations:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/annotations
+
+    areaServed:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/areaServed
+    category:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    color:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/color
+
+    dataProvider:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    description:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
+    endKilometer:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    image:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/URL'
+      type: string
+      description: ''
+      format: uri
+    laneUsage:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+        enum:
+          - forward
+          - backward
+    length:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    location:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
+    maximumAllowedHeight:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    maximumAllowedSpeed:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    maximumAllowedWeight:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    minimumAllowedSpeed:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    name:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
+    owner:
+      x-ngsi:
+        type: Relationship
+        model: https://schema.org/URL  
+      type: array
+      description: ''
+      items:
+        anyOf:
+          - type: string
+            minLength: 1
+            maxLength: 256
+            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+          - type: string
+            format: uri
+    source:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
+    startKilometer:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    totalLaneNumber:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    width:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''

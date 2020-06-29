@@ -1,0 +1,149 @@
+VehicleModel:
+  required:
+    - id
+    - name
+    - type
+    - vehicleType
+    - brandName
+    - modelName
+    - manufacturerName
+  allOf:
+    - $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
+  type: object
+  description: >-
+    This entity models a particular vehicle model, including all properties
+    which are common to multiple vehicle instances belonging to such model.
+  properties:
+    address:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/address
+    alternateName:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
+    annotations:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/annotations
+
+    areaServed:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/areaServed
+    brandName:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    cargoVolume:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    color:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/color
+
+    dataProvider:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    depth:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    description:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
+    fuelConsumption:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    fuelType:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    height:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    image:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/image
+
+    location:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
+    manufacturerName:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    modelName:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    name:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
+    owner:
+      x-ngsi:
+        type: Relationship
+        model: https://schema.org/URL  
+      type: array
+      description: ''
+      items:
+        anyOf:
+          - type: string
+            minLength: 1
+            maxLength: 256
+            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+          - type: string
+            format: uri
+    source:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
+    url:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    vehicleEngine:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    vehicleModelDate:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: ''
+      format: date-time
+    vehicleType:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    weight:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    width:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
