@@ -1,28 +1,35 @@
----
-# Copyright (c) 2020 Contributors to Smart-Data-Models
-# see https://github.com/smart-data-models/dataModel.Transportation
-
-CrowdFlowObserved:
+Road:
   required:
     - id
     - type
     - dateObserved
   allOf:
     - $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
   type: object
   description: ->
-    An observation related to the movement of people at a certain place and time.
+    This entity contains a harmonised geographic and contextual description of a road. Roads are made up of one or more RoadSegment entities.
+    Road segments are usually used to model the different carriageways of highways, for instance.
+    The presence of dedicated bicycle lanes should be modelled using road segments as well. 
+    Road segments also play an important role when modelling roads with heterogeneous segments,
+    for instance segments on which speed limits are different. This entity is primarily associated with the Automotive and
+    Smart City vertical segments and related IoT applications. This data model has been developed in cooperation with mobile operators and the GSMA.
   properties:
     address:
       $ref: >-
-        https://smart-data-models.github.io/data-models/schema.org.yaml#/address
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
     alternateName:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
     areaServed:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/schema.org.yaml#/areaServed
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
     averageCrowdSpeed:
       x-ngsi:
         type: Property
@@ -66,7 +73,7 @@ CrowdFlowObserved:
       format: date-time
     description:
       $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
     direction:
       x-ngsi:
         type: Property
@@ -75,10 +82,10 @@ CrowdFlowObserved:
       description: ''
     location:
       $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
     name:
       $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
     occupancy:
       x-ngsi:
         type: Property
@@ -113,5 +120,8 @@ CrowdFlowObserved:
       description: ''
       format: uri
     source:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
