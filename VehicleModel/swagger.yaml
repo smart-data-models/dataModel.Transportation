@@ -2,7 +2,7 @@
 components: 
   schemas: 
     VehicleModel: 
-      $ref: "https://smart-data-models.github.io/dataModel.Transportation/VehicleModel/schema.yaml#/VehicleModel"
+      $ref: "https://smart-data-models.github.io/dataModel.Transportation/VehicleModel/model.yaml#/VehicleModel"
 info: 
   description: >-
         This entity models a particular vehicle model, including all properties
@@ -36,12 +36,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://smart-data-models.github.io/dataModel.Transportation/VehicleModel/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.Transportation/VehicleModel/examples/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://smart-data-models.github.io/dataModel.Transportation/VehicleModel/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.Transportation/VehicleModel/examples/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld
