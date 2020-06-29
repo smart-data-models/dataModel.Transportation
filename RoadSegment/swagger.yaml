@@ -2,7 +2,7 @@
 components: 
   schemas: 
     RoadSegment: 
-      $ref: "https://smart-data-models.github.io/dataModel.Transportation/RoadSegment/schema.yaml#/RoadSegment"
+      $ref: "https://smart-data-models.github.io/dataModel.Transportation/RoadSegment/model.yaml#/RoadSegment"
 info: 
   description: ""
   title: RoadSegment
