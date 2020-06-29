@@ -1,49 +1,49 @@
 --- 
-components: 
-  schemas: 
-    EVChargingStation: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/EVChargingStation/schema.yaml#/EVChargingStation"
-info: 
-  description: ""
-  title: EVChargingStation
-  version: "1.0.0"
-openapi: "3.0.0"
-
-# These paths are merely representative.
-paths: 
-  /ngsi-ld/v1/entities: 
-    get: 
-      description: " EV Charging Station"
-      parameters: 
-        - 
-          in: query
-          name: type
-          required: true
-          schema: 
-            enum: 
-              - EVChargingStation
-            type: string
-      responses: 
-        ? "200"
-        : 
-          content: 
-            application/ld+json: 
-              examples: 
-                keyvalues: 
-                  summary: "Key-Values Pairs"
-                  value: 
-                    - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/EVChargingStation/example.json"
-                normalized: 
-                  summary: "Normalized NGSI-LD"
-                  value: 
-                    - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/EVChargingStation/example-normalized-ld.jsonld"
-          description: OK
-      tags: 
-        - ngsi-ld
-tags: 
-  - 
+  components: 
+    schemas: 
+      EVChargingStation: 
+        $ref: "https://smart-data-models.github.io/dataModel.Transportation/EVChargingStation/model.yaml#/EVChargingStation"
+  info: 
+    description: "EV Charging Statio"
+    title: EVChargingStation
+    version: "1.0.0"
+  openapi: "3.0.0"
   
-    description: "NGSI-LD Linked-data Format"
-    name: ngsi-ld
+  # These paths are merely representative.
+  paths: 
+    /ngsi-ld/v1/entities: 
+      get: 
+        description: "Retrieve a set of entities which matches a specific query from an NGSI-LD system"
+        parameters: 
+          - 
+            in: query
+            name: type
+            required: true
+            schema: 
+              enum: 
+                - EVChargingStation
+              type: string
+        responses: 
+          ? "200"
+          : 
+            content: 
+              application/ld+json: 
+                examples: 
+                  keyvalues: 
+                    summary: "Key-Values Pairs"
+                    value: 
+                      - 
+                        $ref: "https://smart-data-models.github.io/dataModel.Transportation/EVChargingStation/examples/example-normalized.json"
+                  normalized: 
+                    summary: "Normalized NGSI-LD"
+                    value: 
+                      - 
+                        $ref: "https://smart-data-models.github.io/dataModel.Transportation/EVChargingStation/examples/example-normalized-ld.jsonld"
+            description: OK
+        tags: 
+          - ngsi-ld
+  tags: 
+    - 
+    
+      description: "NGSI-LD Linked-data Format"
+      name: ngsi-ld
