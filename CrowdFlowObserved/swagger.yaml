@@ -2,9 +2,11 @@
 components: 
   schemas: 
     CrowdFlowObserved: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/CrowdFlowObserved/schema.yaml#/CrowdFlowObserved"
+      $ref: "https://smart-data-models.github.io/dataModel.Transportation/CrowdFlowObserved/model.yaml#/CrowdFlowObserved"
 info: 
-  description: ""
+  description: ->
+    An observation related to the movement of people at a certain place and time.
+
   title: CrowdFlowObserved
   version: "1.0.0"
 openapi: "3.0.0"
@@ -13,7 +15,7 @@ openapi: "3.0.0"
 paths: 
   /ngsi-ld/v1/entities: 
     get: 
-      description: " CrowdFlowObserved"
+      description: "Retrieve a set of entities which matches a specific query from an NGSI-LD system"
       parameters: 
         - 
           in: query
@@ -33,12 +35,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/CrowdFlowObserved/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.Transportation/CrowdFlowObserved/examples/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/CrowdFlowObserved/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.Transportation/CrowdFlowObserved/examples/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld
