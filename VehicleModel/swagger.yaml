@@ -4,7 +4,7 @@ components:
     VehicleModel: 
       $ref: "https://smart-data-models.github.io/dataModel.Transportation/VehicleModel/model.yaml#/VehicleModel"
 info: 
-  description: >-
+  description: |
         This entity models a particular vehicle model, including all properties
         which are common to multiple vehicle instances belonging to such model.
   title: VehicleModel

@@ -17,7 +17,7 @@ RoadSegment:
     - $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
-  description: >-
+  description: |
     This entity contains a harmonised geographic and contextual description of a
     road segment. A collection of road segments are used to describe a Road.
     Road segments can include several lanes. This data model allows to convey

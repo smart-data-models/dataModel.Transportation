@@ -13,7 +13,7 @@ openapi: "3.0.0"
 paths: 
   /ngsi-ld/v1/entities: 
     get: 
-      description: >-
+      description: |
         This entity contains a harmonised geographic and contextual description of a
         road segment. A collection of road segments are used to describe a Road.
         Road segments can include several lanes. This data model allows to convey

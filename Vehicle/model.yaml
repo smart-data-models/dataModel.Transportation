@@ -13,7 +13,7 @@ Vehicle:
     - $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
-  description: >-
+  description: |
     This entity models a particular vehicle model, including all properties
     which are common to multiple vehicle instances belonging to such model.
   properties:
@@ -119,19 +119,8 @@ Vehicle:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     owner:
-      x-ngsi:
-        type: Relationship
-        model: https://schema.org/URL  
-      type: array
-      description: ''
-      items:
-        anyOf:
-          - type: string
-            minLength: 1
-            maxLength: 256
-            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
-          - type: string
-            format: uri
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
     purchaseDate:
       x-ngsi:
         type: Property
