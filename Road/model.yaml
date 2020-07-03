@@ -19,11 +19,8 @@ Road:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
     alternateName:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
     areaServed:
       x-ngsi:
         type: Property
@@ -46,11 +43,8 @@ Road:
       type: boolean
       description: ''
     dataProvider:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
     dateObserved:
       x-ngsi:
         type: Property

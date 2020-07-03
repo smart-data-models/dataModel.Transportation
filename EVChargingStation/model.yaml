@@ -96,11 +96,8 @@ EVChargingStation:
       $ref: >-
         https://smart-data-models.github.io/data-models/schema.org.yaml#/contactPoint
     dataProvider:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
     description:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
