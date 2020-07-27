@@ -34,12 +34,12 @@ Vehicle:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Current weight of the vehicle's cargo'
     category:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Vehicle category(ies) from an external point of view. This is different than the vehicle type (car, lorry, etc.) represented by the vehicleType property.'
       items:
         type: string
         enum:
@@ -61,14 +61,14 @@ Vehicle:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Timestamp which denotes when the vehicle was first used.'
       format: date
     dateVehicleFirstRegistered:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'The date of the first registration of the vehicle with the respective public authorities.'
       format: date
     description:
       $ref: >-
@@ -77,7 +77,7 @@ Vehicle:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Feature(s) incorporated by the vehicle.'
       items:
         type: string
         enum:
@@ -96,7 +96,7 @@ Vehicle:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: ' The identifier of the vehicle in the context of the fleet of vehicles to which it belongs.'
     image:
       x-ngsi:
         type: Property
@@ -123,13 +123,13 @@ Vehicle:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: ' The date the item e.g. vehicle was purchased by the current owner.'
       format: date-time
     serviceProvided:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: ' Service(s) the vehicle is capable of providing or it is assigned to.'
       items:
         type: string
         enum:
@@ -152,7 +152,7 @@ Vehicle:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: ' Vehicle status (from the point of view of the service provided, so it could not apply to private vehicles)'
     source:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
@@ -161,28 +161,28 @@ Vehicle:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'A short text indicating the configuration of the vehicle, e.g. '5dr hatchback ST 2.5 MT 225 hp' or 'limited edition'.'
     vehicleIdentificationNumber:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'The Vehicle Identification Number (VIN) is a unique serial number used by the automotive industry to identify individual motor vehicles.'
     vehiclePlateIdentifier:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: ' An identifier or code displayed on a vehicle registration plate attached to the vehicle used for official identification purposes. The registration identifier is numeric or alphanumeric and is unique within the issuing authority's region.'
     vehicleSpecialUsage:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Indicates whether the vehicle is been used for special purposes, like commercial rental, driving school, or as a taxi. The legislation in many countries requires this information to be revealed when offering a car for sale.'
     vehicleType:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: ' Type of vehicle from the point of view of its structural characteristics. This is different than the vehicle category (see below).'
