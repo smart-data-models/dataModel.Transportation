@@ -50,7 +50,7 @@ Road:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: ' Specifies the URL to information about the provider of this information'
     dateObservedFrom:
       x-ngsi:
         type: Property
@@ -100,7 +100,7 @@ Road:
         type: Relationship
         model: 'https://schema.org/URL'
       type: string
-      description: ''
+      description: 'Road segments which define this road.'
       format: uri
     source:
       $ref: >-
