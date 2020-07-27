@@ -38,7 +38,7 @@ RoadSegment:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: ' Vehicle type(s) allowed to transit through this road segment.'
       items:
         type: string
         enum:
@@ -74,7 +74,7 @@ RoadSegment:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Allows to convey extra characteristics of a road segment.'
     color:
       $ref: >-
         https://smart-data-models.github.io/data-models/schema.org.yaml#/color
@@ -89,7 +89,7 @@ RoadSegment:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'The kilometer number (measured from the road's start point) where this road segment ends.'
     image:
       x-ngsi:
         type: Property
@@ -101,7 +101,7 @@ RoadSegment:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'This attribute can be used to convey specific parameters describing each lane.'
       items:
         type: string
         enum:
@@ -111,7 +111,7 @@ RoadSegment:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: ' Total length of this road segment in kilometers.'
     location:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
@@ -119,22 +119,22 @@ RoadSegment:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: ' Maximum allowed height for vehicles transiting this road segment.'
     maximumAllowedSpeed:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Maximum allowed speed while transiting this road segment. More restrictive limits might be applied to specific vehicle types (trucks, caravans, etc.).'
     maximumAllowedWeight:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: ' Maximum allowed weight for vehicles transiting this road segment.'
     minimumAllowedSpeed:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: ' Minimum allowed speed while transiting this road segment.'
     name:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
@@ -148,14 +148,14 @@ RoadSegment:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: ' The kilometer number (measured from the road's start point) where this road segmnent starts.'
     totalLaneNumber:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Total number of lanes offered by this road segment.'
     width:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Road's segmwent width.'
