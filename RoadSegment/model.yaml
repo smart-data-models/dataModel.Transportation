@@ -148,7 +148,7 @@ RoadSegment:
       x-ngsi:
         type: Property
       type: number
-      description: ' The kilometer number (measured from the road's start point) where this road segmnent starts.'
+      description: ' The kilometer number (measured from the start point of the road) where this road segmnent starts.'
     totalLaneNumber:
       x-ngsi:
         type: Property
