@@ -89,7 +89,7 @@ RoadSegment:
       x-ngsi:
         type: Property
       type: number
-      description: 'The kilometer number (measured from the road's start point) where this road segment ends.'
+      description: 'The kilometer number (measured from the start point of the road) where this road segment ends.'
     image:
       x-ngsi:
         type: Property
@@ -158,4 +158,4 @@ RoadSegment:
       x-ngsi:
         type: Property
       type: number
-      description: 'Road's segmwent width.'
+      description: 'Segment width of the Road.'
