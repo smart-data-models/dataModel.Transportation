@@ -15,7 +15,7 @@ RoadSegment:
     - laneUsage
   allOf:
     - $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Commo
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
   description: |
     This entity contains a harmonised geographic and contextual description of a
