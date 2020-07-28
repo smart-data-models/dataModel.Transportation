@@ -131,9 +131,9 @@ VehicleModel:
       x-ngsi:
         type: Property
       type: number
-      description: 'Vehicle's weight.'
+      description: 'Weight of the vehicle'
     width:
       x-ngsi:
         type: Property
       type: number
-      description: 'Vehicle's width.'
+      description: 'Width of the vehicle'
