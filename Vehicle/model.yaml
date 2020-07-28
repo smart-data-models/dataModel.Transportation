@@ -26,7 +26,6 @@ Vehicle:
     annotations:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/annotations
-
     areaServed:
       $ref: >-
         https://smart-data-models.github.io/data-models/schema.org.yaml#/areaServed
@@ -52,7 +51,6 @@ Vehicle:
     color:
       $ref: >-
         https://smart-data-models.github.io/data-models/schema.org.yaml#/color
-
     dataProvider:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
@@ -161,7 +159,7 @@ Vehicle:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: 'A short text indicating the configuration of the vehicle, e.g. '5dr hatchback ST 2.5 MT 225 hp' or 'limited edition'.'
+      description: 'A short text indicating the configuration of the vehicle, e.g. "5dr hatchback ST 2.5 MT 225 hp" or "limited edition".'
     vehicleIdentificationNumber:
       x-ngsi:
         type: Property
