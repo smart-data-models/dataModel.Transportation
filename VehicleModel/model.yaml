@@ -73,7 +73,7 @@ VehicleModel:
       x-ngsi:
         type: Property
       type: number
-      description: 'Vehicle's height.'
+      description: 'Height of the Vehicle'
     image:
       $ref: >-
         https://smart-data-models.github.io/data-models/schema.org.yaml#/image
@@ -86,13 +86,13 @@ VehicleModel:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ' Vehicle's manufacturer name.'
+      description: 'Name of the anufacturer of the vehicle.'
     modelName:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: 'Vehicle's model name.'
+      description: 'Model name of the vehicle'
     name:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
