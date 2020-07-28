@@ -37,7 +37,7 @@ VehicleModel:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ' Vehicle's brand name.'
+      description: 'Brand name of the Vehicle.'
     cargoVolume:
       x-ngsi:
         type: Property
@@ -54,7 +54,7 @@ VehicleModel:
       x-ngsi:
         type: Property
       type: number
-      description: 'Vehicle's depth.'
+      description: 'Depth of the Vehicle'
     description:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
