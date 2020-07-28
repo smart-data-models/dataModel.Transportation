@@ -37,12 +37,12 @@ VehicleModel:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Brand name of the Vehicle.'
     cargoVolume:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'The available volume for cargo or luggage. For automobiles, this is usually the trunk volume.'
     color:
       $ref: >-
         https://smart-data-models.github.io/data-models/schema.org.yaml#/color
@@ -54,7 +54,7 @@ VehicleModel:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Depth of the Vehicle'
     description:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
@@ -62,18 +62,18 @@ VehicleModel:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km).'
     fuelType:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: ' The type of fuel suitable for the engine or engines of the vehicle.'
     height:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Height of the Vehicle'
     image:
       $ref: >-
         https://smart-data-models.github.io/data-models/schema.org.yaml#/image
@@ -86,13 +86,13 @@ VehicleModel:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Name of the anufacturer of the vehicle.'
     modelName:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Model name of the vehicle'
     name:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
@@ -107,33 +107,33 @@ VehicleModel:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Specifies the URL to information about the provider of this information'
     vehicleEngine:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: ' Information about the engine or engines of the vehicle.'
     vehicleModelDate:
       x-ngsi:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: 'The release date of a vehicle model (often used to differentiate versions of the same make and model).'
       format: date-time
     vehicleType:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Type of vehicle from the point of view of its structural characteristics.'
     weight:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Weight of the vehicle'
     width:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Width of the vehicle'

@@ -29,7 +29,7 @@ BikeHireDockingStation:
         type: Property
         model: 'https://schema.org/Integer'
       type: integer
-      description: ''
+      description: 'The number of bikes available in the bike hire docking station to be hired by users.'
       format: int32
     contactPoint:
       $ref: >-
@@ -45,7 +45,7 @@ BikeHireDockingStation:
         type: Property
         model: 'https://schema.org/Integer'
       type: integer
-      description: ''
+      description: 'The number of slots available for returning and parking bikes. It must lower or equal than totalSlotNumber.'
       format: int32
     location:
       $ref: >-
@@ -61,7 +61,7 @@ BikeHireDockingStation:
         type: Property
         model: 'https://schema.org/Integer'
       type: integer
-      description: ''
+      description: 'The number of slots that are out of order and cannot be used to hire or park a bike. It must lower or equal than totalSlotNumber.'
       format: int32
     owner:
       $ref: >-
@@ -70,7 +70,7 @@ BikeHireDockingStation:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: 'Bike hire service provider.'
     source:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
@@ -79,11 +79,11 @@ BikeHireDockingStation:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Status of the bike hire docking station.'
     totalSlotNumber:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Integer'
       type: integer
-      description: ''
+      description: 'The total number of slots offered by this bike docking station.'
       format: int32

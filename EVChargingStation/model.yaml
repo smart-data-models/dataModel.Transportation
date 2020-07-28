@@ -23,7 +23,7 @@ EVChargingStation:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Accepted payment method(s)'
       items:
         type: string
         enum:
@@ -43,7 +43,7 @@ EVChargingStation:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: ' Vehicle type(s) which can be charged.'
       items:
         type: string
         enum:
@@ -61,7 +61,7 @@ EVChargingStation:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'The total amperage offered by the charging station.'
     areaServed:
       $ref: >-
         https://smart-data-models.github.io/data-models/schema.org.yaml#/areaServed
@@ -70,20 +70,20 @@ EVChargingStation:
         type: Property
         model: 'https://schema.org/Integer'
       type: integer
-      description: ''
+      description: 'The number of vehicles which currently can be charged.'
       format: int32
     capacity:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Integer'
       type: integer
-      description: ''
+      description: 'The total number of vehicles which can be charged at the same time. The total number of sockets can be higher.'
       format: int32
     chargeType:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Type(s) of charge when using this station.'
       items:
         type: string
         enum:
@@ -106,7 +106,7 @@ EVChargingStation:
         type: Property
         model: 'https://schema.org/URL'
       type: string
-      description: ''
+      description: 'A URL containing a photo of this charging station.'
       format: uri
     location:
       $ref: >-
@@ -125,13 +125,13 @@ EVChargingStation:
         type: Property
         model: 'https://schema.org/Integer'
       type: integer
-      description: ''
+      description: 'The total number of sockets offered by this charging station.'
       format: int32
     socketType:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'The type of sockets offered by this station.'
       items:
         type: string
         enum:
@@ -156,9 +156,9 @@ EVChargingStation:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Status of the charging station'
     voltage:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'The total voltage offered by the charging station.'
