@@ -173,7 +173,7 @@ Vehicle:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ' An identifier or code displayed on a vehicle registration plate attached to the vehicle used for official identification purposes. The registration identifier is numeric or alphanumeric and is unique within the issuing authority's region.'
+      description: ' An identifier or code displayed on a vehicle registration plate attached to the vehicle used for official identification purposes. The registration identifier is numeric or alphanumeric and is unique within the issuing authority region.'
     vehicleSpecialUsage:
       x-ngsi:
         type: Property
