@@ -34,7 +34,7 @@ Vehicle:
       x-ngsi:
         type: Property
       type: number
-      description: 'Current weight of the vehicle's cargo'
+      description: 'Current weight of the cargo of the vehicle'
     category:
       x-ngsi:
         type: Property
