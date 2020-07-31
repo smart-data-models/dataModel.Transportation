@@ -86,10 +86,10 @@ TrafficFlowObserved:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-    description: |
-       Usual direction of travel in the lane referred by this observation. 
-       This attribute is useful when the observation is not referencing any road segment, 
-       allowing to know the direction of travel of the traffic flow observed.
+      description: |
+        Usual direction of travel in the lane referred by this observation. 
+        This attribute is useful when the observation is not referencing any road segment, 
+        allowing to know the direction of travel of the traffic flow observed.
     laneId:
       x-ngsi:
         type: Property
