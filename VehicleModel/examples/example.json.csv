@@ -1,0 +1,2 @@
+"id_", "type_", "name_", "brandName_", "modelName_", "manufacturerName_", "vehicleType_", "cargoVolume_", "fuelType_"
+"vehiclemodel:econic", "VehicleModel", "MBenz-Econic2014", "Mercedes Benz", "Econic", "Daimler", "lorry", "1000", "diesel"
