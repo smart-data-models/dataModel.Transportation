@@ -1,0 +1,2 @@
+"id_", "type_", "name_", "alternateName_", "description_", "roadClass_", "length_", "refRoadSegment__0_", "refRoadSegment__1_", "responsible_"
+"Spain-Road-A62", "Road", "A-62", "E-80", "Autovía de Castilla", "motorway", "355", "Spain-RoadSegment-A62-0-355-forwards", "Spain-RoadSegment-A62-0-355-backwards", "Ministerio de Fomento - Gobierno de España"
