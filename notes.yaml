@@ -1,0 +1,20 @@
+notesPrevious:
+  These data models describe the main entities involved with smart applications
+  that deal with transportation issues. This set of entities is primarily
+  associated with the Automotive and Smart City vertical segments and related IoT
+  applications.
+
+  When feasible, references to existing schema.org entity types and attributes are
+  included.
+
+  These models have been devised to be as generic as possible, thus allowing to
+  deal with different scenarios
+
+    - Traffic flow monitoring
+    - Private Vehicles.
+    - Public Vehicles (Buses, Trains, etc.).
+    - Municipal Vehicles (pick up lorries, cleaning units, ...)
+    - Special Vehicles (ambulances, fire brigades, ...)
+
+notesEnd:
+  ""
