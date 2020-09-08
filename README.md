@@ -4,6 +4,8 @@ When feasible, references to existing schema.org entity types and attributes are
 These models have been devised to be as generic as possible, thus allowing to deal with different scenarios
 - Traffic flow monitoring - Private Vehicles. - Public Vehicles (Buses, Trains, etc.). - Municipal Vehicles (pick up lorries, cleaning units, ...) - Special Vehicles (ambulances, fire brigades, ...)
 
+### List of data models
+
 The following entity types are available:
 - [BikeHireDockingStation](https://github.com/smart-data-models/dataModel.Transportation/blob/master/BikeHireDockingStation/README.md). -> Many cities provide a bike hiring system for citizens. These can hire a bike base on different types of subscriptions. A bike hire docking station where subscribed users can hire and return a bike. It provides data about its main features and availability of bikes and free slots.
 
@@ -38,14 +40,20 @@ which are common to multiple vehicle instances belonging to such model.
 
 
 
+
+### Incubated data models
 The list of incubated (on development) data models are:
 
-[FleetVehicleOperation_incubated](https://github.com/smart-data-models/dataModel.Transportation/tree/master/FleetVehicleOperation_incubated)
+  - [FleetVehicleOperation_incubated](https://github.com/smart-data-models/dataModel.Transportation/tree/master/FleetVehicleOperation_incubated)
 
-[FleetVehicleStatus_incubated](https://github.com/smart-data-models/dataModel.Transportation/tree/master/FleetVehicleStatus_incubated)
+  - [FleetVehicleStatus_incubated](https://github.com/smart-data-models/dataModel.Transportation/tree/master/FleetVehicleStatus_incubated)
 
+
+### Contributors
 [Link](https://github.com/smart-data-models/dataModel.Transportation/blob/master/CONTRIBUTORS.yaml) to the 5 current contributors of the data models of this Subject.
 
+
+### Contribution
 You can raise an [issue](https://github.com/smart-data-models/dataModel.Transportation/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.Transportation/pulls) on existing data models
 
 
