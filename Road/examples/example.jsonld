@@ -1,0 +1,12 @@
+{"@context": ["https://schema.lab.fiware.org/ld/context",
+              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],
+ "alternateName": "E-80",
+ "description": "Autovía de Castilla",
+ "id": "urn:ngsi-ld:Road:Spain-Road-A62",
+ "length": 355,
+ "name": "A-62",
+ "refRoadSegment": ["urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-forwards",
+                    "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-backwards"],
+ "responsible": "Ministerio de Fomento - Gobierno de España",
+ "roadClass": "motorway",
+ "type": "Road"}
