@@ -7,7 +7,7 @@ TrafficFlowObserved
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Transportation/TrafficFlowObserved/swagger.yaml)
 
-Link to the [specification](https://smart-data-models.github.io/dataModel.Transportation/TrafficFlowObserved/doc/spec.md)
+Link to the [specification](https://github.com/smart-data-models/dataModel.Transportation/blob/master/TrafficFlowObserved/doc/spec.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.Transportation/TrafficFlowObserved/examples/example.json) (keyvalues) for NGSI v2
