@@ -9,7 +9,7 @@ which are common to multiple vehicle instances belonging to such model.
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Transportation/VehicleModel/swagger.yaml)
 
-Link to the [specification](https://smart-data-models.github.io/dataModel.Transportation/VehicleModel/doc/spec.md)
+Link to the [specification](https://github.com/smart-data-models/dataModel.Transportation/blob/master/VehicleModel/doc/spec.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.Transportation/VehicleModel/examples/example.json) (keyvalues) for NGSI v2
