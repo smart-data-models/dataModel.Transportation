@@ -7,7 +7,7 @@
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Transportation/BikeHireDockingStation/swagger.yaml)
 
-Link to the [specification](https://smart-data-models.github.io/dataModel.Transportation/BikeHireDockingStation/doc/spec.md)
+Link to the [specification](https://github.com/smart-data-models/dataModel.Transportation/blob/master/BikeHireDockingStation/doc/spec.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.Transportation/BikeHireDockingStation/examples/example.json) (keyvalues) for NGSI v2
