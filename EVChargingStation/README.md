@@ -2,7 +2,7 @@
 
 ## Description 
 
--> A public charging station supplying energy to electrical vehicles. The charge time depends on the maximum power output of the station, the number of vehicles currently charging and the current battery level.
+Visit model.yaml for further info on the description
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Transportation/EVChargingStation/swagger.yaml)
