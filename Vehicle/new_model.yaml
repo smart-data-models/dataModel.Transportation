@@ -1,0 +1,377 @@
+Vehicle:
+  description: 'This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.'
+  properties:
+    address:
+      description: 'The mailing address.'
+      properties:
+        addressCountry:
+          type: string
+        addressLocality:
+          type: string
+        addressRegion:
+          type: string
+        areaServed:
+          type: string
+        postOfficeBoxNumber:
+          type: string
+        postalCode:
+          type: string
+        streetAddress:
+          type: string
+      type: Property
+    alternateName:
+      description: 'An alternative name for this item'
+      type: Property
+    annotations:
+      items:
+        type: string
+      type: array
+    areaServed:
+      type: string
+    cargoWeight:
+      exclusiveMinimum: 0
+      type: number
+    category:
+      items:
+        enum:
+          - public
+          - private
+          - municipalServices
+          - specialUsage
+          - tracked
+          - nonTracked
+        type: string
+      type: array
+    color:
+      type: string
+    dataProvider:
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      type: Property
+    dateCreated:
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    dateFirstUsed:
+      format: date
+      type: string
+    dateModified:
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    dateVehicleFirstRegistered:
+      format: date
+      type: string
+    description:
+      description: 'A description of this item'
+      type: Property
+    feature:
+      items:
+        enum:
+          - gps
+          - airbag
+          - overspeed
+          - abs
+          - wifi
+          - backCamera
+          - proximitySensor
+          - disabledRamp
+          - alarm
+          - internetConnection
+        type: string
+      type: array
+    fleetVehicleId:
+      type: string
+    heading:
+      oneOf:
+        - maximum: 360
+          minimum: 0
+          type: number
+        - const: -1
+          type: number
+    id:
+      anyOf: &vehicle_-_properties_-_owner_-_items_-_anyof
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+    image:
+      description: 'An image of the item.'
+      format: uri
+      type: string
+    location:
+      $id: https://geojson.org/schema/Geometry.json
+      $schema: "http://json-schema.org/draft-07/schema#"
+      oneOf: &vehicle_-_properties_-_previouslocation_-_oneof
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                type: number
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - Point
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Point'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - LineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON LineString'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 4
+                type: array
+              type: array
+            type:
+              enum:
+                - Polygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Polygon'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPoint
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPoint'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiLineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiLineString'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  minItems: 4
+                  type: array
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPolygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPolygon'
+          type: object
+      title: 'GeoJSON Geometry'
+    mileageFromOdometer:
+      type: number
+    name:
+      description: 'The name of this item.'
+      type: Property
+    owner:
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      items:
+        anyOf: *vehicle_-_properties_-_owner_-_items_-_anyof
+      type: Property
+    previousLocation:
+      $id: https://geojson.org/schema/Geometry.json
+      $schema: "http://json-schema.org/draft-07/schema#"
+      oneOf: *vehicle_-_properties_-_previouslocation_-_oneof
+      title: 'GeoJSON Geometry'
+    purchaseDate:
+      format: date-time
+      type: string
+    refVehicleModel:
+      anyOf: *vehicle_-_properties_-_owner_-_items_-_anyof
+    seeAlso:
+      oneOf:
+        - items:
+            - format: uri
+              type: string
+          minItems: 1
+          type: array
+        - format: uri
+          type: string
+    serviceProvided:
+      items:
+        enum:
+          - garbageCollection
+          - parksAndGardens
+          - construction
+          - streetLighting
+          - roadSignalling
+          - cargoTransport
+          - urbanTransit
+          - maintenance
+          - streetCleaning
+          - wasteContainerCleaning
+          - auxiliaryServices
+          - goodsSelling
+          - fairground
+          - specialTransport
+        type: string
+      type: array
+    serviceStatus:
+      enum:
+        - parked
+        - onRoute
+        - broken
+        - outOfService
+      type: string
+    source:
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      type: Property
+    speed:
+      oneOf:
+        - minimum: 0
+          type: number
+        - enum:
+            - -1
+          type: number
+    type:
+      description: 'NGSI Entity type'
+      enum:
+        - Vehicle
+      type: string
+    vehicleConfiguration:
+      type: string
+    vehicleIdentificationNumber:
+      type: string
+    vehiclePlateIdentifier:
+      type: string
+    vehicleSpecialUsage:
+      enum:
+        - taxi
+        - ambulance
+        - police
+        - fireBrigade
+        - schoolTransportation
+        - military
+      type: string
+    vehicleType:
+      enum:
+        - agriculturalVehicle
+        - anyVehicle
+        - articulatedVehicle
+        - bicycle
+        - bus
+        - minibus
+        - car
+        - caravan
+        - carOrLightVehicle
+        - carWithCaravan
+        - carWithTrailer
+        - constructionOrMaintenanceVehicle
+        - fourWheelDrive
+        - highSidedVehicle
+        - lorry
+        - moped
+        - motorcycle
+        - motorcycleWithSideCar
+        - motorscooter
+        - tanker
+        - threeWheeledVehicle
+        - trailer
+        - tram
+        - twoWheeledVehicle
+        - van
+        - vehicleWithoutCatalyticConverter
+        - vehicleWithCaravan
+        - vehicleWithTrailer
+        - withEvenNumberedRegistrationPlates
+        - withOddNumberedRegistrationPlates
+        - other
+      type: string
+  required:
+    - id
+    - type
+    - vehicleType
+    - category
+    - location
+  type: object
