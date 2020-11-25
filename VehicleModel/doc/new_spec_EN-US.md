@@ -7,7 +7,8 @@ Entity: VehicleModel
 
 - `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `annotations`:   - `areaServed`: The geographic area where a service or offered item is provided.  - `brandName`:   - `cargoVolume`:   - `color`: The color of the product.  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `depth`:   - `description`: A description of this item  - `fuelConsumption`:   - `fuelType`:   - `height`:   - `id`:   - `image`:   - `location`:   - `manufacturerName`:   - `modelName`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type  - `url`:   - `vehicleEngine`:   - `vehicleModelDate`:   - `vehicleType`:   - `weight`:   - `width`:   ## Data Model description of properties  
 Sorted alphabetically  
-```yaml  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 VehicleModel:    
   description: 'This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.'    
   properties:    
@@ -323,6 +324,7 @@ VehicleModel:
     - manufacturerName    
   type: object    
 ```  
+</details>    
 #### VehicleModel NGSI V2 key-values Example    
 Here is an example of a VehicleModel in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
