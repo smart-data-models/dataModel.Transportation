@@ -7,7 +7,8 @@ Entity: RoadSegment
 
 - `address`: The mailing address.  - `allowedVehicleType`:   - `alternateName`: An alternative name for this item  - `annotations`:   - `areaServed`: The geographic area where a service or offered item is provided.  - `category`:   - `color`: The color of the product.  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `endKilometer`:   - `endPoint`:   - `id`:   - `image`: An image of the item.  - `laneUsage`:   - `length`:   - `location`:   - `maximumAllowedHeight`:   - `maximumAllowedSpeed`:   - `maximumAllowedWeight`:   - `minimumAllowedSpeed`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refRoad`:   - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `startKilometer`:   - `startPoint`:   - `totalLaneNumber`:   - `type`: NGSI Entity type  - `width`:   ## Data Model description of properties  
 Sorted alphabetically  
-```yaml  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 RoadSegment:    
   description: 'This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road. Road segments can include several lanes. This data model allows to convey road segments made up of heterogeneous lanes (different in their usage, speed, height, etc.). Lanes are identified by using integer numbers between 1 and n, being number 1 the lane to the right when going forwards. The forward direction is the direction denoted by the vector which goes from the segment"s start point to the segment"s end point. This is the same convention as the one used by OpenStreetMap. This entity is primarily associated with the Automotive and Smart City vertical segments and related IoT applications. This data model has been developed in cooperation with mobile operators and the GSMA.'    
   properties:    
@@ -328,6 +329,7 @@ RoadSegment:
     - laneUsage    
   type: object    
 ```  
+</details>    
 #### RoadSegment NGSI V2 key-values Example    
 Here is an example of a RoadSegment in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
