@@ -5,9 +5,10 @@ Entité : EVChargingStation
 
 ## Liste des biens  
 
-`acceptedPaymentMethod`:   `address`: L'adresse postale.  `allowedVehicleType`:   `alternateName`: Un autre nom pour cet article  `amperage`:   `areaServed`:   `availableCapacity`:   `capacity`:   `chargeType`:   `contactPoint`:   `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  `description`: Une description de cet article  `id`:   `image`:   `location`:   `name`: Le nom de cet article.  `network`:   `openingHours`:   `operator`:   `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  `seeAlso`:   `socketNumber`:   `socketType`:   `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  `status`:   `type`: NGSI Type d'entité  `voltage`:   ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `acceptedPaymentMethod`:   - `address`: L'adresse postale.  - `allowedVehicleType`:   - `alternateName`: Un autre nom pour cet article  - `amperage`:   - `areaServed`:   - `availableCapacity`:   - `capacity`:   - `chargeType`:   - `contactPoint`:   - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `id`:   - `image`:   - `location`:   - `name`: Le nom de cet article.  - `network`:   - `openingHours`:   - `operator`:   - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `seeAlso`:   - `socketNumber`:   - `socketType`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `status`:   - `type`: NGSI Type d'entité  - `voltage`:   ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 EVChargingStation:    
   description: 'EV Charging Station'    
   properties:    
@@ -345,6 +346,9 @@ EVChargingStation:
     - allowedVehicleType    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### EVChargingStation NGSI V2 Exemple de valeurs clés  
 Voici un exemple d'une EVChargingStation au format JSON comme valeurs clés. Elle est compatible avec NGSI V2 lorsqu'elle utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -371,6 +375,7 @@ EVChargingStation:
   "source": "https://openchargemap.org/"  
 }  
 ```  
+#### EVChargingStation NGSI V2 normalisée Exemple  
 Voici un exemple d'une EVChargingStation au format JSON normalisé. Elle est compatible avec NGSI V2 lorsqu'elle utilise `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -419,6 +424,7 @@ EVChargingStation:
   }  
 }  
 ```  
+#### EVChargingStation NGSI-LD Exemple de valeurs clés  
 Voici un exemple d'une EVChargingStation au format JSON-LD comme valeurs clés. Elle est compatible avec le format JSON-LD lorsqu'elle n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -439,6 +445,7 @@ EVChargingStation:
  "source": "https://openchargemap.org/",  
  "type": "EVChargingStation"}  
 ```  
+#### EVChargingStation NGSI-LD normalisée Exemple  
 Voici un exemple d'une EVChargingStation au format JSON-LD, telle que normalisée. Elle est compatible avec le format JSON-LD lorsqu'elle n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
