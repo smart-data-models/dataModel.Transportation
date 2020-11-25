@@ -5,9 +5,10 @@ Entité : Véhicule :
 
 ## Liste des biens  
 
-`address`: L'adresse postale.  `alternateName`: Un autre nom pour cet article  `annotations`:   `areaServed`:   `cargoWeight`:   `category`:   `color`:   `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateFirstUsed`:   `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateVehicleFirstRegistered`:   `description`: Une description de cet article  `feature`:   `fleetVehicleId`:   `heading`:   `id`:   `image`: Une image de l'objet.  `location`:   `mileageFromOdometer`:   `name`: Le nom de cet article.  `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  `previousLocation`:   `purchaseDate`:   `refVehicleModel`:   `seeAlso`:   `serviceProvided`:   `serviceStatus`:   `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  `speed`:   `type`: NGSI Type d'entité  `vehicleConfiguration`:   `vehicleIdentificationNumber`:   `vehiclePlateIdentifier`:   `vehicleSpecialUsage`:   `vehicleType`:   ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `annotations`:   - `areaServed`:   - `cargoWeight`:   - `category`:   - `color`:   - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateFirstUsed`:   - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateVehicleFirstRegistered`:   - `description`: Une description de cet article  - `feature`:   - `fleetVehicleId`:   - `heading`:   - `id`:   - `image`: Une image de l'objet.  - `location`:   - `mileageFromOdometer`:   - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `previousLocation`:   - `purchaseDate`:   - `refVehicleModel`:   - `seeAlso`:   - `serviceProvided`:   - `serviceStatus`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `speed`:   - `type`: NGSI Type d'entité  - `vehicleConfiguration`:   - `vehicleIdentificationNumber`:   - `vehiclePlateIdentifier`:   - `vehicleSpecialUsage`:   - `vehicleType`:   ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Vehicle:    
   description: 'This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.'    
   properties:    
@@ -386,6 +387,9 @@ Vehicle:
     - location    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### Exemple de valeurs clés de l'INSG V2 pour les véhicules  
 Voici un exemple de véhicule au format JSON en tant que valeurs clés. Ce format est compatible avec la version 2 du NGSI lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -407,6 +411,7 @@ Vehicle:
       "vehiclePlateIdentifier": "3456ABC"  
 }  
 ```  
+#### Véhicule NGSI V2 normalisé Exemple  
 Voici un exemple de véhicule au format JSON tel que normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -472,6 +477,7 @@ Vehicle:
     }  
 }  
 ```  
+#### Exemple de valeurs clés pour les véhicules NGSI-LD  
 Voici un exemple de véhicule au format JSON-LD comme valeurs clés. Ce format est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -491,6 +497,7 @@ Vehicle:
  "vehiclePlateIdentifier": "3456ABC",  
  "vehicleType": "lorry"}  
 ```  
+#### Véhicule NGSI-LD normalisé Exemple  
 Voici un exemple d'un véhicule au format JSON-LD tel que normalisé. Ce format est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
