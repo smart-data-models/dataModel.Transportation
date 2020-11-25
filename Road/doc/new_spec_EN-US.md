@@ -7,7 +7,8 @@ Entity: Road
 
 - `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `annotations`:   - `areaServed`: The geographic area where a service or offered item is provided.  - `color`: The color of the product.  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`:   - `image`: An image of the item.  - `length`:   - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refRoadSegment`:   - `responsible`:   - `roadClass`:   - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type  ## Data Model description of properties  
 Sorted alphabetically  
-```yaml  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Road:    
   description: 'This entity contains a harmonised geographic and contextual description of a road. Roads are made up of one or more RoadSegment entities. Road segments are usually used to model the different carriageways of highways, for instance. The presence of dedicated bicycle lanes should be modelled using road segments as well. Road segments also play an important role when modelling roads with heterogeneous segments, for instance segments on which speed limits are different. This entity is primarily associated with the Automotive and Smart City vertical segments and related IoT applications. This data model has been developed in cooperation with mobile operators and the GSMA.'    
   properties:    
@@ -265,6 +266,7 @@ Road:
   required: []    
   type: object    
 ```  
+</details>    
 #### Road NGSI V2 key-values Example    
 Here is an example of a Road in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
