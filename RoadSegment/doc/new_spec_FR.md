@@ -5,9 +5,10 @@ Entité : RoadSegment
 
 ## Liste des biens  
 
-`address`: L'adresse postale.  `allowedVehicleType`:   `alternateName`: Un autre nom pour cet article  `annotations`:   `areaServed`: La zone géographique où un service ou un article offert est fourni.  `category`:   `color`: La couleur du produit.  `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  `description`: Une description de cet article  `endKilometer`:   `endPoint`:   `id`:   `image`: Une image de l'objet.  `laneUsage`:   `length`:   `location`:   `maximumAllowedHeight`:   `maximumAllowedSpeed`:   `maximumAllowedWeight`:   `minimumAllowedSpeed`:   `name`: Le nom de cet article.  `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  `refRoad`:   `seeAlso`:   `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  `startKilometer`:   `startPoint`:   `totalLaneNumber`:   `type`: NGSI Type d'entité  `width`:   ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `address`: L'adresse postale.  - `allowedVehicleType`:   - `alternateName`: Un autre nom pour cet article  - `annotations`:   - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `category`:   - `color`: La couleur du produit.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `endKilometer`:   - `endPoint`:   - `id`:   - `image`: Une image de l'objet.  - `laneUsage`:   - `length`:   - `location`:   - `maximumAllowedHeight`:   - `maximumAllowedSpeed`:   - `maximumAllowedWeight`:   - `minimumAllowedSpeed`:   - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refRoad`:   - `seeAlso`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `startKilometer`:   - `startPoint`:   - `totalLaneNumber`:   - `type`: NGSI Type d'entité  - `width`:   ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 RoadSegment:    
   description: 'This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road. Road segments can include several lanes. This data model allows to convey road segments made up of heterogeneous lanes (different in their usage, speed, height, etc.). Lanes are identified by using integer numbers between 1 and n, being number 1 the lane to the right when going forwards. The forward direction is the direction denoted by the vector which goes from the segment"s start point to the segment"s end point. This is the same convention as the one used by OpenStreetMap. This entity is primarily associated with the Automotive and Smart City vertical segments and related IoT applications. This data model has been developed in cooperation with mobile operators and the GSMA.'    
   properties:    
@@ -328,6 +329,9 @@ RoadSegment:
     - laneUsage    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### RoadSegment NGSI V2 valeurs clés Exemple  
 Voici un exemple de RoadSegment en format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -369,6 +373,7 @@ RoadSegment:
   "source": "http://wwww.openstreetmap.org"  
 }  
 ```  
+#### RoadSegment NGSI V2 normalisé Exemple  
 Voici un exemple de RoadSegment au format JSON tel que normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -428,6 +433,7 @@ RoadSegment:
   }  
 }  
 ```  
+#### RoadSegment NGSI-LD key-values Exemple  
 Voici un exemple de RoadSegment en format JSON-LD comme valeurs clés. Il est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -459,6 +465,7 @@ RoadSegment:
  "totalLaneNumber": 2,  
  "type": "RoadSegment"}  
 ```  
+#### RoadSegment NGSI-LD normalisé Exemple  
 Voici un exemple de RoadSegment au format JSON-LD tel que normalisé. Il est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
