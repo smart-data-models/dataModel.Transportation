@@ -1,13 +1,14 @@
 Entité : Route  
 ==============  
 Cette spécification est une **version temporelle**. Elle est générée automatiquement à partir des propriétés documentées décrites dans le schema.json condensé dans le fichier `model.yaml`. Un fichier temporaire `nouveau_modèle.yaml` a été créé dans chaque modèle de données pour éviter d'avoir un impact sur les scripts existants. Ainsi, la spécification sera incomplète tant que le fichier schema.json n'est pas mis à jour au nouveau format (documentation des propriétés). Une fois mis à jour, le fichier `model.yaml` (`nouveau_model.yaml`) doit être mis à jour également (automatiquement) . Plus d'informations dans ce [lien](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Tant qu'il s'agit d'un format provisoire, tout [feedback est le bienvenu dans ce formulaire](https://smartdatamodels.org/index.php/submit-an-issue-2/) en choisissant l'option "Feedback sur la nouvelle spécification".  
-Description globale : **Cette entité contient une description géographique et contextuelle harmonisée d'une route. Les routes sont composées d'une ou plusieurs entités du RoadSegment. Les segments de route sont généralement utilisés pour modéliser les différentes voies de circulation des autoroutes, par exemple. La présence de pistes cyclables dédiées doit également être modélisée à l'aide de segments de route. Les segments de route jouent également un rôle important dans la modélisation de routes comportant des segments hétérogènes, par exemple des segments sur lesquels les limitations de vitesse sont différentes. Cette entité est principalement associée aux segments verticaux de l'automobile et de la ville intelligente et aux applications IdO connexes. Ce modèle de données a été développé en coopération avec les opérateurs de téléphonie mobile et la GSMA.**  
+Description globale : **Cette entité contient une description géographique et contextuelle harmonisée d'une route. Les routes sont composées d'une ou plusieurs entités du RoadSegment. Les segments de route sont généralement utilisés pour modéliser les différentes voies de circulation des autoroutes, par exemple. La présence de pistes cyclables dédiées doit également être modélisée à l'aide de segments de route. Les segments de route jouent également un rôle important dans la modélisation de routes comportant des segments hétérogènes, par exemple des segments sur lesquels les limites de vitesse sont différentes. Cette entité est principalement associée aux segments verticaux de l'automobile et de la ville intelligente et aux applications IdO connexes. Ce modèle de données a été développé en coopération avec les opérateurs de téléphonie mobile et la GSMA.**  
 
 ## Liste des biens  
 
-`address`: L'adresse postale.  `alternateName`: Un autre nom pour cet article  `annotations`:   `areaServed`: La zone géographique où un service ou un article offert est fourni.  `color`: La couleur du produit.  `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  `description`: Une description de cet article  `id`:   `image`: Une image de l'objet.  `length`:   `location`:   `name`: Le nom de cet article.  `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  `refRoadSegment`:   `responsible`:   `roadClass`:   `seeAlso`:   `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  `type`: NGSI Type d'entité  ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `annotations`:   - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `color`: La couleur du produit.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `id`:   - `image`: Une image de l'objet.  - `length`:   - `location`:   - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refRoadSegment`:   - `responsible`:   - `roadClass`:   - `seeAlso`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: NGSI Type d'entité  ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Road:    
   description: 'This entity contains a harmonised geographic and contextual description of a road. Roads are made up of one or more RoadSegment entities. Road segments are usually used to model the different carriageways of highways, for instance. The presence of dedicated bicycle lanes should be modelled using road segments as well. Road segments also play an important role when modelling roads with heterogeneous segments, for instance segments on which speed limits are different. This entity is primarily associated with the Automotive and Smart City vertical segments and related IoT applications. This data model has been developed in cooperation with mobile operators and the GSMA.'    
   properties:    
@@ -265,6 +266,9 @@ Road:
   required: []    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### Road NGSI V2 - Exemple de valeurs clés  
 Voici un exemple de route en format JSON comme valeurs clés. Il est compatible avec la version 2 du NGSI lorsque l'on utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -282,6 +286,7 @@ Road:
   "responsible": "Ministerio de Fomento - Gobierno de España"  
 }  
 ```  
+#### Exemple de normalisation de la route NGSI V2  
 Voici un exemple de route au format JSON telle que normalisée. Il est compatible avec NGSI V2 lorsque l'on utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -314,6 +319,7 @@ Road:
   }  
 }  
 ```  
+#### Road NGSI-LD key-values Exemple  
 Voici un exemple de route en format JSON-LD comme valeurs clés. Ce format est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -329,6 +335,7 @@ Road:
  "roadClass": "motorway",  
  "type": "Road"}  
 ```  
+#### Exemple de route NGSI-LD normalisée  
 Voici un exemple de route au format JSON-LD telle que normalisée. Ce format est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
