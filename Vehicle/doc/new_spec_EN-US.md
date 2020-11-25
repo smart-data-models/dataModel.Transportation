@@ -5,7 +5,7 @@ Entity: Vehicle
 
 ## List of properties  
 
-`address`: The mailing address.  `alternateName`: An alternative name for this item  `annotations`:   `areaServed`:   `cargoWeight`:   `category`:   `color`:   `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  `dateFirstUsed`:   `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  `dateVehicleFirstRegistered`:   `description`: A description of this item  `feature`:   `fleetVehicleId`:   `heading`:   `id`:   `image`: An image of the item.  `location`:   `mileageFromOdometer`:   `name`: The name of this item.  `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  `previousLocation`:   `purchaseDate`:   `refVehicleModel`:   `seeAlso`:   `serviceProvided`:   `serviceStatus`:   `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  `speed`:   `type`: NGSI Entity type  `vehicleConfiguration`:   `vehicleIdentificationNumber`:   `vehiclePlateIdentifier`:   `vehicleSpecialUsage`:   `vehicleType`:   ## Data Model description of properties  
+- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `annotations`:   - `areaServed`:   - `cargoWeight`:   - `category`:   - `color`:   - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateFirstUsed`:   - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dateVehicleFirstRegistered`:   - `description`: A description of this item  - `feature`:   - `fleetVehicleId`:   - `heading`:   - `id`:   - `image`: An image of the item.  - `location`:   - `mileageFromOdometer`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `previousLocation`:   - `purchaseDate`:   - `refVehicleModel`:   - `seeAlso`:   - `serviceProvided`:   - `serviceStatus`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `speed`:   - `type`: NGSI Entity type  - `vehicleConfiguration`:   - `vehicleIdentificationNumber`:   - `vehiclePlateIdentifier`:   - `vehicleSpecialUsage`:   - `vehicleType`:   ## Data Model description of properties  
 Sorted alphabetically  
 ```yaml  
 Vehicle:    
@@ -386,6 +386,7 @@ Vehicle:
     - location    
   type: object    
 ```  
+#### Vehicle NGSI V2 key-values Example    
 Here is an example of a Vehicle in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
@@ -407,6 +408,7 @@ Vehicle:
       "vehiclePlateIdentifier": "3456ABC"  
 }  
 ```  
+#### Vehicle NGSI V2 normalized Example    
 Here is an example of a Vehicle in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
@@ -472,6 +474,7 @@ Vehicle:
     }  
 }  
 ```  
+#### Vehicle NGSI-LD key-values Example    
 Here is an example of a Vehicle in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -491,6 +494,7 @@ Vehicle:
  "vehiclePlateIdentifier": "3456ABC",  
  "vehicleType": "lorry"}  
 ```  
+#### Vehicle NGSI-LD normalized Example    
 Here is an example of a Vehicle in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
