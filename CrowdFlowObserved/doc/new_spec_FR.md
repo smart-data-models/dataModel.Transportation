@@ -5,9 +5,10 @@ Entité : CrowdFlowObserved
 
 ## Liste des biens  
 
-`address`: L'adresse postale.  `alternateName`: Un autre nom pour cet article  `areaServed`: La zone géographique où un service ou un article offert est fourni.  `averageCrowdSpeed`:   `averageHeadwayTime`:   `congested`:   `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateObserved`:   `dateObservedFrom`:   `dateObservedTo`:   `description`: Une description de cet article  `direction`:   `id`:   `location`:   `name`: Le nom de cet article.  `occupancy`:   `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  `peopleCount`:   `refRoadSegment`:   `seeAlso`:   `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  `type`: NGSI Type d'entité  ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `averageCrowdSpeed`:   - `averageHeadwayTime`:   - `congested`:   - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateObserved`:   - `dateObservedFrom`:   - `dateObservedTo`:   - `description`: Une description de cet article  - `direction`:   - `id`:   - `location`:   - `name`: Le nom de cet article.  - `occupancy`:   - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `peopleCount`:   - `refRoadSegment`:   - `seeAlso`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: NGSI Type d'entité  ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 CrowdFlowObserved:    
   description: CrowdFlowObserved    
   properties:    
@@ -268,6 +269,9 @@ CrowdFlowObserved:
     - dateObserved    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### CrowdFlowObserved NGSI V2 key-values Exemple  
 Voici un exemple de CrowdFlowObserved en format JSON comme valeurs clés. Il est compatible avec la version 2 du NGSI lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -290,6 +294,7 @@ CrowdFlowObserved:
   }  
 }  
 ```  
+#### CrowdFlowObserved NGSI V2 normalisé Exemple  
 Voici un exemple de CrowdFlowObserved au format JSON tel que normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -331,6 +336,7 @@ CrowdFlowObserved:
   }  
 }  
 ```  
+#### CrowdFlowObserved NGSI-LD valeurs clés Exemple  
 Voici un exemple de CrowdFlowObserved au format JSON-LD comme valeurs clés. Ce format est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -349,6 +355,7 @@ CrowdFlowObserved:
  "peopleCount": 100,  
  "type": "CrowdFlowObserved"}  
 ```  
+#### CrowdFlowObserved NGSI-LD normalisé Exemple  
 Voici un exemple de CrowdFlowObserved au format JSON-LD tel que normalisé. Ce format est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
