@@ -5,9 +5,10 @@ Entité : BikeHireDockingStation
 
 ## Liste des biens  
 
-`address`: L'adresse postale.  `alternateName`: Un autre nom pour cet article  `areaServed`: La zone géographique où un service ou un article offert est fourni.  `availableBikeNumber`:   `contactPoint`:   `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  `description`: Une description de cet article  `freeSlotNumber`:   `id`:   `location`:   `name`: Le nom de cet article.  `openingHours`:   `outOfServiceSlotNumber`:   `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  `provider`:   `seeAlso`:   `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  `status`:   `totalSlotNumber`:   `type`: NGSI Type d'entité  ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `availableBikeNumber`:   - `contactPoint`:   - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `freeSlotNumber`:   - `id`:   - `location`:   - `name`: Le nom de cet article.  - `openingHours`:   - `outOfServiceSlotNumber`:   - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `provider`:   - `seeAlso`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `status`:   - `totalSlotNumber`:   - `type`: NGSI Type d'entité  ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 BikeHireDockingStation:    
   description: 'Bike Hire Docking Station'    
   properties:    
@@ -264,7 +265,10 @@ BikeHireDockingStation:
     - type    
   type: object    
 ```  
-Voici un exemple de BikeHireDockingStation au format JSON comme valeurs clés. Elle est compatible avec NGSI V2 lorsqu'elle utilise `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
+</details>    
+## Exemples de charges utiles  
+#### BikeHireDockingStation NGSI V2 Exemple de valeurs clés  
+Voici un exemple de BikeHireDockingStation au format JSON comme valeurs clés. Elle est compatible avec NGSI V2 lorsqu'elle utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
         "id": "Bcn-BikeHireDockingStation-1",  
@@ -286,6 +290,7 @@ BikeHireDockingStation:
         "status": "working"  
 }  
 ```  
+#### BikeHireDockingStation NGSI V2 normalisé Exemple  
 Voici un exemple de BikeHireDockingStation au format JSON tel que normalisé. Elle est compatible avec NGSI V2 lorsqu'elle utilise `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -326,6 +331,7 @@ BikeHireDockingStation:
     }  
 }  
 ```  
+#### BikeHireDockingStation NGSI-LD Exemple de valeurs clés  
 Voici un exemple de BikeHireDockingStation au format JSON-LD comme valeurs clés. Elle est compatible avec le format NGSI-LD lorsqu'elle n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -341,6 +347,7 @@ BikeHireDockingStation:
  "status": "working",  
  "type": "BikeHireDockingStation"}  
 ```  
+#### BikeHireDockingStation NGSI-LD normalisé Exemple  
 Voici un exemple de BikeHireDockingStation au format JSON-LD tel que normalisé. Elle est compatible avec le format NGSI-LD lorsqu'elle n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
