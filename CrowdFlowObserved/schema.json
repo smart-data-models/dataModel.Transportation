@@ -61,10 +61,5 @@
       }
     }
   ],
-  "required": ["id", "type", "dateObserved"],
-  "anyOf": [
-    { "required": ["refRoadSegment"] },
-    { "required": ["location"] },
-    { "required": ["address"] }
-  ]
+  "required": ["id", "type", "dateObserved"]
 }
