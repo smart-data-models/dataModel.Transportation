@@ -166,6 +166,5 @@
     "socketType",
     "capacity",
     "allowedVehicleType"
-  ],
-  "anyOf": [{ "required": ["address"] }, { "required": ["location"] }]
+  ]
 }
