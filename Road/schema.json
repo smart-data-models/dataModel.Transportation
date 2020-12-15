@@ -3,7 +3,7 @@
   "$schemaVersion": "0.0",
   "$id": "https://smart-data-models.github.io/dataModel.Transportation/Road/schema.json",
   "title": " - Transportation / Road",
-  "description": "This entity contains a harmonised geographic and contextual description of a road. Roads are made up of one or more RoadSegment entities. Road segments are usually used to model the different carriageways of highways, for instance. The presence of dedicated bicycle lanes should be modelled using road segments as well. Road segments also play an important role when modelling roads with heterogeneous segments, for instance segments on which speed limits are different. This entity is primarily associated with the Automotive and Smart City vertical segments and related IoT applications. This data model has been developed in cooperation with mobile operators and the GSMA.",
+  "description": "This entity contains a harmonised geographic and contextual description of a road.",
   "type": "object",
   "allOf": [
     {
@@ -20,50 +20,40 @@
         "type": {
           "type": "string",
           "enum": ["Road"],
-          "description": "NGSI Entity type"
+          "description": "Property. NGSI Entity type. It has to be Road"
         },
         "roadClass": {
           "type": "string",
+          "description": "Property. The classification of this road. Model:'https://schema.org/Text'. Enum:'motorway, primary, residential, secondary, service, tertiary, trunk, unclassified'.  Allowed values: Those described by [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Key:highway).",
           "enum": [
             "motorway",
-            "trunk",
             "primary",
-            "secondary",
-            "tertiary",
-            "unclassified",
             "residential",
-            "service"
+            "secondary",
+            "service",
+            "tertiary",
+            "trunk",
+            "unclassified"
           ]
         },
         "refRoadSegment": {
           "type": "array",
+          "description": "Property. Road segments which define this road. Model:'https://schema.org/URL'. Relationship. List of references to entities of type RoadSegment",
           "items": {
             "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
           }
         },
         "length": {
           "type": "number",
-          "minimum": 0
+          "minimum": 0,
+          "description": "Property. Total length of this road in kilometers. Model:'https://schema.org/length'. Units:'Kilometer (Km)'"
         },
         "responsible": {
-          "type": "string"
+          "type": "string",
+          "description": "Property. Responsible for the road i.e. the organism or company in charge of its maintenance. Model:'https://schema.org/Text'."
         }
       },
-      "allOf": [
-        {
-          "required": ["id", "name", "type", "roadClass"]
-        },
-        {
-          "oneOf": [
-            {
-              "required": ["refRoadSegment"]
-            },
-            {
-              "required": ["location"]
-            }
-          ]
-        }
-      ]
+      "required": ["id", "name", "type", "roadClass"]
     }
   ]
 }
