@@ -1,0 +1,319 @@
+RoadSegment:
+  description: 'This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road. Road segments can include several lanes. This data model allows to convey road segments made up of heterogeneous lanes (different in their usage, speed, height, etc.). Lanes are identified by using integer numbers between 1 and n, being number 1 the lane to the right when going forwards. The forward direction is the direction denoted by the vector which goes from the segment"s start point to the segment"s end point. This is the same convention as the one used by OpenStreetMap. This entity is primarily associated with the Automotive and Smart City vertical segments and related IoT applications. This data model has been developed in cooperation with mobile operators and the GSMA.'
+  properties:
+    address:
+      description: 'The mailing address.'
+      properties:
+        addressCountry:
+          type: string
+        addressLocality:
+          type: string
+        addressRegion:
+          type: string
+        areaServed:
+          type: string
+        postOfficeBoxNumber:
+          type: string
+        postalCode:
+          type: string
+        streetAddress:
+          type: string
+      type: Property
+    allowedVehicleType:
+      items:
+        enum:
+          - agriculturalVehicle
+          - bicycle
+          - bus
+          - car
+          - caravan
+          - carWithCaravan
+          - carWithTrailer
+          - constructionOrMaintenanceVehicle
+          - lorry
+          - moped
+          - motorcycle
+          - motorcycleWithSideCar
+          - motorscooter
+          - tanker
+          - trailer
+          - van
+          - anyVehicle
+        type: string
+      type: array
+    alternateName:
+      description: 'An alternative name for this item'
+      type: Property
+    annotations:
+      items:
+        type: string
+      type: array
+    areaServed:
+      description: 'The geographic area where a service or offered item is provided.'
+      type: Property
+    category:
+      enum:
+        - oneway
+        - toll
+        - link
+      type: string
+    color:
+      description: 'The color of the product.'
+      type: string
+    dataProvider:
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      type: Property
+    dateCreated:
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    dateModified:
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    description:
+      description: 'A description of this item'
+      type: Property
+    endKilometer:
+      minimum: 0
+      type: number
+    endPoint:
+      $id: https://geojson.org/schema/Geometry.json
+      $schema: "http://json-schema.org/draft-07/schema#"
+      oneOf: &roadsegment_-_properties_-_location_-_oneof
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                type: number
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - Point
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Point'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - LineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON LineString'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 4
+                type: array
+              type: array
+            type:
+              enum:
+                - Polygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Polygon'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPoint
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPoint'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiLineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiLineString'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  minItems: 4
+                  type: array
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPolygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPolygon'
+          type: object
+      title: 'GeoJSON Geometry'
+    id:
+      anyOf: &roadsegment_-_properties_-_owner_-_items_-_anyof
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+    image:
+      description: 'An image of the item.'
+      format: uri
+      type: string
+    laneUsage:
+      items:
+        enum:
+          - forward
+          - backward
+        type: string
+      type: array
+    length:
+      minimum: 0
+      type: number
+    location:
+      $id: https://geojson.org/schema/Geometry.json
+      $schema: "http://json-schema.org/draft-07/schema#"
+      oneOf: *roadsegment_-_properties_-_location_-_oneof
+      title: 'GeoJSON Geometry'
+    maximumAllowedHeight:
+      minimum: 0
+      type: number
+    maximumAllowedSpeed:
+      minimum: 0
+      type: number
+    maximumAllowedWeight:
+      minimum: 0
+      type: number
+    minimumAllowedSpeed:
+      minimum: 0
+      type: number
+    name:
+      description: 'The name of this item.'
+      type: Property
+    owner:
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      items:
+        anyOf: *roadsegment_-_properties_-_owner_-_items_-_anyof
+      type: Property
+    refRoad:
+      anyOf: *roadsegment_-_properties_-_owner_-_items_-_anyof
+    seeAlso:
+      oneOf:
+        - items:
+            - format: uri
+              type: string
+          minItems: 1
+          type: array
+        - format: uri
+          type: string
+    source:
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      type: Property
+    startKilometer:
+      minimum: 0
+      type: number
+    startPoint:
+      $id: https://geojson.org/schema/Geometry.json
+      $schema: "http://json-schema.org/draft-07/schema#"
+      oneOf: *roadsegment_-_properties_-_location_-_oneof
+      title: 'GeoJSON Geometry'
+    totalLaneNumber:
+      minimum: 1
+      type: number
+    type:
+      description: 'NGSI Entity type'
+      enum:
+        - RoadSegment
+      type: string
+    width:
+      minimum: 0
+      type: number
+  required:
+    - id
+    - name
+    - type
+    - refRoad
+    - startPoint
+    - endPoint
+    - allowedVehicleType
+    - totalLaneNumber
+    - laneUsage
+  type: object

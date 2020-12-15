@@ -1,0 +1,11 @@
+{"@context": ["https://schema.lab.fiware.org/ld/context",
+              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],
+ "brandName": "Mercedes Benz",
+ "cargoVolume": 1000,
+ "fuelType": "diesel",
+ "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",
+ "manufacturerName": "Daimler",
+ "modelName": "Econic",
+ "name": "MBenz-Econic2014",
+ "type": "VehicleModel",
+ "vehicleType": "lorry"}

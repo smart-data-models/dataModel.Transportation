@@ -1,42 +1,59 @@
-[![Status badge](https://img.shields.io/badge/status-draft-red.svg)](RELEASE_NOTES)
-[![Build badge](https://img.shields.io/travis/smart-data-models/dataModel.Transportation.svg "Travis build status")](https://travis-ci.org/smart-data-models/dataModel.Transportation/)
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-# Transportation Data Models
+# dataModel.Transportation
+These data models describe the main entities involved with smart applications that deal with transportation issues. This set of entities is primarily associated with the Automotive and Smart City vertical segments and related IoT applications.
+When feasible, references to existing schema.org entity types and attributes are included.
+These models have been devised to be as generic as possible, thus allowing to deal with different scenarios
+- Traffic flow monitoring - Private Vehicles. - Public Vehicles (Buses, Trains, etc.). - Municipal Vehicles (pick up lorries, cleaning units, ...) - Special Vehicles (ambulances, fire brigades, ...)
 
-These data models describe the main entities involved with smart applications
-that deal with transportation issues. This set of entities is primarily
-associated with the Automotive and Smart City vertical segments and related IoT
-applications.
+### List of data models
 
-When feasible, references to existing schema.org entity types and attributes are
-included.
+The following entity types are available:
+- [BikeHireDockingStation](https://github.com/smart-data-models/dataModel.Transportation/blob/master/BikeHireDockingStation/README.md). -> Many cities provide a bike hiring system for citizens. These can hire a bike base on different types of subscriptions. A bike hire docking station where subscribed users can hire and return a bike. It provides data about its main features and availability of bikes and free slots.
 
-These models have been devised to be as generic as possible, thus allowing to
-deal with different scenarios:
+- [CrowdFlowObserved](https://github.com/smart-data-models/dataModel.Transportation/blob/master/CrowdFlowObserved/README.md). -> An observation related to the movement of people at a certain place and time.
 
--   Traffic flow monitoring
--   Private Vehicles.
--   Public Vehicles (Buses, Trains, etc.).
--   Municipal Vehicles (pick up lorries, cleaning units, ...)
--   Special Vehicles (ambulances, fire brigades, ...)
+- [EVChargingStation](https://github.com/smart-data-models/dataModel.Transportation/blob/master/EVChargingStation/README.md). -> A public charging station supplying energy to electrical vehicles. The charge time depends on the maximum power output of the station, the number of vehicles currently charging and the current battery level.
 
-The main entities identified are:
+- [Road](https://github.com/smart-data-models/dataModel.Transportation/blob/master/Road/README.md). -> This entity contains a harmonised geographic and contextual description of a road. Roads are made up of one or more RoadSegment entities. Road segments are usually used to model the different carriageways of highways, for instance. The presence of dedicated bicycle lanes should be modelled using road segments as well. Road segments also play an important role when modelling roads with heterogeneous segments, for instance segments on which speed limits are different. This entity is primarily associated with the Automotive and Smart City vertical segments and related IoT applications. This data model has been developed in cooperation with mobile operators and the GSMA.
 
--   [`TrafficFlowObserved`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Transportation/TrafficFlowObserved/swagger.yaml). It represents an
-    observation about flow of traffic.
--   [`CrowdFlowObserved`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Transportation/CrowdFlowObserved/swagger.yaml). It represents an
-    observation related to the movement of people at a certain place and time.
--   [`BikeHireDockingStation`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Transportation/BikeHireDockingStation/swagger.yaml). It
-    represents an a bike hire docking station where subscribed users can hire
-    and return a bike.
--   [`EVChargingStation`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Transportation/EVChargingStation/swagger.yaml). It represents a
-    public charging station supplying energy to electrical vehicles.
--   [`Road`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Transportation/Road/swagger.yaml). It contains a harmonised geographic and
-    contextual description of a Road.
--   [`RoadSegment`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Transportation/RoadSegment/swagger.yaml). It contains a harmonised
-    geographic and contextual description of a road segment.
--   [`Vehicle`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Transportation/Vehicle/swagger.yaml). It represents a vehicle with all
-    its individual characteristics.
--   [`VehicleModel`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Transportation/VehicleModel/swagger.yaml). It represents a model
-    of vehicle, capturing its static properties such as dimensions, materials or
-    features.
+- [RoadSegment](https://github.com/smart-data-models/dataModel.Transportation/blob/master/RoadSegment/README.md). This entity contains a harmonised geographic and contextual description of a
+road segment. A collection of road segments are used to describe a Road.
+Road segments can include several lanes. This data model allows to convey
+road segments made up of heterogeneous lanes (different in their usage,
+speed, height, etc.). Lanes are identified by using integer numbers between
+1 and n, being number 1 the lane to the right when going forwards. The
+forward direction is the direction denoted by the vector which goes from the
+segment"s start point to the segment"s end point. This is the same
+convention as the one used by OpenStreetMap. This entity is primarily
+associated with the Automotive and Smart City vertical segments and related
+IoT applications. This data model has been developed in cooperation with
+mobile operators and the GSMA.
+
+
+- [TrafficFlowObserved](https://github.com/smart-data-models/dataModel.Transportation/blob/master/TrafficFlowObserved/README.md). TrafficFlowObserved
+
+- [Vehicle](https://github.com/smart-data-models/dataModel.Transportation/blob/master/Vehicle/README.md). This entity models a particular vehicle model, including all properties
+which are common to multiple vehicle instances belonging to such model.
+
+
+- [VehicleModel](https://github.com/smart-data-models/dataModel.Transportation/blob/master/VehicleModel/README.md). This entity models a particular vehicle model, including all properties
+which are common to multiple vehicle instances belonging to such model.
+
+
+
+
+### Incubated data models
+The list of incubated (on development) data models are:
+
+  - [FleetVehicleOperation_incubated](https://github.com/smart-data-models/dataModel.Transportation/tree/master/FleetVehicleOperation_incubated)
+
+  - [FleetVehicleStatus_incubated](https://github.com/smart-data-models/dataModel.Transportation/tree/master/FleetVehicleStatus_incubated)
+
+
+### Contributors
+[Link](https://github.com/smart-data-models/dataModel.Transportation/blob/master/CONTRIBUTORS.yaml) to the 5 current contributors of the data models of this Subject.
+
+
+### Contribution
+You can raise an [issue](https://github.com/smart-data-models/dataModel.Transportation/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.Transportation/pulls) on existing data models
+
+
