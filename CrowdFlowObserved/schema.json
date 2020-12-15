@@ -45,7 +45,7 @@
         "dateObservedFrom": {
           "type": "string",
           "format": "date-time",
-          "description": "Model:'https://schema.org/DateTime'. Observation period start date and time. See `dateObserved`."
+          "description": "Property. Model:'https://schema.org/DateTime'. Observation period start date and time. See `dateObserved`."
         },
         "dateObservedTo": {
           "type": "string",

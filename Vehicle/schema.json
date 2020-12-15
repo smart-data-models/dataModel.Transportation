@@ -127,7 +127,7 @@
         },
         "fleetVehicleId": {
           "type": "string",
-          "description": "Property.The identifier of the vehicle in the context of the fleet of vehicles to which it belongs. Model:'https://schema.org/Text'."
+          "description": "Property. The identifier of the vehicle in the context of the fleet of vehicles to which it belongs. Model:'https://schema.org/Text'."
         },
         "dateVehicleFirstRegistered": {
           "type": "string",

@@ -94,7 +94,7 @@
         },
         "vehicleType": {
           "type": "string",
-          "description": "Property.Type of vehicle from the point of view of its structural characteristics. Model:'https://schema.org/Text'. Enum:'agriculturalVehicle, bicycle, bus, minibus, car, caravan, tram, tanker, carWithCaravan, carWithTrailer, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, trailer, van, constructionOrMaintenanceVehicle, trolley, binTrolley, sweepingMachine, cleaningTrolley'",
+          "description": "Property. Type of vehicle from the point of view of its structural characteristics. Model:'https://schema.org/Text'. Enum:'agriculturalVehicle, bicycle, bus, minibus, car, caravan, tram, tanker, carWithCaravan, carWithTrailer, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, trailer, van, constructionOrMaintenanceVehicle, trolley, binTrolley, sweepingMachine, cleaningTrolley'",
           "enum": [
             "agriculturalVehicle",
             "bicycle",
