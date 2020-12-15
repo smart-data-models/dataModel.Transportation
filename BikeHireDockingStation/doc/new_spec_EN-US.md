@@ -5,9 +5,11 @@ Entity: BikeHireDockingStation
 
 ## List of properties  
 
-- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided.  - `availableBikeNumber`:   - `contactPoint`:   - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `freeSlotNumber`:   - `id`:   - `location`:   - `name`: The name of this item.  - `openingHours`:   - `outOfServiceSlotNumber`:   - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `provider`:   - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `status`:   - `totalSlotNumber`:   - `type`: NGSI Entity type    
+- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `availableBikeNumber`: The number of bikes available in the bike hire docking station to be hired by users  - `contactPoint`: Bike hire service contact point  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `freeSlotNumber`: The number of slots available for returning and parking bikes. It must lower or equal than `totalSlotNumber`  - `id`: Unique identifier of the entity  - `location`:   - `name`: The name of this item.  - `openingHours`: Opening hours of the docking station  - `outOfServiceSlotNumber`: The number of slots that are out of order and cannot be used to hire or park a bike. It must lower or equal than `totalSlotNumber`  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `provider`: Bike hire service provider  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `status`: Status of the bike hire docking station. Enum:'working, outOfService, withIncidence, full, almostFull, empty, almostEmpty'. Or any other application specific.  - `totalSlotNumber`: The total number of slots offered by this bike docking station  - `type`: NGSI Entity type. It has to be BikeHireDockingStation    
 Required properties  
-- `id`  - `type`  ## Data Model description of properties  
+- `id`  - `type`    
+Many cities provide a bike hiring system for citizens. These can hire a bike base on different types of subscriptions. A bike hire docking station where subscribed users can hire and return a bike. It provides data about its main features and availability of bikes and free slots.  
+## Data Model description of properties  
 Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -18,31 +20,46 @@ BikeHireDockingStation:
       description: 'The mailing address.'    
       properties:    
         addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
           type: string    
         addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
           type: string    
         areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
           type: string    
         postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/Text'''    
           type: string    
       type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided.'    
+      description: 'The geographic area where a service or offered item is provided'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     availableBikeNumber:    
+      description: 'The number of bikes available in the bike hire docking station to be hired by users'    
       minimum: 0    
-      type: integer    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number.    
     contactPoint:    
-      type: object    
+      description: 'Bike hire service contact point'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/contactPoint    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
@@ -58,8 +75,11 @@ BikeHireDockingStation:
       description: 'A description of this item'    
       type: Property    
     freeSlotNumber:    
+      description: 'The number of slots available for returning and parking bikes. It must lower or equal than `totalSlotNumber`'    
       minimum: 0    
-      type: integer    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number.    
     id:    
       anyOf: &bikehiredockingstation_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -70,6 +90,8 @@ BikeHireDockingStation:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     location:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -221,18 +243,29 @@ BikeHireDockingStation:
       description: 'The name of this item.'    
       type: Property    
     openingHours:    
-      type: string    
+      description: 'Opening hours of the docking station'    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/openingHours.    
     outOfServiceSlotNumber:    
+      description: 'The number of slots that are out of order and cannot be used to hire or park a bike. It must lower or equal than `totalSlotNumber`'    
       minimum: 0    
-      type: integer    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number.    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *bikehiredockingstation_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     provider:    
-      type: object    
+      description: 'Bike hire service provider'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/provider.    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -241,27 +274,34 @@ BikeHireDockingStation:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     status:    
+      description: 'Status of the bike hire docking station. Enum:''working, outOfService, withIncidence, full, almostFull, empty, almostEmpty''. Or any other application specific.'    
       enum:    
-        - working    
-        - outOfService    
-        - withIncidence    
-        - full    
+        - almostEmpty    
         - almostFull    
         - empty    
-        - almostEmpty    
-      type: string    
+        - full    
+        - outOfService    
+        - withIncidence    
+        - working    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
     totalSlotNumber:    
-      minimum: 1    
-      type: integer    
+      description: 'The total number of slots offered by this bike docking station'    
+      minimum: 0    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number.    
     type:    
-      description: 'NGSI Entity type'    
+      description: 'NGSI Entity type. It has to be BikeHireDockingStation'    
       enum:    
         - BikeHireDockingStation    
-      type: string    
+      type: Property    
   required:    
     - id    
     - type    
