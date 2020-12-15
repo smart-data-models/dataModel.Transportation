@@ -144,7 +144,7 @@ The data model is defined as shown below:
     -   Attribute type: Property. [Boolean](https://schema.org/Boolean)
     -   Optional
 
--   `averageHeadwayTime` : Average headway time. Headaway time is the time
+-   `averageHeadwayTime` : Average headway time. Headway time is the time
     ellapsed between two consecutive vehicles.
 
     -   Attribute type: Property. [Number](https://schema.org/Number)
