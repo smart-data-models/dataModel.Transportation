@@ -1,55 +1,90 @@
 Entité : TrafficFlowObserved  
 ============================  
-Cette spécification est une **version temporelle**. Elle est générée automatiquement à partir des propriétés documentées décrites dans le schema.json condensé dans le fichier `model.yaml`. Un fichier temporaire `nouveau_modèle.yaml` a été créé dans chaque modèle de données pour éviter d'avoir un impact sur les scripts existants. Ainsi, la spécification sera incomplète tant que le fichier schema.json n'est pas mis à jour au nouveau format (documentation des propriétés). Une fois mis à jour, le fichier `model.yaml` (`nouveau_model.yaml`) doit être mis à jour également (automatiquement) . Plus d'informations dans ce [lien](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Tant qu'il s'agit d'un format provisoire, tout [feedback est le bienvenu dans ce formulaire](https://smartdatamodels.org/index.php/submit-an-issue-2/) en choisissant l'option "Feedback sur la nouvelle spécification".  
-Description globale : **TrafficFlowObserved**  
+[Licence ouverte](https://github.com/smart-data-models//dataModel.Transportation/blob/master/TrafficFlowObserved/LICENSE.md)  
+Description globale : **Observation des conditions de circulation à un certain endroit et à un certain moment.**  
 
 ## Liste des biens  
 
-- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `averageGapDistance`:   - `averageHeadwayTime`:   - `averageVehicleLength`:   - `averageVehicleSpeed`:   - `congested`:   - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateObserved`:   - `dateObservedFrom`:   - `dateObservedTo`:   - `description`: Une description de cet article  - `id`:   - `intensity`:   - `laneDirection`:   - `laneId`:   - `location`:   - `name`: Le nom de cet article.  - `occupancy`:   - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refRoadSegment`:   - `reversedLane`:   - `seeAlso`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: NGSI Type d'entité  - `vehicleSubType`:   - `vehicleType`:   ## Modèle de données description des biens  
+- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `averageGapDistance`: Distance moyenne entre deux véhicules consécutifs  - `averageHeadwayTime`: Temps de progression moyen. Le temps d'avancement est le temps écoulé entre deux véhicules consécutifs  - `averageVehicleLength`: Longueur moyenne des véhicules transitant pendant  
+    la période d'observation  - `averageVehicleSpeed`: Vitesse moyenne des véhicules en transit pendant la période d'observation  - `congested`:  Signale s'il y a eu un embouteillage pendant la période d'observation dans la voie en question. L'absence de cet attribut signifie qu'il n'y a pas eu d'embouteillage  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateObserved`: La date et l'heure de cette observation au format ISO8601 UTC. Elle peut être représentée par un instant précis ou par un intervalle ISO8601. Pour pallier le manque de prise en charge par Orion Context Broker des intervalles date-heure, il peut être utilisé avec deux attributs distincts : dateObservedFrom", "dateObservedTo". [DateTime](https://schema.org/DateTime) ou un intervalle ISO8601 représenté par [Text](https://schema.org/Text)  - `dateObservedFrom`: Date et heure de début de la période d'observation. Voir "date d'observation".  - `dateObservedTo`: Date et heure de fin de la période d'observation. Voir "date d'observation".  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `intensity`: Nombre total de véhicules détectés pendant cette période d'observation  - `laneDirection`: Sens habituel de la circulation dans la voie visée par cette observation. Cet attribut est utile lorsque l'observation ne fait référence à aucun segment de route, permettant de connaître le sens de circulation du flux de trafic observé. Enum:en avant, en arrière". Voir RoadSegment pour une description de la sémantique de ces valeurs.  - `laneId`: Identificateur de voie. L'identification des voies est réalisée en utilisant les conventions définies par l'entité RoadSegment qui sont basées sur [OpenStreetMap] (http://wiki.openstreetmap.org/wiki/Forward_%26_backward,_left_%26_right).  - `location`:   - `name`: Le nom de cet article.  - `occupancy`: Fraction du temps d'observation où un véhicule a occupé la voie observée  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refRoadSegment`: Segment de route concerné sur lequel l'observation a été faite. Référence à une entité de type RoadSegment  - `reversedLane`: Indique si la circulation dans la voie a été inversée pendant la période d'observation. L'absence de cet attribut signifie qu'il n'y a pas eu de changement de voie  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit s'agir de TrafficFlowObserved  - `vehicleSubType`: Il permet de spécifier un sous-type de "VehicleType", par exemple si le "VehicleType" est réglé sur "Camion", le "VehicleSubType" peut être "OVG1" ou "OVG2" pour donner plus d'informations sur le type exact de véhicule.  - `vehicleType`: Type de véhicule du point de vue de ses caractéristiques structurelles. Enum : "véhicule agricole, bicyclette, bus, minibus, voiture, caravane, tram, camion-citerne, voiture avec caravane, voiture avec remorque, camion, cyclomoteur, moto, moto avec side-car, motocyclette, remorque, fourgon, véhicule de chantier ou d'entretien, chariot, chariot à ordures, balayeuse, chariot de nettoyage".    
+Propriétés requises  
+- `dateObserved`  - `id`  - `type`    
+Cette entité est principalement associée aux segments verticaux Automotive et Smart City et aux applications IdO connexes.  
+## Modèle de données description des biens  
 Classement par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 TrafficFlowObserved:    
-  description: TrafficFlowObserved    
+  description: 'An observation of traffic flow conditions at a certain place and time.'    
   properties:    
     address:    
       description: 'The mailing address.'    
       properties:    
         addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
           type: string    
         addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
           type: string    
         areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
           type: string    
         postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/Text'''    
           type: string    
       type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided.'    
+      description: 'The geographic area where a service or offered item is provided'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     averageGapDistance:    
+      description: 'Average gap distance between consecutive vehicles'    
       minimum: 0    
-      type: number    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: 'meter (m)'    
     averageHeadwayTime:    
+      description: 'Average headway time. Headway time is the time ellapsed between two consecutive vehicles'    
       minimum: 0    
-      type: number    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: 'second (s)'    
     averageVehicleLength:    
+      description: |-    
+        Average length of the vehicles transiting during    
+            the observation period    
       minimum: 0    
-      type: number    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: 'meter (m)'    
     averageVehicleSpeed:    
+      description: 'Average speed of the vehicles transiting during the observation period'    
       minimum: 0    
-      type: number    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: 'Kilometer per hour (Km/h)'    
     congested:    
-      type: boolean    
+      description: ' Flags whether there was a traffic congestion during the observation period in the referred lane. The absence of this attribute means no traffic congestion'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Boolean.    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
@@ -62,13 +97,22 @@ TrafficFlowObserved:
       format: date-time    
       type: Property    
     dateObserved:    
-      type: string    
+      description: 'The date and time of this observation in ISO8601 UTC format. It can be represented by an specific time instant or by an ISO8601 interval. As a workaround for the lack of support of Orion Context Broker for datetime intervals, it can be used two separate attributes: `dateObservedFrom`, `dateObservedTo`. [DateTime](https://schema.org/DateTime) or an ISO8601 interval represented as [Text](https://schema.org/Text)'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/DateTime.    
     dateObservedFrom:    
+      description: 'Observation period start date and time. See `dateObserved`'    
       format: date-time    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Datetime.    
     dateObservedTo:    
+      description: 'Observation period end date and time. See `dateObserved`'    
       format: date-time    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Datetime.    
     description:    
       description: 'A description of this item'    
       type: Property    
@@ -82,17 +126,28 @@ TrafficFlowObserved:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     intensity:    
+      description: 'Total number of vehicles detected during this observation period'    
       minimum: 0    
-      type: number    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number.    
     laneDirection:    
+      description: 'Usual direction of travel in the lane referred by this observation. This attribute is useful when the observation is not referencing any road segment, allowing to know the direction of travel of the traffic flow observed. Enum:forward, backward''. See RoadSegment for a description of the semantics of these values.'    
       enum:    
         - forward    
         - backward    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     laneId:    
-      minimum: 0    
-      type: integer    
+      description: 'Lane identifier. Lane identification is done using the conventions defined by RoadSegment entity which are based on [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Forward_%26_backward,_left_%26_right).'    
+      minimum: 1    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
     location:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -244,20 +299,31 @@ TrafficFlowObserved:
       description: 'The name of this item.'    
       type: Property    
     occupancy:    
+      description: 'Fraction of the observation time where a vehicle has been occupying the observed lane'    
       maximum: 1    
       minimum: 0    
-      type: number    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number.    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *trafficflowobserved_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     refRoadSegment:    
+      description: 'Concerned road segment on which the observation has been made. Reference to an entity of type RoadSegment'    
       format: uri    
-      type: string    
+      type: Relationship    
+      x-ngsi:    
+        model: https://schema.org/URL    
     reversedLane:    
-      type: boolean    
+      description: 'Flags whether traffic in the lane was reversed during the observation period. The absence of this attribute means no lane reversion'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Boolean.    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -266,17 +332,20 @@ TrafficFlowObserved:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     type:    
-      description: 'NGSI Entity type'    
+      description: 'NGSI Entity type. It has to be TrafficFlowObserved'    
       enum:    
         - TrafficFlowObserved    
-      type: string    
+      type: Property    
     vehicleSubType:    
-      type: string    
+      description: 'It allows to specify a sub type of `vehicleType`, eg if the `vehicleType` is set to `Lorry` the `vehicleSubType` may be `OGV1` or `OGV2` to convey more information about the exact type of vehicle.'    
+      type: Property    
     vehicleType:    
+      description: 'Type of vehicle from the point of view of its structural characteristics. Enum:''agriculturalVehicle, bicycle, bus, minibus, car, caravan, tram, tanker, carWithCaravan, carWithTrailer, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, trailer, van, constructionOrMaintenanceVehicle, trolley, binTrolley, sweepingMachine, cleaningTrolley'''    
       enum:    
         - agriculturalVehicle    
         - bicycle    
@@ -300,7 +369,9 @@ TrafficFlowObserved:
         - binTrolley    
         - sweepingMachine    
         - cleaningTrolley    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
   required:    
     - id    
     - type    
@@ -342,7 +413,7 @@ TrafficFlowObserved:
 }  
 ```  
 #### TrafficFlowObserved NGSI V2 normalisé Exemple  
-Voici un exemple de TrafficFlowObserved au format JSON tel que normalisé. Il est compatible avec la version 2 du NGSI lorsque l'on utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de TrafficFlowObserved au format JSON tel que normalisé. Ce format est compatible avec la version 2 du NGSI lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
   "id": "TrafficFlowObserved-Valladolid-osm-60821110",  
@@ -404,7 +475,7 @@ TrafficFlowObserved:
 }  
 ```  
 #### TrafficFlowObserved NGSI-LD valeurs clés Exemple  
-Voici un exemple de TrafficFlowObserved au format JSON-LD comme valeurs clés. Ce format est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de TrafficFlowObserved au format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
               "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
