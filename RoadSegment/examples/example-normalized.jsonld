@@ -3,7 +3,7 @@
     "type": "RoadSegment",
     "category": {
         "type": "Property",
-        "value": "oneway"
+        "value": ["oneway"]
     },
     "endPoint": {
         "type": "Property",

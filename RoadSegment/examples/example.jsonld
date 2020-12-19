@@ -7,7 +7,7 @@
                         "tanker",
                         "van",
                         "caravan"],
- "category": "oneway",
+ "category": ["oneway"],
  "endPoint": {"coordinates": [-4.55167335377909, 41.8570461783071],
               "type": "Point"},
  "id": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-osm-24702186",
