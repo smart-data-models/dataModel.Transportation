@@ -10,6 +10,10 @@ which are common to multiple vehicle instances belonging to such model.
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Transportation/Vehicle/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.Transportation/blob/master/Vehicle/doc/spec.md)
+
+Link to the [specification in Spanish](https://github.com/smart-data-models/dataModel.Transportation/blob/master/Vehicle/doc/spec_ES.md)
+
+Link to the [specification in French](https://github.com/smart-data-models/dataModel.Transportation/blob/master/Vehicle/doc/spec_FR.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.Transportation/Vehicle/examples/example.json) (keyvalues) for NGSI v2
