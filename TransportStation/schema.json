@@ -1,0 +1,274 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "schemaVersion": "0.0",
+  "$id": "https://smart-data-models.github.io/data-models/Transportation/TransportStation/schema.json",
+  "title": "Station schema",
+  "description": "The data model is a general description of urban stations (Metro, Bus, Tram, Heliport, ...) according to the GFTS standard https://developers.google.com/transit/gtfs/reference/#stopstxt, as well the detailed description of these (means of access, platform, assistance, ...).",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "TransportStation"
+          ],
+          "description": "NGSI Entity type"
+        },
+        "dateLastReported": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "refPointOfInterest": {
+          "type": "string",
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+        },
+        "stationType": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "tram",
+              "subway",
+              "rail",
+              "bus",
+              "ferry",
+              "cableTram",
+              "aerialLift",
+              "funicular",
+              "trolleybus",
+              "monorail"
+            ]
+          }
+        },
+        "locationType ": {
+          "type": "string",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "parentStation": {
+          "type": "string"
+        },
+        "levelId": {
+          "type": "number"
+        },
+        "platformCode   ": {
+          "type": "number"
+        },
+        "zoneId": {
+          "type": "string"
+        },
+        "wheelChairAccessible ": {
+          "type": "string",
+          "enum": [
+            0,
+            1,
+            2
+          ]
+        },
+        "openingHoursSpecification": {
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/DateTime-Commons/properties/openingHoursSpecification"
+        },
+        "contractingAuthority": {
+          "type": "string"
+        },
+        "contractingCompany": {
+          "type": "string"
+        },
+        "contactPoint": {
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons/properties/contactPoint"
+        },
+        "webSite": {
+          "type": "string"
+        },
+        "installationMode": {
+          "type": "string",
+          "enum": [
+            "ground",
+            "underGround",
+            "aerial",
+            "underSea"
+          ]
+        },
+        "dimension": {
+          "type": "object",
+          "properties": {
+            "height": {
+              "type": "number",
+              "minimum": 0
+            },
+            "width": {
+              "type": "number",
+              "minimum": 0
+            },
+            "depth": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        },
+        "inventory": {
+          "type": "object",
+          "properties": {
+            "nbOfIOPoint": {
+              "type": "number",
+              "minimum": 0
+            },
+            "nbOfLane": {
+              "type": "number",
+              "minimum": 0
+            },
+            "nbOfPlatform": {
+              "type": "number",
+              "minimum": 0
+            },
+            "PlatformType": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "lateral",
+                  "central"
+                ]
+              }
+            }
+          }
+        },
+        "stationConnected": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "stationType": {
+                "type": "string",
+                "enum": [
+                  "aerialLift",
+                  "bus",
+                  "cableTram",
+                  "ferry",
+                  "funicular",
+                  "monorail",
+                  "rail",
+                  "subway",
+                  "train",
+                  "tram",
+                  "trolleybus"
+                ]
+              },
+              "linesConnected ": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "services": {
+            "type": "object",
+            "properties": {
+              "purchaseDevice": {
+                "type": "Boolean"
+              },
+              "interactiveDevice": {
+                "type": "Boolean"
+              },
+              "timetableDevice": {
+                "type": "Boolean"
+              },
+              "voiceDevice": {
+                "type": "Boolean"
+              },
+              "informationBoardDevice": {
+                "type": "Boolean"
+              },
+              "messageDevice": {
+                "type": "Boolean"
+              },
+              "shelters": {
+                "type": "Boolean"
+              },
+              "restBench": {
+                "type": "Boolean"
+              },
+              "emergencyPhone": {
+                "type": "Boolean"
+              },
+              "defibrillator": {
+                "type": "Boolean"
+              },
+              "wheelChairAccessible": {
+                "type": "Boolean"
+              }
+            }
+          },
+          "paymentAccepted": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "Cash",
+                "CreditCard",
+                "CryptoCurrency",
+                "other"
+              ]
+            }
+          },
+          "currencyAccepted": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "EUR",
+                "USD"
+              ]
+            }
+          },
+          "constructionDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "commissioningDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "architect": {
+            "type": "string"
+          },
+          "featuredArtist": {
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type",
+    "location",
+    "dateObserved",
+    "dateLastReported",
+    "stationType",
+    "locationType"
+  ]
+}
