@@ -1,50 +1,65 @@
-Entity: Road  
-============  
-This specification is a **temporal version**. It is automatically generated from the  documented properties described in the schema.json condensed into the file `model.yaml`. A temporary `new_model.yaml` file has been created in every data model to avoid impacting into existing scripts. Thus, the specification will be incomplete as long as the schema.json is not updated to the new format (documenting properties). Once updated the `model.yaml` (`new_model.yaml`) needs to be updated as well (automatically) . Further info in this [link](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). As long as it is a provisional format any [feedback is welcomed in this form](https://smartdatamodels.org/index.php/submit-an-issue-2/) choosing option `Feedback on the new specification`  
-Global description: **This entity contains a harmonised geographic and contextual description of a road. Roads are made up of one or more RoadSegment entities. Road segments are usually used to model the different carriageways of highways, for instance. The presence of dedicated bicycle lanes should be modelled using road segments as well. Road segments also play an important role when modelling roads with heterogeneous segments, for instance segments on which speed limits are different. This entity is primarily associated with the Automotive and Smart City vertical segments and related IoT applications. This data model has been developed in cooperation with mobile operators and the GSMA.**  
+Entité : Route  
+==============  
+[Licence ouverte](https://github.com/smart-data-models//dataModel.Transportation/blob/master/Road/LICENSE.md)  
+Description globale : **Cette entité contient une description géographique et contextuelle harmonisée d'une route.**  
 
-## List of properties  
+## Liste des biens  
 
-- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `annotations`:   - `areaServed`: The geographic area where a service or offered item is provided.  - `color`: The color of the product.  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`:   - `image`: An image of the item.  - `length`:   - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refRoadSegment`:   - `responsible`:   - `roadClass`:   - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type    
-Required properties  
-## Data Model description of properties  
-Sorted alphabetically (click for details)  
+- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `annotations`: Annotations sur le sujet  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `color`: La couleur du produit  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `image`: Une image de l'objet  - `length`: Longueur totale de cette route en kilomètres  - `location`:   - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refRoadSegment`: Les segments de route qui définissent cette route. Liste des références aux entités de type RoadSegment  - `responsible`: Responsable de la route, c'est-à-dire l'organisme ou l'entreprise chargé de son entretien  - `roadClass`: La classification de cette route. Enum : "autoroute, primaire, résidentielle, secondaire, service, tertiaire, grande route, non classée".  Valeurs autorisées : Celles décrites par [OpenStreetMap] (http://wiki.openstreetmap.org/wiki/Key:highway).  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit s'agir d'une route    
+Propriétés requises  
+Les routes sont composées d'une ou plusieurs entités du RoadSegment. Les segments de route sont généralement utilisés pour modéliser les différentes voies de circulation des autoroutes, par exemple. La présence de pistes cyclables dédiées doit également être modélisée à l'aide de segments de route. Les segments de route jouent également un rôle important dans la modélisation de routes comportant des segments hétérogènes, par exemple des segments sur lesquels les limites de vitesse sont différentes. Cette entité est principalement associée aux segments verticaux de l'automobile et de la ville intelligente et aux applications IdO connexes. Ce modèle de données a été développé en coopération avec les opérateurs de téléphonie mobile et la GSMA.  
+## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Road:    
-  description: 'This entity contains a harmonised geographic and contextual description of a road. Roads are made up of one or more RoadSegment entities. Road segments are usually used to model the different carriageways of highways, for instance. The presence of dedicated bicycle lanes should be modelled using road segments as well. Road segments also play an important role when modelling roads with heterogeneous segments, for instance segments on which speed limits are different. This entity is primarily associated with the Automotive and Smart City vertical segments and related IoT applications. This data model has been developed in cooperation with mobile operators and the GSMA.'    
+  description: 'This entity contains a harmonised geographic and contextual description of a road.'    
   properties:    
     address:    
       description: 'The mailing address.'    
       properties:    
         addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
           type: string    
         addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
           type: string    
         areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
           type: string    
         postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/Text'''    
           type: string    
       type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
     annotations:    
+      description: 'Annotations about the item'    
       items:    
         type: string    
-      type: array    
-    areaServed:    
-      description: 'The geographic area where a service or offered item is provided.'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
+    areaServed:    
+      description: 'The geographic area where a service or offered item is provided'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     color:    
-      description: 'The color of the product.'    
-      type: string    
+      description: 'The color of the product'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/color    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
@@ -69,13 +84,21 @@ Road:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     image:    
-      description: 'An image of the item.'    
+      description: 'An image of the item'    
       format: uri    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/URL    
     length:    
+      description: 'Total length of this road in kilometers'    
       minimum: 0    
-      type: number    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/length    
+        units: 'Kilometer (Km)'    
     location:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -230,25 +253,37 @@ Road:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *road_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     refRoadSegment:    
+      description: 'Road segments which define this road. List of references to entities of type RoadSegment'    
       items:    
         anyOf: *road_-_properties_-_owner_-_items_-_anyof    
-      type: array    
+        description: 'Property. Unique identifier of the entity'    
+      type: Relationship    
+      x-ngsi:    
+        model: https://schema.org/URL    
     responsible:    
-      type: string    
+      description: 'Responsible for the road i.e. the organism or company in charge of its maintenance'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text.    
     roadClass:    
+      description: 'The classification of this road. Enum:''motorway, primary, residential, secondary, service, tertiary, trunk, unclassified''.  Allowed values: Those described by [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Key:highway).'    
       enum:    
         - motorway    
-        - trunk    
         - primary    
-        - secondary    
-        - tertiary    
-        - unclassified    
         - residential    
+        - secondary    
         - service    
-      type: string    
+        - tertiary    
+        - trunk    
+        - unclassified    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -257,21 +292,22 @@ Road:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     type:    
-      description: 'NGSI Entity type'    
+      description: 'NGSI Entity type. It has to be Road'    
       enum:    
         - Road    
-      type: string    
+      type: Property    
   required: []    
   type: object    
 ```  
 </details>    
-## Example payloads    
-#### Road NGSI V2 key-values Example    
-Here is an example of a Road in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+## Exemples de charges utiles  
+#### Road NGSI V2 - Exemple de valeurs clés  
+Voici un exemple de route en format JSON comme valeurs clés. Il est compatible avec la version 2 du NGSI lorsque l'on utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
   "id": "Spain-Road-A62",  
@@ -288,8 +324,8 @@ Road:
   "responsible": "Ministerio de Fomento - Gobierno de España"  
 }  
 ```  
-#### Road NGSI V2 normalized Example    
-Here is an example of a Road in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+#### Exemple de normalisation de la route NGSI V2  
+Voici un exemple de route au format JSON telle que normalisée. Ce format est compatible avec NGSI V2 lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
   "id": "Spain-Road-A62",  
@@ -321,8 +357,8 @@ Road:
   }  
 }  
 ```  
-#### Road NGSI-LD key-values Example    
-Here is an example of a Road in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+#### Road NGSI-LD key-values Exemple  
+Voici un exemple de route en format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
               "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
@@ -337,8 +373,8 @@ Road:
  "roadClass": "motorway",  
  "type": "Road"}  
 ```  
-#### Road NGSI-LD normalized Example    
-Here is an example of a Road in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+#### Exemple de route NGSI-LD normalisée  
+Voici un exemple de route au format JSON-LD telle que normalisée. Ce format est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
     "id": "urn:ngsi-ld:Road:Spain-Road-A62",  
