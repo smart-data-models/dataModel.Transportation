@@ -70,7 +70,7 @@
         },
         "fuelType": {
           "type": "string",
-          "description": "Property. The type of fuel suitable for the engine or engines of the vehicle. Model:'https://schema.org/DateTime'. Enum:'autogas, biodiesel ethanol, cng, diesel, electric, gasoline, hybrid electric/diesel, hybrid electric/petrol, hydrogen, lpg, petrol, petrol(unleaded), petrol(leaded), other'",
+          "description": "Property. The type of fuel suitable for the engine or engines of the vehicle. Model:'https://schema.org/DateTime'. Enum:'autogas, biodiesel, ethanol, cng, diesel, electric, gasoline, hybrid electric/diesel, hybrid electric/petrol, hydrogen, lpg, petrol, petrol(unleaded), petrol(leaded), other'",
           "enum": [
             "autogas",
             "biodiesel",
@@ -79,8 +79,8 @@
             "electric",
             "ethanol",
             "gasoline",
-            "hybrid electric/diesel",
-            "hybrid electric/petrol",
+            "hybrid_electric_diesel",
+            "hybrid_electric_petrol",
             "hydrogen",
             "lpg",
             "petrol",
