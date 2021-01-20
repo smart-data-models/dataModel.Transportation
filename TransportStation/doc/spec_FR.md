@@ -1,12 +1,479 @@
 Entité : TransportStation  
 =========================  
 [Licence ouverte](https://github.com/smart-data-models//dataModel.Transportation/blob/master/TransportStation/LICENSE.md)  
+Description globale : **Le modèle de données est une description générale des stations urbaines (Métro, Bus, Tram, Héliport, ...) selon le standard GFTS https://developers.google.com/transit/gtfs/reference/#stopstxt, ainsi que la description détaillée de celles-ci (moyens d'accès, quai, assistance, ...).**  
 
 ## Liste des biens  
 
-Propriétés requises  
-- Aucune propriété requise  ## Modèle de données description des biens  
+- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `contactPoint`: Les détails pour contacter l'article.  - `contractingAuthority`:   - `contractingCompany`:   - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateLastReported`:   - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `dimension`:   - `id`: Identifiant unique de l'entité  - `installationMode`:   - `inventory`:   - `levelId`:   - `location`:   - `locationType `:   - `name`: Le nom de cet article.  - `openingHoursSpecification`: Une valeur structurée fournissant des informations sur les heures d'ouverture d'un lieu ou d'un certain service à l'intérieur d'un lieu.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `parentStation`:   - `platformCode   `:   - `refPointOfInterest`: Identifiant unique de l'entité  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `stationConnected`:   - `stationType`:   - `type`: NGSI Type d'entité  - `webSite`:   - `wheelChairAccessible `:   - `zoneId`:     
+Propriétés requises  
+- `dateLastReported`  - `dateObserved`  - `id`  - `location`  - `locationType`  - `stationType`  - `type`  ## Modèle de données description des biens  
 Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
+TransportStation:    
+  description: "The data model is a general description of urban stations (Metro, Bus, Tram, Heliport, ...) according to the GFTS standard https://developers.google.com/transit/gtfs/reference/#stopstxt, as well the detailed description of these (means of access, platform, assistance, ...)."    
+  properties:    
+    address:    
+      description: 'The mailing address.'    
+      properties:    
+        addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
+          type: string    
+        addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          type: string    
+        addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
+          type: string    
+        areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
+          type: string    
+        postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
+          type: string    
+        postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
+          type: string    
+        streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/Text'''    
+          type: string    
+      type: Property    
+    alternateName:    
+      description: 'An alternative name for this item'    
+      type: Property    
+    areaServed:    
+      description: 'The geographic area where a service or offered item is provided'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
+    contactPoint:    
+      description: 'The details to contact with the item.'    
+      properties:    
+        contactType:    
+          type: string    
+        email:    
+          description: 'Property. Email address of owner.'    
+          format: idn-email    
+          type: string    
+        name:    
+          type: string    
+        telephone:    
+          type: string    
+        url:    
+          format: uri    
+          type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/ContactPoint    
+    contractingAuthority:    
+      type: string    
+    contractingCompany:    
+      type: string    
+    dataProvider:    
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      type: Property    
+    dateCreated:    
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      format: date-time    
+      type: Property    
+    dateLastReported:    
+      format: date-time    
+      type: string    
+    dateModified:    
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      format: date-time    
+      type: Property    
+    description:    
+      description: 'A description of this item'    
+      type: Property    
+    dimension:    
+      properties:    
+        depth:    
+          minimum: 0    
+          type: number    
+        height:    
+          minimum: 0    
+          type: number    
+        width:    
+          minimum: 0    
+          type: number    
+      type: object    
+    id:    
+      anyOf: &transportstation_-_properties_-_owner_-_items_-_anyof    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
+    installationMode:    
+      enum:    
+        - ground    
+        - underGround    
+        - aerial    
+        - underSea    
+      type: string    
+    inventory:    
+      properties:    
+        PlatformType:    
+          items:    
+            enum:    
+              - lateral    
+              - central    
+            type: string    
+          type: array    
+        nbOfIOPoint:    
+          minimum: 0    
+          type: number    
+        nbOfLane:    
+          minimum: 0    
+          type: number    
+        nbOfPlatform:    
+          minimum: 0    
+          type: number    
+      type: object    
+    levelId:    
+      type: number    
+    location:    
+      $id: https://geojson.org/schema/Geometry.json    
+      $schema: "http://json-schema.org/draft-07/schema#"    
+      oneOf:    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                type: number    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - Point    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Point'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - LineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON LineString'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 4    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - Polygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Polygon'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPoint    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPoint'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiLineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiLineString'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    items:    
+                      type: number    
+                    minItems: 2    
+                    type: array    
+                  minItems: 4    
+                  type: array    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPolygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPolygon'    
+          type: object    
+      title: 'GeoJSON Geometry'    
+    'locationType ':    
+      enum:    
+        - 0    
+        - 1    
+        - 2    
+        - 3    
+        - 4    
+      type: string    
+    name:    
+      description: 'The name of this item.'    
+      type: Property    
+    openingHoursSpecification:    
+      description: 'A structured value providing information about the opening hours of a place or a certain service inside a place.'    
+      items:    
+        properties:    
+          closes:    
+            format: time    
+            type: string    
+          dayOfWeek:    
+            enum:    
+              - Monday    
+              - Tuesday    
+              - Wednesday    
+              - Thursday    
+              - Friday    
+              - Saturday    
+              - Sunday    
+              - PublicHolidays    
+            type: string    
+          opens:    
+            format: time    
+            type: string    
+          validFrom:    
+            format: date-time    
+            type: string    
+          validThrough:    
+            format: date-time    
+            type: string    
+      minItems: 1    
+      type: Property    
+    owner:    
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      items:    
+        anyOf: *transportstation_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
+      type: Property    
+    parentStation:    
+      type: string    
+    'platformCode   ':    
+      type: number    
+    refPointOfInterest:    
+      anyOf: *transportstation_-_properties_-_owner_-_items_-_anyof    
+      description: 'Unique identifier of the entity'    
+      type: Property    
+    seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
+      oneOf:    
+        - items:    
+            - format: uri    
+              type: string    
+          minItems: 1    
+          type: array    
+        - format: uri    
+          type: string    
+      type: Property    
+    source:    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      type: Property    
+    stationConnected:    
+      architect:    
+        type: string    
+      commissioningDate:    
+        format: date-time    
+        type: string    
+      constructionDate:    
+        format: date-time    
+        type: string    
+      currencyAccepted:    
+        items:    
+          enum:    
+            - EUR    
+            - USD    
+          type: string    
+        type: array    
+      featuredArtist:    
+        items:    
+          anyOf:    
+            - anyOf: *transportstation_-_properties_-_owner_-_items_-_anyof    
+              description: 'Property. Unique identifier of the entity'    
+            - type: string    
+        type: array    
+      items:    
+        properties:    
+          'linesConnected ':    
+            items:    
+              type: string    
+            type: array    
+          stationType:    
+            enum:    
+              - aerialLift    
+              - bus    
+              - cableTram    
+              - ferry    
+              - funicular    
+              - monorail    
+              - rail    
+              - subway    
+              - train    
+              - tram    
+              - trolleybus    
+            type: string    
+        type: object    
+      paymentAccepted:    
+        items:    
+          enum:    
+            - Cash    
+            - CreditCard    
+            - CryptoCurrency    
+            - other    
+          type: string    
+        type: array    
+      services:    
+        properties:    
+          defibrillator:    
+            type: Boolean    
+          emergencyPhone:    
+            type: Boolean    
+          informationBoardDevice:    
+            type: Boolean    
+          interactiveDevice:    
+            type: Boolean    
+          messageDevice:    
+            type: Boolean    
+          purchaseDevice:    
+            type: Boolean    
+          restBench:    
+            type: Boolean    
+          shelters:    
+            type: Boolean    
+          timetableDevice:    
+            type: Boolean    
+          voiceDevice:    
+            type: Boolean    
+          wheelChairAccessible:    
+            type: Boolean    
+        type: object    
+      type: array    
+    stationType:    
+      items:    
+        enum:    
+          - tram    
+          - subway    
+          - rail    
+          - bus    
+          - ferry    
+          - cableTram    
+          - aerialLift    
+          - funicular    
+          - trolleybus    
+          - monorail    
+        type: string    
+      type: array    
+    type:    
+      description: 'NGSI Entity type'    
+      enum:    
+        - TransportStation    
+      type: string    
+    webSite:    
+      type: string    
+    'wheelChairAccessible ':    
+      enum:    
+        - 0    
+        - 1    
+        - 2    
+      type: string    
+    zoneId:    
+      type: string    
+  required:    
+    - id    
+    - type    
+    - location    
+    - dateObserved    
+    - dateLastReported    
+    - stationType    
+    - locationType    
+  type: object    
+```  
+</details>    
 ## Exemples de charges utiles  
 #### TransportStation NGSI V2 - Exemple de valeurs clés  
 Voici un exemple de TransportStation en format JSON comme valeurs clés. Il est compatible avec la version 2 du NGSI lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
