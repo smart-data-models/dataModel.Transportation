@@ -418,7 +418,7 @@ RoadSegment:
   "id": "Spain-RoadSegment-A62-osm-24702186",  
   "type": "RoadSegment",  
   "name": "Valladolid-Dueñas",  
-  "category": "oneway",  
+  "category": ["oneway"],  
   "refRoad": "Spain-Road-A62",  
   "totalLaneNumber": 2,  
   "maximumAllowedSpeed": 120,  
@@ -460,7 +460,7 @@ RoadSegment:
   "id": "Spain-RoadSegment-A62-osm-24702186",  
   "type": "RoadSegment",  
   "category": {  
-    "value": "oneway"  
+    "value": ["oneway"]  
   },  
   "endPoint": {  
     "value": {  
@@ -525,7 +525,7 @@ RoadSegment:
                         "tanker",  
                         "van",  
                         "caravan"],  
- "category": "oneway",  
+ "category": ["oneway"],  
  "endPoint": {"coordinates": [-4.55167335377909, 41.8570461783071],  
               "type": "Point"},  
  "id": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-osm-24702186",  
@@ -553,7 +553,7 @@ RoadSegment:
     "type": "RoadSegment",  
     "category": {  
         "type": "Property",  
-        "value": "oneway"  
+        "value": ["oneway"]  
     },  
     "endPoint": {  
         "type": "Property",  
