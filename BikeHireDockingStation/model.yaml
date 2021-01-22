@@ -1,89 +1,293 @@
----
-# Copyright (c) 2020 Contributors to Smart-Data-Models
-# see https://github.com/smart-data-models/dataModel.Transportation
-
 BikeHireDockingStation:
+  description: 'Bike Hire Docking Station'
+  properties:
+    address:
+      description: 'The mailing address.'
+      properties:
+        addressCountry:
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''
+          type: string
+        addressLocality:
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''
+          type: string
+        addressRegion:
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''
+          type: string
+        areaServed:
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''
+          type: string
+        postOfficeBoxNumber:
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''
+          type: string
+        postalCode:
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''
+          type: string
+        streetAddress:
+          description: 'Property. The street address. Model:''https://schema.org/Text'''
+          type: string
+      type: Property
+    alternateName:
+      description: 'An alternative name for this item'
+      type: Property
+    areaServed:
+      description: 'The geographic area where a service or offered item is provided'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
+    availableBikeNumber:
+      description: 'The number of bikes available in the bike hire docking station to be hired by users'
+      minimum: 0
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Number.
+    contactPoint:
+      description: 'Bike hire service contact point'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/contactPoint
+    dataProvider:
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      type: Property
+    dateCreated:
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    dateModified:
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    description:
+      description: 'A description of this item'
+      type: Property
+    freeSlotNumber:
+      description: 'The number of slots available for returning and parking bikes. It must lower or equal than `totalSlotNumber`'
+      minimum: 0
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Number.
+    id:
+      anyOf: &bikehiredockingstation_-_properties_-_owner_-_items_-_anyof
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Unique identifier of the entity'
+      type: Property
+    location:
+      $id: https://geojson.org/schema/Geometry.json
+      $schema: "http://json-schema.org/draft-07/schema#"
+      oneOf:
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                type: number
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - Point
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Point'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - LineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON LineString'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 4
+                type: array
+              type: array
+            type:
+              enum:
+                - Polygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Polygon'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPoint
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPoint'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiLineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiLineString'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  minItems: 4
+                  type: array
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPolygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPolygon'
+          type: object
+      title: 'GeoJSON Geometry'
+    name:
+      description: 'The name of this item.'
+      type: Property
+    openingHours:
+      description: 'Opening hours of the docking station'
+      type: Property
+      x-ngsi:
+        model: http://schema.org/openingHours.
+    outOfServiceSlotNumber:
+      description: 'The number of slots that are out of order and cannot be used to hire or park a bike. It must lower or equal than `totalSlotNumber`'
+      minimum: 0
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Number.
+    owner:
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      items:
+        anyOf: *bikehiredockingstation_-_properties_-_owner_-_items_-_anyof
+        description: 'Property. Unique identifier of the entity'
+      type: Property
+    provider:
+      description: 'Bike hire service provider'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/provider.
+    seeAlso:
+      description: 'list of uri pointing to additional resources about the item'
+      oneOf:
+        - items:
+            - format: uri
+              type: string
+          minItems: 1
+          type: array
+        - format: uri
+          type: string
+      type: Property
+    source:
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      type: Property
+    status:
+      description: 'Status of the bike hire docking station. Enum:''working, outOfService, withIncidence, full, almostFull, empty, almostEmpty''. Or any other application specific.'
+      enum:
+        - almostEmpty
+        - almostFull
+        - empty
+        - full
+        - outOfService
+        - withIncidence
+        - working
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Number
+    totalSlotNumber:
+      description: 'The total number of slots offered by this bike docking station'
+      minimum: 0
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Number.
+    type:
+      description: 'NGSI Entity type. It has to be BikeHireDockingStation'
+      enum:
+        - BikeHireDockingStation
+      type: Property
   required:
     - id
     - type
-  allOf:
-    - $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
-  description: ->
-    Many cities provide a bike hiring system for citizens. These can hire a bike base on different types of subscriptions.
-    A bike hire docking station where subscribed users can hire and return a bike. 
-    It provides data about its main features and availability of bikes and free slots.
-  properties:
-    address:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/schema.org.yaml#/address
-    alternateName:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
-    areaServed:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/schema.org.yaml#/areaServed
-    availableBikeNumber:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Integer'
-      type: integer
-      description: 'The number of bikes available in the bike hire docking station to be hired by users.'
-      format: int32
-    contactPoint:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/schema.org.yaml#/contactPoint
-    dataProvider:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
-    description:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
-    freeSlotNumber:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Integer'
-      type: integer
-      description: 'The number of slots available for returning and parking bikes. It must lower or equal than totalSlotNumber.'
-      format: int32
-    location:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
-    name:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
-    openingHours:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/schema.org.yaml#/openingHours
-    outOfServiceSlotNumber:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Integer'
-      type: integer
-      description: 'The number of slots that are out of order and cannot be used to hire or park a bike. It must lower or equal than totalSlotNumber.'
-      format: int32
-    owner:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
-    provider:
-      x-ngsi:
-        type: Property
-      type: object
-      description: 'Bike hire service provider.'
-    source:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
-    status:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: 'Status of the bike hire docking station.'
-    totalSlotNumber:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Integer'
-      type: integer
-      description: 'The total number of slots offered by this bike docking station.'
-      format: int32
