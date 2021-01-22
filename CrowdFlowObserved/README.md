@@ -2,7 +2,7 @@
 
 ## Description 
 
--> An observation related to the movement of people at a certain place and time.
+CrowdFlowObserved
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Transportation/CrowdFlowObserved/swagger.yaml)
