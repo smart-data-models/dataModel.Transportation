@@ -2,7 +2,7 @@
 
 ## Description 
 
-TrafficFlowObserved
+An observation of traffic flow conditions at a certain place and time.
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Transportation/TrafficFlowObserved/swagger.yaml)
