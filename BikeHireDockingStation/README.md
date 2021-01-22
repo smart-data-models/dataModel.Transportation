@@ -2,7 +2,7 @@
 
 ## Description 
 
--> Many cities provide a bike hiring system for citizens. These can hire a bike base on different types of subscriptions. A bike hire docking station where subscribed users can hire and return a bike. It provides data about its main features and availability of bikes and free slots.
+Bike Hire Docking Station
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Transportation/BikeHireDockingStation/swagger.yaml)
