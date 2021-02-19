@@ -1,7 +1,7 @@
 {"@context": ["https://schema.lab.fiware.org/ld/context",
               "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],
  "averageHeadwayTime": 5,
- "congested": False,
+ "congested": false,
  "dateObserved": "2018-08-07T11:10:00/2018-08-07T11:15:00",
  "dateObservedFrom": {"@type": "DateTime", "@value": "2018-08-07T11:10:00Z"},
  "dateObservedTo": {"@type": "DateTime", "@value": "2018-08-07T11:15:00Z"},
