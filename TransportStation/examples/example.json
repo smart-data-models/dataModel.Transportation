@@ -1,6 +1,6 @@
 {
   "id": "urn:ngsi-ld:Station:Station:MNCA-STram-L02-AP-T2",
-  "type": "Station",
+  "type": "TransportStation",
   "name": "NCE-Tram-Station-L02-AP-T2",
   "alternateName": "Nice - Tramway Station Description - L02-AP-T2",
   "description": "Description and services provided in the station",
