@@ -1,0 +1,2 @@
+"@context__0_", "@context__1_", "brandName_", "cargoVolume_", "fuelType_", "id_", "manufacturerName_", "modelName_", "name_", "type_", "vehicleType_"
+"https://schema.lab.fiware.org/ld/context", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld", "Mercedes Benz", "1000", "diesel", "urn:ngsi-ld:VehicleModel:vehiclemodel:econic", "Daimler", "Econic", "MBenz-Econic2014", "VehicleModel", "lorry"
