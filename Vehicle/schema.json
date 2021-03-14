@@ -110,7 +110,7 @@
               "const": -1
             }
           ],
-          "description": "Property. Denotes the direction of travel of the vehicle and is specified in decimal degrees, where 0° ≤ `heading` < 360°, counting clockwise relative to the true north. If the vehicle is stationary (i.e. the value of the `speed` attribute is `0`), then the value of the heading attribute must be equal to `-1`. Model:'https://schema.org/Number'. Units:'Kilometer per hour (Km/h)'"
+          "description": "Property. Denotes the direction of travel of the vehicle and is specified in decimal degrees, where 0 <= `heading` < 360, counting clockwise relative to the true north. If the vehicle is stationary (i.e. the value of the `speed` attribute is `0`), then the value of the heading attribute must be equal to `-1`. Model:'https://schema.org/Number'. Units:'Kilometer per hour (Km/h)'"
         },
         "cargoWeight": {
           "type": "number",
