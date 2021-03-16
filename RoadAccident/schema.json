@@ -63,14 +63,7 @@
           "hour": {
             "type": "integer"
           }
-        },
-        "additionalProperties": false,
-        "required": [
-          "year",
-          "quarter",
-          "weekday",
-          "hour"
-        ]
+        }
       },
       "accidentType": {
         "type": "array",
@@ -304,7 +297,7 @@
           "15"
         ]
       },
-      "signRoad": {
+      "roadSign": {
         "type": "string",
         "description": "Property. Brief description of the road sign where the accident took place. 1: Absent; 2: Vertical; 3: Horizontal; 4: Vertical and horizontal; 5: Temporary by construction site;",
         "enum": [
@@ -351,8 +344,7 @@
             "23",
             "24"
           ]
-        },
-        "additionalItems": false
+        }
       },
       "weakestSubject": {
         "type": "string",
