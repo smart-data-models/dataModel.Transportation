@@ -1,0 +1,82 @@
+{
+  "id": "urn:ngsi-ld:RoadAccident:id:ORHW:45620815",
+  "type": "RoadAccident",
+  "dateCreated": "2018-06-23T04:19:24Z",
+  "dateModified": "2020-10-29T08:36:40Z",
+  "source": "To be defined",
+  "name": "Name of the element of the accident.",
+  "alternateName": "Other name.",
+  "description": "Clash in the middle of a traffic light",
+  "dataProvider": "Municipality.",
+  "owner": [
+    "urn:ngsi-ld:RoadAccident:items:SUUU:18395806",
+    "urn:ngsi-ld:RoadAccident:items:GVOF:30958855"
+  ],
+  "seeAlso": [
+    "urn:ngsi-ld:RoadAccident:items:ESLS:37894243",
+    "urn:ngsi-ld:RoadAccident:items:ZNUH:87936284"
+  ],
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -56.6404505,
+      168.370658
+    ]
+  },
+  "address": {
+    "streetAddress": "FranklinStrasse",
+    "addressLocality": "Berlin",
+    "addressRegion": "Berlin",
+    "addressCountry": "Germany",
+    "postalCode": "10387",
+    "postOfficeBoxNumber": "",
+    "areaServed": "worldwide."
+  },
+  "areaServed": "worldwide",
+  "localId": "20210312-A1.",
+  "status": "onGoing",
+  "accidentDate": "2021-03-12T13:59:36Z",
+  "accidentStatisticalDate": {
+    "year": 2021,
+    "quarter": 1,
+    "weekday": "Friday",
+    "hour": 4
+  },
+  "accidentType": [
+    "10",
+    "6"
+  ],
+  "accidentDescription": [
+    "23",
+    "46"
+  ],
+  "weatherConditions": [
+    "10",
+    "20"
+  ],
+  "roadSurface": "2",
+  "roadPaving": "2",
+  "accidentLocation": "5",
+  "roadClass": "Motorway.",
+  "roadIntersection": "8",
+  "roadTrunk": "12",
+  "roadSign": "5",
+  "pedestriansInvolved": [
+    "true"
+  ],
+  "vehiclesInvolved": [
+    "21",
+    "6"
+  ],
+  "weakestSubject": "20",
+  "numPassengersInjured": 1,
+  "numPassengersDead": 1,
+  "numPedestrianInjured": 1,
+  "numPedestrianDead": 0,
+  "totalInjured": 2,
+  "totalDeadPeopleWithin30Days": 0,
+  "totalDeadPeopleWithin24Hours": 0,
+  "@context": [
+    "https://schema.lab.fiware.org/ld/context"
+  ]
+}
