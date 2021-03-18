@@ -1,0 +1,27 @@
+{
+  "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictionException:GeoJson:ds51-1",
+  "type": "RestrictionException",
+  "name": {
+    "type": "string",
+    "value": "Corso Concordia Area"
+  },
+  "allowedVehicleType": {
+    "type": "array",
+    "value": [
+      "dieselCarEuro6",
+      "petrolCarEuro6"
+    ]
+  },
+  "exceptionValidityHours": {
+    "type": "string",
+    "value": "Tu,Th 16:00-20:00"
+  },
+  "refVehicleModel": {
+    "type": "string",
+    "Object": "vehicle:VehicleModel:modelName-1"
+  },
+  "refRestrictedTrafficArea": {
+    "type": "string",
+    "Object": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1"
+  }
+}
