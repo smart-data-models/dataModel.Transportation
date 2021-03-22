@@ -19,6 +19,8 @@ The following entity types are available:
 
 - [Road](https://github.com/smart-data-models/dataModel.Transportation/blob/master/Road/README.md). This entity contains a harmonised geographic and contextual description of a road.
 
+- [RoadAccident](https://github.com/smart-data-models/dataModel.Transportation/blob/master/RoadAccident/README.md). A road accident description with causes and aftermath. First version developed in Synchronicity project
+
 - [RoadSegment](https://github.com/smart-data-models/dataModel.Transportation/blob/master/RoadSegment/README.md). This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road.
 
 - [SpecialRestriction](https://github.com/smart-data-models/dataModel.Transportation/blob/master/SpecialRestriction/README.md). A Special Restriction represents a particular case that specialise restriction reported in a Restricted Traffic Areas; for instance it could describe particular restrictions applied to specific kind vehicles
