@@ -1,17 +1,67 @@
-{"@context": ["https://schema.lab.fiware.org/ld/context",
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],
- "address": {"addressCountry": "España",
-             "addressLocality": "Valladolid",
-             "streetAddress": "Paseo de Zorrilla, 191",
-             "type": "PostalAddress"},
- "allowedVehicleType": ["car"],
- "capacity": 2,
- "chargeType": ["free"],
- "contactPoint": {"email": "vehiculoelectrico@ava.es"},
- "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",
- "location": {"coordinates": [-4.747901, 41.618265], "type": "Point"},
- "name": "Agencia de Innovación",
- "operator": "Iberdrola",
- "socketType": ["Wall_Euro"],
- "source": "https://openchargemap.org/",
- "type": "EVChargingStation"}
+{
+  "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",
+  "type": "EVChargingStation",
+  "socketType": {
+    "type": "Property",
+    "value": [
+      "Wall_Euro"
+    ]
+  },
+  "capacity": {
+    "type": "Property",
+    "value": 2
+  },
+  "name": {
+    "type": "Property",
+    "value": "Agencia de Innovaci\u00f3n"
+  },
+  "allowedVehicleType": {
+    "type": "Property",
+    "value": [
+      "car"
+    ]
+  },
+  "source": {
+    "type": "Property",
+    "value": "https://openchargemap.org/"
+  },
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        -4.747901,
+        41.618265
+      ]
+    }
+  },
+  "chargeType": {
+    "type": "Property",
+    "value": [
+      "free"
+    ]
+  },
+  "address": {
+    "type": "Property",
+    "value": {
+      "addressLocality": "Valladolid",
+      "addressCountry": "Espa\u00f1a",
+      "streetAddress": "Paseo de Zorrilla, 191",
+      "type": "PostalAddress"
+    }
+  },
+  "operator": {
+    "type": "Property",
+    "value": "Iberdrola"
+  },
+  "contactPoint": {
+    "type": "Property",
+    "value": {
+      "email": "vehiculoelectrico@ava.es"
+    }
+  },
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+  ]
+}

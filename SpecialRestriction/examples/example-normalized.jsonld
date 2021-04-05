@@ -1,30 +1,17 @@
 {
   "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:SpecialRestriction:GeoJson:ds51-1",
-  "type": "RestrictionException",
-  "name": {
-    "type": "string",
-    "value": "Corso Concordia Area"
-  },
-  "allowedVehicleType": {
-    "type": "array",
-    "value": [
-      "dieselCarEuro6",
-      "petrolCarEuro6"
-    ]
-  },
-  "exceptionValidityHours": {
-    "type": "string",
-    "value": "Tu,Th 16:00-20:00"
-  },
-  "refVehicleModel": {
-    "type": "string",
-    "value": "vehicle:VehicleModel:modelName-1"
-  },
-  "refRestrictedTrafficArea": {
-    "type": "string",
-    "value": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1"
-  },
+  "type": "SpecialRestriction",
+  "name": "Corso Concordia Area",
+  "notAllowedVehicleType": [
+    "dieselCarEuro0",
+    "petrolCarEuro0"
+  ],
+  "restrictionValidityHours": "Tu,Th 16:00-20:00",
+  "refVehicleModel": [
+    "vehicle:VehicleModel:modelName-1"
+  ],
+  "refRestrictedTrafficArea": "urn:ngsi-ld:SpecialRestriction:RestrictedTrafficArea:Milan:GeoJson:ds51-1",
   "@context": [
-    "https://schema.lab.fiware.org/ld/context"
+    "https://smartdatamodels.org/context.jsonld"
   ]
 }

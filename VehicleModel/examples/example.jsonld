@@ -1,11 +1,36 @@
-{"@context": ["https://schema.lab.fiware.org/ld/context",
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],
- "brandName": "Mercedes Benz",
- "cargoVolume": 1000,
- "fuelType": "diesel",
- "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",
- "manufacturerName": "Daimler",
- "modelName": "Econic",
- "name": "MBenz-Econic2014",
- "type": "VehicleModel",
- "vehicleType": "lorry"}
+{
+  "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",
+  "type": "VehicleModel",
+  "name": {
+    "type": "Property",
+    "value": "MBenz-Econic2014"
+  },
+  "cargoVolume": {
+    "type": "Property",
+    "value": 1000
+  },
+  "modelName": {
+    "type": "Property",
+    "value": "Econic"
+  },
+  "brandName": {
+    "type": "Property",
+    "value": "Mercedes Benz"
+  },
+  "manufacturerName": {
+    "type": "Property",
+    "value": "Daimler"
+  },
+  "fuelType": {
+    "type": "Property",
+    "value": "diesel"
+  },
+  "vehicleType": {
+    "type": "Property",
+    "value": "lorry"
+  },
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+  ]
+}

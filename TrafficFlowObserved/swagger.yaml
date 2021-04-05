@@ -1,20 +1,23 @@
---- 
-components: 
+---
+# Copyleft (c) 2021 Contributors to Smart Data Models initiative
+# 
+
+
+components:
   schemas: 
     TrafficFlowObserved: 
       $ref: "https://smart-data-models.github.io/dataModel.Transportation/TrafficFlowObserved/model.yaml#/TrafficFlowObserved"
-info: 
-  description: ""
+info:
+  description:  |
+    An observation of traffic flow conditions at a certain place and time.
   title: TrafficFlowObserved
   version: "1.0.0"
 openapi: "3.0.0"
 
-# These paths are merely representative.
 paths: 
   /ngsi-ld/v1/entities: 
     get: 
-      description: ->
-        An observation of traffic flow conditions at a certain place and time. This entity is primarily associated with the Automotive and Smart City vertical segments and related IoT applications.
+      description: "Retrieve a set of entities which matches a specific query from an NGSI-LD system"
       parameters: 
         - 
           in: query
@@ -45,6 +48,5 @@ paths:
         - ngsi-ld
 tags: 
   - 
-  
     description: "NGSI-LD Linked-data Format"
     name: ngsi-ld

@@ -2,7 +2,7 @@
 
 ## Description 
 
-This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road.
+Visit model.yaml for further info on the description
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Transportation/RoadSegment/swagger.yaml)

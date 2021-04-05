@@ -2,7 +2,7 @@
 
 ## Description 
 
-An observation of traffic flow conditions at a certain place and time.
+Visit model.yaml for further info on the description
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Transportation/TrafficFlowObserved/swagger.yaml)

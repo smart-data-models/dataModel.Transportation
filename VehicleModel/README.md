@@ -2,7 +2,7 @@
 
 ## Description 
 
-This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.
+Visit model.yaml for further info on the description
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Transportation/VehicleModel/swagger.yaml)

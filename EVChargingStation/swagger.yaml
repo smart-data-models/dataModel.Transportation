@@ -1,16 +1,19 @@
---- 
-components: 
+---
+# Copyleft (c) 2021 Contributors to Smart Data Models initiative
+# 
+
+
+components:
   schemas: 
     EVChargingStation: 
       $ref: "https://smart-data-models.github.io/dataModel.Transportation/EVChargingStation/model.yaml#/EVChargingStation"
-info: 
-  description: ->
-    A public charging station supplying energy to electrical vehicles. The charge time depends on the maximum power output of the station, the number of vehicles currently charging and the current battery level.
+info:
+  description:  |
+    EV Charging Station
   title: EVChargingStation
   version: "1.0.0"
 openapi: "3.0.0"
 
-# These paths are merely representative.
 paths: 
   /ngsi-ld/v1/entities: 
     get: 
@@ -45,6 +48,5 @@ paths:
         - ngsi-ld
 tags: 
   - 
-  
     description: "NGSI-LD Linked-data Format"
     name: ngsi-ld
