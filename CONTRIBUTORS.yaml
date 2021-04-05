@@ -22,12 +22,26 @@ contributors:
  project: 
  comments: 
 -
+ name: Paolo
+ surname: Fosci
+ mail:
+ organization:
+ project:
+ comments:
+-
  name: Jason
  surname: Fox
  mail: 
  organization: Fiware
  project: 
- comments: 
+ comments:
+-
+ name: Martino
+ surname: Maggio
+ mail: martino.maggio@eng.it
+ organization: Engineering
+ project: Synchronicity
+ comments:
 -
  name: Massimo
  surname: Mangoni
