@@ -61,9 +61,9 @@
   "roadIntersection": "8",
   "roadTrunk": "12",
   "roadSign": "5",
-  "pedestriansInvolved": [
-    "true"
-  ],
+  "pedestriansInvolved":
+    true
+  ,
   "vehiclesInvolved": [
     "21",
     "6"
