@@ -83,7 +83,6 @@ EVChargingStation:
     amperage:    
       description: 'The total amperage offered by the charging station.'    
       exclusiveMinimum: 0    
-      minimum: 0    
       type: Property    
       x-ngsi:    
         model: http://schema.org/Number    
@@ -394,7 +393,6 @@ EVChargingStation:
     voltage:    
       description: 'The total voltage offered by the charging station'    
       exclusiveMinimum: 0    
-      minimum: 0    
       type: Property    
       x-ngsi:    
         model: http://schema.org/Number    
