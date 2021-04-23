@@ -9,6 +9,8 @@ These models have been devised to be as generic as possible, thus allowing to de
 The following entity types are available:
 - [BikeHireDockingStation](https://github.com/smart-data-models/dataModel.Transportation/blob/master/BikeHireDockingStation/README.md). Bike Hire Docking Station
 
+- [BikeLane](https://github.com/smart-data-models/dataModel.Transportation/blob/master/BikeLane/README.md). A generic bike lane schema
+
 - [CrowdFlowObserved](https://github.com/smart-data-models/dataModel.Transportation/blob/master/CrowdFlowObserved/README.md). CrowdFlowObserved
 
 - [EVChargingStation](https://github.com/smart-data-models/dataModel.Transportation/blob/master/EVChargingStation/README.md). EV Charging Station
@@ -44,7 +46,7 @@ The list of incubated (on development) data models are:
 
 
 ### Contributors
-[Link](https://github.com/smart-data-models/dataModel.Transportation/blob/master/CONTRIBUTORS.yaml) to the 7 current contributors of the data models of this Subject.
+[Link](https://github.com/smart-data-models/dataModel.Transportation/blob/master/CONTRIBUTORS.yaml) to the 9 current contributors of the data models of this Subject.
 
 
 ### Contribution
