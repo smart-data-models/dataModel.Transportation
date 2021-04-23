@@ -1,0 +1,10 @@
+description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
+contributors:
+-
+ name: Marc
+ surname: Fajula
+ mail: marc.fajula.soldevila@everis.com
+ organization: Everis
+ project: 
+ comments:
+
