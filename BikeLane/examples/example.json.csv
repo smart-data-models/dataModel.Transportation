@@ -1,0 +1,2 @@
+"id_", "type_", "dateObserved_", "location__type_", "location__coordinates__0_", "location__coordinates__1_", "name_", "description_", "address__streetAddress_", "address__addressCountry_", "address__addressLocality_", "dataProvider_", "laneOccupancy_", "laneWidth_", "laneLength_"
+"BikeLane-AveMed-Benidorm-123456", "BikeLane", "2021-02-20T06:45:00Z", "Point", "-8.768460000000001", "42.60214472222222", "Carril bici - Avenida del Mediterráneo", "Información del carril bici", "37 Avenida del Mediterráneo", "ES", "Benidorm", "LaneSensor-12345", "7", "2", "150"
