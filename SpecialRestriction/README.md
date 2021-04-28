@@ -12,6 +12,8 @@ Link to the [specification](https://smart-data-models.github.io/dataModel.Transp
 Link to the [specification in Spanish](https://smart-data-models.github.io/dataModel.Transportation/SpecialRestriction/doc/spec_ES.md)
 
 Link to the [specification in French](https://smart-data-models.github.io/dataModel.Transportation/SpecialRestriction/doc/spec_FR.md)
+
+Link to the [specification in German](https://smart-data-models.github.io/dataModel.Transportation/SpecialRestriction/doc/spec_DE.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.Transportation/SpecialRestriction/examples/example.json) (keyvalues) for NGSI v2
@@ -23,7 +25,9 @@ Link to the [example](https://smart-data-models.github.io/dataModel.Transportati
 Link to the [example](https://smart-data-models.github.io/dataModel.Transportation/SpecialRestriction/examples/example-normalized.jsonld) (normalized) for NGSI-LD
 ### Dynamic Examples generation
 
-Link to the [Generator](https://smartdatamodels.org/extra/ngsi-ld_generator_v0.91.php?schemaUrl=https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/SpecialRestriction/schema.json&email=info@smartdatamodels.org) of NGSI-LD payloads compliant with this data model. Refresh for new values
+Link to the [Generator](https://smartdatamodels.org/extra/ngsi-ld_generator_v0.92.php?schemaUrl=https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/SpecialRestriction/schema.json&email=info@smartdatamodels.org) of NGSI-LD normalized payloads compliant with this data model. Refresh for new values
+
+Link to the [Generator](https://smartdatamodels.org/extra/ngsi-ld_generator_keyvalues_v0.92.php?schemaUrl=https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/SpecialRestriction/schema.json&email=info@smartdatamodels.org) of NGSI-LD keyvalues payloads compliant with this data model. Refresh for new values
 ### Contribution
 
  If you have any issue on this data model you can raise an [issue](https://github.com/smart-data-models/dataModel.Transportation/issues)  or contribute with a [PR](https://github.com/smart-data-models/dataModel.Transportation/pulls)
