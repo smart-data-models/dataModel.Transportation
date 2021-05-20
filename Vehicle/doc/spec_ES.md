@@ -1,13 +1,14 @@
 Entidad: Vehículo  
 =================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.Transportation/blob/master/Vehicle/LICENSE.md)  
+[documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descripción global: **Esta entidad modela un modelo de vehículo en particular, incluyendo todas las propiedades que son comunes a múltiples instancias de vehículos pertenecientes a dicho modelo.**  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal.  - `alternateName`: Un nombre alternativo para este artículo  - `annotations`: Anotaciones sobre el artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `cargoWeight`: El peso actual de la carga del vehículo  - `category`: Categoría(s) de vehículo(s) desde un punto de vista externo. Es diferente del tipo de vehículo (coche, camión, etc.) representado por la propiedad "VehicleType". Enum:'municipalServicios, no rastreado, privado, público, uso especial, rastreado'. Los vehículos rastreados son aquellos cuya posición es rastreada permanentemente por un sistema remoto. O cualquier otro que necesite una aplicación Incorporan un receptor GPS junto con una conexión de red para actualizar periódicamente una posición reportada (ubicación, velocidad, rumbo...).  - `color`: El color del vehículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `dateFirstUsed`: La marca de tiempo que denota cuando el vehículo fue usado por primera vez  - `dateModified`: Sello de tiempo de la última modificación de la entidad. Esta será normalmente asignada por la plataforma de almacenamiento.  - `dateVehicleFirstRegistered`: La fecha de la primera matriculación del vehículo ante las respectivas autoridades públicas  - `description`: Una descripción de este artículo  - `feature`: Característica(s) incorporada(s) por el vehículo. Enum:' abs, airbag, alarma, cámara trasera, rampa de desactivación, gps, conexión a internet, sobrevelocidad, proximidadSensor, wifi'. O cualquier otro que necesite la aplicación. Para representar múltiples instancias de una característica se puede utilizar la siguiente sintaxis: `<característica>,<ocurrencias>`. Por ejemplo, un coche con 4 airbags será representado por "airbag,4".  - `fleetVehicleId`: El identificador del vehículo en el contexto de la flota de vehículos a la que pertenece  - `heading`: Denota la dirección de viaje del vehículo y se especifica en grados decimales, donde 0° ≤ "heading"< 360°, contando en el sentido de las agujas del reloj en relación con el verdadero norte. Si el vehículo está parado (es decir, el valor del atributo "velocidad" es "0"), entonces el valor del atributo "rumbo" debe ser igual a "1".  - `id`: Identificador único de la entidad  - `image`: Una imagen del artículo  - `location`:   - `mileageFromOdometer`: La distancia total recorrida por el vehículo en particular desde su producción inicial, según la lectura de su odómetro  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  - `previousLocation`:   - `purchaseDate`: La fecha en que el artículo, por ejemplo, el vehículo fue comprado por el actual propietario  - `refVehicleModel`: Referencia a un modelo de vehículo  - `seeAlso`: lista de uri que apunta a recursos adicionales sobre el tema  - `serviceProvided`: Servicio(s) que el vehículo es capaz de proporcionar o al que está asignado. Enum:'auxiliarServicios, cargaTransporte, construcción, ferias, basuraRecogida, mercancíasVenta, mantenimiento, parques y jardines, señalización vial, transporte especial, limpieza de calles, alumbrado público, tránsito urbano, residuosLimpieza de contenedores'. O cualquier otro valor que requiera una aplicación específica.  - `serviceStatus`: Estado del vehículo (desde el punto de vista del servicio prestado, por lo que no podría aplicarse a los vehículos privados). "Estacionado": El vehículo está estacionado y no presta ningún servicio en este momento. "En ruta": El vehículo está realizando una misión. Se puede añadir un modificador(es) separado(s) por comas para indicar qué misión está actualmente entregando el vehículo. Por ejemplo, "en ruta, recolección de basura" puede usarse para indicar que el vehículo está en ruta y en una misión de recolección de basura. "averiado": El vehículo está sufriendo una avería temporal. "Fuera de servicio": El vehículo está en la carretera pero no está cumpliendo ninguna misión, probablemente va a su zona de aparcamiento. Enum:'roto, en ruta, fuera de servicio, aparcado'.  - `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  - `speed`: Denota la magnitud del componente horizontal de la velocidad actual del vehículo y se especifica en kilómetros por hora. Si se proporciona, el valor del atributo de velocidad debe ser un número real no negativo. `-1` PUEDE utilizarse si la velocidad es transitoriamente desconocida por alguna razón  - `type`: Tipo de entidad NGSI. Tiene que ser un vehículo  - `vehicleConfiguration`: Un texto corto que indique la configuración del vehículo, por ejemplo, "5dr hatchback ST 2.5 MT 225 hp" o "edición limitada".  - `vehicleIdentificationNumber`: El número de identificación del vehículo (VIN) es un número de serie único utilizado por la industria automotriz para identificar vehículos individuales.  - `vehiclePlateIdentifier`:  Un identificador o código que aparece en la placa de matrícula de un vehículo, fijado al mismo, que se utiliza para fines de identificación oficial. El identificador de la matrícula es numérico o alfanumérico y es único dentro de la región de la autoridad emisora. Referencias normativas: DATEXII "Identificador de la placa de matrícula del vehículo  - `vehicleSpecialUsage`: Indica si el vehículo se utiliza para fines especiales, como alquiler comercial, escuela de conducción o como taxi. La legislación de muchos países exige que se revele esta información cuando se ofrece un coche a la venta. Enum:'ambulancia, bomberosBrigada, militar, policía, escuelaTransporte, taxi'  - `vehicleType`: Tipo de vehículo desde el punto de vista de sus características estructurales. Esto es diferente a la categoría de vehículo . Enum:"Vehículo agrícola, cualquier vehículo, vehículo articulado, bicicleta, binTrolley, autobús, coche, caravana, coche ligero, coche con caravana, coche con remolque, limpieza, carrito, construcción o mantenimiento, vehículo, tracción a las cuatro ruedas, vehículo alto, camión, minibús, ciclomotor, motocicleta, Motocicleta con sidecar, motocarro, barredora, cisterna, vehículo de tres ruedas, remolque, tranvía, vehículo de dos ruedas, carro, furgoneta, vehículo sin convertidor catalítico, vehículo con caravana, vehículo con remolque, con placas de matrícula pares, con placas de matrícula impares, otros". Los siguientes valores definidos por _VehicleTypeEnum_ y _VehicleTypeEnum2_, [DATEX 2 versión 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)    
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `annotations`: Anotaciones sobre el artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `cargoWeight`: Peso actual de la carga del vehículo  - `category`: Categoría de vehículo(s) desde un punto de vista externo. Es diferente del tipo de vehículo (coche, camión, etc.) representado por la propiedad `vehicleType`. Enum:'municipalServices, nonTracked, private, public, specialUsage, tracked'. Los vehículos rastreados son aquellos cuya posición es seguida permanentemente por un sistema remoto. O cualquier otro que necesite una aplicación Incorporan un receptor GPS junto con una conexión de red para actualizar periódicamente una posición reportada (ubicación, velocidad, rumbo...).  - `color`: Color del vehículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateFirstUsed`: Marca de tiempo que indica cuándo se utilizó el vehículo por primera vez  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `dateVehicleFirstRegistered`: La fecha de la primera matriculación del vehículo ante las autoridades públicas respectivas  - `description`: Una descripción de este artículo  - `feature`: Característica(s) incorporada(s) por el vehículo. Enum:' abs, airbag, alarma, backCamera, disabledRamp, gps, internetConnection, overspeed, proximitySensor, wifi'. O cualquier otro que necesite la aplicación. Para representar múltiples instancias de una característica se puede utilizar la siguiente sintaxis: `<característica>,<ocurrencias>`. Por ejemplo, un coche con 4 airbags será representado por `airbag,4`.  - `fleetVehicleId`: El identificador del vehículo en el contexto de la flota de vehículos a la que pertenece  - `heading`: Denota la dirección de desplazamiento del vehículo y se especifica en grados decimales, donde 0 <= `rumbo` < 360, contando en el sentido de las agujas del reloj respecto al norte verdadero. Si el vehículo está parado (es decir, el valor del atributo `velocidad` es `0`), el valor del atributo rumbo debe ser igual a `-1`.  - `id`: Identificador único de la entidad  - `image`: Una imagen del artículo  - `location`:   - `mileageFromOdometer`: La distancia total recorrida por el vehículo en cuestión desde su fabricación inicial, según la lectura de su cuentakilómetros  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `previousLocation`:   - `purchaseDate`: La fecha en que el artículo, por ejemplo, el vehículo, fue adquirido por el propietario actual  - `refVehicleModel`: Referencia a un VehicleModel  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `serviceProvided`: Servicio(s) que el vehículo puede prestar o al que está asignado. Enum:'servicios auxiliares, transporte de carga, construcción, recinto ferial, recogida de basuras, venta de mercancías, mantenimiento, parques y jardines, señalización vial, transporte especial, limpieza de calles, alumbrado público, transporte urbano, limpieza de contenedores'. O cualquier otro valor que necesite una aplicación específica.  - `serviceStatus`: Estado del vehículo (desde el punto de vista del servicio prestado, por lo que no podría aplicarse a los vehículos privados). `parked` : El vehículo está aparcado y no presta ningún servicio en este momento. `onRoute` : El vehículo está realizando una misión. Se puede añadir un modificador(es) separado(s) por comas para indicar qué misión está realizando el vehículo en ese momento. Por ejemplo, `onRoute,garbageCollection` puede utilizarse para indicar que el vehículo está en ruta y en una misión de recogida de basura. Broken": El vehículo está sufriendo una avería temporal. `outOfService` : El vehículo está en ruta pero no realiza ninguna misión, probablemente va a su zona de aparcamiento. Enum:'broken, onRoute, outOfService, parked'  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `speed`: Denota la magnitud del componente horizontal de la velocidad actual del vehículo y se especifica en kilómetros por hora. Si se proporciona, el valor del atributo velocidad debe ser un número real no negativo. PUEDE utilizarse `-1` si la velocidad se desconoce transitoriamente por alguna razón  - `type`: Tipo de entidad NGSI. Debe ser un vehículo  - `vehicleConfiguration`: Un breve texto que indique la configuración del vehículo, por ejemplo, "5dr hatchback ST 2.5 MT 225 hp" o "edición limitada".  - `vehicleIdentificationNumber`: El número de identificación del vehículo (VIN) es un número de serie único utilizado por la industria del automóvil para identificar los vehículos de motor individuales  - `vehiclePlateIdentifier`:  Identificador o código que aparece en la placa de matrícula del vehículo y que se utiliza para su identificación oficial. El identificador de matrícula es numérico o alfanumérico y es único dentro de la región de la autoridad emisora. Referencias normativas: DATEXII `vehicleRegistrationPlateIdentifier` (identificador de la placa de matrícula del vehículo)  - `vehicleSpecialUsage`: Indica si el vehículo se ha utilizado para fines especiales, como el alquiler comercial, la autoescuela o como taxi. La legislación de muchos países exige que se revele esta información cuando se pone a la venta un coche. Enum:'ambulancia, bomberos, militar, policía, transporte escolar, taxi'  - `vehicleType`: Tipo de vehículo desde el punto de vista de sus características estructurales. Es diferente de la categoría del vehículo. Enum:'vehículo agrícola, cualquier vehículo, vehículo articulado, bicicleta, carro de basura, autobús, coche, caravana, coche o vehículo ligero, coche con caravana, coche con remolque, carro de limpieza, vehículo de construcción o mantenimiento, tracción a las cuatro ruedas, vehículo de gran altura, camión, minibús, ciclomotor, motocicleta, motocicleta con coche lateral, motocarro, máquina barredora, cisterna, vehículo de tres ruedas, remolque, tranvía, vehículo de dos ruedas, carro, furgoneta, vehículo sin convertidor catalítico, vehículo con caravana, vehículo con remolque, con matrícula par, con matrícula extra, otros". Los siguientes valores definidos por _VehicleTypeEnum_ y _VehicleTypeEnum2_, [DATEX 2 versión 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)    
 Propiedades requeridas  
-- `category`  - `id`  - `location`  - `type`  - `vehicleType`  ## Modelo de datos Descripción de las propiedades  
+- `category`  - `id`  - `location`  - `type`  - `vehicleType`  ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -15,30 +16,29 @@ Vehicle:
   description: 'This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.'    
   properties:    
     address:    
-      description: 'The mailing address.'    
+      description: 'The mailing address'    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
           type: string    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
           type: string    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
-          type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/Text'''    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -130,7 +130,7 @@ Vehicle:
       x-ngsi:    
         model: https://schema.org/Text.    
     heading:    
-      description: 'Denotes the direction of travel of the vehicle and is specified in decimal degrees, where 0° ≤ `heading` < 360°, counting clockwise relative to the true north. If the vehicle is stationary (i.e. the value of the `speed` attribute is `0`), then the value of the heading attribute must be equal to `-1`'    
+      description: 'Denotes the direction of travel of the vehicle and is specified in decimal degrees, where 0 <= `heading` < 360, counting clockwise relative to the true north. If the vehicle is stationary (i.e. the value of the `speed` attribute is `0`), then the value of the heading attribute must be equal to `-1`'    
       oneOf:    
         - maximum: 360    
           minimum: 0    
@@ -349,8 +349,8 @@ Vehicle:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -485,9 +485,9 @@ Vehicle:
   type: object    
 ```  
 </details>    
-## Ejemplo de cargas útiles  
-#### Vehículo NGSI V2 valores clave Ejemplo  
-Aquí hay un ejemplo de un vehículo en formato JSON como valores clave. Es compatible con NGSI V2 cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
+## Ejemplo de carga útil  
+#### Vehículo NGSI-v2 valores-clave Ejemplo  
+Este es un ejemplo de un vehículo en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
       "id": "vehicle:WasteManagement:1",  
@@ -508,8 +508,8 @@ Vehicle:
       "vehiclePlateIdentifier": "3456ABC"  
 }  
 ```  
-#### Vehículo NGSI V2 normalizado Ejemplo  
-Aquí hay un ejemplo de un vehículo en formato JSON como normalizado. Es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### Vehículo NGSI-v2 normalizado Ejemplo  
+He aquí un ejemplo de un vehículo en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
     "id": "vehicle:WasteManagement:1",  
@@ -574,92 +574,106 @@ Vehicle:
     }  
 }  
 ```  
-#### Vehículo NGSI-LD valores clave Ejemplo  
-Aquí hay un ejemplo de un vehículo en formato JSON-LD como valores clave. Esto es compatible con NGSI-LD cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
-```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "areaServed": "Centro",  
- "cargoWeight": 314,  
- "category": ["municipalServices"],  
- "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",  
- "location": {"coordinates": [-3.164485591715449, 40.62785133667262],  
-              "type": "Point"},  
- "name": "C Recogida 1",  
- "refVehicleModel": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",  
- "serviceProvided": ["gargabeCollection", "wasteContainerCleaning"],  
- "serviceStatus": "onRoute",  
- "speed": 50,  
- "type": "Vehicle",  
- "vehiclePlateIdentifier": "3456ABC",  
- "vehicleType": "lorry"}  
-```  
-#### Vehículo NGSI-LD normalizado Ejemplo  
-Aquí hay un ejemplo de un vehículo en formato JSON-LD normalizado. Este es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### Vehículo NGSI-LD key-values Ejemplo  
+Este es un ejemplo de un vehículo en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",  
-    "type": "Vehicle",  
-    "category": {  
-        "type": "Property",  
-        "value": [  
-            "municipalServices"  
-        ]  
-    },  
-    "vehicleType": {  
-        "type": "Property",  
-        "value": "lorry"  
-    },  
-    "name": {  
-        "type": "Property",  
-        "value": "C Recogida 1"  
-    },  
-    "vehiclePlateIdentifier": {  
-        "type": "Property",  
-        "value": "3456ABC"  
-    },  
-    "refVehicleModel": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic"  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                -3.164485591715449,  
-                40.62785133667262  
-            ]  
-        },  
-        "observedAt": "2018-09-27T12:00:00Z"  
-    },  
-    "areaServed": {  
-        "type": "Property",  
-        "value": "Centro"  
-    },  
-    "serviceStatus": {  
-        "type": "Property",  
-        "value": "onRoute"  
-    },  
-    "cargoWeight": {  
-        "type": "Property",  
-        "value": 314  
-    },  
-    "speed": {  
-        "type": "Property",  
-        "value": 50,  
-        "observedAt": "2018-09-27T12:00:00Z"  
-    },  
-    "serviceProvided": {  
-        "type": "Property",  
-        "value": [  
-            "gargabeCollection",  
-            "wasteContainerCleaning"  
-        ]  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",  
+  "type": "Vehicle",  
+  "category": {  
+    "type": "Property",  
+    "value": [  
+      "municipalServices"  
     ]  
+  },  
+  "vehicleType": {  
+    "type": "Property",  
+    "value": "lorry"  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "C Recogida 1"  
+  },  
+  "vehiclePlateIdentifier": {  
+    "type": "Property",  
+    "value": "3456ABC"  
+  },  
+  "refVehicleModel": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic"  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -3.164485591715449,  
+        40.62785133667262  
+      ]  
+    },  
+    "observedAt": "2018-09-27T12:00:00Z"  
+  },  
+  "areaServed": {  
+    "type": "Property",  
+    "value": "Centro"  
+  },  
+  "serviceStatus": {  
+    "type": "Property",  
+    "value": "onRoute"  
+  },  
+  "cargoWeight": {  
+    "type": "Property",  
+    "value": 314  
+  },  
+  "speed": {  
+    "type": "Property",  
+    "value": 50,  
+    "observedAt": "2018-09-27T12:00:00Z"  
+  },  
+  "serviceProvided": {  
+    "type": "Property",  
+    "value": [  
+      "gargabeCollection",  
+      "wasteContainerCleaning"  
+    ]  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
+```  
+#### Vehículo NGSI-LD normalizado Ejemplo  
+Este es un ejemplo de un vehículo en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "areaServed": "Centro",  
+  "cargoWeight": 314,  
+  "category": [  
+    "municipalServices"  
+  ],  
+  "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",  
+  "location": {  
+    "coordinates": [  
+      -3.164485591715449,  
+      40.62785133667262  
+    ],  
+    "type": "Point"  
+  },  
+  "name": "C Recogida 1",  
+  "refVehicleModel": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",  
+  "serviceProvided": [  
+    "gargabeCollection",  
+    "wasteContainerCleaning"  
+  ],  
+  "serviceStatus": "onRoute",  
+  "speed": 50,  
+  "type": "Vehicle",  
+  "vehiclePlateIdentifier": "3456ABC",  
+  "vehicleType": "lorry"  
 }  
 ```  
