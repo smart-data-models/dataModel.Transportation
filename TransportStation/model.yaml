@@ -2,30 +2,32 @@ TransportStation:
   description: "The data model is a general description of urban stations (Metro, Bus, Tram, Heliport, ...) according to the GFTS standard https://developers.google.com/transit/gtfs/reference/#stopstxt, as well the detailed description of these (means of access, platform, assistance, ...)."
   properties:
     address:
-      description: 'The mailing address.'
+      description: 'The mailing address'
       properties:
         addressCountry:
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''
           type: string
         addressLocality:
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''
           type: string
         addressRegion:
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''
           type: string
         areaServed:
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''
           type: string
         postOfficeBoxNumber:
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''
           type: string
         postalCode:
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''
           type: string
         streetAddress:
-          description: 'Property. The street address. Model:''https://schema.org/Text'''
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''
           type: string
       type: Property
+      x-ngsi:
+        model: https://schema.org/address
     alternateName:
       description: 'An alternative name for this item'
       type: Property
@@ -285,7 +287,7 @@ TransportStation:
       description: 'The name of this item.'
       type: Property
     openingHoursSpecification:
-      description: 'A structured value providing information about the opening hours of a place or a certain service inside a place.'
+      description: 'A structured value providing information about the opening hours of a place or a certain service inside a place'
       items:
         properties:
           closes:
@@ -313,6 +315,8 @@ TransportStation:
             type: string
       minItems: 1
       type: Property
+      x-ngsi:
+        model: https://schema.org/openingHoursSpecification
     owner:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
       items:
@@ -331,8 +335,8 @@ TransportStation:
       description: 'list of uri pointing to additional resources about the item'
       oneOf:
         - items:
-            - format: uri
-              type: string
+            format: uri
+            type: string
           minItems: 1
           type: array
         - format: uri

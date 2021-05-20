@@ -409,7 +409,7 @@ RestrictionException:
 }  
 ```  
 #### RestrictionException NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für eine RestrictionException im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine RestrictionException im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und gibt die Kontextdaten einer einzelnen Entität zurück.  
 ```json  
 {  
   "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictionException:GeoJson:ds51-1",  
