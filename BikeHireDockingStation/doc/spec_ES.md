@@ -1,15 +1,16 @@
 Entidad: BikeHireDockingStation  
 ===============================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.Transportation/blob/master/BikeHireDockingStation/LICENSE.md)  
-Descripción global: **Bike Hire Docking Station**  
+[documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Descripción global: **Estación de alquiler de bicicletas**  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal.  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `availableBikeNumber`: El número de bicicletas disponibles en la estación de acoplamiento de alquiler de bicicletas para ser alquiladas por los usuarios  - `contactPoint`: Punto de contacto del servicio de alquiler de bicicletas  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `dateModified`: Sello de tiempo de la última modificación de la entidad. Esta será normalmente asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `freeSlotNumber`: El número de plazas disponibles para devolver y aparcar las bicicletas. Debe ser inferior o igual al "número total de ranuras".  - `id`: Identificador único de la entidad  - `location`:   - `name`: El nombre de este artículo.  - `openingHours`: Horario de apertura de la estación de acoplamiento  - `outOfServiceSlotNumber`: El número de ranuras que están fuera de servicio y no pueden ser utilizadas para alquilar o aparcar una bicicleta. Debe ser inferior o igual al "número total de franjas horarias".  - `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  - `provider`: Proveedor de servicios de alquiler de bicicletas  - `seeAlso`: lista de uri que apunta a recursos adicionales sobre el tema  - `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  - `status`: Estado de la estación de acoplamiento de alquiler de bicicletas. Enum:'trabajando, fuera de servicio, con incidencia, lleno, casi lleno, vacío, casi vacío'. O cualquier otra aplicación específica.  - `totalSlotNumber`: El número total de plazas que ofrece esta estación de acoplamiento de bicicletas  - `type`: Tipo de entidad NGSI. Tiene que ser BikeHireDockingStation    
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `availableBikeNumber`: El número de bicicletas disponibles en la estación de alquiler de bicicletas para ser alquiladas por los usuarios  - `contactPoint`: Punto de contacto del servicio de alquiler de bicicletas  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `freeSlotNumber`: El número de ranuras disponibles para devolver y aparcar bicicletas. Debe ser menor o igual que `totalSlotNumber`.  - `id`: Identificador único de la entidad  - `location`:   - `name`: El nombre de este artículo.  - `openingHours`: Horarios de apertura de la estación de acoplamiento  - `outOfServiceSlotNumber`: El número de ranuras que están fuera de servicio y no pueden ser utilizadas para alquilar o aparcar una bicicleta. Debe ser menor o igual que `totalSlotNumber`.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `provider`: Proveedor de servicios de alquiler de bicicletas  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `status`: Estado de la estación de alquiler de bicicletas. Enum:'working, outOfService, withIncidence, full, almostFull, empty, almostEmpty'. O cualquier otro específico de la aplicación.  - `totalSlotNumber`: El número total de ranuras que ofrece esta estación de acoplamiento de bicicletas  - `type`: Tipo de entidad NGSI. Tiene que ser BikeHireDockingStation    
 Propiedades requeridas  
 - `id`  - `type`    
-Muchas ciudades ofrecen un sistema de alquiler de bicicletas para los ciudadanos. Éstos pueden alquilar una base de bicicletas en diferentes tipos de suscripciones. Una estación de alquiler de bicicletas donde los usuarios suscritos pueden alquilar y devolver una bicicleta. Proporciona datos sobre sus principales características y la disponibilidad de bicicletas y de espacios libres.  
-## Modelo de datos Descripción de las propiedades  
+Muchas ciudades ofrecen un sistema de alquiler de bicicletas para los ciudadanos. Estos pueden alquilar una bicicleta en base a diferentes tipos de abonos. Una estación de alquiler de bicicletas en la que los usuarios abonados pueden alquilar y devolver una bicicleta. Ofrece datos sobre sus principales características y la disponibilidad de bicicletas y plazas libres.  
+## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -17,30 +18,29 @@ BikeHireDockingStation:
   description: 'Bike Hire Docking Station'    
   properties:    
     address:    
-      description: 'The mailing address.'    
+      description: 'The mailing address'    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
           type: string    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
           type: string    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
-          type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/Text'''    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -268,8 +268,8 @@ BikeHireDockingStation:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -308,9 +308,9 @@ BikeHireDockingStation:
   type: object    
 ```  
 </details>    
-## Ejemplo de cargas útiles  
-#### BikeHireDockingStation NGSI V2 valores clave Ejemplo  
-Aquí hay un ejemplo de una BikeHireDockingStation en formato JSON como valores clave. Es compatible con NGSI V2 cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
+## Ejemplo de carga útil  
+#### BikeHireDockingStation NGSI-v2 key-values Ejemplo  
+Aquí hay un ejemplo de un BikeHireDockingStation en formato JSON-LD como key-values. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
         "id": "Bcn-BikeHireDockingStation-1",  
@@ -332,8 +332,8 @@ BikeHireDockingStation:
         "status": "working"  
 }  
 ```  
-#### BikeHireDockingStation NGSI V2 normalizada Ejemplo  
-Aquí hay un ejemplo de una estación de carga BikeHireDockingStation en formato JSON normalizado. Es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### BikeHireDockingStation NGSI-v2 normalizado Ejemplo  
+Este es un ejemplo de BikeHireDockingStation en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
     "id": "Bcn-BikeHireDockingStation-1",  
@@ -373,63 +373,75 @@ BikeHireDockingStation:
     }  
 }  
 ```  
-#### BikeHireDockingStation NGSI-LD key-values Example  
-Aquí hay un ejemplo de una BikeHireDockingStation en formato JSON-LD como valores clave. Esto es compatible con NGSI-LD cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
-```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "address": {"addressCountry": "ES",  
-             "addressLocality": "Barcelona",  
-             "streetAddress": "Gran Via Corts Catalanes,760",  
-             "type": "PostalAddress"},  
- "availableBikeNumber": 20,  
- "freeSlotNumber": 10,  
- "id": "urn:ngsi-ld:BikeHireDockingStation:Bcn-BikeHireDockingStation-1",  
- "location": {"coordinates": [2.180042, 41.397952], "type": "Point"},  
- "status": "working",  
- "type": "BikeHireDockingStation"}  
-```  
-#### BikeHireDockingStation NGSI-LD normalizado Ejemplo  
-Este es un ejemplo de una estación de acoplamiento BikeHire en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### BikeHireDockingStation NGSI-LD key-values Ejemplo  
+Aquí hay un ejemplo de un BikeHireDockingStation en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:BikeHireDockingStation:Bcn-BikeHireDockingStation-1",  
-    "type": "BikeHireDockingStation",  
-    "status": {  
-        "type": "Property",  
-        "value": "working"  
-    },  
-    "availableBikeNumber": {  
-        "type": "Property",  
-        "value": 20,  
-        "observedAt": "2018-09-25T12:00:00Z"  
-    },  
-    "freeSlotNumber": {  
-        "type": "Property",  
-        "value": 10  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                2.180042,  
-                41.397952  
-            ]  
-        }  
-    },  
-    "address": {  
-        "type": "Property",  
-        "value": {  
-            "addressCountry": "ES",  
-            "addressLocality": "Barcelona",  
-            "streetAddress": "Gran Via Corts Catalanes,760",  
-            "type": "PostalAddress"  
-        }  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+  "id": "urn:ngsi-ld:BikeHireDockingStation:Bcn-BikeHireDockingStation-1",  
+  "type": "BikeHireDockingStation",  
+  "status": {  
+    "type": "Property",  
+    "value": "working"  
+  },  
+  "availableBikeNumber": {  
+    "type": "Property",  
+    "value": 20,  
+    "observedAt": "2018-09-25T12:00:00Z"  
+  },  
+  "freeSlotNumber": {  
+    "type": "Property",  
+    "value": 10  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        2.180042,  
+        41.397952  
+      ]  
+    }  
+  },  
+  "address": {  
+    "type": "Property",  
+    "value": {  
+      "addressCountry": "ES",  
+      "addressLocality": "Barcelona",  
+      "streetAddress": "Gran Via Corts Catalanes,760",  
+      "type": "PostalAddress"  
+    }  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
+```  
+#### BikeHireDockingStation NGSI-LD normalizado Ejemplo  
+Este es un ejemplo de BikeHireDockingStation en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "address": {  
+    "addressCountry": "ES",  
+    "addressLocality": "Barcelona",  
+    "streetAddress": "Gran Via Corts Catalanes,760",  
+    "type": "PostalAddress"  
+  },  
+  "availableBikeNumber": 20,  
+  "freeSlotNumber": 10,  
+  "id": "urn:ngsi-ld:BikeHireDockingStation:Bcn-BikeHireDockingStation-1",  
+  "location": {  
+    "coordinates": [  
+      2.180042,  
+      41.397952  
+    ],  
+    "type": "Point"  
+  },  
+  "status": "working",  
+  "type": "BikeHireDockingStation"  
 }  
 ```  
