@@ -1,6 +1,7 @@
 Entity: RoadAccident  
 ====================  
 [Open License](https://github.com/smart-data-models//dataModel.Transportation/blob/master/RoadAccident/LICENSE.md)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **A road accident description with causes and aftermath. First version developed in Synchronicity project**  
 
 ## List of properties  
@@ -188,14 +189,11 @@ RoadAccident:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
-          type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
@@ -492,8 +490,8 @@ RoadAccident:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -634,8 +632,8 @@ RoadAccident:
 ```  
 </details>    
 ## Example payloads    
-#### RoadAccident NGSI V2 key-values Example    
-Here is an example of a RoadAccident in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+#### RoadAccident NGSI-v2 key-values Example    
+Here is an example of a RoadAccident in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:RoadAccident:id:ORHW:45620815",  
@@ -700,9 +698,9 @@ RoadAccident:
   "roadIntersection": "8",  
   "roadTrunk": "12",  
   "roadSign": "5",  
-  "pedestriansInvolved": [  
-    "true"  
-  ],  
+  "pedestriansInvolved":  
+    true  
+  ,  
   "vehiclesInvolved": [  
     "21",  
     "6"  
@@ -717,8 +715,8 @@ RoadAccident:
   "totalDeadPeopleWithin24Hours": 0  
 }  
 ```  
-#### RoadAccident NGSI V2 normalized Example    
-Here is an example of a RoadAccident in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+#### RoadAccident NGSI-v2 normalized Example    
+Here is an example of a RoadAccident in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:RoadAccident:id:ORHW:45620815",  
@@ -922,92 +920,6 @@ RoadAccident:
 ```json  
 {  
   "id": "urn:ngsi-ld:RoadAccident:id:ORHW:45620815",  
-  "type": "RoadAccident",  
-  "dateCreated": "2018-06-23T04:19:24Z",  
-  "dateModified": "2020-10-29T08:36:40Z",  
-  "source": "To be defined",  
-  "name": "Name of the element of the accident.",  
-  "alternateName": "Other name.",  
-  "description": "Clash in the middle of a traffic light",  
-  "dataProvider": "Municipality.",  
-  "owner": [  
-    "urn:ngsi-ld:RoadAccident:items:SUUU:18395806",  
-    "urn:ngsi-ld:RoadAccident:items:GVOF:30958855"  
-  ],  
-  "seeAlso": [  
-    "urn:ngsi-ld:RoadAccident:items:ESLS:37894243",  
-    "urn:ngsi-ld:RoadAccident:items:ZNUH:87936284"  
-  ],  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      -56.6404505,  
-      168.370658  
-    ]  
-  },  
-  "address": {  
-    "streetAddress": "FranklinStrasse",  
-    "addressLocality": "Berlin",  
-    "addressRegion": "Berlin",  
-    "addressCountry": "Germany",  
-    "postalCode": "10387",  
-    "postOfficeBoxNumber": "",  
-    "areaServed": "worldwide."  
-  },  
-  "areaServed": "worldwide",  
-  "localId": "20210312-A1.",  
-  "status": "onGoing",  
-  "accidentDate": "2021-03-12T13:59:36Z",  
-  "accidentStatisticalDate": {  
-    "year": 2021,  
-    "quarter": 1,  
-    "weekday": "Friday",  
-    "hour": 4  
-  },  
-  "accidentType": [  
-    "10",  
-    "6"  
-  ],  
-  "accidentDescription": [  
-    "23",  
-    "46"  
-  ],  
-  "weatherConditions": [  
-    "10",  
-    "20"  
-  ],  
-  "roadSurface": "2",  
-  "roadPaving": "2",  
-  "accidentLocation": "5",  
-  "roadClass": "Motorway.",  
-  "roadIntersection": "8",  
-  "roadTrunk": "12",  
-  "roadSign": "5",  
-  "pedestriansInvolved": [  
-    "true"  
-  ],  
-  "vehiclesInvolved": [  
-    "21",  
-    "6"  
-  ],  
-  "weakestSubject": "20",  
-  "numPassengersInjured": 1,  
-  "numPassengersDead": 1,  
-  "numPedestrianInjured": 1,  
-  "numPedestrianDead": 0,  
-  "totalInjured": 2,  
-  "totalDeadPeopleWithin30Days": 0,  
-  "totalDeadPeopleWithin24Hours": 0,  
-  "@context": [  
-    "https://schema.lab.fiware.org/ld/context"  
-  ]  
-}  
-```  
-#### RoadAccident NGSI-LD normalized Example    
-Here is an example of a RoadAccident in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
-```json  
-{  
-  "id": "urn:ngsi-ld:RoadAccident:id:ORHW:45620815",  
   "dateCreated": {  
     "type": "Property",  
     "value": {  
@@ -1202,7 +1114,93 @@ RoadAccident:
     "value": 0  
   },  
   "@context": [  
-    "https://schema.lab.fiware.org/ld/context"  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
+}  
+```  
+#### RoadAccident NGSI-LD normalized Example    
+Here is an example of a RoadAccident in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+```json  
+{  
+  "id": "urn:ngsi-ld:RoadAccident:id:ORHW:45620815",  
+  "type": "RoadAccident",  
+  "dateCreated": "2018-06-23T04:19:24Z",  
+  "dateModified": "2020-10-29T08:36:40Z",  
+  "source": "To be defined",  
+  "name": "Name of the element of the accident.",  
+  "alternateName": "Other name.",  
+  "description": "Clash in the middle of a traffic light",  
+  "dataProvider": "Municipality.",  
+  "owner": [  
+    "urn:ngsi-ld:RoadAccident:items:SUUU:18395806",  
+    "urn:ngsi-ld:RoadAccident:items:GVOF:30958855"  
+  ],  
+  "seeAlso": [  
+    "urn:ngsi-ld:RoadAccident:items:ESLS:37894243",  
+    "urn:ngsi-ld:RoadAccident:items:ZNUH:87936284"  
+  ],  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      -56.6404505,  
+      168.370658  
+    ]  
+  },  
+  "address": {  
+    "streetAddress": "FranklinStrasse",  
+    "addressLocality": "Berlin",  
+    "addressRegion": "Berlin",  
+    "addressCountry": "Germany",  
+    "postalCode": "10387",  
+    "postOfficeBoxNumber": "",  
+    "areaServed": "worldwide."  
+  },  
+  "areaServed": "worldwide",  
+  "localId": "20210312-A1.",  
+  "status": "onGoing",  
+  "accidentDate": "2021-03-12T13:59:36Z",  
+  "accidentStatisticalDate": {  
+    "year": 2021,  
+    "quarter": 1,  
+    "weekday": "Friday",  
+    "hour": 4  
+  },  
+  "accidentType": [  
+    "10",  
+    "6"  
+  ],  
+  "accidentDescription": [  
+    "23",  
+    "46"  
+  ],  
+  "weatherConditions": [  
+    "10",  
+    "20"  
+  ],  
+  "roadSurface": "2",  
+  "roadPaving": "2",  
+  "accidentLocation": "5",  
+  "roadClass": "Motorway.",  
+  "roadIntersection": "8",  
+  "roadTrunk": "12",  
+  "roadSign": "5",  
+  "pedestriansInvolved": [  
+    "true"  
+  ],  
+  "vehiclesInvolved": [  
+    "21",  
+    "6"  
+  ],  
+  "weakestSubject": "20",  
+  "numPassengersInjured": 1,  
+  "numPassengersDead": 1,  
+  "numPedestrianInjured": 1,  
+  "numPedestrianDead": 0,  
+  "totalInjured": 2,  
+  "totalDeadPeopleWithin30Days": 0,  
+  "totalDeadPeopleWithin24Hours": 0,  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
   ]  
 }  
 ```  
