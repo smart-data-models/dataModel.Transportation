@@ -152,10 +152,6 @@
                     "type": "string",
                     "description": "Property. A short text indicating the configuration of the vehicle, e.g. '5dr hatchback ST 2.5 MT 225 hp' or 'limited edition'. Model:'https://schema.org/vehicleConfiguration'."
                 },
-                "color": {
-                    "type": "string",
-                    "description": "Property. Vehicle's color. Model:'https://schema.org/color'."
-                },
                 "feature": {
                     "type": "array",
                     "description": "Property. Feature(s) incorporated by the vehicle. Model:'https://schema.org/Text'. Enum:' abs, airbag, alarm, backCamera, disabledRamp, gps, internetConnection, overspeed, proximitySensor, wifi'. Or any other needed by the application. In order to represent multiple instances of a feature it can be used the following syntax: `<feature>,<occurences>`. For example, a car with 4 airbags will be represented by `airbag,4`.",
