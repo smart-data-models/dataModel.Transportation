@@ -1,13 +1,14 @@
 Entität: EVChargingStation  
 ==========================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Transportation/blob/master/EVChargingStation/LICENSE.md)  
+[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **EV-Ladestation**  
 
 ## Liste der Eigenschaften  
 
-- `acceptedPaymentMethod`: Art(en) der Belastung bei Verwendung dieser Station. Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'  - `address`: Die Postanschrift.  - `allowedVehicleType`: Fahrzeugtyp(en), die aufgeladen werden können. Enum:'Fahrrad, Bus, Auto, Wohnwagen, Motorrad, Motorroller, LKW'  - `alternateName`: Ein alternativer Name für diesen Artikel  - `amperage`: Die Gesamtstromstärke, die von der Ladestation angeboten wird.  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `availableCapacity`: Die Anzahl der Fahrzeuge, die aktuell geladen werden können. Sie muss kleiner oder gleich `capacity` sein.  - `capacity`: Die Gesamtzahl der Fahrzeuge, die gleichzeitig geladen werden können. Die Gesamtzahl der Steckdosen kann höher sein.  - `chargeType`: Art(en) der Gebühr(en) bei Nutzung dieser Station. Enum:'annualPayment, flat, free, monthlyPayment, other'  - `contactPoint`: Kontaktstelle der Ladestation  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `location`:   - `name`: Der Name dieses Elements.  - `network`: Der Name des Netzwerks, mit dem der Betreiber zusammenarbeitet.  - `openingHours`: Öffnungszeiten der Ladestation.  - `operator`: Der Betreiber der Ladestation.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `socketNumber`: Die Gesamtzahl der von dieser Ladestation angebotenen Steckdosen  - `socketType`: Der Typ der Steckdosen, die von dieser Station angeboten werden. Enum:'Caravan_Mains_Socket, CHAdeMO, CCS/SAE, Dual_CHAdeMO, Dual_J-1772, Dual_Mennekes, J-1772, Mennekes, Other, Tesla, Type2, Type3, Wall_Euro'  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `status`: Status der Ladestation. Enum:'almostEmpty, almostFull, empty, full, outOfService, withIncidence, working'. Oder jede andere anwendungsspezifische.  - `type`: NGSI Entity-Typ. Es muss EVChargingStation sein  - `voltage`: Die von der Ladestation angebotene Gesamtspannung    
+- `acceptedPaymentMethod`: Art(en) der Belastung bei Verwendung dieser Station. Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'  - `address`: Die Postanschrift  - `allowedVehicleType`: Fahrzeugtyp(en), die aufgeladen werden können. Enum:'Fahrrad, Bus, Auto, Wohnwagen, Motorrad, Motorroller, LKW'  - `alternateName`: Ein alternativer Name für diesen Artikel  - `amperage`: Die Gesamtstromstärke, die von der Ladestation angeboten wird.  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `availableCapacity`: Die Anzahl der Fahrzeuge, die aktuell geladen werden können. Sie muss kleiner oder gleich `capacity` sein.  - `capacity`: Die Gesamtzahl der Fahrzeuge, die gleichzeitig geladen werden können. Die Gesamtzahl der Steckdosen kann höher sein.  - `chargeType`: Art(en) der Gebühr(en) bei Nutzung dieser Station. Enum:'annualPayment, flat, free, monthlyPayment, other'  - `contactPoint`: Kontaktstelle der Ladestation  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `location`:   - `name`: Der Name dieses Elements.  - `network`: Der Name des Netzwerks, mit dem der Betreiber zusammenarbeitet.  - `openingHours`: Öffnungszeiten der Ladestation.  - `operator`: Der Betreiber der Ladestation.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `socketNumber`: Die Gesamtzahl der von dieser Ladestation angebotenen Steckdosen  - `socketType`: Der Typ der Steckdosen, die von dieser Station angeboten werden. Enum:'Caravan_Mains_Socket, CHAdeMO, CCS/SAE, Dual_CHAdeMO, Dual_J-1772, Dual_Mennekes, J-1772, Mennekes, Other, Tesla, Type2, Type3, Wall_Euro'  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `status`: Status der Ladestation. Enum:'almostEmpty, almostFull, empty, full, outOfService, withIncidence, working'. Oder jede andere anwendungsspezifische.  - `type`: NGSI Entity-Typ. Es muss EVChargingStation sein  - `voltage`: Die von der Ladestation angebotene Gesamtspannung    
 Erforderliche Eigenschaften  
-- `allowedVehicleType`  - `capacity`  - `id`  - `name`  - `socketType`  - `type`    
+- `allowedVehicleType`  - `capacity`  - `id`  - `socketType`  - `type`    
 Eine öffentliche Ladestation zur Energieversorgung von Elektrofahrzeugen. Die Ladezeit ist abhängig von der maximalen Leistungsabgabe der Station, der Anzahl der gerade ladenden Fahrzeuge und dem aktuellen Batteriestand.  
 ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -36,30 +37,29 @@ EVChargingStation:
       x-ngsi:    
         model: https://schema.org/Text    
     address:    
-      description: 'The mailing address.'    
+      description: 'The mailing address'    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
           type: string    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
           type: string    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
-          type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/Text'''    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/address    
     allowedVehicleType:    
       description: 'Vehicle type(s) which can be charged. Enum:''bicycle, bus, car, caravan, motorcycle, motorscooter, truck'' '    
       items:    
@@ -82,7 +82,6 @@ EVChargingStation:
       type: Property    
     amperage:    
       description: 'The total amperage offered by the charging station.'    
-      exclusiveMinimum: 0    
       minimum: 0    
       type: Property    
       x-ngsi:    
@@ -302,10 +301,6 @@ EVChargingStation:
       description: 'The name of this item.'    
       type: Property    
     network:    
-      anyOf:    
-        - format: uri    
-          type: string    
-        - type: string    
       description: 'The name of the Network, with that the operator cooperates. '    
       type: Property    
       x-ngsi:    
@@ -316,10 +311,6 @@ EVChargingStation:
       x-ngsi:    
         model: http://schema.org/openingHours    
     operator:    
-      anyOf:    
-        - format: uri    
-          type: string    
-        - type: string    
       description: 'Charging station''s operator. '    
       type: Property    
       x-ngsi:    
@@ -334,8 +325,8 @@ EVChargingStation:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -393,7 +384,6 @@ EVChargingStation:
       type: Property    
     voltage:    
       description: 'The total voltage offered by the charging station'    
-      exclusiveMinimum: 0    
       minimum: 0    
       type: Property    
       x-ngsi:    
@@ -402,7 +392,6 @@ EVChargingStation:
   required:    
     - id    
     - type    
-    - name    
     - socketType    
     - capacity    
     - allowedVehicleType    
