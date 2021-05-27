@@ -1,13 +1,14 @@
 Entity: EVChargingStation  
 =========================  
 [Open License](https://github.com/smart-data-models//dataModel.Transportation/blob/master/EVChargingStation/LICENSE.md)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **EV Charging Station**  
 
 ## List of properties  
 
-- `acceptedPaymentMethod`: Type(s) of charge when using this station. Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'  - `address`: The mailing address.  - `allowedVehicleType`: Vehicle type(s) which can be charged. Enum:'bicycle, bus, car, caravan, motorcycle, motorscooter, truck'   - `alternateName`: An alternative name for this item  - `amperage`: The total amperage offered by the charging station.  - `areaServed`: The geographic area where a service or offered item is provided  - `availableCapacity`: The number of vehicles which currently can be charged. It must lower or equal than `capacity`.  - `capacity`: The total number of vehicles which can be charged at the same time. The total number of sockets can be higher.   - `chargeType`: Type(s) of charge when using this station. Enum:'annualPayment, flat, free, monthlyPayment, other'  - `contactPoint`: Charging station contact point  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`: Unique identifier of the entity  - `location`:   - `name`: The name of this item.  - `network`: The name of the Network, with that the operator cooperates.   - `openingHours`: Opening hours of the charging station.   - `operator`: Charging station's operator.   - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`: list of uri pointing to additional resources about the item  - `socketNumber`: The total number of sockets offered by this charging station  - `socketType`: The type of sockets offered by this station. Enum:'Caravan_Mains_Socket, CHAdeMO, CCS/SAE, Dual_CHAdeMO, Dual_J-1772, Dual_Mennekes, J-1772, Mennekes, Other, Tesla, Type2, Type3, Wall_Euro'  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `status`: Status of the charging station. Enum:'almostEmpty, almostFull, empty, full, outOfService, withIncidence, working'. Or any other application-specific.  - `type`: NGSI Entity type. It has to be EVChargingStation  - `voltage`: The total voltage offered by the charging station    
+- `acceptedPaymentMethod`: Type(s) of charge when using this station. Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'  - `address`: The mailing address  - `allowedVehicleType`: Vehicle type(s) which can be charged. Enum:'bicycle, bus, car, caravan, motorcycle, motorscooter, truck'   - `alternateName`: An alternative name for this item  - `amperage`: The total amperage offered by the charging station.  - `areaServed`: The geographic area where a service or offered item is provided  - `availableCapacity`: The number of vehicles which currently can be charged. It must lower or equal than `capacity`.  - `capacity`: The total number of vehicles which can be charged at the same time. The total number of sockets can be higher.   - `chargeType`: Type(s) of charge when using this station. Enum:'annualPayment, flat, free, monthlyPayment, other'  - `contactPoint`: Charging station contact point  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`: Unique identifier of the entity  - `location`:   - `name`: The name of this item.  - `network`: The name of the Network, with that the operator cooperates.   - `openingHours`: Opening hours of the charging station.   - `operator`: Charging station's operator.   - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`: list of uri pointing to additional resources about the item  - `socketNumber`: The total number of sockets offered by this charging station  - `socketType`: The type of sockets offered by this station. Enum:'Caravan_Mains_Socket, CHAdeMO, CCS/SAE, Dual_CHAdeMO, Dual_J-1772, Dual_Mennekes, J-1772, Mennekes, Other, Tesla, Type2, Type3, Wall_Euro'  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `status`: Status of the charging station. Enum:'almostEmpty, almostFull, empty, full, outOfService, withIncidence, working'. Or any other application-specific.  - `type`: NGSI Entity type. It has to be EVChargingStation  - `voltage`: The total voltage offered by the charging station    
 Required properties  
-- `allowedVehicleType`  - `capacity`  - `id`  - `name`  - `socketType`  - `type`    
+- `allowedVehicleType`  - `capacity`  - `id`  - `socketType`  - `type`    
 A public charging station supplying energy to electrical vehicles. The charge time depends on the maximum power output of the station, the number of vehicles currently charging and the current battery level.  
 ## Data Model description of properties  
 Sorted alphabetically (click for details)  
@@ -36,30 +37,29 @@ EVChargingStation:
       x-ngsi:    
         model: https://schema.org/Text    
     address:    
-      description: 'The mailing address.'    
+      description: 'The mailing address'    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
           type: string    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
           type: string    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
-          type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/Text'''    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/address    
     allowedVehicleType:    
       description: 'Vehicle type(s) which can be charged. Enum:''bicycle, bus, car, caravan, motorcycle, motorscooter, truck'' '    
       items:    
@@ -82,7 +82,6 @@ EVChargingStation:
       type: Property    
     amperage:    
       description: 'The total amperage offered by the charging station.'    
-      exclusiveMinimum: 0    
       minimum: 0    
       type: Property    
       x-ngsi:    
@@ -302,10 +301,6 @@ EVChargingStation:
       description: 'The name of this item.'    
       type: Property    
     network:    
-      anyOf:    
-        - format: uri    
-          type: string    
-        - type: string    
       description: 'The name of the Network, with that the operator cooperates. '    
       type: Property    
       x-ngsi:    
@@ -316,10 +311,6 @@ EVChargingStation:
       x-ngsi:    
         model: http://schema.org/openingHours    
     operator:    
-      anyOf:    
-        - format: uri    
-          type: string    
-        - type: string    
       description: 'Charging station''s operator. '    
       type: Property    
       x-ngsi:    
@@ -334,8 +325,8 @@ EVChargingStation:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -393,7 +384,6 @@ EVChargingStation:
       type: Property    
     voltage:    
       description: 'The total voltage offered by the charging station'    
-      exclusiveMinimum: 0    
       minimum: 0    
       type: Property    
       x-ngsi:    
@@ -402,7 +392,6 @@ EVChargingStation:
   required:    
     - id    
     - type    
-    - name    
     - socketType    
     - capacity    
     - allowedVehicleType    
@@ -410,8 +399,8 @@ EVChargingStation:
 ```  
 </details>    
 ## Example payloads    
-#### EVChargingStation NGSI V2 key-values Example    
-Here is an example of a EVChargingStation in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+#### EVChargingStation NGSI-v2 key-values Example    
+Here is an example of a EVChargingStation in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
@@ -437,8 +426,8 @@ EVChargingStation:
   "source": "https://openchargemap.org/"  
 }  
 ```  
-#### EVChargingStation NGSI V2 normalized Example    
-Here is an example of a EVChargingStation in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+#### EVChargingStation NGSI-v2 normalized Example    
+Here is an example of a EVChargingStation in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
@@ -489,92 +478,112 @@ EVChargingStation:
 #### EVChargingStation NGSI-LD key-values Example    
 Here is an example of a EVChargingStation in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "address": {"addressCountry": "España",  
-             "addressLocality": "Valladolid",  
-             "streetAddress": "Paseo de Zorrilla, 191",  
-             "type": "PostalAddress"},  
- "allowedVehicleType": ["car"],  
- "capacity": 2,  
- "chargeType": ["free"],  
- "contactPoint": {"email": "vehiculoelectrico@ava.es"},  
- "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
- "location": {"coordinates": [-4.747901, 41.618265], "type": "Point"},  
- "name": "Agencia de Innovación",  
- "operator": "Iberdrola",  
- "socketType": ["Wall_Euro"],  
- "source": "https://openchargemap.org/",  
- "type": "EVChargingStation"}  
+{  
+  "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
+  "type": "EVChargingStation",  
+  "socketType": {  
+    "type": "Property",  
+    "value": [  
+      "Wall_Euro"  
+    ]  
+  },  
+  "capacity": {  
+    "type": "Property",  
+    "value": 2  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Agencia de Innovaci\u00f3n"  
+  },  
+  "allowedVehicleType": {  
+    "type": "Property",  
+    "value": [  
+      "car"  
+    ]  
+  },  
+  "source": {  
+    "type": "Property",  
+    "value": "https://openchargemap.org/"  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -4.747901,  
+        41.618265  
+      ]  
+    }  
+  },  
+  "chargeType": {  
+    "type": "Property",  
+    "value": [  
+      "free"  
+    ]  
+  },  
+  "address": {  
+    "type": "Property",  
+    "value": {  
+      "addressLocality": "Valladolid",  
+      "addressCountry": "Espa\u00f1a",  
+      "streetAddress": "Paseo de Zorrilla, 191",  
+      "type": "PostalAddress"  
+    }  
+  },  
+  "operator": {  
+    "type": "Property",  
+    "value": "Iberdrola"  
+  },  
+  "contactPoint": {  
+    "type": "Property",  
+    "value": {  
+      "email": "vehiculoelectrico@ava.es"  
+    }  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
 ```  
 #### EVChargingStation NGSI-LD normalized Example    
 Here is an example of a EVChargingStation in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
-    "type": "EVChargingStation",  
-    "socketType": {  
-        "type": "Property",  
-        "value": [  
-            "Wall_Euro"  
-        ]  
-    },  
-    "capacity": {  
-        "type": "Property",  
-        "value": 2  
-    },  
-    "name": {  
-        "type": "Property",  
-        "value": "Agencia de Innovación"  
-    },  
-    "allowedVehicleType": {  
-        "type": "Property",  
-        "value": [  
-            "car"  
-        ]  
-    },  
-    "source": {  
-        "type": "Property",  
-        "value": "https://openchargemap.org/"  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                -4.747901,  
-                41.618265  
-            ]  
-        }  
-    },  
-    "chargeType": {  
-        "type": "Property",  
-        "value": [  
-            "free"  
-        ]  
-    },  
-    "address": {  
-        "type": "Property",  
-        "value": {  
-            "addressLocality": "Valladolid",  
-            "addressCountry": "España",  
-            "streetAddress": "Paseo de Zorrilla, 191",  
-            "type": "PostalAddress"  
-        }  
-    },  
-    "operator": {  
-        "type": "Property",  
-        "value": "Iberdrola"  
-    },  
-    "contactPoint": {  
-        "type": "Property",  
-        "value": {  
-            "email": "vehiculoelectrico@ava.es"  
-        }  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "address": {  
+    "addressCountry": "Espa\u00f1a",  
+    "addressLocality": "Valladolid",  
+    "streetAddress": "Paseo de Zorrilla, 191",  
+    "type": "PostalAddress"  
+  },  
+  "allowedVehicleType": [  
+    "car"  
+  ],  
+  "capacity": 2,  
+  "chargeType": [  
+    "free"  
+  ],  
+  "contactPoint": {  
+    "email": "vehiculoelectrico@ava.es"  
+  },  
+  "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
+  "location": {  
+    "coordinates": [  
+      -4.747901,  
+      41.618265  
+    ],  
+    "type": "Point"  
+  },  
+  "name": "Agencia de Innovaci\u00f3n",  
+  "operator": "Iberdrola",  
+  "socketType": [  
+    "Wall_Euro"  
+  ],  
+  "source": "https://openchargemap.org/",  
+  "type": "EVChargingStation"  
 }  
 ```  
