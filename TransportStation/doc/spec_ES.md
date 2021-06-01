@@ -355,7 +355,7 @@ TransportStation:
           format: uri    
           type: string    
       description: 'Link to the GTFS standard repository describing the different link between Station and Platform [Parent STATION]. Case ''1'' location_type = 0 (Stop / platform ), the parent_station field contains the ID of a station. Case ''2'' location_type = 1  (Station), this field must be empty. Case ''3'' location_type = 2 (Input / output) or location_type = 3 (generic intersection), the parent_station field contains the ID of a station location_type = 1. Case ''4'' location_type = 4 (boarding area), the parent_station field contains the ID of a platform.'    
-      type: Property    
+      type: Relationship    
     platformCode:    
       description: 'Platform identifier for a platform type stop `location_type` = 0 when the stop is in a station.'    
       type: Property    
@@ -466,7 +466,7 @@ TransportStation:
         type: object    
       type: Property    
     stationType:    
-      description: 'type of transpot station. Enum:''aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, trolleybus, tram'''    
+      description: 'Type of transport station. Enum:''aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, trolleybus, tram'''    
       items:    
         enum:    
           - aerialLift    
