@@ -296,13 +296,14 @@ TransportStation:
           type: object    
       title: 'GeoJSON Geometry'    
     'locationType ':    
+      description: 'Link to the GTFS standard repository describing the different location [Location Type]. 0 Stop or platform (place where users get on or off in a public transport vehicle). 1 Station (area or physical structure comprising one or more platforms). 2 Entrance or Exit (place where users can enter / exit a station from the street). 3 Generic intersection (location in a station that doesn''t correspond to any other `location_type` value). 4 Boarding area of a specific location on a platform where users can get on / off in a vehicle.'    
       enum:    
         - 0    
         - 1    
         - 2    
         - 3    
         - 4    
-      type: string    
+      type: Property    
     name:    
       description: 'The name of this item.'    
       type: Property    
