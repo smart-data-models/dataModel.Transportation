@@ -1,6 +1,7 @@
 Entidad: RestrictionException  
 =============================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.Transportation/blob/master/RestrictionException/LICENSE.md)  
+[documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descripción global: **Una Excepción de Restricción representa un caso particular que especializa la restricción reportada en una Zona de Tráfico Restringido; por ejemplo podría describir permisos particulares aplicados a vehículos de tipo específico**  
 
 ## Lista de propiedades  
@@ -28,14 +29,11 @@ RestrictionException:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
-          type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
@@ -290,7 +288,7 @@ RestrictionException:
           format: uri    
           type: string    
       description: 'The Restricted Traffic Area this exception belongs.'    
-      type: Property    
+      type: Relationship    
     refVehicleModel:    
       description: 'Specify characteristics of the vehicle for which the exception has been established'    
       items:    
@@ -301,8 +299,8 @@ RestrictionException:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -325,8 +323,8 @@ RestrictionException:
 ```  
 </details>    
 ## Ejemplo de carga útil  
-#### RestrictionException NGSI V2 key-values Ejemplo  
-Aquí hay un ejemplo de una RestrictionException en formato JSON como valores-clave. Esto es compatible con NGSI V2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+#### RestrictionException Ejemplo de valores clave NGSI-v2  
+Aquí hay un ejemplo de una RestrictionException en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictionException:GeoJson:ds51-1",  
@@ -343,8 +341,8 @@ RestrictionException:
   "refRestrictedTrafficArea": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1"  
 }  
 ```  
-#### RestrictionException NGSI V2 normalizado Ejemplo  
-Este es un ejemplo de una RestrictionException en formato JSON normalizado. Esto es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### RestrictionException NGSI-v2 normalizado Ejemplo  
+Este es un ejemplo de una RestrictionException en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictionException:GeoJson:ds51-1",  
@@ -380,27 +378,6 @@ RestrictionException:
 {  
   "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictionException:GeoJson:ds51-1",  
   "type": "RestrictionException",  
-  "name": "Corso Concordia Area",  
-  "allowedVehicleType": [  
-    "dieselCarEuro6",  
-    "petrolCarEuro6"  
-  ],  
-  "exceptionValidityHours": "Tu,Th 16:00-20:00",  
-  "refVehicleModel": [  
-    "vehicle:VehicleModel:modelName-1"  
-  ],  
-  "refRestrictedTrafficArea": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
-  "@context": [  
-    "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"  
-  ]  
-}  
-```  
-#### RestrictionException NGSI-LD normalizado Ejemplo  
-Este es un ejemplo de una RestrictionException en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
-```json  
-{  
-  "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictionException:GeoJson:ds51-1",  
-  "type": "RestrictionException",  
   "name": {  
     "type": "string",  
     "value": "Corso Concordia Area"  
@@ -424,6 +401,27 @@ RestrictionException:
     "type": "string",  
     "Object": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1"  
   },  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"  
+  ]  
+}  
+```  
+#### RestrictionException NGSI-LD normalizado Ejemplo  
+Este es un ejemplo de una RestrictionException en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictionException:GeoJson:ds51-1",  
+  "type": "RestrictionException",  
+  "name": "Corso Concordia Area",  
+  "allowedVehicleType": [  
+    "dieselCarEuro6",  
+    "petrolCarEuro6"  
+  ],  
+  "exceptionValidityHours": "Tu,Th 16:00-20:00",  
+  "refVehicleModel": [  
+    "vehicle:VehicleModel:modelName-1"  
+  ],  
+  "refRestrictedTrafficArea": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
   "@context": [  
     "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"  
   ]  
