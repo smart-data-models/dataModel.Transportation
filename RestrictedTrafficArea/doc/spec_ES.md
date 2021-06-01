@@ -1,6 +1,7 @@
 Entidad: RestrictedTrafficArea  
 ==============================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.Transportation/blob/master/RestrictedTrafficArea/LICENSE.md)  
+[documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descripción global: **Zona de una ciudad en la que se limita el tráfico generado por los coches o cualquier otro tipo de vehículos.**  
 
 ## Lista de propiedades  
@@ -28,14 +29,11 @@ RestrictedTrafficArea:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
-          type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
@@ -339,8 +337,8 @@ RestrictedTrafficArea:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -375,8 +373,8 @@ RestrictedTrafficArea:
 ```  
 </details>    
 ## Ejemplo de carga útil  
-#### RestrictedTrafficArea NGSI V2 key-values Ejemplo  
-Aquí hay un ejemplo de un RestrictedTrafficArea en formato JSON como key-values. Esto es compatible con NGSI V2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+#### RestrictedTrafficArea NGSI-v2 key-values Ejemplo  
+Aquí hay un ejemplo de un RestrictedTrafficArea en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
@@ -401,8 +399,8 @@ RestrictedTrafficArea:
   "validityEndDate": "2049-12-31T23:00:00.00Z"  
 }  
 ```  
-#### RestrictedTrafficArea NGSI V2 normalizado Ejemplo  
-Este es un ejemplo de un RestrictedTrafficArea en formato JSON normalizado. Esto es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### RestrictedTrafficArea NGSI-v2 normalizado Ejemplo  
+Este es un ejemplo de un RestrictedTrafficArea en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
@@ -457,35 +455,6 @@ RestrictedTrafficArea:
 {  
   "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
   "type": "RestrictedTrafficArea",  
-  "category": [  
-    "onlyPedestrian"  
-  ],  
-  "description": "Panel:AP - Stretches:lato civici dispari da piazza Tricolore a via Kramer - Bollards: - Notes:",  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      9.214544,  
-      45.483353  
-    ]  
-  },  
-  "name": "Corso Concordia Area",  
-  "notAllowedVehicleType": [  
-    "anyVehicle"  
-  ],  
-  "regulation": "Decree:54785/2004, Deliberation:425/2004",  
-  "source": "https://dati.comune.milano.it/dataset/ds51_trafficotrasporti_aree_pedonali_ztl_zone_30_",  
-  "validityEndDate": "2049-12-31T23:00:00.00Z",  
-  "@context": [  
-    "https://schema.lab.fiware.org/ld/context"  
-  ]  
-}  
-```  
-#### RestrictedTrafficArea NGSI-LD normalizado Ejemplo  
-Este es un ejemplo de un RestrictedTrafficArea en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
-```json  
-{  
-  "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
-  "type": "RestrictedTrafficArea",  
   "category": {  
     "type": "array",  
     "value": [  
@@ -529,7 +498,36 @@ RestrictedTrafficArea:
     "value": "2049-12-31T23:00:00.00Z"  
   },  
   "@context": [  
-    "https://schema.lab.fiware.org/ld/context"  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
+}  
+```  
+#### RestrictedTrafficArea NGSI-LD normalizado Ejemplo  
+Este es un ejemplo de un RestrictedTrafficArea en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
+  "type": "RestrictedTrafficArea",  
+  "category": [  
+    "onlyPedestrian"  
+  ],  
+  "description": "Panel:AP - Stretches:lato civici dispari da piazza Tricolore a via Kramer - Bollards: - Notes:",  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      9.214544,  
+      45.483353  
+    ]  
+  },  
+  "name": "Corso Concordia Area",  
+  "notAllowedVehicleType": [  
+    "anyVehicle"  
+  ],  
+  "regulation": "Decree:54785/2004, Deliberation:425/2004",  
+  "source": "https://dati.comune.milano.it/dataset/ds51_trafficotrasporti_aree_pedonali_ztl_zone_30_",  
+  "validityEndDate": "2049-12-31T23:00:00.00Z",  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
   ]  
 }  
 ```  
