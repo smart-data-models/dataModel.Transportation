@@ -1,6 +1,7 @@
 Entität: RestrictionException  
 =============================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Transportation/blob/master/RestrictionException/LICENSE.md)  
+[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **Eine Einschränkungsausnahme stellt einen besonderen Fall dar, der eine in einem eingeschränkten Verkehrsbereich gemeldete Einschränkung spezialisiert; sie könnte z. B. besondere Berechtigungen beschreiben, die für Fahrzeuge einer bestimmten Art gelten**  
 
 ## Liste der Eigenschaften  
@@ -28,14 +29,11 @@ RestrictionException:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
-          type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
@@ -290,7 +288,7 @@ RestrictionException:
           format: uri    
           type: string    
       description: 'The Restricted Traffic Area this exception belongs.'    
-      type: Property    
+      type: Relationship    
     refVehicleModel:    
       description: 'Specify characteristics of the vehicle for which the exception has been established'    
       items:    
@@ -301,8 +299,8 @@ RestrictionException:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -409,7 +407,7 @@ RestrictionException:
 }  
 ```  
 #### RestrictionException NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für eine RestrictionException im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und gibt die Kontextdaten einer einzelnen Entität zurück.  
+Hier ist ein Beispiel für eine RestrictionException im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictionException:GeoJson:ds51-1",  
