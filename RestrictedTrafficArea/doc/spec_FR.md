@@ -1,6 +1,7 @@
 Entité : RestrictedTrafficArea  
 ==============================  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.Transportation/blob/master/RestrictedTrafficArea/LICENSE.md)  
+[document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Description globale : **Zone d'une ville dans laquelle le trafic généré par les voitures ou tout autre type de véhicules est soumis à une limitation.**  
 
 ## Liste des propriétés  
@@ -28,14 +29,11 @@ RestrictedTrafficArea:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
-          type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
@@ -339,8 +337,8 @@ RestrictedTrafficArea:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -375,8 +373,8 @@ RestrictedTrafficArea:
 ```  
 </details>    
 ## Exemples de charges utiles  
-#### RestrictedTrafficArea NGSI V2 key-values Exemple  
-Voici un exemple de RestrictedTrafficArea au format JSON sous forme de valeurs-clés. Ceci est compatible avec NGSI V2 en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+#### RestrictedTrafficArea Valeurs-clés NGSI-v2 Exemple  
+Voici un exemple de RestrictedTrafficArea au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
@@ -401,8 +399,8 @@ RestrictedTrafficArea:
   "validityEndDate": "2049-12-31T23:00:00.00Z"  
 }  
 ```  
-#### RestrictedTrafficArea NGSI V2 normalisé Exemple  
-Voici un exemple de RestrictedTrafficArea au format JSON tel que normalisé. Ceci est compatible avec la NGSI V2 lorsqu'elle n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+#### RestrictedTrafficArea NGSI-v2 normalisé Exemple  
+Voici un exemple de RestrictedTrafficArea au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
@@ -451,37 +449,8 @@ RestrictedTrafficArea:
   }  
 }  
 ```  
-#### RestrictedTrafficArea Valeurs clés NGSI-LD Exemple  
+#### RestrictedTrafficArea Valeurs-clés NGSI-LD Exemple  
 Voici un exemple de RestrictedTrafficArea au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
-```json  
-{  
-  "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
-  "type": "RestrictedTrafficArea",  
-  "category": [  
-    "onlyPedestrian"  
-  ],  
-  "description": "Panel:AP - Stretches:lato civici dispari da piazza Tricolore a via Kramer - Bollards: - Notes:",  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      9.214544,  
-      45.483353  
-    ]  
-  },  
-  "name": "Corso Concordia Area",  
-  "notAllowedVehicleType": [  
-    "anyVehicle"  
-  ],  
-  "regulation": "Decree:54785/2004, Deliberation:425/2004",  
-  "source": "https://dati.comune.milano.it/dataset/ds51_trafficotrasporti_aree_pedonali_ztl_zone_30_",  
-  "validityEndDate": "2049-12-31T23:00:00.00Z",  
-  "@context": [  
-    "https://schema.lab.fiware.org/ld/context"  
-  ]  
-}  
-```  
-#### Zone de circulation restreinte NGSI-LD normalisée Exemple  
-Voici un exemple de RestrictedTrafficArea au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
@@ -529,7 +498,36 @@ RestrictedTrafficArea:
     "value": "2049-12-31T23:00:00.00Z"  
   },  
   "@context": [  
-    "https://schema.lab.fiware.org/ld/context"  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
+}  
+```  
+#### Zone de circulation restreinte NGSI-LD normalisée Exemple  
+Voici un exemple de RestrictedTrafficArea au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
+  "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
+  "type": "RestrictedTrafficArea",  
+  "category": [  
+    "onlyPedestrian"  
+  ],  
+  "description": "Panel:AP - Stretches:lato civici dispari da piazza Tricolore a via Kramer - Bollards: - Notes:",  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      9.214544,  
+      45.483353  
+    ]  
+  },  
+  "name": "Corso Concordia Area",  
+  "notAllowedVehicleType": [  
+    "anyVehicle"  
+  ],  
+  "regulation": "Decree:54785/2004, Deliberation:425/2004",  
+  "source": "https://dati.comune.milano.it/dataset/ds51_trafficotrasporti_aree_pedonali_ztl_zone_30_",  
+  "validityEndDate": "2049-12-31T23:00:00.00Z",  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
   ]  
 }  
 ```  
