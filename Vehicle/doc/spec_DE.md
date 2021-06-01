@@ -76,10 +76,10 @@ Vehicle:
       x-ngsi:    
         model: https://schema.org/Text    
     color:    
-      description: 'Vehicle''s color'    
+      description: 'The color of the product'    
       type: Property    
       x-ngsi:    
-        model: https://schema.org/color.    
+        model: https://schema.org/color    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
