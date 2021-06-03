@@ -135,10 +135,10 @@ TransportStation:
       description: 'Floor on which the location is located. Numerical index associated with the floor. Indicates the relative position of this stage in relation to the others. The index 0 indicates the ground floor. The floors above ground level are indicated by positive indices, and the underground stages by negative indices.'
       type: Property
     location:
-      $id: https://geojson.org/schema/Geometry.json
-      $schema: "http://json-schema.org/draft-07/schema#"
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
-        - properties:
+        - description: 'Geoproperty. Geojson reference to the item. Point'
+          properties:
             bbox:
               items:
                 type: number
@@ -158,7 +158,8 @@ TransportStation:
             - coordinates
           title: 'GeoJSON Point'
           type: object
-        - properties:
+        - description: 'Geoproperty. Geojson reference to the item. LineString'
+          properties:
             bbox:
               items:
                 type: number
@@ -181,7 +182,8 @@ TransportStation:
             - coordinates
           title: 'GeoJSON LineString'
           type: object
-        - properties:
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'
+          properties:
             bbox:
               items:
                 type: number
@@ -206,7 +208,8 @@ TransportStation:
             - coordinates
           title: 'GeoJSON Polygon'
           type: object
-        - properties:
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'
+          properties:
             bbox:
               items:
                 type: number
@@ -228,7 +231,8 @@ TransportStation:
             - coordinates
           title: 'GeoJSON MultiPoint'
           type: object
-        - properties:
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+          properties:
             bbox:
               items:
                 type: number
@@ -253,7 +257,8 @@ TransportStation:
             - coordinates
           title: 'GeoJSON MultiLineString'
           type: object
-        - properties:
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+          properties:
             bbox:
               items:
                 type: number
@@ -280,7 +285,7 @@ TransportStation:
             - coordinates
           title: 'GeoJSON MultiPolygon'
           type: object
-      title: 'GeoJSON Geometry'
+      type: Geoproperty
     'locationType ':
       description: 'Link to the GTFS standard repository describing the different location [Location Type]. 0 Stop or platform (place where users get on or off in a public transport vehicle). 1 Station (area or physical structure comprising one or more platforms). 2 Entrance or Exit (place where users can enter / exit a station from the street). 3 Generic intersection (location in a station that doesn''t correspond to any other `location_type` value). 4 Boarding area of a specific location on a platform where users can get on / off in a vehicle.'
       enum:
