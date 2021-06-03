@@ -6,7 +6,7 @@ Entität: BikeHireDockingStation
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `availableBikeNumber`: Die Anzahl der Fahrräder, die in der Fahrradverleih-Dockingstation zur Verfügung stehen und von Benutzern ausgeliehen werden können  - `contactPoint`: Kontaktstelle für den Fahrradverleih  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `freeSlotNumber`: Die Anzahl der Stellplätze, die für die Rückgabe und das Abstellen von Fahrrädern zur Verfügung stehen. Sie muss kleiner oder gleich der `totalSlotNumber` sein.  - `id`: Eindeutiger Bezeichner der Entität  - `location`:   - `name`: Der Name dieses Elements.  - `openingHours`: Öffnungszeiten der Andockstation  - `outOfServiceSlotNumber`: Die Anzahl der Slots, die nicht in Ordnung sind und nicht zum Ausleihen oder Abstellen eines Fahrrads verwendet werden können. Sie muss niedriger oder gleich sein als `totalSlotNumber`.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `provider`: Anbieter von Fahrradverleih  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `status`: Status der Fahrradverleih-Dockingstation. Enum:'working, outOfService, withIncidence, full, almostFull, empty, almostEmpty'. Oder jede andere anwendungsspezifische.  - `totalSlotNumber`: Die Gesamtzahl der von dieser Fahrrad-Dockingstation angebotenen Steckplätze  - `type`: NGSI Entity-Typ. Es muss BikeHireDockingStation sein    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `availableBikeNumber`: Die Anzahl der Fahrräder, die in der Fahrradverleih-Dockingstation zur Verfügung stehen und von Benutzern ausgeliehen werden können  - `contactPoint`: Kontaktstelle für den Fahrradverleih  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `freeSlotNumber`: Die Anzahl der Stellplätze, die für die Rückgabe und das Abstellen von Fahrrädern zur Verfügung stehen. Sie muss kleiner oder gleich der `totalSlotNumber` sein.  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Elements.  - `openingHours`: Öffnungszeiten der Andockstation  - `outOfServiceSlotNumber`: Die Anzahl der Slots, die nicht in Ordnung sind und nicht zum Ausleihen oder Abstellen eines Fahrrads verwendet werden können. Sie muss niedriger oder gleich sein als `totalSlotNumber`.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `provider`: Anbieter von Fahrradverleih  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `status`: Status der Fahrradverleih-Dockingstation. Enum:'working, outOfService, withIncidence, full, almostFull, empty, almostEmpty'. Oder jede andere anwendungsspezifische.  - `totalSlotNumber`: Die Gesamtzahl der von dieser Fahrrad-Dockingstation angebotenen Steckplätze  - `type`: NGSI Entity-Typ. Es muss BikeHireDockingStation sein    
 Erforderliche Eigenschaften  
 - `id`  - `type`    
 Viele Städte bieten ein Fahrradverleihsystem für Bürger an. Diese können ein Fahrrad auf Basis verschiedener Abonnementtypen ausleihen. Eine Fahrradverleih-Dockingstation, an der abonnierte Benutzer ein Fahrrad ausleihen und zurückgeben können. Es bietet Daten über seine Hauptfunktionen und die Verfügbarkeit von Fahrrädern und freien Plätzen.  
@@ -93,10 +93,10 @@ BikeHireDockingStation:
       description: 'Unique identifier of the entity'    
       type: Property    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -116,7 +116,8 @@ BikeHireDockingStation:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -139,7 +140,8 @@ BikeHireDockingStation:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -164,7 +166,8 @@ BikeHireDockingStation:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -186,7 +189,8 @@ BikeHireDockingStation:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -211,7 +215,8 @@ BikeHireDockingStation:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -238,7 +243,7 @@ BikeHireDockingStation:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
