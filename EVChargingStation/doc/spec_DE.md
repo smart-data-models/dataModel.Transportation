@@ -6,7 +6,7 @@ Entität: EVChargingStation
 
 ## Liste der Eigenschaften  
 
-- `acceptedPaymentMethod`: Art(en) der Belastung bei Verwendung dieser Station. Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'  - `address`: Die Postanschrift  - `allowedVehicleType`: Fahrzeugtyp(en), die aufgeladen werden können. Enum:'Fahrrad, Bus, Auto, Wohnwagen, Motorrad, Motorroller, LKW'  - `alternateName`: Ein alternativer Name für diesen Artikel  - `amperage`: Die Gesamtstromstärke, die von der Ladestation angeboten wird.  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `availableCapacity`: Die Anzahl der Fahrzeuge, die aktuell geladen werden können. Sie muss kleiner oder gleich `capacity` sein.  - `capacity`: Die Gesamtzahl der Fahrzeuge, die gleichzeitig geladen werden können. Die Gesamtzahl der Steckdosen kann höher sein.  - `chargeType`: Art(en) der Gebühr(en) bei Nutzung dieser Station. Enum:'annualPayment, flat, free, monthlyPayment, other'  - `contactPoint`: Kontaktstelle der Ladestation  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `location`:   - `name`: Der Name dieses Elements.  - `network`: Der Name des Netzwerks, mit dem der Betreiber zusammenarbeitet.  - `openingHours`: Öffnungszeiten der Ladestation.  - `operator`: Der Betreiber der Ladestation.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `socketNumber`: Die Gesamtzahl der von dieser Ladestation angebotenen Steckdosen  - `socketType`: Der Typ der Steckdosen, die von dieser Station angeboten werden. Enum:'Caravan_Mains_Socket, CHAdeMO, CCS/SAE, Dual_CHAdeMO, Dual_J-1772, Dual_Mennekes, J-1772, Mennekes, Other, Tesla, Type2, Type3, Wall_Euro'  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `status`: Status der Ladestation. Enum:'almostEmpty, almostFull, empty, full, outOfService, withIncidence, working'. Oder jede andere anwendungsspezifische.  - `type`: NGSI Entity-Typ. Es muss EVChargingStation sein  - `voltage`: Die von der Ladestation angebotene Gesamtspannung    
+- `acceptedPaymentMethod`: Art(en) der Belastung bei Verwendung dieser Station. Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'  - `address`: Die Postanschrift  - `allowedVehicleType`: Fahrzeugtyp(en), die aufgeladen werden können. Enum:'Fahrrad, Bus, Auto, Wohnwagen, Motorrad, Motorroller, LKW'  - `alternateName`: Ein alternativer Name für diesen Artikel  - `amperage`: Die Gesamtstromstärke, die von der Ladestation angeboten wird.  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `availableCapacity`: Die Anzahl der Fahrzeuge, die aktuell geladen werden können. Sie muss kleiner oder gleich `capacity` sein.  - `capacity`: Die Gesamtzahl der Fahrzeuge, die gleichzeitig geladen werden können. Die Gesamtzahl der Steckdosen kann höher sein.  - `chargeType`: Art(en) der Gebühr(en) bei Nutzung dieser Station. Enum:'annualPayment, flat, free, monthlyPayment, other'  - `contactPoint`: Kontaktstelle der Ladestation  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Elements.  - `network`: Der Name des Netzwerks, mit dem der Betreiber zusammenarbeitet.  - `openingHours`: Öffnungszeiten der Ladestation.  - `operator`: Der Betreiber der Ladestation.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `socketNumber`: Die Gesamtzahl der von dieser Ladestation angebotenen Steckdosen  - `socketType`: Der Typ der Steckdosen, die von dieser Station angeboten werden. Enum:'Caravan_Mains_Socket, CHAdeMO, CCS/SAE, Dual_CHAdeMO, Dual_J-1772, Dual_Mennekes, J-1772, Mennekes, Other, Tesla, Type2, Type3, Wall_Euro'  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `status`: Status der Ladestation. Enum:'almostEmpty, almostFull, empty, full, outOfService, withIncidence, working'. Oder jede andere anwendungsspezifische.  - `type`: NGSI Entity-Typ. Es muss EVChargingStation sein  - `voltage`: Die von der Ladestation angebotene Gesamtspannung    
 Erforderliche Eigenschaften  
 - `allowedVehicleType`  - `capacity`  - `id`  - `socketType`  - `type`    
 Eine öffentliche Ladestation zur Energieversorgung von Elektrofahrzeugen. Die Ladezeit ist abhängig von der maximalen Leistungsabgabe der Station, der Anzahl der gerade ladenden Fahrzeuge und dem aktuellen Batteriestand.  
@@ -151,10 +151,10 @@ EVChargingStation:
       description: 'Unique identifier of the entity'    
       type: Property    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -174,7 +174,8 @@ EVChargingStation:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -197,7 +198,8 @@ EVChargingStation:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -222,7 +224,8 @@ EVChargingStation:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -244,7 +247,8 @@ EVChargingStation:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -269,7 +273,8 @@ EVChargingStation:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -296,7 +301,7 @@ EVChargingStation:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
@@ -475,7 +480,7 @@ EVChargingStation:
   }  
 }  
 ```  
-#### EVChargingStation NGSI-LD Schlüsselwerte Beispiel  
+#### EVChargingStation NGSI-LD-Schlüsselwerte Beispiel  
 Hier ist ein Beispiel für eine EVChargingStation im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-LD bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
