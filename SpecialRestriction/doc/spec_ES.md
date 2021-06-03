@@ -1,11 +1,12 @@
 Entidad: SpecialRestriction  
 ===========================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.Transportation/blob/master/SpecialRestriction/LICENSE.md)  
+[documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descripción global: **Una restricción especial representa un caso particular que especializa la restricción notificada en una zona de tráfico restringido; por ejemplo, podría describir restricciones particulares aplicadas a vehículos de tipo específico**  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `location`:   - `name`: El nombre de este artículo.  - `notAllowedVehicleType`: Tipo de vehículo(s) que no puede(n) cruzar la zona de tráfico restringido.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `refRestrictedTrafficArea`: La zona de tráfico restringido a la que pertenece esta excepción.  - `refVehicleModel`: Especifique las características del vehículo para el que se ha establecido la excepción  - `restrictionValidityHours`: Días de la semana y horas en las que la restricción de tráfico está activa.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI. Tiene que ser SpecialRestriction    
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `notAllowedVehicleType`: Tipo de vehículo(s) que no puede(n) cruzar la zona de tráfico restringido.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `refRestrictedTrafficArea`: La zona de tráfico restringido a la que pertenece esta excepción.  - `refVehicleModel`: Especifique las características del vehículo para el que se ha establecido la excepción  - `restrictionValidityHours`: Días de la semana y horas en las que la restricción de tráfico está activa.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI. Tiene que ser SpecialRestriction    
 Propiedades requeridas  
 - `id`  - `notAllowedVehicleType`  - `refRestrictedTrafficArea`  - `type`    
 Modelo de datos procedente del proyecto synchronicity  
@@ -28,14 +29,11 @@ SpecialRestriction:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
-          type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
@@ -78,10 +76,10 @@ SpecialRestriction:
       description: 'Unique identifier of the entity'    
       type: Property    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -101,7 +99,8 @@ SpecialRestriction:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -124,7 +123,8 @@ SpecialRestriction:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -149,7 +149,8 @@ SpecialRestriction:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -171,7 +172,8 @@ SpecialRestriction:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -196,7 +198,8 @@ SpecialRestriction:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -223,7 +226,7 @@ SpecialRestriction:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
@@ -299,8 +302,8 @@ SpecialRestriction:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -323,8 +326,8 @@ SpecialRestriction:
 ```  
 </details>    
 ## Ejemplo de carga útil  
-#### SpecialRestriction NGSI V2 key-values Ejemplo  
-Aquí hay un ejemplo de una SpecialRestriction en formato JSON como valores-clave. Esto es compatible con NGSI V2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+#### SpecialRestriction NGSI-v2 key-values Ejemplo  
+Aquí hay un ejemplo de una SpecialRestriction en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:SpecialRestriction:GeoJson:ds51-1",  
@@ -341,8 +344,8 @@ SpecialRestriction:
   "refRestrictedTrafficArea": "urn:ngsi-ld:SpecialRestriction:RestrictedTrafficArea:Milan:GeoJson:ds51-1"  
 }  
 ```  
-#### SpecialRestriction NGSI V2 normalizado Ejemplo  
-Este es un ejemplo de una SpecialRestriction en formato JSON normalizado. Esto es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### SpecialRestriction NGSI-v2 normalizado Ejemplo  
+Este es un ejemplo de una SpecialRestriction en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:SpecialRestriction:GeoJson:ds51-1",  
@@ -377,27 +380,6 @@ SpecialRestriction:
 ```json  
 {  
   "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:SpecialRestriction:GeoJson:ds51-1",  
-  "type": "SpecialRestriction",  
-  "name": "Corso Concordia Area",  
-  "notAllowedVehicleType": [  
-    "dieselCarEuro0",  
-    "petrolCarEuro0"  
-  ],  
-  "restrictionValidityHours": "Tu,Th 16:00-20:00",  
-  "refVehicleModel": [  
-    "vehicle:VehicleModel:modelName-1"  
-  ],  
-  "refRestrictedTrafficArea": "urn:ngsi-ld:SpecialRestriction:RestrictedTrafficArea:Milan:GeoJson:ds51-1",  
-  "@context": [  
-    "https://schema.lab.fiware.org/ld/context"  
-  ]  
-}  
-```  
-#### SpecialRestriction NGSI-LD normalizado Ejemplo  
-Este es un ejemplo de una SpecialRestriction en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
-```json  
-{  
-  "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:SpecialRestriction:GeoJson:ds51-1",  
   "type": "RestrictionException",  
   "name": {  
     "type": "string",  
@@ -423,7 +405,28 @@ SpecialRestriction:
     "value": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1"  
   },  
   "@context": [  
-    "https://schema.lab.fiware.org/ld/context"  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
+}  
+```  
+#### SpecialRestriction NGSI-LD normalizado Ejemplo  
+Este es un ejemplo de una SpecialRestriction en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:SpecialRestriction:GeoJson:ds51-1",  
+  "type": "SpecialRestriction",  
+  "name": "Corso Concordia Area",  
+  "notAllowedVehicleType": [  
+    "dieselCarEuro0",  
+    "petrolCarEuro0"  
+  ],  
+  "restrictionValidityHours": "Tu,Th 16:00-20:00",  
+  "refVehicleModel": [  
+    "vehicle:VehicleModel:modelName-1"  
+  ],  
+  "refRestrictedTrafficArea": "urn:ngsi-ld:SpecialRestriction:RestrictedTrafficArea:Milan:GeoJson:ds51-1",  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
   ]  
 }  
 ```  
