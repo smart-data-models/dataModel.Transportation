@@ -1,13 +1,14 @@
 Entidad: VehicleModel  
 =====================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.Transportation/blob/master/VehicleModel/LICENSE.md)  
+[documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descripción global: **Esta entidad modela un modelo de vehículo en particular, incluyendo todas las propiedades que son comunes a múltiples instancias de vehículos pertenecientes a dicho modelo.**  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal.  - `alternateName`: Un nombre alternativo para este artículo  - `annotations`: Anotaciones sobre el artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `brandName`: La marca del vehículo  - `cargoVolume`: El volumen disponible para la carga o el equipaje. En el caso de los automóviles, éste suele ser el volumen del maletero. Si sólo se proporciona un valor único (tipo Número) se referirá al volumen máximo.  - `color`: El color del producto  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `dateModified`: Sello de tiempo de la última modificación de la entidad. Esta será normalmente asignada por la plataforma de almacenamiento.  - `depth`: La profundidad del vehículo  - `description`: Una descripción de este artículo  - `fuelConsumption`: La cantidad de combustible consumida para recorrer una distancia o duración temporal determinada con el vehículo en cuestión (por ejemplo, litros por 100 km)  - `fuelType`: El tipo de combustible adecuado para el motor o motores del vehículo. Enum:'autogas, biodiesel etanol, cng, diesel, eléctrico, gasolina, híbrido eléctrico/diesel, híbrido eléctrico/gasolina, hidrógeno, lpg, gasolina, gasolina (sin plomo), gasolina (con plomo), otros'.  - `height`: La altura del vehículo  - `id`: Identificador único de la entidad  - `image`: Una imagen del artículo  - `location`:   - `manufacturerName`: El nombre del fabricante del vehículo  - `modelName`: El nombre del modelo del vehículo  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  - `seeAlso`: lista de uri que apunta a recursos adicionales sobre el tema  - `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  - `type`: Tipo de entidad NGSI. Tiene que ser el modelo de vehículo  - `url`: URL que proporciona una descripción de este modelo de vehículo  - `vehicleEngine`: Información sobre el motor o motores del vehículo  - `vehicleModelDate`: La fecha de lanzamiento de un modelo de vehículo (a menudo utilizada para diferenciar versiones de la misma marca y modelo)  - `vehicleType`: Tipo de vehículo desde el punto de vista de sus características estructurales. Esto es diferente a la categoría de vehículo . Enum:"Vehículo agrícola, cualquier vehículo, vehículo articulado, bicicleta, binTrolley, autobús, coche, caravana, coche ligero, coche con caravana, coche con remolque, limpieza, carrito, construcción o mantenimiento, vehículo, tracción a las cuatro ruedas, vehículo alto, camión, minibús, ciclomotor, motocicleta, Motocicleta con sidecar, motocarro, barredora, cisterna, vehículo de tres ruedas, remolque, tranvía, vehículo de dos ruedas, carro, furgoneta, vehículo sin convertidor catalítico, vehículo con caravana, vehículo con remolque, con placas de matrícula pares, con placas de matrícula impares, otros". Los siguientes valores definidos por _VehicleTypeEnum_ y _VehicleTypeEnum2_, [DATEX 2 versión 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)  - `weight`: El peso del vehículo  - `width`: Ancho del vehículo    
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `annotations`: Anotaciones sobre el artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `brandName`: Marca del vehículo  - `cargoVolume`: El volumen disponible para la carga o el equipaje. En el caso de los automóviles, suele ser el volumen del maletero. Si sólo se proporciona un único valor (tipo Número) se referirá al volumen máximo.  - `color`: El color del producto  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `depth`: Profundidad del vehículo  - `description`: Una descripción de este artículo  - `fuelConsumption`: La cantidad de combustible consumida para recorrer una distancia o duración temporal determinada con el vehículo en cuestión (por ejemplo, litros por 100 km)  - `fuelType`: El tipo de combustible adecuado para el motor o los motores del vehículo. Enum:'autogás, biodiésel, etanol, gnc, diésel, eléctrico, gasolina, híbrido eléctrico/diésel, híbrido eléctrico/gasolina, hidrógeno, glp, gasolina, gasolina(sin plomo), gasolina(con plomo), otros'.  - `height`: Altura del vehículo  - `id`: Identificador único de la entidad  - `image`: Una imagen del artículo  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `manufacturerName`: Nombre del fabricante del vehículo  - `modelName`: Nombre del modelo del vehículo  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI. Tiene que ser VehicleModel  - `url`: URL que proporciona una descripción de este modelo de vehículo  - `vehicleEngine`: Información sobre el motor o los motores del vehículo  - `vehicleModelDate`: La fecha de lanzamiento de un modelo de vehículo (suele utilizarse para diferenciar las versiones de una misma marca y modelo)  - `vehicleType`: Tipo de vehículo desde el punto de vista de sus características estructurales. Es diferente de la categoría del vehículo. Enum:'vehículo agrícola, cualquier vehículo, vehículo articulado, bicicleta, carro de basura, autobús, coche, caravana, coche o vehículo ligero, coche con caravana, coche con remolque, carro de limpieza, vehículo de construcción o mantenimiento, tracción a las cuatro ruedas, vehículo de gran altura, camión, minibús, ciclomotor, motocicleta, motocicleta con coche lateral, motocarro, máquina barredora, cisterna, vehículo de tres ruedas, remolque, tranvía, vehículo de dos ruedas, carro, furgoneta, vehículo sin convertidor catalítico, vehículo con caravana, vehículo con remolque, con matrícula par, con matrícula extra, otros". Los siguientes valores definidos por _VehicleTypeEnum_ y _VehicleTypeEnum2_, [DATEX 2 versión 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)  - `weight`: Peso del vehículo  - `width`: Anchura del vehículo    
 Propiedades requeridas  
-- `brandName`  - `id`  - `manufacturerName`  - `modelName`  - `name`  - `type`  - `vehicleType`  ## Modelo de datos Descripción de las propiedades  
+- `brandName`  - `id`  - `manufacturerName`  - `modelName`  - `name`  - `type`  - `vehicleType`  ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -15,30 +16,29 @@ VehicleModel:
   description: 'This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.'    
   properties:    
     address:    
-      description: 'The mailing address.'    
+      description: 'The mailing address'    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
           type: string    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
           type: string    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
-          type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/Text'''    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -99,7 +99,7 @@ VehicleModel:
         model: https://schema.org/fuelConsumption    
         units: 'liters per 100 kilometer'    
     fuelType:    
-      description: 'The type of fuel suitable for the engine or engines of the vehicle. Enum:''autogas, biodiesel ethanol, cng, diesel, electric, gasoline, hybrid electric/diesel, hybrid electric/petrol, hydrogen, lpg, petrol, petrol(unleaded), petrol(leaded), other'''    
+      description: 'The type of fuel suitable for the engine or engines of the vehicle. Enum:''autogas, biodiesel, ethanol, cng, diesel, electric, gasoline, hybrid electric/diesel, hybrid electric/petrol, hydrogen, lpg, petrol, petrol(unleaded), petrol(leaded), other'''    
       enum:    
         - autogas    
         - biodiesel    
@@ -108,8 +108,8 @@ VehicleModel:
         - electric    
         - ethanol    
         - gasoline    
-        - 'hybrid electric/diesel'    
-        - 'hybrid electric/petrol'    
+        - hybrid_electric_diesel    
+        - hybrid_electric_petrol    
         - hydrogen    
         - lpg    
         - petrol    
@@ -144,10 +144,10 @@ VehicleModel:
       x-ngsi:    
         model: https://schema.org/URL    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -167,7 +167,8 @@ VehicleModel:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -190,7 +191,8 @@ VehicleModel:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -215,7 +217,8 @@ VehicleModel:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -237,7 +240,8 @@ VehicleModel:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -262,7 +266,8 @@ VehicleModel:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -289,7 +294,7 @@ VehicleModel:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     manufacturerName:    
       description: 'Vehicle''s manufacturer name'    
       type: Property    
@@ -313,8 +318,8 @@ VehicleModel:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -396,9 +401,9 @@ VehicleModel:
   type: object    
 ```  
 </details>    
-## Ejemplo de cargas útiles  
-#### VehicleModel NGSI V2 key-values Example  
-Aquí hay un ejemplo de un modelo de vehículo en formato JSON como valores clave. Es compatible con NGSI V2 cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
+## Ejemplo de carga útil  
+#### VehicleModel NGSI-v2 key-values Ejemplo  
+Aquí hay un ejemplo de un VehicleModel en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
       "id": "vehiclemodel:econic",  
@@ -412,8 +417,8 @@ VehicleModel:
       "fuelType": "diesel"  
 }  
 ```  
-#### VehículoModelo NGSI V2 normalizado Ejemplo  
-Aquí hay un ejemplo de un modelo de vehículo en formato JSON normalizado. Es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### VehicleModel NGSI-v2 normalizado Ejemplo  
+Este es un ejemplo de un VehicleModel en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
     "id": "vehiclemodel:econic",  
@@ -441,58 +446,62 @@ VehicleModel:
     }  
 }  
 ```  
-#### VehicleModel NGSI-LD key-values Example  
-Aquí hay un ejemplo de un modelo de vehículo en formato JSON-LD como valores clave. Es compatible con NGSI-LD cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
-```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "brandName": "Mercedes Benz",  
- "cargoVolume": 1000,  
- "fuelType": "diesel",  
- "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",  
- "manufacturerName": "Daimler",  
- "modelName": "Econic",  
- "name": "MBenz-Econic2014",  
- "type": "VehicleModel",  
- "vehicleType": "lorry"}  
-```  
-#### VehículoModelo NGSI-LD normalizado Ejemplo  
-He aquí un ejemplo de un modelo de vehículo en formato JSON-LD normalizado. Es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### VehicleModel NGSI-LD key-values Ejemplo  
+Aquí hay un ejemplo de un VehicleModel en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",  
-    "type": "VehicleModel",  
-    "name": {  
-        "type": "Property",  
-        "value": "MBenz-Econic2014"  
-    },  
-    "cargoVolume": {  
-        "type": "Property",  
-        "value": 1000  
-    },  
-    "modelName": {  
-        "type": "Property",  
-        "value": "Econic"  
-    },  
-    "brandName": {  
-        "type": "Property",  
-        "value": "Mercedes Benz"  
-    },  
-    "manufacturerName": {  
-        "type": "Property",  
-        "value": "Daimler"  
-    },  
-    "fuelType": {  
-        "type": "Property",  
-        "value": "diesel"  
-    },  
-    "vehicleType": {  
-        "type": "Property",  
-        "value": "lorry"  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+  "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",  
+  "type": "VehicleModel",  
+  "name": {  
+    "type": "Property",  
+    "value": "MBenz-Econic2014"  
+  },  
+  "cargoVolume": {  
+    "type": "Property",  
+    "value": 1000  
+  },  
+  "modelName": {  
+    "type": "Property",  
+    "value": "Econic"  
+  },  
+  "brandName": {  
+    "type": "Property",  
+    "value": "Mercedes Benz"  
+  },  
+  "manufacturerName": {  
+    "type": "Property",  
+    "value": "Daimler"  
+  },  
+  "fuelType": {  
+    "type": "Property",  
+    "value": "diesel"  
+  },  
+  "vehicleType": {  
+    "type": "Property",  
+    "value": "lorry"  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
+```  
+#### VehicleModel NGSI-LD normalizado Ejemplo  
+Este es un ejemplo de un VehicleModel en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "brandName": "Mercedes Benz",  
+  "cargoVolume": 1000,  
+  "fuelType": "diesel",  
+  "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",  
+  "manufacturerName": "Daimler",  
+  "modelName": "Econic",  
+  "name": "MBenz-Econic2014",  
+  "type": "VehicleModel",  
+  "vehicleType": "lorry"  
 }  
 ```  
