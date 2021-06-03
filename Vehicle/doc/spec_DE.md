@@ -6,7 +6,7 @@ Entität: Fahrzeug
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `annotations`: Anmerkungen zum Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `cargoWeight`: Aktuelles Gewicht der Ladung des Fahrzeugs  - `category`: Fahrzeugkategorie(n) aus externer Sicht. Diese unterscheidet sich vom Fahrzeugtyp (Pkw, Lkw usw.), der durch die Eigenschaft `vehicleType` dargestellt wird. Enum:'municipalServices, nonTracked, private, public, specialUsage, tracked'. Verfolgte Fahrzeuge sind solche Fahrzeuge, deren Position permanent von einem entfernten System verfolgt wird. Sie verfügen über einen GPS-Empfänger in Verbindung mit einer Netzwerkverbindung, um die gemeldete Position (Position, Geschwindigkeit, Richtung ...) regelmäßig zu aktualisieren.  - `color`: Farbe des Fahrzeugs  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateFirstUsed`: Zeitstempel, der angibt, wann das Fahrzeug zum ersten Mal benutzt wurde  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateVehicleFirstRegistered`: Das Datum der Erstzulassung des Fahrzeugs bei den jeweiligen Behörden  - `description`: Eine Beschreibung dieses Artikels  - `feature`: Vom Fahrzeug eingebaute Funktion(en). Enum:' abs, airbag, alarm, backCamera, disabledRamp, gps, internetConnection, overspeed, proximitySensor, wifi'. Oder jedes andere, das von der Anwendung benötigt wird. Um mehrere Instanzen eines Features zu repräsentieren, kann die folgende Syntax verwendet werden: `<feature>,<occurences>`. Zum Beispiel wird ein Auto mit 4 Airbags durch `airbag,4` dargestellt.  - `fleetVehicleId`: Die Kennung des Fahrzeugs im Kontext der Fahrzeugflotte, zu der es gehört  - `heading`: Bezeichnet die Fahrtrichtung des Fahrzeugs und wird in Dezimalgraden angegeben, wobei 0 <= "Fahrtrichtung" < 360, im Uhrzeigersinn relativ zum wahren Norden gezählt wird. Wenn das Fahrzeug steht (d. h. der Wert des Attributs "speed" ist "0"), muss der Wert des Attributs "heading" gleich "-1" sein.  - `id`: Eindeutiger Bezeichner der Entität  - `image`: Ein Bild des Artikels  - `location`:   - `mileageFromOdometer`: Die vom Kilometerzähler abgelesene Gesamtkilometerzahl, die das betreffende Fahrzeug seit seiner Erstproduktion zurückgelegt hat  - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `previousLocation`:   - `purchaseDate`: Das Datum, an dem das Objekt, z. B. das Fahrzeug, vom aktuellen Besitzer gekauft wurde  - `refVehicleModel`: Referenz auf ein VehicleModel  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `serviceProvided`: Dienst(e), den/die das Fahrzeug leisten kann oder dem/denen es zugeordnet ist. Enum:'auxiliaryServices, cargoTransport, construction, fairground, garbageCollection, goodsSelling, maintenance, parksAndGardens, roadSignalling, specialTransport, streetCleaning, streetLighting, urbanTransit, wasteContainerCleaning'. Oder jeder andere Wert, der von einer bestimmten Anwendung benötigt wird.  - `serviceStatus`: Fahrzeugstatus (aus Sicht des erbrachten Dienstes, kann also nicht für Privatfahrzeuge gelten). Geparkt": Das Fahrzeug ist geparkt und erbringt im Moment keinen Dienst. `onRoute` : Fahrzeug führt einen Einsatz durch. Ein kommagetrennter Modifikator kann hinzugefügt werden, um anzugeben, welche Mission das Fahrzeug gerade ausführt. Zum Beispiel kann `onRoute,garbageCollection` verwendet werden, um anzugeben, dass das Fahrzeug auf der Route und in einer Müllsammelmission ist. `broken` : Das Fahrzeug hat eine vorübergehende Panne. outOfService` : Fahrzeug ist auf der Straße, führt aber keine Mission aus, fährt wahrscheinlich zu seinem Parkplatz. Enum:'broken, onRoute, outOfService, parked'  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `speed`: Bezeichnet den Betrag der horizontalen Komponente der aktuellen Geschwindigkeit des Fahrzeugs und wird in Kilometern pro Stunde angegeben. Wenn angegeben, muss der Wert des Attributs "speed" eine nicht negative reelle Zahl sein. Der Wert "-1" KANN verwendet werden, wenn die Geschwindigkeit aus irgendeinem Grund vorübergehend nicht bekannt ist.  - `type`: NGSI Entity-Typ. Es muss Fahrzeug sein  - `vehicleConfiguration`: Ein kurzer Text, der die Konfiguration des Fahrzeugs angibt, z. B. '5dr Fließheck ST 2.5 MT 225 PS' oder 'limited edition'.  - `vehicleIdentificationNumber`: Die Fahrzeug-Identifikationsnummer (VIN) ist eine eindeutige Seriennummer, die von der Automobilindustrie verwendet wird, um einzelne Kraftfahrzeuge zu identifizieren  - `vehiclePlateIdentifier`:  Eine Kennung oder ein Code, die bzw. der auf einem am Fahrzeug angebrachten Kennzeichen zur amtlichen Identifizierung angezeigt wird. Die Zulassungskennung ist numerisch oder alphanumerisch und ist innerhalb der Region der ausstellenden Behörde eindeutig. Normative Verweise: DATEXII `vehicleRegistrationPlateIdentifier`  - `vehicleSpecialUsage`: Gibt an, ob das Fahrzeug für spezielle Zwecke verwendet wurde, wie z. B. für die gewerbliche Vermietung, Fahrschule oder als Taxi. Die Gesetzgebung in vielen Ländern schreibt vor, dass diese Information offengelegt werden muss, wenn ein Fahrzeug zum Verkauf angeboten wird. Enum:'Ambulanz, Feuerwehr, Militär, Polizei, SchulTransport, Taxi'  - `vehicleType`: Fahrzeugtyp unter dem Gesichtspunkt seiner strukturellen Eigenschaften. Dies ist etwas anderes als die Fahrzeugkategorie . Enum:'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, carcaravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'. Die folgenden durch _VehicleTypeEnum_ und _VehicleTypeEnum2_ definierten Werte, [DATEX 2 Version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `annotations`: Anmerkungen zum Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `cargoWeight`: Aktuelles Gewicht der Ladung des Fahrzeugs  - `category`: Fahrzeugkategorie(n) aus externer Sicht. Diese unterscheidet sich vom Fahrzeugtyp (Pkw, Lkw usw.), der durch die Eigenschaft `vehicleType` dargestellt wird. Enum:'municipalServices, nonTracked, private, public, specialUsage, tracked'. Verfolgte Fahrzeuge sind solche Fahrzeuge, deren Position permanent von einem entfernten System verfolgt wird. Sie verfügen über einen GPS-Empfänger in Verbindung mit einer Netzwerkverbindung, um die gemeldete Position (Position, Geschwindigkeit, Richtung ...) regelmäßig zu aktualisieren.  - `color`: Die Farbe des Produkts  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateFirstUsed`: Zeitstempel, der angibt, wann das Fahrzeug zum ersten Mal benutzt wurde  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateVehicleFirstRegistered`: Das Datum der Erstzulassung des Fahrzeugs bei den jeweiligen Behörden  - `description`: Eine Beschreibung dieses Artikels  - `feature`: Vom Fahrzeug eingebaute Funktion(en). Enum:' abs, airbag, alarm, backCamera, disabledRamp, gps, internetConnection, overspeed, proximitySensor, wifi'. Oder jedes andere, das von der Anwendung benötigt wird. Um mehrere Instanzen eines Features zu repräsentieren, kann die folgende Syntax verwendet werden: `<feature>,<occurences>`. Zum Beispiel wird ein Auto mit 4 Airbags durch `airbag,4` dargestellt.  - `fleetVehicleId`: Die Kennung des Fahrzeugs im Kontext der Fahrzeugflotte, zu der es gehört  - `heading`: Bezeichnet die Fahrtrichtung des Fahrzeugs und wird in Dezimalgraden angegeben, wobei 0 <= "Fahrtrichtung" < 360, im Uhrzeigersinn relativ zum wahren Norden gezählt wird. Wenn das Fahrzeug steht (d. h. der Wert des Attributs "speed" ist "0"), muss der Wert des Attributs "heading" gleich "-1" sein.  - `id`: Eindeutiger Bezeichner der Entität  - `image`: Ein Bild des Artikels  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `mileageFromOdometer`: Die vom Kilometerzähler abgelesene Gesamtkilometerzahl, die das betreffende Fahrzeug seit seiner Erstproduktion zurückgelegt hat  - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `previousLocation`:   - `purchaseDate`: Das Datum, an dem das Objekt, z. B. das Fahrzeug, vom aktuellen Besitzer gekauft wurde  - `refVehicleModel`: Referenz auf ein VehicleModel  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `serviceProvided`: Dienst(e), den/die das Fahrzeug leisten kann oder dem/denen es zugeordnet ist. Enum:'auxiliaryServices, cargoTransport, construction, fairground, garbageCollection, goodsSelling, maintenance, parksAndGardens, roadSignalling, specialTransport, streetCleaning, streetLighting, urbanTransit, wasteContainerCleaning'. Oder jeder andere Wert, der von einer bestimmten Anwendung benötigt wird.  - `serviceStatus`: Fahrzeugstatus (aus Sicht des erbrachten Dienstes, kann also nicht für Privatfahrzeuge gelten). Geparkt": Das Fahrzeug ist geparkt und erbringt im Moment keinen Dienst. `onRoute` : Fahrzeug führt einen Einsatz durch. Ein kommagetrennter Modifikator kann hinzugefügt werden, um anzugeben, welche Mission das Fahrzeug gerade ausführt. Zum Beispiel kann `onRoute,garbageCollection` verwendet werden, um anzugeben, dass das Fahrzeug auf der Route und in einer Müllsammelmission ist. `broken` : Das Fahrzeug hat eine vorübergehende Panne. outOfService` : Fahrzeug ist auf der Straße, führt aber keine Mission aus, fährt wahrscheinlich zu seinem Parkplatz. Enum:'broken, onRoute, outOfService, parked'  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `speed`: Bezeichnet den Betrag der horizontalen Komponente der aktuellen Geschwindigkeit des Fahrzeugs und wird in Kilometern pro Stunde angegeben. Wenn angegeben, muss der Wert des Attributs "speed" eine nicht negative reelle Zahl sein. Der Wert "-1" KANN verwendet werden, wenn die Geschwindigkeit aus irgendeinem Grund vorübergehend nicht bekannt ist.  - `type`: NGSI Entity-Typ. Es muss Fahrzeug sein  - `vehicleConfiguration`: Ein kurzer Text, der die Konfiguration des Fahrzeugs angibt, z. B. '5dr Fließheck ST 2.5 MT 225 PS' oder 'limited edition'.  - `vehicleIdentificationNumber`: Die Fahrzeug-Identifikationsnummer (VIN) ist eine eindeutige Seriennummer, die von der Automobilindustrie verwendet wird, um einzelne Kraftfahrzeuge zu identifizieren  - `vehiclePlateIdentifier`:  Eine Kennung oder ein Code, die bzw. der auf einem am Fahrzeug angebrachten Kennzeichen zur amtlichen Identifizierung angezeigt wird. Die Zulassungskennung ist numerisch oder alphanumerisch und ist innerhalb der Region der ausstellenden Behörde eindeutig. Normative Verweise: DATEXII `vehicleRegistrationPlateIdentifier`  - `vehicleSpecialUsage`: Gibt an, ob das Fahrzeug für spezielle Zwecke verwendet wurde, wie z. B. für die gewerbliche Vermietung, Fahrschule oder als Taxi. Die Gesetzgebung in vielen Ländern schreibt vor, dass diese Information offengelegt werden muss, wenn ein Fahrzeug zum Verkauf angeboten wird. Enum:'Ambulanz, Feuerwehr, Militär, Polizei, SchulTransport, Taxi'  - `vehicleType`: Fahrzeugtyp unter dem Gesichtspunkt seiner strukturellen Eigenschaften. Dies ist etwas anderes als die Fahrzeugkategorie . Enum:'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, carcaravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'. Die folgenden durch _VehicleTypeEnum_ und _VehicleTypeEnum2_ definierten Werte, [DATEX 2 Version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)    
 Erforderliche Eigenschaften  
 - `category`  - `id`  - `location`  - `type`  - `vehicleType`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -160,9 +160,175 @@ Vehicle:
       x-ngsi:    
         model: https://schema.org/URL    
     location:    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+      oneOf:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                type: number    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - Point    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Point'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - LineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON LineString'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 4    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - Polygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Polygon'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPoint    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPoint'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiLineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiLineString'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    items:    
+                      type: number    
+                    minItems: 2    
+                    type: array    
+                  minItems: 4    
+                  type: array    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPolygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPolygon'    
+          type: object    
+      type: Geoproperty    
+    mileageFromOdometer:    
+      description: 'The total distance travelled by the particular vehicle since its initial production, as read from its odometer'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/mileageFromOdometer.    
+    name:    
+      description: 'The name of this item.'    
+      type: Property    
+    owner:    
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      items:    
+        anyOf: *vehicle_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
+      type: Property    
+    previousLocation:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
-      oneOf: &vehicle_-_properties_-_previouslocation_-_oneof    
+      oneOf:    
         - properties:    
             bbox:    
               items:    
@@ -305,25 +471,6 @@ Vehicle:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
-    mileageFromOdometer:    
-      description: 'The total distance travelled by the particular vehicle since its initial production, as read from its odometer'    
-      type: Property    
-      x-ngsi:    
-        model: https://schema.org/mileageFromOdometer.    
-    name:    
-      description: 'The name of this item.'    
-      type: Property    
-    owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
-      items:    
-        anyOf: *vehicle_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
-      type: Property    
-    previousLocation:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
-      oneOf: *vehicle_-_properties_-_previouslocation_-_oneof    
       title: 'GeoJSON Geometry'    
     purchaseDate:    
       description: 'The date the item e.g. vehicle was purchased by the current owner'    
