@@ -104,7 +104,7 @@ RoadSegment:
     endPoint:
       $id: https://geojson.org/schema/Geometry.json
       $schema: "http://json-schema.org/draft-07/schema#"
-      oneOf: &roadsegment_-_properties_-_location_-_oneof
+      oneOf: &roadsegment_-_properties_-_startpoint_-_oneof
         - properties:
             bbox:
               items:
@@ -284,10 +284,157 @@ RoadSegment:
         model: https://schema.org/length
         units: 'Kilometer (Km)'
     location:
-      $id: https://geojson.org/schema/Geometry.json
-      $schema: "http://json-schema.org/draft-07/schema#"
-      oneOf: *roadsegment_-_properties_-_location_-_oneof
-      title: 'GeoJSON Geometry'
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+      oneOf:
+        - description: 'Geoproperty. Geojson reference to the item. Point'
+          properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                type: number
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - Point
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Point'
+          type: object
+        - description: 'Geoproperty. Geojson reference to the item. LineString'
+          properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - LineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON LineString'
+          type: object
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'
+          properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 4
+                type: array
+              type: array
+            type:
+              enum:
+                - Polygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Polygon'
+          type: object
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'
+          properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPoint
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPoint'
+          type: object
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+          properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiLineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiLineString'
+          type: object
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+          properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  minItems: 4
+                  type: array
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPolygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPolygon'
+          type: object
+      type: Geoproperty
     maximumAllowedHeight:
       description: 'Maximum allowed height for vehicles transiting this road segment'
       minimum: 0
@@ -360,7 +507,7 @@ RoadSegment:
     startPoint:
       $id: https://geojson.org/schema/Geometry.json
       $schema: "http://json-schema.org/draft-07/schema#"
-      oneOf: *roadsegment_-_properties_-_location_-_oneof
+      oneOf: *roadsegment_-_properties_-_startpoint_-_oneof
       title: 'GeoJSON Geometry'
     totalLaneNumber:
       description: 'Total number of lanes offered by this road segment'
