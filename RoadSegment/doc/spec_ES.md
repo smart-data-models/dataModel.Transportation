@@ -6,7 +6,7 @@ Entidad: Segmento de carretera
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `allowedVehicleType`: Tipo(s) de vehículo(s) autorizado(s) a transitar por este segmento de carretera. Enum:'vehículo agrícola, bicicleta, autobús, coche, caravana, cocheConCaravana, cocheConRemolque, vehículoDeConstrucciónOdeMantenimiento, camión, ciclomotor, motocicleta, motocicletaConCocheLateral, motocarro, cisterna, remolque, furgoneta, cualquierVehículo'. Valores permitidos: Los siguientes valores definidos por _VehicleTypeEnum_, [DATEX 2 versión 2.3](http://d2docs.ndwcloud.nu/):  - `alternateName`: Un nombre alternativo para este artículo  - `annotations`: Anotaciones sobre el artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `category`: Permite transmitir características adicionales de un segmento de carretera. Enum:'oneway, toll, link'.  `oneway`: Indica si el segmento de carretera sólo puede utilizarse en una dirección. Si no está presente, significa que el segmento de carretera puede utilizarse en ambas direcciones (hacia delante y hacia atrás). Véase también [http://wiki.openstreetmap.org/wiki/Key:oneway](http://wiki.openstreetmap.org/wiki/Key:oneway). `toll` : Indica si el tramo de carretera está sujeto a peaje. `link` : Indica si este segmento de carretera es un segmento de enlace auxiliar para salir o entrar en una carretera. Véase [https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link). Cualquier otro valor significativo para una aplicación.  - `color`: El color del producto  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `endKilometer`: El número de kilómetro (medido desde el punto de inicio de la carretera) donde termina este segmento de carretera.  - `endPoint`:   - `id`: Identificador único de la entidad  - `image`: Una imagen del artículo  - `laneUsage`: Este atributo puede utilizarse para transmitir parámetros específicos que describan cada carril. Debe contener una cadena por carril del segmento de carretera. El elemento 0 de la matriz debe contener la información del carril 1, y así sucesivamente. El formato de la cadena referida debe ser: <carril_dirección>, <carril_velocidad mínima permitida>, <carril_velocidad máxima permitida>, <carril_altura máxima permitida>, <carril_altura máxima permitida>. <lane_direction> es una cadena de texto con los siguientes valores permitidos: `hacia adelante`. El carril se utiliza actualmente en la dirección "hacia adelante". hacia atrás". El carril se utiliza actualmente en la dirección "hacia atrás". El único parámetro obligatorio es `lane_direction`. Si no se especifica, se puede asumir que el resto de parámetros son iguales a los especificados a nivel de entidad.  - `length`: Longitud total de este segmento de carretera en kilómetros  - `location`:   - `maximumAllowedHeight`: Altura máxima permitida para los vehículos que transitan por este tramo de carretera  - `maximumAllowedSpeed`: Velocidad máxima permitida al transitar por este segmento de carretera. Pueden aplicarse límites más restrictivos a determinados tipos de vehículos (camiones, caravanas, etc.)  - `maximumAllowedWeight`: Peso máximo permitido para los vehículos que transitan por este tramo de carretera  - `minimumAllowedSpeed`: Velocidad mínima permitida al transitar por este tramo de carretera  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `refRoad`: Carretera a la que pertenece este segmento de carretera.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `startKilometer`: El número de kilómetro (medido desde el punto de inicio de la carretera) donde comienza este segmento de carretera.  - `startPoint`:   - `totalLaneNumber`: Número total de carriles que ofrece este segmento de carretera  - `type`: Tipo de entidad NGSI. Tiene que ser RoadSegment  - `width`: Anchura del segmento de la carretera.    
+- `address`: La dirección postal  - `allowedVehicleType`: Tipo(s) de vehículo(s) autorizado(s) a transitar por este segmento de carretera. Enum:'vehículo agrícola, bicicleta, autobús, coche, caravana, cocheConCaravana, cocheConRemolque, vehículoDeConstrucciónOdeMantenimiento, camión, ciclomotor, motocicleta, motocicletaConCocheLateral, motocarro, cisterna, remolque, furgoneta, cualquierVehículo'. Valores permitidos: Los siguientes valores definidos por _VehicleTypeEnum_, [DATEX 2 versión 2.3](http://d2docs.ndwcloud.nu/):  - `alternateName`: Un nombre alternativo para este artículo  - `annotations`: Anotaciones sobre el artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `category`: Permite transmitir características adicionales de un segmento de carretera. Enum:'oneway, toll, link'.  `oneway`: Indica si el segmento de carretera sólo puede utilizarse en una dirección. Si no está presente, significa que el segmento de carretera puede utilizarse en ambas direcciones (hacia delante y hacia atrás). Véase también [http://wiki.openstreetmap.org/wiki/Key:oneway](http://wiki.openstreetmap.org/wiki/Key:oneway). `toll` : Indica si el tramo de carretera está sujeto a peaje. `link` : Indica si este segmento de carretera es un segmento de enlace auxiliar para salir o entrar en una carretera. Véase [https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link). Cualquier otro valor significativo para una aplicación.  - `color`: El color del producto  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `endKilometer`: El número de kilómetro (medido desde el punto de inicio de la carretera) donde termina este segmento de carretera.  - `endPoint`:   - `id`: Identificador único de la entidad  - `image`: Una imagen del artículo  - `laneUsage`: Este atributo puede utilizarse para transmitir parámetros específicos que describan cada carril. Debe contener una cadena por carril del segmento de carretera. El elemento 0 de la matriz debe contener la información del carril 1, y así sucesivamente. El formato de la cadena referida debe ser: <carril_dirección>, <carril_velocidad mínima permitida>, <carril_velocidad máxima permitida>, <carril_altura máxima permitida>, <carril_altura máxima permitida>. <lane_direction> es una cadena de texto con los siguientes valores permitidos: `hacia adelante`. El carril se utiliza actualmente en la dirección "hacia adelante". hacia atrás". El carril se utiliza actualmente en la dirección "hacia atrás". El único parámetro obligatorio es `lane_direction`. Si no se especifica, se puede asumir que el resto de parámetros son iguales a los especificados a nivel de entidad.  - `length`: Longitud total de este segmento de carretera en kilómetros  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `maximumAllowedHeight`: Altura máxima permitida para los vehículos que transitan por este tramo de carretera  - `maximumAllowedSpeed`: Velocidad máxima permitida al transitar por este segmento de carretera. Pueden aplicarse límites más restrictivos a determinados tipos de vehículos (camiones, caravanas, etc.)  - `maximumAllowedWeight`: Peso máximo permitido para los vehículos que transitan por este tramo de carretera  - `minimumAllowedSpeed`: Velocidad mínima permitida al transitar por este tramo de carretera  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `refRoad`: Carretera a la que pertenece este segmento de carretera.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `startKilometer`: El número de kilómetro (medido desde el punto de inicio de la carretera) donde comienza este segmento de carretera.  - `startPoint`:   - `totalLaneNumber`: Número total de carriles que ofrece este segmento de carretera  - `type`: Tipo de entidad NGSI. Tiene que ser RoadSegment  - `width`: Anchura del segmento de la carretera.    
 Propiedades requeridas  
 - `allowedVehicleType`  - `endPoint`  - `id`  - `name`  - `refRoad`  - `startPoint`  - `type`    
 Los segmentos de carretera pueden incluir varios carriles. Este modelo de datos permite transmitir segmentos de carretera formados por carriles heterogéneos (diferentes en su uso, velocidad, altura, etc.). Los carriles se identifican utilizando números enteros entre 1 y n, siendo el número 1 el carril de la derecha cuando se avanza. El sentido de avance es la dirección denotada por el vector que va desde el punto de inicio del segmento hasta el punto final del mismo. Se trata de la misma convención que utiliza OpenStreetMap. Esta entidad está asociada principalmente a los segmentos verticales de Automoción y Ciudades Inteligentes y a las aplicaciones IoT relacionadas. Este modelo de datos se ha desarrollado en colaboración con los operadores de telefonía móvil y la GSMA.  
@@ -120,7 +120,7 @@ RoadSegment:
     endPoint:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
-      oneOf: &roadsegment_-_properties_-_location_-_oneof    
+      oneOf: &roadsegment_-_properties_-_startpoint_-_oneof    
         - properties:    
             bbox:    
               items:    
@@ -300,10 +300,157 @@ RoadSegment:
         model: https://schema.org/length    
         units: 'Kilometer (Km)'    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
-      oneOf: *roadsegment_-_properties_-_location_-_oneof    
-      title: 'GeoJSON Geometry'    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+      oneOf:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                type: number    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - Point    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Point'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - LineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON LineString'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 4    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - Polygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Polygon'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPoint    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPoint'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiLineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiLineString'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    items:    
+                      type: number    
+                    minItems: 2    
+                    type: array    
+                  minItems: 4    
+                  type: array    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPolygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPolygon'    
+          type: object    
+      type: Geoproperty    
     maximumAllowedHeight:    
       description: 'Maximum allowed height for vehicles transiting this road segment'    
       minimum: 0    
@@ -376,7 +523,7 @@ RoadSegment:
     startPoint:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
-      oneOf: *roadsegment_-_properties_-_location_-_oneof    
+      oneOf: *roadsegment_-_properties_-_startpoint_-_oneof    
       title: 'GeoJSON Geometry'    
     totalLaneNumber:    
       description: 'Total number of lanes offered by this road segment'    
