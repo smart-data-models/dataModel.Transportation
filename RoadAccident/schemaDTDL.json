@@ -1,0 +1,763 @@
+{
+    "@id": "dtmi:com:ngsi-ld:RoadAccident;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "Smart Data Models - RoadAccident schema adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/RoadAccident/schema.json",
+    "description": "A road accident description with causes and aftermath. First version developed in Synchronicity project",
+    "displayName": "RoadAccident",
+    "contents": [
+        {
+            "name": "accidentDate",
+            "writable": true,
+            "displayName": "accidentDate",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Datetime of the accident"
+        },
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The geographic area where a service or offered item is provided"
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "localId",
+            "writable": true,
+            "displayName": "localId",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Unique identifier from the source data set"
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item."
+        },
+        {
+            "name": "numPassengersDead",
+            "writable": true,
+            "displayName": "numPassengersDead",
+            "@type": "Property",
+            "schema": "integer",
+            "comment": "Number of vehicle's passengers dead because the accident"
+        },
+        {
+            "name": "numPassengersInjured",
+            "writable": true,
+            "displayName": "numPassengersInjured",
+            "@type": "Property",
+            "schema": "integer",
+            "comment": "Number of vehicle's passengers injured because the accident"
+        },
+        {
+            "name": "numPedestrianDead",
+            "writable": true,
+            "displayName": "numPedestrianDead",
+            "@type": "Property",
+            "schema": "integer",
+            "comment": "Number of pedestrians dead because the accident"
+        },
+        {
+            "name": "numPedestrianInjured",
+            "writable": true,
+            "displayName": "numPedestrianInjured",
+            "@type": "Property",
+            "schema": "integer",
+            "comment": "Number of pedestrians injured because the accident"
+        },
+        {
+            "name": "pedestriansInvolved",
+            "writable": true,
+            "displayName": "pedestriansInvolved",
+            "@type": "Property",
+            "schema": "boolean",
+            "comment": "Boolean to determine if pedestrians were involved in the accidents"
+        },
+        {
+            "name": "roadClass",
+            "writable": true,
+            "displayName": "roadClass",
+            "@type": "Property",
+            "schema": "string",
+            "comment": " The classification of road where this accident took place"
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+        },
+        {
+            "name": "totalDeadPeopleWithin24Hours",
+            "writable": true,
+            "displayName": "totalDeadPeopleWithin24Hours",
+            "@type": "Property",
+            "schema": "integer",
+            "comment": "Number of people dead directly because the accident"
+        },
+        {
+            "name": "totalDeadPeopleWithin30Days",
+            "writable": true,
+            "displayName": "totalDeadPeopleWithin30Days",
+            "@type": "Property",
+            "schema": "integer",
+            "comment": "Number of people dead because the aftermath of the accident"
+        },
+        {
+            "name": "totalInjured",
+            "writable": true,
+            "displayName": "totalInjured",
+            "@type": "Property",
+            "schema": "integer",
+            "comment": "total number of people injured (not dead) because the accident"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPolygon",
+            "schema": "multiPolygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "accidentDescription",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Description about this Road Accident as a combination of codified situation enlisted. 0: Unspecified circumstance; 1: Driver proceeded regularly without turning; 2: Driver proceeded with a distracted driving or undecided course; 3: Driver proceeded without maintaining a safe distance; 4: Driver proceeded without giving priority to the vehicle coming from the right; 5: Driver proceeded without respecting the stop; 6: Driver proceeded without respecting the signal to give precedence; 7: Driver proceeded again",
+            "displayName": "accidentDescription"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "accidentType",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Quick classification this Road Accident. 1: Frontal collision; 2: Frontal-lateral collision; 3: Side crash; 4: Collision; 5: Pedestrian investment; 6: Impact with vehicle stopped or stopped; 7: Impact with parked vehicle; 8: Impact with obstacle; 9: Impact with train; 10: Spill, slip; 11: Accident due to sudden braking; 12: Accident due to falling from a vehicle;. ",
+            "displayName": "accidentType"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "vehiclesInvolved",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "List of the vehicles (and pedestrians) involved because the accident 0 : pedestrian 1 : bicycle 2 : agriculturalVehicle 3 : bus 4 : minibus 5 : car 6 : caravan 7 : tram 8 : tanker 9 : carWithCaravan 10 : carWithTrailer 11 : lorry 12 : moped 13 : tanker 14 : motorcycle 15 : motorcycleWithSideCar 16 : motorscooter 17 : trailer 18 : van 19 : caravan 20 : constructionOrMaintenanceVehicle 21 : trolley 22 : binTrolley 23 : sweepingMachine 24 : cleaningTrolley",
+            "displayName": "vehiclesInvolved"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "weatherConditions",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Brief description of weather conditions during this Road Accident. 0 : clearNight 1 : sunnyDay 2 : slightlyCloudy 3 : partlyCloudy 4 : mist 5 : fog 6 : highClouds 7 : cloudy 8 : veryCloudy 9 : overcast 10 : lightRainShower 11 : drizzle 12 : lightRain 13 : heavyRainShower 14 : heavyRain 15 : sleetShower 16 : sleet 17 : hailShower 18 : hail 19 : shower 20 : lightSnow 21 : snow 22 : heavySnowShower 23 : heavySnow 24 : thunderShower 25 : thunder",
+            "displayName": "weatherConditions"
+        },
+        {
+            "@type": "object",
+            "name": "accidentStatisticalDate",
+            "comment": "approximate datetime of the accident (often original accident data source reports only statistical attributes such as season, weekday and approximate hour",
+            "displayName": "accidentStatisticalDate",
+            "fields": [
+                {
+                    "name": "hour",
+                    "schema": "integer"
+                },
+                {
+                    "name": "quarter",
+                    "schema": "integer"
+                },
+                {
+                    "name": "weekday",
+                    "schema": "enum"
+                },
+                {
+                    "name": "year",
+                    "schema": "integer"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "accidentLocation",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": 0,
+                        "displayName": 0,
+                        "enumValue": 1
+                    },
+                    {
+                        "name": 1,
+                        "displayName": 1,
+                        "enumValue": 2
+                    },
+                    {
+                        "name": 2,
+                        "displayName": 2,
+                        "enumValue": 3
+                    },
+                    {
+                        "name": 3,
+                        "displayName": 3,
+                        "enumValue": 4
+                    },
+                    {
+                        "name": 4,
+                        "displayName": 4,
+                        "enumValue": 5
+                    },
+                    {
+                        "name": 5,
+                        "displayName": 5,
+                        "enumValue": 6
+                    },
+                    {
+                        "name": 6,
+                        "displayName": 6,
+                        "enumValue": 7
+                    },
+                    {
+                        "name": 7,
+                        "displayName": 7,
+                        "enumValue": 8
+                    },
+                    {
+                        "name": 8,
+                        "displayName": 8,
+                        "enumValue": 9
+                    },
+                    {
+                        "name": 9,
+                        "displayName": 9,
+                        "enumValue": 10
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "roadIntersection",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": 1,
+                        "displayName": 1,
+                        "enumValue": 1
+                    },
+                    {
+                        "name": 2,
+                        "displayName": 2,
+                        "enumValue": 2
+                    },
+                    {
+                        "name": 3,
+                        "displayName": 3,
+                        "enumValue": 3
+                    },
+                    {
+                        "name": 4,
+                        "displayName": 4,
+                        "enumValue": 4
+                    },
+                    {
+                        "name": 5,
+                        "displayName": 5,
+                        "enumValue": 5
+                    },
+                    {
+                        "name": 6,
+                        "displayName": 6,
+                        "enumValue": 6
+                    },
+                    {
+                        "name": 7,
+                        "displayName": 7,
+                        "enumValue": 7
+                    },
+                    {
+                        "name": 8,
+                        "displayName": 8,
+                        "enumValue": 8
+                    },
+                    {
+                        "name": 9,
+                        "displayName": 9,
+                        "enumValue": 9
+                    },
+                    {
+                        "name": 10,
+                        "displayName": 10,
+                        "enumValue": 10
+                    },
+                    {
+                        "name": 11,
+                        "displayName": 11,
+                        "enumValue": 11
+                    },
+                    {
+                        "name": 12,
+                        "displayName": 12,
+                        "enumValue": 12
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "roadPaving",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": 1,
+                        "displayName": 1,
+                        "enumValue": 1
+                    },
+                    {
+                        "name": 2,
+                        "displayName": 2,
+                        "enumValue": 2
+                    },
+                    {
+                        "name": 3,
+                        "displayName": 3,
+                        "enumValue": 3
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "roadSign",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": 1,
+                        "displayName": 1,
+                        "enumValue": 1
+                    },
+                    {
+                        "name": 2,
+                        "displayName": 2,
+                        "enumValue": 2
+                    },
+                    {
+                        "name": 3,
+                        "displayName": 3,
+                        "enumValue": 3
+                    },
+                    {
+                        "name": 4,
+                        "displayName": 4,
+                        "enumValue": 4
+                    },
+                    {
+                        "name": 5,
+                        "displayName": 5,
+                        "enumValue": 5
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "roadSurface",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": 1,
+                        "displayName": 1,
+                        "enumValue": 1
+                    },
+                    {
+                        "name": 2,
+                        "displayName": 2,
+                        "enumValue": 2
+                    },
+                    {
+                        "name": 3,
+                        "displayName": 3,
+                        "enumValue": 3
+                    },
+                    {
+                        "name": 4,
+                        "displayName": 4,
+                        "enumValue": 4
+                    },
+                    {
+                        "name": 5,
+                        "displayName": 5,
+                        "enumValue": 5
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "roadTrunk",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": 1,
+                        "displayName": 1,
+                        "enumValue": 1
+                    },
+                    {
+                        "name": 2,
+                        "displayName": 2,
+                        "enumValue": 2
+                    },
+                    {
+                        "name": 3,
+                        "displayName": 3,
+                        "enumValue": 3
+                    },
+                    {
+                        "name": 4,
+                        "displayName": 4,
+                        "enumValue": 4
+                    },
+                    {
+                        "name": 5,
+                        "displayName": 5,
+                        "enumValue": 5
+                    },
+                    {
+                        "name": 6,
+                        "displayName": 6,
+                        "enumValue": 6
+                    },
+                    {
+                        "name": 7,
+                        "displayName": 7,
+                        "enumValue": 7
+                    },
+                    {
+                        "name": 8,
+                        "displayName": 8,
+                        "enumValue": 8
+                    },
+                    {
+                        "name": 9,
+                        "displayName": 9,
+                        "enumValue": 9
+                    },
+                    {
+                        "name": 10,
+                        "displayName": 10,
+                        "enumValue": 10
+                    },
+                    {
+                        "name": 11,
+                        "displayName": 11,
+                        "enumValue": 11
+                    },
+                    {
+                        "name": 12,
+                        "displayName": 12,
+                        "enumValue": 12
+                    },
+                    {
+                        "name": 15,
+                        "displayName": 15,
+                        "enumValue": 13
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "status",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "archived",
+                        "displayName": "archived",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "onGoing",
+                        "displayName": "onGoing",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "solved",
+                        "displayName": "solved",
+                        "enumValue": 3
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "weakestSubject",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": 0,
+                        "displayName": 0,
+                        "enumValue": 1
+                    },
+                    {
+                        "name": 1,
+                        "displayName": 1,
+                        "enumValue": 2
+                    },
+                    {
+                        "name": 2,
+                        "displayName": 2,
+                        "enumValue": 3
+                    },
+                    {
+                        "name": 3,
+                        "displayName": 3,
+                        "enumValue": 4
+                    },
+                    {
+                        "name": 4,
+                        "displayName": 4,
+                        "enumValue": 5
+                    },
+                    {
+                        "name": 5,
+                        "displayName": 5,
+                        "enumValue": 6
+                    },
+                    {
+                        "name": 6,
+                        "displayName": 6,
+                        "enumValue": 7
+                    },
+                    {
+                        "name": 7,
+                        "displayName": 7,
+                        "enumValue": 8
+                    },
+                    {
+                        "name": 8,
+                        "displayName": 8,
+                        "enumValue": 9
+                    },
+                    {
+                        "name": 9,
+                        "displayName": 9,
+                        "enumValue": 10
+                    },
+                    {
+                        "name": 10,
+                        "displayName": 10,
+                        "enumValue": 11
+                    },
+                    {
+                        "name": 11,
+                        "displayName": 11,
+                        "enumValue": 12
+                    },
+                    {
+                        "name": 12,
+                        "displayName": 12,
+                        "enumValue": 13
+                    },
+                    {
+                        "name": 13,
+                        "displayName": 13,
+                        "enumValue": 14
+                    },
+                    {
+                        "name": 14,
+                        "displayName": 14,
+                        "enumValue": 15
+                    },
+                    {
+                        "name": 15,
+                        "displayName": 15,
+                        "enumValue": 16
+                    },
+                    {
+                        "name": 16,
+                        "displayName": 16,
+                        "enumValue": 17
+                    },
+                    {
+                        "name": 17,
+                        "displayName": 17,
+                        "enumValue": 18
+                    },
+                    {
+                        "name": 18,
+                        "displayName": 18,
+                        "enumValue": 19
+                    },
+                    {
+                        "name": 19,
+                        "displayName": 19,
+                        "enumValue": 20
+                    },
+                    {
+                        "name": 20,
+                        "displayName": 20,
+                        "enumValue": 21
+                    },
+                    {
+                        "name": 21,
+                        "displayName": 21,
+                        "enumValue": 22
+                    },
+                    {
+                        "name": 22,
+                        "displayName": 22,
+                        "enumValue": 23
+                    },
+                    {
+                        "name": 23,
+                        "displayName": 23,
+                        "enumValue": 24
+                    },
+                    {
+                        "name": 24,
+                        "displayName": 24,
+                        "enumValue": 25
+                    }
+                ]
+            }
+        }
+    ]
+}
