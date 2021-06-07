@@ -1,0 +1,402 @@
+{
+    "@id": "dtmi:com:ngsi-ld:TrafficFlowObserved;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": " - Transportation / TrafficFlowObserved adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/TrafficFlowObserved/schema.json",
+    "description": "An observation of traffic flow conditions at a certain place and time.",
+    "displayName": "TrafficFlowObserved",
+    "contents": [
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The geographic area where a service or offered item is provided"
+        },
+        {
+            "name": "averageGapDistance",
+            "writable": true,
+            "displayName": "averageGapDistance",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Average gap distance between consecutive vehicles"
+        },
+        {
+            "name": "averageHeadwayTime",
+            "writable": true,
+            "displayName": "averageHeadwayTime",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Average headway time. Headway time is the time ellapsed between two consecutive vehicles"
+        },
+        {
+            "name": "averageVehicleLength",
+            "writable": true,
+            "displayName": "averageVehicleLength",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Average length of the vehicles transiting during\n    the observation period"
+        },
+        {
+            "name": "averageVehicleSpeed",
+            "writable": true,
+            "displayName": "averageVehicleSpeed",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Average speed of the vehicles transiting during the observation period"
+        },
+        {
+            "name": "congested",
+            "writable": true,
+            "displayName": "congested",
+            "@type": "Property",
+            "schema": "boolean",
+            "comment": " Flags whether there was a traffic congestion during the observation period in the referred lane. The absence of this attribute means no traffic congestion"
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "dateObserved",
+            "writable": true,
+            "displayName": "dateObserved",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The date and time of this observation in ISO8601 UTC format. It can be represented by an specific time instant or by an ISO8601 interval. As a workaround for the lack of support of Orion Context Broker for datetime intervals, it can be used two separate attributes: `dateObservedFrom`, `dateObservedTo`. [DateTime](https://schema.org/DateTime) or an ISO8601 interval represented as [Text](https://schema.org/Text)"
+        },
+        {
+            "name": "dateObservedFrom",
+            "writable": true,
+            "displayName": "dateObservedFrom",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Observation period start date and time. See `dateObserved`"
+        },
+        {
+            "name": "dateObservedTo",
+            "writable": true,
+            "displayName": "dateObservedTo",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Observation period end date and time. See `dateObserved`"
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "intensity",
+            "writable": true,
+            "displayName": "intensity",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Total number of vehicles detected during this observation period"
+        },
+        {
+            "name": "laneId",
+            "writable": true,
+            "displayName": "laneId",
+            "@type": "Property",
+            "schema": "integer",
+            "comment": "Lane identifier. Lane identification is done using the conventions defined by RoadSegment entity which are based on [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Forward_%26_backward,_left_%26_right)."
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item."
+        },
+        {
+            "name": "occupancy",
+            "writable": true,
+            "displayName": "occupancy",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Fraction of the observation time where a vehicle has been occupying the observed lane"
+        },
+        {
+            "name": "refRoadSegment",
+            "writable": true,
+            "displayName": "refRoadSegment",
+            "@type": "Relationship",
+            "comment": "Concerned road segment on which the observation has been made. Reference to an entity of type RoadSegment"
+        },
+        {
+            "name": "reversedLane",
+            "writable": true,
+            "displayName": "reversedLane",
+            "@type": "Property",
+            "schema": "boolean",
+            "comment": "Flags whether traffic in the lane was reversed during the observation period. The absence of this attribute means no lane reversion"
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+        },
+        {
+            "name": "vehicleSubType",
+            "writable": true,
+            "displayName": "vehicleSubType",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "It allows to specify a sub type of `vehicleType`, eg if the `vehicleType` is set to `Lorry` the `vehicleSubType` may be `OGV1` or `OGV2` to convey more information about the exact type of vehicle."
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPolygon",
+            "schema": "multiPolygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "laneDirection",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "forward",
+                        "displayName": "forward",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "backward",
+                        "displayName": "backward",
+                        "enumValue": 2
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "vehicleType",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "agriculturalVehicle",
+                        "displayName": "agriculturalVehicle",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "bicycle",
+                        "displayName": "bicycle",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "bus",
+                        "displayName": "bus",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "minibus",
+                        "displayName": "minibus",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "car",
+                        "displayName": "car",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "caravan",
+                        "displayName": "caravan",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "tram",
+                        "displayName": "tram",
+                        "enumValue": 7
+                    },
+                    {
+                        "name": "tanker",
+                        "displayName": "tanker",
+                        "enumValue": 8
+                    },
+                    {
+                        "name": "carWithCaravan",
+                        "displayName": "carWithCaravan",
+                        "enumValue": 9
+                    },
+                    {
+                        "name": "carWithTrailer",
+                        "displayName": "carWithTrailer",
+                        "enumValue": 10
+                    },
+                    {
+                        "name": "lorry",
+                        "displayName": "lorry",
+                        "enumValue": 11
+                    },
+                    {
+                        "name": "moped",
+                        "displayName": "moped",
+                        "enumValue": 12
+                    },
+                    {
+                        "name": "motorcycle",
+                        "displayName": "motorcycle",
+                        "enumValue": 13
+                    },
+                    {
+                        "name": "motorcycleWithSideCar",
+                        "displayName": "motorcycleWithSideCar",
+                        "enumValue": 14
+                    },
+                    {
+                        "name": "motorscooter",
+                        "displayName": "motorscooter",
+                        "enumValue": 15
+                    },
+                    {
+                        "name": "trailer",
+                        "displayName": "trailer",
+                        "enumValue": 16
+                    },
+                    {
+                        "name": "van",
+                        "displayName": "van",
+                        "enumValue": 17
+                    },
+                    {
+                        "name": "constructionOrMaintenanceVehicle",
+                        "displayName": "constructionOrMaintenanceVehicle",
+                        "enumValue": 18
+                    },
+                    {
+                        "name": "trolley",
+                        "displayName": "trolley",
+                        "enumValue": 19
+                    },
+                    {
+                        "name": "binTrolley",
+                        "displayName": "binTrolley",
+                        "enumValue": 20
+                    },
+                    {
+                        "name": "sweepingMachine",
+                        "displayName": "sweepingMachine",
+                        "enumValue": 21
+                    },
+                    {
+                        "name": "cleaningTrolley",
+                        "displayName": "cleaningTrolley",
+                        "enumValue": 22
+                    }
+                ]
+            }
+        }
+    ]
+}
