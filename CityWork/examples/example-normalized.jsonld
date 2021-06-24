@@ -1,0 +1,469 @@
+{
+  "id": "urn:ngsi-ld:CityWork:CityWork:MNCA-CW-2020Q2-006",
+  "type": "CityWork",
+  "name": {
+    "type": "Property",
+    "value": "Nce-Airport-CW2020Q2-006"
+  },
+  "alternateName": {
+    "type": "Property",
+    "value": "AirPort global Observation"
+  },
+  "description": {
+    "type": "Property",
+    "value": "Widening work on access roads and installation of a new electrical and digital network for the connection of T1 & T2 terminals"
+  },
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          43.20315,
+          7.20186
+        ],
+        [
+          43.20384,
+          7.20372
+        ],
+        [
+          43.20388,
+          7.20493
+        ],
+        [
+          43.19938,
+          7.20312
+        ],
+        [
+          43.20045,
+          7.20152
+        ],
+        [
+          43.20315,
+          7.20186
+        ]
+      ]
+    }
+  },
+  "areaServed": {
+    "type": "Property",
+    "value": "Nice Aeroport"
+  },
+  "territorialArea": {
+    "type": "Property",
+    "value": "subwaypole Nice"
+  },
+  "dateLastReported": {
+    "type": "Property",
+    "value": {
+      "@type": "DateTime",
+      "@value": "2020-04-02T10:30:00Z"
+    }
+  },
+  "workNumber": {
+    "type": "Property",
+    "value": "CW2020Q2-006"
+  },
+  "workState": {
+    "type": "Property",
+    "value": "open"
+  },
+  "workDate": {
+    "type": "DateTime",
+    "value": "2020-03-17T08:45:00Z/2020-04-22T18:45:00Z",
+    "metadata": {
+      "TimeInstant": {
+        "type": "Text",
+        "value": "2020-04-02T10:30:00Z"
+      }
+    }
+  },
+  "startDate": {
+    "type": "DateTime",
+    "value": "2020-03-17T08:45:00Z",
+    "metadata": {
+      "TimeInstant": {
+        "type": "Text",
+        "value": "2020-02-01TT17:25:00Z"
+      }
+    }
+  },
+  "endDate": {
+    "type": "DateTime",
+    "value": "2020-04-22T18:45:00Z",
+    "metadata": {
+      "TimeInstant": {
+        "type": "Text",
+        "value": "2020-04-02T10:30:00Z"
+      }
+    }
+  },
+  "openingHoursSpecification": {
+    "type": "Property",
+    "value": [
+      {
+        "dayOfWeek": "Monday, Tuesday, Wednesday, Thursday, Friday",
+        "Opens": "07.00",
+        "closes": "20.00"
+      },
+      {
+        "dayOfWeek": "Saturday",
+        "Opens": "08.30",
+        "closes": "17.00"
+      }
+    ]
+  },
+  "contractingAuthority": {
+    "type": "Property",
+    "value": "MNCA - subwaypole Nice Cote d'Azur"
+  },
+  "contactPoint": {
+    "type": "Property",
+    "value": "Service des AO"
+  },
+  "decrees": {
+    "type": "Property",
+    "value": [
+      "https://MNCA/CityWork/Decree/CW-2020Q2-006",
+      "CW-2020Q2-006",
+      "CW-2020Q2-006-Av-001",
+      "CW-2020Q2-006-Av-002"
+    ]
+  },
+  "workLastDateUpdate": {
+    "type": "DateTime",
+    "value": "2020-03-17T08:45:00Z",
+    "metadata": {
+      "TimeInstant": {
+        "type": "Text",
+        "value": "2020-03-16T09:12:25Z"
+      }
+    }
+  },
+  "mainContractingCompany": {
+    "type": "Property",
+    "value": "XRP - NICOLSPA"
+  },
+  "othersContractingCompany": {
+    "type": "Property",
+    "value": [
+      "VRD - Terrassement Nicois",
+      "ELEC - Electricite de Nice",
+      "NUM - Consortium operateur"
+    ]
+  },
+  "workLevel": {
+    "type": "Property",
+    "value": [
+      "ground",
+      "underGround"
+    ]
+  },
+  "workTarget": {
+    "type": "Property",
+    "value": [
+      "roads",
+      "pavement",
+      "electricityNetworks",
+      "opticalFibers",
+      "videoNetworks",
+      "vrd"
+    ]
+  },
+  "workNature": {
+    "type": "Property",
+    "value": [
+      "landFill",
+      "repair",
+      "tonnageExemption",
+      "securingPerimeter",
+      "trenchOpening",
+      "tarring"
+    ]
+  },
+  "infrastructureFunction": {
+    "type": "Property",
+    "value": [
+      "distribution",
+      "collection"
+    ]
+  },
+  "encroachment": {
+    "type": "Property",
+    "value": [
+      "public",
+      "private"
+    ]
+  },
+  "typeOfInteventionRequest": {
+    "type": "Property",
+    "value": "authorizationRequest"
+  },
+  "workReason": {
+    "type": "Property",
+    "value": [
+      "sagging",
+      "powerCut"
+    ]
+  },
+  "workZone": {
+    "type": "Property",
+    "value": [
+      "road",
+      "sideWalk",
+      "busCorridor",
+      "tramwayLine"
+    ]
+  },
+  "workDisposition": {
+    "type": "Property",
+    "value": {
+      "laneReduction": {
+        "type": "Property",
+        "value": {
+          "startDate": "2020-05-11T08:00:00Z",
+          "endDate": "2020-05-15T18:30:00Z",
+          "dayOfWeek": "Monday, Tuesday, Wednesday, Thursday, Friday",
+          "comment": "Switching from 2 lanes to 1 lane - BusCorridor not available"
+        }
+      },
+      "sidewalkReduction": {
+        "type": "Property",
+        "value": {
+          "startDate": "2020-05-12T00:00:00Z",
+          "endDate": "2020-05-14T24:00:00Z",
+          "dayOfWeek": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday"
+        }
+      },
+      "alternatingLights": {
+        "type": "Property",
+        "value": {
+          "startDate": "2020-05-11T08:00:00Z",
+          "endDate": "2020-05-15T18:30:00Z",
+          "dayOfWeek": "Monday, Tuesday, Wednesday, Thursday, Friday"
+        }
+      },
+      "speedReduction": {
+        "type": "Property",
+        "value": {
+          "startDate": "2020-05-12T00:00:00Z",
+          "dayOfWeek": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday",
+          "comment": "Speed Switching from 2 lanes to 1 lane"
+        }
+      }
+    }
+  },
+  "workOtherImpact": {
+    "type": "Property",
+    "value": [
+      "layingCablesOnGround",
+      "shopsTerrace"
+    ]
+  },
+  "isMobile": {
+    "type": "Property",
+    "value": false
+  },
+  "countOfDerogation": {
+    "type": "Property",
+    "value": 2
+  },
+  "derogation": {
+    "type": "Property",
+    "value": {
+      "Work Nigth during Workday": {
+        "type": "Property",
+        "value": {
+          "startDate": "2020-05-11T20:30:00Z",
+          "endDate": "2020-05-15T23:30:00",
+          "dayOfWeek": "Monday, Tuesday, Wednesday, Thursday, Friday"
+        }
+      },
+      "BRH": {
+        "type": "Property",
+        "value": {
+          "startDate": "2020-05-13T20: 30: 00 Z ",
+          "endDate": "2020-05-13T23:30:00Z",
+          "dayOfWeek": "Wednesday"
+        }
+      }
+    }
+  },
+  "isMainRoadImpactedHTR": {
+    "type": "Property",
+    "value": true
+  },
+  "countOfRoadImpacted": {
+    "type": "Property",
+    "value": 3
+  },
+  "roadImpacted": {
+    "type": "Property",
+    "value": [
+      {
+        "roadId": "urn:ngsi-ld:Road:N202",
+        "segmentImpacted": [
+          "urn:ngsi-ld:RoadSegment:N202-12",
+          "urn:ngsi-ld:RoadSegment:N202-13"
+        ]
+      },
+      {
+        "roadId": "Road:D021",
+        "segmentsImpacted": [
+          "12",
+          "13",
+          "14",
+          "15"
+        ]
+      },
+      {
+        "roadId": "urn:ngsi-ld:Road:D032",
+        "segmentArea": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              102.0,
+              0.0
+            ],
+            [
+              103.0,
+              1.0
+            ],
+            [
+              104.0,
+              0.0
+            ],
+            [
+              105.0,
+              1.0
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "allowedVehicle": {
+    "type": "Property",
+    "value": [
+      "companiesTrucks",
+      "emergencyVehicle",
+      "firefighters",
+      "police"
+    ]
+  },
+  "maxAuthorizedTonnage": {
+    "type": "Property",
+    "value": [
+      {
+        "roadImpacted": "urn:ngsi-ld:Road:N202",
+        "maxTonnage": 30
+      },
+      {
+        "roadImpacted": "Road:D021",
+        "maxTonnage": 20
+      },
+      {
+        "roadImpacted": "urn:ngsi-ld:Road:D032",
+        "maxTonnage": 15.2
+      }
+    ]
+  },
+  "countOfBusLineImpacted": {
+    "type": "Property",
+    "value": 1
+  },
+  "busImpacted": {
+    "type": "Property",
+    "value": [
+      {
+        "lineImpacted": "urn:ngsi-ld:BusLine:L205"
+      }
+    ]
+  },
+  "countOfTramwayLineImpacted": {
+    "type": "Property",
+    "value": 2
+  },
+  "tramwayImpacted": {
+    "type": "Property ",
+    "value": [
+      {
+        "lineImpacted": "TramWayLine:L01",
+        "segmentImpacted": [
+          "urn:ngsi-ld:TramWaySegment:L01-12",
+          "urn:ngsi-ld:TramWaySegment:L01-19"
+        ]
+      },
+      {
+        "lineImpacted": "TramWayLine:L03",
+        "segmentImpacted": [
+          "urn:ngsi-ld:TramWaySegment:L03-19"
+        ]
+      }
+    ]
+  },
+  "countOfRailwayLineImpacted": {
+    "type": "Property",
+    "value": 1
+  },
+  "railwayImpacted": {
+    "type": "Property ",
+    "value": [
+      {
+        "lineImpacted": "Nice-Grasse",
+        "segmentImpact": [
+          "Nice Saint Augustin section"
+        ]
+      }
+    ]
+  },
+  "countOfSchoolImpacted": {
+    "type": "Property",
+    "value": 2
+  },
+  "schoolImpacted": {
+    "type": "Property",
+    "value": [
+      "Lycée Massena",
+      "Université Campus Saint Jean"
+    ]
+  },
+  "countOfStationImpacted": {
+    "type": "Property",
+    "value": 4
+  },
+  "stationImpacted": {
+    "type": "Property ",
+    "value": [
+      {
+        "stationType": "bus",
+        "stationType": [
+          "urn:ngsi-ld:station:L205-S13",
+          "urn:ngsi-ld:station:L205-S14"
+        ]
+      },
+      {
+        "stationType": "tram",
+        "stationType": [
+          "L01-S12",
+          "L01-S19"
+        ]
+      }
+    ]
+  },
+  "countOfEventImpacted": {
+    "type": "Property",
+    "value": 2
+  },
+  "eventsImpact": {
+    "type": "property",
+    "value": [
+      "urn:ngsi-ld:events:MNCA-EV-JazzCimiez",
+      "NiceMarathon"
+    ]
+  },
+  "@context": [
+    "https://schema.lab.fiware.org/ld/context",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+  ]
+}
