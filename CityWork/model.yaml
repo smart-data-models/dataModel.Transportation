@@ -1,0 +1,923 @@
+CityWork:
+  description: 'The Data Model is a contextual description of urban works carried out on a road axis and which can impact individual (Cars, motorcycle, bicycles, .…) or common transport (Tram, Bus, subway). It contains a geographic representation making it possible to locate its work from a specific JSON Object and at a more global level (Road segment, Road, District, ...) in order to assess the potential impacts on the circulation. A GeoJSON object may represent a region of space (a Geometry), a spatially-bounded entity (a Feature), or a list of features (a Feature Collection). refer to the document [geojson](https://tools.ietf.org/pdf/draft-ietf-geojson-03.pdf) for more information about the modeling and the possible value.'
+  properties:
+    allowedVehicle:
+      description: 'Type of vehicle authorized to circulate. A combination of these values. Enum:''all Vehicle, bicycle, bus, car, companiesTrucks,  emergencyVehicle, firefighters, lorry, motorcycle, police, subway, sweepingMachine, trailer, tramway, trucks, van'''
+      items:
+        enum:
+          - 'all Vehicle'
+          - bicycle
+          - bus
+          - car
+          - companiesTrucks
+          - emergencyVehicle
+          - firefighters
+          - lorry
+          - motorcycle
+          - police
+          - subway
+          - sweepingMachine
+          - trailer
+          - tramway
+          - trucks
+          - van
+        type: string
+      type: array
+      x-ngsi:
+        type: Property
+    alternateName:
+      description: 'An alternative name for this item'
+      type: string
+      x-ngsi:
+        type: Property
+    busImpacted:
+      description: 'Bus Lines impacted by the works.'
+      items:
+        properties:
+          lineImpacted:
+            type: string
+          segmentImpacted:
+            items:
+              type: string
+            type: array
+        type: object
+      type: array
+      x-ngsi:
+        type: Property
+    contactPoint:
+      description: 'The details to contact with the item.'
+      properties:
+        contactType:
+          type: string
+        email:
+          description: 'Property. Email address of owner.'
+          format: idn-email
+          type: string
+        name:
+          type: string
+        telephone:
+          type: string
+        url:
+          format: uri
+          type: string
+      type: object
+      x-ngsi:
+        model: https://schema.org/ContactPoint
+        type: Property
+    contractingAuthority:
+      description: 'Name of the contracting authority'
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    countOfBusLineImpacted:
+      description: 'Count of Bus Lines impacted by the works'
+      type: integer
+      x-ngsi:
+        model: https://schema.org/Integer
+        type: Property
+    countOfDerogation:
+      description: 'Count of derogations granted to the work Number'
+      type: integer
+      x-ngsi:
+        model: https://schema.org/Integer
+        type: Property
+    countOfEventImpacted:
+      description: 'Count of Events impacted by the works'
+      type: integer
+      x-ngsi:
+        model: https://schema.org/Integer
+        type: Property
+    countOfRailwayLineImpacted:
+      description: 'Count of Railway Lines impacted by the works'
+      type: integer
+      x-ngsi:
+        model: https://schema.org/Integer
+        type: Property
+    countOfRoadImpacted:
+      description: 'Count of roads impacted by the works'
+      type: integer
+      x-ngsi:
+        model: https://schema.org/Integer
+        type: Property
+    countOfSchoolBusLineImpacted:
+      description: 'Count of School Bus Lines impacted by the works'
+      type: integer
+      x-ngsi:
+        model: https://schema.org/Integer
+        type: Property
+    countOfSchoolImpacted:
+      description: 'Count of University, School, or other educational resource impacted by the works'
+      type: integer
+      x-ngsi:
+        model: https://schema.org/Integer
+        type: Property
+    countOfStationImpacted:
+      description: 'Count of Railway stations impacted by the works'
+      type: integer
+      x-ngsi:
+        model: https://schema.org/Integer
+        type: Property
+    countOfSubwayLineImpacted:
+      description: 'Count of Subway Lines impacted by the works'
+      type: integer
+      x-ngsi:
+        model: https://schema.org/Integer
+        type: Property
+    countOfTramwayLineImpacted:
+      description: 'Count of tramway lines impacted by the works'
+      type: integer
+      x-ngsi:
+        model: https://schema.org/Integer
+        type: Property
+    dataProvider:
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      type: string
+      x-ngsi:
+        type: Property
+    dateCreated:
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: string
+      x-ngsi:
+        type: Property
+    dateLastReported:
+      description: 'A timestamp which denotes the last time when the device successfully reported data. The date and time of this observation in ISO8601 UTCformat'
+      format: date-time
+      type: string
+      x-ngsi:
+        model: https://schema.org/DateTime
+        type: Property
+    dateModified:
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: string
+      x-ngsi:
+        type: Property
+    decrees:
+      description: 'A List of text where each element is a string with the URL to download or the name of the decree.'
+      items:
+        type: string
+      type: array
+      x-ngsi:
+        type: Property
+    derogation:
+      description: 'Derogation granted for carrying out work on days and times. A structured value from 0 to N occurrences where each items has the following format `derogationType` :  with sub properties  `startDate`, `endDate`,  `dayOfWeek`, `comment` '
+      items:
+        properties:
+          comment:
+            type: string
+          dayOfWeek:
+            items:
+              enum:
+                - Monday
+                - Tuesday
+                - Wednesday
+                - Thursday
+                - Friday
+                - Saturday
+                - Sunday
+                - PublicHolidays
+              type: string
+            type: array
+          derogationType:
+            type: string
+          endDate:
+            format: date-time
+            type: string
+          startDate:
+            format: date-time
+            type: string
+        type: object
+      type: array
+      x-ngsi:
+        type: Property
+    description:
+      description: 'A description of this item'
+      type: string
+      x-ngsi:
+        type: Property
+    encroachment:
+      description: 'Impact of the works on public, private area. A combination of these values. Enum:''other, private, public'''
+      items:
+        enum:
+          - other
+          - private
+          - public
+        type: string
+      type: array
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    endDate:
+      description: 'End date and time of the works in an ISO8601 UTC format. The attribute can be used in addition to the `workDate` attribute when it corresponds to a time interval to be highlighted'
+      format: date-time
+      type: string
+      x-ngsi:
+        model: https://schema.org/DateTime
+        type: Property
+    eventsImpact:
+      description: 'List of free text or to the entity [Events](https://github.com/smart-data-models/dataModel.Tourism/blob/master/Events/doc/spec.md) if exist.'
+      items:
+        type: string
+      type: array
+      x-ngsi:
+        type: Property
+    id:
+      anyOf: &citywork_-_properties_-_owner_-_items_-_anyof
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Unique identifier of the entity'
+      x-ngsi:
+        type: Property
+    infrastructureFunction:
+      description: ' Function of the infrastructure impacted by the works. Enum:''collection, distribution, other, transportation'''
+      items:
+        enum:
+          - collection
+          - distribution
+          - other
+          - transportation
+        type: string
+      type: array
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    isMainRoadImpactedHTR:
+      description: 'Value to indicate whether the main traffic road is impacted. Default false. https://schema.org/Boolean'
+      type: boolean
+      x-ngsi:
+        type: Property
+    isMobile:
+      description: 'Characteristic on the mobility of the works : false for Fixed (default) and true for Mobile'
+      type: boolean
+      x-ngsi:
+        model: https://schema.org/Boolean
+        type: Property
+    mainContractingCompany:
+      description: 'The Main Contracting Company responsible of the works'
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    maxAuthorizedTonnage:
+      description: 'Roads impacted by the works with Maximum tonnage authorized. A structured value from 0 to N occurrences where each items is a string in the format : `roadImpact`:[maxTonnage]. If `isMainRoadImpactedHTR` = true, The first item is this one.'
+      items:
+        properties:
+          maxTonnage:
+            type: number
+          roadImpacted:
+            type: string
+        type: object
+      type: array
+      x-ngsi:
+        type: Property
+    name:
+      description: 'The name of this item.'
+      type: string
+      x-ngsi:
+        type: Property
+    openingHoursSpecification:
+      description: 'A structured value providing information about the opening hours of a place or a certain service inside a place'
+      items:
+        properties:
+          closes:
+            format: time
+            type: string
+          dayOfWeek:
+            enum:
+              - Monday
+              - Tuesday
+              - Wednesday
+              - Thursday
+              - Friday
+              - Saturday
+              - Sunday
+              - PublicHolidays
+            type: string
+          opens:
+            format: time
+            type: string
+          validFrom:
+            format: date-time
+            type: string
+          validThrough:
+            format: date-time
+            type: string
+      minItems: 1
+      type: array
+      x-ngsi:
+        model: https://schema.org/openingHoursSpecification
+        type: Property
+    othersContractingCompany:
+      description: 'A List of Text where each element is a string with the name of the contracting Companies under the responsibility of the main Contracting Company.'
+      items:
+        type: string
+      type: array
+      x-ngsi:
+        type: Property
+    owner:
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      items:
+        anyOf: *citywork_-_properties_-_owner_-_items_-_anyof
+        description: 'Property. Unique identifier of the entity'
+      type: array
+      x-ngsi:
+        type: Property
+    railwayImpacted:
+      description: 'Rail lines impacted by the works.'
+      items:
+        properties:
+          lineImpacted:
+            type: string
+          segmentImpacted:
+            items:
+              type: string
+            type: array
+        type: object
+      type: array
+      x-ngsi:
+        type: Property
+    roadImpacted:
+      description: 'Roads impacted by the works and the details of the roads concerned by the work. A structured value from 0 to N occurrences where each items is a string in the format : ''roadImpact'':[List of Segment Impacted or Free Text or geo-property, separated by a comma]. If `isMainRoadImpactedHTR` = true, The first item is this one.'
+      items:
+        properties:
+          roadId:
+            type: string
+          segmentImpacted:
+            items:
+              type: string
+            segmentArea:
+              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              oneOf:
+                - description: 'Geoproperty. Geojson reference to the item. Point'
+                  properties:
+                    bbox:
+                      items:
+                        type: number
+                      minItems: 4
+                      type: array
+                    coordinates:
+                      items:
+                        type: number
+                      minItems: 2
+                      type: array
+                    type:
+                      enum:
+                        - Point
+                      type: string
+                  required:
+                    - type
+                    - coordinates
+                  title: 'GeoJSON Point'
+                  type: object
+                - description: 'Geoproperty. Geojson reference to the item. LineString'
+                  properties:
+                    bbox:
+                      items:
+                        type: number
+                      minItems: 4
+                      type: array
+                    coordinates:
+                      items:
+                        items:
+                          type: number
+                        minItems: 2
+                        type: array
+                      minItems: 2
+                      type: array
+                    type:
+                      enum:
+                        - LineString
+                      type: string
+                  required:
+                    - type
+                    - coordinates
+                  title: 'GeoJSON LineString'
+                  type: object
+                - description: 'Geoproperty. Geojson reference to the item. Polygon'
+                  properties:
+                    bbox:
+                      items:
+                        type: number
+                      minItems: 4
+                      type: array
+                    coordinates:
+                      items:
+                        items:
+                          items:
+                            type: number
+                          minItems: 2
+                          type: array
+                        minItems: 4
+                        type: array
+                      type: array
+                    type:
+                      enum:
+                        - Polygon
+                      type: string
+                  required:
+                    - type
+                    - coordinates
+                  title: 'GeoJSON Polygon'
+                  type: object
+                - description: 'Geoproperty. Geojson reference to the item. MultiPoint'
+                  properties:
+                    bbox:
+                      items:
+                        type: number
+                      minItems: 4
+                      type: array
+                    coordinates:
+                      items:
+                        items:
+                          type: number
+                        minItems: 2
+                        type: array
+                      type: array
+                    type:
+                      enum:
+                        - MultiPoint
+                      type: string
+                  required:
+                    - type
+                    - coordinates
+                  title: 'GeoJSON MultiPoint'
+                  type: object
+                - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+                  properties:
+                    bbox:
+                      items:
+                        type: number
+                      minItems: 4
+                      type: array
+                    coordinates:
+                      items:
+                        items:
+                          items:
+                            type: number
+                          minItems: 2
+                          type: array
+                        minItems: 2
+                        type: array
+                      type: array
+                    type:
+                      enum:
+                        - MultiLineString
+                      type: string
+                  required:
+                    - type
+                    - coordinates
+                  title: 'GeoJSON MultiLineString'
+                  type: object
+                - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+                  properties:
+                    bbox:
+                      items:
+                        type: number
+                      minItems: 4
+                      type: array
+                    coordinates:
+                      items:
+                        items:
+                          items:
+                            items:
+                              type: number
+                            minItems: 2
+                            type: array
+                          minItems: 4
+                          type: array
+                        type: array
+                      type: array
+                    type:
+                      enum:
+                        - MultiPolygon
+                      type: string
+                  required:
+                    - type
+                    - coordinates
+                  title: 'GeoJSON MultiPolygon'
+                  type: object
+            type: array
+        type: object
+      type: array
+      x-ngsi:
+        type: Property
+    schoolBusImpacted:
+      description: 'School Bus lines impacted by the works.'
+      items:
+        properties:
+          lineImpacted:
+            type: string
+          segmentImpacted:
+            items:
+              type: string
+            type: array
+        type: object
+      type: array
+      x-ngsi:
+        type: Property
+    schoolImpacted:
+      description: 'List of free text or or [GeoProperty] or a Reference to an entity [SCHOOL] if exist. '
+      items:
+        type: string
+      type: array
+      x-ngsi:
+        type: Property
+    seeAlso:
+      description: 'list of uri pointing to additional resources about the item'
+      oneOf:
+        - items:
+            format: uri
+            type: string
+          minItems: 1
+          type: array
+        - format: uri
+          type: string
+      x-ngsi:
+        type: Property
+    source:
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      type: string
+      x-ngsi:
+        type: Property
+    startDate:
+      description: 'Start date and time of the works in an ISO8601 UTC format. The attribute can be used in addition to the `workDate` attribute when it corresponds to a time interval to be highlighted'
+      format: date-time
+      type: string
+      x-ngsi:
+        model: https://schema.org/DateTime
+        type: Property
+    stationImpacted:
+      description: 'Station Impacted by the works. A structured value from 0 to N occurrences'
+      items:
+        properties:
+          stationId:
+            items:
+              type: string
+            type: array
+          stationType:
+            type: string
+        type: object
+      type: array
+      x-ngsi:
+        type: Property
+    subwayImpacted:
+      description: 'Subway lines impacted by the works. A structured value from 0 to N occurrences.'
+      items:
+        properties:
+          lineImpacted:
+            type: string
+          segmentImpacted:
+            items:
+              type: string
+            type: array
+        type: object
+      type: array
+      x-ngsi:
+        type: Property
+    territorialArea:
+      description: 'Territorial area. Level higher to the attribute ''areaServed''. A list of Free Text'
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    tramwayImpacted:
+      description: 'Tramway Line impacted by the works. A structured value from 0 to N occurrences.'
+      items:
+        properties:
+          lineImpacted:
+            type: string
+          segmentImpacted:
+            items:
+              type: string
+            type: array
+        type: object
+      type: array
+      x-ngsi:
+        type: Property
+    type:
+      description: 'NGSI Entity type. It has to be Citywork'
+      enum:
+        - CityWork
+      type: string
+      x-ngsi:
+        type: Property
+    typeOfInterventionRequest:
+      description: 'Initial type of request to do the works. Enum:''authorizationRequest,  interventionNotice,  other,  urgentWorks'''
+      enum:
+        - authorizationRequest
+        - interventionNotice
+        - other
+        - urgentWorks
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    workDate:
+      description: 'Date and time (Day or period) of the works. It can be represented by an specific time string'
+      type: string
+      x-ngsi:
+        model: https://schema.org/DateTime
+        type: Property
+    workDisposition:
+      description: 'Specific rules taken for the works. A structured value from 0 to N occurrences where each items has the following format : `Disposition`: with sub properties  `startDate`, `endDate`,  `dayOfWeek`, `comment`. Enum:''alternatingLights , bicyclePathClosure, bicyclePathDeviation, bicyclePathReduction, circulationManualControl, laneClosure, laneDeviation, laneReduction, noRestriction, parkingForbidden, parkingModification, sidewalkClosure, sidewalkClosureOrReduction, sidewalkReduction, speedReduction'''
+      items:
+        properties:
+          comment:
+            type: string
+          dayOfWeek:
+            items:
+              enum:
+                - Monday
+                - Tuesday
+                - Wednesday
+                - Thursday
+                - Friday
+                - Saturday
+                - Sunday
+                - PublicHolidays
+              type: string
+            type: array
+          disposition:
+            enum:
+              - alternatingLights
+              - bicyclePathClosure
+              - bicyclePathDeviation
+              - bicyclePathReduction
+              - circulationManualControl
+              - laneClosure
+              - laneDeviation
+              - laneReduction
+              - noRestriction
+              - parkingForbidden
+              - parkingModification
+              - sidewalkClosure
+              - sidewalkClosureOrReduction
+              - sidewalkReduction
+              - speedReduction
+              - workOtherImpact
+            type: string
+          endDate:
+            format: date-time
+            type: string
+          startDate:
+            format: date-time
+            type: string
+        type: object
+      type: array
+      x-ngsi:
+        type: Property
+    workLastDateUpdate:
+      description: 'Last date for updating a contractual element of the work'
+      format: date-time
+      type: string
+      x-ngsi:
+        model: https://schema.org/DateTime
+        type: Property
+    workLevel:
+      description: 'Positioning of the works in relation to a ground reference system. A combination of these elements. Enum:''aerial, ground, mixed, other, roofing, surface, underground, wall'''
+      items:
+        enum:
+          - aerial
+          - ground
+          - mixed
+          - other
+          - roofing
+          - surface
+          - underground
+          - wall
+        type: string
+      type: array
+      x-ngsi:
+        type: Property
+    workNature:
+      description: 'Nature of the works. A combination of these values.Enum:''additionalInvestigations, brushCutting, cleaning, collection, connection, consolidation, construction, control, counting, craneLifting, creation, demolition, drivingSwitch, experimentation, extension, filmShooting, Installation-OR-layout, investigation, landFill, maintenance, manholeOpening, ManholeOpeningToRestoreService, miscellaneousInstallation, miscellaneousWorks, mowingDeburring, other, overheadLinesWorksIntervention, pruning, pulling, refurbishment, rehabilitation, reinforcement, renewal, renovation, repair, replacement, riprap, roadSign, safetyAndComplianceWork, safetyRailsInstallation, securingPerimeter, siteInstallation, staking, supportImplantation, surfaceOccupationAuthorization, survey, tarring, tonnageExemption, treeCutting, trenchOpening, upgrading'''
+      items:
+        enum:
+          - additionalInvestigations
+          - brushCutting
+          - cleaning
+          - collection
+          - connection
+          - consolidation
+          - construction
+          - control
+          - counting
+          - craneLifting
+          - creation
+          - demolition
+          - drivingSwitch
+          - experimentation
+          - extension
+          - filmShooting
+          - Installation-OR-layout
+          - investigation
+          - landFill
+          - maintenance
+          - manholeOpening
+          - ManholeOpeningToRestoreService
+          - miscellaneousInstallation
+          - miscellaneousWorks
+          - mowingDeburring
+          - other
+          - overheadLinesWorksIntervention
+          - pruning
+          - pulling
+          - refurbishment
+          - rehabilitation
+          - reinforcement
+          - renewal
+          - renovation
+          - repair
+          - replacement
+          - riprap
+          - roadSign
+          - safetyAndComplianceWork
+          - safetyRailsInstallation
+          - securingPerimeter
+          - siteInstallation
+          - staking
+          - supportImplantation
+          - surfaceOccupationAuthorization
+          - survey
+          - tarring
+          - tonnageExemption
+          - treeCutting
+          - trenchOpening
+          - upgrading
+        type: string
+      type: array
+      x-ngsi:
+        type: Property
+    workNumber:
+      description: 'Number assigned to the work'
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    workOtherImpact:
+      description: 'Other impact. A list of free values'
+      items:
+        type: string
+      type: array
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    workReason:
+      description: 'Reasons of the works in case of urgent intervention. A combination of these values. Enum:''derailment,  collapse,  fire,  flood,  gasLeak,  landslide,  other,  powerCut,  rockfall,  sagging,  waterLeak'''
+      items:
+        enum:
+          - derailment
+          - collapse
+          - fire
+          - flood
+          - gasLeak
+          - landslide
+          - other
+          - powerCut
+          - rockfall
+          - sagging
+          - waterLeak
+        type: string
+      type: array
+      x-ngsi:
+        type: Property
+    workState:
+      description: 'Number assigned to the work. Enum:''all, approved, authorized, canceled, completed, decreeToBeSigned, draft, editedDecrees, instructionInProgress, investigated, nonCompliantOccupation, open, pendingAuthorization, pendingCancellation, planningCompleted, pendingDocument, pendingExtension, pendingPlanning, planned, received, reject, supported, validatedInPlanning'''
+      enum:
+        - all
+        - approved
+        - authorized
+        - canceled
+        - completed
+        - decreeToBeSigned
+        - draft
+        - editedDecrees
+        - instructionInProgress
+        - investigated
+        - nonCompliantOccupation
+        - open
+        - pendingAuthorization
+        - pendingCancellation
+        - planningCompleted
+        - pendingDocument
+        - pendingExtension
+        - pendingPlanning
+        - planned
+        - received
+        - reject
+        - supported
+        - validatedInPlanning
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    workTarget:
+      description: 'Categories of works regarding the different profession. A combination of these elements. Enum:''bicyclePath, busCorridor, catainers, cityMotorBike, cityBike, cityCar, cityScooter, coldAndAirCon, coldGroup, copperCable, CoringPenetrometry, drinkingWater, electricityNetworks, exploratoryWork, fireHydrants, frameRoof, gasNetworks, generator, historicalMonuments, infrastructure, landscapedArea, movingHoistNacelleTruck, networks, offStreetParking, opticalFibers, other, overheadLine, papersCollection, pavement, publicDecorativeLighting, publicDomain, publicTransport, railway, rainyWaters, riprap, rMTNetworks, roads, roadsAndPublicDomain, sanitation, scaffolding, sideWalk, speedReductionDevices, streetParking, surfaceOccupation, supportStructures, tagsAndPosters, telecomNetworks, telecom-RMT-VideoNetworks, trafficSignalingRegulation, tramway, urbanFurniture, urbanHeating, variousWorks, videoNetworks, vrd'''
+      items:
+        enum:
+          - bicyclePath
+          - busCorridor
+          - catainers
+          - cityMotorBike
+          - cityBike
+          - cityCar
+          - cityScooter
+          - coldAndAirCon
+          - coldGroup
+          - copperCable
+          - CoringPenetrometry
+          - drinkingWater
+          - electricityNetworks
+          - exploratoryWork
+          - fireHydrants
+          - frameRoof
+          - gasNetworks
+          - generator
+          - historicalMonuments
+          - infrastructure
+          - landscapedArea
+          - movingHoistNacelleTruck
+          - networks
+          - offStreetParking
+          - opticalFibers
+          - other
+          - overheadLine
+          - papersCollection
+          - pavement
+          - publicDecorativeLighting
+          - publicDomain
+          - publicTransport
+          - railway
+          - rainyWaters
+          - riprap
+          - rMTNetworks
+          - roads
+          - roadsAndPublicDomain
+          - sanitation
+          - scaffolding
+          - sideWalk
+          - speedReductionDevices
+          - streetParking
+          - surfaceOccupation
+          - supportStructures
+          - tagsAndPosters
+          - telecomNetworks
+          - telecom-RMT-VideoNetworks
+          - trafficSignalingRegulation
+          - tramway
+          - urbanFurniture
+          - urbanHeating
+          - variousWorks
+          - videoNetworks
+          - vrd
+        type: string
+      type: array
+      x-ngsi:
+        type: Property
+    workZone:
+      description: 'Zone of Works. A combination of these values. Enum:'' airport, beach, bicyclePath, bridge, busCorridor, dock, floodArea, harbor, heliport, mountainousArea, offRoad, other, parking, parksGardens, path, protectArea, railwayLine, riskArea, river, road, rockyArea, sevesoArea, sideWalk, subwayLine, tramwayLine, tunnel'''
+      items:
+        enum:
+          - airport
+          - beach
+          - bicyclePath
+          - bridge
+          - busCorridor
+          - dock
+          - floodArea
+          - harbor
+          - heliport
+          - mountainousArea
+          - offRoad
+          - other
+          - parking
+          - parksGardens
+          - path
+          - protectArea
+          - railwayLine
+          - riskArea
+          - river
+          - road
+          - rockyArea
+          - sevesoArea
+          - sideWalk
+          - subwayLine
+          - tramwayLine
+          - tunnel
+        type: string
+      type: array
+      x-ngsi:
+        type: Property
+  required:
+    - id
+    - type
+    - location
+  type: object
