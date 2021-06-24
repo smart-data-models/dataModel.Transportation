@@ -11,6 +11,8 @@ The following entity types are available:
 
 - [BikeLane](https://github.com/smart-data-models/dataModel.Transportation/blob/master/BikeLane/README.md). A generic bike lane schema
 
+- [CityWork](https://github.com/smart-data-models/dataModel.Transportation/blob/master/CityWork/README.md). The Data Model is a contextual description of urban works carried out on a road axis and which can impact individual (Cars, motorcycle, bicycles, .…) or common transport (Tram, Bus, subway). It contains a geographic representation making it possible to locate its work from a specific JSON Object and at a more global level (Road segment, Road, District, ...) in order to assess the potential impacts on the circulation. A GeoJSON object may represent a region of space (a Geometry), a spatially-bounded entity (a Feature), or a list of features (a Feature Collection). refer to the document [geojson](https://tools.ietf.org/pdf/draft-ietf-geojson-03.pdf) for more information about the modeling and the possible value.
+
 - [CrowdFlowObserved](https://github.com/smart-data-models/dataModel.Transportation/blob/master/CrowdFlowObserved/README.md). CrowdFlowObserved
 
 - [EVChargingStation](https://github.com/smart-data-models/dataModel.Transportation/blob/master/EVChargingStation/README.md). EV Charging Station
