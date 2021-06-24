@@ -1,11 +1,10 @@
-
-description: This is a compilation list of the current adopters of the data model [Data model] of the Subject [Subject].  All fields are non mandatory. More info at https://smart-data-models.github.io/data-models/templates/dataModel/CURRENT_ADOPTERS.yaml
+description: This is a compilation list of the current adopters of the data model TransportStation of the Subject Transportation.
 currentAdopters:
 -
- adopter: 
- description: 
- mail: 
- organization: 
- project: 
- comments: 
- startDate: 
+ adopter: Stephane ROUX
+ description: Project Manager
+ mail: stephane.Roux@nicecotedazur.org
+ organization: Métropole Nice Côte d'Azur
+ project: Data Lake
+ comments: SmartCity Project
+ startDate: January 2019
