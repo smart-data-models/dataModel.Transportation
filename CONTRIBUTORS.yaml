@@ -43,6 +43,13 @@ contributors:
  project: 
  comments:
 -
+ name: Bertrand
+ surname: Le Droumaguet
+ mail: bertrand.le-droumaguet@atos.net
+ organization: Atos - Sophia Antipolis
+ project: Data Lake
+ comments: SmartCity Project
+-
  name: Martino
  surname: Maggio
  mail: martino.maggio@eng.it
@@ -61,8 +68,8 @@ contributors:
  surname: Roux
  mail: stephane.roux@nicecotedazur.org
  organization: Metropole Nice Cote D'Azur
- project: 
- comments: 
+ project: Data Lake
+ comments: SmartCity Project
 -
  name: Joud
  surname: Sayed Issa

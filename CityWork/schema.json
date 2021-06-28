@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "schemaVersion": "0.0.1",
+  "schemaVersion": "0.1.0",
   "$id": "https://smart-data-models.github.io/dataMdel.Transportation/CityWork/schema.json",
   "title": "CityWork schema",
   "description": "The Data Model is a contextual description of urban works carried out on a road axis and which can impact individual (Cars, motorcycle, bicycles, .…) or common transport (Tram, Bus, subway). It contains a geographic representation making it possible to locate its work from a specific JSON Object and at a more global level (Road segment, Road, District, ...) in order to assess the potential impacts on the circulation. A GeoJSON object may represent a region of space (a Geometry), a spatially-bounded entity (a Feature), or a list of features (a Feature Collection). refer to the document [geojson](https://tools.ietf.org/pdf/draft-ietf-geojson-03.pdf) for more information about the modeling and the possible value.",
@@ -467,16 +467,28 @@
             "type": "object",
             "properties": {
               "roadId": {
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+              },
+              "roadName": {
                 "type": "string"
               },
-              "segmentImpacted": {
+              "roadLocation": {
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+              },
+              "segmentId": {
                 "type": "array",
                 "items": {
-                  "type": "string"
-                },
-                "segmentArea": {
                   "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+                },
+                "segmentLocation": {
+                  "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
                 }
+              },
+              "segmentLocation": {
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+              },
+              "segmentName": {
+                "type": "string"
               }
             }
           }
@@ -531,14 +543,29 @@
           "items": {
             "type": "object",
             "properties": {
-              "lineImpacted": {
+              "lineId": {
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+              },
+              "lineName": {
                 "type": "string"
               },
-              "segmentImpacted": {
+              "lineLocation": {
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+              },
+              "segmentId": {
                 "type": "array",
                 "items": {
-                  "type": "string"
+                  "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+                },
+                "segmentLocation": {
+                  "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
                 }
+              },
+              "segmentLocation": {
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+              },
+              "segmentName": {
+                "type": "string"
               }
             }
           }
@@ -553,14 +580,29 @@
           "items": {
             "type": "object",
             "properties": {
-              "lineImpacted": {
+              "lineId": {
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+              },
+              "lineName": {
                 "type": "string"
               },
-              "segmentImpacted": {
+              "lineLocation": {
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+              },
+              "segmentId": {
                 "type": "array",
                 "items": {
-                  "type": "string"
+                  "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+                },
+                "segmentLocation": {
+                  "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
                 }
+              },
+              "segmentLocation": {
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+              },
+              "segmentName": {
+                "type": "string"
               }
             }
           }
@@ -575,14 +617,29 @@
           "items": {
             "type": "object",
             "properties": {
-              "lineImpacted": {
+              "lineId": {
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+              },
+              "lineName": {
                 "type": "string"
               },
-              "segmentImpacted": {
+              "lineLocation": {
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+              },
+              "segmentId": {
                 "type": "array",
                 "items": {
-                  "type": "string"
+                  "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+                },
+                "segmentLocation": {
+                  "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
                 }
+              },
+              "segmentLocation": {
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+              },
+              "segmentName": {
+                "type": "string"
               }
             }
           }
@@ -597,14 +654,29 @@
           "items": {
             "type": "object",
             "properties": {
-              "lineImpacted": {
+              "lineId": {
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+              },
+              "lineName": {
                 "type": "string"
               },
-              "segmentImpacted": {
+              "lineLocation": {
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+              },
+              "segmentId": {
                 "type": "array",
                 "items": {
-                  "type": "string"
+                  "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+                },
+                "segmentLocation": {
+                  "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
                 }
+              },
+              "segmentLocation": {
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+              },
+              "segmentName": {
+                "type": "string"
               }
             }
           }
@@ -619,14 +691,29 @@
           "items": {
             "type": "object",
             "properties": {
-              "lineImpacted": {
+              "lineId": {
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+              },
+              "lineName": {
                 "type": "string"
               },
-              "segmentImpacted": {
+              "lineLocation": {
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+              },
+              "segmentId": {
                 "type": "array",
                 "items": {
-                  "type": "string"
+                  "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+                },
+                "segmentLocation": {
+                  "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
                 }
+              },
+              "segmentLocation": {
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+              },
+              "segmentName": {
+                "type": "string"
               }
             }
           }
@@ -652,14 +739,29 @@
           "items": {
             "type": "object",
             "properties": {
-              "stationType": {
+              "stationId": {
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+              },
+              "stationName": {
                 "type": "string"
               },
-              "stationId": {
+              "stationLocation": {
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+              },
+              "segmentId": {
                 "type": "array",
                 "items": {
-                 "type": "string"
+                  "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+                },
+                "segmentLocation": {
+                  "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
                 }
+              },
+              "segmentLocation": {
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+              },
+              "segmentName": {
+                "type": "string"
               }
             }
           }
