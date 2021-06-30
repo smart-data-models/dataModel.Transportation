@@ -1,0 +1,106 @@
+{
+  "id": "FlowObserved:BFO-NCE-MNCA-SP-001",
+  "type": "ItemFlowObserved",
+  "name": {
+    "type": "Text",
+    "value": "BFO-NCE-MNCA-SP-001"
+  },
+  "description": {
+    "type": "Text",
+    "value": "Boat Flow Observed from Nice Harbor."
+  },
+  "location": {
+    "type": "geo:json",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        7.196545,
+        43.664809
+      ]
+    }
+  },
+  "address": {
+    "type": "PostalAddress",
+    "value": {
+      "streetAddress": "Port Lympia",
+      "addressLocality": "Nice",
+      "addressCountry": "FR"
+    }
+  },
+  "areaServed": {
+    "type": "Text",
+    "value": "Nice Harbor"
+  },
+  "dateObserved": {
+    "type": "DateTime",
+    "value": "2020-03-20T16:30:00Z"
+  },
+  "dateObservedFrom": {
+    "type": "DateTime",
+    "value": "2020-03-20T16:30:00Z"
+  },
+  "dateObservedTo": {
+    "type": "DateTime",
+    "value": "2020-03-20T22:30:00Z"
+  },
+  "refDevice": {
+    "type": "Relationship",
+    "value": "Device:BFO-NCE-MNCA-SP-001-Dev-02"
+  },
+  "itemType": {
+    "type": "Text",
+    "value": "yacht"
+  },
+  "itemSubType": {
+    "type": "Text",
+    "value": "monoHull"
+  },
+  "laneId": {
+    "type": "Integer",
+    "value": 1
+  },
+  "laneDirection": {
+    "type": "Text",
+    "value": "outbound"
+  },
+  "reverseLane": {
+    "type": "Boolean",
+    "value": false
+  },
+  "intensity": {
+    "type": "Number",
+    "value": 12
+  },
+  "occupancy": {
+    "type": "Number",
+    "value": 0.1562
+  },
+  "congested": {
+    "type": "Boolean",
+    "value": false
+  },
+  "averageSpeed": {
+    "type": "Number",
+    "value": 2.7
+  },
+  "averageLength": {
+    "type": "Number",
+    "value": 7.44
+  },
+  "averageHeadwayTime": {
+    "type": "Number",
+    "value": 156
+  },
+  "averageGapDistance": {
+    "type": "Number",
+    "value": 35.28
+  },
+  "minSpeed": {
+    "type": "Number",
+    "value": 2.6
+  },
+  "maxSpeed": {
+    "type": "Number",
+    "value": 3.8
+  }
+}

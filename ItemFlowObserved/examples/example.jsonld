@@ -1,0 +1,40 @@
+{
+  "id": "itemFlowObserved:BFO-NCE-MNCA-SP-001",
+  "type": "ItemFlowObserved",
+  "address": {
+    "addressCountry": "FR",
+    "addressLocality": "Nice",
+    "streetAddress": "Port Lympia"
+  },
+  "areaServed": "Nice Harbor",
+  "averageGapDistance": 35.28,
+  "averageHeadwayTime": 156,
+  "averageLength": 7.44,
+  "averageSpeed": 2.7,
+  "congested": false,
+  "dateObserved": "2020-03-20T16:30:00Z",
+  "dateObservedFrom": "2020-03-20T16:30:00Z",
+  "dateObservedTo": "2020-03-20T22:30:00Z",
+  "description": "Boat Flow Observed from Nice Harbor.",
+  "intensity": 12,
+  "itemType": "yacht",
+  "itemSubtype": "monoHull",
+  "laneDirection": "outbound",
+  "laneId": 1,
+  "location": {
+    "coordinates": [
+      7.196545,
+      43.664809
+    ],
+    "type": "Point"
+  },
+  "maxSpeed": 3.8,
+  "minSpeed": 2.6,
+  "name": "BFO-NCE-MNCA-SP-001",
+  "occupancy": 0.1562,
+  "refDevice": "Device:BFO-NCE-MNCA-SP-001-Dev-02",
+  "reverseLane": false,
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld"
+  ]
+}

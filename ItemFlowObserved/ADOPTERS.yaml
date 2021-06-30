@@ -1,0 +1,10 @@
+description: This is a compilation list of the current adopters of the data model ItemFlowObserved of the Subject [].
+currentAdopters:
+-
+ adopter: Stephane ROUX
+ description: Project Manager
+ mail: stephane.Roux@nicecotedazur.org
+ organization: Métropole Nice Côte d'Azur
+ project: Data Lake
+ comments: SmartCity Project
+ startDate: January 2019
