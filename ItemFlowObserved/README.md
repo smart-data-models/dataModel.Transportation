@@ -8,6 +8,12 @@ The data model intended to measure an observation linked to the movement of an i
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Transportation/ItemFlowObserved/swagger.yaml)
 
 Link to the [specification](https://smart-data-models.github.io/dataModel.Transportation/ItemFlowObserved/doc/spec.md)
+
+Enlace a la [Especificación en español](https://smart-data-models.github.io/dataModel.Transportation/ItemFlowObserved/doc/spec_ES.md)
+
+Lien vers le [spécification en français](https://smart-data-models.github.io/dataModel.Transportation/ItemFlowObserved/doc/spec_FR.md)
+
+Link zu der [deutchen Spezifikation](https://smart-data-models.github.io/dataModel.Transportation/ItemFlowObserved/doc/spec_DE.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.Transportation/ItemFlowObserved/examples/example.json) (keyvalues) for NGSI v2
