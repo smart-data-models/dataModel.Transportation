@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "schemaVersion": "0.1.0",
+  "schemaVersion": "0.2.0",
   "$id": "https://smart-data-models.github.io/dataMdel.Transportation/CityWork/schema.json",
   "title": "CityWork schema",
   "description": "The Data Model is a contextual description of urban works carried out on a road axis and which can impact individual (Cars, motorcycle, bicycles, .…) or common transport (Tram, Bus, subway). It contains a geographic representation making it possible to locate its work from a specific JSON Object and at a more global level (Road segment, Road, District, ...) in order to assess the potential impacts on the circulation. A GeoJSON object may represent a region of space (a Geometry), a spatially-bounded entity (a Feature), or a list of features (a Feature Collection). refer to the document [geojson](https://tools.ietf.org/pdf/draft-ietf-geojson-03.pdf) for more information about the modeling and the possible value.",
@@ -724,7 +724,7 @@
         },
         "schoolImpacted": {
           "type": "array",
-          "description": "Property. List of free text or or [GeoProperty] or a Reference to an entity [SCHOOL] if exist. ",
+          "description": "Property. List of free text or [GeoProperty] or a Reference to an entity [SCHOOL] if exist. ",
           "items": {
             "type": "string"
           }
@@ -739,8 +739,14 @@
           "items": {
             "type": "object",
             "properties": {
+              "stationType": {
+                "type": "string"
+              },
               "stationId": {
-                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+                "type": "array",
+                "items": {
+                  "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+                }
               },
               "stationName": {
                 "type": "string"

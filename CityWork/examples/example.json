@@ -313,7 +313,6 @@
   "countOfStationImpacted": 4,
   "stationImpacted": [
     {
-      "stationType": "bus",
       "stationId": [
         "urn:ngsi-ld:station:L205-S13",
         "urn:ngsi-ld:station:L205-S14"
