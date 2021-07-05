@@ -14,7 +14,7 @@
     "value": "Widening work on access roads and installation of a new electrical and digital network for the connection of T1 & T2 terminals"
   },
   "location": {
-    "type": "GeoProperty",
+    "type": "Geoproperty",
     "value": {
       "type": "Polygon",
       "coordinates": [
@@ -456,7 +456,7 @@
     "value": 2
   },
   "eventsImpact": {
-    "type": "property",
+    "type": "Property",
     "value": [
       "urn:ngsi-ld:events:MNCA-EV-JazzCimiez",
       "NiceMarathon"
