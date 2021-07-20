@@ -67,15 +67,33 @@
   },
   "workDate": {
     "type": "DateTime",
-    "value": "2020-03-17T08:45:00Z/2020-04-22T18:45:00Z"
+    "value": "2020-03-17T08:45:00Z/2020-04-22T18:45:00Z",
+    "metadata": {
+      "TimeInstant": {
+        "type": "Text",
+        "value": "2020-04-02T10:30:00Z"
+      }
+    }
   },
   "startDate": {
     "type": "DateTime",
-    "value": "2020-03-17T08:45:00Z"
+    "value": "2020-03-17T08:45:00Z",
+    "metadata": {
+      "TimeInstant": {
+        "type": "Text",
+        "value": "2020-02-01TT17:25:00Z"
+      }
+    }
   },
   "endDate": {
     "type": "DateTime",
-    "value": "2020-04-22T18:45:00Z"
+    "value": "2020-04-22T18:45:00Z",
+    "metadata": {
+      "TimeInstant": {
+        "type": "Text",
+        "value": "2020-04-02T10:30:00Z"
+      }
+    }
   },
   "openingHoursSpecification": {
     "type": "array",
@@ -131,7 +149,13 @@
   },
   "workLastDateUpdate": {
     "type": "DateTime",
-    "value": "2020-03-17T08:45:00Z"
+    "value": "2020-03-17T08:45:00Z",
+     "metadata": {
+      "TimeInstant": {
+        "type": "Text",
+        "value": "2020-03-16T09:12:25Z"
+      }
+    }
   },
   "mainContractingCompany": {
     "type": "string",
@@ -216,7 +240,11 @@
         "startDate": "2020-05-11T08:00:00Z",
         "endDate": "2020-05-15T18:30:00Z",
         "dayOfWeek": [
-          "Monday, Tuesday, Wednesday, Thursday, Friday"
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
         ],
         "comment": "Switching from 2 lanes to 1 lane - BusCorridor not available"
       },
@@ -225,7 +253,13 @@
         "startDate": "2020-05-12T00:00:00Z",
         "endDate": "2020-05-14T24:00:00Z",
         "dayOfWeek": [
-          "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday"
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
         ]
       },
       {
@@ -233,14 +267,24 @@
         "startDate": "2020-05-11T08:00:00Z",
         "endDate": "2020-05-15T18:30:00Z",
         "dayOfWeek": [
-          "Monday, Tuesday, Wednesday, Thursday, Friday"
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
         ]
       },
       {
         "disposition": "speedReduction",
         "startDate": "2020-05-12T00:00:00Z",
         "dayOfWeek": [
-          "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday"
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
         ],
         "comment": "Speed Switching from 2 lanes to 1 lane"
       }
@@ -269,7 +313,11 @@
         "startDate": "2020-05-11T20:30:00Z",
         "endDate": "2020-05-15T23:30:00",
         "dayOfWeek": [
-          "Monday, Tuesday, Wednesday, Thursday, Friday"
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
         ]
       },
       {
@@ -338,10 +386,10 @@
   "allowedVehicle": {
     "type": "array",
     "value": [
-      "firefighters",
-      "police",
+      "companiesTrucks",
       "emergencyVehicle",
-      "companiesTrucks"
+      "firefighters",
+      "police"
     ]
   },
   "maxAuthorizedTonnage": {
