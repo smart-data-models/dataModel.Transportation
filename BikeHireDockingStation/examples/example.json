@@ -1,19 +1,27 @@
 {
-        "id": "Bcn-BikeHireDockingStation-1",
-        "type": "BikeHireDockingStation",
-        "address": {
-            "addressCountry": "ES",
-            "addressLocality": "Barcelona",
-            "streetAddress": "Gran Via Corts Catalanes,760"
-        },
-        "availableBikeNumber": 20,
-        "freeSlotNumber": 10,
-        "location": {
-            "type": "Point",
-            "coordinates": [
-                2.180042,
-                41.397952
-            ]
-        },
-        "status": "working"
+  "id": "Bcn-BikeHireDockingStation-1",
+  "type": "BikeHireDockingStation",
+  "address": {
+    "addressCountry": "ES",
+    "addressLocality": "Barcelona",
+    "streetAddress": "Gran Via Corts Catalanes,760"
+  },
+  "availableBikeNumber": 20,
+  "freeSlotNumber": 10,
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      2.180042,
+      41.397952
+    ]
+  },
+  "status": "working",
+  "totalSlotNumber": 100,
+  "outOfServiceSlotNumber": 21,
+  "stationName": "Pune",
+  "mediaURL": "http://pedalsaddle.in/",
+  "agency_url": "http://pedalsaddle.in/",
+  "agency_name": "PedalSaddle",
+  "stationCode": "2",
+  "observationDateTime": "2021-03-11T15:51:02+05:30"
 }

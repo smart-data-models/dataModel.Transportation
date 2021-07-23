@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$schemaVersion": "0.0.1",
+    "$schemaVersion": "0.1.0",
     "$id": "https://smart-data-models.github.io/dataModel.Transportation/BikeHireDockingStation/schema.json",
     "title": " - Transportation / Bike Hire Docking Station",
     "description": "Bike Hire Docking Station",
@@ -65,7 +65,34 @@
                 "contactPoint": {
                     "type": "object",
                     "description": "Property. Bike hire service contact point. Model:'https://schema.org/contactPoint'"
-                }
+                },
+                        "stationName": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. The name of the bike hire docking station corresponding to this observation."
+        },
+        "mediaURL": {
+          "type": "string",
+          "format": "uri",
+          "description": "Property. Model:'https://schema.org/Text'. URL providing further information of any image(s) or media of the complaint or place."
+        },
+        "agency_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Property. Model:'https://schema.org/Text'. The agency_url field contains the URL of the transit agency. SameAs: 'agency_url' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)"
+        },
+        "agency_name": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. The agency_name field contains the full name of the transit agency. SameAs: 'agency_name' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)"
+        },
+        "stationCode": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. The station number or station code of the bike hire docking station corresponding to the observation."
+        },
+        "observationDateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Last reported time of observation."
+        }
             }
         }
     ],

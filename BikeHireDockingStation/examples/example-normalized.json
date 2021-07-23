@@ -1,37 +1,71 @@
 {
-    "id": "Bcn-BikeHireDockingStation-1",
-    "type": "BikeHireDockingStation", 
-    "status": {
-        "value": "working"
-    }, 
-    "availableBikeNumber": {
-        "value": 20,
-        "metadata": {
-            "timestamp": {
-                "type": "DateTime",
-                "value": "2018-09-25T12:00:00"
-            }
-        }
-    }, 
-    "freeSlotNumber": {
-        "value": 10
-    }, 
-    "location": {
-        "type": "geo:json", 
-        "value": {
-            "type": "Point", 
-            "coordinates": [
-                2.180042, 
-                41.397952
-            ]
-        }
-    }, 
-    "address": {
-        "type": "PostalAddress", 
-        "value": {
-            "addressCountry": "ES", 
-            "addressLocality": "Barcelona", 
-            "streetAddress": "Gran Via Corts Catalanes,760"
-        }
+  "id": "Bcn-BikeHireDockingStation-1",
+  "type": "BikeHireDockingStation",
+  "status": {
+    "value": "working"
+  },
+  "availableBikeNumber": {
+    "type": "Number",
+    "value": 20,
+    "metadata": {
+      "timestamp": {
+        "type": "DateTime",
+        "value": "2018-09-25T12:00:00"
+      }
     }
+  },
+  "freeSlotNumber": {
+    "type": "Number",
+    "value": 10
+  },
+  "location": {
+    "type": "geo:json",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        2.180042,
+        41.397952
+      ]
+    }
+  },
+  "address": {
+    "type": "PostalAddress",
+    "value": {
+      "addressCountry": "ES",
+      "addressLocality": "Barcelona",
+      "streetAddress": "Gran Via Corts Catalanes,760"
+    }
+  },
+  "totalSlotNumber": {
+    "type": "Number",
+    "value": 100
+  },
+  "outOfServiceSlotNumber": {
+    "type": "Number",
+    "value": 21
+  },
+  "stationName": {
+    "type": "Text",
+    "value": "Pune"
+  },
+  "mediaURL": {
+    "type": "Text",
+    "value": "http://pedalsaddle.in/"
+  },
+  "agency_url": {
+    "type": "Text",
+    "value": "http://pedalsaddle.in/"
+  },
+  "agency_name": {
+    "type": "Text",
+    "value": "PedalSaddle"
+  },
+  "stationCode": {
+    "type": "Number",
+    "value": "2"
+  },
+  "observationDate": {
+    "type": "DateTime",
+    "value": "2021-03-11T15:51:02+05:30"
+  }
 }

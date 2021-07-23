@@ -1,24 +1,74 @@
 {
+  "id": "urn:ngsi-ld:BikeHireDockingStation:Bcn-BikeHireDockingStation-1",
+  "type": "BikeHireDockingStation",
+  "address": {
+    "type": "Property",
+    "value": {
+      "addressCountry": "ES",
+      "addressLocality": "Barcelona",
+      "streetAddress": "Gran Via Corts Catalanes,760",
+      "type": "PostalAddress"
+    }
+  },
+  "availableBikeNumber": {
+    "type": "Property",
+    "value": 20
+  },
+  "freeSlotNumber": {
+    "type": "Property",
+    "value": 10
+  },
+  "location": {
+    "type": "Geoproperty",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        2.180042,
+        41.397952
+      ]
+    }
+  },
+  "status": {
+    "type": "Property",
+    "value": "working"
+  },
+  "totalSlotNumber": {
+    "type": "Property",
+    "value": 100
+  },
+  "outOfServiceSlotNumber": {
+    "type": "Property",
+    "value": 21
+  },
+  "stationName": {
+    "type": "Property",
+    "value": "Pune"
+  },
+  "mediaURL": {
+    "type": "Property",
+    "value": "http://pedalsaddle.in/"
+  },
+  "agency_url": {
+    "type": "Property",
+    "value": "http://pedalsaddle.in/"
+  },
+  "agency_name": {
+    "type": "Property",
+    "value": "PedalSaddle"
+  },
+  "stationCode": {
+    "type": "Property",
+    "value": "2"
+  },
+  "observationDateTime": {
+    "type": "Property",
+    "value": {
+      "@type": "DateTime",
+      "@value": "2021-03-11T15:51:02+05:30"
+    }
+  },
   "@context": [
     "https://smartdatamodels.org/context.jsonld",
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ],
-  "address": {
-    "addressCountry": "ES",
-    "addressLocality": "Barcelona",
-    "streetAddress": "Gran Via Corts Catalanes,760",
-    "type": "PostalAddress"
-  },
-  "availableBikeNumber": 20,
-  "freeSlotNumber": 10,
-  "id": "urn:ngsi-ld:BikeHireDockingStation:Bcn-BikeHireDockingStation-1",
-  "location": {
-    "coordinates": [
-      2.180042,
-      41.397952
-    ],
-    "type": "Point"
-  },
-  "status": "working",
-  "type": "BikeHireDockingStation"
+  ]
 }
