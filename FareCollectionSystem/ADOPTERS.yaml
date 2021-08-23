@@ -1,0 +1,10 @@
+description: This is a compilation list of the current adopters of the data model FareCollectionSystem of the Subject Transportation.
+currentAdopters:
+-
+ adopter: IUDX
+ description: A public transit fare collection system Data Model. 
+ mail: 
+ organization: IUDX
+ project: 
+ comments: 
+ startDate: 

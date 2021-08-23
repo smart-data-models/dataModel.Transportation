@@ -1,0 +1,217 @@
+{
+  "id": "urn:ngsi-ld:FareCollectionSystem:id:RJSB:34513580",
+  "type": "FareCollectionSystem",
+  "dateCreated": {
+    "type": "DateTime",
+    "value": "2020-11-02T06:16:42Z"
+  },
+  "dateModified": {
+    "type": "DateTime",
+    "value": "2020-12-27T15:13:17Z"
+  },
+  "source": {
+    "type": "Text",
+    "value": ""
+  },
+  "name": {
+    "type": "Text",
+    "value": "Fare collection system Nize"
+  },
+  "alternateName": {
+    "type": "Text",
+    "value": ""
+  },
+  "description": {
+    "type": "Text",
+    "value": "Fare collection system Nize for regional routes"
+  },
+  "dataProvider": {
+    "type": "Text",
+    "value": ""
+  },
+  "owner": {
+    "type": "array",
+    "value": [
+      "urn:ngsi-ld:FareCollectionSystem:items:XMXR:79897582",
+      "urn:ngsi-ld:FareCollectionSystem:items:SKAX:98192518"
+    ]
+  },
+  "seeAlso": {
+    "type": "array",
+    "value": [
+      "urn:ngsi-ld:FareCollectionSystem:items:VSVS:72352464",
+      "urn:ngsi-ld:FareCollectionSystem:items:VMFR:36424993"
+    ]
+  },
+  "location": {
+    "type": "geo:json",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        43.7034,
+        7.2663
+      ]
+    }
+  },
+  "address": {
+    "type": "PostalAddress",
+    "value": {
+      "streetAddress": "Av. Nicolas II",
+      "addressLocality": "Nice",
+      "addressRegion": "Provenza-Alpes-Costa Azul",
+      "addressCountry": "France",
+      "postalCode": "06000",
+      "postOfficeBoxNumber": ""
+    }
+  },
+  "areaServed": {
+    "type": "Text",
+    "value": "Nice"
+  },
+  "destinationStopName": {
+    "type": "Text",
+    "value": "Hour risk somebody deal system discussion other plan. Stage the film occur."
+  },
+  "occupancyLevel": {
+    "type": "Text",
+    "value": "Green"
+  },
+  "travelDistance": {
+    "type": "number",
+    "value": 7.5
+  },
+  "passengerCount": {
+    "type": "number",
+    "value": 6
+  },
+  "transactionType": {
+    "type": "Text",
+    "value": "Issue"
+  },
+  "ticketTypeCode": {
+    "type": "Text",
+    "value": "Normal"
+  },
+  "originStopName": {
+    "type": "Text",
+    "value": "Vauban"
+  },
+  "entryAreaCode": {
+    "type": "Text",
+    "value": "city-bus-service"
+  },
+  "cardId": {
+    "type": "Text",
+    "value": "987201910"
+  },
+  "transactionTypeId": {
+    "type": "Text",
+    "value": "2401"
+  },
+  "stage": {
+    "type": "number",
+    "value": 4
+  },
+  "equipmentId": {
+    "type": "Text",
+    "value": "S23"
+  },
+  "direction_id": {
+    "type": "number",
+    "value": 1
+  },
+  "equipmentSequenceNumber": {
+    "type": "number",
+    "value": 2
+  },
+  "shiftOfOperation": {
+    "type": "Text",
+    "value": "2"
+  },
+  "route_id": {
+    "type": "Text",
+    "value": "4"
+  },
+  "trip_id": {
+    "type": "Text",
+    "value": "4A"
+  },
+  "originStopCategory": {
+    "type": "Text",
+    "value": "Bus stop"
+  },
+  "vehicle_label": {
+    "type": "Text",
+    "value": "5821JZS"
+  },
+  "fareForChild": {
+    "type": "number",
+    "value": 3.6
+  },
+  "transactionDateTime": {
+    "type": "DateTime",
+    "value":  "2021-08-20T15:45:22Z"
+
+  },
+  "destinationStopId": {
+    "type": "Text",
+    "value": "Nice-Airport"
+  },
+  "originDestinationCode": {
+    "type": "Text",
+    "value": "23"
+  },
+  "currentTripCount": {
+    "type": "number",
+    "value": 12
+  },
+  "equipmentTypeCode": {
+    "type": "Text",
+    "value": "42"
+  },
+  "destinationStopCategory": {
+    "type": "Text",
+    "value": "Airport"
+  },
+  "transactionVehicleNum": {
+    "type": "number",
+    "value": 23
+  },
+  "fareForAdult": {
+    "type": "number",
+    "value": 4.5
+  },
+  "observationDateTime": {
+    "type": "DateTime",
+    "value": "1988-12-24T07:06:19Z"
+  },
+  "equipmentCompanyCode": {
+    "type": "Text",
+    "value": "103"
+  },
+  "transactionTypeDescription": {
+    "type": "Text",
+    "value": "Regular Fare."
+  },
+  "exitAreaCode": {
+    "type": "Text",
+    "value": "city-bus-service"
+  },
+  "equipmentType": {
+    "type": "Text",
+    "value": "Entry sensor"
+  },
+  "equipmentStopId": {
+    "type": "Text",
+    "value": "BRTS-Sen-23"
+  },
+  "originStopId": {
+    "type": "Text",
+    "value": "9"
+  },
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld"
+  ]
+}
+
+

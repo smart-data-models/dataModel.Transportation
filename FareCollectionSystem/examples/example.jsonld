@@ -1,0 +1,73 @@
+{
+  "id": "urn:ngsi-ld:FareCollectionSystem:id:RJSB:34513580",
+  "type": "FareCollectionSystem",
+  "address": {
+    "addressCountry": "France",
+    "addressLocality": "Nice",
+    "addressRegion": "Provenza-Alpes-Costa Azul",
+    "postOfficeBoxNumber": "",
+    "postalCode": "06000",
+    "streetAddress": "Av. Nicolas II"
+  },
+  "alternateName": "",
+  "areaServed": "Nice",
+  "cardId": "987201910",
+  "currentTripCount": 12,
+  "dataProvider": "",
+  "dateCreated": "2020-11-02T06:16:42Z",
+  "dateModified": "2020-12-27T15:13:17Z",
+  "description": "Fare collection system Nize for regional routes",
+  "destinationStopCategory": "Airport",
+  "destinationStopId": "Nice-Airport",
+  "destinationStopName": "Hour risk somebody deal system discussion other plan. Stage the film occur.",
+  "direction_id": 1,
+  "entryAreaCode": "city-bus-service",
+  "equipmentCompanyCode": "103",
+  "equipmentId": "S23",
+  "equipmentSequenceNumber": 2,
+  "equipmentStopId": "BRTS-Sen-23",
+  "equipmentType": "Entry sensor",
+  "equipmentTypeCode": "42",
+  "exitAreaCode": "city-bus-service",
+  "fareForAdult": 4.5,
+  "fareForChild": 3.6,
+  "location": {
+    "coordinates": [
+      43.7034,
+      7.2663
+    ],
+    "type": "Point"
+  },
+  "name": "Fare collection system Nize",
+  "observationDateTime": "1988-12-24T07:06:19Z",
+  "occupancyLevel": "Green",
+  "originDestinationCode": "23",
+  "originStopCategory": "Bus stop",
+  "originStopId": "9",
+  "originStopName": "Vauban",
+  "owner": [
+    "urn:ngsi-ld:FareCollectionSystem:items:XMXR:79897582",
+    "urn:ngsi-ld:FareCollectionSystem:items:SKAX:98192518"
+  ],
+  "passengerCount": 6,
+  "route_id": "4",
+  "seeAlso": [
+    "urn:ngsi-ld:FareCollectionSystem:items:VSVS:72352464",
+    "urn:ngsi-ld:FareCollectionSystem:items:VMFR:36424993"
+  ],
+  "shiftOfOperation": "2",
+  "source": "",
+  "stage": 4,
+  "ticketTypeCode": "Normal",
+  "transactionDateTime": "2021-08-20T15:45:22Z",
+  "transactionType": "Issue",
+  "transactionTypeDescription": "Regular Fare.",
+  "transactionTypeId": "2401",
+  "transactionVehicleNum": 23,
+  "travelDistance": 7.5,
+  "trip_id": "4A",
+  "vehicle_label": "5821JZS",
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld"
+  ]
+}
