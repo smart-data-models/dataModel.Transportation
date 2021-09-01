@@ -1,27 +1,33 @@
 {
-  "id": "Bcn-BikeHireDockingStation-1",
-  "type": "BikeHireDockingStation",
-  "address": {
-    "addressCountry": "ES",
-    "addressLocality": "Barcelona",
-    "streetAddress": "Gran Via Corts Catalanes,760"
-  },
-  "availableBikeNumber": 20,
-  "freeSlotNumber": 10,
-  "location": {
-    "type": "Point",
-    "coordinates": [
-      2.180042,
-      41.397952
-    ]
-  },
-  "status": "working",
-  "totalSlotNumber": 100,
-  "outOfServiceSlotNumber": 21,
-  "stationName": "Pune",
-  "mediaURL": "http://pedalsaddle.in/",
-  "agency_url": "http://pedalsaddle.in/",
-  "agency_name": "PedalSaddle",
-  "stationCode": "2",
-  "observationDateTime": "2021-03-11T15:51:02+05:30"
+    "id": "urn:ngsi-ld:Bcn-BikeHireDockingStation-1",
+    "type": "BikeHireDockingStation",
+    "status": "working",
+    "provider": "University of Mumbay",
+    "contactPoint": {
+        "url": "uri:ngsi:www.lignesdazur.com"
+    },
+    "availableBikeNumber": 20,
+    "freeSlotNumber": 10,
+    "openingHours": "Mo-Fr 10:00-19:00, Sa 10:00-22:00, Su 10:00-21:00",
+    "location": {
+        "type": "Point",
+        "coordinates": [
+            2.180042,
+            41.397952
+        ]
+    },
+    "address": {
+        "addressCountry": "ES",
+        "addressLocality": "Barcelona",
+        "streetAddress": "Gran Via Corts Catalanes,760"
+    },
+    "totalSlotNumber": 100,
+    "outOfServiceSlotNumber": 21,
+    "stationName": "Pune",
+    "mediaURL": "http://pedalsaddle.in/",
+    "agency_url": "http://pedalsaddle.in/",
+    "agency_name": "PedalSaddle",
+    "stationCode": "2",
+    "observationDate": "2021-03-11T15:51:02+05:30",
+    "agency_fare_url": ""
 }
