@@ -1,74 +1,90 @@
 {
-  "id": "urn:ngsi-ld:BikeHireDockingStation:Bcn-BikeHireDockingStation-1",
-  "type": "BikeHireDockingStation",
-  "address": {
-    "type": "Property",
-    "value": {
-      "addressCountry": "ES",
-      "addressLocality": "Barcelona",
-      "streetAddress": "Gran Via Corts Catalanes,760",
-      "type": "PostalAddress"
-    }
-  },
-  "availableBikeNumber": {
-    "type": "Property",
-    "value": 20
-  },
-  "freeSlotNumber": {
-    "type": "Property",
-    "value": 10
-  },
-  "location": {
-    "type": "Geoproperty",
-    "value": {
-      "type": "Point",
-      "coordinates": [
-        2.180042,
-        41.397952
-      ]
-    }
-  },
-  "status": {
-    "type": "Property",
-    "value": "working"
-  },
-  "totalSlotNumber": {
-    "type": "Property",
-    "value": 100
-  },
-  "outOfServiceSlotNumber": {
-    "type": "Property",
-    "value": 21
-  },
-  "stationName": {
-    "type": "Property",
-    "value": "Pune"
-  },
-  "mediaURL": {
-    "type": "Property",
-    "value": "http://pedalsaddle.in/"
-  },
-  "agency_url": {
-    "type": "Property",
-    "value": "http://pedalsaddle.in/"
-  },
-  "agency_name": {
-    "type": "Property",
-    "value": "PedalSaddle"
-  },
-  "stationCode": {
-    "type": "Property",
-    "value": "2"
-  },
-  "observationDateTime": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2021-03-11T15:51:02+05:30"
-    }
-  },
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ]
+    "id": "urn:ngsi-ld:Bcn-BikeHireDockingStation-1",
+    "type": "BikeHireDockingStation",
+    "status": {
+        "type": "Property",
+        "value": "working"
+    },
+    "provider": {
+        "type": "Property",
+        "value": "University of Mumbay"
+    },
+    "contactPoint": {
+        "type": "Property",
+        "value": {
+            "url": "uri:ngsi:www.lignesdazur.com"
+        }
+    },
+    "availableBikeNumber": {
+        "type": "Property",
+        "value": 20
+    },
+    "freeSlotNumber": {
+        "type": "Property",
+        "value": 10
+    },
+    "openingHours": {
+        "type": "Property",
+        "value": "Mo-Fr 10:00-19:00, Sa 10:00-22:00, Su 10:00-21:00"
+    },
+    "location": {
+        "type": "Geoproperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                2.180042,
+                41.397952
+            ]
+        }
+    },
+    "address": {
+        "type": "Property",
+        "value": {
+            "addressCountry": "ES",
+            "addressLocality": "Barcelona",
+            "streetAddress": "Gran Via Corts Catalanes,760"
+        }
+    },
+    "totalSlotNumber": {
+        "type": "Property",
+        "value": 100
+    },
+    "outOfServiceSlotNumber": {
+        "type": "Property",
+        "value": 21
+    },
+    "stationName": {
+        "type": "Property",
+        "value": "Pune"
+    },
+    "mediaURL": {
+        "type": "Property",
+        "value": "http://pedalsaddle.in/"
+    },
+    "agency_url": {
+        "type": "Property",
+        "value": "http://pedalsaddle.in/"
+    },
+    "agency_name": {
+        "type": "Property",
+        "value": "PedalSaddle"
+    },
+    "stationCode": {
+        "type": "Property",
+        "value": "2"
+    },
+    "observationDate": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2021-03-11T15:51:02+05:30"
+        }
+    },
+    "agency_fare_url": {
+        "type": "Property",
+        "value": ""
+    },
+    "@context": [
+        "https://smartdatamodels.org/context.jsonld"
+    ]
 }
