@@ -26,6 +26,24 @@ BikeHireDockingStation:
       x-ngsi:
         model: https://schema.org/address
         type: Property
+    agency_fare_url:
+      description: "URL of a web page that contains the details of the fares and also could allow to purchase tickets for that agency online. SameAs: 'agency_fare_url' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt) "
+      type: string
+      x-ngsi:
+        type: Property
+    agency_name:
+      description: "The agency_name field contains the full name of the transit agency. SameAs: 'agency_name' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)"
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    agency_url:
+      description: "The agency_url field contains the URL of the transit agency. SameAs: 'agency_url' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)"
+      format: uri
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
     alternateName:
       description: 'An alternative name for this item'
       type: string
@@ -45,10 +63,28 @@ BikeHireDockingStation:
         model: https://schema.org/Number.
         type: Property
     contactPoint:
-      description: 'Bike hire service contact point'
+      description: 'The details to contact with the item.'
+      properties:
+        contactType:
+          description: 'Property. Contact type of this item.'
+          type: string
+        email:
+          description: 'Property. Email address of owner.'
+          format: idn-email
+          type: string
+        name:
+          description: 'Property. The name of this item.'
+          type: string
+        telephone:
+          description: 'Property. Telephone of this contact.'
+          type: string
+        url:
+          description: 'Property. URL which provides a description or further information about this item.'
+          format: uri
+          type: string
       type: object
       x-ngsi:
-        model: https://schema.org/contactPoint
+        model: https://schema.org/ContactPoint
         type: Property
     dataProvider:
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'
@@ -245,10 +281,24 @@ BikeHireDockingStation:
           type: object
       x-ngsi:
         type: Geoproperty
+    mediaURL:
+      description: 'URL providing further information of any image(s) or media of the complaint or place.'
+      format: uri
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
     name:
       description: 'The name of this item.'
       type: string
       x-ngsi:
+        type: Property
+    observationDateTime:
+      description: 'Last reported time of observation.'
+      format: date-time
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
         type: Property
     openingHours:
       description: 'Opening hours of the docking station'
@@ -273,7 +323,7 @@ BikeHireDockingStation:
         type: Property
     provider:
       description: 'Bike hire service provider'
-      type: object
+      type: string
       x-ngsi:
         model: https://schema.org/provider.
         type: Property
@@ -293,6 +343,18 @@ BikeHireDockingStation:
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
       type: string
       x-ngsi:
+        type: Property
+    stationCode:
+      description: 'The station number or station code of the bike hire docking station corresponding to the observation.'
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    stationName:
+      description: 'The name of the bike hire docking station corresponding to this observation.'
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
         type: Property
     status:
       description: 'Status of the bike hire docking station. Enum:''working, outOfService, withIncidence, full, almostFull, empty, almostEmpty''. Or any other application specific.'
@@ -326,3 +388,4 @@ BikeHireDockingStation:
     - id
     - type
   type: object
+  version: 0.1.1
