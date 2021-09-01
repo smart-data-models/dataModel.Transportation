@@ -63,7 +63,7 @@
           "description": "Property. Bike hire service provider. Model:'https://schema.org/provider'."
         },
         "contactPoint": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons/contactPoint"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons/properties/contactPoint"
         },
         "stationName": {
           "type": "string",
