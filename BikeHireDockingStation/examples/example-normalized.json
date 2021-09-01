@@ -1,22 +1,31 @@
 {
-  "id": "Bcn-BikeHireDockingStation-1",
+  "id": "urn:ngsi-ld:Bcn-BikeHireDockingStation-1",
   "type": "BikeHireDockingStation",
   "status": {
+    "type": "Text",
     "value": "working"
+  },
+  "provider": {
+    "type": "Text",
+    "value": "University of Mumbay"
+  },
+  "contactPoint": {
+    "type": "StructuredValue",
+    "value": {
+      "url": "uri:ngsi:www.lignesdazur.com"
+    }
   },
   "availableBikeNumber": {
     "type": "Number",
-    "value": 20,
-    "metadata": {
-      "timestamp": {
-        "type": "DateTime",
-        "value": "2018-09-25T12:00:00"
-      }
-    }
+    "value": 20
   },
   "freeSlotNumber": {
     "type": "Number",
     "value": 10
+  },
+  "openingHours": {
+    "type": "Text",
+    "value": "Mo-Fr 10:00-19:00, Sa 10:00-22:00, Su 10:00-21:00"
   },
   "location": {
     "type": "geo:json",
@@ -67,5 +76,9 @@
   "observationDate": {
     "type": "DateTime",
     "value": "2021-03-11T15:51:02+05:30"
+  },
+  "agency_fare_url": {
+    "type": "Text",
+    "value": ""
   }
 }
