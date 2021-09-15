@@ -88,5 +88,10 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "dateObserved"
     ]
 }
