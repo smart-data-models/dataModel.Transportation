@@ -101,5 +101,6 @@
         "type",
         "notAllowedVehicleType",
         "refRestrictedTrafficArea"
-    ]
+    ],
+    "$schemaVersion": "0.0.1"
 }
