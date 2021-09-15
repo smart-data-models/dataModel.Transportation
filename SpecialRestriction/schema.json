@@ -2,5 +2,6 @@
     "$schema": "http://json-schema.org/schema#",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Transportation/SpecialRestriction/schema.json",
-    "title": "Smart Data Models - Transportation / SpecialRestriction"
+    "title": "Smart Data Models - Transportation / SpecialRestriction",
+    "description": "A Special Restriction represents a particular case that specialise restriction reported in a Restricted Traffic Areas; for instance it could describe particular restrictions applied to specific kind vehicles"
 }
