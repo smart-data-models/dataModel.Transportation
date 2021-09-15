@@ -3,5 +3,6 @@
     "$schemaVersion": "0.0.1",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Transportation/VehicleModel/schema.json",
-    "title": " - Vehicle / Vehicle Model"
+    "title": " - Vehicle / Vehicle Model",
+    "description": "This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model."
 }
