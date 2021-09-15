@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
     "modelTags": "",
-    "$id": "https://smart-data-models.github.io/dataModel.Transportation/RestrictionException/schema.json"
+    "$id": "https://smart-data-models.github.io/dataModel.Transportation/RestrictionException/schema.json",
+    "$schemaVersion": "0.1.0"
 }
