@@ -3,5 +3,6 @@
     "$schemaVersion": "0.0.1",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Transportation/Road/schema.json",
-    "title": " - Transportation / Road"
+    "title": " - Transportation / Road",
+    "description": "This entity contains a harmonised geographic and contextual description of a road."
 }
