@@ -3,5 +3,6 @@
     "$schemaVersion": "0.0.1",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Transportation/FareCollectionSystem/schema.json",
-    "title": "Smart Dta Models - FareCollectionSystem"
+    "title": "Smart Dta Models - FareCollectionSystem",
+    "description": "A public transit fare collection system Data Model"
 }
