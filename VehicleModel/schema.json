@@ -132,5 +132,14 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "name",
+        "type",
+        "vehicleType",
+        "brandName",
+        "modelName",
+        "manufacturerName"
     ]
 }
