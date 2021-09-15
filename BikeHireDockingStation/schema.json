@@ -2,5 +2,6 @@
     "$schema": "http://json-schema.org/schema#",
     "$schemaVersion": "0.1.1",
     "modelTags": "",
-    "$id": "https://smart-data-models.github.io/dataModel.Transportation/BikeHireDockingStation/schema.json"
+    "$id": "https://smart-data-models.github.io/dataModel.Transportation/BikeHireDockingStation/schema.json",
+    "title": " - Transportation / Bike Hire Docking Station"
 }
