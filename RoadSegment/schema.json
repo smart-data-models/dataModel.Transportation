@@ -144,5 +144,14 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "name",
+        "type",
+        "refRoad",
+        "startPoint",
+        "endPoint",
+        "allowedVehicleType"
     ]
 }
