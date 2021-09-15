@@ -4,5 +4,96 @@
     "$id": "https://smart-data-models.github.io/dataModel.Transportation/SpecialRestriction/schema.json",
     "title": "Smart Data Models - Transportation / SpecialRestriction",
     "description": "A Special Restriction represents a particular case that specialise restriction reported in a Restricted Traffic Areas; for instance it could describe particular restrictions applied to specific kind vehicles",
-    "type": "object"
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+        },
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+        },
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "SpecialRestriction"
+                    ],
+                    "description": "Property. NGSI Entity type. It has to be SpecialRestriction"
+                },
+                "notAllowedVehicleType": {
+                    "type": "array",
+                    "description": "Property. Vehicle type(s) not allowed to cross the restricted traffic area.",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "anyVehicle",
+                            "agriculturalVehicle",
+                            "bicycle",
+                            "bus",
+                            "car",
+                            "caravan",
+                            "carWithCaravan",
+                            "carWithTrailer",
+                            "constructionOrMaintenanceVehicle",
+                            "dieselCarEuro0",
+                            "dieselCarEuro1",
+                            "dieselCarEuro2",
+                            "dieselCarEuro3",
+                            "dieselCarEuro4",
+                            "dieselCarEuro5a",
+                            "dieselCarEuro5b",
+                            "dieselCarEuro6",
+                            "freightTransportVehicle",
+                            "lorry",
+                            "moped",
+                            "motorcycle",
+                            "motorcycleWithSideCar",
+                            "motorscooter",
+                            "petrolCarEuro0",
+                            "petrolCarEuro1",
+                            "petrolCarEuro2",
+                            "petrolCarEuro3",
+                            "petrolCarEuro4",
+                            "petrolCarEuro5",
+                            "petrolCarEuro6",
+                            "tanker",
+                            "trailer",
+                            "van"
+                        ]
+                    },
+                    "minItems": 1,
+                    "uniqueItems": true
+                },
+                "restrictionValidityHours": {
+                    "type": "string",
+                    "description": "Property. Days of the week and hours in which the traffic restriction is active."
+                },
+                "refVehicleModel": {
+                    "type": "array",
+                    "description": "Property. Specify characteristics of the vehicle for which the exception has been established",
+                    "items": {
+                        "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+                    }
+                },
+                "refRestrictedTrafficArea": {
+                    "anyOf": [
+                        {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256,
+                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        }
+                    ],
+                    "description": "Property. The Restricted Traffic Area this exception belongs."
+                }
+            }
+        }
+    ]
 }
