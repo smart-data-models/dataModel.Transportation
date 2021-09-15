@@ -421,5 +421,6 @@
         "id",
         "type",
         "status"
-    ]
+    ],
+    "$schemaVersion": "0.0.1"
 }
