@@ -236,5 +236,12 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "vehicleType",
+        "category",
+        "location"
     ]
 }
