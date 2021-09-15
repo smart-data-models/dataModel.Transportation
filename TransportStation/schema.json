@@ -3,5 +3,6 @@
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/data-models/Transportation/TransportStation/schema.json",
     "$schemaVersion": "0.1.1",
-    "title": "Station schema"
+    "title": "Station schema",
+    "description": "The data model is a general description of urban stations (Metro, Bus, Tram, Heliport, ...) according to the GFTS standard https://developers.google.com/transit/gtfs/reference/#stopstxt, as well the detailed description of these (means of access, platform, assistance, ...)."
 }
