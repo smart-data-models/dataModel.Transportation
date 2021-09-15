@@ -3,5 +3,6 @@
     "$schemaVersion": "0.0.1",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Transportation/CrowdFlowObserved/schema.json",
-    "title": " - SynchroniCity - Transportation / CrowdFlowObserved"
+    "title": " - SynchroniCity - Transportation / CrowdFlowObserved",
+    "description": "CrowdFlowObserved"
 }
