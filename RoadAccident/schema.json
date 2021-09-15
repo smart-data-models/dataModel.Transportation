@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
     "modelTags": "",
-    "$id": "https://smart-data-models.github.io/dataModel.Transportation/RoadAccident/schema.json"
+    "$id": "https://smart-data-models.github.io/dataModel.Transportation/RoadAccident/schema.json",
+    "title": "Smart Data Models - RoadAccident schema"
 }
