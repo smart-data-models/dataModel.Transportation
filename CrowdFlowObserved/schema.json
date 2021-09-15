@@ -4,5 +4,6 @@
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Transportation/CrowdFlowObserved/schema.json",
     "title": " - SynchroniCity - Transportation / CrowdFlowObserved",
-    "description": "CrowdFlowObserved"
+    "description": "CrowdFlowObserved",
+    "type": "object"
 }
