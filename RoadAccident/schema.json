@@ -2,5 +2,6 @@
     "$schema": "http://json-schema.org/schema#",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Transportation/RoadAccident/schema.json",
-    "title": "Smart Data Models - RoadAccident schema"
+    "title": "Smart Data Models - RoadAccident schema",
+    "description": "A road accident description with causes and aftermath. First version developed in Synchronicity project"
 }
