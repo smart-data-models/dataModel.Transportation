@@ -156,5 +156,12 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "socketType",
+        "capacity",
+        "allowedVehicleType"
     ]
 }
