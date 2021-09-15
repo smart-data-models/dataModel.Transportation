@@ -5,5 +5,88 @@
     "$id": "https://smart-data-models.github.io/dataModel.Transportation/CrowdFlowObserved/schema.json",
     "title": " - SynchroniCity - Transportation / CrowdFlowObserved",
     "description": "CrowdFlowObserved",
-    "type": "object"
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+        },
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+        },
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "CrowdFlowObserved"
+                    ],
+                    "description": "Property. NGSI Entity type. It has to be CrowdFlowObserved"
+                },
+                "refRoadSegment": {
+                    "anyOf": [
+                        {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256,
+                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        }
+                    ],
+                    "description": "Relationship. Concerned road segment on which the observation has been made. Model:'https://schema.org/URL'."
+                },
+                "dateObserved": {
+                    "type": "string",
+                    "description": "Property. The date and time of this observation in ISO8601 UTC format. It can be represented by an specific time instant or by an ISO8601 interval. As a workaround for the lack of support of Orion Context Broker for datetime intervals, it can be used two separate attributes: `dateObservedFrom`, `dateObservedTo`. Model:'https://schema.org/URL'."
+                },
+                "dateObservedFrom": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Property. Model:'https://schema.org/DateTime'. Observation period start date and time. See `dateObserved`."
+                },
+                "dateObservedTo": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Property. Observation period end date and time. See `dateObserved`.. Model:'https://schema.org/DateTime'."
+                },
+                "peopleCount": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "description": "Property. Concerned road segment on which the observation has been made. Model:'https://schema.org/Number'."
+                },
+                "occupancy": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1,
+                    "description": "Property. Fraction of the observation time where a person has been occupying the observed walkway. Model:'https://schema.org/Number)'"
+                },
+                "averageCrowdSpeed": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Average speed of the crowd transiting during the observation period. Model:'https://schema.org/Number'. Units:'Kilometer per hour (Km/h).'"
+                },
+                "congested": {
+                    "type": "boolean",
+                    "description": "Property. Flags whether there was a crowd congestion during the observation period in the referred walkway. The absence of this attribute means no crowd congestion. Model:'https://schema.org/Boolean'."
+                },
+                "averageHeadwayTime": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Average headway time. Headway time is the time\n    elapsed between two consecutive persons. Model:'https://schema.org/Number'. Units:'second (s)'"
+                },
+                "direction": {
+                    "type": "string",
+                    "enum": [
+                        "inbound",
+                        "outbound"
+                    ],
+                    "description": "Property. Usual direction of travel in the walkway referred by this observation with respect to the city center. Model:'https://schema.org/Text'. Enum:'inbound, outbound'"
+                }
+            }
+        }
+    ]
 }
