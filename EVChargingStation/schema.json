@@ -4,5 +4,6 @@
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Transportation/EVChargingStation/schema.json",
     "title": "Smart Data Models - Transportation / EV Charging Station",
-    "description": "EV Charging Station"
+    "description": "EV Charging Station",
+    "type": "object"
 }
