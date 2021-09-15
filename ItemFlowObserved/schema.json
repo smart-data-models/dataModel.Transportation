@@ -151,5 +151,12 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "location",
+        "dateObserved",
+        "laneId"
     ]
 }
