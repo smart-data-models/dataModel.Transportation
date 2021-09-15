@@ -95,5 +95,11 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "notAllowedVehicleType",
+        "refRestrictedTrafficArea"
     ]
 }
