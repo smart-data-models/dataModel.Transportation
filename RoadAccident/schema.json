@@ -416,5 +416,10 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "status"
     ]
 }
