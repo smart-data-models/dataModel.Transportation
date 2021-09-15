@@ -303,5 +303,14 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "location",
+        "dateObserved",
+        "dateLastReported",
+        "stationType",
+        "locationType"
     ]
 }
