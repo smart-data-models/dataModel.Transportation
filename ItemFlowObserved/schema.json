@@ -2,5 +2,6 @@
     "$schema": "http://json-schema.org/schema#",
     "schemaVersion": "0.0.1",
     "modelTags": "",
-    "$id": "https://smart-data-models.github.io/data-models/Transportation/ItemFlowObserved/schema.json"
+    "$id": "https://smart-data-models.github.io/data-models/Transportation/ItemFlowObserved/schema.json",
+    "title": "Flow Observed schema"
 }
