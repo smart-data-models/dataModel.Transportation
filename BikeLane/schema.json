@@ -5,5 +5,41 @@
     "$id": "https://smart-data-models.github.io/datamodel.Transportation/BikeLane/schema.json",
     "title": "Smart Data Models - Bike Lane Schema",
     "description": "A generic bike lane schema",
-    "type": "object"
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+        },
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+        },
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "BikeLane"
+                    ],
+                    "description": "Property. NGSI-LD Entity Type. It has to be BikeLanes"
+                },
+                "laneOccupancy": {
+                    "type": "number",
+                    "description": "Property. Model:'https://schema.org/Number'. Indicates the number of vehicles circulating on the lane."
+                },
+                "laneLength": {
+                    "type": "number",
+                    "description": "Property. Model:'https://schema.org/Number'. Indicates the length of the lane."
+                },
+                "laneWidth": {
+                    "type": "number",
+                    "description": "Property. Model:'https://schema.org/Number'. Indicates the width of the lane."
+                },
+                "dateObserved": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Property. Model:'https://schema.org/DateTime'. The date and time of this observation in ISO8601 UTCformat."
+                }
+            }
+        }
+    ]
 }
