@@ -4,5 +4,6 @@
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Transportation/TrafficFlowObserved/schema.json",
     "title": " - Transportation / TrafficFlowObserved",
-    "description": "An observation of traffic flow conditions at a certain place and time."
+    "description": "An observation of traffic flow conditions at a certain place and time.",
+    "type": "object"
 }
