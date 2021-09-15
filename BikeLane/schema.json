@@ -4,5 +4,6 @@
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/datamodel.Transportation/BikeLane/schema.json",
     "title": "Smart Data Models - Bike Lane Schema",
-    "description": "A generic bike lane schema"
+    "description": "A generic bike lane schema",
+    "type": "object"
 }
