@@ -5,5 +5,151 @@
     "$id": "https://smart-data-models.github.io/data-models/Transportation/ItemFlowObserved/schema.json",
     "title": "Flow Observed schema",
     "description": "The data model intended to measure an observation linked to the movement of an item at a certain location and over a given period. This Data Model proposes an evolution of two Data Model by merging them and integrating all the attributes of the initial version of [TrafficFlowObserved] and [CrowFlowObserved] and by extension any type of item that we want to analyze the movements. Attributes `vehicleType` and `vehicleSubType` are removed from the initial data Model in order to become generic `itemType` and `itemSubType` of possible values. (people, Type of vehicle, Type of boat, Type of plane, ...).",
-    "type": "object"
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+        },
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+        },
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "ItemFlowObserved"
+                    ],
+                    "description": "Property. NGSI Entity type. It has to be ItemFlowObserved"
+                },
+                "refDevice": {
+                    "anyOf": [
+                        {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256,
+                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        }
+                    ],
+                    "description": "Relationship. The device or devices used to obtain the data expressed by this record"
+                },
+                "refRoadSegment": {
+                    "anyOf": [
+                        {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256,
+                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        }
+                    ],
+                    "description": "Relationship. Concerned road segment on which the observation has been made"
+                },
+                "dateObserved": {
+                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/dateObserved"
+                },
+                "dateObservedFrom": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Property. Observation period : Start date and time in an ISO8601 UTC format."
+                },
+                "dateObservedTo": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Property. Observation period : End date and time in an ISO8601 UTC format."
+                },
+                "itemType": {
+                    "type": "string",
+                    "enum": [
+                        "people",
+                        "ship",
+                        "vehicle",
+                        "yacht"
+                    ],
+                    "description": "Property. Reference to an identifier of an existing 'Type' attribute of an NGSI entity (Vehicle / BoatType / Person) or of a future entity listing an item 'Type' to be counted. Enum:'people, ship, vehicle, yacht'"
+                },
+                "itemSubType": {
+                    "type": "string",
+                    "description": "Property. Reference to an identifier of an existing 'subType' attribute of an NGSI entity (Vehicle / BoatType / Person ) or of a future entity listing an item 'subType' to be counted."
+                },
+                "laneId": {
+                    "type": "integer",
+                    "description": "Property. Lane identifier. Lane identification is done using the conventions defined by RoadSegment entity which are based on [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Forward_%26_backward,_left_%26_right).",
+                    "min": 1
+                },
+                "laneDirection": {
+                    "type": "string",
+                    "enum": [
+                        "forward",
+                        "backward",
+                        "inbound",
+                        "outbound",
+                        "right",
+                        "left"
+                    ],
+                    "description": "Property. Usual direction of travel in the lane referred by this observation. This attribute is useful when the observation is not referencing any road segment, allowing to know the direction of travel of the traffic flow observed. See RoadSegment for a description of the semantics of these values."
+                },
+                "reversedLane": {
+                    "type": "boolean",
+                    "description": "Property. Flags whether traffic in the lane was reversed during the observation period. The absence of this attribute means no lane reversion"
+                },
+                "intensity": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Total number of items detected during this observation period"
+                },
+                "occupancy": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1,
+                    "description": "Property. Fraction of the observation time where a item has been occupying the observed lane"
+                },
+                "congested": {
+                    "type": "boolean",
+                    "description": "Property. Flags whether there was a crowd congestion during the observation period in the referred walkway. The absence of this attribute means no crowd congestion"
+                },
+                "averageSpeed": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Average speed of detected items transiting during the observation period. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) . Depending the type of Flow, the value can be **KMH** f(vehicule, pedestrian, etc.) represents Kilometer per hour (km/h) or **KNT** represents Knot (Boat)."
+                },
+                "averageLength": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Average length of detected items transiting during the observation period. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) . For instance, **MTR** represents Meter."
+                },
+                "averageHeadwayTime": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Average headway time. Head away time is the time elapsed between two consecutive items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **SEC** represents Second."
+                },
+                "averageGapDistance": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Average gap distance between consecutive 2 detected items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **MTR** represents Meter."
+                },
+                "speedMin": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Minimum speed detected during the observation period. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) . Depending the type of Flow, the value can be **KMH** (vehicule, pedestrian, ...) represents Kilometer per hour (km/h) or **KNT** represents Knot (Boat)."
+                },
+                "speedMax": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Maximum speed detected during the observation period. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) . Depending the type of Flow, the value can be **KMH** (vehicule, pedestrian, ...) represents Kilometer per hour (km/h) or **KNT** represents Knot (Boat)."
+                }
+            }
+        }
+    ]
 }
