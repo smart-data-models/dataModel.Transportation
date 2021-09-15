@@ -2,5 +2,6 @@
     "$schema": "http://json-schema.org/schema#",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Transportation/RestrictedTrafficArea/schema.json",
-    "$schemaVersion": "0.0.1"
+    "$schemaVersion": "0.0.1",
+    "title": "Smart Data Models  - Transportation / RestrictedTrafficArea"
 }
