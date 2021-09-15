@@ -2,5 +2,6 @@
     "$schema": "http://json-schema.org/schema#",
     "$schemaVersion": "0.0.2",
     "modelTags": "",
-    "$id": "https://smart-data-models.github.io/dataModel.Transportation/Vehicle/schema.json"
+    "$id": "https://smart-data-models.github.io/dataModel.Transportation/Vehicle/schema.json",
+    "title": "Smart Data Models - Vehicle - "
 }
