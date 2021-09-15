@@ -3,5 +3,6 @@
     "schemaVersion": "0.0.1",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/data-models/Transportation/ItemFlowObserved/schema.json",
-    "title": "Flow Observed schema"
+    "title": "Flow Observed schema",
+    "description": "The data model intended to measure an observation linked to the movement of an item at a certain location and over a given period. This Data Model proposes an evolution of two Data Model by merging them and integrating all the attributes of the initial version of [TrafficFlowObserved] and [CrowFlowObserved] and by extension any type of item that we want to analyze the movements. Attributes `vehicleType` and `vehicleSubType` are removed from the initial data Model in order to become generic `itemType` and `itemSubType` of possible values. (people, Type of vehicle, Type of boat, Type of plane, ...)."
 }
