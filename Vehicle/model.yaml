@@ -569,7 +569,7 @@ Vehicle:
       x-ngsi:
         model: https://schema.org/Number
         type: Property
-        units: 'Kilometer per hour (Km/h)'
+        units: Degree
     type:
       description: 'NGSI Entity type. It has to be Vehicle'
       enum:
@@ -657,3 +657,4 @@ Vehicle:
     - category
     - location
   type: object
+  version: 0.0.2
