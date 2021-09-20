@@ -146,7 +146,7 @@ Vehicle:
       x-ngsi:
         model: https://schema.org/Number
         type: Property
-        units: 'Kilometer per hour (Km/h)'
+        units: Degree
     id:
       anyOf: &vehicle_-_properties_-_owner_-_items_-_anyof
         - description: 'Property. Identifier format of any NGSI entity'
@@ -569,7 +569,7 @@ Vehicle:
       x-ngsi:
         model: https://schema.org/Number
         type: Property
-        units: Degree
+        units: Km/h
     type:
       description: 'NGSI Entity type. It has to be Vehicle'
       enum:
