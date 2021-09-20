@@ -97,7 +97,7 @@
                             ]
                         }
                     ],
-                    "description": "Property. Denotes the magnitude of the horizontal component of the vehicle's current velocity and is specified in Kilometers per Hour. If provided, the value of the speed attribute must be a non-negative real number. `-1` MAY be used if speed is transiently unknown for some reason. Model:'https://schema.org/Number'. Units:'Kilometer per hour (Km/h)'"
+                    "description": "Property. Denotes the magnitude of the horizontal component of the vehicle's current velocity and is specified in Kilometers per Hour. If provided, the value of the speed attribute must be a non-negative real number. `-1` MAY be used if speed is transiently unknown for some reason. Model:'https://schema.org/Number'. Units:'Degree'"
                 },
                 "heading": {
                     "oneOf": [
