@@ -6,7 +6,7 @@ Version: 0.1.0
 A Restriction Exception represents a particular case that specialise restriction reported in a Restricted Traffic Areas; for instance it could describe particular permissions applied to specific kind vehicles
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.Transportation/blob/master/RestrictionException/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/RestrictionException/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.Transportation/blob/master/RestrictionException/doc/spec.md)
 
