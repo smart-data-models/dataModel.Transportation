@@ -6,7 +6,7 @@ Version: 0.1.1
 The data model is a general description of urban stations (Metro, Bus, Tram, Heliport, ...) according to the GFTS standard https://developers.google.com/transit/gtfs/reference/#stopstxt, as well the detailed description of these (means of access, platform, assistance, ...).
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.Transportation/blob/master/TransportStation/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/TransportStation/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.Transportation/blob/master/TransportStation/doc/spec.md)
 
