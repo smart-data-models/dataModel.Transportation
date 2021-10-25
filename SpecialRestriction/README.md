@@ -6,7 +6,7 @@ Version: 0.0.1
 A Special Restriction represents a particular case that specialise restriction reported in a Restricted Traffic Areas; for instance it could describe particular restrictions applied to specific kind vehicles
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.Transportation/blob/master/SpecialRestriction/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/SpecialRestriction/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.Transportation/blob/master/SpecialRestriction/doc/spec.md)
 
