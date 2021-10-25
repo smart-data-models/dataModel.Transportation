@@ -6,7 +6,7 @@ Version: 0.0.1
 A road accident description with causes and aftermath. First version developed in Synchronicity project
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.Transportation/blob/master/RoadAccident/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/RoadAccident/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.Transportation/blob/master/RoadAccident/doc/spec.md)
 
