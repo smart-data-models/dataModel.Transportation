@@ -6,7 +6,7 @@ Version: 0.0.1
 An observation of traffic flow conditions at a certain place and time.
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.Transportation/blob/master/TrafficFlowObserved/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/TrafficFlowObserved/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.Transportation/blob/master/TrafficFlowObserved/doc/spec.md)
 
