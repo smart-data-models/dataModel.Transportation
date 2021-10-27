@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$schemaVersion": "0.0.1",
+  "$id": "https://smart-data-models.github.io/dataModel.Transportation/TrafficViolations/schema.json",
+  "modelTags": "IUDX",
+  "title": "Smart Data models TrafficViolations-schema",
+  "description": "A Data Model for Traffic Violations registered and E-Challans generated in Cities.",
+  "type": "object",
+  "required": [
+    "id",
+    "type"
+  ],
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Property. NGSI entity type. It has to be TrafficViolation.",
+          "enum": [
+            "TrafficViolation"
+          ]
+        },
+        "amountCollected": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Amount collected towards the service corresponding to this observation."
+        },
+        "mediaURL": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/URL'. URL providing further information of any image(s) or media of the complaint or place."
+        },
+        "equipmentId": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Unique Id of the equipment corresponding to this observation."
+        },
+        "equipmentType": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Type of equipment or the name of the equipment corresponding to this observation."
+        },
+        "titleCode": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. The code assigned to the title corresponding to this observation."
+        },
+        "reportId": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Unique Id assigned for the issue or report or feedback or transaction corresponding to this observation."
+        },
+        "observationDateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/Text'. Last reported time of observation."
+        },
+        "paymentStatus": {
+          "type": "string",
+          "enum": [
+            "Paid",
+            "Unpaid"
+          ],
+          "description": "Property. Model:'https://schema.org/Text.  The payment status of the fine or violation or challan corresponding to this observation. Enum:'Paid, Unpaid'."
+        }
+      }
+    }
+  ]
+}
