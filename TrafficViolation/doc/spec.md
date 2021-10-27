@@ -2,11 +2,14 @@ Entity: TrafficViolation
 ========================  
 [Open License](https://github.com/smart-data-models//dataModel.Transportation/blob/master/TrafficViolation/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Global description: **A Data Model for Traffic Violations registered and E-Challans generated in Cities.**  
+version: 0.0.1  
 
 ## List of properties  
 
-Required properties  
-- No required properties  ## Data Model description of properties  
+- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `amountCollected`: Amount collected towards the service corresponding to this observation.  - `areaServed`: The geographic area where a service or offered item is provided  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `equipmentId`: Unique Id of the equipment corresponding to this observation.  - `equipmentType`: Type of equipment or the name of the equipment corresponding to this observation.  - `id`: Unique identifier of the entity  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `mediaURL`: URL providing further information of any image(s) or media of the complaint or place.  - `name`: The name of this item.  - `observationDateTime`: Last reported time of observation.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `paymentStatus`:  The payment status of the fine or violation or challan corresponding to this observation. Enum:'Paid, Unpaid'.  - `reportId`: Unique Id assigned for the issue or report or feedback or transaction corresponding to this observation.  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `titleCode`: The code assigned to the title corresponding to this observation.  - `type`: NGSI entity type. It has to be TrafficViolation.    
+Required properties  
+- `id`  - `type`  ## Data Model description of properties  
 Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
