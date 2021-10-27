@@ -2,11 +2,14 @@ Entität: TrafficViolation
 =========================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Transportation/blob/master/TrafficViolation/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Globale Beschreibung: **Ein Datenmodell für in Städten registrierte Verkehrsverstöße und generierte E-Challans**.  
+Version: 0.0.1  
 
 ## Liste der Eigenschaften  
 
-Erforderliche Eigenschaften  
-- Keine erforderlichen Eigenschaften  ## Datenmodell Beschreibung der Eigenschaften  
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `amountCollected`: Betrag, der für die dieser Beobachtung entsprechende Dienstleistung erhoben wird.  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `equipmentId`: Eindeutige Kennung des Geräts, das dieser Beobachtung entspricht.  - `equipmentType`: Typ des Geräts oder Name des Geräts, das dieser Beobachtung entspricht.  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `mediaURL`: URL mit weiteren Informationen zu Bild(ern) oder Medien der Beschwerde oder des Ortes.  - `name`: Der Name dieses Artikels.  - `observationDateTime`: Letzter gemeldeter Zeitpunkt der Beobachtung.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `paymentStatus`:  Der Zahlungsstatus der Geldbuße oder des Verstoßes oder der Zahlungsaufforderung für diese Beobachtung. Enum:'Bezahlt, Unbezahlt'.  - `reportId`: Eindeutige Kennung für das Problem, den Bericht, das Feedback oder die Transaktion, die dieser Beobachtung entspricht.  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `titleCode`: Der dem Titel zugewiesene Code, der dieser Beobachtung entspricht.  - `type`: NGSI-Entitätstyp. Es muss TrafficViolation sein.    
+Erforderliche Eigenschaften  
+- `id`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
