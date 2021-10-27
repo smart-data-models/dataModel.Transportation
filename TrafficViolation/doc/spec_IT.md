@@ -2,11 +2,14 @@ Entità: TrafficViolation
 ========================  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.Transportation/blob/master/TrafficViolation/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Descrizione globale: **Un modello di dati per le violazioni del traffico registrate e gli E-Challan generati nelle città.  
+versione: 0.0.1  
 
 ## Elenco delle proprietà  
 
-Proprietà richieste  
-- Nessuna proprietà richiesta  ## Descrizione del modello di dati delle proprietà  
+- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `amountCollected`: Importo raccolto per il servizio corrispondente a questa osservazione.  - `areaServed`: L'area geografica in cui viene fornito un servizio o un articolo offerto  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `description`: Una descrizione di questo articolo  - `equipmentId`: Id unico dell'apparecchiatura corrispondente a questa osservazione.  - `equipmentType`: Tipo di apparecchiatura o il nome dell'apparecchiatura corrispondente a questa osservazione.  - `id`: Identificatore unico dell'entità  - `location`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `mediaURL`: URL che fornisce ulteriori informazioni di qualsiasi immagine(i) o media della denuncia o del luogo.  - `name`: Il nome di questo articolo.  - `observationDateTime`: Ultima ora di osservazione riportata.  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `paymentStatus`:  Lo stato di pagamento della multa o della violazione o del challan corrispondente a questa osservazione. Enum:'Paid, Unpaid'.  - `reportId`: Id unico assegnato per il problema o il rapporto o il feedback o la transazione corrispondente a questa osservazione.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `titleCode`: Il codice assegnato al titolo corrispondente a questa osservazione.  - `type`: Tipo di entità NGSI. Deve essere TrafficViolation.    
+Proprietà richieste  
+- `id`  - `type`  ## Descrizione del modello di dati delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
