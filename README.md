@@ -35,6 +35,8 @@ The following entity types are available:
 
 - [TrafficFlowObserved](https://github.com/smart-data-models/dataModel.Transportation/blob/master/TrafficFlowObserved/README.md). An observation of traffic flow conditions at a certain place and time.
 
+- [TrafficViolation](https://github.com/smart-data-models/dataModel.Transportation/blob/master/TrafficViolation/README.md). A Data Model for Traffic Violations registered and E-Challans generated in Cities.
+
 - [TransportStation](https://github.com/smart-data-models/dataModel.Transportation/blob/master/TransportStation/README.md). The data model is a general description of urban stations (Metro, Bus, Tram, Heliport, ...) according to the GFTS standard https://developers.google.com/transit/gtfs/reference/#stopstxt, as well the detailed description of these (means of access, platform, assistance, ...).
 
 - [Vehicle](https://github.com/smart-data-models/dataModel.Transportation/blob/master/Vehicle/README.md). This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.
