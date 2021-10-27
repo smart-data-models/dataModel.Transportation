@@ -2,11 +2,14 @@
 ====================  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Transportation/blob/master/TrafficViolation/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述です。**都市で登録された交通違反と発生したE-Challanのデータモデルです。  
+バージョン: 0.0.1  
 
 ## プロパティのリスト  
 
-必須項目  
-- 必須項目なし  ## データモデルによるプロパティの記述  
+- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `amountCollected`: この観測に対応するサービスに向けて収集された金額。  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `equipmentId`: この観測に対応する機器のユニークID。  - `equipmentType`: 機器の種類、またはこの観測に対応する機器の名前。  - `id`: エンティティのユニークな識別子  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `mediaURL`: 苦情や場所に関する画像やメディアの詳細情報を提供するURL。  - `name`: このアイテムの名前です。  - `observationDateTime`: 最後に報告された観測時刻。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `paymentStatus`: この観測に対応する罰金や違反金、チャランの支払い状況です。Enum:'Paid, Unpaid'.  - `reportId`: このオブザベーションに対応する課題、レポート、フィードバック、トランザクションに割り当てられた一意のID。  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `titleCode`: この観測結果に対応するタイトルに割り当てられたコードです。  - `type`: NGSIエンティティタイプ。それはTrafficViolationでなければならない。    
+必須項目  
+- `id`  - `type`  ## データモデルによるプロパティの記述  
 アルファベット順（クリックすると詳細が表示されます  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
