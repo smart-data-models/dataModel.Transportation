@@ -1,0 +1,2 @@
+"id_", "type_", "amountCollected_", "mediaURL_", "equipmentId_", "equipmentType_", "titleCode_", "reportId_", "observationDateTime_", "paymentStatus_"
+"ngsi-ld:Trafficviolation:234R:0212", "TrafficViolation", "10500", "https://www.google.com/", "4", "Camera", "11", "182", "2021-03-11T15:51:02+05:30", "Paid"
