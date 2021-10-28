@@ -27,13 +27,16 @@
         },
         "vehicleType": {
           "type": "string",
-          "description": "Property. Type of vehicle from the point of view of its structural characteristics. This is different than the vehicle category . Model:'https://schema.org/Text'. Enum:'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'. The following values defined by _VehicleTypeEnum_ and _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)",
+          "description": "Property. Type of vehicle from the point of view of its structural characteristics. This is different than the vehicle category . Model:'https://schema.org/Text'. Enum:'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'. The following values defined by _VehicleTypeEnum_ and _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm) and extended for other uses",
           "enum": [
             "agriculturalVehicle",
             "anyVehicle",
             "articulatedVehicle",
+            "autorickshaw",
             "bicycle",
             "binTrolley",
+            "BRT mini bus·",
+            "BRT bus",
             "bus",
             "car",
             "caravan",
@@ -41,9 +44,15 @@
             "carWithCaravan",
             "carWithTrailer",
             "cleaningTrolley",
+            "compactor",
             "constructionOrMaintenanceVehicle",
+            "dumper",
+            "e-moped",
+            "e-scooter",
+            "e-motorcycle",
             "fourWheelDrive",
             "highSidedVehicle",
+            "hopper",
             "lorry",
             "minibus",
             "moped",
@@ -52,7 +61,9 @@
             "motorscooter",
             "sweepingMachine",
             "tanker",
+            "tempo",
             "threeWheeledVehicle",
+            "tipper",
             "trailer",
             "tram",
             "trolley",
@@ -296,6 +307,26 @@
         "wardName": {
           "type": "string",
           "description": "Property. Model:'https://schema.org/Text'. Ward name of the entity corresponding to this observation."
+        },
+        "reportId": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Unique Id assigned for the issue or report or feedback or transaction corresponding to this observation."
+        },
+        "vehicleTrackerDevice": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Installation status of the GPS device or the tracking device fitted to the vehicle corresponding to this observation."
+        },
+        "fuelFilled": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Amount of fuel filled in liters to the vehicle corresponding to this observation."
+        },
+        "fuelEfficiency": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. The distance traveled per unit of fuel used, commonly in kilometers per liter (km/L)."
+        },
+        "fuelType": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. The type of fuel suitable for the engine or engines of the vehicle corresponding to this observation."
         }
       }
     }
