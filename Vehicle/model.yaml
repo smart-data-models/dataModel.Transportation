@@ -163,6 +163,24 @@ Vehicle:
       x-ngsi:
         model: https://schema.org/Text.
         type: Property
+    fuelEfficiency:
+      description: 'The distance traveled per unit of fuel used, commonly in kilometers per liter (km/L).'
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+    fuelFilled:
+      description: 'Amount of fuel filled in liters to the vehicle corresponding to this observation.'
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+    fuelType:
+      description: 'The type of fuel suitable for the engine or engines of the vehicle corresponding to this observation.'
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
     heading:
       description: 'Denotes the direction of travel of the vehicle and is specified in decimal degrees, where 0 <= `heading` < 360, counting clockwise relative to the true north. If the vehicle is stationary (i.e. the value of the `speed` attribute is `0`), then the value of the heading attribute must be equal to `-1`'
       oneOf:
@@ -554,6 +572,12 @@ Vehicle:
       x-ngsi:
         model: https://schema.org/URL
         type: Relationship
+    reportId:
+      description: 'Unique Id assigned for the issue or report or feedback or transaction corresponding to this observation.'
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
     seeAlso:
       description: 'list of uri pointing to additional resources about the item'
       oneOf:
@@ -678,14 +702,23 @@ Vehicle:
       x-ngsi:
         model: https://schema.org/vehicleSpecialUsage
         type: Property
+    vehicleTrackerDevice:
+      description: 'Installation status of the GPS device or the tracking device fitted to the vehicle corresponding to this observation.'
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
     vehicleType:
-      description: 'Type of vehicle from the point of view of its structural characteristics. This is different than the vehicle category . Enum:''agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other''. The following values defined by _VehicleTypeEnum_ and _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)'
+      description: 'Type of vehicle from the point of view of its structural characteristics. This is different than the vehicle category . Enum:''agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other''. The following values defined by _VehicleTypeEnum_ and _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm) and extended for other uses'
       enum:
         - agriculturalVehicle
         - anyVehicle
         - articulatedVehicle
+        - autorickshaw
         - bicycle
         - binTrolley
+        - 'BRT mini bus·'
+        - 'BRT bus'
         - bus
         - car
         - caravan
@@ -693,9 +726,15 @@ Vehicle:
         - carWithCaravan
         - carWithTrailer
         - cleaningTrolley
+        - compactor
         - constructionOrMaintenanceVehicle
+        - dumper
+        - e-moped
+        - e-scooter
+        - e-motorcycle
         - fourWheelDrive
         - highSidedVehicle
+        - hopper
         - lorry
         - minibus
         - moped
@@ -704,7 +743,9 @@ Vehicle:
         - motorscooter
         - sweepingMachine
         - tanker
+        - tempo
         - threeWheeledVehicle
+        - tipper
         - trailer
         - tram
         - trolley
