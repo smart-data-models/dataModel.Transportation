@@ -11,7 +11,7 @@ info:
   description:  |
     This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.
   title: Vehicle
-  version: "1.0.0"
+  version: "0.0.3"
 openapi: "3.0.0"
 
 paths: 
