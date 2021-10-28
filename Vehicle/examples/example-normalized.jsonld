@@ -1,30 +1,140 @@
 {
+  "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",
+  "type": "Vehicle",
+  "category": {
+    "type": "Property",
+    "value": [
+      "municipalServices"
+    ]
+  },
+  "vehicleType": {
+    "type": "Property",
+    "value": "lorry"
+  },
+  "name": {
+    "type": "Property",
+    "value": "C Recogida 1"
+  },
+  "vehiclePlateIdentifier": {
+    "type": "Property",
+    "value": "3456ABC"
+  },
+  "refVehicleModel": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic"
+  },
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        -3.164485591715449,
+        40.62785133667262
+      ]
+    },
+    "observedAt": "2018-09-27T12:00:00Z"
+  },
+  "areaServed": {
+    "type": "Property",
+    "value": "Centro"
+  },
+  "serviceStatus": {
+    "type": "Property",
+    "value": "onRoute"
+  },
+  "cargoWeight": {
+    "type": "Property",
+    "value": 314
+  },
+  "speed": {
+    "type": "Property",
+    "value": 50,
+    "observedAt": "2018-09-27T12:00:00Z"
+  },
+  "serviceProvided": {
+    "type": "Property",
+    "value": [
+      "gargabeCollection",
+      "wasteContainerCleaning"
+    ]
+  },
+  "bearing": {
+    "type": "Property",
+    "value": 43
+  },
+  "fuelEfficiency": {
+    "type": "Property",
+    "value": 13
+  },
+  "fuelType": {
+    "type": "Property",
+    "value": "Petrol"
+  },
+  "fuelFilled": {
+    "type": "Property",
+    "value": 6
+  },
+  "tripNetWeightCollected": {
+    "type": "Property",
+    "value": 12
+  },
+  "vehicleTrackerDevice": {
+    "type": "Property",
+    "value": "Installed"
+  },
+  "wardId": {
+    "type": "Property",
+    "value": "4"
+  },
+  "license_plate": {
+    "type": "Property",
+    "value": "KA052134"
+  },
+  "currentTripCount": {
+    "type": "Property",
+    "value": 1
+  },
+  "reportId": {
+    "type": "Property",
+    "value": "21645"
+  },
+  "zoneName": {
+    "type": "Property",
+    "value": "South Zone"
+  },
+  "vehicleAltitude": {
+    "type": "Property",
+    "value": 600
+  },
+  "deviceSimNumber": {
+    "type": "Property",
+    "value": "9942142573"
+  },
+  "wardName": {
+    "type": "Property",
+    "value": "Kempegowda Ward"
+  },
+  "deviceBatteryStatus": {
+    "type": "Property",
+    "value": "Connected"
+  },
+  "ignitionStatus": {
+    "type": "Property",
+    "value": true
+  },
+  "vehicleRunningStatus": {
+    "type": "Property",
+    "value": "running"
+  },
+  "observationDateTime": {
+    "type": "Property",
+    "value": {
+      "@type": "DateTime",
+      "@value": "2021-03-11T15:51:02+05:30"
+    }
+  },
   "@context": [
     "https://smartdatamodels.org/context.jsonld",
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ],
-  "areaServed": "Centro",
-  "cargoWeight": 314,
-  "category": [
-    "municipalServices"
-  ],
-  "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",
-  "location": {
-    "coordinates": [
-      -3.164485591715449,
-      40.62785133667262
-    ],
-    "type": "Point"
-  },
-  "name": "C Recogida 1",
-  "refVehicleModel": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",
-  "serviceProvided": [
-    "gargabeCollection",
-    "wasteContainerCleaning"
-  ],
-  "serviceStatus": "onRoute",
-  "speed": 50,
-  "type": "Vehicle",
-  "vehiclePlateIdentifier": "3456ABC",
-  "vehicleType": "lorry"
+  ]
 }

@@ -1,62 +1,143 @@
 {
-    "id": "vehicle:WasteManagement:1",
-    "type": "Vehicle", 
-    "category": {
-        "value": [
-            "municipalServices"
-        ]
-    }, 
-    "vehicleType": {
-        "value": "lorry"
-    }, 
-    "name": {
-        "value": "C Recogida 1"
-    }, 
-    "vehiclePlateIdentifier": {
-        "value": "3456ABC"
-    }, 
-    "refVehicleModel": {
-        "type": "Relationship", 
-        "value": "vehiclemodel:econic"
-    }, 
-    "location": {
-        "type": "geo:json", 
-        "value": {
-            "type": "Point", 
-            "coordinates": [
-                -3.164485591715449, 
-                40.62785133667262
-            ]
-        },
-        "metadata": {
-            "timestamp": {
-                "type": "DateTime",
-                "value": "2018-09-27T12:00:00"
-            }
-        }
-    }, 
-    "areaServed": {
-        "value": "Centro"
-    }, 
-    "serviceStatus": {
-        "value": "onRoute"
-    }, 
-    "cargoWeight": {
-        "value": 314
-    }, 
-    "speed": {
-        "value": 50,
-        "metadata": {
-            "timestamp": {
-                "type": "DateTime",
-                "value": "2018-09-27T12:00:00"
-            }
-        }
-    },  
-    "serviceProvided": {
-        "value": [
-            "gargabeCollection", 
-            "wasteContainerCleaning"
-        ]
+  "id": "vehicle:WasteManagement:1",
+  "type": "Vehicle",
+  "category": {
+    "type": "array",
+    "value": [
+      "municipalServices"
+    ]
+  },
+  "vehicleType": {
+    "type": "Text",
+    "value": "lorry"
+  },
+  "name": {
+    "type": "Text",
+    "value": "C Recogida 1"
+  },
+  "vehiclePlateIdentifier": {
+    "type": "Text",
+    "value": "3456ABC"
+  },
+  "refVehicleModel": {
+    "type": "Relationship",
+    "value": "vehiclemodel:econic"
+  },
+  "location": {
+    "type": "geo:json",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        -3.164485591715449,
+        40.62785133667262
+      ]
+    },
+    "metadata": {
+      "timestamp": {
+        "type": "DateTime",
+        "value": "2018-09-27T12:00:00"
+      }
     }
+  },
+  "areaServed": {
+    "type": "Text",
+    "value": "Centro"
+  },
+  "serviceStatus": {
+    "type": "Text",
+    "value": "onRoute"
+  },
+  "cargoWeight": {
+    "type": "Number",
+    "value": 314
+  },
+  "speed": {
+    "type": "Number",
+    "value": 50,
+    "metadata": {
+      "timestamp": {
+        "type": "DateTime",
+        "value": "2018-09-27T12:00:00"
+      }
+    }
+  },
+  "serviceProvided": {
+    "type": "array",
+    "value": [
+      "gargabeCollection",
+      "wasteContainerCleaning"
+    ]
+  },
+  "bearing": {
+    "type": "Number",
+    "value": 43
+  },
+  "fuelEfficiency": {
+    "type": "Number",
+    "value": 13
+  },
+  "fuelType": {
+    "type": "Text",
+    "value": "Petrol"
+  },
+  "fuelFilled": {
+    "type": "Number",
+    "value": 6
+  },
+  "tripNetWeightCollected": {
+    "type": "Number",
+    "value": 12
+  },
+  "vehicleTrackerDevice": {
+    "type": "Text",
+    "value": "Installed"
+  },
+  "wardId": {
+    "type": "Text",
+    "value": "4"
+  },
+  "license_plate": {
+    "type": "Text",
+    "value": "KA052134"
+  },
+  "currentTripCount": {
+    "type": "Number",
+    "value": 1
+  },
+  "reportId": {
+    "type": "Text",
+    "value": "21645"
+  },
+  "zoneName": {
+    "type": "Text",
+    "value": "South Zone"
+  },
+  "vehicleAltitude": {
+    "type": "Number",
+    "value": 600
+  },
+  "deviceSimNumber": {
+    "type": "Text",
+    "value": "9942142573"
+  },
+  "wardName": {
+    "type": "Text",
+    "value": "Kempegowda Ward"
+  },
+  "deviceBatteryStatus": {
+    "type": "Text",
+    "value": "Connected"
+  },
+  "ignitionStatus": {
+    "type": "Boolean",
+    "value": true
+  },
+  "vehicleRunningStatus": {
+    "type": "Text",
+    "value": "running"
+  },
+  "observationDateTime": {
+    "type": "DateTime",
+    "value": "2021-03-11T15:51:02+05:30"
+  }
 }

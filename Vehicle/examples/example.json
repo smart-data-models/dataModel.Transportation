@@ -1,18 +1,44 @@
 {
-      "id": "vehicle:WasteManagement:1",
-      "type": "Vehicle",
-      "vehicleType": "lorry",
-      "category": ["municipalServices"],
-      "location": {
-         "type": "Point",
-         "coordinates": [ -3.164485591715449, 40.62785133667262 ]
-      },
-      "name": "C Recogida 1",
-      "speed": 50,
-      "cargoWeight": 314,
-      "serviceStatus": "onRoute",
-      "serviceProvided": ["garbageCollection", "wasteContainerCleaning"],
-      "areaServed": "Centro",
-      "refVehicleModel": "vehiclemodel:econic",
-      "vehiclePlateIdentifier": "3456ABC"
+  "id": "vehicle:WasteManagement:1",
+  "type": "Vehicle",
+  "vehicleType": "lorry",
+  "category": [
+    "municipalServices"
+  ],
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -3.164485591715449,
+      40.62785133667262
+    ]
+  },
+  "name": "C Recogida 1",
+  "speed": 50,
+  "cargoWeight": 314,
+  "serviceStatus": "onRoute",
+  "serviceProvided": [
+    "garbageCollection",
+    "wasteContainerCleaning"
+  ],
+  "areaServed": "Centro",
+  "refVehicleModel": "vehiclemodel:econic",
+  "vehiclePlateIdentifier": "3456ABC",
+  "bearing": 43,
+  "fuelEfficiency": 13,
+  "fuelType": "Petrol",
+  "fuelFilled": 6,
+  "tripNetWeightCollected": 12,
+  "vehicleTrackerDevice": "Installed",
+  "wardId": "4",
+  "license_plate": "KA052134",
+  "currentTripCount": 1,
+  "reportId": "21645",
+  "zoneName": "South Zone",
+  "vehicleAltitude": 600,
+  "deviceSimNumber": "9942142573",
+  "wardName": "Kempegowda Ward",
+  "deviceBatteryStatus": "Connected",
+  "ignitionStatus": true,
+  "vehicleRunningStatus": "running",
+  "observationDateTime": "2021-03-11T15:51:02+05:30"
 }
