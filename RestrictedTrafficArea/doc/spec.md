@@ -38,17 +38,21 @@ RestrictedTrafficArea:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     category:    
       description: 'Restricted traffic area''s category(ies). The purpose of this field is to allow to tag, generally speaking, restricted traffic area entities. Particularities and detailed descriptions should be found under the corresponding specific attributes.'    
       items:    
@@ -76,22 +80,32 @@ RestrictedTrafficArea:
           - publicPrivate    
         type: string    
       minItems: 1    
-      type: Property    
+      type: array    
       uniqueItems: true    
+      x-ngsi:    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &restrictedtrafficarea_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -103,7 +117,8 @@ RestrictedTrafficArea:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -255,10 +270,13 @@ RestrictedTrafficArea:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     notAllowedVehicleType:    
       description: 'Vehicle type(s) not allowed to cross the restricted traffic area.'    
       items:    
@@ -298,27 +316,37 @@ RestrictedTrafficArea:
           - van    
         type: string    
       minItems: 1    
-      type: Property    
+      type: array    
       uniqueItems: true    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *restrictedtrafficarea_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     regulation:    
       description: 'A URL pointing to the regulation for the specific restricted traffic area.'    
       format: uri    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     restrictionExceptions:    
       description: 'Individual vehicle type allowed to cross the restricted traffic area in a specific time slot.'    
       items:    
         anyOf: *restrictedtrafficarea_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     restrictionValidityHours:    
       description: 'Days of the week and hours in which the traffic restriction is active.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     security:    
       description: 'Security aspects provided by this restricted traffic area.'    
       items:    
@@ -336,8 +364,10 @@ RestrictedTrafficArea:
           - securityStaff    
         type: string    
       minItems: 1    
-      type: Property    
+      type: array    
       uniqueItems: true    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -348,29 +378,40 @@ RestrictedTrafficArea:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     specialRestrictions:    
       description: 'Individual vehicle type not allowed to cross the restricted traffic area in a specific time slot.'    
       items:    
         anyOf: *restrictedtrafficarea_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     type:    
       description: 'NGSI Entity type. It has to be RestrictedTrafficArea'    
       enum:    
         - RestrictedTrafficArea    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     validityEndDate:    
       description: 'The date at which the restriction is dismissed.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     validityStartDate:    
       description: 'The date from which the restriction is applied.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
