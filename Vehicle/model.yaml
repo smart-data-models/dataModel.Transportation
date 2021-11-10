@@ -1,6 +1,5 @@
 Vehicle:
   description: 'This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.'
-  modelTags: IUDX
   properties:
     address:
       description: 'The mailing address'
@@ -786,4 +785,9 @@ Vehicle:
     - category
     - location
   type: object
-  version: 0.0.3
+  x-derived-from: ""
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/Vehicle/LICENSE.md
+  x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/Vehicle/schema.json
+  x-model-tags: IUDX
+  x-version: 0.0.3
