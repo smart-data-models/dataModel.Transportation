@@ -43,10 +43,10 @@
           "description": "Relationship. Road to which this road segment belongs to."
         },
         "startPoint": {
-          "$ref": "http://geojson.org/schema/Geometry.json#"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
         },
         "endPoint": {
-          "$ref": "http://geojson.org/schema/Geometry.json"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
         },
         "startKilometer": {
           "type": "number",
