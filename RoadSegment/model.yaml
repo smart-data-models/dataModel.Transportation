@@ -119,194 +119,8 @@ RoadSegment:
         model: https://schema.org/Number
         type: Property
     endPoint:
-      $id: https://geojson.org/schema/Geometry.json
-      $schema: "http://json-schema.org/draft-07/schema#"
-      oneOf: &roadsegment_-_properties_-_startpoint_-_oneof
-        - properties:
-            bbox:
-              items:
-                type: number
-              minItems: 4
-              type: array
-            coordinates:
-              items:
-                type: number
-              minItems: 2
-              type: array
-            type:
-              enum:
-                - Point
-              type: string
-          required:
-            - type
-            - coordinates
-          title: 'GeoJSON Point'
-          type: object
-        - properties:
-            bbox:
-              items:
-                type: number
-              minItems: 4
-              type: array
-            coordinates:
-              items:
-                items:
-                  type: number
-                minItems: 2
-                type: array
-              minItems: 2
-              type: array
-            type:
-              enum:
-                - LineString
-              type: string
-          required:
-            - type
-            - coordinates
-          title: 'GeoJSON LineString'
-          type: object
-        - properties:
-            bbox:
-              items:
-                type: number
-              minItems: 4
-              type: array
-            coordinates:
-              items:
-                items:
-                  items:
-                    type: number
-                  minItems: 2
-                  type: array
-                minItems: 4
-                type: array
-              type: array
-            type:
-              enum:
-                - Polygon
-              type: string
-          required:
-            - type
-            - coordinates
-          title: 'GeoJSON Polygon'
-          type: object
-        - properties:
-            bbox:
-              items:
-                type: number
-              minItems: 4
-              type: array
-            coordinates:
-              items:
-                items:
-                  type: number
-                minItems: 2
-                type: array
-              type: array
-            type:
-              enum:
-                - MultiPoint
-              type: string
-          required:
-            - type
-            - coordinates
-          title: 'GeoJSON MultiPoint'
-          type: object
-        - properties:
-            bbox:
-              items:
-                type: number
-              minItems: 4
-              type: array
-            coordinates:
-              items:
-                items:
-                  items:
-                    type: number
-                  minItems: 2
-                  type: array
-                minItems: 2
-                type: array
-              type: array
-            type:
-              enum:
-                - MultiLineString
-              type: string
-          required:
-            - type
-            - coordinates
-          title: 'GeoJSON MultiLineString'
-          type: object
-        - properties:
-            bbox:
-              items:
-                type: number
-              minItems: 4
-              type: array
-            coordinates:
-              items:
-                items:
-                  items:
-                    items:
-                      type: number
-                    minItems: 2
-                    type: array
-                  minItems: 4
-                  type: array
-                type: array
-              type: array
-            type:
-              enum:
-                - MultiPolygon
-              type: string
-          required:
-            - type
-            - coordinates
-          title: 'GeoJSON MultiPolygon'
-          type: object
-      title: 'GeoJSON Geometry'
-    id:
-      anyOf: &roadsegment_-_properties_-_owner_-_items_-_anyof
-        - description: 'Property. Identifier format of any NGSI entity'
-          maxLength: 256
-          minLength: 1
-          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
-          type: string
-        - description: 'Property. Identifier format of any NGSI entity'
-          format: uri
-          type: string
-      description: 'Unique identifier of the entity'
-      x-ngsi:
-        type: Property
-    image:
-      description: 'An image of the item'
-      format: uri
-      type: string
-      x-ngsi:
-        model: https://schema.org/URL
-        type: Property
-    laneUsage:
-      description: 'This attribute can be used to convey specific parameters describing each lane. It must contain a string per road segment lane. The element 0 of the array must contain the information of lane 1, and so on. Format of the referred string must be: <lane_direction>, <lane_minimumAllowedSpeed>, <lane_maximumAllowedSpeed>, <lane_maximumAllowedHeight>, <lane_maximumAllowedWeight>. <lane_direction> is a text string with the following allowed values: `forward`. The lane is currently used in the `forwards` direction. `backward`. The lane is currently used in the `backwards` direction. The only mandatory parameter is `lane_direction`. If not specified, the rest of parameters can be assumed to be equal to those specified at entity level.'
-      items:
-        enum:
-          - forward
-          - backward
-        type: string
-      type: array
-      x-ngsi:
-        model: https://schema.org/Text
-        type: Property
-    length:
-      description: 'Total length of this road segment in kilometers'
-      minimum: 0
-      type: number
-      x-ngsi:
-        model: https://schema.org/length
-        type: Property
-        units: 'Kilometer (Km)'
-    location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
-      oneOf:
+      oneOf: &roadsegment_-_properties_-_location_-_oneof
         - description: 'Geoproperty. Geojson reference to the item. Point'
           properties:
             bbox:
@@ -457,6 +271,50 @@ RoadSegment:
           type: object
       x-ngsi:
         type: Geoproperty
+    id:
+      anyOf: &roadsegment_-_properties_-_owner_-_items_-_anyof
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Unique identifier of the entity'
+      x-ngsi:
+        type: Property
+    image:
+      description: 'An image of the item'
+      format: uri
+      type: string
+      x-ngsi:
+        model: https://schema.org/URL
+        type: Property
+    laneUsage:
+      description: 'This attribute can be used to convey specific parameters describing each lane. It must contain a string per road segment lane. The element 0 of the array must contain the information of lane 1, and so on. Format of the referred string must be: <lane_direction>, <lane_minimumAllowedSpeed>, <lane_maximumAllowedSpeed>, <lane_maximumAllowedHeight>, <lane_maximumAllowedWeight>. <lane_direction> is a text string with the following allowed values: `forward`. The lane is currently used in the `forwards` direction. `backward`. The lane is currently used in the `backwards` direction. The only mandatory parameter is `lane_direction`. If not specified, the rest of parameters can be assumed to be equal to those specified at entity level.'
+      items:
+        enum:
+          - forward
+          - backward
+        type: string
+      type: array
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    length:
+      description: 'Total length of this road segment in kilometers'
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/length
+        type: Property
+        units: 'Kilometer (Km)'
+    location:
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+      oneOf: *roadsegment_-_properties_-_location_-_oneof
+      x-ngsi:
+        type: Geoproperty
     maximumAllowedHeight:
       description: 'Maximum allowed height for vehicles transiting this road segment'
       minimum: 0
@@ -512,7 +370,7 @@ RoadSegment:
         - description: 'Property. Identifier format of any NGSI entity'
           format: uri
           type: string
-      description: 'Road to which this road segment belongs to. '
+      description: 'Road to which this road segment belongs to.'
       x-ngsi:
         type: Relationship
     seeAlso:
@@ -540,10 +398,10 @@ RoadSegment:
         model: https://schema.org/Number
         type: Property
     startPoint:
-      $id: https://geojson.org/schema/Geometry.json
-      $schema: "http://json-schema.org/draft-07/schema#"
-      oneOf: *roadsegment_-_properties_-_startpoint_-_oneof
-      title: 'GeoJSON Geometry'
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+      oneOf: *roadsegment_-_properties_-_location_-_oneof
+      x-ngsi:
+        type: Geoproperty
     totalLaneNumber:
       description: 'Total number of lanes offered by this road segment'
       minimum: 1
@@ -580,4 +438,4 @@ RoadSegment:
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/RoadSegment/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/RoadSegment/schema.json
   x-model-tags: ""
-  x-version: 0.1.0
+  x-version: 0.2.0
