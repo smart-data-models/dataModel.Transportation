@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.0.3",
+  "$schemaVersion": "0.1.0",
   "modelTags": "IUDX",
   "$id": "https://smart-data-models.github.io/dataModel.Transportation/Vehicle/schema.json",
   "title": "Smart Data Models - Vehicle",
@@ -93,7 +93,7 @@
           }
         },
         "previousLocation": {
-          "$ref": "http://geojson.org/schema/Geometry.json#"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
         },
         "speed": {
           "oneOf": [
