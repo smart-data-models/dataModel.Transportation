@@ -11,7 +11,7 @@ info:
   description:  |
     This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road.
   title: RoadSegment
-  version: "1.0.0"
+  version: "0.2.0"
 openapi: "3.0.0"
 
 paths: 

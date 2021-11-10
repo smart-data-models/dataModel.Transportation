@@ -1,17 +1,17 @@
-Entité : RoadSegment  
-====================  
-[Licence ouverte] (https://github.com/smart-data-models//dataModel.Transportation/blob/master/RoadSegment/LICENSE.md)  
-[document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Description globale : **Cette entité contient une description géographique et contextuelle harmonisée d'un segment de route. Une collection de segments de route est utilisée pour décrire une route**.  
+エンティティ道路セグメント  
+=============  
+[オープンライセンス](https://github.com/smart-data-models//dataModel.Transportation/blob/master/RoadSegment/LICENSE.md)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述。**このエンティティには、道路セグメントの地理的および文脈的な記述が含まれています。道路セグメントのコレクションは、道路を記述するために使用されます。  
 
-## Liste des propriétés  
+## プロパティのリスト  
 
-- `address`: L'adresse postale  - `allowedVehicleType`: Type(s) de véhicule(s) autorisé(s) à transiter par ce segment de route. Enum : 'agriculturalVehicle, bicycle, bus, car, caravan, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, trailer, van, anyVehicle'. Valeurs autorisées : Les valeurs suivantes définies par _VehicleTypeEnum_, [DATEX 2 version 2.3] (http://d2docs.ndwcloud.nu/) :  - `alternateName`: Un nom alternatif pour cet élément  - `annotations`: Annotations sur l'élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `category`: Permet de transmettre des caractéristiques supplémentaires d'un segment de route. Enum : 'oneway, toll, link'.  `oneway` : Indique si le segment de route ne peut être utilisé que dans une seule direction. S'il n'est pas présent, cela signifie que le segment de route peut être utilisé dans les deux sens (avant et arrière). Voir aussi [http://wiki.openstreetmap.org/wiki/Key:oneway](http://wiki.openstreetmap.org/wiki/Key:oneway). `toll` : Indique si le tronçon de route est soumis à un péage. `link` : Indique si ce segment de route est un segment de liaison auxiliaire pour sortir ou entrer dans une route. Voir [https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link). Toute autre valeur significative pour une application.  - `color`: La couleur du produit  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `endKilometer`: Le numéro de kilomètre (mesuré à partir du point de départ de la route) où se termine ce segment de route.  - `endPoint`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `id`: Identifiant unique de l'entité  - `image`: Une image de l'article  - `laneUsage`: Cet attribut peut être utilisé pour transmettre des paramètres spécifiques décrivant chaque voie. Il doit contenir une chaîne de caractères par voie de segment de route. L'élément 0 du tableau doit contenir les informations de la voie 1, et ainsi de suite. Le format de la chaîne référencée doit être : <lane_direction>, <lane_minimumAllowedSpeed>, <lane_maximumAllowedSpeed>, <lane_maximumAllowedHeight>, <lane_maximumAllowedWeight>. <lane_direction> est une chaîne de texte dont les valeurs autorisées sont les suivantes : `forward`. La voie est actuellement utilisée dans la direction `forwards`. `backward`. Le couloir est actuellement utilisé dans le sens "arrière". Le seul paramètre obligatoire est `lane_direction`. S'il n'est pas spécifié, le reste des paramètres peut être supposé être égal à ceux spécifiés au niveau de l'entité.  - `length`: Longueur totale de ce segment de route en kilomètres  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `maximumAllowedHeight`: Hauteur maximale autorisée pour les véhicules transitant par ce segment de route  - `maximumAllowedSpeed`: Vitesse maximale autorisée lors du transit sur ce segment de route. Des limites plus restrictives peuvent être appliquées à certains types de véhicules (camions, caravanes, etc.).  - `maximumAllowedWeight`: Poids maximal autorisé pour les véhicules transitant par ce segment de route  - `minimumAllowedSpeed`: Vitesse minimale autorisée lors du passage sur ce segment de route  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `refRoad`: Route à laquelle appartient ce segment de route.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `startKilometer`: Le numéro de kilomètre (mesuré à partir du point de départ de la route) où commence ce segment de route.  - `startPoint`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `totalLaneNumber`: Nombre total de voies offertes par ce segment de route  - `type`: Type d'entité NGSI. Il doit s'agir de RoadSegment  - `width`: Largeur du segment de route.    
-Propriétés requises  
+- `address`: 郵送先住所  - `allowedVehicleType`: この道路セグメントを通過することが許可されている車両タイプ。Enum:'agriculturalVehicle, bicycle, bus, car, caravan, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, trailer, van, anyVehicle'.許可される値VehicleTypeEnum_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/)で定義された以下の値。  - `alternateName`: このアイテムの別称  - `annotations`: アイテムに関するアノテーション  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `category`: 道路セグメントの特別な特性を伝えることができます。Enum:'oneway, toll, link'.  oneway`:道路セグメントが一方向にしか使用できないかどうかを示すフラグです。存在しない場合は、道路セグメントが両方向(前方と後方)に使用できることを意味します。[http://wiki.openstreetmap.org/wiki/Key:oneway](http://wiki.openstreetmap.org/wiki/Key:oneway)も参照してください。toll` : その道路セグメントが有料であるかどうかを示します。link` : この道路セグメントが、道路を出たり入ったりするための補助的なリンクセグメントであるかどうかを表示します。[https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link)を参照してください。アプリケーションにとって意味のあるその他の値です。  - `color`: 商品の色について  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `endKilometer`: この道路セグメントが終了するキロ数（道路の始点からの測定値）。  - `endPoint`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `id`: エンティティのユニークな識別子  - `image`: アイテムのイメージ  - `laneUsage`: この属性は、各車線を説明する特定のパラメータを伝えるために使用することができます。道路セグメントの車線ごとに文字列を含まなければならない。配列の要素0には、車線1の情報が含まれていなければならず、以下のようになります。参照する文字列のフォーマットは以下の通りです。<lane_direction>, <lane_minimumAllowedSpeed>, <lane_maximumAllowedSpeed>, <lane_maximumAllowedHeight>, <lane_maximumAllowedWeight>.<lane_direction>は文字列で，以下の値が許容されます。forward`.レーンは現在、`forwards`の方向で使用されています。backward`.レーンは現在、`backwards`の方向に使用されています。唯一の必須パラメータは `lane_direction` です。指定されていない場合、残りのパラメータはエンティティレベルで指定されたものと同じであるとみなすことができます。  - `length`: この道路セグメントの総延長（キロメートル  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `maximumAllowedHeight`: この道路セグメントを通過する車両の最大許容高さ  - `maximumAllowedSpeed`: この道路セグメントを通過する際の最大許容速度。特定の車両タイプ（トラック、キャラバンなど）には、より厳しい制限が適用される場合があります。  - `maximumAllowedWeight`: この道路セグメントを通過する車両の最大許容重量  - `minimumAllowedSpeed`: この道路セグメントを通過する際の最低許容速度  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `refRoad`: この道路セグメントが所属する道路  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `startKilometer`: この道路セグメントの始点となる（道路の始点から測った）キロメーター番号。  - `startPoint`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `totalLaneNumber`: この道路セグメントが提供する総レーン数  - `type`: NGSI エンティティタイプ。これはRoadSegmentでなければならない。  - `width`: 道路のセグメント幅    
+必須項目  
 - `allowedVehicleType`  - `endPoint`  - `id`  - `name`  - `refRoad`  - `startPoint`  - `type`    
-Les segments de route peuvent comprendre plusieurs voies. Ce modèle de données permet de transmettre des segments de route composés de voies hétérogènes (différentes dans leur utilisation, leur vitesse, leur hauteur, etc.) Les voies sont identifiées à l'aide de nombres entiers compris entre 1 et n, le numéro 1 étant la voie de droite en marche avant. La direction avant est la direction indiquée par le vecteur qui va du point de départ du segment au point d "arrivée du segment. Il s "agit de la même convention que celle utilisée par OpenStreetMap. Cette entité est principalement associée aux segments verticaux de l'automobile et des villes intelligentes, ainsi qu'aux applications IoT connexes. Ce modèle de données a été développé en coopération avec les opérateurs mobiles et la GSMA.  
-## Description des propriétés du modèle de données  
-Classés par ordre alphabétique (cliquez pour plus de détails)  
+道路セグメントには複数の車線が含まれることがあります。このデータモデルでは、異種の車線（使用方法、速度、高さなどが異なる）で構成された道路セグメントを伝えることができます。車線は1からnまでの整数で識別され、1番の車線は前方に向かって右側の車線となります。前進方向とは、セグメントの始点から終点までのベクトルで示される方向のことです。これは、OpenStreetMapで使用されているものと同じです。このエンティティは、主に自動車およびスマートシティの垂直セグメントと関連するIoTアプリケーションに関連しています。このデータモデルは、携帯電話事業者およびGSMAの協力を得て開発されました。  
+## データモデルによるプロパティの記述  
+アルファベット順（クリックすると詳細が表示されます）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 RoadSegment:    
@@ -457,10 +457,10 @@ RoadSegment:
   x-version: 0.2.0    
 ```  
 </details>    
-Les propriétés `laneUsage` et celles qui indiquent les paramètres maximums autorisés peuvent être dynamiques, par exemple, la direction d'une voie peut être temporairement modifiée pour améliorer les conditions de circulation.  
-## Exemples de charges utiles  
-#### RoadSegment Valeurs-clés NGSI-v2 Exemple  
-Voici un exemple de RoadSegment au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+プロパティ`laneUsage`と最大許容パラメータを伝えるものは、動的なものにすることができます。例えば、交通状況を改善するために車線の方向を一時的に変更することができます。  
+## ペイロードの例  
+#### RoadSegment NGSI-v2 key-valuesの例。  
+RoadSegmentをkey-valuesとしてJSON-LD形式で出力した例です。これは、`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "Spain-RoadSegment-A62-osm-24702186",  
@@ -501,8 +501,8 @@ RoadSegment:
   "source": "http://wwww.openstreetmap.org"  
 }  
 ```  
-#### RoadSegment NGSI-v2 normalisé Exemple  
-Voici un exemple de RoadSegment au format JSON-LD tel que normalisé. Ce format est compatible avec la NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+#### RoadSegment NGSI-v2 正規化例  
+ここでは、正規化されたJSON-LD形式のRoadSegmentの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "Spain-RoadSegment-A62-osm-24702186",  
@@ -561,8 +561,8 @@ RoadSegment:
   }  
 }  
 ```  
-#### RoadSegment Valeurs clés NGSI-LD Exemple  
-Voici un exemple de RoadSegment au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+#### RoadSegment NGSI-LDのキーバリューの例。  
+RoadSegmentをkey-valuesとしてJSON-LD形式で表現した例です。これは、`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-osm-24702186",  
@@ -666,8 +666,8 @@ RoadSegment:
   ]  
 }  
 ```  
-#### RoadSegment NGSI-LD normalisé Exemple  
-Voici un exemple de RoadSegment au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+#### RoadSegment NGSI-LD 正規化例  
+ここでは、正規化されたJSON-LD形式のRoadSegmentの例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "@context": [  

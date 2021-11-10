@@ -1,0 +1,344 @@
+{
+    "@id": "dtmi:com:ngsi-ld:RoadSegment;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "Smart Data Models - Transportation / Road Segment adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/RoadSegment/schema.json",
+    "description": "This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road.",
+    "displayName": "RoadSegment",
+    "contents": [
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The geographic area where a service or offered item is provided"
+        },
+        {
+            "name": "color",
+            "writable": true,
+            "displayName": "color",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The color of the product"
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "endKilometer",
+            "writable": true,
+            "displayName": "endKilometer",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The kilometer number (measured from the road's start point) where this road segment ends. "
+        },
+        {
+            "name": "image",
+            "writable": true,
+            "displayName": "image",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An image of the item"
+        },
+        {
+            "name": "length",
+            "writable": true,
+            "displayName": "length",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Total length of this road segment in kilometers"
+        },
+        {
+            "name": "maximumAllowedHeight",
+            "writable": true,
+            "displayName": "maximumAllowedHeight",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Maximum allowed height for vehicles transiting this road segment"
+        },
+        {
+            "name": "maximumAllowedSpeed",
+            "writable": true,
+            "displayName": "maximumAllowedSpeed",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Maximum allowed speed while transiting this road segment. More restrictive limits might be applied to specific vehicle types (trucks, caravans, etc.)"
+        },
+        {
+            "name": "maximumAllowedWeight",
+            "writable": true,
+            "displayName": "maximumAllowedWeight",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Maximum allowed weight for vehicles transiting this road segment"
+        },
+        {
+            "name": "minimumAllowedSpeed",
+            "writable": true,
+            "displayName": "minimumAllowedSpeed",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Minimum allowed speed while transiting this road segment"
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item."
+        },
+        {
+            "name": "refRoad",
+            "writable": true,
+            "displayName": "refRoad"
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+        },
+        {
+            "name": "startKilometer",
+            "writable": true,
+            "displayName": "startKilometer",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The kilometer number (measured from the road's start point) where this road segment starts. "
+        },
+        {
+            "name": "totalLaneNumber",
+            "writable": true,
+            "displayName": "totalLaneNumber",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Total number of lanes offered by this road segment"
+        },
+        {
+            "name": "width",
+            "writable": true,
+            "displayName": "width",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Road's segment width."
+        },
+        {
+            "@type": "Telemetry",
+            "name": "allowedVehicleType",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Vehicle type(s) allowed to transit through this road segment. Enum:'agriculturalVehicle, bicycle, bus, car, caravan, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, trailer, van, anyVehicle'. Allowed values: The following values defined by _VehicleTypeEnum_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/):",
+            "displayName": "allowedVehicleType"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "annotations",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Annotations about the item",
+            "displayName": "annotations"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "category",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Allows to convey extra characteristics of a road segment. Enum:'oneway, toll, link'.  `oneway`: Flags whether the road segment can only be used in one direction. If not present it means road segment can be used in both directions (forwards and backwards). See also [http://wiki.openstreetmap.org/wiki/Key:oneway](http://wiki.openstreetmap.org/wiki/Key:oneway). `toll` : Flags whether the road segment is under toll fees. `link` : Flags whether this road segment is an auxiliary link segment for exiting or enteri",
+            "displayName": "category"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "laneUsage",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "This attribute can be used to convey specific parameters describing each lane. It must contain a string per road segment lane. The element 0 of the array must contain the information of lane 1, and so on. Format of the referred string must be: <lane_direction>, <lane_minimumAllowedSpeed>, <lane_maximumAllowedSpeed>, <lane_maximumAllowedHeight>, <lane_maximumAllowedWeight>. <lane_direction> is a text string with the following allowed values: `forward`. The lane is currently used in the `forwards` direction. ",
+            "displayName": "laneUsage"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "endPoint_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "endPoint_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "endPoint_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "endPoint_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "endPoint_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "endPoint_MultiPolygon",
+            "schema": "multiPolygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPolygon",
+            "schema": "multiPolygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "startPoint_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "startPoint_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "startPoint_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "startPoint_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "startPoint_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "startPoint_MultiPolygon",
+            "schema": "multiPolygon"
+        }
+    ]
+}

@@ -226,7 +226,7 @@ Vehicle:
         type: Property
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
-      oneOf:
+      oneOf: &vehicle_-_properties_-_previouslocation_-_oneof
         - description: 'Geoproperty. Geojson reference to the item. Point'
           properties:
             bbox:
@@ -404,152 +404,10 @@ Vehicle:
       x-ngsi:
         type: Property
     previousLocation:
-      $id: https://geojson.org/schema/Geometry.json
-      $schema: "http://json-schema.org/draft-07/schema#"
-      oneOf:
-        - properties:
-            bbox:
-              items:
-                type: number
-              minItems: 4
-              type: array
-            coordinates:
-              items:
-                type: number
-              minItems: 2
-              type: array
-            type:
-              enum:
-                - Point
-              type: string
-          required:
-            - type
-            - coordinates
-          title: 'GeoJSON Point'
-          type: object
-        - properties:
-            bbox:
-              items:
-                type: number
-              minItems: 4
-              type: array
-            coordinates:
-              items:
-                items:
-                  type: number
-                minItems: 2
-                type: array
-              minItems: 2
-              type: array
-            type:
-              enum:
-                - LineString
-              type: string
-          required:
-            - type
-            - coordinates
-          title: 'GeoJSON LineString'
-          type: object
-        - properties:
-            bbox:
-              items:
-                type: number
-              minItems: 4
-              type: array
-            coordinates:
-              items:
-                items:
-                  items:
-                    type: number
-                  minItems: 2
-                  type: array
-                minItems: 4
-                type: array
-              type: array
-            type:
-              enum:
-                - Polygon
-              type: string
-          required:
-            - type
-            - coordinates
-          title: 'GeoJSON Polygon'
-          type: object
-        - properties:
-            bbox:
-              items:
-                type: number
-              minItems: 4
-              type: array
-            coordinates:
-              items:
-                items:
-                  type: number
-                minItems: 2
-                type: array
-              type: array
-            type:
-              enum:
-                - MultiPoint
-              type: string
-          required:
-            - type
-            - coordinates
-          title: 'GeoJSON MultiPoint'
-          type: object
-        - properties:
-            bbox:
-              items:
-                type: number
-              minItems: 4
-              type: array
-            coordinates:
-              items:
-                items:
-                  items:
-                    type: number
-                  minItems: 2
-                  type: array
-                minItems: 2
-                type: array
-              type: array
-            type:
-              enum:
-                - MultiLineString
-              type: string
-          required:
-            - type
-            - coordinates
-          title: 'GeoJSON MultiLineString'
-          type: object
-        - properties:
-            bbox:
-              items:
-                type: number
-              minItems: 4
-              type: array
-            coordinates:
-              items:
-                items:
-                  items:
-                    items:
-                      type: number
-                    minItems: 2
-                    type: array
-                  minItems: 4
-                  type: array
-                type: array
-              type: array
-            type:
-              enum:
-                - MultiPolygon
-              type: string
-          required:
-            - type
-            - coordinates
-          title: 'GeoJSON MultiPolygon'
-          type: object
-      title: 'GeoJSON Geometry'
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+      oneOf: *vehicle_-_properties_-_previouslocation_-_oneof
+      x-ngsi:
+        type: Geoproperty
     purchaseDate:
       description: 'The date the item e.g. vehicle was purchased by the current owner'
       format: date-time
@@ -790,4 +648,4 @@ Vehicle:
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/Vehicle/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/Vehicle/schema.json
   x-model-tags: IUDX
-  x-version: 0.0.3
+  x-version: 0.1.0
