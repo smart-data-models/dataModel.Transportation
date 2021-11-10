@@ -1,0 +1,63 @@
+{
+  "id": "urn:ngsi-ld:001:rtir:0234",
+  "type": "RevenueCollection",
+  "totalCount": {
+    "type": "Property",
+    "value": 436
+  },
+  "registrationCertificateRecoveryAmount": {
+    "type": "Property",
+    "value": 10400
+  },
+  "enrollmentCertificateRecoveryAmount": {
+    "type": "Property",
+    "value": 8400
+  },
+  "year": {
+    "type": "Property",
+    "value": "2020"
+  },
+  "dateObserved": {
+    "type": "Property",
+    "value": {
+      "@type": "date-time",
+      "@value": "2021-11-10T01:16:01Z"
+    }
+  },
+  "month": {
+    "type": "Property",
+    "value": "02"
+  },
+  "revenueCollectionType": {
+    "type": "Property",
+    "value": "Property Tax"
+  },
+  "vehicleTypeCode": {
+    "type": "Property",
+    "value": "2"
+  },
+  "amountCollected": {
+    "type": "Property",
+    "value": 20400
+  },
+  "vehicleType": {
+    "type": "Property",
+    "value": "motorcycle"
+  },
+  "municipalityInfo": {
+    "type": "Property",
+    "value": {
+      "district": "Bangalore Urban",
+      "ulbName": "BMC",
+      "cityID": "23",
+      "stateName": "Karnataka",
+      "cityName": "Bangalore",
+      "zoneID": "2",
+      "wardNum": 4
+    }
+  },
+  "@context": [
+    "iudx:RevenueCollection",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
+  ]
+}

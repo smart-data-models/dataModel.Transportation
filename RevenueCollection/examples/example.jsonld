@@ -1,6 +1,6 @@
 {
-  "id": "https://smart-data-models.github.io/SmartCities/RevenueCollection/schema.json",
-  "@context": ["iudx:RevenueCollection", "https://smart-"],
+  "id": "urn:ngsi-ld:001:rtir:0234",
+  "@context": ["iudx:RevenueCollection", "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"],
   "type": "RevenueCollection",
   "totalCount": 436,
   "registrationCertificateRecoveryAmount": 10400,

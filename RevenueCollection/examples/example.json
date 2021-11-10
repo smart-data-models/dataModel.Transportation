@@ -1,5 +1,5 @@
 {
-  "id": "https://smart-data-models.github.io/SmartCities/RevenueCollection/schema.json",
+  "id": "urn:ngsi-ld:001:rtir:0234",
   "@context": "iudx:RevenueCollection",
   "type": "RevenueCollection",
   "totalCount": 436,

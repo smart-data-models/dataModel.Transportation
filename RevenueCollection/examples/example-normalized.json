@@ -1,0 +1,56 @@
+{
+  "id": "urn:ngsi-ld:001:rtir:0234",
+  "type": "RevenueCollection",
+  "totalCount": {
+    "type": "number",
+    "value": 436
+  },
+  "registrationCertificateRecoveryAmount": {
+    "type": "number",
+    "value": 10400
+  },
+  "enrollmentCertificateRecoveryAmount": {
+    "type": "number",
+    "value": 8400
+  },
+  "year": {
+    "type": "Text",
+    "value": "2020"
+  },
+  "dateObserved": {
+    "type": "Date-Time",
+    "value": "2021-11-10T01:16:01Z"
+  },
+  "month": {
+    "type": "Text",
+    "value": "02"
+  },
+  "revenueCollectionType": {
+    "type": "Text",
+    "value": "Property Tax"
+  },
+  "vehicleTypeCode": {
+    "type": "Text",
+    "value": "2"
+  },
+  "amountCollected": {
+    "type": "number",
+    "value": 20400
+  },
+  "vehicleType": {
+    "type": "Text",
+    "value": "motorcycle"
+  },
+  "municipalityInfo": {
+    "type": "StructuredValue",
+    "value": {
+      "district": "Bangalore Urban",
+      "ulbName": "BMC",
+      "cityID": "23",
+      "stateName": "Karnataka",
+      "cityName": "Bangalore",
+      "zoneID": "2",
+      "wardNum": 4
+    }
+  }
+}
