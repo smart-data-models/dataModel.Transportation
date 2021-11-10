@@ -1,157 +1,157 @@
 {
-    "$schema": "http://json-schema.org/schema#",
-    "$schemaVersion": "0.1.0",
-    "modelTags": "",
-    "$id": "https://smart-data-models.github.io/dataModel.Transportation/RoadSegment/schema.json",
-    "title": "Smart Data Models - Transportation / Road Segment",
-    "description": "This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road.",
-    "type": "object",
-    "allOf": [
-        {
-            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+  "$schema": "http://json-schema.org/schema#",
+  "$schemaVersion": "0.1.0",
+  "modelTags": "",
+  "$id": "https://smart-data-models.github.io/dataModel.Transportation/RoadSegment/schema.json",
+  "title": "Smart Data Models - Transportation / Road Segment",
+  "description": "This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/PhysicalObject-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "RoadSegment"
+          ],
+          "description": "Property. NGSI Entity type. It has to be RoadSegment"
         },
-        {
-            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-        },
-        {
-            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/PhysicalObject-Commons"
-        },
-        {
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "RoadSegment"
-                    ],
-                    "description": "Property. NGSI Entity type. It has to be RoadSegment"
-                },
-                "refRoad": {
-                    "anyOf": [
-                        {
-                            "type": "string",
-                            "minLength": 1,
-                            "maxLength": 256,
-                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-                            "description": "Property. Identifier format of any NGSI entity"
-                        },
-                        {
-                            "type": "string",
-                            "format": "uri",
-                            "description": "Property. Identifier format of any NGSI entity"
-                        }
-                    ],
-                    "description": "Relationship. Road to which this road segment belongs to. "
-                },
-                "startPoint": {
-                    "$ref": "http://geojson.org/schema/Geometry.json#"
-                },
-                "endPoint": {
-                    "$ref": "http://geojson.org/schema/Geometry.json#"
-                },
-                "startKilometer": {
-                    "type": "number",
-                    "minimum": 0,
-                    "description": "Property. The kilometer number (measured from the road's start point) where this road segment starts. Model:'https://schema.org/Number'. "
-                },
-                "endKilometer": {
-                    "type": "number",
-                    "minimum": 0,
-                    "description": "Property. The kilometer number (measured from the road's start point) where this road segment ends. Model:'https://schema.org/Number'. "
-                },
-                "allowedVehicleType": {
-                    "type": "array",
-                    "description": "Property. Vehicle type(s) allowed to transit through this road segment. Model:'https://schema.org/Text'. Enum:'agriculturalVehicle, bicycle, bus, car, caravan, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, trailer, van, anyVehicle'. Allowed values: The following values defined by _VehicleTypeEnum_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/):",
-                    "items": {
-                        "type": "string",
-                        "enum": [
-                            "agriculturalVehicle",
-                            "bicycle",
-                            "bus",
-                            "car",
-                            "caravan",
-                            "carWithCaravan",
-                            "carWithTrailer",
-                            "constructionOrMaintenanceVehicle",
-                            "lorry",
-                            "moped",
-                            "motorcycle",
-                            "motorcycleWithSideCar",
-                            "motorscooter",
-                            "tanker",
-                            "trailer",
-                            "van",
-                            "anyVehicle"
-                        ]
-                    }
-                },
-                "totalLaneNumber": {
-                    "type": "number",
-                    "minimum": 1,
-                    "description": "Property. Total number of lanes offered by this road segment. Model:'https://schema.org/Number'."
-                },
-                "length": {
-                    "type": "number",
-                    "minimum": 0,
-                    "description": "Property. Total length of this road segment in kilometers. Model:'https://schema.org/length'. Units:'Kilometer (Km)'"
-                },
-                "maximumAllowedSpeed": {
-                    "type": "number",
-                    "description": "Property. Maximum allowed speed while transiting this road segment. More restrictive limits might be applied to specific vehicle types (trucks, caravans, etc.). Model:'https://schema.org/Number'. Units:'Kilometer per hour (Km/h)'",
-                    "minimum": 0
-                },
-                "minimumAllowedSpeed": {
-                    "type": "number",
-                    "minimum": 0,
-                    "description": "Property. Minimum allowed speed while transiting this road segment. Model:'https://schema.org/Number'. Units:'Kilometer per hour (Km/h)'"
-                },
-                "maximumAllowedHeight": {
-                    "type": "number",
-                    "minimum": 0,
-                    "description": "Property. Maximum allowed height for vehicles transiting this road segment. Model:'https://schema.org/Number'. Units:'Meter (m)'. Model:'https://schema.org/height'"
-                },
-                "maximumAllowedWeight": {
-                    "type": "number",
-                    "minimum": 0,
-                    "description": "Property. Maximum allowed weight for vehicles transiting this road segment. Model:'https://schema.org/Number'. Units:'Kilogram (Kg)'. Model:'https://schema.org/weight'"
-                },
-                "width": {
-                    "type": "number",
-                    "minimum": 0,
-                    "description": "Property. Road's segment width.. Model:'https://schema.org/Number'. Units:'Meter (m)'"
-                },
-                "laneUsage": {
-                    "type": "array",
-                    "description": "Property. This attribute can be used to convey specific parameters describing each lane. Model:'https://schema.org/Text'. It must contain a string per road segment lane. The element 0 of the array must contain the information of lane 1, and so on. Format of the referred string must be: <lane_direction>, <lane_minimumAllowedSpeed>, <lane_maximumAllowedSpeed>, <lane_maximumAllowedHeight>, <lane_maximumAllowedWeight>. <lane_direction> is a text string with the following allowed values: `forward`. The lane is currently used in the `forwards` direction. `backward`. The lane is currently used in the `backwards` direction. The only mandatory parameter is `lane_direction`. If not specified, the rest of parameters can be assumed to be equal to those specified at entity level.",
-                    "items": {
-                        "type": "string",
-                        "enum": [
-                            "forward",
-                            "backward"
-                        ]
-                    }
-                },
-                "category": {
-                    "type": "array",
-                    "description": "Property. Allows to convey extra characteristics of a road segment. Model:'https://schema.org/Text'. Enum:'oneway, toll, link'.  `oneway`: Flags whether the road segment can only be used in one direction. If not present it means road segment can be used in both directions (forwards and backwards). See also [http://wiki.openstreetmap.org/wiki/Key:oneway](http://wiki.openstreetmap.org/wiki/Key:oneway). `toll` : Flags whether the road segment is under toll fees. `link` : Flags whether this road segment is an auxiliary link segment for exiting or entering a road. See [https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link). Any other value meaningful to an application.",
-                    "items": {
-                        "type": "string",
-                        "enum": [
-                            "oneway",
-                            "toll",
-                            "link"
-                        ]
-                    }
-                }
+        "refRoad": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
             }
+          ],
+          "description": "Relationship. Road to which this road segment belongs to."
+        },
+        "startPoint": {
+          "$ref": "http://geojson.org/schema/Geometry.json#"
+        },
+        "endPoint": {
+          "$ref": "http://geojson.org/schema/Geometry.json"
+        },
+        "startKilometer": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. The kilometer number (measured from the road's start point) where this road segment starts. Model:'https://schema.org/Number'. "
+        },
+        "endKilometer": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. The kilometer number (measured from the road's start point) where this road segment ends. Model:'https://schema.org/Number'. "
+        },
+        "allowedVehicleType": {
+          "type": "array",
+          "description": "Property. Vehicle type(s) allowed to transit through this road segment. Model:'https://schema.org/Text'. Enum:'agriculturalVehicle, bicycle, bus, car, caravan, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, trailer, van, anyVehicle'. Allowed values: The following values defined by _VehicleTypeEnum_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/):",
+          "items": {
+            "type": "string",
+            "enum": [
+              "agriculturalVehicle",
+              "bicycle",
+              "bus",
+              "car",
+              "caravan",
+              "carWithCaravan",
+              "carWithTrailer",
+              "constructionOrMaintenanceVehicle",
+              "lorry",
+              "moped",
+              "motorcycle",
+              "motorcycleWithSideCar",
+              "motorscooter",
+              "tanker",
+              "trailer",
+              "van",
+              "anyVehicle"
+            ]
+          }
+        },
+        "totalLaneNumber": {
+          "type": "number",
+          "minimum": 1,
+          "description": "Property. Total number of lanes offered by this road segment. Model:'https://schema.org/Number'."
+        },
+        "length": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Total length of this road segment in kilometers. Model:'https://schema.org/length'. Units:'Kilometer (Km)'"
+        },
+        "maximumAllowedSpeed": {
+          "type": "number",
+          "description": "Property. Maximum allowed speed while transiting this road segment. More restrictive limits might be applied to specific vehicle types (trucks, caravans, etc.). Model:'https://schema.org/Number'. Units:'Kilometer per hour (Km/h)'",
+          "minimum": 0
+        },
+        "minimumAllowedSpeed": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Minimum allowed speed while transiting this road segment. Model:'https://schema.org/Number'. Units:'Kilometer per hour (Km/h)'"
+        },
+        "maximumAllowedHeight": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Maximum allowed height for vehicles transiting this road segment. Model:'https://schema.org/Number'. Units:'Meter (m)'. Model:'https://schema.org/height'"
+        },
+        "maximumAllowedWeight": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Maximum allowed weight for vehicles transiting this road segment. Model:'https://schema.org/Number'. Units:'Kilogram (Kg)'. Model:'https://schema.org/weight'"
+        },
+        "width": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Road's segment width.. Model:'https://schema.org/Number'. Units:'Meter (m)'"
+        },
+        "laneUsage": {
+          "type": "array",
+          "description": "Property. This attribute can be used to convey specific parameters describing each lane. Model:'https://schema.org/Text'. It must contain a string per road segment lane. The element 0 of the array must contain the information of lane 1, and so on. Format of the referred string must be: <lane_direction>, <lane_minimumAllowedSpeed>, <lane_maximumAllowedSpeed>, <lane_maximumAllowedHeight>, <lane_maximumAllowedWeight>. <lane_direction> is a text string with the following allowed values: `forward`. The lane is currently used in the `forwards` direction. `backward`. The lane is currently used in the `backwards` direction. The only mandatory parameter is `lane_direction`. If not specified, the rest of parameters can be assumed to be equal to those specified at entity level.",
+          "items": {
+            "type": "string",
+            "enum": [
+              "forward",
+              "backward"
+            ]
+          }
+        },
+        "category": {
+          "type": "array",
+          "description": "Property. Allows to convey extra characteristics of a road segment. Model:'https://schema.org/Text'. Enum:'oneway, toll, link'.  `oneway`: Flags whether the road segment can only be used in one direction. If not present it means road segment can be used in both directions (forwards and backwards). See also [http://wiki.openstreetmap.org/wiki/Key:oneway](http://wiki.openstreetmap.org/wiki/Key:oneway). `toll` : Flags whether the road segment is under toll fees. `link` : Flags whether this road segment is an auxiliary link segment for exiting or entering a road. See [https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link). Any other value meaningful to an application.",
+          "items": {
+            "type": "string",
+            "enum": [
+              "oneway",
+              "toll",
+              "link"
+            ]
+          }
         }
-    ],
-    "required": [
-        "id",
-        "name",
-        "type",
-        "refRoad",
-        "startPoint",
-        "endPoint",
-        "allowedVehicleType"
-    ]
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "name",
+    "type",
+    "refRoad",
+    "startPoint",
+    "endPoint",
+    "allowedVehicleType"
+  ]
 }
