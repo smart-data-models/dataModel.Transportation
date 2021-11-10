@@ -3,11 +3,10 @@ Entidad: Vehículo
 [Licencia abierta](https://github.com/smart-data-models//dataModel.Transportation/blob/master/Vehicle/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descripción global: **Esta entidad modela un modelo de vehículo en particular, incluyendo todas las propiedades que son comunes a múltiples instancias de vehículos pertenecientes a dicho modelo.**  
-versión: 0.0.3  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `annotations`: Anotaciones sobre el artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `bearing`: Indica el ángulo GPS del vehículo medido en el sentido de las agujas del reloj a partir del Norte verdadero. Igual que el campo "bearing" del mensaje GTFS Realtime-Position(https://developers.google.com/transit/gtfs-realtime/reference#message-position)  - `cargoWeight`: Peso actual de la carga del vehículo  - `category`: Categoría(s) del vehículo desde un punto de vista externo. Es diferente del tipo de vehículo (coche, camión, etc.) representado por la propiedad `vehicleType`. Enum:'municipalServices, nonTracked, private, public, specialUsage, tracked'. Los vehículos rastreados son aquellos cuya posición es seguida permanentemente por un sistema remoto. O cualquier otro que necesite una aplicación Incorporan un receptor GPS junto con una conexión de red para actualizar periódicamente una posición reportada (ubicación, velocidad, rumbo...).  - `color`: El color del producto  - `currentTripCount`: El recuento actual de los viajes realizados por el vehículo correspondiente a esta observación en el día de funcionamiento dado.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateFirstUsed`: Marca de tiempo que indica cuándo se utilizó el vehículo por primera vez  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `dateVehicleFirstRegistered`: La fecha de la primera matriculación del vehículo ante las autoridades públicas respectivas  - `description`: Una descripción de este artículo  - `deviceBatteryStatus`: Indica el estado de carga de la batería del dispositivo que informa. Enum:'conectado, desconectado'.  - `deviceSimNumber`: Indica el número de SIM del dispositivo en el vehículo.  - `feature`: Característica(s) incorporada(s) por el vehículo. Enum:' abs, airbag, alarma, backCamera, disabledRamp, gps, internetConnection, overspeed, proximitySensor, wifi'. O cualquier otro que necesite la aplicación. Para representar múltiples instancias de una característica se puede utilizar la siguiente sintaxis: `<característica>,<ocurrencias>`. Por ejemplo, un coche con 4 airbags será representado por `airbag,4`.  - `fleetVehicleId`: El identificador del vehículo en el contexto de la flota de vehículos a la que pertenece  - `fuelEfficiency`: La distancia recorrida por unidad de combustible utilizado, comúnmente en kilómetros por litro (km/L).  - `fuelFilled`: Cantidad de combustible cargado en litros al vehículo correspondiente a esta observación.  - `fuelType`: El tipo de combustible adecuado para el motor o los motores del vehículo correspondiente a esta observación.  - `heading`: Denota la dirección de desplazamiento del vehículo y se especifica en grados decimales, donde 0 <= `rumbo` < 360, contando en el sentido de las agujas del reloj respecto al norte verdadero. Si el vehículo está parado (es decir, el valor del atributo `velocidad` es `0`), el valor del atributo rumbo debe ser igual a `-1`.  - `id`: Identificador único de la entidad  - `ignitionStatus`: Indica el estado de encendido del vehículo. Verdadero significa encendido  - `image`: Una imagen del artículo  - `license_plate`: Indica el número de matrícula del vehículo. Igual que: campo license_plate de GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `mileageFromOdometer`: La distancia total recorrida por el vehículo en cuestión desde su fabricación inicial, según la lectura de su cuentakilómetros  - `name`: El nombre de este artículo.  - `observationDateTime`: Última hora de observación comunicada  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `previousLocation`:   - `purchaseDate`: La fecha en que el artículo, por ejemplo, el vehículo, fue adquirido por el propietario actual  - `refVehicleModel`: Referencia a un VehicleModel  - `reportId`: Id. único asignado a la incidencia o informe o retroalimentación o transacción correspondiente a esta observación.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `serviceProvided`: Servicio(s) que el vehículo puede prestar o al que está asignado. Enum:'servicios auxiliares, transporte de carga, construcción, recinto ferial, recogida de basuras, venta de mercancías, mantenimiento, parques y jardines, señalización vial, transporte especial, limpieza de calles, alumbrado público, transporte urbano, limpieza de contenedores'. O cualquier otro valor que necesite una aplicación específica.  - `serviceStatus`: Estado del vehículo (desde el punto de vista del servicio prestado, por lo que no podría aplicarse a los vehículos privados). `parked` : El vehículo está aparcado y no presta ningún servicio en este momento. `onRoute` : El vehículo está realizando una misión. Se puede añadir un modificador(es) separado(s) por comas para indicar qué misión está realizando el vehículo en ese momento. Por ejemplo, `onRoute,garbageCollection` puede utilizarse para indicar que el vehículo está en ruta y en una misión de recogida de basura. `roto` : El vehículo está sufriendo una avería temporal. `outOfService` : El vehículo está en ruta pero no realiza ninguna misión, probablemente va a su zona de aparcamiento. Enum:'broken, onRoute, outOfService, parked'  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `speed`: Denota la magnitud del componente horizontal de la velocidad actual del vehículo y se especifica en kilómetros por hora. Si se proporciona, el valor del atributo velocidad debe ser un número real no negativo. PUEDE utilizarse `-1` si la velocidad se desconoce transitoriamente por alguna razón  - `tripNetWeightCollected`: El peso neto recogido por el vehículo correspondiente a esta observación al final del viaje.  - `type`: Tipo de entidad NGSI. Debe ser un vehículo  - `vehicleAltitude`: Indica la altitud actual del vehículo mediante el GPS  - `vehicleConfiguration`: Un breve texto que indique la configuración del vehículo, por ejemplo, "5dr hatchback ST 2.5 MT 225 hp" o "edición limitada".  - `vehicleIdentificationNumber`: El número de identificación del vehículo (VIN) es un número de serie único utilizado por la industria del automóvil para identificar los vehículos de motor individuales  - `vehiclePlateIdentifier`:  Identificador o código que aparece en la placa de matrícula del vehículo y que se utiliza para su identificación oficial. El identificador de matrícula es numérico o alfanumérico y es único dentro de la región de la autoridad emisora. Referencias normativas: DATEXII `vehicleRegistrationPlateIdentifier` (identificador de la placa de matrícula del vehículo)  - `vehicleRunningStatus`: Indica el estado de carga de la batería del dispositivo que informa. Enum:'en marcha, en espera, parado'.  - `vehicleSpecialUsage`: Indica si el vehículo se ha utilizado para fines especiales, como el alquiler comercial, la autoescuela o como taxi. La legislación de muchos países exige que se revele esta información cuando se ofrece un coche a la venta. Enum:'ambulancia, bomberos, militar, policía, transporte escolar, taxi, gestión de la basura'  - `vehicleTrackerDevice`: Estado de la instalación del dispositivo GPS o del dispositivo de seguimiento instalado en el vehículo correspondiente a esta observación.  - `vehicleType`: Tipo de vehículo desde el punto de vista de sus características estructurales. Es diferente de la categoría del vehículo. Enum:'vehículo agrícola, cualquier vehículo, vehículo articulado, bicicleta, carro de basura, autobús, coche, caravana, coche o vehículo ligero, coche con caravana, coche con remolque, carro de limpieza, vehículo de construcción o mantenimiento, tracción a las cuatro ruedas, vehículo de gran altura, camión, minibús, ciclomotor, motocicleta, motocicleta con coche lateral, motocarro, máquina barredora, cisterna, vehículo de tres ruedas, remolque, tranvía, vehículo de dos ruedas, carro, furgoneta, vehículo sin convertidor catalítico, vehículo con caravana, vehículo con remolque, con matrícula par, con matrícula extra, otros". Los siguientes valores definidos por _VehicleTypeEnum_ y _VehicleTypeEnum2_, [DATEX 2 versión 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm) y ampliados para otros usos  - `wardId`: ID del pabellón de la entidad correspondiente a esta observación.  - `wardName`: Nombre de la entidad correspondiente a esta observación.  - `zoneName`: Nombre de la zona de la entidad correspondiente a esta observación    
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `annotations`: Anotaciones sobre el artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `bearing`: Indica el ángulo GPS del vehículo medido en el sentido de las agujas del reloj a partir del Norte verdadero. Igual que el campo "bearing" del mensaje GTFS Realtime-Position(https://developers.google.com/transit/gtfs-realtime/reference#message-position)  - `cargoWeight`: Peso actual de la carga del vehículo  - `category`: Categoría de vehículo(s) desde un punto de vista externo. Es diferente del tipo de vehículo (coche, camión, etc.) representado por la propiedad `vehicleType`. Enum:'municipalServices, nonTracked, private, public, specialUsage, tracked'. Los vehículos rastreados son aquellos cuya posición es seguida permanentemente por un sistema remoto. O cualquier otro que necesite una aplicación Incorporan un receptor GPS junto con una conexión de red para actualizar periódicamente una posición reportada (ubicación, velocidad, rumbo...).  - `color`: El color del producto  - `currentTripCount`: El recuento actual de los viajes realizados por el vehículo correspondiente a esta observación en el día de funcionamiento dado.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateFirstUsed`: Marca de tiempo que indica cuándo se utilizó el vehículo por primera vez  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `dateVehicleFirstRegistered`: La fecha de la primera matriculación del vehículo ante las autoridades públicas respectivas  - `description`: Una descripción de este artículo  - `deviceBatteryStatus`: Indica el estado de carga de la batería del dispositivo que informa. Enum:'conectado, desconectado'.  - `deviceSimNumber`: Indica el número de SIM del dispositivo en el vehículo.  - `feature`: Característica(s) incorporada(s) por el vehículo. Enum:' abs, airbag, alarma, backCamera, disabledRamp, gps, internetConnection, overspeed, proximitySensor, wifi'. O cualquier otro que necesite la aplicación. Para representar múltiples instancias de una característica se puede utilizar la siguiente sintaxis: `<característica>,<ocurrencias>`. Por ejemplo, un coche con 4 airbags será representado por `airbag,4`.  - `fleetVehicleId`: El identificador del vehículo en el contexto de la flota de vehículos a la que pertenece  - `fuelEfficiency`: La distancia recorrida por unidad de combustible utilizado, comúnmente en kilómetros por litro (km/L).  - `fuelFilled`: Cantidad de combustible cargado en litros al vehículo correspondiente a esta observación.  - `fuelType`: El tipo de combustible adecuado para el motor o los motores del vehículo correspondiente a esta observación.  - `heading`: Denota la dirección de desplazamiento del vehículo y se especifica en grados decimales, donde 0 <= `rumbo` < 360, contando en el sentido de las agujas del reloj respecto al norte verdadero. Si el vehículo está parado (es decir, el valor del atributo `velocidad` es `0`), el valor del atributo rumbo debe ser igual a `-1`.  - `id`: Identificador único de la entidad  - `ignitionStatus`: Indica el estado de encendido del vehículo. Verdadero significa encendido  - `image`: Una imagen del artículo  - `license_plate`: Indica el número de matrícula del vehículo. Igual que: campo license_plate de GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `mileageFromOdometer`: La distancia total recorrida por el vehículo en cuestión desde su fabricación inicial, según la lectura de su cuentakilómetros  - `name`: El nombre de este artículo.  - `observationDateTime`: Última hora de observación comunicada  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `previousLocation`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `purchaseDate`: La fecha en que el artículo, por ejemplo, el vehículo, fue adquirido por el propietario actual  - `refVehicleModel`: Referencia a un VehicleModel  - `reportId`: Id. único asignado a la incidencia o informe o retroalimentación o transacción correspondiente a esta observación.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `serviceProvided`: Servicio(s) que el vehículo puede prestar o al que está asignado. Enum:'servicios auxiliares, transporte de carga, construcción, recinto ferial, recogida de basuras, venta de mercancías, mantenimiento, parques y jardines, señalización vial, transporte especial, limpieza de calles, alumbrado público, transporte urbano, limpieza de contenedores'. O cualquier otro valor que necesite una aplicación específica.  - `serviceStatus`: Estado del vehículo (desde el punto de vista del servicio prestado, por lo que no podría aplicarse a los vehículos privados). `parked` : El vehículo está aparcado y no presta ningún servicio en este momento. `onRoute` : El vehículo está realizando una misión. Se puede añadir un modificador(es) separado(s) por comas para indicar qué misión está realizando el vehículo en ese momento. Por ejemplo, `onRoute,garbageCollection` puede utilizarse para indicar que el vehículo está en ruta y en una misión de recogida de basura. `roto` : El vehículo está sufriendo una avería temporal. `outOfService` : El vehículo está en ruta pero no realiza ninguna misión, probablemente va a su zona de aparcamiento. Enum:'broken, onRoute, outOfService, parked'  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `speed`: Denota la magnitud del componente horizontal de la velocidad actual del vehículo y se especifica en kilómetros por hora. Si se proporciona, el valor del atributo velocidad debe ser un número real no negativo. PUEDE utilizarse `-1` si la velocidad se desconoce transitoriamente por alguna razón  - `tripNetWeightCollected`: El peso neto recogido por el vehículo correspondiente a esta observación al final del viaje.  - `type`: Tipo de entidad NGSI. Debe ser un vehículo  - `vehicleAltitude`: Indica la altitud actual del vehículo mediante el GPS  - `vehicleConfiguration`: Un breve texto que indique la configuración del vehículo, por ejemplo, "5dr hatchback ST 2.5 MT 225 hp" o "edición limitada".  - `vehicleIdentificationNumber`: El número de identificación del vehículo (VIN) es un número de serie único utilizado por la industria del automóvil para identificar los vehículos de motor individuales  - `vehiclePlateIdentifier`:  Identificador o código que aparece en la placa de matrícula del vehículo y que se utiliza para su identificación oficial. El identificador de matrícula es numérico o alfanumérico y es único dentro de la región de la autoridad emisora. Referencias normativas: DATEXII `vehicleRegistrationPlateIdentifier` (identificador de la placa de matrícula del vehículo)  - `vehicleRunningStatus`: Indica el estado de carga de la batería del dispositivo que informa. Enum:'en marcha, en espera, parado'.  - `vehicleSpecialUsage`: Indica si el vehículo se ha utilizado para fines especiales, como el alquiler comercial, la autoescuela o como taxi. La legislación de muchos países exige que se revele esta información cuando se ofrece un coche a la venta. Enum:'ambulancia, bomberos, militar, policía, transporte escolar, taxi, gestión de la basura'  - `vehicleTrackerDevice`: Estado de la instalación del dispositivo GPS o del dispositivo de seguimiento instalado en el vehículo correspondiente a esta observación.  - `vehicleType`: Tipo de vehículo desde el punto de vista de sus características estructurales. Es diferente de la categoría del vehículo. Enum:'vehículo agrícola, cualquier vehículo, vehículo articulado, bicicleta, carro de basura, autobús, coche, caravana, coche o vehículo ligero, coche con caravana, coche con remolque, carro de limpieza, vehículo de construcción o mantenimiento, tracción a las cuatro ruedas, vehículo de gran altura, camión, minibús, ciclomotor, motocicleta, motocicleta con coche lateral, motocarro, máquina barredora, cisterna, vehículo de tres ruedas, remolque, tranvía, vehículo de dos ruedas, carro, furgoneta, vehículo sin convertidor catalítico, vehículo con caravana, vehículo con remolque, con matrícula par, con matrícula extra, otros". Los siguientes valores definidos por _VehicleTypeEnum_ y _VehicleTypeEnum2_, [DATEX 2 versión 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm) y ampliados para otros usos  - `wardId`: ID del pabellón de la entidad correspondiente a esta observación.  - `wardName`: Nombre de la entidad correspondiente a esta observación.  - `zoneName`: Nombre de zona de la entidad correspondiente a esta observación    
 Propiedades requeridas  
 - `category`  - `id`  - `location`  - `type`  - `vehicleType`  ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
@@ -15,7 +14,6 @@ Entidad: Vehículo
 ```yaml  
 Vehicle:    
   description: 'This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.'    
-  modelTags: IUDX    
   properties:    
     address:    
       description: 'The mailing address'    
@@ -242,7 +240,7 @@ Vehicle:
         type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
-      oneOf:    
+      oneOf: &vehicle_-_properties_-_previouslocation_-_oneof    
         - description: 'Geoproperty. Geojson reference to the item. Point'    
           properties:    
             bbox:    
@@ -420,152 +418,10 @@ Vehicle:
       x-ngsi:    
         type: Property    
     previousLocation:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
-      oneOf:    
-        - properties:    
-            bbox:    
-              items:    
-                type: number    
-              minItems: 4    
-              type: array    
-            coordinates:    
-              items:    
-                type: number    
-              minItems: 2    
-              type: array    
-            type:    
-              enum:    
-                - Point    
-              type: string    
-          required:    
-            - type    
-            - coordinates    
-          title: 'GeoJSON Point'    
-          type: object    
-        - properties:    
-            bbox:    
-              items:    
-                type: number    
-              minItems: 4    
-              type: array    
-            coordinates:    
-              items:    
-                items:    
-                  type: number    
-                minItems: 2    
-                type: array    
-              minItems: 2    
-              type: array    
-            type:    
-              enum:    
-                - LineString    
-              type: string    
-          required:    
-            - type    
-            - coordinates    
-          title: 'GeoJSON LineString'    
-          type: object    
-        - properties:    
-            bbox:    
-              items:    
-                type: number    
-              minItems: 4    
-              type: array    
-            coordinates:    
-              items:    
-                items:    
-                  items:    
-                    type: number    
-                  minItems: 2    
-                  type: array    
-                minItems: 4    
-                type: array    
-              type: array    
-            type:    
-              enum:    
-                - Polygon    
-              type: string    
-          required:    
-            - type    
-            - coordinates    
-          title: 'GeoJSON Polygon'    
-          type: object    
-        - properties:    
-            bbox:    
-              items:    
-                type: number    
-              minItems: 4    
-              type: array    
-            coordinates:    
-              items:    
-                items:    
-                  type: number    
-                minItems: 2    
-                type: array    
-              type: array    
-            type:    
-              enum:    
-                - MultiPoint    
-              type: string    
-          required:    
-            - type    
-            - coordinates    
-          title: 'GeoJSON MultiPoint'    
-          type: object    
-        - properties:    
-            bbox:    
-              items:    
-                type: number    
-              minItems: 4    
-              type: array    
-            coordinates:    
-              items:    
-                items:    
-                  items:    
-                    type: number    
-                  minItems: 2    
-                  type: array    
-                minItems: 2    
-                type: array    
-              type: array    
-            type:    
-              enum:    
-                - MultiLineString    
-              type: string    
-          required:    
-            - type    
-            - coordinates    
-          title: 'GeoJSON MultiLineString'    
-          type: object    
-        - properties:    
-            bbox:    
-              items:    
-                type: number    
-              minItems: 4    
-              type: array    
-            coordinates:    
-              items:    
-                items:    
-                  items:    
-                    items:    
-                      type: number    
-                    minItems: 2    
-                    type: array    
-                  minItems: 4    
-                  type: array    
-                type: array    
-              type: array    
-            type:    
-              enum:    
-                - MultiPolygon    
-              type: string    
-          required:    
-            - type    
-            - coordinates    
-          title: 'GeoJSON MultiPolygon'    
-          type: object    
-      title: 'GeoJSON Geometry'    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+      oneOf: *vehicle_-_properties_-_previouslocation_-_oneof    
+      x-ngsi:    
+        type: Geoproperty    
     purchaseDate:    
       description: 'The date the item e.g. vehicle was purchased by the current owner'    
       format: date-time    
@@ -801,7 +657,12 @@ Vehicle:
     - category    
     - location    
   type: object    
-  version: 0.0.3    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/Vehicle/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/Vehicle/schema.json    
+  x-model-tags: IUDX    
+  x-version: 0.1.0    
 ```  
 </details>    
 ## Ejemplo de carga útil  
@@ -809,92 +670,251 @@ Vehicle:
 Este es un ejemplo de un vehículo en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-      "id": "vehicle:WasteManagement:1",  
-      "type": "Vehicle",  
-      "vehicleType": "lorry",  
-      "category": ["municipalServices"],  
-      "location": {  
-         "type": "Point",  
-         "coordinates": [ -3.164485591715449, 40.62785133667262 ]  
-      },  
-      "name": "C Recogida 1",  
-      "speed": 50,  
-      "cargoWeight": 314,  
-      "serviceStatus": "onRoute",  
-      "serviceProvided": ["garbageCollection", "wasteContainerCleaning"],  
-      "areaServed": "Centro",  
-      "refVehicleModel": "vehiclemodel:econic",  
-      "vehiclePlateIdentifier": "3456ABC"  
+  "id": "vehicle:WasteManagement:1",  
+  "type": "Vehicle",  
+  "vehicleType": "lorry",  
+  "category": [  
+    "municipalServices"  
+  ],  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      -3.164485591715449,  
+      40.62785133667262  
+    ]  
+  },  
+  "name": "C Recogida 1",  
+  "speed": 50,  
+  "cargoWeight": 314,  
+  "serviceStatus": "onRoute",  
+  "serviceProvided": [  
+    "garbageCollection",  
+    "wasteContainerCleaning"  
+  ],  
+  "areaServed": "Centro",  
+  "refVehicleModel": "vehiclemodel:econic",  
+  "vehiclePlateIdentifier": "3456ABC",  
+  "bearing": 43,  
+  "fuelEfficiency": 13,  
+  "fuelType": "Petrol",  
+  "fuelFilled": 6,  
+  "tripNetWeightCollected": 12,  
+  "vehicleTrackerDevice": "Installed",  
+  "wardId": "4",  
+  "license_plate": "KA052134",  
+  "currentTripCount": 1,  
+  "reportId": "21645",  
+  "zoneName": "South Zone",  
+  "vehicleAltitude": 600,  
+  "deviceSimNumber": "9942142573",  
+  "wardName": "Kempegowda Ward",  
+  "deviceBatteryStatus": "Connected",  
+  "ignitionStatus": true,  
+  "vehicleRunningStatus": "running",  
+  "observationDateTime": "2021-03-11T15:51:02+05:30"  
 }  
 ```  
 #### Vehículo NGSI-v2 normalizado Ejemplo  
 He aquí un ejemplo de un vehículo en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-    "id": "vehicle:WasteManagement:1",  
-    "type": "Vehicle",   
-    "category": {  
-        "value": [  
-            "municipalServices"  
-        ]  
-    },   
-    "vehicleType": {  
-        "value": "lorry"  
-    },   
-    "name": {  
-        "value": "C Recogida 1"  
-    },   
-    "vehiclePlateIdentifier": {  
-        "value": "3456ABC"  
-    },   
-    "refVehicleModel": {  
-        "type": "Relationship",   
-        "value": "vehiclemodel:econic"  
-    },   
-    "location": {  
-        "type": "geo:json",   
-        "value": {  
-            "type": "Point",   
-            "coordinates": [  
-                -3.164485591715449,   
-                40.62785133667262  
-            ]  
-        },  
-        "metadata": {  
-            "timestamp": {  
-                "type": "DateTime",  
-                "value": "2018-09-27T12:00:00"  
-            }  
-        }  
-    },   
-    "areaServed": {  
-        "value": "Centro"  
-    },   
-    "serviceStatus": {  
-        "value": "onRoute"  
-    },   
-    "cargoWeight": {  
-        "value": 314  
-    },   
-    "speed": {  
-        "value": 50,  
-        "metadata": {  
-            "timestamp": {  
-                "type": "DateTime",  
-                "value": "2018-09-27T12:00:00"  
-            }  
-        }  
-    },    
-    "serviceProvided": {  
-        "value": [  
-            "gargabeCollection",   
-            "wasteContainerCleaning"  
-        ]  
+  "id": "vehicle:WasteManagement:1",  
+  "type": "Vehicle",  
+  "category": {  
+    "type": "array",  
+    "value": [  
+      "municipalServices"  
+    ]  
+  },  
+  "vehicleType": {  
+    "type": "Text",  
+    "value": "lorry"  
+  },  
+  "name": {  
+    "type": "Text",  
+    "value": "C Recogida 1"  
+  },  
+  "vehiclePlateIdentifier": {  
+    "type": "Text",  
+    "value": "3456ABC"  
+  },  
+  "refVehicleModel": {  
+    "type": "Relationship",  
+    "value": "vehiclemodel:econic"  
+  },  
+  "location": {  
+    "type": "geo:json",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -3.164485591715449,  
+        40.62785133667262  
+      ]  
+    },  
+    "metadata": {  
+      "timestamp": {  
+        "type": "DateTime",  
+        "value": "2018-09-27T12:00:00"  
+      }  
     }  
+  },  
+  "areaServed": {  
+    "type": "Text",  
+    "value": "Centro"  
+  },  
+  "serviceStatus": {  
+    "type": "Text",  
+    "value": "onRoute"  
+  },  
+  "cargoWeight": {  
+    "type": "Number",  
+    "value": 314  
+  },  
+  "speed": {  
+    "type": "Number",  
+    "value": 50,  
+    "metadata": {  
+      "timestamp": {  
+        "type": "DateTime",  
+        "value": "2018-09-27T12:00:00"  
+      }  
+    }  
+  },  
+  "serviceProvided": {  
+    "type": "array",  
+    "value": [  
+      "gargabeCollection",  
+      "wasteContainerCleaning"  
+    ]  
+  },  
+  "bearing": {  
+    "type": "Number",  
+    "value": 43  
+  },  
+  "fuelEfficiency": {  
+    "type": "Number",  
+    "value": 13  
+  },  
+  "fuelType": {  
+    "type": "Text",  
+    "value": "Petrol"  
+  },  
+  "fuelFilled": {  
+    "type": "Number",  
+    "value": 6  
+  },  
+  "tripNetWeightCollected": {  
+    "type": "Number",  
+    "value": 12  
+  },  
+  "vehicleTrackerDevice": {  
+    "type": "Text",  
+    "value": "Installed"  
+  },  
+  "wardId": {  
+    "type": "Text",  
+    "value": "4"  
+  },  
+  "license_plate": {  
+    "type": "Text",  
+    "value": "KA052134"  
+  },  
+  "currentTripCount": {  
+    "type": "Number",  
+    "value": 1  
+  },  
+  "reportId": {  
+    "type": "Text",  
+    "value": "21645"  
+  },  
+  "zoneName": {  
+    "type": "Text",  
+    "value": "South Zone"  
+  },  
+  "vehicleAltitude": {  
+    "type": "Number",  
+    "value": 600  
+  },  
+  "deviceSimNumber": {  
+    "type": "Text",  
+    "value": "9942142573"  
+  },  
+  "wardName": {  
+    "type": "Text",  
+    "value": "Kempegowda Ward"  
+  },  
+  "deviceBatteryStatus": {  
+    "type": "Text",  
+    "value": "Connected"  
+  },  
+  "ignitionStatus": {  
+    "type": "Boolean",  
+    "value": true  
+  },  
+  "vehicleRunningStatus": {  
+    "type": "Text",  
+    "value": "running"  
+  },  
+  "observationDateTime": {  
+    "type": "DateTime",  
+    "value": "2021-03-11T15:51:02+05:30"  
+  }  
 }  
 ```  
 #### Vehículo NGSI-LD key-values Ejemplo  
 Este es un ejemplo de un vehículo en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "areaServed": "Centro",  
+  "cargoWeight": 314,  
+  "category": [  
+    "municipalServices"  
+  ],  
+  "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",  
+  "location": {  
+    "coordinates": [  
+      -3.164485591715449,  
+      40.62785133667262  
+    ],  
+    "type": "Point"  
+  },  
+  "name": "C Recogida 1",  
+  "refVehicleModel": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",  
+  "serviceProvided": [  
+    "gargabeCollection",  
+    "wasteContainerCleaning"  
+  ],  
+  "serviceStatus": "onRoute",  
+  "speed": 50,  
+  "type": "Vehicle",  
+  "vehiclePlateIdentifier": "3456ABC",  
+  "vehicleType": "lorry",  
+  "bearing": 43,  
+  "fuelEfficiency": 13,  
+  "fuelType": "Petrol",  
+  "fuelFilled": 6,  
+  "tripNetWeightCollected": 12,  
+  "vehicleTrackerDevice": "Installed",  
+  "wardId": "4",  
+  "license_plate": "KA052134",  
+  "currentTripCount": 1,  
+  "reportId": "21645",  
+  "zoneName": "South Zone",  
+  "vehicleAltitude": 600,  
+  "deviceSimNumber": "9942142573",  
+  "wardName": "Kempegowda Ward",  
+  "deviceBatteryStatus": "Connected",  
+  "ignitionStatus": true,  
+  "vehicleRunningStatus": "running",  
+  "observationDateTime": "2021-03-11T15:51:02+05:30"  
+}  
+```  
+#### Vehículo NGSI-LD normalizado Ejemplo  
+He aquí un ejemplo de un vehículo en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",  
@@ -956,43 +976,84 @@ Vehicle:
       "wasteContainerCleaning"  
     ]  
   },  
+  "bearing": {  
+    "type": "Property",  
+    "value": 43  
+  },  
+  "fuelEfficiency": {  
+    "type": "Property",  
+    "value": 13  
+  },  
+  "fuelType": {  
+    "type": "Property",  
+    "value": "Petrol"  
+  },  
+  "fuelFilled": {  
+    "type": "Property",  
+    "value": 6  
+  },  
+  "tripNetWeightCollected": {  
+    "type": "Property",  
+    "value": 12  
+  },  
+  "vehicleTrackerDevice": {  
+    "type": "Property",  
+    "value": "Installed"  
+  },  
+  "wardId": {  
+    "type": "Property",  
+    "value": "4"  
+  },  
+  "license_plate": {  
+    "type": "Property",  
+    "value": "KA052134"  
+  },  
+  "currentTripCount": {  
+    "type": "Property",  
+    "value": 1  
+  },  
+  "reportId": {  
+    "type": "Property",  
+    "value": "21645"  
+  },  
+  "zoneName": {  
+    "type": "Property",  
+    "value": "South Zone"  
+  },  
+  "vehicleAltitude": {  
+    "type": "Property",  
+    "value": 600  
+  },  
+  "deviceSimNumber": {  
+    "type": "Property",  
+    "value": "9942142573"  
+  },  
+  "wardName": {  
+    "type": "Property",  
+    "value": "Kempegowda Ward"  
+  },  
+  "deviceBatteryStatus": {  
+    "type": "Property",  
+    "value": "Connected"  
+  },  
+  "ignitionStatus": {  
+    "type": "Property",  
+    "value": true  
+  },  
+  "vehicleRunningStatus": {  
+    "type": "Property",  
+    "value": "running"  
+  },  
+  "observationDateTime": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2021-03-11T15:51:02+05:30"  
+    }  
+  },  
   "@context": [  
     "https://smartdatamodels.org/context.jsonld",  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
   ]  
-}  
-```  
-#### Vehículo NGSI-LD normalizado Ejemplo  
-Este es un ejemplo de un vehículo en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
-```json  
-{  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "areaServed": "Centro",  
-  "cargoWeight": 314,  
-  "category": [  
-    "municipalServices"  
-  ],  
-  "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",  
-  "location": {  
-    "coordinates": [  
-      -3.164485591715449,  
-      40.62785133667262  
-    ],  
-    "type": "Point"  
-  },  
-  "name": "C Recogida 1",  
-  "refVehicleModel": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",  
-  "serviceProvided": [  
-    "gargabeCollection",  
-    "wasteContainerCleaning"  
-  ],  
-  "serviceStatus": "onRoute",  
-  "speed": 50,  
-  "type": "Vehicle",  
-  "vehiclePlateIdentifier": "3456ABC",  
-  "vehicleType": "lorry"  
 }  
 ```  
