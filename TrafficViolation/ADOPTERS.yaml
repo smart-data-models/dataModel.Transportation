@@ -1,4 +1,4 @@
-description: This is a compilation list of the current adopters of the data model TrafficViolation of the Subject datamodel.Trasnportation.  All fields are non mandatory. More info at https://smart-data-models.github.io/data-models/templates/dataModel/CURRENT_ADOPTERS.yaml
+description: This is a compilation list of the current adopters of the data model TrafficViolation of the Subject datamodel.Trasnportation.
 currentAdopters:
 -
  adopter: IUDX
