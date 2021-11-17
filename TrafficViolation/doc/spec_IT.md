@@ -3,7 +3,6 @@ Entità: TrafficViolation
 [Licenza aperta](https://github.com/smart-data-models//dataModel.Transportation/blob/master/TrafficViolation/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descrizione globale: **Un modello di dati per le violazioni del traffico registrate e gli E-Challan generati nelle città.  
-versione: 0.0.1  
 
 ## Elenco delle proprietà  
 
@@ -15,7 +14,6 @@ Entità: TrafficViolation
 ```yaml  
 TrafficViolation:    
   description: 'A Data Model for Traffic Violations registered and E-Challans generated in Cities.'    
-  modelTags: IUDX    
   properties:    
     address:    
       description: 'The mailing address'    
@@ -334,7 +332,12 @@ TrafficViolation:
     - id    
     - type    
   type: object    
-  version: 0.0.1    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/TrafficViolation/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/TrafficViolations/schema.json    
+  x-model-tags: IUDX    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## Esempio di payloads  
