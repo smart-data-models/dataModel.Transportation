@@ -1,0 +1,328 @@
+{
+    "@id": "dtmi:com:ngsi-ld:BikeHireDockingStation;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": " - Transportation / Bike Hire Docking Station adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/BikeHireDockingStation/schema.json",
+    "description": "Bike Hire Docking Station",
+    "displayName": "BikeHireDockingStation",
+    "contents": [
+        {
+            "name": "agency_fare_url",
+            "writable": true,
+            "displayName": "agency_fare_url",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "URL of a web page that contains the details of the fares and also could allow to purchase tickets for that agency online. SameAs: 'agency_fare_url' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt) "
+        },
+        {
+            "name": "agency_name",
+            "writable": true,
+            "displayName": "agency_name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The agency_name field contains the full name of the transit agency. SameAs: 'agency_name' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)"
+        },
+        {
+            "name": "agency_url",
+            "writable": true,
+            "displayName": "agency_url",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The agency_url field contains the URL of the transit agency. SameAs: 'agency_url' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)"
+        },
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The geographic area where a service or offered item is provided"
+        },
+        {
+            "name": "availableBikeNumber",
+            "writable": true,
+            "displayName": "availableBikeNumber",
+            "@type": "Property",
+            "schema": "integer",
+            "comment": "The number of bikes available in the bike hire docking station to be hired by users"
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "freeSlotNumber",
+            "writable": true,
+            "displayName": "freeSlotNumber",
+            "@type": "Property",
+            "schema": "integer",
+            "comment": "The number of slots available for returning and parking bikes. It must lower or equal than `totalSlotNumber`"
+        },
+        {
+            "name": "mediaURL",
+            "writable": true,
+            "displayName": "mediaURL",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "URL providing further information of any image(s) or media of the complaint or place."
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item."
+        },
+        {
+            "name": "observationDateTime",
+            "writable": true,
+            "displayName": "observationDateTime",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Last reported time of observation."
+        },
+        {
+            "name": "openingHours",
+            "writable": true,
+            "displayName": "openingHours",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Opening hours of the docking station"
+        },
+        {
+            "name": "outOfServiceSlotNumber",
+            "writable": true,
+            "displayName": "outOfServiceSlotNumber",
+            "@type": "Property",
+            "schema": "integer",
+            "comment": "The number of slots that are out of order and cannot be used to hire or park a bike. It must lower or equal than `totalSlotNumber`"
+        },
+        {
+            "name": "provider",
+            "writable": true,
+            "displayName": "provider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Bike hire service provider"
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+        },
+        {
+            "name": "stationCode",
+            "writable": true,
+            "displayName": "stationCode",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The station number or station code of the bike hire docking station corresponding to the observation."
+        },
+        {
+            "name": "stationName",
+            "writable": true,
+            "displayName": "stationName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of the bike hire docking station corresponding to this observation."
+        },
+        {
+            "name": "totalSlotNumber",
+            "writable": true,
+            "displayName": "totalSlotNumber",
+            "@type": "Property",
+            "schema": "integer",
+            "comment": "The total number of slots offered by this bike docking station"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "contactPoint",
+            "comment": "The details to contact with the item.",
+            "displayName": "contactPoint",
+            "fields": [
+                {
+                    "name": "contactType",
+                    "schema": "string"
+                },
+                {
+                    "name": "email",
+                    "schema": "string"
+                },
+                {
+                    "name": "name",
+                    "schema": "string"
+                },
+                {
+                    "name": "telephone",
+                    "schema": "string"
+                },
+                {
+                    "name": "url",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPolygon",
+            "schema": "multiPolygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "status",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "almostEmpty",
+                        "displayName": "almostEmpty",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "almostFull",
+                        "displayName": "almostFull",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "empty",
+                        "displayName": "empty",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "full",
+                        "displayName": "full",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "outOfService",
+                        "displayName": "outOfService",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "withIncidence",
+                        "displayName": "withIncidence",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "working",
+                        "displayName": "working",
+                        "enumValue": 7
+                    }
+                ]
+            }
+        }
+    ]
+}
