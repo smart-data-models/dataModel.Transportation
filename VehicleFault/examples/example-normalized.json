@@ -1,0 +1,50 @@
+{
+  "id": "urn:ngsi-ld:VehicleFault:4939200a-5ef5-4266-8c91-1f82ad3b543b",
+  "type": "VehicleFault",
+  "source": {
+    "type": "URL",
+    "value": "https://source.example.com"
+  },
+  "dataProvider": {
+    "type": "URL",
+    "value": "https://provider.example.com"
+  },
+  "vehicle": {
+    "type": "Relationship",
+    "value": "urn:ngsi-ld:Vehicle:1fa179a6-b507-4857-ad72-eb5513ef05c6"
+  },
+  "observedAt": {
+    "type": "DateTime",
+    "value": "2017-05-04T10:18:16Z"
+  },
+  "eventType": {
+    "type": "Text",
+    "value": "emergency"
+  },
+  "location": {
+    "type": "geo:json",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        -104.99404,
+        39.75621
+      ]
+    }
+  },
+  "processingType": {
+    "type": "Text",
+    "value": "systemHandled"
+  },
+  "resolvedAt": {
+    "type": "DateTime",
+    "value": "2017-05-04T10:18:16Z"
+  },
+  "dtCode": {
+    "type": "Text",
+    "value": "EMERG-1234-a"
+  },
+  "faultLog": {
+    "type": "Text",
+    "value": "Emergency stop. Fault with engine"
+  }
+}
