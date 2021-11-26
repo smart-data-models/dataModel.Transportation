@@ -41,6 +41,8 @@ The following entity types are available:
 
 - [Vehicle](https://github.com/smart-data-models/dataModel.Transportation/blob/master/Vehicle/README.md). This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.
 
+- [VehicleFault](https://github.com/smart-data-models/dataModel.Transportation/blob/master/VehicleFault/README.md). This entity contains a harmonised description of a Vehicle Fault. This entity is primarily associated with the Automotive vertical segment but might also be relevant to Industry, Smart City, Agriculture and related IoT applications.
+
 - [VehicleModel](https://github.com/smart-data-models/dataModel.Transportation/blob/master/VehicleModel/README.md). This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.
 
 
