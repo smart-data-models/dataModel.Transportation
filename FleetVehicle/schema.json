@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$schemaVersion": "0.0.1",
+  "modelTags": "GSMA",
+  "$id": "https://smart-data-models.github.io/datamodel.Transportation/FleetVehicle/schema.json",
+  "title": "Smart Data models - Fleet-Vehicle schema",
+  "description": "This entity contains a harmonised description of a generic fleet vehicle such as a delivery vehicle, an ambulance or a postal vehicle. This entity is primarily associated with the vertical segment of the transport and logistics but may also be used many other related IoT applications.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Property. NGSI Entity identifier. It has to be FleetVehicle",
+          "enum": [
+            "FleetVehicle"
+          ]
+        },
+        "vehicle": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. Reference to the related Vehicle entity instance that describes the core attributes of this Fleet Vehicle."
+        },
+        "fleetVehicleType": {
+          "type": "string",
+          "description": "Property. The type of the Vehicle for example (not limited to) these ones. Enum:'Taxi, Ambulance, Postal, Fire & Rescue, Delivery'"
+        },
+        "operatingCompany": {
+          "type": "string",
+          "description": "Property. Details of the organization that is operating this fleet vehicle. Based on Schema.org organization. Model:'https://schema.org/Organization'"
+        },
+        "operator": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. The usual operator/driver/keeper of this fleet vehicle encoded as a Schema.org person. Model:'https://schema.org/Person'"
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type"
+  ]
+}

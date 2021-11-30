@@ -1,0 +1,34 @@
+{
+  "@context": [
+    "https://smart-data-models.github.io/datamodel.Transportation/FleetVehicle/context.jsonld"
+  ],
+  "id": "urn:ngsi-ld:FleetVehicle:630b8818-5aa2-11e8-91c6-bf6b90c0ad02",
+  "type": "FleetVehicle",
+  "source": {
+    "type": "Property",
+    "value": "https://source.example.com"
+  },
+  "dataProvider": {
+    "type": "Property",
+    "value": "https://provider.example.com"
+  },
+  "vehicle": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:Vehicle:76a67054-5aa2-11e8-b0ee-43cfe58d3cd1"
+  },
+  "fleetVehicleType": {
+    "type": "Property",
+    "value": "Ambulance"
+  },
+  "operatingCompany": {
+    "type": "Property",
+    "value": {
+      "@type": "https://schema.org/Organization",
+      "@value": "NHS"
+    }
+  },
+  "operator": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:Person:fe018d4e-46f8-11e8-ae6b-df5577f85836"
+  }
+}
