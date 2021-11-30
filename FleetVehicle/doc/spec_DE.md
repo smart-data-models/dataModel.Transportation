@@ -330,7 +330,7 @@ FleetVehicle:
 </details>    
 ## Beispiel-Nutzlasten  
 #### FleetVehicle NGSI-v2 key-values Beispiel  
-Hier ist ein Beispiel für ein FleetVehicle im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für ein FleetVehicle im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:FleetVehicle:630b8818-5aa2-11e8-91c6-bf6b90c0ad02",  
