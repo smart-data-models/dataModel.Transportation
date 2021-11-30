@@ -1,0 +1,298 @@
+{
+    "@id": "dtmi:com:ngsi-ld:FleetVehicleStatus;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "Smart Data models - Fleet Vehicle Status schema adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/FleetVehicleStatus/schema.json",
+    "description": "This entity contains a harmonised description of the status of a generic fleet vehicle. This entity is primarily associated with the vertical segment of the transport and logistics but may also be used many other related IoT applications.",
+    "displayName": "FleetVehicleStatus",
+    "contents": [
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The geographic area where a service or offered item is provided"
+        },
+        {
+            "name": "bearing",
+            "writable": true,
+            "displayName": "bearing",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The current bearing of the fleet vehicle in degrees relative to North. The timestamp element of the attribute should indicate when the reading was obtained."
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "fleetVehicle",
+            "writable": true,
+            "displayName": "fleetVehicle"
+        },
+        {
+            "name": "fleetVehicleOperation",
+            "writable": true,
+            "displayName": "fleetVehicleOperation"
+        },
+        {
+            "name": "inRestrictedArea",
+            "writable": true,
+            "displayName": "inRestrictedArea",
+            "@type": "Property",
+            "schema": "boolean",
+            "comment": "Indicates if the vehicle is known to be in a restricted area at the time of the status update."
+        },
+        {
+            "name": "lastFuellingAmount",
+            "writable": true,
+            "displayName": "lastFuellingAmount",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The level of fuel added to the vehicle at the last fuelling. The timestamp element of the attribute should indicate when the vehicle was fuelled. Data to be recorded in Litres"
+        },
+        {
+            "name": "lastKnownPositionUpdatedAt",
+            "writable": true,
+            "displayName": "lastKnownPositionUpdatedAt",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "The timestamp of the last known position update for the fleet vehicle."
+        },
+        {
+            "name": "mileageFromOdometer",
+            "writable": true,
+            "displayName": "mileageFromOdometer",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The total distance the fleet vehicle has travelled according to the on-board odometer in kilometres (unitCode KMT) or miles (unitCode SMI). See also Schema.org Vehicle/ mileageFromOdometer. The timestamp element records when the odometer reading was taken."
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item."
+        },
+        {
+            "name": "restFuelAmount",
+            "writable": true,
+            "displayName": "restFuelAmount",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The level of fuel recorded when the vehicle was last at rest (i.e. stopped). The timestamp element of the attribute should indicate when the vehicle was last at rest. Data to be recorded in Litres."
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+        },
+        {
+            "name": "speed",
+            "writable": true,
+            "displayName": "speed",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The current speed of the fleet vehicle (km/h). The timestamp element of the attribute should indicate when the reading was obtained"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "currentOperative",
+            "comment": "The current operative (e.g. driver) of the vehicle described as a Schema.org  person",
+            "displayName": "currentOperative",
+            "fields": [
+                {
+                    "name": "givenName",
+                    "schema": "string"
+                },
+                {
+                    "name": "jobTitle",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "lastKnownPosition_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "lastKnownPosition_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "lastKnownPosition_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "lastKnownPosition_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "lastKnownPosition_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "lastKnownPosition_MultiPolygon",
+            "schema": "multiPolygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPolygon",
+            "schema": "multiPolygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "currentStatus",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "deployed",
+                        "displayName": "deployed",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "finished",
+                        "displayName": "finished",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "servicing",
+                        "displayName": "servicing",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "starting",
+                        "displayName": "starting",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "terminated",
+                        "displayName": "terminated",
+                        "enumValue": 5
+                    }
+                ]
+            }
+        }
+    ]
+}
