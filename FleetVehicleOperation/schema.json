@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$schemaVersion": "0.0.1",
+  "modelTags": "GSMA",
+  "$id": "https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleOperation/schema.json",
+  "title": "Smart Data models - FleetVehicleOperation schema",
+  "description": "This entity contains a harmonised description of a generic fleet vehicle operation such as a delivery, or a postal collection. This entity is primarily associated with the vertical segment of the transport and logistics but may also be used many other related IoT applications.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Property. NGSI Entity identifier. It has to be FleetVehicleOperation",
+          "enum": [
+            "FleetVehicleOperation"
+          ]
+        },
+        "fleetVehicle": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. Reference to the FleetVehicle entity to which this operation relates."
+        },
+        "fleetVehicleOperation": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. Reference to the FleetVehicleOperation entity to which this status entity relates."
+        },
+        "initiatingLocation": {
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+        },
+        "startedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. The start date and time when the event or operation was triggered."
+        },
+        "endedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. The end date and time of the event when the event or operation is known to be over/complete. Null/omitted if not yet ended."
+        },
+        "operationType": {
+          "type": "string",
+          "description": "Property. The free text type of the event or operation e.g. e.g. Call for a patient transportation, postal collection, delivery, close to a restricted area, overspeed."
+        },
+        "result": {
+          "type": "string",
+          "description": "Property. The final result of the event or operation."
+        },
+        "responseTime": {
+          "type": "number",
+          "description": "Property. Indicates the time to respond to an event, in seconds. The associated observedAt timestamp indicates when the last update was recorded. E.g. records the response time for an ambulance to reach to a patient. Units:'seconds'"
+        },
+        "transportTime": {
+          "type": "number",
+          "description": "Property. Indicates the time that the fleet vehicle has spent transporting people or supplies for the current operation. E.g. indicates the time an ambulance spent transporting a patient to a hospital emergency department."
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type"
+  ]
+}

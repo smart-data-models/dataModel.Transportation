@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleOperation/context.jsonld"
+  ],
+  "id": "urn:ngsi-ld:FleetVehicleOperation:8e876a60-5aa3-11e8-b350-d7b51a09fb6c",
+  "type": "FleetVehicleOperation",
+  "source": "https://source.example.com",
+  "dataProvider": "https://provider.example.com",
+  "fleetVehicle": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f",
+  "fleetVehicleStatus": "urn:ngsi-ld:FleetVehicleStatus:0284e0dc-5aa4-11e8-97e6-2351fc70c286",
+  "initiatingLocation": {
+    "type": "Point",
+    "coordinates": [
+      -104.99404,
+      39.75621
+    ]
+  },
+  "startedAt": "2016-08-22T10:18:16Z",
+  "endedAt": "2016-08-28T10:18:16Z",
+  "operationType": "Patient transportation",
+  "description": "An emergency transportation of a 3 year old boy",
+  "result": "Completed",
+  "responseTime": 2500,
+  "transportTime": 1220
+}

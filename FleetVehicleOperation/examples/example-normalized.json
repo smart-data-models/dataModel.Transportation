@@ -1,0 +1,58 @@
+{
+  "id": "urn:ngsi-ld:FleetVehicleOperation:8e876a60-5aa3-11e8-b350-d7b51a09fb6c",
+  "type": "FleetVehicleOperation",
+  "source": {
+    "type": "URL",
+    "value": "https://source.example.com"
+  },
+  "dataProvider": {
+    "type": "URL",
+    "value": "https://provider.example.com"
+  },
+  "fleetVehicle": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f"
+  },
+  "fleetVehicleStatus": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:FleetVehicleStatus:0284e0dc-5aa4-11e8-97e6-2351fc70c286"
+  },
+  "initiatingLocation": {
+    "type": "geo:json",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        -104.99404,
+        39.75621
+      ]
+    }
+  },
+  "startedAt": {
+    "type": "DateTime",
+    "value": "2016-08-22T10:18:16Z"
+  },
+  "endedAt": {
+    "type": "DateTime",
+    "@value": "2016-08-28T10:18:16Z"
+  },
+  "operationType": {
+    "type": "Text",
+    "value": "Patient transportation"
+  },
+  "description": {
+    "type": "Text",
+    "value": "An emergency transportation of a 3 year old boy"
+  },
+  "result": {
+    "type": "Property",
+    "value": "Completed"
+  },
+  "responseTime": {
+    "type": "Number",
+    "value": 2500
+  },
+  "transportTime": {
+    "type": "Number",
+    "value": 1220
+  }
+}
