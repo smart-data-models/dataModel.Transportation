@@ -1,0 +1,69 @@
+{
+  "id": "urn:ngsi-ld:FleetVehicleStatus:16ea1c5c-5aa6-11e8-8144-4b82063ca31c",
+  "type": "FleetVehicleStatus",
+  "source": {
+    "type": "URL",
+    "value": "https://source.example.com"
+  },
+  "dataProvider": {
+    "type": "URL",
+    "value": "https://provider.example.com"
+  },
+  "fleetVehicle": {
+    "type": "Relationship",
+    "value": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f"
+  },
+  "fleetVehicleOperation": {
+    "type": "Relationship",
+    "value": "urn:ngsi-ld:FleetVehicleOperation:a4f0a07a-5aa6-11e8-b70f-4b9d36e53d7b"
+  },
+  "restFuelAmount": {
+    "type": "Number",
+    "value": 28
+  },
+  "lastFuellingAmount": {
+    "type": "Number",
+    "value": 95
+  },
+  "currentStatus": {
+    "type": "Text",
+    "value": "finished"
+  },
+  "currentOperative": {
+    "type": "StructuredValue",
+    "value": {
+      "givenName": "John Smith",
+      "jobTitle": "Ambulance Operator"
+    }
+  },
+  "speed": {
+    "type": "Number",
+    "value": 60
+  },
+  "bearing": {
+    "type": "Number",
+    "value": 80
+  },
+  "lastKnownPosition": {
+    "type": "geo:json",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        -104.99404,
+        39.75621
+      ]
+    }
+  },
+  "lastKnownPositionUpdatedAt": {
+    "type": "DateTime",
+    "value": "2016-08-28T10:18:16Z"
+  },
+  "inRestrictedArea": {
+    "type": "Boolean",
+    "value": true
+  },
+  "mileageFromOdometer": {
+    "type": "Number",
+    "value": 18756
+  }
+}

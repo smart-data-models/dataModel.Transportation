@@ -1,0 +1,31 @@
+{
+  "@context": [
+    "https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleStatus/context.jsonld"
+  ],
+  "id": "urn:ngsi-ld:FleetVehicleStatus:16ea1c5c-5aa6-11e8-8144-4b82063ca31c",
+  "type": "FleetVehicleStatus",
+  "source": "https://source.example.com",
+  "dataProvider": "https://provider.example.com",
+  "fleetVehicle": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f",
+  "fleetVehicleOperation": "urn:ngsi-ld:FleetVehicleOperation:a4f0a07a-5aa6-11e8-b70f-4b9d36e53d7b",
+  "restFuelAmount": 28,
+  "lastFuellingAmount": 95,
+  "currentStatus": "finished",
+  "currentOperative": {
+    "givenName": "John Smith",
+    "jobTitle": "Ambulance Operator"
+  },
+  "speed": 60,
+  "unitCode": "KMH",
+  "bearing": 80,
+  "lastKnownPosition": {
+    "type": "Point",
+    "coordinates": [
+      -104.99404,
+      39.75621
+    ]
+  },
+  "lastKnownPositionUpdatedAt": "2016-08-28T10:18:16Z",
+  "inRestrictedArea": true,
+  "mileageFromOdometer": 18756
+}
