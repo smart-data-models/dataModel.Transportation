@@ -381,7 +381,7 @@ FleetVehicleOperation:
   "transportTime": 1220  
 }  
 ```  
-#### FleetVehicleOperation NGSI-v2 normalisée Exemple  
+#### FleetVehicleOperation NGSI-v2 normalisé Exemple  
 Voici un exemple d'une FleetVehicleOperation au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
