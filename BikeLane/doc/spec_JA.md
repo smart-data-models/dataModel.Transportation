@@ -428,3 +428,4 @@ BikeLane:
 ```  
 #### BikeLane NGSI-LDの正規化例  
 ここでは、BikeLaneを正規化したJSON-LD形式の例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
