@@ -577,3 +577,4 @@ RestrictedTrafficArea:
   ]  
 }  
 ```  
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
