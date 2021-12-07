@@ -318,7 +318,7 @@ TransportStation:
           type: object
       x-ngsi:
         type: Geoproperty
-    'locationType ':
+    locationType:
       description: 'Link to the GTFS standard repository describing the different location [Location Type]. 0 Stop or platform (place where users get on or off in a public transport vehicle). 1 Station (area or physical structure comprising one or more platforms). 2 Entrance or Exit (place where users can enter / exit a station from the street). 3 Generic intersection (location in a station that doesn''t correspond to any other `location_type` value). 4 Boarding area of a specific location on a platform where users can get on / off in a vehicle.'
       enum:
         - 0
@@ -448,7 +448,7 @@ TransportStation:
         type: array
       items:
         properties:
-          'linesConnected ':
+          linesConnected:
             items:
               type: string
             type: array
@@ -534,7 +534,7 @@ TransportStation:
       type: string
       x-ngsi:
         type: Property
-    'wheelChairAccessible ':
+    wheelChairAccessible:
       description: 'Access possible for Person with Reduced Mobility. For stops without parents 0 no information is available regarding the accessibility of the stop. 1 some vehicles at this stop can board a PMR user. 2 PRM user cannot board  at this stop. For a stop that is part of a station 0 the stop inherits the wheelchair_boarding behavior of the parent station, if it is filled in. 1 lanes provide wheelchair access to the stop / platform  from outside the station. 2 no lane provides wheelchair access to the stop / platform from outside the station. For station inputs / outputs 0 the station entry inherits the wheelchair_boarding behavior of the main station, if specified. 1 the station entrance is wheelchair accessible. 2 no wheelchair accessible route connects the station entrance to the stops / platforms.'
       enum:
         - 0
@@ -562,4 +562,4 @@ TransportStation:
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/TransportStation/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/data-models/Transportation/TransportStation/schema.json
   x-model-tags: ""
-  x-version: 0.1.1
+  x-version: 0.1.2
