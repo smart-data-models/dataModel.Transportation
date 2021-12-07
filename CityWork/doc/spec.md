@@ -6,7 +6,7 @@ Entity: CityWork
 
 ## List of properties  
 
-- `allowedVehicle`: Type of vehicle authorized to circulate. A combination of these values. Enum:'all Vehicle, bicycle, bus, car, companiesTrucks,  emergencyVehicle, firefighters, lorry, motorcycle, police, subway, sweepingMachine, trailer, tramway, trucks, van'  - `alternateName`: An alternative name for this item  - `busImpacted`: Bus Lines impacted by the works.  - `contactPoint`: The details to contact with the item.  - `contractingAuthority`: Name of the contracting authority  - `countOfBusLineImpacted`: Count of Bus Lines impacted by the works  - `countOfDerogation`: Count of derogations granted to the work Number  - `countOfEventImpacted`: Count of Events impacted by the works  - `countOfRailwayLineImpacted`: Count of Railway Lines impacted by the works  - `countOfRoadImpacted`: Count of roads impacted by the works  - `countOfSchoolBusLineImpacted`: Count of School Bus Lines impacted by the works  - `countOfSchoolImpacted`: Count of University, School, or other educational resource impacted by the works  - `countOfStationImpacted`: Count of Railway stations impacted by the works  - `countOfSubwayLineImpacted`: Count of Subway Lines impacted by the works  - `countOfTramwayLineImpacted`: Count of tramway lines impacted by the works  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateLastReported`: A timestamp which denotes the last time when the device successfully reported data. The date and time of this observation in ISO8601 UTCformat  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `decrees`: A List of text where each element is a string with the URL to download or the name of the decree.  - `derogation`: Derogation granted for carrying out work on days and times. A structured value from 0 to N occurrences where each items has the following format `derogationType` :  with sub properties  `startDate`, `endDate`,  `dayOfWeek`, `comment`   - `description`: A description of this item  - `encroachment`: Impact of the works on public, private area. A combination of these values. Enum:'other, private, public'  - `endDate`: End date and time of the works in an ISO8601 UTC format. The attribute can be used in addition to the `workDate` attribute when it corresponds to a time interval to be highlighted  - `eventsImpact`: List of free text or to the entity [Events](https://github.com/smart-data-models/dataModel.Tourism/blob/master/Events/doc/spec.md) if exist.  - `id`: Unique identifier of the entity  - `infrastructureFunction`:  Function of the infrastructure impacted by the works. Enum:'collection, distribution, other, transportation'  - `isMainRoadImpactedHTR`: Value to indicate whether the main traffic road is impacted. Default false. https://schema.org/Boolean  - `isMobile`: Characteristic on the mobility of the works : false for Fixed (default) and true for Mobile  - `mainContractingCompany`: The Main Contracting Company responsible of the works  - `maxAuthorizedTonnage`: Roads impacted by the works with Maximum tonnage authorized. A structured value from 0 to N occurrences where each items is a string in the format : `roadImpact`:[maxTonnage]. If `isMainRoadImpactedHTR` = true, The first item is this one.  - `name`: The name of this item.  - `openingHoursSpecification`: A structured value providing information about the opening hours of a place or a certain service inside a place  - `othersContractingCompany`: A List of Text where each element is a string with the name of the contracting Companies under the responsibility of the main Contracting Company.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `railwayImpacted`: Rail lines impacted by the works.  - `roadImpacted`: Roads impacted by the works and the details of the roads concerned by the work. A structured value from 0 to N occurrences where each items is a string in the format : 'roadImpact':[List of Segment Impacted or Free Text or geo-property, separated by a comma]. If `isMainRoadImpactedHTR` = true, The first item is this one.  - `schoolBusImpacted`: School Bus lines impacted by the works.  - `schoolImpacted`: List of free text or or [GeoProperty] or a Reference to an entity [SCHOOL] if exist.   - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `startDate`: Start date and time of the works in an ISO8601 UTC format. The attribute can be used in addition to the `workDate` attribute when it corresponds to a time interval to be highlighted  - `stationImpacted`: Station Impacted by the works. A structured value from 0 to N occurrences  - `subwayImpacted`: Subway lines impacted by the works. A structured value from 0 to N occurrences.  - `territorialArea`: Territorial area. Level higher to the attribute 'areaServed'. A list of Free Text  - `tramwayImpacted`: Tramway Line impacted by the works. A structured value from 0 to N occurrences.  - `type`: NGSI Entity type. It has to be Citywork  - `typeOfInterventionRequest`: Initial type of request to do the works. Enum:'authorizationRequest,  interventionNotice,  other,  urgentWorks'  - `workDate`: Date and time (Day or period) of the works. It can be represented by an specific time string  - `workDisposition`: Specific rules taken for the works. A structured value from 0 to N occurrences where each items has the following format : `Disposition`: with sub properties  `startDate`, `endDate`,  `dayOfWeek`, `comment`. Enum:'alternatingLights , bicyclePathClosure, bicyclePathDeviation, bicyclePathReduction, circulationManualControl, laneClosure, laneDeviation, laneReduction, noRestriction, parkingForbidden, parkingModification, sidewalkClosure, sidewalkClosureOrReduction, sidewalkReduction, speedReduction'  - `workLastDateUpdate`: Last date for updating a contractual element of the work  - `workLevel`: Positioning of the works in relation to a ground reference system. A combination of these elements. Enum:'aerial, ground, mixed, other, roofing, surface, underground, wall'  - `workNature`: Nature of the works. A combination of these values.Enum:'additionalInvestigations, brushCutting, cleaning, collection, connection, consolidation, construction, control, counting, craneLifting, creation, demolition, drivingSwitch, experimentation, extension, filmShooting, Installation-OR-layout, investigation, landFill, maintenance, manholeOpening, ManholeOpeningToRestoreService, miscellaneousInstallation, miscellaneousWorks, mowingDeburring, other, overheadLinesWorksIntervention, pruning, pulling, refurbishment, rehabilitation, reinforcement, renewal, renovation, repair, replacement, riprap, roadSign, safetyAndComplianceWork, safetyRailsInstallation, securingPerimeter, siteInstallation, staking, supportImplantation, surfaceOccupationAuthorization, survey, tarring, tonnageExemption, treeCutting, trenchOpening, upgrading'  - `workNumber`: Number assigned to the work  - `workOtherImpact`: Other impact. A list of free values  - `workReason`: Reasons of the works in case of urgent intervention. A combination of these values. Enum:'derailment,  collapse,  fire,  flood,  gasLeak,  landslide,  other,  powerCut,  rockfall,  sagging,  waterLeak'  - `workState`: Number assigned to the work. Enum:'all, approved, authorized, canceled, completed, decreeToBeSigned, draft, editedDecrees, instructionInProgress, investigated, nonCompliantOccupation, open, pendingAuthorization, pendingCancellation, planningCompleted, pendingDocument, pendingExtension, pendingPlanning, planned, received, reject, supported, validatedInPlanning'  - `workTarget`: Categories of works regarding the different profession. A combination of these elements. Enum:'bicyclePath, busCorridor, catainers, cityMotorBike, cityBike, cityCar, cityScooter, coldAndAirCon, coldGroup, copperCable, CoringPenetrometry, drinkingWater, electricityNetworks, exploratoryWork, fireHydrants, frameRoof, gasNetworks, generator, historicalMonuments, infrastructure, landscapedArea, movingHoistNacelleTruck, networks, offStreetParking, opticalFibers, other, overheadLine, papersCollection, pavement, publicDecorativeLighting, publicDomain, publicTransport, railway, rainyWaters, riprap, rMTNetworks, roads, roadsAndPublicDomain, sanitation, scaffolding, sideWalk, speedReductionDevices, streetParking, surfaceOccupation, supportStructures, tagsAndPosters, telecomNetworks, telecom-RMT-VideoNetworks, trafficSignalingRegulation, tramway, urbanFurniture, urbanHeating, variousWorks, videoNetworks, vrd'  - `workZone`: Zone of Works. A combination of these values. Enum:' airport, beach, bicyclePath, bridge, busCorridor, dock, floodArea, harbor, heliport, mountainousArea, offRoad, other, parking, parksGardens, path, protectArea, railwayLine, riskArea, river, road, rockyArea, sevesoArea, sideWalk, subwayLine, tramwayLine, tunnel'    
+- `allowedVehicle`: Type of vehicle authorized to circulate. A combination of these values. Enum:'all Vehicle, bicycle, bus, car, companiesTrucks,  emergencyVehicle, firefighters, lorry, motorcycle, police, subway, sweepingMachine, trailer, tramway, trucks, van'  - `alternateName`: An alternative name for this item  - `busImpacted`: Bus lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of 'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId / segmentName / segmentLocation'  - `contactPoint`: The details to contact with the item.  - `contractingAuthority`: Name of the contracting authority  - `countOfBusLineImpacted`: Count of Bus Lines impacted by the works  - `countOfDerogation`: Count of derogations granted to the work Number  - `countOfEventImpacted`: Count of Events impacted by the works  - `countOfRailwayLineImpacted`: Count of Railway Lines impacted by the works  - `countOfRoadImpacted`: Count of roads impacted by the works  - `countOfSchoolBusLineImpacted`: Count of School Bus Lines impacted by the works  - `countOfSchoolImpacted`: Count of University, School, or other educational resource impacted by the works  - `countOfStationImpacted`: Count of Railway stations impacted by the works  - `countOfSubwayLineImpacted`: Count of Subway Lines impacted by the works  - `countOfTramwayLineImpacted`: Count of tramway lines impacted by the works  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateLastReported`: A timestamp which denotes the last time when the device successfully reported data. The date and time of this observation in ISO8601 UTCformat  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `decrees`: A List of text where each element is a string with the URL to download or the name of the decree.  - `derogation`: Derogation granted for carrying out work on days and times. A structured value from 0 to N occurrences where each items has the following format `derogationType` :  with sub properties 'startDate, endDate, dayOfWeek, comment'  - `description`: A description of this item  - `encroachment`: Impact of the works on public, private area. A combination of these values. Enum:'other, private, public'  - `endDate`: End date and time of the works in an ISO8601 UTC format. The attribute can be used in addition to the `workDate` attribute when it corresponds to a time interval to be highlighted  - `eventsImpacted`: List of free text or to the entity [Events](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/Event/doc/spec.md) if exist.  - `id`: Unique identifier of the entity  - `infrastructureFunction`:  Function of the infrastructure impacted by the works. Enum:'collection, distribution, other, transportation'  - `isMainRoadImpactedHTR`: Value to indicate whether the main traffic road is impacted. Default false. https://schema.org/Boolean  - `isMobile`: Characteristic on the mobility of the works : false for Fixed (default) and true for Mobile  - `mainContractingCompany`: The Main Contracting Company responsible of the works  - `maxAuthorizedTonnage`: Roads impacted by the works with Maximum tonnage authorized. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of 'roadId / roadName / roadLocation'. Second subproperties, 'maxTonnage'  - `name`: The name of this item.  - `openingHoursSpecification`: A structured value providing information about the opening hours of a place or a certain service inside a place  - `othersContractingCompany`: A List of Text where each element is a string with the name of the contracting Companies under the responsibility of the main Contracting Company.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `railwayImpacted`: Rail lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of 'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId / segmentName / segmentLocation'  - `roadImpacted`: Roads impacted by the works and the details of the roads concerned by the work. A structured value from 0 to N occurrences where each items is a string in the format : 'roadImpact':[List of Segment Impacted or Free Text or geo-property, separated by a comma]. If `isMainRoadImpactedHTR` = true, The first item is this one.  - `roadImpactedMT`: A list of roads defined as Major Traffic, impacted by the works. Values are also included in the roadImpacted attribute.  - `roadImpactedSA`: A list of roads defined as sensitive areas, impacted by the works. Values are also included in the roadImpacted attribute.  - `schoolBusImpacted`: Scholl Bus lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of 'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId / segmentName / segmentLocation'  - `schoolImpacted`: List of free text or [GeoProperty] or a Reference to an entity [SCHOOL] if exist.   - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `startDate`: Start date and time of the works in an ISO8601 UTC format. The attribute can be used in addition to the `workDate` attribute when it corresponds to a time interval to be highlighted  - `stationImpacted`: Station Impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, 'stationType'. Second subproperties, one of 'stationId / stationName / stationLocation'  - `subwayImpacted`: Subway lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of 'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId / segmentName / segmentLocation'  - `territorialArea`: Territorial area. Level higher to the attribute 'areaServed'. A list of Free Text  - `tramwayImpacted`: Tramway Line impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of 'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId / segmentName / segmentLocation'  - `type`: NGSI Entity type. It has to be CityWork  - `typeOfInterventionRequest`: Initial type of request to do the works. Enum:'authorizationRequest,  interventionNotice,  other,  urgentWorks'  - `workDate`: Date and time (Day or period) of the works. It can be represented by an specific time string  - `workDisposition`: Specific rules taken for the works. A structured value from 0 to N occurrences where each items has the following format : `Disposition`: with sub properties  `startDate`, `endDate`,  `dayOfWeek`, `comment`. Enum:'alternatingLights , bicyclePathClosure, bicyclePathDeviation, bicyclePathReduction, circulationManualControl, laneClosure, laneDeviation, laneReduction, noRestriction, parkingForbidden, parkingModification, sidewalkClosure, sidewalkClosureOrReduction, sidewalkReduction, speedReduction'  - `workLastDateUpdate`: Last date for updating a contractual element of the work  - `workLevel`: Positioning of the works in relation to a ground reference system. A combination of these elements. Enum:'aerial, ground, mixed, other, roofing, surface, underground, wall'  - `workNature`: Nature of the works. A combination of these values.Enum:'additionalInvestigations, brushCutting, cleaning, collection, connection, consolidation, construction, control, counting, craneLifting, creation, demolition, drivingSwitch, experimentation, extension, filmShooting, Installation-OR-layout, investigation, landFill, maintenance, manholeOpening, ManholeOpeningToRestoreService, miscellaneousInstallation, miscellaneousWorks, mowingDeburring, other, overheadLinesWorksIntervention, pruning, pulling, refurbishment, rehabilitation, reinforcement, renewal, renovation, repair, replacement, riprap, roadSign, safetyAndComplianceWork, safetyRailsInstallation, securingPerimeter, siteInstallation, staking, supportImplantation, surfaceOccupationAuthorization, survey, tarring, tonnageExemption, treeCutting, trenchOpening, upgrading'  - `workNumber`: Number assigned to the work  - `workOtherImpact`: Other impact. A list of free values  - `workReason`: Reasons of the works in case of urgent intervention. A combination of these values. Enum:'collapse, derailment, fire, flood, gasLeak, landslide, other, powerCut, rockfall, sagging, waterLeak'  - `workState`: Number assigned to the work. Enum:'all, approved, authorized, canceled, completed, decreeToBeSigned, draft, editedDecrees, instructionInProgress, investigated, nonCompliantOccupation, open, pendingAuthorization, pendingCancellation, planningCompleted, pendingDocument, pendingExtension, pendingPlanning, planned, received, reject, supported, validatedInPlanning'  - `workTarget`: Categories of works regarding the different profession. A combination of these elements. Enum:'bicyclePath, busCorridor, catainers, cityMotorBike, cityBike, cityCar, cityScooter, coldAndAirCon, coldGroup, copperCable, CoringPenetrometry, drinkingWater, electricityNetworks, exploratoryWork, fireHydrants, frameRoof, gasNetworks, generator, historicalMonuments, infrastructure, landscapedArea, movingHoistNacelleTruck, networks, offStreetParking, opticalFibers, other, overheadLine, papersCollection, pavement, publicDecorativeLighting, publicDomain, publicTransport, railway, rainyWaters, riprap, rMTNetworks, roads, roadsAndPublicDomain, sanitation, scaffolding, sideWalk, speedReductionDevices, streetParking, surfaceOccupation, supportStructures, tagsAndPosters, telecomNetworks, telecom-RMT-VideoNetworks, trafficSignalingRegulation, tramway, urbanFurniture, urbanHeating, variousWorks, videoNetworks, vrd'  - `workZone`: Zone of Works. A combination of these values. Enum:' airport, beach, bicyclePath, bridge, busCorridor, dock, floodArea, harbor, heliport, mountainousArea, offRoad, other, parking, parksGardens, path, protectArea, railwayLine, riskArea, river, road, rockyArea, sevesoArea, sideWalk, subwayLine, tramwayLine, tunnel'    
 Required properties  
 - `id`  - `location`  - `type`  ## Data Model description of properties  
 Sorted alphabetically (click for details)  
@@ -19,7 +19,7 @@ CityWork:
       description: 'Type of vehicle authorized to circulate. A combination of these values. Enum:''all Vehicle, bicycle, bus, car, companiesTrucks,  emergencyVehicle, firefighters, lorry, motorcycle, police, subway, sweepingMachine, trailer, tramway, trucks, van'''    
       items:    
         enum:    
-          - 'all Vehicle'    
+          - allVehicle    
           - bicycle    
           - bus    
           - car    
@@ -45,12 +45,186 @@ CityWork:
       x-ngsi:    
         type: Property    
     busImpacted:    
-      description: 'Bus Lines impacted by the works.'    
+      description: 'Bus lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of ''lineId / lineName / lineLocation''. Second subproperties, one of ''segmentId / segmentName / segmentLocation'''    
       items:    
         properties:    
-          lineImpacted:    
+          lineId:    
+            anyOf: &citywork_-_properties_-_id_-_anyof    
+              - description: 'Property. Identifier format of any NGSI entity'    
+                maxLength: 256    
+                minLength: 1    
+                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+                type: string    
+              - description: 'Property. Identifier format of any NGSI entity'    
+                format: uri    
+                type: string    
+            description: 'Property. Unique identifier of the entity'    
+          lineLocation:    
+            description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+            oneOf: &citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
+              - description: 'Geoproperty. Geojson reference to the item. Point'    
+                properties:    
+                  bbox:    
+                    items:    
+                      type: number    
+                    minItems: 4    
+                    type: array    
+                  coordinates:    
+                    items:    
+                      type: number    
+                    minItems: 2    
+                    type: array    
+                  type:    
+                    enum:    
+                      - Point    
+                    type: string    
+                required:    
+                  - type    
+                  - coordinates    
+                title: 'GeoJSON Point'    
+                type: object    
+              - description: 'Geoproperty. Geojson reference to the item. LineString'    
+                properties:    
+                  bbox:    
+                    items:    
+                      type: number    
+                    minItems: 4    
+                    type: array    
+                  coordinates:    
+                    items:    
+                      items:    
+                        type: number    
+                      minItems: 2    
+                      type: array    
+                    minItems: 2    
+                    type: array    
+                  type:    
+                    enum:    
+                      - LineString    
+                    type: string    
+                required:    
+                  - type    
+                  - coordinates    
+                title: 'GeoJSON LineString'    
+                type: object    
+              - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+                properties:    
+                  bbox:    
+                    items:    
+                      type: number    
+                    minItems: 4    
+                    type: array    
+                  coordinates:    
+                    items:    
+                      items:    
+                        items:    
+                          type: number    
+                        minItems: 2    
+                        type: array    
+                      minItems: 4    
+                      type: array    
+                    type: array    
+                  type:    
+                    enum:    
+                      - Polygon    
+                    type: string    
+                required:    
+                  - type    
+                  - coordinates    
+                title: 'GeoJSON Polygon'    
+                type: object    
+              - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+                properties:    
+                  bbox:    
+                    items:    
+                      type: number    
+                    minItems: 4    
+                    type: array    
+                  coordinates:    
+                    items:    
+                      items:    
+                        type: number    
+                      minItems: 2    
+                      type: array    
+                    type: array    
+                  type:    
+                    enum:    
+                      - MultiPoint    
+                    type: string    
+                required:    
+                  - type    
+                  - coordinates    
+                title: 'GeoJSON MultiPoint'    
+                type: object    
+              - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+                properties:    
+                  bbox:    
+                    items:    
+                      type: number    
+                    minItems: 4    
+                    type: array    
+                  coordinates:    
+                    items:    
+                      items:    
+                        items:    
+                          type: number    
+                        minItems: 2    
+                        type: array    
+                      minItems: 2    
+                      type: array    
+                    type: array    
+                  type:    
+                    enum:    
+                      - MultiLineString    
+                    type: string    
+                required:    
+                  - type    
+                  - coordinates    
+                title: 'GeoJSON MultiLineString'    
+                type: object    
+              - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+                properties:    
+                  bbox:    
+                    items:    
+                      type: number    
+                    minItems: 4    
+                    type: array    
+                  coordinates:    
+                    items:    
+                      items:    
+                        items:    
+                          items:    
+                            type: number    
+                          minItems: 2    
+                          type: array    
+                        minItems: 4    
+                        type: array    
+                      type: array    
+                    type: array    
+                  type:    
+                    enum:    
+                      - MultiPolygon    
+                    type: string    
+                required:    
+                  - type    
+                  - coordinates    
+                title: 'GeoJSON MultiPolygon'    
+                type: object    
+          lineName:    
             type: string    
-          segmentImpacted:    
+          segmentId:    
+            items:    
+              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
+            type: array    
+          segmentLocation:    
+            description: 'Property. Segment Location. A GeoProperty.'    
+            items:    
+              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
+            type: array    
+          segmentName:    
+            description: 'Property. Segment Name.'    
             items:    
               type: string    
             type: array    
@@ -62,16 +236,20 @@ CityWork:
       description: 'The details to contact with the item.'    
       properties:    
         contactType:    
+          description: 'Property. Contact type of this item.'    
           type: string    
         email:    
           description: 'Property. Email address of owner.'    
           format: idn-email    
           type: string    
         name:    
+          description: 'Property. The name of this item.'    
           type: string    
         telephone:    
+          description: 'Property. Telephone of this contact.'    
           type: string    
         url:    
+          description: 'Property. URL which provides a description or further information about this item.'    
           format: uri    
           type: string    
       type: object    
@@ -86,63 +264,63 @@ CityWork:
         type: Property    
     countOfBusLineImpacted:    
       description: 'Count of Bus Lines impacted by the works'    
-      type: integer    
+      type: number    
       x-ngsi:    
-        model: https://schema.org/Integer    
+        model: https://schema.org/Number    
         type: Property    
     countOfDerogation:    
       description: 'Count of derogations granted to the work Number'    
-      type: integer    
+      type: number    
       x-ngsi:    
-        model: https://schema.org/Integer    
+        model: https://schema.org/number    
         type: Property    
     countOfEventImpacted:    
       description: 'Count of Events impacted by the works'    
-      type: integer    
+      type: number    
       x-ngsi:    
-        model: https://schema.org/Integer    
+        model: https://schema.org/Number    
         type: Property    
     countOfRailwayLineImpacted:    
       description: 'Count of Railway Lines impacted by the works'    
-      type: integer    
+      type: number    
       x-ngsi:    
-        model: https://schema.org/Integer    
+        model: https://schema.org/Number    
         type: Property    
     countOfRoadImpacted:    
       description: 'Count of roads impacted by the works'    
-      type: integer    
+      type: number    
       x-ngsi:    
-        model: https://schema.org/Integer    
+        model: https://schema.org/Number    
         type: Property    
     countOfSchoolBusLineImpacted:    
       description: 'Count of School Bus Lines impacted by the works'    
-      type: integer    
+      type: number    
       x-ngsi:    
-        model: https://schema.org/Integer    
+        model: https://schema.org/Number    
         type: Property    
     countOfSchoolImpacted:    
       description: 'Count of University, School, or other educational resource impacted by the works'    
-      type: integer    
+      type: number    
       x-ngsi:    
-        model: https://schema.org/Integer    
+        model: https://schema.org/Number    
         type: Property    
     countOfStationImpacted:    
       description: 'Count of Railway stations impacted by the works'    
-      type: integer    
+      type: number    
       x-ngsi:    
-        model: https://schema.org/Integer    
+        model: https://schema.org/Number    
         type: Property    
     countOfSubwayLineImpacted:    
       description: 'Count of Subway Lines impacted by the works'    
-      type: integer    
+      type: number    
       x-ngsi:    
-        model: https://schema.org/Integer    
+        model: https://schema.org/Number    
         type: Property    
     countOfTramwayLineImpacted:    
       description: 'Count of tramway lines impacted by the works'    
-      type: integer    
+      type: number    
       x-ngsi:    
-        model: https://schema.org/Integer    
+        model: https://schema.org/Number    
         type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
@@ -176,7 +354,7 @@ CityWork:
       x-ngsi:    
         type: Property    
     derogation:    
-      description: 'Derogation granted for carrying out work on days and times. A structured value from 0 to N occurrences where each items has the following format `derogationType` :  with sub properties  `startDate`, `endDate`,  `dayOfWeek`, `comment` '    
+      description: 'Derogation granted for carrying out work on days and times. A structured value from 0 to N occurrences where each items has the following format `derogationType` :  with sub properties ''startDate, endDate, dayOfWeek, comment'''    
       items:    
         properties:    
           comment:    
@@ -230,23 +408,15 @@ CityWork:
       x-ngsi:    
         model: https://schema.org/DateTime    
         type: Property    
-    eventsImpact:    
-      description: 'List of free text or to the entity [Events](https://github.com/smart-data-models/dataModel.Tourism/blob/master/Events/doc/spec.md) if exist.'    
+    eventsImpacted:    
+      description: 'List of free text or to the entity [Events](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/Event/doc/spec.md) if exist.'    
       items:    
         type: string    
       type: array    
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &citywork_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
-          maxLength: 256    
-          minLength: 1    
-          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-          type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
-          format: uri    
-          type: string    
+      anyOf: *citywork_-_properties_-_id_-_anyof    
       description: 'Unique identifier of the entity'    
       x-ngsi:    
         type: Property    
@@ -281,12 +451,22 @@ CityWork:
         model: https://schema.org/Text    
         type: Property    
     maxAuthorizedTonnage:    
-      description: 'Roads impacted by the works with Maximum tonnage authorized. A structured value from 0 to N occurrences where each items is a string in the format : `roadImpact`:[maxTonnage]. If `isMainRoadImpactedHTR` = true, The first item is this one.'    
+      description: 'Roads impacted by the works with Maximum tonnage authorized. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of ''roadId / roadName / roadLocation''. Second subproperties, ''maxTonnage'''    
       items:    
         properties:    
           maxTonnage:    
+            description: 'Property. Maximum tonnage authorized for the road. The unit code (text) **TNE** which represents Tonne Metric.'    
             type: number    
+          roadId:    
+            anyOf: *citywork_-_properties_-_id_-_anyof    
+            description: 'Property. Unique identifier of the entity'    
           roadImpacted:    
+            type: string    
+          roadLocation:    
+            description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+            oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
+          roadName:    
+            description: 'Property. Road Name'    
             type: string    
         type: object    
       type: array    
@@ -339,18 +519,36 @@ CityWork:
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
-        anyOf: *citywork_-_properties_-_owner_-_items_-_anyof    
+        anyOf: *citywork_-_properties_-_id_-_anyof    
         description: 'Property. Unique identifier of the entity'    
       type: array    
       x-ngsi:    
         type: Property    
     railwayImpacted:    
-      description: 'Rail lines impacted by the works.'    
+      description: 'Rail lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of ''lineId / lineName / lineLocation''. Second subproperties, one of ''segmentId / segmentName / segmentLocation'''    
       items:    
         properties:    
-          lineImpacted:    
+          lineId:    
+            anyOf: *citywork_-_properties_-_id_-_anyof    
+            description: 'Property. Unique identifier of the entity'    
+          lineLocation:    
+            description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+            oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
+          lineName:    
             type: string    
-          segmentImpacted:    
+          segmentId:    
+            items:    
+              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
+            type: array    
+          segmentLocation:    
+            description: 'Property. Segment Location. A GeoProperty.'    
+            items:    
+              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
+            type: array    
+          segmentName:    
+            description: 'Property. Segment Name.'    
             items:    
               type: string    
             type: array    
@@ -363,173 +561,73 @@ CityWork:
       items:    
         properties:    
           roadId:    
+            anyOf: *citywork_-_properties_-_id_-_anyof    
+            description: 'Property. Unique identifier of the entity'    
+          roadLocation:    
+            description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+            oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
+          roadName:    
+            description: 'Property. Road Name'    
             type: string    
-          segmentImpacted:    
+          segmentId:    
+            items:    
+              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
+            type: array    
+          segmentLocation:    
+            description: 'Property. Segment Location. A GeoProperty.'    
+            items:    
+              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
+            type: array    
+          segmentName:    
+            description: 'Property. Segment Name.'    
             items:    
               type: string    
-            segmentArea:    
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
-              oneOf:    
-                - description: 'Geoproperty. Geojson reference to the item. Point'    
-                  properties:    
-                    bbox:    
-                      items:    
-                        type: number    
-                      minItems: 4    
-                      type: array    
-                    coordinates:    
-                      items:    
-                        type: number    
-                      minItems: 2    
-                      type: array    
-                    type:    
-                      enum:    
-                        - Point    
-                      type: string    
-                  required:    
-                    - type    
-                    - coordinates    
-                  title: 'GeoJSON Point'    
-                  type: object    
-                - description: 'Geoproperty. Geojson reference to the item. LineString'    
-                  properties:    
-                    bbox:    
-                      items:    
-                        type: number    
-                      minItems: 4    
-                      type: array    
-                    coordinates:    
-                      items:    
-                        items:    
-                          type: number    
-                        minItems: 2    
-                        type: array    
-                      minItems: 2    
-                      type: array    
-                    type:    
-                      enum:    
-                        - LineString    
-                      type: string    
-                  required:    
-                    - type    
-                    - coordinates    
-                  title: 'GeoJSON LineString'    
-                  type: object    
-                - description: 'Geoproperty. Geojson reference to the item. Polygon'    
-                  properties:    
-                    bbox:    
-                      items:    
-                        type: number    
-                      minItems: 4    
-                      type: array    
-                    coordinates:    
-                      items:    
-                        items:    
-                          items:    
-                            type: number    
-                          minItems: 2    
-                          type: array    
-                        minItems: 4    
-                        type: array    
-                      type: array    
-                    type:    
-                      enum:    
-                        - Polygon    
-                      type: string    
-                  required:    
-                    - type    
-                    - coordinates    
-                  title: 'GeoJSON Polygon'    
-                  type: object    
-                - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
-                  properties:    
-                    bbox:    
-                      items:    
-                        type: number    
-                      minItems: 4    
-                      type: array    
-                    coordinates:    
-                      items:    
-                        items:    
-                          type: number    
-                        minItems: 2    
-                        type: array    
-                      type: array    
-                    type:    
-                      enum:    
-                        - MultiPoint    
-                      type: string    
-                  required:    
-                    - type    
-                    - coordinates    
-                  title: 'GeoJSON MultiPoint'    
-                  type: object    
-                - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
-                  properties:    
-                    bbox:    
-                      items:    
-                        type: number    
-                      minItems: 4    
-                      type: array    
-                    coordinates:    
-                      items:    
-                        items:    
-                          items:    
-                            type: number    
-                          minItems: 2    
-                          type: array    
-                        minItems: 2    
-                        type: array    
-                      type: array    
-                    type:    
-                      enum:    
-                        - MultiLineString    
-                      type: string    
-                  required:    
-                    - type    
-                    - coordinates    
-                  title: 'GeoJSON MultiLineString'    
-                  type: object    
-                - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
-                  properties:    
-                    bbox:    
-                      items:    
-                        type: number    
-                      minItems: 4    
-                      type: array    
-                    coordinates:    
-                      items:    
-                        items:    
-                          items:    
-                            items:    
-                              type: number    
-                            minItems: 2    
-                            type: array    
-                          minItems: 4    
-                          type: array    
-                        type: array    
-                      type: array    
-                    type:    
-                      enum:    
-                        - MultiPolygon    
-                      type: string    
-                  required:    
-                    - type    
-                    - coordinates    
-                  title: 'GeoJSON MultiPolygon'    
-                  type: object    
             type: array    
         type: object    
       type: array    
       x-ngsi:    
         type: Property    
+    roadImpactedMT:    
+      description: 'A list of roads defined as Major Traffic, impacted by the works. Values are also included in the roadImpacted attribute.'    
+      items:    
+        type: string    
+      type: array    
+      x-ngsi:    
+        type: Property    
+    roadImpactedSA:    
+      description: 'A list of roads defined as sensitive areas, impacted by the works. Values are also included in the roadImpacted attribute.'    
+      items:    
+        type: string    
+      type: array    
+      x-ngsi:    
+        type: Property    
     schoolBusImpacted:    
-      description: 'School Bus lines impacted by the works.'    
+      description: 'Scholl Bus lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of ''lineId / lineName / lineLocation''. Second subproperties, one of ''segmentId / segmentName / segmentLocation'''    
       items:    
         properties:    
-          lineImpacted:    
+          lineId:    
+            anyOf: *citywork_-_properties_-_id_-_anyof    
+            description: 'Property. Unique identifier of the entity'    
+          lineLocation:    
+            description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+            oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
+          lineName:    
             type: string    
-          segmentImpacted:    
+          segmentId:    
+            items:    
+              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
+            type: array    
+          segmentLocation:    
+            description: 'Property. Segment Location. A GeoProperty.'    
+            items:    
+              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
+            type: array    
+          segmentName:    
+            description: 'Property. Segment Name.'    
             items:    
               type: string    
             type: array    
@@ -538,7 +636,7 @@ CityWork:
       x-ngsi:    
         type: Property    
     schoolImpacted:    
-      description: 'List of free text or or [GeoProperty] or a Reference to an entity [SCHOOL] if exist. '    
+      description: 'List of free text or [GeoProperty] or a Reference to an entity [SCHOOL] if exist. '    
       items:    
         type: string    
       type: array    
@@ -569,26 +667,68 @@ CityWork:
         model: https://schema.org/DateTime    
         type: Property    
     stationImpacted:    
-      description: 'Station Impacted by the works. A structured value from 0 to N occurrences'    
+      description: 'Station Impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, ''stationType''. Second subproperties, one of ''stationId / stationName / stationLocation'''    
       items:    
         properties:    
           stationId:    
+            description: 'Property. List of free text or reference to the entity [TransportStation](https://github.com/smart-data-models/dataModel.Transportation/blob/master/TransportStation/doc/spec.md) if used.'    
+            items:    
+              anyOf: *citywork_-_properties_-_id_-_anyof    
+              description: 'Property. Unique identifier of the entity'    
+            type: array    
+          stationLocation:    
+            description: 'Property. Station Location. A GeoProperty.'    
+            items:    
+              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
+            type: array    
+          stationName:    
+            description: 'Property. Station Name.'    
             items:    
               type: string    
             type: array    
           stationType:    
+            description: "Property. A unique value of free text or from the urban transport Mode GFTS standard [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt). Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, tram, trolleybus'"    
+            enum:    
+              - aerialLift    
+              - bus    
+              - cableTram    
+              - ferry    
+              - funicular    
+              - monorail    
+              - rail    
+              - subway    
+              - tram    
+              - trolleybus    
             type: string    
         type: object    
       type: array    
       x-ngsi:    
         type: Property    
     subwayImpacted:    
-      description: 'Subway lines impacted by the works. A structured value from 0 to N occurrences.'    
+      description: 'Subway lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of ''lineId / lineName / lineLocation''. Second subproperties, one of ''segmentId / segmentName / segmentLocation'''    
       items:    
         properties:    
-          lineImpacted:    
+          lineId:    
+            anyOf: *citywork_-_properties_-_id_-_anyof    
+            description: 'Property. Unique identifier of the entity'    
+          lineLocation:    
+            description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+            oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
+          lineName:    
             type: string    
-          segmentImpacted:    
+          segmentId:    
+            items:    
+              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
+            type: array    
+          segmentLocation:    
+            description: 'Property. Segment Location. A GeoProperty.'    
+            items:    
+              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
+            type: array    
+          segmentName:    
             items:    
               type: string    
             type: array    
@@ -603,12 +743,30 @@ CityWork:
         model: https://schema.org/Text    
         type: Property    
     tramwayImpacted:    
-      description: 'Tramway Line impacted by the works. A structured value from 0 to N occurrences.'    
+      description: 'Tramway Line impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of ''lineId / lineName / lineLocation''. Second subproperties, one of ''segmentId / segmentName / segmentLocation'''    
       items:    
         properties:    
-          lineImpacted:    
+          lineId:    
+            anyOf: *citywork_-_properties_-_id_-_anyof    
+            description: 'Property. Unique identifier of the entity'    
+          lineLocation:    
+            description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+            oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
+          lineName:    
+            description: 'Property. Line Name.'    
             type: string    
-          segmentImpacted:    
+          segmentId:    
+            items:    
+              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
+            type: array    
+          segmentLocation:    
+            description: 'Property. Segment Location. A GeoProperty.'    
+            items:    
+              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
+            type: array    
+          segmentName:    
             items:    
               type: string    
             type: array    
@@ -617,7 +775,7 @@ CityWork:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be Citywork'    
+      description: 'NGSI Entity type. It has to be CityWork'    
       enum:    
         - CityWork    
       type: string    
@@ -785,11 +943,11 @@ CityWork:
         model: https://schema.org/Text    
         type: Property    
     workReason:    
-      description: 'Reasons of the works in case of urgent intervention. A combination of these values. Enum:''derailment,  collapse,  fire,  flood,  gasLeak,  landslide,  other,  powerCut,  rockfall,  sagging,  waterLeak'''    
+      description: 'Reasons of the works in case of urgent intervention. A combination of these values. Enum:''collapse, derailment, fire, flood, gasLeak, landslide, other, powerCut, rockfall, sagging, waterLeak'''    
       items:    
         enum:    
-          - derailment    
           - collapse    
+          - derailment    
           - fire    
           - flood    
           - gasLeak    
@@ -818,6 +976,7 @@ CityWork:
         - investigated    
         - nonCompliantOccupation    
         - open    
+        - other    
         - pendingAuthorization    
         - pendingCancellation    
         - planningCompleted    
@@ -935,6 +1094,12 @@ CityWork:
     - type    
     - location    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/CityWork/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/CityWork/schema.json    
+  x-model-tags: ""    
+  x-version: 0.3.0    
 ```  
 </details>    
 ## Example payloads    
@@ -2640,4 +2805,4 @@ CityWork:
   }  
 }  
 ```  
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
