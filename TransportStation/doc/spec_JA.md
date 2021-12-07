@@ -6,7 +6,7 @@
 
 ## プロパティのリスト  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `contactPoint`: アイテムの連絡先です。  - `contractingAuthority`: 契約機関の名称  - `contractingCompany`: 駅の利用に責任を持つ契約会社の名前。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateLastReported`: デバイスがデータの報告に成功した最後の時間を示すタイムスタンプ。ISO8601 UTC形式の日付と時刻。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `dimension`: グローバルな次元。フォーマットは3項目のサブプロパティで構成される。単位コード（テキスト）は，[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を用いて与えられる。例えば，**MTR**はメートルを表す。  - `id`: エンティティのユニークな識別子  - `installationMode`: 地面の基準に対する位置。Enum:'aerial, ground, underGround, underSea'.  - `inventory`: locationType` = 0, 1, 3, 4の場合のみの一般的なデータマッピングです。フォーマットは4項目のサブプロパティで構成されています。  - `levelId`: その場所がある階。フロアに関連する数値インデックス。他の階に対するこのステージの相対的な位置を示す。指標0は地上階を示す。地上階は正のインデックスで、地下ステージは負のインデックスで示される。  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `locationType `: 異なる場所を記述したGTFS標準レポジトリへのリンク [Location Type].0 ストップまたはプラットフォーム（ユーザーが公共交通機関で乗り降りする場所）。1 駅（1つまたは複数のプラットフォームからなるエリアまたは物理的構造）。2 入口または出口（ユーザーが通りから駅に出入りできる場所）。3 汎用交差点（駅構内で他の `location_type` 値に対応しない場所）。4 Boarding area (ユーザーが車両に乗り降りすることができるプラットフォーム上の特定の場所).  - `name`: このアイテムの名前です。  - `openingHoursSpecification`: 場所の営業時間や、場所にある特定のサービスに関する情報を提供する構造化された値  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `parentStation`: StationとPlatformの間の異なるリンクを記述したGTFS標準レポジトリへのリンク [Parent STATION].ケース '1' location_type = 0 (Stop / platform ), parent_stationフィールドは駅のIDを含みます。ケース '2' location_type = 1 (Station)の場合、このフィールドは空でなければならない。ケース '3' location_type = 2 (Input / output) または location_type = 3 (generic intersection), parent_station フィールドには location_type = 1 のステーションの ID が含まれる。ケース '4' location_type = 4 (biding area), parent_stationフィールドはプラットホームのIDを含む。  - `platformCode`: プラットフォームタイプの停留所のプラットフォーム識別子 `location_type` = 0 駅構内に停留所がある場合。  - `refPointOfInterest`: この観測に関連した興味のあるポイントへの参照です。  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `stationConnected`: このステーションから可能な接続。0からNまでの構造化された値で、各項目は `stationType` : [コンマで区切られた接続ラインのリスト]というフォーマットの文字列です。Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, train, tram, trolleybus'.  - `stationType`: 交通機関の駅の種類。Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, trolleybus, tram'.  - `type`: NGSI エンティティタイプ。TransportStationである必要があります。  - `webSite`: 詳細は公式サイトにリンクしています。  - `wheelChairAccessible `: 移動の不自由な方でもアクセス可能です。両親がいない停留所の場合 0 停留所のアクセシビリティに関する情報はありません。1 この停留所では、PMRユーザーが乗車できる車両もあります。2 この停留所では、PRMユーザーは乗車できません。駅の一部である停留所の場合 0 停留所は、親駅が埋められている場合、親駅の wheelchair_boarding behavior を継承する。1 車線は、駅の外から停留所／プラットフォームへの車椅子アクセスを提供する。2 駅の外から停留所／プラットフォームへの車椅子アクセスを提供するレーンはない。駅の入出力について 0 駅の入口は、もし指定されていれば、主要駅の車椅子_乗車行動を継承する。1 駅の入口は、車椅子でアクセス可能である。2 駅の入口と停留所／プラットフォームを結ぶ、車椅子でアクセス可能なルートがない。  - `zoneId`: 駅の価格帯。    
+- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `contactPoint`: アイテムの連絡先です。  - `contractingAuthority`: 契約機関の名称  - `contractingCompany`: 駅の利用に責任を持つ契約会社の名前。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateLastReported`: デバイスがデータの報告に成功した最後の時間を示すタイムスタンプ。ISO8601 UTC形式の日付と時刻。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `dimension`: グローバルな次元。フォーマットは3項目のサブプロパティで構成される。単位コード（テキスト）は，[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を用いて与えられる。例えば，**MTR**はメートルを表す。  - `id`: エンティティのユニークな識別子  - `installationMode`: 地面の基準に対する位置。Enum:'aerial, ground, underGround, underSea'.  - `inventory`: locationType` = 0, 1, 3, 4の場合のみの一般的なデータマッピングです。フォーマットは4項目のサブプロパティで構成されています。  - `levelId`: その場所がある階。フロアに関連する数値インデックス。他の階に対するこのステージの相対的な位置を示す。指標0は地上階を示す。地上階は正のインデックスで、地下ステージは負のインデックスで示される。  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `locationType`: 異なる場所を記述したGTFS標準レポジトリへのリンク [Location Type].0 ストップまたはプラットフォーム（ユーザーが公共交通機関で乗り降りする場所）。1 駅（1つまたは複数のプラットフォームからなるエリアまたは物理的構造）。2 入口または出口（ユーザーが通りから駅に出入りできる場所）。3 汎用交差点（駅構内で他の `location_type` 値に対応しない場所）。4 Boarding area (ユーザーが車両に乗り降りすることができるプラットフォーム上の特定の場所).  - `name`: このアイテムの名前です。  - `openingHoursSpecification`: 場所の営業時間や、場所にある特定のサービスに関する情報を提供する構造化された値  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `parentStation`: StationとPlatformの間の異なるリンクを記述したGTFS標準レポジトリへのリンク [Parent STATION].ケース '1' location_type = 0 (Stop / platform ), parent_stationフィールドは駅のIDを含みます。ケース '2' location_type = 1 (Station)の場合、このフィールドは空でなければならない。ケース '3' location_type = 2 (Input / Output) または location_type = 3 (generic intersection), parent_station フィールドには location_type = 1 のステーションの ID が含まれる。ケース '4' location_type = 4 (biding area), parent_stationフィールドはプラットホームのIDを含む。  - `platformCode`: プラットフォームタイプの停留所のプラットフォーム識別子 `location_type` = 0 駅構内に停留所がある場合。  - `refPointOfInterest`: この観測に関連した興味のあるポイントへの参照です。  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `stationConnected`: このステーションから可能な接続。0からNまでの構造化された値で、各項目は `stationType` : [コンマで区切られた接続ラインのリスト]というフォーマットの文字列です。Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, train, tram, trolleybus'.  - `stationType`: 交通機関の駅の種類。Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, trolleybus, tram'.  - `type`: NGSI エンティティタイプ。TransportStationである必要があります。  - `webSite`: 詳細は公式サイトにリンクしています。  - `wheelChairAccessible`: 移動の不自由な方でもアクセス可能です。両親がいない停留所の場合 0 停留所のアクセシビリティに関する情報はありません。1 この停留所では、PMRユーザーが乗車できる車両もあります。2 この停留所では、PRMユーザーは乗車できません。駅の一部である停留所の場合 0 停留所は、親駅が埋められている場合、親駅の wheelchair_boarding behavior を継承する。1 車線は、駅の外から停留所／プラットフォームへの車椅子アクセスを提供する。2 駅の外から停留所／プラットフォームへの車椅子アクセスを提供するレーンはない。駅の入出力について 0 駅の入口は、もし指定されていれば、主要駅の車椅子_乗車行動を継承する。1 駅の入口は、車椅子でアクセス可能である。2 駅の入口と停留所／プラットフォームを結ぶ、車椅子でアクセス可能なルートがない。  - `zoneId`: 駅の価格帯。    
 必須項目  
 - `dateLastReported`  - `dateObserved`  - `id`  - `location`  - `locationType`  - `stationType`  - `type`  ## データモデルによるプロパティの記述  
 アルファベット順（クリックすると詳細が表示されます）  
@@ -332,7 +332,7 @@ TransportStation:
           type: object    
       x-ngsi:    
         type: Geoproperty    
-    'locationType ':    
+    locationType:    
       description: 'Link to the GTFS standard repository describing the different location [Location Type]. 0 Stop or platform (place where users get on or off in a public transport vehicle). 1 Station (area or physical structure comprising one or more platforms). 2 Entrance or Exit (place where users can enter / exit a station from the street). 3 Generic intersection (location in a station that doesn''t correspond to any other `location_type` value). 4 Boarding area of a specific location on a platform where users can get on / off in a vehicle.'    
       enum:    
         - 0    
@@ -462,7 +462,7 @@ TransportStation:
         type: array    
       items:    
         properties:    
-          'linesConnected ':    
+          linesConnected:    
             items:    
               type: string    
             type: array    
@@ -548,7 +548,7 @@ TransportStation:
       type: string    
       x-ngsi:    
         type: Property    
-    'wheelChairAccessible ':    
+    wheelChairAccessible:    
       description: 'Access possible for Person with Reduced Mobility. For stops without parents 0 no information is available regarding the accessibility of the stop. 1 some vehicles at this stop can board a PMR user. 2 PRM user cannot board  at this stop. For a stop that is part of a station 0 the stop inherits the wheelchair_boarding behavior of the parent station, if it is filled in. 1 lanes provide wheelchair access to the stop / platform  from outside the station. 2 no lane provides wheelchair access to the stop / platform from outside the station. For station inputs / outputs 0 the station entry inherits the wheelchair_boarding behavior of the main station, if specified. 1 the station entrance is wheelchair accessible. 2 no wheelchair accessible route connects the station entrance to the stops / platforms.'    
       enum:    
         - 0    
@@ -576,7 +576,7 @@ TransportStation:
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/TransportStation/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/data-models/Transportation/TransportStation/schema.json    
   x-model-tags: ""    
-  x-version: 0.1.1    
+  x-version: 0.1.2    
 ```  
 </details>    
 ## ペイロードの例  
@@ -1438,4 +1438,4 @@ TransportStation:
   ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
