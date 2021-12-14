@@ -222,6 +222,14 @@
             "displayName": "seeAlso"
         },
         {
+            "name": "serviceOnDuty",
+            "writable": true,
+            "displayName": "serviceOnDuty",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Nature of service provided by emergency vehicle corresponding to this observation. True indicates the emergency vehicle corresponding to this observation is attending to/ servicing to an emergency call of duty and is False otherwise."
+        },
+        {
             "name": "source",
             "writable": true,
             "displayName": "source",
@@ -389,6 +397,54 @@
             ]
         },
         {
+            "@type": "object",
+            "name": "municipalityInfo",
+            "comment": "Municipality information corresponding to this observation.",
+            "displayName": "municipalityInfo",
+            "fields": [
+                {
+                    "name": "cityId",
+                    "schema": "string"
+                },
+                {
+                    "name": "cityName",
+                    "schema": "string"
+                },
+                {
+                    "name": "district",
+                    "schema": "string"
+                },
+                {
+                    "name": "stateName",
+                    "schema": "string"
+                },
+                {
+                    "name": "ulbName",
+                    "schema": "string"
+                },
+                {
+                    "name": "wardId",
+                    "schema": "string"
+                },
+                {
+                    "name": "wardName",
+                    "schema": "string"
+                },
+                {
+                    "name": "wardNum",
+                    "schema": "long"
+                },
+                {
+                    "name": "zoneId",
+                    "schema": "string"
+                },
+                {
+                    "name": "zoneName",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
             "@type": "Telemetry",
             "name": "location_Point",
             "schema": "point"
@@ -464,6 +520,76 @@
                         "name": "disconnected",
                         "displayName": "disconnected",
                         "enumValue": 2
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "emergencyVehicleType",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "policeCar",
+                        "displayName": "policeCar",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "policeMotorcycle",
+                        "displayName": "policeMotorcycle",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "policeVan",
+                        "displayName": "policeVan",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "policeSWAT",
+                        "displayName": "policeSWAT",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "fireEngine",
+                        "displayName": "fireEngine",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "waterTender",
+                        "displayName": "waterTender",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "airAmbulance",
+                        "displayName": "airAmbulance",
+                        "enumValue": 7
+                    },
+                    {
+                        "name": "ambulance",
+                        "displayName": "ambulance",
+                        "enumValue": 8
+                    },
+                    {
+                        "name": "motorcycleAmbulance",
+                        "displayName": "motorcycleAmbulance",
+                        "enumValue": 9
+                    },
+                    {
+                        "name": "rescueVehicle",
+                        "displayName": "rescueVehicle",
+                        "enumValue": 10
+                    },
+                    {
+                        "name": "hazardousMaterialsApparatus",
+                        "displayName": "hazardousMaterialsApparatus",
+                        "enumValue": 11
+                    },
+                    {
+                        "name": "towTruck",
+                        "displayName": "towTruck",
+                        "enumValue": 12
                     }
                 ]
             }
@@ -581,229 +707,249 @@
                         "enumValue": 1
                     },
                     {
+                        "name": "ambulance",
+                        "displayName": "ambulance",
+                        "enumValue": 2
+                    },
+                    {
                         "name": "anyVehicle",
                         "displayName": "anyVehicle",
-                        "enumValue": 2
+                        "enumValue": 3
                     },
                     {
                         "name": "articulatedVehicle",
                         "displayName": "articulatedVehicle",
-                        "enumValue": 3
+                        "enumValue": 4
                     },
                     {
                         "name": "autorickshaw",
                         "displayName": "autorickshaw",
-                        "enumValue": 4
+                        "enumValue": 5
                     },
                     {
                         "name": "bicycle",
                         "displayName": "bicycle",
-                        "enumValue": 5
+                        "enumValue": 6
                     },
                     {
                         "name": "binTrolley",
                         "displayName": "binTrolley",
-                        "enumValue": 6
+                        "enumValue": 7
                     },
                     {
                         "name": "BRT mini bus\u00b7",
                         "displayName": "BRT mini bus\u00b7",
-                        "enumValue": 7
+                        "enumValue": 8
                     },
                     {
                         "name": "BRT bus",
                         "displayName": "BRT bus",
-                        "enumValue": 8
+                        "enumValue": 9
                     },
                     {
                         "name": "bus",
                         "displayName": "bus",
-                        "enumValue": 9
+                        "enumValue": 10
                     },
                     {
                         "name": "car",
                         "displayName": "car",
-                        "enumValue": 10
+                        "enumValue": 11
                     },
                     {
                         "name": "caravan",
                         "displayName": "caravan",
-                        "enumValue": 11
+                        "enumValue": 12
                     },
                     {
                         "name": "carOrLightVehicle",
                         "displayName": "carOrLightVehicle",
-                        "enumValue": 12
+                        "enumValue": 13
                     },
                     {
                         "name": "carWithCaravan",
                         "displayName": "carWithCaravan",
-                        "enumValue": 13
+                        "enumValue": 14
                     },
                     {
                         "name": "carWithTrailer",
                         "displayName": "carWithTrailer",
-                        "enumValue": 14
+                        "enumValue": 15
                     },
                     {
                         "name": "cleaningTrolley",
                         "displayName": "cleaningTrolley",
-                        "enumValue": 15
+                        "enumValue": 16
                     },
                     {
                         "name": "compactor",
                         "displayName": "compactor",
-                        "enumValue": 16
+                        "enumValue": 17
                     },
                     {
                         "name": "constructionOrMaintenanceVehicle",
                         "displayName": "constructionOrMaintenanceVehicle",
-                        "enumValue": 17
+                        "enumValue": 18
                     },
                     {
                         "name": "dumper",
                         "displayName": "dumper",
-                        "enumValue": 18
+                        "enumValue": 19
                     },
                     {
                         "name": "e-moped",
                         "displayName": "e-moped",
-                        "enumValue": 19
+                        "enumValue": 20
                     },
                     {
                         "name": "e-scooter",
                         "displayName": "e-scooter",
-                        "enumValue": 20
+                        "enumValue": 21
                     },
                     {
                         "name": "e-motorcycle",
                         "displayName": "e-motorcycle",
-                        "enumValue": 21
+                        "enumValue": 22
+                    },
+                    {
+                        "name": "fireTender",
+                        "displayName": "fireTender",
+                        "enumValue": 23
                     },
                     {
                         "name": "fourWheelDrive",
                         "displayName": "fourWheelDrive",
-                        "enumValue": 22
+                        "enumValue": 24
                     },
                     {
                         "name": "highSidedVehicle",
                         "displayName": "highSidedVehicle",
-                        "enumValue": 23
+                        "enumValue": 25
                     },
                     {
                         "name": "hopper",
                         "displayName": "hopper",
-                        "enumValue": 24
+                        "enumValue": 26
                     },
                     {
                         "name": "lorry",
                         "displayName": "lorry",
-                        "enumValue": 25
+                        "enumValue": 27
                     },
                     {
                         "name": "minibus",
                         "displayName": "minibus",
-                        "enumValue": 26
+                        "enumValue": 28
                     },
                     {
                         "name": "moped",
                         "displayName": "moped",
-                        "enumValue": 27
+                        "enumValue": 29
                     },
                     {
                         "name": "motorcycle",
                         "displayName": "motorcycle",
-                        "enumValue": 28
+                        "enumValue": 30
                     },
                     {
                         "name": "motorcycleWithSideCar",
                         "displayName": "motorcycleWithSideCar",
-                        "enumValue": 29
+                        "enumValue": 31
                     },
                     {
                         "name": "motorscooter",
                         "displayName": "motorscooter",
-                        "enumValue": 30
+                        "enumValue": 32
+                    },
+                    {
+                        "name": "policeVan",
+                        "displayName": "policeVan",
+                        "enumValue": 33
+                    },
+                    {
+                        "name": "publicMotor",
+                        "displayName": "publicMotor",
+                        "enumValue": 34
                     },
                     {
                         "name": "sweepingMachine",
                         "displayName": "sweepingMachine",
-                        "enumValue": 31
+                        "enumValue": 35
                     },
                     {
                         "name": "tanker",
                         "displayName": "tanker",
-                        "enumValue": 32
+                        "enumValue": 36
                     },
                     {
                         "name": "tempo",
                         "displayName": "tempo",
-                        "enumValue": 33
+                        "enumValue": 37
                     },
                     {
                         "name": "threeWheeledVehicle",
                         "displayName": "threeWheeledVehicle",
-                        "enumValue": 34
+                        "enumValue": 38
                     },
                     {
                         "name": "tipper",
                         "displayName": "tipper",
-                        "enumValue": 35
+                        "enumValue": 39
                     },
                     {
                         "name": "trailer",
                         "displayName": "trailer",
-                        "enumValue": 36
+                        "enumValue": 40
                     },
                     {
                         "name": "tram",
                         "displayName": "tram",
-                        "enumValue": 37
+                        "enumValue": 41
                     },
                     {
                         "name": "trolley",
                         "displayName": "trolley",
-                        "enumValue": 38
+                        "enumValue": 42
                     },
                     {
                         "name": "twoWheeledVehicle",
                         "displayName": "twoWheeledVehicle",
-                        "enumValue": 39
+                        "enumValue": 43
                     },
                     {
                         "name": "van",
                         "displayName": "van",
-                        "enumValue": 40
+                        "enumValue": 44
                     },
                     {
                         "name": "vehicleWithoutCatalyticConverter",
                         "displayName": "vehicleWithoutCatalyticConverter",
-                        "enumValue": 41
+                        "enumValue": 45
                     },
                     {
                         "name": "vehicleWithCaravan",
                         "displayName": "vehicleWithCaravan",
-                        "enumValue": 42
+                        "enumValue": 46
                     },
                     {
                         "name": "vehicleWithTrailer",
                         "displayName": "vehicleWithTrailer",
-                        "enumValue": 43
+                        "enumValue": 47
                     },
                     {
                         "name": "withEvenNumberedRegistrationPlates",
                         "displayName": "withEvenNumberedRegistrationPlates",
-                        "enumValue": 44
+                        "enumValue": 48
                     },
                     {
                         "name": "withOddNumberedRegistrationPlates",
                         "displayName": "withOddNumberedRegistrationPlates",
-                        "enumValue": 45
+                        "enumValue": 49
                     },
                     {
                         "name": "other",
                         "displayName": "other",
-                        "enumValue": 46
+                        "enumValue": 50
                     }
                 ]
             }
