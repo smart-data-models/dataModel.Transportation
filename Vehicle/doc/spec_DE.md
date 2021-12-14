@@ -6,7 +6,7 @@ Entität: Fahrzeug
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `annotations`: Anmerkungen zum Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `bearing`: Gibt den GPS-Winkel des Fahrzeugs, gemessen im Uhrzeigersinn vom wahren Norden, an. Entspricht dem Feld "Peilung" der GTFS-Echtzeitnachricht-Position (https://developers.google.com/transit/gtfs-realtime/reference#message-position)  - `cargoWeight`: Aktuelles Gewicht der Ladung des Fahrzeugs  - `category`: Fahrzeugkategorie(n) aus externer Sicht. Dies ist etwas anderes als der Fahrzeugtyp (Pkw, Lkw usw.), der durch die Eigenschaft "vehicleType" dargestellt wird. Enum:'municipalServices, nonTracked, private, public, specialUsage, tracked'. Verfolgte Fahrzeuge sind die Fahrzeuge, deren Position von einem entfernten System permanent verfolgt wird. Sie verfügen über einen GPS-Empfänger und eine Netzverbindung, um die gemeldete Position (Standort, Geschwindigkeit, Kurs ...) regelmäßig zu aktualisieren.  - `color`: Die Farbe des Produkts  - `currentTripCount`: Die aktuelle Anzahl der Fahrten, die von dem Fahrzeug, das dieser Beobachtung entspricht, an dem jeweiligen Betriebstag durchgeführt wurden.  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateFirstUsed`: Zeitstempel, der angibt, wann das Fahrzeug zum ersten Mal benutzt wurde  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateVehicleFirstRegistered`: Das Datum der Erstzulassung des Fahrzeugs bei den jeweiligen Behörden  - `description`: Eine Beschreibung dieses Artikels  - `deviceBatteryStatus`: Gibt den Batterieladestatus des meldenden Geräts an. Enum:'connected, disconnected'.  - `deviceSimNumber`: Gibt die SIM-Nummer des Geräts im Fahrzeug an.  - `feature`: Vom Fahrzeug eingebaute Funktion(en). Enum:' abs, airbag, alarm, backCamera, disabledRamp, gps, internetConnection, overspeed, proximitySensor, wifi'. Oder jede andere, die von der Anwendung benötigt wird. Um mehrere Instanzen eines Merkmals darzustellen, kann die folgende Syntax verwendet werden: <Merkmal>,<Verknüpfungen>". Zum Beispiel wird ein Auto mit 4 Airbags durch `Airbag,4` dargestellt.  - `fleetVehicleId`: Die Kennung des Fahrzeugs im Zusammenhang mit der Fahrzeugflotte, zu der es gehört  - `fuelEfficiency`: Die pro verbrauchter Kraftstoffeinheit zurückgelegte Strecke, in der Regel in Kilometern pro Liter (km/L).  - `fuelFilled`: Menge des in das Fahrzeug eingefüllten Kraftstoffs in Litern, die dieser Beobachtung entspricht.  - `fuelType`: Die Art des Kraftstoffs, der für den Motor oder die Motoren des Fahrzeugs geeignet ist, die dieser Beobachtung entsprechen.  - `heading`: Bezeichnet die Fahrtrichtung des Fahrzeugs und wird in Dezimalgraden angegeben, wobei 0 <= "Fahrtrichtung" < 360, im Uhrzeigersinn relativ zum wahren Norden gezählt wird. Wenn das Fahrzeug steht (d. h. der Wert des Attributs "Geschwindigkeit" ist "0"), muss der Wert des Attributs "Richtung" gleich "1" sein.  - `id`: Eindeutiger Bezeichner der Entität  - `ignitionStatus`: Gibt den Zündungsstatus des Fahrzeugs an. Wahr bedeutet gezündet  - `image`: Ein Bild des Artikels  - `license_plate`: Gibt das Nummernschild des Fahrzeugs an. SameAs: license_plate field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `mileageFromOdometer`: Die auf dem Kilometerzähler abgelesene Gesamtkilometerleistung des Fahrzeugs seit seiner Erstherstellung  - `name`: Der Name dieses Artikels.  - `observationDateTime`: Letzter gemeldeter Zeitpunkt der Beobachtung  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `previousLocation`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `purchaseDate`: Das Datum, an dem das Objekt, z. B. das Fahrzeug, vom derzeitigen Eigentümer gekauft wurde  - `refVehicleModel`: Verweis auf ein VehicleModel  - `reportId`: Eindeutige Kennung für das Problem, den Bericht, das Feedback oder die Transaktion, die dieser Beobachtung entspricht.  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `serviceProvided`: Dienst(e), den/die das Fahrzeug leisten kann oder dem/denen es zugewiesen ist. Enum:'auxiliaryServices, cargoTransport, construction, fairground, garbageCollection, goodsSelling, maintenance, parksAndGardens, roadSignalling, specialTransport, streetCleaning, streetLighting, urbanTransit, wasteContainerCleaning'. Oder jeder andere Wert, der für eine bestimmte Anwendung benötigt wird.  - `serviceStatus`: Fahrzeugstatus (unter dem Gesichtspunkt der erbrachten Dienstleistung, kann also nicht für Privatfahrzeuge gelten). geparkt": Das Fahrzeug ist geparkt und erbringt derzeit keine Dienstleistung. onRoute": Das Fahrzeug führt einen Einsatz durch. Ein durch Komma getrennter Modifikator kann hinzugefügt werden, um anzugeben, für welchen Auftrag das Fahrzeug gerade unterwegs ist. So kann z. B. mit "onRoute,garbageCollection" angegeben werden, dass sich das Fahrzeug auf einer Route und in einem Müllsammelauftrag befindet. kaputt" : Das Fahrzeug hat eine vorübergehende Panne. outOfService": Das Fahrzeug ist auf der Straße, führt aber keinen Einsatz durch, sondern fährt wahrscheinlich zu seinem Parkplatz. Enum:'broken, onRoute, outOfService, parked'  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `speed`: Bezeichnet die Größe der horizontalen Komponente der aktuellen Geschwindigkeit des Fahrzeugs und wird in Kilometern pro Stunde angegeben. Falls angegeben, muss der Wert des Attributs "Geschwindigkeit" eine nichtnegative reelle Zahl sein. Der Wert "-1" KANN verwendet werden, wenn die Geschwindigkeit aus irgendeinem Grund vorübergehend nicht bekannt ist.  - `tripNetWeightCollected`: Das Nettogewicht, das das Fahrzeug entsprechend dieser Beobachtung am Ende der Fahrt aufnimmt.  - `type`: NGSI-Entitätstyp. Es muss Fahrzeug sein  - `vehicleAltitude`: Gibt die aktuelle Höhe des Fahrzeugs über GPS an  - `vehicleConfiguration`: Ein kurzer Text, der die Konfiguration des Fahrzeugs angibt, z. B. "5dr Fließheck ST 2.5 MT 225 PS" oder "Limited Edition".  - `vehicleIdentificationNumber`: Die Fahrzeug-Identifikationsnummer (VIN) ist eine eindeutige Seriennummer, die von der Automobilindustrie verwendet wird, um einzelne Kraftfahrzeuge zu identifizieren.  - `vehiclePlateIdentifier`:  Eine Kennung oder ein Code, die bzw. der auf einem am Fahrzeug angebrachten Nummernschild zur amtlichen Identifizierung angebracht ist. Die Zulassungskennung ist numerisch oder alphanumerisch und ist innerhalb der Region der ausstellenden Behörde eindeutig. Normative Verweise: DATEXII `vehicleRegistrationPlateIdentifier`  - `vehicleRunningStatus`: Gibt den Batterieladezustand des meldenden Geräts an. Enum:'läuft, wartet, gestoppt'.  - `vehicleSpecialUsage`: Gibt an, ob das Fahrzeug für besondere Zwecke verwendet wurde, z. B. für gewerbliche Vermietung, Fahrschule oder als Taxi. In vielen Ländern ist es gesetzlich vorgeschrieben, dass diese Information angegeben werden muss, wenn ein Fahrzeug zum Verkauf angeboten wird. Enum:'Krankenwagen, Feuerwehr, Militär, Polizei, Schülertransport, Taxi, Müllabfuhr'  - `vehicleTrackerDevice`: Installationsstatus des GPS-Geräts oder des Ortungsgeräts, das in das Fahrzeug eingebaut ist, das dieser Beobachtung entspricht.  - `vehicleType`: Fahrzeugtyp unter dem Gesichtspunkt seiner strukturellen Merkmale. Dies ist etwas anderes als die Fahrzeugklasse. Enum:'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, MotorradMitSeitenwagen, Motorroller, Kehrmaschine, Tankwagen, Dreiradfahrzeug, Anhänger, Straßenbahn, Zweiradfahrzeug, Draisine, Lieferwagen, FahrzeugOhneKatalysator, FahrzeugMitWohnwagen, FahrzeugMitAnhänger, mitGeradeNummernKennzeichen, mitUngeradeNummernKennzeichen, Sonstiges". Die folgenden, durch _VehicleTypeEnum_ und _VehicleTypeEnum2_, [DATEX 2 Version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm) definierten und für andere Zwecke erweiterten Werte  - `wardId`: Stations-ID der Einrichtung, die dieser Beobachtung entspricht.  - `wardName`: Name der Entität, die dieser Beobachtung entspricht.  - `zoneName`: Zonenname der Entität, die dieser Beobachtung entspricht    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `annotations`: Anmerkungen zum Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `bearing`: Gibt den GPS-Winkel des Fahrzeugs, gemessen im Uhrzeigersinn vom wahren Norden, an. Entspricht dem Feld "Peilung" der GTFS-Echtzeitnachricht-Position (https://developers.google.com/transit/gtfs-realtime/reference#message-position)  - `cargoWeight`: Aktuelles Gewicht der Ladung des Fahrzeugs  - `category`: Fahrzeugkategorie(n) aus externer Sicht. Dies ist etwas anderes als der Fahrzeugtyp (Pkw, Lkw usw.), der durch die Eigenschaft "vehicleType" dargestellt wird. Enum:'municipalServices, nonTracked, private, public, specialUsage, tracked'. Verfolgte Fahrzeuge sind die Fahrzeuge, deren Position von einem entfernten System permanent verfolgt wird. Sie verfügen über einen GPS-Empfänger und eine Netzverbindung, um die gemeldete Position (Standort, Geschwindigkeit, Kurs ...) regelmäßig zu aktualisieren.  - `color`: Die Farbe des Produkts  - `currentTripCount`: Die aktuelle Anzahl der Fahrten, die von dem Fahrzeug, das dieser Beobachtung entspricht, an dem jeweiligen Betriebstag durchgeführt wurden.  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateFirstUsed`: Zeitstempel, der angibt, wann das Fahrzeug zum ersten Mal benutzt wurde  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateVehicleFirstRegistered`: Das Datum der Erstzulassung des Fahrzeugs bei den jeweiligen Behörden  - `description`: Eine Beschreibung dieses Artikels  - `deviceBatteryStatus`: Gibt den Batterieladestatus des meldenden Geräts an. Enum:'connected, disconnected'.  - `deviceSimNumber`: Gibt die SIM-Nummer des Geräts im Fahrzeug an.  - `emergencyVehicleType`: Typ des Einsatzfahrzeugs, das dieser Beobachtung entspricht. Enum:'policeCar, policeMotorcycle, policeVan, policeSWAT, fireEngine, waterTender, airAmbulance, ambulance, motorcycleAmbulance, rescueVehicle, hazardousMaterialsApparatus, towTruck  - `feature`: Vom Fahrzeug eingebaute Funktion(en). Enum:' abs, airbag, alarm, backCamera, disabledRamp, gps, internetConnection, overspeed, proximitySensor, wifi'. Oder jede andere, die von der Anwendung benötigt wird. Um mehrere Instanzen eines Merkmals darzustellen, kann die folgende Syntax verwendet werden: <Merkmal>,<Verknüpfungen>". Zum Beispiel wird ein Auto mit 4 Airbags durch `Airbag,4` dargestellt.  - `fleetVehicleId`: Die Kennung des Fahrzeugs im Zusammenhang mit der Fahrzeugflotte, zu der es gehört  - `fuelEfficiency`: Die pro verbrauchter Kraftstoffeinheit zurückgelegte Strecke, in der Regel in Kilometern pro Liter (km/L).  - `fuelFilled`: Menge des in das Fahrzeug eingefüllten Kraftstoffs in Litern, die dieser Beobachtung entspricht.  - `fuelType`: Die Art des Kraftstoffs, der für den Motor oder die Motoren des Fahrzeugs geeignet ist, die dieser Beobachtung entsprechen.  - `heading`: Bezeichnet die Fahrtrichtung des Fahrzeugs und wird in Dezimalgraden angegeben, wobei 0 <= "Fahrtrichtung" < 360, im Uhrzeigersinn relativ zum wahren Norden gezählt wird. Wenn das Fahrzeug steht (d. h. der Wert des Attributs "Geschwindigkeit" ist "0"), muss der Wert des Attributs "Fahrtrichtung" gleich "-1" sein.  - `id`: Eindeutiger Bezeichner der Entität  - `ignitionStatus`: Gibt den Zündungsstatus des Fahrzeugs an. Wahr bedeutet gezündet  - `image`: Ein Bild des Artikels  - `license_plate`: Gibt das Nummernschild des Fahrzeugs an. SameAs: license_plate field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `mileageFromOdometer`: Die auf dem Kilometerzähler abgelesene Gesamtkilometerleistung des Fahrzeugs seit seiner Erstherstellung  - `municipalityInfo`: Informationen der Gemeinde zu dieser Beobachtung.  - `name`: Der Name dieses Artikels.  - `observationDateTime`: Letzter gemeldeter Zeitpunkt der Beobachtung  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `previousLocation`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `purchaseDate`: Das Datum, an dem das Objekt, z. B. das Fahrzeug, vom derzeitigen Eigentümer gekauft wurde  - `refVehicleModel`: Verweis auf ein VehicleModel  - `reportId`: Eindeutige Kennung für das Problem, den Bericht, das Feedback oder die Transaktion, die dieser Beobachtung entspricht.  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `serviceOnDuty`: Art des Dienstes, den das dieser Beobachtung entsprechende Einsatzfahrzeug leistet. True zeigt an, dass das dieser Beobachtung entsprechende Einsatzfahrzeug einen Notruf bearbeitet/ bedient, andernfalls ist es False.  - `serviceProvided`: Dienst(e), den/die das Fahrzeug leisten kann oder dem/denen es zugewiesen ist. Enum:'auxiliaryServices, cargoTransport, construction, fairground, garbageCollection, goodsSelling, maintenance, parksAndGardens, roadSignalling, specialTransport, streetCleaning, streetLighting, urbanTransit, wasteContainerCleaning'. Oder jeder andere Wert, der für eine bestimmte Anwendung benötigt wird.  - `serviceStatus`: Fahrzeugstatus (unter dem Gesichtspunkt der erbrachten Dienstleistung, kann also nicht für Privatfahrzeuge gelten). geparkt": Das Fahrzeug ist geparkt und erbringt derzeit keine Dienstleistung. onRoute": Das Fahrzeug führt einen Einsatz durch. Ein durch Komma getrennter Modifikator kann hinzugefügt werden, um anzugeben, für welchen Auftrag das Fahrzeug gerade unterwegs ist. So kann z. B. mit "onRoute,garbageCollection" angegeben werden, dass sich das Fahrzeug auf einer Route und in einem Müllsammelauftrag befindet. kaputt" : Das Fahrzeug hat eine vorübergehende Panne. outOfService": Das Fahrzeug ist auf der Straße, führt aber keinen Einsatz durch, sondern fährt wahrscheinlich zu seinem Parkplatz. Enum:'broken, onRoute, outOfService, parked'  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `speed`: Bezeichnet die Größe der horizontalen Komponente der aktuellen Geschwindigkeit des Fahrzeugs und wird in Kilometern pro Stunde angegeben. Falls angegeben, muss der Wert des Attributs "Geschwindigkeit" eine nichtnegative reelle Zahl sein. Der Wert "-1" KANN verwendet werden, wenn die Geschwindigkeit aus irgendeinem Grund vorübergehend nicht bekannt ist.  - `tripNetWeightCollected`: Das Nettogewicht, das das Fahrzeug entsprechend dieser Beobachtung am Ende der Fahrt aufnimmt.  - `type`: NGSI-Entitätstyp. Es muss Fahrzeug sein  - `vehicleAltitude`: Gibt die aktuelle Höhe des Fahrzeugs über GPS an  - `vehicleConfiguration`: Ein kurzer Text, der die Konfiguration des Fahrzeugs angibt, z. B. "5dr Fließheck ST 2.5 MT 225 PS" oder "Limited Edition".  - `vehicleIdentificationNumber`: Die Fahrzeug-Identifikationsnummer (VIN) ist eine eindeutige Seriennummer, die von der Automobilindustrie verwendet wird, um einzelne Kraftfahrzeuge zu identifizieren.  - `vehiclePlateIdentifier`:  Eine Kennung oder ein Code, die bzw. der auf einem am Fahrzeug angebrachten Nummernschild zur amtlichen Identifizierung angebracht ist. Die Zulassungskennung ist numerisch oder alphanumerisch und ist innerhalb der Region der ausstellenden Behörde eindeutig. Normative Verweise: DATEXII `vehicleRegistrationPlateIdentifier`  - `vehicleRunningStatus`: Gibt den Batterieladezustand des meldenden Geräts an. Enum:'läuft, wartet, gestoppt'.  - `vehicleSpecialUsage`: Gibt an, ob das Fahrzeug für besondere Zwecke verwendet wurde, z. B. für gewerbliche Vermietung, Fahrschule oder als Taxi. In vielen Ländern ist es gesetzlich vorgeschrieben, dass diese Information angegeben werden muss, wenn ein Fahrzeug zum Verkauf angeboten wird. Enum:'Krankenwagen, Feuerwehr, Militär, Polizei, Schülertransport, Taxi, Müllabfuhr'  - `vehicleTrackerDevice`: Installationsstatus des GPS-Geräts oder des Ortungsgeräts, das in das Fahrzeug eingebaut ist, das dieser Beobachtung entspricht.  - `vehicleType`: Fahrzeugtyp unter dem Gesichtspunkt seiner strukturellen Merkmale. Dies ist etwas anderes als die Fahrzeugklasse. Enum:'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, MotorradMitSeitenwagen, Motorroller, Kehrmaschine, Tankwagen, Dreiradfahrzeug, Anhänger, Straßenbahn, Zweiradfahrzeug, Draisine, Lieferwagen, FahrzeugOhneKatalysator, FahrzeugMitWohnwagen, FahrzeugMitAnhänger, mitGeradeNummernKennzeichen, mitUngeradeNummernKennzeichen, Sonstiges". Die folgenden, durch _VehicleTypeEnum_ und _VehicleTypeEnum2_, [DATEX 2 Version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm) definierten und für andere Zwecke erweiterten Werte  - `wardId`: Stations-ID der Einrichtung, die dieser Beobachtung entspricht.  - `wardName`: Name der Entität, die dieser Beobachtung entspricht.  - `zoneName`: Zonenname der Entität, die dieser Beobachtung entspricht    
 Erforderliche Eigenschaften  
 - `category`  - `id`  - `location`  - `type`  - `vehicleType`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -147,6 +147,25 @@ Vehicle:
         type: Property    
     deviceSimNumber:    
       description: 'Gives the SIM number of the device in the vehicle.'    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    emergencyVehicleType:    
+      description: 'Type of emergency vehicle corresponding to this observation. Enum:''policeCar, policeMotorcycle, policeVan, policeSWAT, fireEngine, waterTender, airAmbulance, ambulance, motorcycleAmbulance, rescueVehicle, hazardousMaterialsApparatus, towTruck'    
+      enum:    
+        - policeCar    
+        - policeMotorcycle    
+        - policeVan    
+        - policeSWAT    
+        - fireEngine    
+        - waterTender    
+        - airAmbulance    
+        - ambulance    
+        - motorcycleAmbulance    
+        - rescueVehicle    
+        - hazardousMaterialsApparatus    
+        - towTruck    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -397,6 +416,43 @@ Vehicle:
       x-ngsi:    
         model: https://schema.org/mileageFromOdometer.    
         type: Property    
+    municipalityInfo:    
+      description: 'Municipality information corresponding to this observation.'    
+      properties:    
+        cityId:    
+          description: 'Property. Model:''https://schema.org/Text''. City ID corresponding to this observation.'    
+          type: string    
+        cityName:    
+          description: 'Property. Model:''https://schema.org/Text''. City name corresponding to this observation'    
+          type: string    
+        district:    
+          description: 'Property. Model:''https://schema.org/Text''. District name corresponding to this observation.'    
+          type: string    
+        stateName:    
+          description: 'Property. Model:''https://schema.org/Text''. Name of the state corresponding to this observation.'    
+          type: string    
+        ulbName:    
+          description: 'Property. Model:''https://schema.org/Text''. Name of the Urban Local Body corresponding to this observation.'    
+          type: string    
+        wardId:    
+          description: 'Property. Model:''https://schema.org/Text''. Ward ID corresponding to this observation.'    
+          type: string    
+        wardName:    
+          description: 'Property. Model:''https://schema.org/Text''. Ward name corresponding to this observation.'    
+          type: string    
+        wardNum:    
+          description: 'Property. Model:''https://schema.org/Number''. Ward number corresponding to this observation.'    
+          type: number    
+        zoneId:    
+          description: 'Property. Model:''https://schema.org/Text''. Zone ID corresponding to this observation.'    
+          type: string    
+        zoneName:    
+          description: 'Property. Model:''https://schema.org/Text''. Zone name corresponding to this observation.'    
+          type: string    
+      type: object    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
     name:    
       description: 'The name of this item.'    
       type: string    
@@ -461,6 +517,12 @@ Vehicle:
           type: string    
       x-ngsi:    
         type: Property    
+    serviceOnDuty:    
+      description: 'Nature of service provided by emergency vehicle corresponding to this observation. True indicates the emergency vehicle corresponding to this observation is attending to/ servicing to an emergency call of duty and is False otherwise.'    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Boolean    
+        type: Property    
     serviceProvided:    
       description: 'Service(s) the vehicle is capable of providing or it is assigned to. Enum:''auxiliaryServices, cargoTransport, construction, fairground, garbageCollection, goodsSelling, maintenance, parksAndGardens, roadSignalling, specialTransport, streetCleaning, streetLighting, urbanTransit, wasteContainerCleaning''. Or any other value needed by an specific application.'    
       items:    
@@ -505,8 +567,8 @@ Vehicle:
       oneOf:    
         - minimum: 0    
           type: number    
-        - enum:    
-            - -1    
+        - maximum: -1    
+          minimum: -1    
           type: number    
       x-ngsi:    
         model: https://schema.org/Number    
@@ -583,6 +645,7 @@ Vehicle:
       description: 'Type of vehicle from the point of view of its structural characteristics. This is different than the vehicle category . Enum:''agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other''. The following values defined by _VehicleTypeEnum_ and _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm) and extended for other uses'    
       enum:    
         - agriculturalVehicle    
+        - ambulance    
         - anyVehicle    
         - articulatedVehicle    
         - autorickshaw    
@@ -603,6 +666,7 @@ Vehicle:
         - e-moped    
         - e-scooter    
         - e-motorcycle    
+        - fireTender    
         - fourWheelDrive    
         - highSidedVehicle    
         - hopper    
@@ -612,6 +676,8 @@ Vehicle:
         - motorcycle    
         - motorcycleWithSideCar    
         - motorscooter    
+        - policeVan    
+        - publicMotor    
         - sweepingMachine    
         - tanker    
         - tempo    
@@ -662,7 +728,7 @@ Vehicle:
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/Vehicle/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/Vehicle/schema.json    
   x-model-tags: IUDX    
-  x-version: 0.1.0    
+  x-version: 0.2.0    
 ```  
 </details>    
 ## Beispiel-Nutzlasten  
@@ -711,11 +777,25 @@ Vehicle:
   "deviceBatteryStatus": "Connected",  
   "ignitionStatus": true,  
   "vehicleRunningStatus": "running",  
-  "observationDateTime": "2021-03-11T15:51:02+05:30"  
+  "observationDateTime": "2021-03-11T15:51:02+05:30",  
+  "serviceOnDuty": false,  
+  "emergencyVehicleType": "ambulance",  
+  "municipalityInfo": {  
+    "district": "Bangalore Urban",  
+    "ulbName": "BMC",  
+    "cityId": "23",  
+    "wardId": "23",  
+    "stateName": "Karnataka",  
+    "cityName": "Bangalore",  
+    "zoneName": "South",  
+    "wardName": "Bangalore Urban",  
+    "zoneId": "2",  
+    "wardNum": 4  
+  }  
 }  
 ```  
 #### Fahrzeug NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für ein Fahrzeug im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für ein Fahrzeug im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-v2 kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "vehicle:WasteManagement:1",  
@@ -858,6 +938,29 @@ Vehicle:
   "observationDateTime": {  
     "type": "DateTime",  
     "value": "2021-03-11T15:51:02+05:30"  
+  },  
+  "serviceOnDuty": {  
+    "type": "Boolean",  
+    "value": false  
+  },  
+  "emergencyVehicleType": {  
+    "type": "Text",  
+    "value": "ambulance"  
+  },  
+  "municipalityInfo": {  
+    "type": "StructuredValue",  
+    "value": {  
+      "district": "Bangalore Urban",  
+      "ulbName": "BMC",  
+      "cityId": "23",  
+      "wardId": "23",  
+      "stateName": "Karnataka",  
+      "cityName": "Bangalore",  
+      "zoneName": "South",  
+      "wardName": "Bangalore Urban",  
+      "zoneId": "2",  
+      "wardNum": 4  
+    }  
   }  
 }  
 ```  
@@ -865,16 +968,13 @@ Vehicle:
 Hier ist ein Beispiel für ein Fahrzeug im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
+  "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",  
+  "type": "Vehicle",  
   "areaServed": "Centro",  
   "cargoWeight": 314,  
   "category": [  
     "municipalServices"  
   ],  
-  "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",  
   "location": {  
     "coordinates": [  
       -3.164485591715449,  
@@ -890,7 +990,6 @@ Vehicle:
   ],  
   "serviceStatus": "onRoute",  
   "speed": 50,  
-  "type": "Vehicle",  
   "vehiclePlateIdentifier": "3456ABC",  
   "vehicleType": "lorry",  
   "bearing": 43,  
@@ -910,7 +1009,25 @@ Vehicle:
   "deviceBatteryStatus": "Connected",  
   "ignitionStatus": true,  
   "vehicleRunningStatus": "running",  
-  "observationDateTime": "2021-03-11T15:51:02+05:30"  
+  "observationDateTime": "2021-03-11T15:51:02+05:30",  
+  "serviceOnDuty": false,  
+  "emergencyVehicleType": "ambulance",  
+  "municipalityInfo":{  
+    "district":"Bangalore Urban",  
+    "ulbName":"BMC",  
+    "cityId":"23",  
+    "wardId":"23",  
+    "stateName":"Karnataka",  
+    "cityName":"Bangalore",  
+    "zoneName":"South",  
+    "wardName":"Bangalore Urban",  
+    "zoneId":"2",  
+    "wardNum":4  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "iudx:EmergencyVehicle"  
+  ]  
 }  
 ```  
 #### Fahrzeug NGSI-LD normalisiert Beispiel  
@@ -1051,10 +1168,33 @@ Vehicle:
       "@value": "2021-03-11T15:51:02+05:30"  
     }  
   },  
+  "serviceOnDuty": {  
+    "type": "Property",  
+    "value": false  
+  },  
+  "emergencyVehicleType": {  
+    "type": "Property",  
+    "value": "ambulance"  
+  },  
+  "municipalityInfo": {  
+    "type": "Property",  
+    "value": {  
+      "district": "Bangalore Urban",  
+      "ulbName": "BMC",  
+      "cityId": "23",  
+      "wardId": "23",  
+      "stateName": "Karnataka",  
+      "cityName": "Bangalore",  
+      "zoneName": "South",  
+      "wardName": "Bangalore Urban",  
+      "zoneId": "2",  
+      "wardNum": 4  
+    }  
+  },  
   "@context": [  
     "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    "iudx:EmergencyVehicle"  
   ]  
 }  
 ```  
-Siehe [FAQ 10](https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht
+Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
