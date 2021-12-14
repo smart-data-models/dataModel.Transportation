@@ -139,5 +139,28 @@
   "observationDateTime": {
     "type": "DateTime",
     "value": "2021-03-11T15:51:02+05:30"
+  },
+  "serviceOnDuty": {
+    "type": "Boolean",
+    "value": false
+  },
+  "emergencyVehicleType": {
+    "type": "Text",
+    "value": "ambulance"
+  },
+  "municipalityInfo": {
+    "type": "StructuredValue",
+    "value": {
+      "district": "Bangalore Urban",
+      "ulbName": "BMC",
+      "cityId": "23",
+      "wardId": "23",
+      "stateName": "Karnataka",
+      "cityName": "Bangalore",
+      "zoneName": "South",
+      "wardName": "Bangalore Urban",
+      "zoneId": "2",
+      "wardNum": 4
+    }
   }
 }

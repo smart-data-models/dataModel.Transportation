@@ -133,8 +133,31 @@
       "@value": "2021-03-11T15:51:02+05:30"
     }
   },
+  "serviceOnDuty": {
+    "type": "Property",
+    "value": false
+  },
+  "emergencyVehicleType": {
+    "type": "Property",
+    "value": "ambulance"
+  },
+  "municipalityInfo": {
+    "type": "Property",
+    "value": {
+      "district": "Bangalore Urban",
+      "ulbName": "BMC",
+      "cityId": "23",
+      "wardId": "23",
+      "stateName": "Karnataka",
+      "cityName": "Bangalore",
+      "zoneName": "South",
+      "wardName": "Bangalore Urban",
+      "zoneId": "2",
+      "wardNum": 4
+    }
+  },
   "@context": [
     "https://smartdatamodels.org/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    "iudx:EmergencyVehicle"
   ]
 }

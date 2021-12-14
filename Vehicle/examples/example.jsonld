@@ -1,14 +1,11 @@
 {
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ],
+  "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",
+  "type": "Vehicle",
   "areaServed": "Centro",
   "cargoWeight": 314,
   "category": [
     "municipalServices"
   ],
-  "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",
   "location": {
     "coordinates": [
       -3.164485591715449,
@@ -24,7 +21,6 @@
   ],
   "serviceStatus": "onRoute",
   "speed": 50,
-  "type": "Vehicle",
   "vehiclePlateIdentifier": "3456ABC",
   "vehicleType": "lorry",
   "bearing": 43,
@@ -44,5 +40,23 @@
   "deviceBatteryStatus": "Connected",
   "ignitionStatus": true,
   "vehicleRunningStatus": "running",
-  "observationDateTime": "2021-03-11T15:51:02+05:30"
+  "observationDateTime": "2021-03-11T15:51:02+05:30",
+  "serviceOnDuty": false,
+  "emergencyVehicleType": "ambulance",
+  "municipalityInfo":{
+    "district":"Bangalore Urban",
+    "ulbName":"BMC",
+    "cityId":"23",
+    "wardId":"23",
+    "stateName":"Karnataka",
+    "cityName":"Bangalore",
+    "zoneName":"South",
+    "wardName":"Bangalore Urban",
+    "zoneId":"2",
+    "wardNum":4
+  },
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld",
+    "iudx:EmergencyVehicle"
+  ]
 }

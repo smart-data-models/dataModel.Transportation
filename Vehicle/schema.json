@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.1.0",
+  "$schemaVersion": "0.2.0",
   "modelTags": "IUDX",
   "$id": "https://smart-data-models.github.io/dataModel.Transportation/Vehicle/schema.json",
   "title": "Smart Data Models - Vehicle",
@@ -30,6 +30,7 @@
           "description": "Property. Type of vehicle from the point of view of its structural characteristics. This is different than the vehicle category . Model:'https://schema.org/Text'. Enum:'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'. The following values defined by _VehicleTypeEnum_ and _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm) and extended for other uses",
           "enum": [
             "agriculturalVehicle",
+            "ambulance",
             "anyVehicle",
             "articulatedVehicle",
             "autorickshaw",
@@ -50,6 +51,7 @@
             "e-moped",
             "e-scooter",
             "e-motorcycle",
+            "fireTender",
             "fourWheelDrive",
             "highSidedVehicle",
             "hopper",
@@ -59,6 +61,8 @@
             "motorcycle",
             "motorcycleWithSideCar",
             "motorscooter",
+            "policeVan",
+            "publicMotor",
             "sweepingMachine",
             "tanker",
             "tempo",
@@ -103,9 +107,8 @@
             },
             {
               "type": "number",
-              "enum": [
-                -1
-              ]
+              "minimum": -1,
+              "maximum": -1
             }
           ],
           "description": "Property. Denotes the magnitude of the horizontal component of the vehicle's current velocity and is specified in Kilometers per Hour. If provided, the value of the speed attribute must be a non-negative real number. `-1` MAY be used if speed is transiently unknown for some reason. Model:'https://schema.org/Number'. Units:'Km/h'"
@@ -327,6 +330,74 @@
         "fuelType": {
           "type": "string",
           "description": "Property. Model:'https://schema.org/Text'. The type of fuel suitable for the engine or engines of the vehicle corresponding to this observation."
+        },
+        "serviceOnDuty": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Boolean'. Nature of service provided by emergency vehicle corresponding to this observation. True indicates the emergency vehicle corresponding to this observation is attending to/ servicing to an emergency call of duty and is False otherwise."
+        },
+        "emergencyVehicleType": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Type of emergency vehicle corresponding to this observation. Enum:'policeCar, policeMotorcycle, policeVan, policeSWAT, fireEngine, waterTender, airAmbulance, ambulance, motorcycleAmbulance, rescueVehicle, hazardousMaterialsApparatus, towTruck",
+          "enum": [
+            "policeCar",
+            "policeMotorcycle",
+            "policeVan",
+            "policeSWAT",
+            "fireEngine",
+            "waterTender",
+            "airAmbulance",
+            "ambulance",
+            "motorcycleAmbulance",
+            "rescueVehicle",
+            "hazardousMaterialsApparatus",
+            "towTruck"
+          ]
+        },
+        "municipalityInfo": {
+          "type": "object",
+          "description": "Property. Model:'https://schema.org/Text. Municipality information corresponding to this observation.",
+          "properties": {
+            "district": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. District name corresponding to this observation."
+            },
+            "ulbName": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Name of the Urban Local Body corresponding to this observation."
+            },
+            "cityId": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. City ID corresponding to this observation."
+            },
+            "wardId": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Ward ID corresponding to this observation."
+            },
+            "stateName": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Name of the state corresponding to this observation."
+            },
+            "cityName": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. City name corresponding to this observation"
+            },
+            "zoneName": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Zone name corresponding to this observation."
+            },
+            "zoneId": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Zone ID corresponding to this observation."
+            },
+            "wardName": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. Ward name corresponding to this observation."
+            },
+            "wardNum": {
+              "type": "number",
+              "description": "Property. Model:'https://schema.org/Number'. Ward number corresponding to this observation."
+            }
+          }
         }
       }
     }

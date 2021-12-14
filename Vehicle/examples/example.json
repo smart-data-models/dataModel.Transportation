@@ -40,5 +40,19 @@
   "deviceBatteryStatus": "Connected",
   "ignitionStatus": true,
   "vehicleRunningStatus": "running",
-  "observationDateTime": "2021-03-11T15:51:02+05:30"
+  "observationDateTime": "2021-03-11T15:51:02+05:30",
+  "serviceOnDuty": false,
+  "emergencyVehicleType": "ambulance",
+  "municipalityInfo": {
+    "district": "Bangalore Urban",
+    "ulbName": "BMC",
+    "cityId": "23",
+    "wardId": "23",
+    "stateName": "Karnataka",
+    "cityName": "Bangalore",
+    "zoneName": "South",
+    "wardName": "Bangalore Urban",
+    "zoneId": "2",
+    "wardNum": 4
+  }
 }
