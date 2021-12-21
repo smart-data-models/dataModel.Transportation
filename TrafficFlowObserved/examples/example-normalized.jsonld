@@ -1,48 +1,47 @@
 {
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ],
-  "address": {
-    "addressCountry": "ES",
-    "addressLocality": "Valladolid",
-    "streetAddress": "Avenida de Salamanca",
-    "type": "PostalAddress"
-  },
-  "averageHeadwayTime": 0.5,
-  "averageVehicleLength": 9.87,
-  "averageVehicleSpeed": 52.6,
-  "dateObserved": "2016-12-07T11:10:00/2016-12-07T11:15:00",
-  "dateObservedFrom": {
-    "@type": "DateTime",
-    "@value": "2016-12-07T11:10:00Z"
-  },
-  "dateObservedTo": {
-    "@type": "DateTime",
-    "@value": "2016-12-07T11:15:00Z"
-  },
-  "id": "urn:ngsi-ld:TrafficFlowObserved:TrafficFlowObserved-Valladolid-osm-60821110",
-  "intensity": 197,
-  "laneDirection": "forward",
-  "laneId": 1,
-  "location": {
-    "coordinates": [
-      [
-        -4.73735395519672,
-        41.6538181849672
-      ],
-      [
-        -4.73414858659993,
-        41.6600594193478
-      ],
-      [
-        -4.73447575302641,
-        41.659585195093
-      ]
-    ],
-    "type": "LineString"
-  },
-  "occupancy": 0.76,
-  "reversedLane": false,
-  "type": "TrafficFlowObserved"
+    "id": "urn:ngsi-ld:TrafficFlowObserved:TrafficFlowObserved-Valladolid-osm-60821110",
+    "type": "TrafficFlowObserved",
+    "address": {
+        "addressCountry": "ES",
+        "addressLocality": "Valladolid",
+        "streetAddress": "Avenida de Salamanca",
+        "type": "PostalAddress"
+    },
+    "averageHeadwayTime": 0.5,
+    "averageVehicleLength": 9.87,
+    "averageVehicleSpeed": 52.6,
+    "dateObserved": "2016-12-07T11:10:00/2016-12-07T11:15:00",
+    "dateObservedFrom": {
+        "@type": "DateTime",
+        "@value": "2016-12-07T11:10:00Z"
+    },
+    "dateObservedTo": {
+        "@type": "DateTime",
+        "@value": "2016-12-07T11:15:00Z"
+    },
+    "intensity": 197,
+    "laneDirection": "forward",
+    "laneId": 1,
+    "location": {
+        "coordinates": [
+            [
+                -4.73735395519672,
+                41.6538181849672
+            ],
+            [
+                -4.73414858659993,
+                41.6600594193478
+            ],
+            [
+                -4.73447575302641,
+                41.659585195093
+            ]
+        ],
+        "type": "LineString"
+    },
+    "occupancy": 0.76,
+    "reversedLane": false,
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ]
 }
