@@ -1,125 +1,124 @@
 {
-  "id": "FlowObserved:BFO-NCE-MNCA-SP-001",
-  "type": "ItemFlowObserved",
-  "name": {
-    "type": "Property",
-    "value": "BFO-NCE-MNCA-SP-001"
-  },
-  "description": {
-    "type": "Property",
-    "value": "Boat Flow Observed from Nice Harbor."
-  },
-  "location": {
-    "type": "Geoproperty",
-    "value": {
-      "type": "Point",
-      "coordinates": [
-        7.196545,
-        43.664809
-      ]
-    }
-  },
-  "address": {
-    "type": "Property",
-    "value": {
-      "streetAddress": "Port Lympia",
-      "addressLocality": "Nice",
-      "addressCountry": "FR"
-    }
-  },
-  "areaServed": {
-    "type": "Property",
-    "value": "Nice Harbor"
-  },
-  "dateObserved": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2020-03-20T16:30:00Z"
-    }
-  },
-  "dateObservedFrom": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2020-03-20T16:30:00Z"
-    }
-  },
-  "dateObservedTo": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2020-03-20T22:30:00Z"
-    }
-  },
-  "refDevice": {
-    "type": "Relationship",
-    "object": "urn:ngsi-ld:Device:BFO-NCE-MNCA-SP-001-Dev-02"
-  },
-  "itemType": {
-    "type": "Property",
-    "value": "yatching"
-  },
-  "itemSubType": {
-    "type": "Property",
-    "value": "monoHull"
-  },
-  "laneId": {
-    "type": "Property",
-    "value": 1
-  },
-  "laneDirection": {
-    "type": "Property",
-    "value": "outbound"
-  },
-  "reverseLane": {
-    "type": "Property",
-    "value": false
-  },
-  "intensity": {
-    "type": "Property",
-    "value": 12
-  },
-  "occupancy": {
-    "type": "Property",
-    "value": 0.1562
-  },
-  "congested": {
-    "type": "Property",
-    "value": false
-  },
-  "averageSpeed": {
-    "type": "Property",
-    "value": 2.7,
-    "unitCode": "KNT"
-  },
-  "averageLength": {
-    "type": "Property",
-    "value": 7.44,
-    "unitCode": "MTR"
-  },
-  "averageHeadwayTime": {
-    "type": "Property",
-    "value": 156,
-    "unitCode": "SEC"
-  },
-  "averageGapDistance": {
-    "type": "Property",
-    "value": 35.28,
-    "unitCode": "MTR"
-  },
-  "minSpeed": {
-    "type": "Property",
-    "value": 2.6,
-    "unitCode": "KNT"
-  },
-  "maxSpeed": {
-    "type": "Property",
-    "value": 3.8,
-    "unitCode": "KNT"
-  },
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ]
+    "id": "FlowObserved:BFO-NCE-MNCA-SP-001",
+    "type": "ItemFlowObserved",
+    "address": {
+        "type": "Property",
+        "value": {
+            "streetAddress": "Port Lympia",
+            "addressLocality": "Nice",
+            "addressCountry": "FR"
+        }
+    },
+    "areaServed": {
+        "type": "Property",
+        "value": "Nice Harbor"
+    },
+    "averageGapDistance": {
+        "type": "Property",
+        "value": 35.28,
+        "unitCode": "MTR"
+    },
+    "averageHeadwayTime": {
+        "type": "Property",
+        "value": 156,
+        "unitCode": "SEC"
+    },
+    "averageLength": {
+        "type": "Property",
+        "value": 7.44,
+        "unitCode": "MTR"
+    },
+    "averageSpeed": {
+        "type": "Property",
+        "value": 2.7,
+        "unitCode": "KNT"
+    },
+    "congested": {
+        "type": "Property",
+        "value": false
+    },
+    "dateObserved": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2020-03-20T16:30:00Z"
+        }
+    },
+    "dateObservedFrom": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2020-03-20T16:30:00Z"
+        }
+    },
+    "dateObservedTo": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2020-03-20T22:30:00Z"
+        }
+    },
+    "description": {
+        "type": "Property",
+        "value": "Boat Flow Observed from Nice Harbor."
+    },
+    "intensity": {
+        "type": "Property",
+        "value": 12
+    },
+    "itemSubType": {
+        "type": "Property",
+        "value": "monoHull"
+    },
+    "itemType": {
+        "type": "Property",
+        "value": "yatching"
+    },
+    "laneDirection": {
+        "type": "Property",
+        "value": "outbound"
+    },
+    "laneId": {
+        "type": "Property",
+        "value": 1
+    },
+    "location": {
+        "type": "Geoproperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                7.196545,
+                43.664809
+            ]
+        }
+    },
+    "maxSpeed": {
+        "type": "Property",
+        "value": 3.8,
+        "unitCode": "KNT"
+    },
+    "minSpeed": {
+        "type": "Property",
+        "value": 2.6,
+        "unitCode": "KNT"
+    },
+    "name": {
+        "type": "Property",
+        "value": "BFO-NCE-MNCA-SP-001"
+    },
+    "occupancy": {
+        "type": "Property",
+        "value": 0.1562
+    },
+    "refDevice": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Device:BFO-NCE-MNCA-SP-001-Dev-02"
+    },
+    "reverseLane": {
+        "type": "Property",
+        "value": false
+    },
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ]
 }
