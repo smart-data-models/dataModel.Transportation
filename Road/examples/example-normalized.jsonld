@@ -1,18 +1,17 @@
 {
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ],
-  "alternateName": "E-80",
-  "description": "Autov\u00eda de Castilla",
-  "id": "urn:ngsi-ld:Road:Spain-Road-A62",
-  "length": 355,
-  "name": "A-62",
-  "refRoadSegment": [
-    "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-forwards",
-    "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-backwards"
-  ],
-  "responsible": "Ministerio de Fomento - Gobierno de Espa\u00f1a",
-  "roadClass": "motorway",
-  "type": "Road"
+    "id": "urn:ngsi-ld:Road:Spain-Road-A62",
+    "type": "Road",
+    "alternateName": "E-80",
+    "description": "Autov\u00eda de Castilla",
+    "length": 355,
+    "name": "A-62",
+    "refRoadSegment": [
+        "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-forwards",
+        "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-backwards"
+    ],
+    "responsible": "Ministerio de Fomento - Gobierno de Espa\u00f1a",
+    "roadClass": "motorway",
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ]
 }
