@@ -1,163 +1,162 @@
 {
-  "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",
-  "type": "Vehicle",
-  "category": {
-    "type": "Property",
-    "value": [
-      "municipalServices"
-    ]
-  },
-  "vehicleType": {
-    "type": "Property",
-    "value": "lorry"
-  },
-  "name": {
-    "type": "Property",
-    "value": "C Recogida 1"
-  },
-  "vehiclePlateIdentifier": {
-    "type": "Property",
-    "value": "3456ABC"
-  },
-  "refVehicleModel": {
-    "type": "Relationship",
-    "object": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic"
-  },
-  "location": {
-    "type": "GeoProperty",
-    "value": {
-      "type": "Point",
-      "coordinates": [
-        -3.164485591715449,
-        40.62785133667262
-      ]
+    "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",
+    "type": "Vehicle",
+    "areaServed": {
+        "type": "Property",
+        "value": "Centro"
     },
-    "observedAt": "2018-09-27T12:00:00Z"
-  },
-  "areaServed": {
-    "type": "Property",
-    "value": "Centro"
-  },
-  "serviceStatus": {
-    "type": "Property",
-    "value": "onRoute"
-  },
-  "cargoWeight": {
-    "type": "Property",
-    "value": 314
-  },
-  "speed": {
-    "type": "Property",
-    "value": 50,
-    "observedAt": "2018-09-27T12:00:00Z"
-  },
-  "serviceProvided": {
-    "type": "Property",
-    "value": [
-      "gargabeCollection",
-      "wasteContainerCleaning"
+    "bearing": {
+        "type": "Property",
+        "value": 43
+    },
+    "cargoWeight": {
+        "type": "Property",
+        "value": 314
+    },
+    "category": {
+        "type": "Property",
+        "value": [
+            "municipalServices"
+        ]
+    },
+    "currentTripCount": {
+        "type": "Property",
+        "value": 1
+    },
+    "deviceBatteryStatus": {
+        "type": "Property",
+        "value": "Connected"
+    },
+    "deviceSimNumber": {
+        "type": "Property",
+        "value": "9942142573"
+    },
+    "emergencyVehicleType": {
+        "type": "Property",
+        "value": "ambulance"
+    },
+    "fuelEfficiency": {
+        "type": "Property",
+        "value": 13
+    },
+    "fuelFilled": {
+        "type": "Property",
+        "value": 6
+    },
+    "fuelType": {
+        "type": "Property",
+        "value": "Petrol"
+    },
+    "ignitionStatus": {
+        "type": "Property",
+        "value": true
+    },
+    "license_plate": {
+        "type": "Property",
+        "value": "KA052134"
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -3.164485591715449,
+                40.62785133667262
+            ]
+        },
+        "observedAt": "2018-09-27T12:00:00Z"
+    },
+    "municipalityInfo": {
+        "type": "Property",
+        "value": {
+            "district": "Bangalore Urban",
+            "ulbName": "BMC",
+            "cityId": "23",
+            "wardId": "23",
+            "stateName": "Karnataka",
+            "cityName": "Bangalore",
+            "zoneName": "South",
+            "wardName": "Bangalore Urban",
+            "zoneId": "2",
+            "wardNum": 4
+        }
+    },
+    "name": {
+        "type": "Property",
+        "value": "C Recogida 1"
+    },
+    "observationDateTime": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2021-03-11T15:51:02+05:30"
+        }
+    },
+    "refVehicleModel": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic"
+    },
+    "reportId": {
+        "type": "Property",
+        "value": "21645"
+    },
+    "serviceOnDuty": {
+        "type": "Property",
+        "value": false
+    },
+    "serviceProvided": {
+        "type": "Property",
+        "value": [
+            "gargabeCollection",
+            "wasteContainerCleaning"
+        ]
+    },
+    "serviceStatus": {
+        "type": "Property",
+        "value": "onRoute"
+    },
+    "speed": {
+        "type": "Property",
+        "value": 50,
+        "observedAt": "2018-09-27T12:00:00Z"
+    },
+    "tripNetWeightCollected": {
+        "type": "Property",
+        "value": 12
+    },
+    "vehicleAltitude": {
+        "type": "Property",
+        "value": 600
+    },
+    "vehiclePlateIdentifier": {
+        "type": "Property",
+        "value": "3456ABC"
+    },
+    "vehicleRunningStatus": {
+        "type": "Property",
+        "value": "running"
+    },
+    "vehicleTrackerDevice": {
+        "type": "Property",
+        "value": "Installed"
+    },
+    "vehicleType": {
+        "type": "Property",
+        "value": "lorry"
+    },
+    "wardId": {
+        "type": "Property",
+        "value": "4"
+    },
+    "wardName": {
+        "type": "Property",
+        "value": "Kempegowda Ward"
+    },
+    "zoneName": {
+        "type": "Property",
+        "value": "South Zone"
+    },
+    "@context": [
+        "iudx:EmergencyVehicle"
     ]
-  },
-  "bearing": {
-    "type": "Property",
-    "value": 43
-  },
-  "fuelEfficiency": {
-    "type": "Property",
-    "value": 13
-  },
-  "fuelType": {
-    "type": "Property",
-    "value": "Petrol"
-  },
-  "fuelFilled": {
-    "type": "Property",
-    "value": 6
-  },
-  "tripNetWeightCollected": {
-    "type": "Property",
-    "value": 12
-  },
-  "vehicleTrackerDevice": {
-    "type": "Property",
-    "value": "Installed"
-  },
-  "wardId": {
-    "type": "Property",
-    "value": "4"
-  },
-  "license_plate": {
-    "type": "Property",
-    "value": "KA052134"
-  },
-  "currentTripCount": {
-    "type": "Property",
-    "value": 1
-  },
-  "reportId": {
-    "type": "Property",
-    "value": "21645"
-  },
-  "zoneName": {
-    "type": "Property",
-    "value": "South Zone"
-  },
-  "vehicleAltitude": {
-    "type": "Property",
-    "value": 600
-  },
-  "deviceSimNumber": {
-    "type": "Property",
-    "value": "9942142573"
-  },
-  "wardName": {
-    "type": "Property",
-    "value": "Kempegowda Ward"
-  },
-  "deviceBatteryStatus": {
-    "type": "Property",
-    "value": "Connected"
-  },
-  "ignitionStatus": {
-    "type": "Property",
-    "value": true
-  },
-  "vehicleRunningStatus": {
-    "type": "Property",
-    "value": "running"
-  },
-  "observationDateTime": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2021-03-11T15:51:02+05:30"
-    }
-  },
-  "serviceOnDuty": {
-    "type": "Property",
-    "value": false
-  },
-  "emergencyVehicleType": {
-    "type": "Property",
-    "value": "ambulance"
-  },
-  "municipalityInfo": {
-    "type": "Property",
-    "value": {
-      "district": "Bangalore Urban",
-      "ulbName": "BMC",
-      "cityId": "23",
-      "wardId": "23",
-      "stateName": "Karnataka",
-      "cityName": "Bangalore",
-      "zoneName": "South",
-      "wardName": "Bangalore Urban",
-      "zoneId": "2",
-      "wardNum": 4
-    }
-  },
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "iudx:EmergencyVehicle"
-  ]
 }
