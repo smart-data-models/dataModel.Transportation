@@ -1,36 +1,36 @@
 {
-  "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",
-  "type": "VehicleModel",
-  "name": {
-    "type": "Property",
-    "value": "MBenz-Econic2014"
-  },
-  "cargoVolume": {
-    "type": "Property",
-    "value": 1000
-  },
-  "modelName": {
-    "type": "Property",
-    "value": "Econic"
-  },
-  "brandName": {
-    "type": "Property",
-    "value": "Mercedes Benz"
-  },
-  "manufacturerName": {
-    "type": "Property",
-    "value": "Daimler"
-  },
-  "fuelType": {
-    "type": "Property",
-    "value": "diesel"
-  },
-  "vehicleType": {
-    "type": "Property",
-    "value": "lorry"
-  },
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ]
+    "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",
+    "type": "VehicleModel",
+    "brandName": {
+        "type": "Property",
+        "value": "Mercedes Benz"
+    },
+    "cargoVolume": {
+        "type": "Property",
+        "value": 1000
+    },
+    "fuelType": {
+        "type": "Property",
+        "value": "diesel"
+    },
+    "manufacturerName": {
+        "type": "Property",
+        "value": "Daimler"
+    },
+    "modelName": {
+        "type": "Property",
+        "value": "Econic"
+    },
+    "name": {
+        "type": "Property",
+        "value": "MBenz-Econic2014"
+    },
+    "vehicleType": {
+        "type": "Property",
+        "value": "lorry"
+    },
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
+    ]
 }
