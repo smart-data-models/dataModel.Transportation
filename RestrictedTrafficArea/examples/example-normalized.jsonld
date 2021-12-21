@@ -1,25 +1,23 @@
 {
-  "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",
-  "type": "RestrictedTrafficArea",
-  "category": [
-    "onlyPedestrian"
-  ],
-  "description": "Panel:AP - Stretches:lato civici dispari da piazza Tricolore a via Kramer - Bollards: - Notes:",
-  "location": {
-    "type": "Point",
-    "coordinates": [
-      9.214544,
-      45.483353
-    ]
-  },
-  "name": "Corso Concordia Area",
-  "notAllowedVehicleType": [
-    "anyVehicle"
-  ],
-  "regulation": "Decree:54785/2004, Deliberation:425/2004",
-  "source": "https://dati.comune.milano.it/dataset/ds51_trafficotrasporti_aree_pedonali_ztl_zone_30_",
-  "validityEndDate": "2049-12-31T23:00:00.00Z",
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld"
-  ]
+    "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",
+    "type": "RestrictedTrafficArea",
+    "category": [
+        "onlyPedestrian"
+    ],
+    "description": "Panel:AP - Stretches:lato civici dispari da piazza Tricolore a via Kramer - Bollards: - Notes:",
+    "location": {
+        "type": "Point",
+        "coordinates": [
+            9.214544,
+            45.483353
+        ]
+    },
+    "name": "Corso Concordia Area",
+    "notAllowedVehicleType": [
+        "anyVehicle"
+    ],
+    "regulation": "Decree:54785/2004, Deliberation:425/2004",
+    "source": "https://dati.comune.milano.it/dataset/ds51_trafficotrasporti_aree_pedonali_ztl_zone_30_",
+    "validityEndDate": "2049-12-31T23:00:00.00Z",
+    "@context": []
 }
