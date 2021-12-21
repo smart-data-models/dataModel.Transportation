@@ -1,170 +1,169 @@
 {
-  "id": "urn:ngsi-ld:Station:Station:MNCA-STram-L02-AP-T2",
-  "type": "Station",
-  "name": "NCE-Tram-Station-L02-AP-T2",
-  "alternateName": "Nice - Tramway Station Description - L02-AP-T2",
-  "description": "Description and services provided in the station",
-  "seeAlso": "http://tramway.nice.fr/wp-content/uploads/2019/10/BD_pocket_plan_MAJ03_2019_20082019.pdf",
-  "location": {
-    "type": "Point",
-    "coordinates": [
-      43.66481,
-      7.196545
+    "id": "urn:ngsi-ld:Station:Station:MNCA-STram-L02-AP-T2",
+    "type": "Station",
+    "address": {
+        "addressCountry": "FR",
+        "addressLocality": "Nice",
+        "streetAddress": "Airport - Terminal 2 - Door A2"
+    },
+    "alternateName": "Nice - Tramway Station Description - L02-AP-T2",
+    "architect": "Nice Architecture",
+    "areaServed": "Nice Airport",
+    "commissioningDate": "2018-09-15",
+    "constructionDate": "2016-19-08",
+    "contactPoint": {
+        "url": "uri:ngsi:www.lignesdazur.com"
+    },
+    "contractingAuthority": "MNCA - Metropole Nice Cote d'Azur",
+    "contractingCompagny": "R\u00e9gie Ligne d'Azur",
+    "currencyAccepted": [
+        "EUR"
+    ],
+    "dateLastReported": "2020-03-17T08:45:00Z",
+    "dateObserved": "2020-03-17T08:45:00Z",
+    "description": "Description and services provided in the station",
+    "dimension": {
+        "length": 300,
+        "width": 25,
+        "thickness": 6.35
+    },
+    "featuredArtist ": [
+        "Leopold",
+        "De Renaiss"
+    ],
+    "instalationMode": "ground",
+    "inventory": {
+        "nbOfIOPoint": 2,
+        "nbOfLane": 1,
+        "nbOfPlatform": 1,
+        "PlatformType": [
+            "lateral"
+        ]
+    },
+    "levelId": 0,
+    "location": {
+        "type": "Point",
+        "coordinates": [
+            43.66481,
+            7.196545
+        ]
+    },
+    "locationType": 1,
+    "name": "NCE-Tram-Station-L02-AP-T2",
+    "openingHoursSpecification": [
+        {
+            "dayOfWeek": "Monday",
+            "opens": "07:00:00",
+            "closes": "22:00:00",
+            "validFrom": "2021-01-01T00:00:00",
+            "validThrough": "2021-12-31T23:59:59"
+        },
+        {
+            "dayOfWeek": "Tuesday",
+            "opens": "07:00:00",
+            "closes": "22:00:00",
+            "validFrom": "2021-01-01T00:00:00",
+            "validThrough": "2021-12-31T23:59:59"
+        },
+        {
+            "dayOfWeek": "Wednesday",
+            "opens": "07:00:00",
+            "closes": "22:00:00",
+            "validFrom": "2021-01-01T00:00:00",
+            "validThrough": "2021-12-31T23:59:59"
+        },
+        {
+            "dayOfWeek": "Thursday",
+            "opens": "07:00:00",
+            "closes": "22:00:00",
+            "validFrom": "2021-01-01T00:00:00",
+            "validThrough": "2021-12-31T23:59:59"
+        },
+        {
+            "dayOfWeek": "Friday",
+            "opens": "07:00:00",
+            "closes": "22:00:00",
+            "validFrom": "2021-01-01T00:00:00",
+            "validThrough": "2021-12-31T23:59:59"
+        },
+        {
+            "dayOfWeek": "Saturday",
+            "opens": "08:00:00",
+            "closes": "23:00:00",
+            "validFrom": "2021-01-01T00:00:00",
+            "validThrough": "2021-12-31T23:59:59"
+        },
+        {
+            "dayOfWeek": "Sunday",
+            "opens": "08:30:00",
+            "closes": "21:00:00",
+            "validFrom": "2021-01-01T00:00:00",
+            "validThrough": "2021-12-31T23:59:59"
+        },
+        {
+            "dayOfWeek": "PublicHolidays",
+            "opens": "08:30:00",
+            "closes": "21:00:00",
+            "validFrom": "2021-01-01T00:00:00",
+            "validThrough": "2021-12-31T23:59:59"
+        }
+    ],
+    "owner": [
+        "uri:ngsi:StreetRetail"
+    ],
+    "paymentAccepted": [
+        "Cash",
+        "CreditCard"
+    ],
+    "seeAlso": "http://tramway.nice.fr/wp-content/uploads/2019/10/BD_pocket_plan_MAJ03_2019_20082019.pdf",
+    "services": {
+        "purchaseDevice": true,
+        "interactiveDevice": true,
+        "timetableDevice": true,
+        "voiceDevice": true,
+        "informationBoardDevice": true,
+        "messageDevice": false,
+        "shelters": true,
+        "restBench": false,
+        "emergencyPhone": false,
+        "videoSurveillance": true,
+        "defibrillator": false,
+        "wheelChairAccessible": true
+    },
+    "stationConnected": [
+        {
+            "stationType": "tram",
+            "linesConnected": [
+                "Tram 2 - CADAM / Nikaia",
+                "Tram 3 - Saint Isidore / Stade Allianz Riviera"
+            ]
+        },
+        {
+            "stationType": "train",
+            "linesConnected": [
+                "Gare SNCF Nice Saint Augustin (600m)"
+            ]
+        },
+        {
+            "stationType": "bus",
+            "linesConnected": [
+                "L20 - Giono / Les Pugets",
+                "L20 - Centre Commercial St Isidore",
+                "L21 - Le Gu\u00e9 / Polygone Riviera",
+                "L54 - Centre Commercial Cap 3000 - St Jeannet",
+                "L90 - La Bolline",
+                "91 Auron",
+                "L92 - Isola 2000"
+            ]
+        }
+    ],
+    "stationType": [
+        "tram"
+    ],
+    "webSite": "https://tramway.nice.fr/Plan-Station-L02-AP-T2.pdf",
+    "wheelChairAccessible": 1,
+    "zoneId": "B",
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
     ]
-  },
-  "address": {
-    "addressCountry": "FR",
-    "addressLocality": "Nice",
-    "streetAddress": "Airport - Terminal 2 - Door A2"
-  },
-  "areaServed": "Nice Airport",
-  "dateLastReported": "2020-03-17T08:45:00Z",
-  "dateObserved": "2020-03-17T08:45:00Z",
-  "stationType": [
-    "tram"
-  ],
-  "locationType": 1,
-  "levelId": 0,
-  "zoneId": "B",
-  "wheelChairAccessible": 1,
-  "openingHoursSpecification": [
-    {
-      "dayOfWeek": "Monday",
-      "opens": "07:00:00",
-      "closes": "22:00:00",
-      "validFrom": "2021-01-01T00:00:00",
-      "validThrough": "2021-12-31T23:59:59"
-    },
-    {
-      "dayOfWeek": "Tuesday",
-      "opens": "07:00:00",
-      "closes": "22:00:00",
-      "validFrom": "2021-01-01T00:00:00",
-      "validThrough": "2021-12-31T23:59:59"
-    },
-    {
-      "dayOfWeek": "Wednesday",
-      "opens": "07:00:00",
-      "closes": "22:00:00",
-      "validFrom": "2021-01-01T00:00:00",
-      "validThrough": "2021-12-31T23:59:59"
-    },
-    {
-      "dayOfWeek": "Thursday",
-      "opens": "07:00:00",
-      "closes": "22:00:00",
-      "validFrom": "2021-01-01T00:00:00",
-      "validThrough": "2021-12-31T23:59:59"
-    },
-    {
-      "dayOfWeek": "Friday",
-      "opens": "07:00:00",
-      "closes": "22:00:00",
-      "validFrom": "2021-01-01T00:00:00",
-      "validThrough": "2021-12-31T23:59:59"
-    },
-    {
-      "dayOfWeek": "Saturday",
-      "opens": "08:00:00",
-      "closes": "23:00:00",
-      "validFrom": "2021-01-01T00:00:00",
-      "validThrough": "2021-12-31T23:59:59"
-    },
-    {
-      "dayOfWeek": "Sunday",
-      "opens": "08:30:00",
-      "closes": "21:00:00",
-      "validFrom": "2021-01-01T00:00:00",
-      "validThrough": "2021-12-31T23:59:59"
-    },
-    {
-      "dayOfWeek": "PublicHolidays",
-      "opens": "08:30:00",
-      "closes": "21:00:00",
-      "validFrom": "2021-01-01T00:00:00",
-      "validThrough": "2021-12-31T23:59:59"
-    }
-  ],
-  "owner": [
-    "uri:ngsi:StreetRetail"
-  ],
-  "contractingAuthority": "MNCA - Metropole Nice Cote d'Azur",
-  "contractingCompagny": "R\u00e9gie Ligne d'Azur",
-  "contactPoint": {
-    "url": "uri:ngsi:www.lignesdazur.com"
-  },
-  "webSite": "https://tramway.nice.fr/Plan-Station-L02-AP-T2.pdf",
-  "instalationMode": "ground",
-  "dimension": {
-    "length": 300,
-    "width": 25,
-    "thickness": 6.35
-  },
-  "inventory": {
-    "nbOfIOPoint": 2,
-    "nbOfLane": 1,
-    "nbOfPlatform": 1,
-    "PlatformType": [
-      "lateral"
-    ]
-  },
-  "stationConnected": [
-    {
-      "stationType": "tram",
-      "linesConnected": [
-        "Tram 2 - CADAM / Nikaia",
-        "Tram 3 - Saint Isidore / Stade Allianz Riviera"
-      ]
-    },
-    {
-      "stationType": "train",
-      "linesConnected": [
-        "Gare SNCF Nice Saint Augustin (600m)"
-      ]
-    },
-    {
-      "stationType": "bus",
-      "linesConnected": [
-        "L20 - Giono / Les Pugets",
-        "L20 - Centre Commercial St Isidore",
-        "L21 - Le Gu\u00e9 / Polygone Riviera",
-        "L54 - Centre Commercial Cap 3000 - St Jeannet",
-        "L90 - La Bolline",
-        "91 Auron",
-        "L92 - Isola 2000"
-      ]
-    }
-  ],
-  "services": {
-    "purchaseDevice": true,
-    "interactiveDevice": true,
-    "timetableDevice": true,
-    "voiceDevice": true,
-    "informationBoardDevice": true,
-    "messageDevice": false,
-    "shelters": true,
-    "restBench": false,
-    "emergencyPhone": false,
-    "videoSurveillance": true,
-    "defibrillator": false,
-    "wheelChairAccessible": true
-  },
-  "paymentAccepted": [
-    "Cash",
-    "CreditCard"
-  ],
-  "currencyAccepted": [
-    "EUR"
-  ],
-  "constructionDate": "2016-19-08",
-  "commissioningDate": "2018-09-15",
-  "architect": "Nice Architecture",
-  "featuredArtist ": [
-    "Leopold",
-    "De Renaiss"
-  ],
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ]
 }
