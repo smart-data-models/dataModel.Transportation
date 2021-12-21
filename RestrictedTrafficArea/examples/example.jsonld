@@ -1,49 +1,49 @@
 {
-  "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",
-  "type": "RestrictedTrafficArea",
-  "category": {
-    "type": "array",
-    "value": [
-      "onlyPedestrian"
+    "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",
+    "type": "RestrictedTrafficArea",
+    "category": {
+        "type": "array",
+        "value": [
+            "onlyPedestrian"
+        ]
+    },
+    "description": {
+        "type": "string",
+        "value": "Panel:AP - Stretches:lato civici dispari da piazza Tricolore a via Kramer - Bollards: - Notes:"
+    },
+    "location": {
+        "type": "geo:json",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                9.214544,
+                45.483353
+            ]
+        }
+    },
+    "name": {
+        "type": "string",
+        "value": "Corso Concordia Area"
+    },
+    "notAllowedVehicleType": {
+        "type": "array",
+        "value": [
+            "anyVehicle"
+        ]
+    },
+    "regulation": {
+        "type": "string",
+        "value": "Decree:54785/2004, Deliberation:425/2004"
+    },
+    "source": {
+        "type": "string",
+        "value": "https://dati.comune.milano.it/dataset/ds51_trafficotrasporti_aree_pedonali_ztl_zone_30_"
+    },
+    "validityEndDate": {
+        "type": "DateTime",
+        "value": "2049-12-31T23:00:00.00Z"
+    },
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
     ]
-  },
-  "description": {
-    "type": "string",
-    "value": "Panel:AP - Stretches:lato civici dispari da piazza Tricolore a via Kramer - Bollards: - Notes:"
-  },
-  "location": {
-    "type": "geo:json",
-    "value": {
-      "type": "Point",
-      "coordinates": [
-        9.214544,
-        45.483353
-      ]
-    }
-  },
-  "name": {
-    "type": "string",
-    "value": "Corso Concordia Area"
-  },
-  "notAllowedVehicleType": {
-    "type": "array",
-    "value": [
-      "anyVehicle"
-    ]
-  },
-  "regulation": {
-    "type": "string",
-    "value": "Decree:54785/2004, Deliberation:425/2004"
-  },
-  "source": {
-    "type": "string",
-    "value": "https://dati.comune.milano.it/dataset/ds51_trafficotrasporti_aree_pedonali_ztl_zone_30_"
-  },
-  "validityEndDate": {
-    "type": "DateTime",
-    "value": "2049-12-31T23:00:00.00Z"
-  },
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld"
-  ]
 }
