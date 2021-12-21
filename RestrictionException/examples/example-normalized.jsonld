@@ -1,17 +1,17 @@
 {
-  "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictionException:GeoJson:ds51-1",
-  "type": "RestrictionException",
-  "name": "Corso Concordia Area",
-  "allowedVehicleType": [
-    "dieselCarEuro6",
-    "petrolCarEuro6"
-  ],
-  "exceptionValidityHours": "Tu,Th 16:00-20:00",
-  "refVehicleModel": [
-    "vehicle:VehicleModel:modelName-1"
-  ],
-  "refRestrictedTrafficArea": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",
-  "@context": [
-    "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"
-  ]
+    "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictionException:GeoJson:ds51-1",
+    "type": "RestrictionException",
+    "allowedVehicleType": [
+        "dieselCarEuro6",
+        "petrolCarEuro6"
+    ],
+    "exceptionValidityHours": "Tu,Th 16:00-20:00",
+    "name": "Corso Concordia Area",
+    "refRestrictedTrafficArea": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",
+    "refVehicleModel": [
+        "vehicle:VehicleModel:modelName-1"
+    ],
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"
+    ]
 }
