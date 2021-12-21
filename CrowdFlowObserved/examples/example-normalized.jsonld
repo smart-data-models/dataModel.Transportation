@@ -1,38 +1,37 @@
 {
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ],
-  "averageHeadwayTime": 5,
-  "congested": false,
-  "dateObserved": "2018-08-07T11:10:00/2018-08-07T11:15:00",
-  "dateObservedFrom": {
-    "@type": "DateTime",
-    "@value": "2018-08-07T11:10:00Z"
-  },
-  "dateObservedTo": {
-    "@type": "DateTime",
-    "@value": "2018-08-07T11:15:00Z"
-  },
-  "direction": "inbound",
-  "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",
-  "location": {
-    "coordinates": [
-      [
-        -4.73735395519672,
-        41.6538181849672
-      ],
-      [
-        -4.73414858659993,
-        41.6600594193478
-      ],
-      [
-        -4.73447575302641,
-        41.659585195093
-      ]
-    ],
-    "type": "LineString"
-  },
-  "peopleCount": 100,
-  "type": "CrowdFlowObserved"
+    "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",
+    "type": "CrowdFlowObserved",
+    "averageHeadwayTime": 5,
+    "congested": false,
+    "dateObserved": "2018-08-07T11:10:00/2018-08-07T11:15:00",
+    "dateObservedFrom": {
+        "@type": "DateTime",
+        "@value": "2018-08-07T11:10:00Z"
+    },
+    "dateObservedTo": {
+        "@type": "DateTime",
+        "@value": "2018-08-07T11:15:00Z"
+    },
+    "direction": "inbound",
+    "location": {
+        "coordinates": [
+            [
+                -4.73735395519672,
+                41.6538181849672
+            ],
+            [
+                -4.73414858659993,
+                41.6600594193478
+            ],
+            [
+                -4.73447575302641,
+                41.659585195093
+            ]
+        ],
+        "type": "LineString"
+    },
+    "peopleCount": 100,
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ]
 }
