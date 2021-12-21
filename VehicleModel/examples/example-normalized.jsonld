@@ -1,15 +1,14 @@
 {
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ],
-  "brandName": "Mercedes Benz",
-  "cargoVolume": 1000,
-  "fuelType": "diesel",
-  "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",
-  "manufacturerName": "Daimler",
-  "modelName": "Econic",
-  "name": "MBenz-Econic2014",
-  "type": "VehicleModel",
-  "vehicleType": "lorry"
+    "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",
+    "type": "VehicleModel",
+    "brandName": "Mercedes Benz",
+    "cargoVolume": 1000,
+    "fuelType": "diesel",
+    "manufacturerName": "Daimler",
+    "modelName": "Econic",
+    "name": "MBenz-Econic2014",
+    "vehicleType": "lorry",
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ]
 }
