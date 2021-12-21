@@ -1,27 +1,27 @@
 {
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ],
-  "id": "urn:ngsi-ld:BikeLane:BikeLane-AveMed-Benidorm-123456",
-  "type": "BikeLane",
-  "dateObserved": "2021-02-20T06:45:00Z",
-  "location": {
-    "coordinates": [
-      -8.768460000000001,
-      42.60214472222222
-    ],
-    "type": "Point"
-  },
-  "name": "Carril bici - Avenida del Mediterráneo",
-  "description": "Información del carril bici",
-  "address": {
-    "streetAddress": "37 Avenida del Mediterráneo",
-    "addressCountry": "ES",
-    "addressLocality": "Benidorm"
-  },
-  "laneOccupancy": 7,
-  "laneWidth": 2,
-  "laneLength": 150,
-  "dataProvider": "LaneSensor-12345"
+    "id": "urn:ngsi-ld:BikeLane:BikeLane-AveMed-Benidorm-123456",
+    "type": "BikeLane",
+    "address": {
+        "streetAddress": "37 Avenida del Mediterr\u00e1neo",
+        "addressCountry": "ES",
+        "addressLocality": "Benidorm"
+    },
+    "dataProvider": "LaneSensor-12345",
+    "dateObserved": "2021-02-20T06:45:00Z",
+    "description": "Informaci\u00f3n del carril bici",
+    "laneLength": 150,
+    "laneOccupancy": 7,
+    "laneWidth": 2,
+    "location": {
+        "coordinates": [
+            -8.768460000000001,
+            42.60214472222222
+        ],
+        "type": "Point"
+    },
+    "name": "Carril bici - Avenida del Mediterr\u00e1neo",
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
+    ]
 }
