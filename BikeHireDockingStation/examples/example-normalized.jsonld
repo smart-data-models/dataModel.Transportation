@@ -1,13 +1,29 @@
 {
     "id": "urn:ngsi-ld:Bcn-BikeHireDockingStation-1",
     "type": "BikeHireDockingStation",
-    "status": {
+    "address": {
         "type": "Property",
-        "value": "working"
+        "value": {
+            "addressCountry": "ES",
+            "addressLocality": "Barcelona",
+            "streetAddress": "Gran Via Corts Catalanes,760"
+        }
     },
-    "provider": {
+    "agency_fare_url": {
         "type": "Property",
-        "value": "University of Mumbay"
+        "value": ""
+    },
+    "agency_name": {
+        "type": "Property",
+        "value": "PedalSaddle"
+    },
+    "agency_url": {
+        "type": "Property",
+        "value": "http://pedalsaddle.in/"
+    },
+    "availableBikeNumber": {
+        "type": "Property",
+        "value": 20
     },
     "contactPoint": {
         "type": "Property",
@@ -15,17 +31,9 @@
             "url": "uri:ngsi:www.lignesdazur.com"
         }
     },
-    "availableBikeNumber": {
-        "type": "Property",
-        "value": 20
-    },
     "freeSlotNumber": {
         "type": "Property",
         "value": 10
-    },
-    "openingHours": {
-        "type": "Property",
-        "value": "Mo-Fr 10:00-19:00, Sa 10:00-22:00, Su 10:00-21:00"
     },
     "location": {
         "type": "Geoproperty",
@@ -37,41 +45,9 @@
             ]
         }
     },
-    "address": {
-        "type": "Property",
-        "value": {
-            "addressCountry": "ES",
-            "addressLocality": "Barcelona",
-            "streetAddress": "Gran Via Corts Catalanes,760"
-        }
-    },
-    "totalSlotNumber": {
-        "type": "Property",
-        "value": 100
-    },
-    "outOfServiceSlotNumber": {
-        "type": "Property",
-        "value": 21
-    },
-    "stationName": {
-        "type": "Property",
-        "value": "Pune"
-    },
     "mediaURL": {
         "type": "Property",
         "value": "http://pedalsaddle.in/"
-    },
-    "agency_url": {
-        "type": "Property",
-        "value": "http://pedalsaddle.in/"
-    },
-    "agency_name": {
-        "type": "Property",
-        "value": "PedalSaddle"
-    },
-    "stationCode": {
-        "type": "Property",
-        "value": "2"
     },
     "observationDate": {
         "type": "Property",
@@ -80,11 +56,33 @@
             "@value": "2021-03-11T15:51:02+05:30"
         }
     },
-    "agency_fare_url": {
+    "openingHours": {
         "type": "Property",
-        "value": ""
+        "value": "Mo-Fr 10:00-19:00, Sa 10:00-22:00, Su 10:00-21:00"
     },
-    "@context": [
-        "https://smartdatamodels.org/context.jsonld"
-    ]
+    "outOfServiceSlotNumber": {
+        "type": "Property",
+        "value": 21
+    },
+    "provider": {
+        "type": "Property",
+        "value": "University of Mumbay"
+    },
+    "stationCode": {
+        "type": "Property",
+        "value": "2"
+    },
+    "stationName": {
+        "type": "Property",
+        "value": "Pune"
+    },
+    "status": {
+        "type": "Property",
+        "value": "working"
+    },
+    "totalSlotNumber": {
+        "type": "Property",
+        "value": 100
+    },
+    "@context": []
 }
