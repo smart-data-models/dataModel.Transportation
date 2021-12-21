@@ -1,62 +1,62 @@
 {
-  "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",
-  "type": "Vehicle",
-  "areaServed": "Centro",
-  "cargoWeight": 314,
-  "category": [
-    "municipalServices"
-  ],
-  "location": {
-    "coordinates": [
-      -3.164485591715449,
-      40.62785133667262
+    "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",
+    "type": "Vehicle",
+    "areaServed": "Centro",
+    "bearing": 43,
+    "cargoWeight": 314,
+    "category": [
+        "municipalServices"
     ],
-    "type": "Point"
-  },
-  "name": "C Recogida 1",
-  "refVehicleModel": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",
-  "serviceProvided": [
-    "gargabeCollection",
-    "wasteContainerCleaning"
-  ],
-  "serviceStatus": "onRoute",
-  "speed": 50,
-  "vehiclePlateIdentifier": "3456ABC",
-  "vehicleType": "lorry",
-  "bearing": 43,
-  "fuelEfficiency": 13,
-  "fuelType": "Petrol",
-  "fuelFilled": 6,
-  "tripNetWeightCollected": 12,
-  "vehicleTrackerDevice": "Installed",
-  "wardId": "4",
-  "license_plate": "KA052134",
-  "currentTripCount": 1,
-  "reportId": "21645",
-  "zoneName": "South Zone",
-  "vehicleAltitude": 600,
-  "deviceSimNumber": "9942142573",
-  "wardName": "Kempegowda Ward",
-  "deviceBatteryStatus": "Connected",
-  "ignitionStatus": true,
-  "vehicleRunningStatus": "running",
-  "observationDateTime": "2021-03-11T15:51:02+05:30",
-  "serviceOnDuty": false,
-  "emergencyVehicleType": "ambulance",
-  "municipalityInfo":{
-    "district":"Bangalore Urban",
-    "ulbName":"BMC",
-    "cityId":"23",
-    "wardId":"23",
-    "stateName":"Karnataka",
-    "cityName":"Bangalore",
-    "zoneName":"South",
-    "wardName":"Bangalore Urban",
-    "zoneId":"2",
-    "wardNum":4
-  },
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "iudx:EmergencyVehicle"
-  ]
+    "currentTripCount": 1,
+    "deviceBatteryStatus": "Connected",
+    "deviceSimNumber": "9942142573",
+    "emergencyVehicleType": "ambulance",
+    "fuelEfficiency": 13,
+    "fuelFilled": 6,
+    "fuelType": "Petrol",
+    "ignitionStatus": true,
+    "license_plate": "KA052134",
+    "location": {
+        "coordinates": [
+            -3.164485591715449,
+            40.62785133667262
+        ],
+        "type": "Point"
+    },
+    "municipalityInfo": {
+        "district": "Bangalore Urban",
+        "ulbName": "BMC",
+        "cityId": "23",
+        "wardId": "23",
+        "stateName": "Karnataka",
+        "cityName": "Bangalore",
+        "zoneName": "South",
+        "wardName": "Bangalore Urban",
+        "zoneId": "2",
+        "wardNum": 4
+    },
+    "name": "C Recogida 1",
+    "observationDateTime": "2021-03-11T15:51:02+05:30",
+    "refVehicleModel": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",
+    "reportId": "21645",
+    "serviceOnDuty": false,
+    "serviceProvided": [
+        "gargabeCollection",
+        "wasteContainerCleaning"
+    ],
+    "serviceStatus": "onRoute",
+    "speed": 50,
+    "tripNetWeightCollected": 12,
+    "vehicleAltitude": 600,
+    "vehiclePlateIdentifier": "3456ABC",
+    "vehicleRunningStatus": "running",
+    "vehicleTrackerDevice": "Installed",
+    "vehicleType": "lorry",
+    "wardId": "4",
+    "wardName": "Kempegowda Ward",
+    "zoneName": "South Zone",
+    "@context": [
+        "iudx:EmergencyVehicle",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
+    ]
 }
