@@ -1,15 +1,15 @@
 {
-  "id": "ngsi-ld:Trafficviolation:234R:0212",
-  "type": "TrafficViolation",
-  "amountCollected": 10500,
-  "mediaURL": "https://www.google.com/",
-  "equipmentId": "4",
-  "equipmentType": "Camera",
-  "titleCode": "11",
-  "reportId": "182",
-  "observationDateTime": "2021-03-11T15:51:02+05:30",
-  "paymentStatus": "Paid",
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld"
-  ]
+    "id": "ngsi-ld:Trafficviolation:234R:0212",
+    "type": "TrafficViolation",
+    "amountCollected": 10500,
+    "equipmentId": "4",
+    "equipmentType": "Camera",
+    "mediaURL": "https://www.google.com/",
+    "observationDateTime": "2021-03-11T15:51:02+05:30",
+    "paymentStatus": "Paid",
+    "reportId": "182",
+    "titleCode": "11",
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
+    ]
 }
