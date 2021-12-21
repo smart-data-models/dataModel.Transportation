@@ -1,199 +1,199 @@
 {
-  "id": "urn:ngsi-ld:RoadAccident:id:ORHW:45620815",
-  "dateCreated": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2018-06-23T04:19:24Z"
-    }
-  },
-  "dateModified": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2020-10-29T08:36:40Z"
-    }
-  },
-  "source": {
-    "type": "Property",
-    "value": "To be defined"
-  },
-  "name": {
-    "type": "Property",
-    "value": "Name of the element of the accident."
-  },
-  "alternateName": {
-    "type": "Property",
-    "value": "Other name."
-  },
-  "description": {
-    "type": "Property",
-    "value": "Clash in the middle of a traffic light"
-  },
-  "dataProvider": {
-    "type": "Property",
-    "value": "Municipality."
-  },
-  "owner": {
-    "type": "Property",
-    "value": [
-      "urn:ngsi-ld:RoadAccident:items:SUUU:18395806",
-      "urn:ngsi-ld:RoadAccident:items:GVOF:30958855"
+    "id": "urn:ngsi-ld:RoadAccident:id:ORHW:45620815",
+    "type": "RoadAccident",
+    "accidentDate": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2021-03-12T13:59:36Z"
+        }
+    },
+    "accidentDescription": {
+        "type": "Property",
+        "value": [
+            "23",
+            "46"
+        ]
+    },
+    "accidentLocation": {
+        "type": "Property",
+        "value": "5"
+    },
+    "accidentStatisticalDate": {
+        "type": "Property",
+        "value": {
+            "year": 2021,
+            "quarter": 1,
+            "weekday": "Friday",
+            "hour": 4
+        }
+    },
+    "accidentType": {
+        "type": "Property",
+        "value": [
+            "10",
+            "6"
+        ]
+    },
+    "address": {
+        "type": "Property",
+        "value": {
+            "streetAddress": "FranklinStrasse",
+            "addressLocality": "Berlin",
+            "addressRegion": "Berlin",
+            "addressCountry": "Germany",
+            "postalCode": "10387",
+            "postOfficeBoxNumber": "",
+            "areaServed": "worldwide."
+        }
+    },
+    "alternateName": {
+        "type": "Property",
+        "value": "Other name."
+    },
+    "areaServed": {
+        "type": "Property",
+        "value": "worldwide"
+    },
+    "dataProvider": {
+        "type": "Property",
+        "value": "Municipality."
+    },
+    "dateCreated": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2018-06-23T04:19:24Z"
+        }
+    },
+    "dateModified": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2020-10-29T08:36:40Z"
+        }
+    },
+    "description": {
+        "type": "Property",
+        "value": "Clash in the middle of a traffic light"
+    },
+    "localId": {
+        "type": "Property",
+        "value": "20210312-A1."
+    },
+    "location": {
+        "type": "Property",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -56.6404505,
+                168.370658
+            ]
+        }
+    },
+    "name": {
+        "type": "Property",
+        "value": "Name of the element of the accident."
+    },
+    "numPassengersDead": {
+        "type": "Property",
+        "value": 1
+    },
+    "numPassengersInjured": {
+        "type": "Property",
+        "value": 1
+    },
+    "numPedestrianDead": {
+        "type": "Property",
+        "value": 0
+    },
+    "numPedestrianInjured": {
+        "type": "Property",
+        "value": 1
+    },
+    "owner": {
+        "type": "Property",
+        "value": [
+            "urn:ngsi-ld:RoadAccident:items:SUUU:18395806",
+            "urn:ngsi-ld:RoadAccident:items:GVOF:30958855"
+        ]
+    },
+    "pedestriansInvolved": {
+        "type": "Property",
+        "value": [
+            "true"
+        ]
+    },
+    "roadClass": {
+        "type": "Property",
+        "value": "Motorway."
+    },
+    "roadIntersection": {
+        "type": "Property",
+        "value": "8"
+    },
+    "roadPaving": {
+        "type": "Property",
+        "value": "2"
+    },
+    "roadSign": {
+        "type": "Property",
+        "value": "5"
+    },
+    "roadSurface": {
+        "type": "Property",
+        "value": "2"
+    },
+    "roadTrunk": {
+        "type": "Property",
+        "value": "12"
+    },
+    "seeAlso": {
+        "type": "Property",
+        "value": [
+            "urn:ngsi-ld:RoadAccident:items:ESLS:37894243",
+            "urn:ngsi-ld:RoadAccident:items:ZNUH:87936284"
+        ]
+    },
+    "source": {
+        "type": "Property",
+        "value": "To be defined"
+    },
+    "status": {
+        "type": "Property",
+        "value": "onGoing"
+    },
+    "totalDeadPeopleWithin24Hours": {
+        "type": "Property",
+        "value": 0
+    },
+    "totalDeadPeopleWithin30Days": {
+        "type": "Property",
+        "value": 0
+    },
+    "totalInjured": {
+        "type": "Property",
+        "value": 2
+    },
+    "vehiclesInvolved": {
+        "type": "Property",
+        "value": [
+            "21",
+            "6"
+        ]
+    },
+    "weakestSubject": {
+        "type": "Property",
+        "value": "20"
+    },
+    "weatherConditions": {
+        "type": "Property",
+        "value": [
+            "10",
+            "20"
+        ]
+    },
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
     ]
-  },
-  "seeAlso": {
-    "type": "Property",
-    "value": [
-      "urn:ngsi-ld:RoadAccident:items:ESLS:37894243",
-      "urn:ngsi-ld:RoadAccident:items:ZNUH:87936284"
-    ]
-  },
-  "location": {
-    "type": "Property",
-    "value": {
-      "type": "Point",
-      "coordinates": [
-        -56.6404505,
-        168.370658
-      ]
-    }
-  },
-  "address": {
-    "type": "Property",
-    "value": {
-      "streetAddress": "FranklinStrasse",
-      "addressLocality": "Berlin",
-      "addressRegion": "Berlin",
-      "addressCountry": "Germany",
-      "postalCode": "10387",
-      "postOfficeBoxNumber": "",
-      "areaServed": "worldwide."
-    }
-  },
-  "areaServed": {
-    "type": "Property",
-    "value": "worldwide"
-  },
-  "type": "RoadAccident",
-  "localId": {
-    "type": "Property",
-    "value": "20210312-A1."
-  },
-  "status": {
-    "type": "Property",
-    "value": "onGoing"
-  },
-  "accidentDate": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2021-03-12T13:59:36Z"
-    }
-  },
-  "accidentStatisticalDate": {
-    "type": "Property",
-    "value": {
-      "year": 2021,
-      "quarter": 1,
-      "weekday": "Friday",
-      "hour": 4
-    }
-  },
-  "accidentType": {
-    "type": "Property",
-    "value": [
-      "10",
-      "6"
-    ]
-  },
-  "accidentDescription": {
-    "type": "Property",
-    "value": [
-      "23",
-      "46"
-    ]
-  },
-  "weatherConditions": {
-    "type": "Property",
-    "value": [
-      "10",
-      "20"
-    ]
-  },
-  "roadSurface": {
-    "type": "Property",
-    "value": "2"
-  },
-  "roadPaving": {
-    "type": "Property",
-    "value": "2"
-  },
-  "accidentLocation": {
-    "type": "Property",
-    "value": "5"
-  },
-  "roadClass": {
-    "type": "Property",
-    "value": "Motorway."
-  },
-  "roadIntersection": {
-    "type": "Property",
-    "value": "8"
-  },
-  "roadTrunk": {
-    "type": "Property",
-    "value": "12"
-  },
-  "roadSign": {
-    "type": "Property",
-    "value": "5"
-  },
-  "pedestriansInvolved": {
-    "type": "Property",
-    "value": [
-      "true"
-    ]
-  },
-  "vehiclesInvolved": {
-    "type": "Property",
-    "value": [
-      "21",
-      "6"
-    ]
-  },
-  "weakestSubject": {
-    "type": "Property",
-    "value": "20"
-  },
-  "numPassengersInjured": {
-    "type": "Property",
-    "value": 1
-  },
-  "numPassengersDead": {
-    "type": "Property",
-    "value": 1
-  },
-  "numPedestrianInjured": {
-    "type": "Property",
-    "value": 1
-  },
-  "numPedestrianDead": {
-    "type": "Property",
-    "value": 0
-  },
-  "totalInjured": {
-    "type": "Property",
-    "value": 2
-  },
-  "totalDeadPeopleWithin30Days": {
-    "type": "Property",
-    "value": 0
-  },
-  "totalDeadPeopleWithin24Hours": {
-    "type": "Property",
-    "value": 0
-  },
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld"
-  ]
 }
