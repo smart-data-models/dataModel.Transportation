@@ -1,67 +1,67 @@
 {
-  "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",
-  "type": "EVChargingStation",
-  "socketType": {
-    "type": "Property",
-    "value": [
-      "Wall_Euro"
+    "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",
+    "type": "EVChargingStation",
+    "address": {
+        "type": "Property",
+        "value": {
+            "addressLocality": "Valladolid",
+            "addressCountry": "Espa\u00f1a",
+            "streetAddress": "Paseo de Zorrilla, 191",
+            "type": "PostalAddress"
+        }
+    },
+    "allowedVehicleType": {
+        "type": "Property",
+        "value": [
+            "car"
+        ]
+    },
+    "capacity": {
+        "type": "Property",
+        "value": 2
+    },
+    "chargeType": {
+        "type": "Property",
+        "value": [
+            "free"
+        ]
+    },
+    "contactPoint": {
+        "type": "Property",
+        "value": {
+            "email": "vehiculoelectrico@ava.es"
+        }
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -4.747901,
+                41.618265
+            ]
+        }
+    },
+    "name": {
+        "type": "Property",
+        "value": "Agencia de Innovaci\u00f3n"
+    },
+    "operator": {
+        "type": "Property",
+        "value": "Iberdrola"
+    },
+    "socketType": {
+        "type": "Property",
+        "value": [
+            "Wall_Euro"
+        ]
+    },
+    "source": {
+        "type": "Property",
+        "value": "https://openchargemap.org/"
+    },
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
     ]
-  },
-  "capacity": {
-    "type": "Property",
-    "value": 2
-  },
-  "name": {
-    "type": "Property",
-    "value": "Agencia de Innovaci\u00f3n"
-  },
-  "allowedVehicleType": {
-    "type": "Property",
-    "value": [
-      "car"
-    ]
-  },
-  "source": {
-    "type": "Property",
-    "value": "https://openchargemap.org/"
-  },
-  "location": {
-    "type": "GeoProperty",
-    "value": {
-      "type": "Point",
-      "coordinates": [
-        -4.747901,
-        41.618265
-      ]
-    }
-  },
-  "chargeType": {
-    "type": "Property",
-    "value": [
-      "free"
-    ]
-  },
-  "address": {
-    "type": "Property",
-    "value": {
-      "addressLocality": "Valladolid",
-      "addressCountry": "Espa\u00f1a",
-      "streetAddress": "Paseo de Zorrilla, 191",
-      "type": "PostalAddress"
-    }
-  },
-  "operator": {
-    "type": "Property",
-    "value": "Iberdrola"
-  },
-  "contactPoint": {
-    "type": "Property",
-    "value": {
-      "email": "vehiculoelectrico@ava.es"
-    }
-  },
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ]
 }
