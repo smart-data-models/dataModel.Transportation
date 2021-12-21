@@ -1,98 +1,97 @@
 {
-  "id": "urn:ngsi-ld:BikeLane:BikeLane-AveMed-Benidorm-123456",
-  "type": "BikeLanes",
-  "dateCreated": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2021-02-20T06:45:00Z"
+    "id": "urn:ngsi-ld:BikeLane:BikeLane-AveMed-Benidorm-123456",
+    "type": "BikeLanes",
+    "address": {
+        "type": "Property",
+        "value": {
+            "streetAddress": "37 Avenida del Mediterr\u00e1neo",
+            "addressLocality": "Benidorm",
+            "addressRegion": "Valencia",
+            "addressCountry": "ES",
+            "postalCode": "",
+            "postOfficeBoxNumber": "",
+            "areaServed": ""
+        }
+    },
+    "alternateName": {
+        "type": "Property",
+        "value": ""
+    },
+    "areaServed": {
+        "type": "Property",
+        "value": ""
+    },
+    "dataProvider": {
+        "type": "Property",
+        "value": ""
+    },
+    "dateCreated": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2021-02-20T06:45:00Z"
+        }
+    },
+    "dateModified": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2021-02-20T06:45:00Z"
+        }
+    },
+    "dateObserved": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2021-02-20T06:45:00Z"
+        }
+    },
+    "description": {
+        "type": "Property",
+        "value": "Informaci\u00f3n del carril bici"
+    },
+    "laneLength": {
+        "type": "Property",
+        "value": 150
+    },
+    "laneOccupancy": {
+        "type": "Property",
+        "value": 7
+    },
+    "laneWidth": {
+        "type": "Property",
+        "value": 2
+    },
+    "location": {
+        "type": "Property",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -8.768460000000001,
+                42.60214472222222
+            ]
+        }
+    },
+    "name": {
+        "type": "Property",
+        "value": "Carril bici - Avenida del Mediterr\u00e1neo"
+    },
+    "owner": {
+        "type": "Property",
+        "value": [
+            "urn:ngsi-ld:BikeLanes:items:DFIF:70960066",
+            "urn:ngsi-ld:BikeLanes:items:VPLZ:20892051"
+        ]
+    },
+    "seeAlso": {
+        "type": "Property",
+        "value": [
+            "urn:ngsi-ld:BikeLanes:items:VZIJ:73053519",
+            "urn:ngsi-ld:BikeLanes:items:LZML:32924944"
+        ]
+    },
+    "source": {
+        "type": "Property",
+        "value": ""
     }
-  },
-  "dateModified": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2021-02-20T06:45:00Z"
-    }
-  },
-  "source": {
-    "type": "Property",
-    "value": ""
-  },
-  "name": {
-    "type": "Property",
-    "value": "Carril bici - Avenida del Mediterráneo"
-  },
-  "alternateName": {
-    "type": "Property",
-    "value": ""
-  },
-  "description": {
-    "type": "Property",
-    "value": "Información del carril bici"
-  },
-  "dataProvider": {
-    "type": "Property",
-    "value": ""
-  },
-  "owner": {
-    "type": "Property",
-    "value": [
-      "urn:ngsi-ld:BikeLanes:items:DFIF:70960066",
-      "urn:ngsi-ld:BikeLanes:items:VPLZ:20892051"
-    ]
-  },
-  "seeAlso": {
-    "type": "Property",
-    "value": [
-      "urn:ngsi-ld:BikeLanes:items:VZIJ:73053519",
-      "urn:ngsi-ld:BikeLanes:items:LZML:32924944"
-    ]
-  },
-  "location": {
-    "type": "Property",
-    "value": {
-      "type": "Point",
-      "coordinates": [
-        -8.768460000000001,
-      42.60214472222222
-      ]
-    }
-  },
-  "address": {
-    "type": "Property",
-    "value": {
-      "streetAddress": "37 Avenida del Mediterráneo",
-      "addressLocality": "Benidorm",
-      "addressRegion": "Valencia",
-      "addressCountry": "ES",
-      "postalCode": "",
-      "postOfficeBoxNumber": "",
-      "areaServed": ""
-    }
-  },
-  "areaServed": {
-    "type": "Property",
-    "value": ""
-  },
-  "laneOccupancy": {
-    "type": "Property",
-    "value": 7
-  },
-  "laneLength": {
-    "type": "Property",
-    "value": 150
-  },
-  "laneWidth": {
-    "type": "Property",
-    "value": 2
-  },
-  "dateObserved": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2021-02-20T06:45:00Z"
-    }
-  }
 }
-
