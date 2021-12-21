@@ -1,228 +1,224 @@
 {
-  "id": "urn:ngsi-ld:FareCollectionSystem:id:RJSB:34513580",
-  "type": "FareCollectionSystem",
-  "dateCreated": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2020-11-02T06:16:42Z"
-    }
-  },
-  "dateModified": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2020-12-27T15:13:17Z"
-    }
-  },
-  "source": {
-    "type": "Property",
-    "value": ""
-  },
-  "name": {
-    "type": "Property",
-    "value": "Fare collection system Nize"
-  },
-  "alternateName": {
-    "type": "Property",
-    "value": ""
-  },
-  "description": {
-    "type": "Property",
-    "value": "Fare collection system Nize for regional routes"
-  },
-  "dataProvider": {
-    "type": "Property",
-    "value": ""
-  },
-  "owner": {
-    "type": "Property",
-    "value": [
-      "urn:ngsi-ld:FareCollectionSystem:items:XMXR:79897582",
-      "urn:ngsi-ld:FareCollectionSystem:items:SKAX:98192518"
-    ]
-  },
-  "seeAlso": {
-    "type": "Property",
-    "value": [
-      "urn:ngsi-ld:FareCollectionSystem:items:VSVS:72352464",
-      "urn:ngsi-ld:FareCollectionSystem:items:VMFR:36424993"
-    ]
-  },
-  "location": {
-    "type": "Property",
-    "value": {
-      "type": "Point",
-      "coordinates": [
-        43.7034,
-        7.2663
-      ]
-    }
-  },
-  "address": {
-    "type": "Property",
-    "value": {
-      "streetAddress": "Av. Nicolas II",
-      "addressLocality": "Nice",
-      "addressRegion": "Provenza-Alpes-Costa Azul",
-      "addressCountry": "France",
-      "postalCode": "06000",
-      "postOfficeBoxNumber": ""
-    }
-  },
-  "areaServed": {
-    "type": "Property",
-    "value": "Nice"
-  },
-  "destinationStopName": {
-    "type": "Property",
-    "value": "Hour risk somebody deal system discussion other plan. Stage the film occur."
-  },
-  "occupancyLevel": {
-    "type": "Property",
-    "value": "Green"
-  },
-  "travelDistance": {
-    "type": "Property",
-    "value": 7.5
-  },
-  "passengerCount": {
-    "type": "Property",
-    "value": 6
-  },
-  "transactionType": {
-    "type": "Property",
-    "value": "Issue"
-  },
-  "ticketTypeCode": {
-    "type": "Property",
-    "value": "Normal"
-  },
-  "originStopName": {
-    "type": "Property",
-    "value": "Vauban"
-  },
-  "entryAreaCode": {
-    "type": "Property",
-    "value": "city-bus-service"
-  },
-  "cardId": {
-    "type": "Property",
-    "value": "987201910"
-  },
-  "transactionTypeId": {
-    "type": "Property",
-    "value": "2401"
-  },
-  "stage": {
-    "type": "Property",
-    "value": 4
-  },
-  "equipmentId": {
-    "type": "Property",
-    "value": "S23"
-  },
-  "direction_id": {
-    "type": "Property",
-    "value": 1
-  },
-  "equipmentSequenceNumber": {
-    "type": "Property",
-    "value": 2
-  },
-  "shiftOfOperation": {
-    "type": "Property",
-    "value": "2"
-  },
-  "route_id": {
-    "type": "Property",
-    "value": "4"
-  },
-  "trip_id": {
-    "type": "Property",
-    "value": "4A"
-  },
-  "originStopCategory": {
-    "type": "Property",
-    "value": "Bus stop"
-  },
-  "vehicle_label": {
-    "type": "Property",
-    "value": "5821JZS"
-  },
-  "fareForChild": {
-    "type": "Property",
-    "value": 3.6
-  },
-  "transactionDateTime": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2021-08-20T15:45:22Z"
-    }
-  },
-  "destinationStopId": {
-    "type": "Property",
-    "value": "Nice-Airport"
-  },
-  "originDestinationCode": {
-    "type": "Property",
-    "value": "23"
-  },
-  "currentTripCount": {
-    "type": "Property",
-    "value": 12
-  },
-  "equipmentTypeCode": {
-    "type": "Property",
-    "value": "42"
-  },
-  "destinationStopCategory": {
-    "type": "Property",
-    "value": "Airport"
-  },
-  "transactionVehicleNum": {
-    "type": "Property",
-    "value": 23
-  },
-  "fareForAdult": {
-    "type": "Property",
-    "value": 4.5
-  },
-  "observationDateTime": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "1988-12-24T07:06:19Z"
-    }
-  },
-  "equipmentCompanyCode": {
-    "type": "Property",
-    "value": "103"
-  },
-  "transactionTypeDescription": {
-    "type": "Property",
-    "value": "Regular Fare."
-  },
-  "exitAreaCode": {
-    "type": "Property",
-    "value": "city-bus-service"
-  },
-  "equipmentType": {
-    "type": "Property",
-    "value": "Entry sensor"
-  },
-  "equipmentStopId": {
-    "type": "Property",
-    "value": "BRTS-Sen-23"
-  },
-  "originStopId": {
-    "type": "Property",
-    "value": "9"
-  },
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld"
-  ]
+    "id": "urn:ngsi-ld:FareCollectionSystem:id:RJSB:34513580",
+    "type": "FareCollectionSystem",
+    "address": {
+        "type": "Property",
+        "value": {
+            "streetAddress": "Av. Nicolas II",
+            "addressLocality": "Nice",
+            "addressRegion": "Provenza-Alpes-Costa Azul",
+            "addressCountry": "France",
+            "postalCode": "06000",
+            "postOfficeBoxNumber": ""
+        }
+    },
+    "alternateName": {
+        "type": "Property",
+        "value": ""
+    },
+    "areaServed": {
+        "type": "Property",
+        "value": "Nice"
+    },
+    "cardId": {
+        "type": "Property",
+        "value": "987201910"
+    },
+    "currentTripCount": {
+        "type": "Property",
+        "value": 12
+    },
+    "dataProvider": {
+        "type": "Property",
+        "value": ""
+    },
+    "dateCreated": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2020-11-02T06:16:42Z"
+        }
+    },
+    "dateModified": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2020-12-27T15:13:17Z"
+        }
+    },
+    "description": {
+        "type": "Property",
+        "value": "Fare collection system Nize for regional routes"
+    },
+    "destinationStopCategory": {
+        "type": "Property",
+        "value": "Airport"
+    },
+    "destinationStopId": {
+        "type": "Property",
+        "value": "Nice-Airport"
+    },
+    "destinationStopName": {
+        "type": "Property",
+        "value": "Hour risk somebody deal system discussion other plan. Stage the film occur."
+    },
+    "direction_id": {
+        "type": "Property",
+        "value": 1
+    },
+    "entryAreaCode": {
+        "type": "Property",
+        "value": "city-bus-service"
+    },
+    "equipmentCompanyCode": {
+        "type": "Property",
+        "value": "103"
+    },
+    "equipmentId": {
+        "type": "Property",
+        "value": "S23"
+    },
+    "equipmentSequenceNumber": {
+        "type": "Property",
+        "value": 2
+    },
+    "equipmentStopId": {
+        "type": "Property",
+        "value": "BRTS-Sen-23"
+    },
+    "equipmentType": {
+        "type": "Property",
+        "value": "Entry sensor"
+    },
+    "equipmentTypeCode": {
+        "type": "Property",
+        "value": "42"
+    },
+    "exitAreaCode": {
+        "type": "Property",
+        "value": "city-bus-service"
+    },
+    "fareForAdult": {
+        "type": "Property",
+        "value": 4.5
+    },
+    "fareForChild": {
+        "type": "Property",
+        "value": 3.6
+    },
+    "location": {
+        "type": "Property",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                43.7034,
+                7.2663
+            ]
+        }
+    },
+    "name": {
+        "type": "Property",
+        "value": "Fare collection system Nize"
+    },
+    "observationDateTime": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "1988-12-24T07:06:19Z"
+        }
+    },
+    "occupancyLevel": {
+        "type": "Property",
+        "value": "Green"
+    },
+    "originDestinationCode": {
+        "type": "Property",
+        "value": "23"
+    },
+    "originStopCategory": {
+        "type": "Property",
+        "value": "Bus stop"
+    },
+    "originStopId": {
+        "type": "Property",
+        "value": "9"
+    },
+    "originStopName": {
+        "type": "Property",
+        "value": "Vauban"
+    },
+    "owner": {
+        "type": "Property",
+        "value": [
+            "urn:ngsi-ld:FareCollectionSystem:items:XMXR:79897582",
+            "urn:ngsi-ld:FareCollectionSystem:items:SKAX:98192518"
+        ]
+    },
+    "passengerCount": {
+        "type": "Property",
+        "value": 6
+    },
+    "route_id": {
+        "type": "Property",
+        "value": "4"
+    },
+    "seeAlso": {
+        "type": "Property",
+        "value": [
+            "urn:ngsi-ld:FareCollectionSystem:items:VSVS:72352464",
+            "urn:ngsi-ld:FareCollectionSystem:items:VMFR:36424993"
+        ]
+    },
+    "shiftOfOperation": {
+        "type": "Property",
+        "value": "2"
+    },
+    "source": {
+        "type": "Property",
+        "value": ""
+    },
+    "stage": {
+        "type": "Property",
+        "value": 4
+    },
+    "ticketTypeCode": {
+        "type": "Property",
+        "value": "Normal"
+    },
+    "transactionDateTime": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2021-08-20T15:45:22Z"
+        }
+    },
+    "transactionType": {
+        "type": "Property",
+        "value": "Issue"
+    },
+    "transactionTypeDescription": {
+        "type": "Property",
+        "value": "Regular Fare."
+    },
+    "transactionTypeId": {
+        "type": "Property",
+        "value": "2401"
+    },
+    "transactionVehicleNum": {
+        "type": "Property",
+        "value": 23
+    },
+    "travelDistance": {
+        "type": "Property",
+        "value": 7.5
+    },
+    "trip_id": {
+        "type": "Property",
+        "value": "4A"
+    },
+    "vehicle_label": {
+        "type": "Property",
+        "value": "5821JZS"
+    },
+    "@context": []
 }
-
-
