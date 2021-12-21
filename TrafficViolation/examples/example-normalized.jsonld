@@ -1,42 +1,40 @@
 {
-  "id": "ngsi-ld:Trafficviolation:234R:0212",
-  "type": "TrafficViolation",
-  "amountCollected": {
-    "type": "Property",
-    "value": 10500
-  },
-  "mediaURL": {
-    "type": "Property",
-    "value": "https://www.google.com/"
-  },
-  "equipmentId": {
-    "type": "Property",
-    "value": "4"
-  },
-  "equipmentType": {
-    "type": "Property",
-    "value": "Camera"
-  },
-  "titleCode": {
-    "type": "Property",
-    "value": "11"
-  },
-  "reportId": {
-    "type": "Property",
-    "value": "182"
-  },
-  "observationDateTime": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2021-03-11T15:51:02+05:30"
-    }
-  },
-  "paymentStatus": {
-    "type": "Property",
-    "value": "Paid"
-  },
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld"
-  ]
+    "id": "ngsi-ld:Trafficviolation:234R:0212",
+    "type": "TrafficViolation",
+    "amountCollected": {
+        "type": "Property",
+        "value": 10500
+    },
+    "equipmentId": {
+        "type": "Property",
+        "value": "4"
+    },
+    "equipmentType": {
+        "type": "Property",
+        "value": "Camera"
+    },
+    "mediaURL": {
+        "type": "Property",
+        "value": "https://www.google.com/"
+    },
+    "observationDateTime": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2021-03-11T15:51:02+05:30"
+        }
+    },
+    "paymentStatus": {
+        "type": "Property",
+        "value": "Paid"
+    },
+    "reportId": {
+        "type": "Property",
+        "value": "182"
+    },
+    "titleCode": {
+        "type": "Property",
+        "value": "11"
+    },
+    "@context": []
 }
