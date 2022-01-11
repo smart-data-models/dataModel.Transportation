@@ -4,7 +4,7 @@
 	"modelTags": "",
 	"$id": "https://smart-data-models.github.io/dataModel.Transportation/RoadSegment/schema.json",
 	"title": "Smart Data Models - Transportation / Road Segment",
-	"description": "This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road.",
+	"description": "This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road. ",
 	"type": "object",
 	"allOf": [
 		{
