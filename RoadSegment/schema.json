@@ -144,7 +144,7 @@
 				},
 				"status": {
 					"type": "string",
-					"description": "Specific driving conditions on the roadsegment. Use statusDescription for additional information. Enum: ‘open, closed, limited’.  `open`: the roadsegment can be used in full intended capacity, `closed`: no traffic is possible, e.g. due to roadworks, an open bridge or lock, or any other event preventing traffic. `limited`: traffic is possible, but not in the full capacity.",
+					"description": "Property. Specific driving conditions on the roadsegment. Use statusDescription for additional information. Enum: ‘open, closed, limited’.  `open`: the roadsegment can be used in full intended capacity, `closed`: no traffic is possible, e.g. due to roadworks, an open bridge or lock, or any other event preventing traffic. `limited`: traffic is possible, but not in the full capacity.",
 					"items": {
 						"type": "string",
 						"enum": [
@@ -156,7 +156,7 @@
 				},
 				"statusDescription": {
 					"type": "string",
-					"description": "Additional information to the status attribute."
+					"description": "Property. Additional information to the status attribute."
 				}
 			}
 		}
