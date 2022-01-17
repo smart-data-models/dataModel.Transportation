@@ -1,5 +1,5 @@
 RoadSegment:
-  description: 'This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road.'
+  description: 'This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road. '
   properties:
     address:
       description: 'The mailing address'
@@ -402,6 +402,22 @@ RoadSegment:
       oneOf: *roadsegment_-_properties_-_location_-_oneof
       x-ngsi:
         type: Geoproperty
+    status:
+      description: 'Specific driving conditions on the roadsegment. Use statusDescription for additional information. Enum: ‘open, closed, limited’.  `open`: the roadsegment can be used in full intended capacity, `closed`: no traffic is possible, e.g. due to roadworks, an open bridge or lock, or any other event preventing traffic. `limited`: traffic is possible, but not in the full capacity.'
+      items:
+        enum:
+          - open
+          - closed
+          - limited
+        type: string
+      type: string
+      x-ngsi:
+        type: Property
+    statusDescription:
+      description: 'Additional information to the status attribute.'
+      type: string
+      x-ngsi:
+        type: Property
     totalLaneNumber:
       description: 'Total number of lanes offered by this road segment'
       minimum: 1
@@ -438,4 +454,4 @@ RoadSegment:
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/RoadSegment/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/RoadSegment/schema.json
   x-model-tags: ""
-  x-version: 0.2.0
+  x-version: 0.3.0
