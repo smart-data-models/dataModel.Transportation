@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/schema#",
-	"$schemaVersion": "0.2.0",
+	"$schemaVersion": "0.3.0",
 	"modelTags": "",
 	"$id": "https://smart-data-models.github.io/dataModel.Transportation/RoadSegment/schema.json",
 	"title": "Smart Data Models - Transportation / Road Segment",
