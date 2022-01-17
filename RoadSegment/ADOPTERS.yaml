@@ -1,10 +1,10 @@
 description: This is a compilation list of the current adopters of the data model RoadSegment of the Subject dataModel.Transportation.  All fields are non mandatory. More info at https://smart-data-models.github.io/data-models/templates/dataModel/CURRENT_ADOPTERS.yaml
 currentAdopters:
 -
- adopter: 
- description: 
- mail: 
- organization: 
+ adopter: Gert Van de Wouwer
+ description: Extra attributes status and statusDescription to allow modelling temporary road closures.
+ mail: Gert.VandeWouwer@gmail.com
+ organization: Digipolis Antwerpen
  project: 
- comments: 
- startDate: 
+ comments: Can be used to model the effect of bridge or lock openings on traffic that runs over them. 
+ startDate: '2022-01-15'

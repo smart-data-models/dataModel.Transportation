@@ -1,10 +1,10 @@
 description: This is a compilation list of the current adopters of the data model Vehicle of the Subject dataModel.Transportation.  All fields are non mandatory. More info at https://smart-data-models.github.io/data-models/templates/dataModel/CURRENT_ADOPTERS.yaml
 currentAdopters:
 -
- adopter: 
- description: 
- mail: 
- organization: 
+ adopter: Road closure information for the Antwerp fire brigade.
+ description: By inspecting the status and statusDescription attributes, one can determine if a particular roadSegment is available for regular traffic. Due to events like bridges or locks that open for ships, the road may be temporarely closed and traffic is forced to wait or take a detour. 
+ mail: gert.vandewouwer@digipolis.be
+ organization: Digipolis Antwerpen
  project: 
- comments: 
- startDate: 
+ comments: The added attributes may also be used for other events that temporarely limit of block traffic on a roadSegment.
+ startDate: 2022-01-15

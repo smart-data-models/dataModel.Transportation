@@ -1,101 +1,66 @@
 {
-    "id": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-osm-24702186",
-    "type": "RoadSegment",
-    "allowedVehicleType": {
-        "type": "Property",
-        "value": [
-            "car",
-            "bus",
-            "lorry",
-            "trailer",
-            "tanker",
-            "van",
-            "caravan"
-        ]
-    },
-    "category": {
-        "type": "Property",
-        "value": [
-            "oneway"
-        ]
-    },
-    "endPoint": {
-        "type": "Property",
-        "value": {
-            "type": "Point",
-            "coordinates": [
-                -4.55167335377909,
-                41.8570461783071
-            ]
-        }
-    },
-    "laneUsage": {
-        "type": "Property",
-        "value": [
-            "forward",
-            "forward"
-        ]
-    },
-    "location": {
-        "type": "GeoProperty",
-        "value": {
-            "type": "LineString",
-            "coordinates": [
-                [
-                    -4.7299180606009,
-                    41.6844918725019
-                ],
-                [
-                    -4.72855890957602,
-                    41.6860596957855
-                ],
-                [
-                    -4.5520357341647,
-                    41.8569278186523
-                ],
-                [
-                    -4.55167335377909,
-                    41.8570461783071
-                ]
-            ]
-        }
-    },
-    "maximumAllowedSpeed": {
-        "type": "Property",
-        "value": 120
-    },
-    "minimumAllowedSpeed": {
-        "type": "Property",
-        "value": 60
-    },
-    "name": {
-        "type": "Property",
-        "value": "Valladolid-Due\u00f1as"
-    },
-    "refRoad": {
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:Road:Spain-Road-A62"
-    },
-    "source": {
-        "type": "Property",
-        "value": "http://wwww.openstreetmap.org"
-    },
-    "startPoint": {
-        "type": "Property",
-        "value": {
-            "type": "Point",
-            "coordinates": [
-                -4.7299180606009,
-                41.6844918725019
-            ]
-        }
-    },
-    "totalLaneNumber": {
-        "type": "Property",
-        "value": 2
-    },
-    "@context": [
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
-    ]
+	"id": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-osm-24702186",
+	"type": "RoadSegment",
+	"allowedVehicleType": [
+		"car",
+		"bus",
+		"lorry",
+		"trailer",
+		"tanker",
+		"van",
+		"caravan"
+	],
+	"category": [
+		"oneway"
+	],
+	"endPoint": {
+		"coordinates": [
+			-4.55167335377909,
+			41.8570461783071
+		],
+		"type": "Point"
+	},
+	"laneUsage": [
+		"forward",
+		"forward"
+	],
+	"location": {
+		"coordinates": [
+			[
+				-4.7299180606009,
+				41.6844918725019
+			],
+			[
+				-4.72855890957602,
+				41.6860596957855
+			],
+			[
+				-4.5520357341647,
+				41.8569278186523
+			],
+			[
+				-4.55167335377909,
+				41.8570461783071
+			]
+		],
+		"type": "LineString"
+	},
+	"maximumAllowedSpeed": 120,
+	"minimumAllowedSpeed": 60,
+	"name": "Valladolid-Dueñas",
+	"refRoad": "urn:ngsi-ld:Road:Spain-Road-A62",
+	"source": "http://wwww.openstreetmap.org",
+	"startPoint": {
+		"coordinates": [
+			-4.7299180606009,
+			41.6844918725019
+		],
+		"type": "Point"
+	},
+	"totalLaneNumber": 2,
+	"status": "open",
+	"statusDescription": "Bridge state = DOWN",
+	"@context": [
+		"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+	]
 }
