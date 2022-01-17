@@ -3,7 +3,7 @@
     "@type": "Interface",
     "@context": "dtmi:dtdl:context;2",
     "comment": "Smart Data Models - Transportation / Road Segment adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/RoadSegment/schema.json",
-    "description": "This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road.",
+    "description": "This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road. ",
     "displayName": "RoadSegment",
     "contents": [
         {
@@ -151,6 +151,22 @@
             "@type": "Property",
             "schema": "long",
             "comment": "The kilometer number (measured from the road's start point) where this road segment starts. "
+        },
+        {
+            "name": "status",
+            "writable": true,
+            "displayName": "status",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Specific driving conditions on the roadsegment. Use statusDescription for additional information. Enum: \u2018open, closed, limited\u2019.  `open`: the roadsegment can be used in full intended capacity, `closed`: no traffic is possible, e.g. due to roadworks, an open bridge or lock, or any other event preventing traffic. `limited`: traffic is possible, but not in the full capacity."
+        },
+        {
+            "name": "statusDescription",
+            "writable": true,
+            "displayName": "statusDescription",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Additional information to the status attribute."
         },
         {
             "name": "totalLaneNumber",
