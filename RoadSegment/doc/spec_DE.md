@@ -2,11 +2,11 @@ Entität: RoadSegment
 ====================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Transportation/blob/master/RoadSegment/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **Diese Einheit enthält eine harmonisierte geografische und kontextbezogene Beschreibung eines Straßenabschnitts. Eine Sammlung von Straßensegmenten wird zur Beschreibung einer Straße verwendet.**  
+Globale Beschreibung: **Diese Einheit enthält eine harmonisierte geografische und kontextbezogene Beschreibung eines Straßenabschnitts. Eine Sammlung von Straßenabschnitten wird zur Beschreibung einer Straße verwendet. **  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `allowedVehicleType`: Fahrzeugtyp(en), der/die für die Durchfahrt durch diesen Straßenabschnitt zugelassen ist/sind. Enum:'agriculturalVehicle, bicycle, bus, car, caravan, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, trailer, van, anyVehicle'. Erlaubte Werte: Die folgenden Werte, definiert durch _VehicleTypeEnum_, [DATEX 2 Version 2.3](http://d2docs.ndwcloud.nu/):  - `alternateName`: Ein alternativer Name für diesen Artikel  - `annotations`: Anmerkungen zum Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `category`: Ermöglicht die Übermittlung zusätzlicher Merkmale eines Straßenabschnitts. Enum:'Einbahnstraße, Mautstraße, Verbindungsstraße'.  Einbahnstraße": Gibt an, ob der Straßenabschnitt nur in eine Richtung befahren werden kann. Wenn nicht vorhanden, bedeutet dies, dass das Straßensegment in beide Richtungen (vorwärts und rückwärts) benutzt werden kann. Siehe auch [http://wiki.openstreetmap.org/wiki/Key:oneway](http://wiki.openstreetmap.org/wiki/Key:oneway). `toll` : Gibt an, ob für den Straßenabschnitt Mautgebühren erhoben werden. Link": Gibt an, ob es sich bei diesem Straßenabschnitt um einen Hilfsabschnitt für die Ausfahrt oder Einfahrt auf eine Straße handelt. Siehe [https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link). Jeder andere Wert, der für eine Anwendung von Bedeutung ist.  - `color`: Die Farbe des Produkts  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `endKilometer`: Die Kilometernummer (gemessen vom Anfangspunkt der Straße), an der dieser Straßenabschnitt endet.  - `endPoint`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `id`: Eindeutiger Bezeichner der Entität  - `image`: Ein Bild des Artikels  - `laneUsage`: Dieses Attribut kann zur Übermittlung spezifischer Parameter verwendet werden, die jeden Fahrstreifen beschreiben. Es muss eine Zeichenkette pro Fahrspur des Straßenabschnitts enthalten. Das Element 0 des Arrays muss die Informationen für Fahrspur 1 enthalten usw. Das Format der angegebenen Zeichenfolge muss sein: <Spur_Richtung>, <Spur_minimale_erlaubteGeschwindigkeit>, <Spur_maximale_erlaubteGeschwindigkeit>, <Spur_maximale_erlaubteHöhe>, <Spur_maximales_erlaubtesGewicht>. <lane_direction> ist eine Textzeichenfolge mit den folgenden zulässigen Werten: `forward`. Die Fahrspur wird derzeit in der Richtung "vorwärts" verwendet. Rückwärts". Die Fahrspur wird gegenwärtig in der Richtung "rückwärts" benutzt. Der einzige obligatorische Parameter ist `lane_direction`. Wird er nicht angegeben, kann davon ausgegangen werden, dass die übrigen Parameter den auf Entitätsebene angegebenen entsprechen.  - `length`: Gesamtlänge dieses Straßenabschnitts in Kilometern  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `maximumAllowedHeight`: Maximal zulässige Höhe für Fahrzeuge, die diesen Straßenabschnitt passieren  - `maximumAllowedSpeed`: Zulässige Höchstgeschwindigkeit beim Befahren dieses Straßenabschnitts. Für bestimmte Fahrzeugtypen (Lkw, Wohnwagen usw.) können strengere Grenzwerte gelten.  - `maximumAllowedWeight`: Zulässiges Höchstgewicht für Fahrzeuge, die diesen Straßenabschnitt passieren  - `minimumAllowedSpeed`: Zulässige Mindestgeschwindigkeit beim Befahren dieses Straßenabschnitts  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `refRoad`: Straße, zu der dieser Straßenabschnitt gehört.  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `startKilometer`: Die Kilometernummer (gemessen vom Anfangspunkt der Straße), an der dieser Straßenabschnitt beginnt.  - `startPoint`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `totalLaneNumber`: Gesamtzahl der Fahrspuren in diesem Straßenabschnitt  - `type`: NGSI-Entitätstyp. Es muss RoadSegment sein  - `width`: Die Breite des Straßenabschnitts.    
+- `address`: Die Postanschrift  - `allowedVehicleType`: Fahrzeugtyp(en), der/die für die Durchfahrt durch diesen Straßenabschnitt zugelassen ist/sind. Enum:'agriculturalVehicle, bicycle, bus, car, caravan, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, trailer, van, anyVehicle'. Erlaubte Werte: Die folgenden Werte, definiert durch _VehicleTypeEnum_, [DATEX 2 Version 2.3](http://d2docs.ndwcloud.nu/):  - `alternateName`: Ein alternativer Name für diesen Artikel  - `annotations`: Anmerkungen zum Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `category`: Ermöglicht die Übermittlung zusätzlicher Merkmale eines Straßenabschnitts. Enum:'Einbahnstraße, Mautstraße, Verbindungsstraße'.  Einbahnstraße": Gibt an, ob der Straßenabschnitt nur in eine Richtung befahren werden kann. Wenn nicht vorhanden, bedeutet dies, dass das Straßensegment in beide Richtungen (vorwärts und rückwärts) benutzt werden kann. Siehe auch [http://wiki.openstreetmap.org/wiki/Key:oneway](http://wiki.openstreetmap.org/wiki/Key:oneway). `toll` : Gibt an, ob für den Straßenabschnitt Mautgebühren erhoben werden. Link": Gibt an, ob es sich bei diesem Straßenabschnitt um einen Hilfsabschnitt für die Ausfahrt oder Einfahrt auf eine Straße handelt. Siehe [https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link). Jeder andere Wert, der für eine Anwendung von Bedeutung ist.  - `color`: Die Farbe des Produkts  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `endKilometer`: Die Kilometernummer (gemessen vom Anfangspunkt der Straße), an der dieser Straßenabschnitt endet.  - `endPoint`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `id`: Eindeutiger Bezeichner der Entität  - `image`: Ein Bild des Artikels  - `laneUsage`: Dieses Attribut kann zur Übermittlung spezifischer Parameter verwendet werden, die jeden Fahrstreifen beschreiben. Es muss eine Zeichenkette pro Fahrspur des Straßenabschnitts enthalten. Das Element 0 des Arrays muss die Informationen für Fahrspur 1 enthalten usw. Das Format der angegebenen Zeichenfolge muss sein: <Spur_Richtung>, <Spur_minimale_erlaubteGeschwindigkeit>, <Spur_maximale_erlaubteGeschwindigkeit>, <Spur_maximale_erlaubteHöhe>, <Spur_maximales_erlaubtesGewicht>. <lane_direction> ist eine Textzeichenfolge mit den folgenden zulässigen Werten: `forward`. Die Fahrspur wird derzeit in der Richtung "vorwärts" verwendet. Rückwärts". Die Fahrspur wird gegenwärtig in der Richtung "rückwärts" benutzt. Der einzige obligatorische Parameter ist `lane_direction`. Wird er nicht angegeben, kann davon ausgegangen werden, dass die übrigen Parameter den auf Entitätsebene angegebenen entsprechen.  - `length`: Gesamtlänge dieses Straßenabschnitts in Kilometern  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `maximumAllowedHeight`: Maximal zulässige Höhe für Fahrzeuge, die diesen Straßenabschnitt passieren  - `maximumAllowedSpeed`: Zulässige Höchstgeschwindigkeit beim Befahren dieses Straßenabschnitts. Für bestimmte Fahrzeugtypen (Lkw, Wohnwagen usw.) können strengere Grenzwerte gelten.  - `maximumAllowedWeight`: Zulässiges Höchstgewicht für Fahrzeuge, die diesen Straßenabschnitt passieren  - `minimumAllowedSpeed`: Zulässige Mindestgeschwindigkeit beim Befahren dieses Straßenabschnitts  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `refRoad`: Straße, zu der dieser Straßenabschnitt gehört.  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `startKilometer`: Die Kilometernummer (gemessen vom Anfangspunkt der Straße), an der dieser Straßenabschnitt beginnt.  - `startPoint`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `status`: Spezifische Fahrbedingungen auf dem Straßenabschnitt. Verwenden Sie statusDescription für zusätzliche Informationen. Enum: "offen, geschlossen, eingeschränkt".  open": Das Straßensegment kann in vollem Umfang genutzt werden, "closed": Es ist kein Verkehr möglich, z. B. aufgrund von Baustellen, einer offenen Brücke oder Schleuse oder eines anderen Ereignisses, das den Verkehr verhindert. eingeschränkt": Verkehr ist möglich, aber nicht in der vollen Kapazität.  - `statusDescription`: Zusätzliche Informationen zum Attribut status.  - `totalLaneNumber`: Gesamtzahl der Fahrspuren in diesem Straßenabschnitt  - `type`: NGSI-Entitätstyp. Es muss RoadSegment sein  - `width`: Die Breite des Straßenabschnitts.    
 Erforderliche Eigenschaften  
 - `allowedVehicleType`  - `endPoint`  - `id`  - `name`  - `refRoad`  - `startPoint`  - `type`    
 Straßenabschnitte können mehrere Fahrspuren umfassen. Dieses Datenmodell ermöglicht es, Straßenabschnitte zu übermitteln, die aus heterogenen Fahrspuren bestehen (unterschiedlich in ihrer Nutzung, Geschwindigkeit, Höhe usw.). Die Fahrspuren werden durch ganzzahlige Zahlen zwischen 1 und n identifiziert, wobei die Nummer 1 die Fahrspur auf der rechten Seite ist, wenn man vorwärts fährt. Die Vorwärtsrichtung ist die Richtung, die durch den Vektor angegeben wird, der vom Startpunkt des Segments zum Endpunkt des Segments führt. Dies ist die gleiche Konvention wie die von OpenStreetMap verwendete. Diese Entität ist in erster Linie mit den vertikalen Segmenten Automotive und Smart City und den damit verbundenen IoT-Anwendungen verbunden. Dieses Datenmodell wurde in Zusammenarbeit mit Mobilfunkbetreibern und der GSMA entwickelt.  
@@ -15,7 +15,7 @@ Entität: RoadSegment
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 RoadSegment:    
-  description: 'This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road.'    
+  description: 'This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road. '    
   properties:    
     address:    
       description: 'The mailing address'    
@@ -418,6 +418,22 @@ RoadSegment:
       oneOf: *roadsegment_-_properties_-_location_-_oneof    
       x-ngsi:    
         type: Geoproperty    
+    status:    
+      description: 'Specific driving conditions on the roadsegment. Use statusDescription for additional information. Enum: ‘open, closed, limited’.  `open`: the roadsegment can be used in full intended capacity, `closed`: no traffic is possible, e.g. due to roadworks, an open bridge or lock, or any other event preventing traffic. `limited`: traffic is possible, but not in the full capacity.'    
+      items:    
+        enum:    
+          - open    
+          - closed    
+          - limited    
+        type: string    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    statusDescription:    
+      description: 'Additional information to the status attribute.'    
+      type: string    
+      x-ngsi:    
+        type: Property    
     totalLaneNumber:    
       description: 'Total number of lanes offered by this road segment'    
       minimum: 1    
@@ -454,7 +470,7 @@ RoadSegment:
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/RoadSegment/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/RoadSegment/schema.json    
   x-model-tags: ""    
-  x-version: 0.2.0    
+  x-version: 0.3.0    
 ```  
 </details>    
 Die Eigenschaften `laneUsage` und diejenigen, die die maximal zulässigen Parameter angeben, können dynamisch sein, z.B. kann eine Fahrbahnrichtung vorübergehend geändert werden, um die Verkehrsbedingungen zu verbessern.  
@@ -463,276 +479,347 @@ RoadSegment:
 Hier ist ein Beispiel für ein RoadSegment im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
-  "id": "Spain-RoadSegment-A62-osm-24702186",  
-  "type": "RoadSegment",  
-  "name": "Valladolid-Dueñas",  
-  "category": ["oneway"],  
-  "refRoad": "Spain-Road-A62",  
-  "totalLaneNumber": 2,  
-  "maximumAllowedSpeed": 120,  
-  "minimumAllowedSpeed": 60,  
-  "startPoint": {  
-    "type": "Point",  
-    "coordinates": [-4.7299180606009, 41.6844918725019]  
-  },  
-  "endPoint": {  
-    "type": "Point",  
-    "coordinates": [-4.55167335377909, 41.8570461783071]  
-  },  
-  "allowedVehicleType": [  
-    "car",  
-    "bus",  
-    "lorry",  
-    "trailer",  
-    "tanker",  
-    "van",  
-    "caravan"  
-  ],  
-  "location": {  
-    "type": "LineString",  
-    "coordinates": [  
-      [-4.7299180606009, 41.6844918725019],  
-      [-4.72855890957602, 41.6860596957855],  
-      [-4.5520357341647, 41.8569278186523],  
-      [-4.55167335377909, 41.8570461783071]  
-    ]  
-  },  
-  "laneUsage": ["forward", "forward"],  
-  "source": "http://wwww.openstreetmap.org"  
+	"id": "Spain-RoadSegment-A62-osm-24702186",  
+	"type": "RoadSegment",  
+	"name": "Valladolid-Dueñas",  
+	"category": [  
+		"oneway"  
+	],  
+	"refRoad": "Spain-Road-A62",  
+	"totalLaneNumber": 2,  
+	"maximumAllowedSpeed": 120,  
+	"minimumAllowedSpeed": 60,  
+	"startPoint": {  
+		"type": "Point",  
+		"coordinates": [  
+			-4.7299180606009,  
+			41.6844918725019  
+		]  
+	},  
+	"endPoint": {  
+		"type": "Point",  
+		"coordinates": [  
+			-4.55167335377909,  
+			41.8570461783071  
+		]  
+	},  
+	"allowedVehicleType": [  
+		"car",  
+		"bus",  
+		"lorry",  
+		"trailer",  
+		"tanker",  
+		"van",  
+		"caravan"  
+	],  
+	"location": {  
+		"type": "LineString",  
+		"coordinates": [  
+			[  
+				-4.7299180606009,  
+				41.6844918725019  
+			],  
+			[  
+				-4.72855890957602,  
+				41.6860596957855  
+			],  
+			[  
+				-4.5520357341647,  
+				41.8569278186523  
+			],  
+			[  
+				-4.55167335377909,  
+				41.8570461783071  
+			]  
+		]  
+	},  
+	"laneUsage": [  
+		"forward",  
+		"forward"  
+	],  
+	"source": "http://wwww.openstreetmap.org",  
+	"status": "open",  
+	"statusDescription": "Bridge state = DOWN"  
 }  
 ```  
 #### RoadSegment NGSI-v2 normalisiert Beispiel  
 Hier ist ein Beispiel für ein RoadSegment im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
-  "id": "Spain-RoadSegment-A62-osm-24702186",  
-  "type": "RoadSegment",  
-  "category": {  
-    "value": ["oneway"]  
-  },  
-  "endPoint": {  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [-4.55167335377909, 41.8570461783071]  
-    }  
-  },  
-  "name": {  
-    "value": "Valladolid-Due\u00f1as"  
-  },  
-  "startPoint": {  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [-4.7299180606009, 41.6844918725019]  
-    }  
-  },  
-  "allowedVehicleType": {  
-    "value": ["car", "bus", "lorry", "trailer", "tanker", "van", "caravan"]  
-  },  
-  "source": {  
-    "value": "http://wwww.openstreetmap.org"  
-  },  
-  "totalLaneNumber": {  
-    "value": 2  
-  },  
-  "location": {  
-    "type": "geo:json",  
-    "value": {  
-      "type": "LineString",  
-      "coordinates": [  
-        [-4.7299180606009, 41.6844918725019],  
-        [-4.72855890957602, 41.6860596957855],  
-        [-4.5520357341647, 41.8569278186523],  
-        [-4.55167335377909, 41.8570461783071]  
-      ]  
-    }  
-  },  
-  "minimumAllowedSpeed": {  
-    "value": 60  
-  },  
-  "refRoad": {  
-    "type": "Relationship",  
-    "value": "Spain-Road-A62"  
-  },  
-  "maximumAllowedSpeed": {  
-    "value": 120  
-  },  
-  "laneUsage": {  
-    "value": ["forward", "forward"]  
-  }  
+	"id": "Spain-RoadSegment-A62-osm-24702186",  
+	"type": "RoadSegment",  
+	"category": {  
+		"value": [  
+			"oneway"  
+		]  
+	},  
+	"endPoint": {  
+		"value": {  
+			"type": "Point",  
+			"coordinates": [  
+				-4.55167335377909,  
+				41.8570461783071  
+			]  
+		}  
+	},  
+	"name": {  
+		"value": "Valladolid-Dueñas"  
+	},  
+	"startPoint": {  
+		"value": {  
+			"type": "Point",  
+			"coordinates": [  
+				-4.7299180606009,  
+				41.6844918725019  
+			]  
+		}  
+	},  
+	"allowedVehicleType": {  
+		"value": [  
+			"car",  
+			"bus",  
+			"lorry",  
+			"trailer",  
+			"tanker",  
+			"van",  
+			"caravan"  
+		]  
+	},  
+	"source": {  
+		"value": "http://wwww.openstreetmap.org"  
+	},  
+	"totalLaneNumber": {  
+		"value": 2  
+	},  
+	"location": {  
+		"type": "geo:json",  
+		"value": {  
+			"type": "LineString",  
+			"coordinates": [  
+				[  
+					-4.7299180606009,  
+					41.6844918725019  
+				],  
+				[  
+					-4.72855890957602,  
+					41.6860596957855  
+				],  
+				[  
+					-4.5520357341647,  
+					41.8569278186523  
+				],  
+				[  
+					-4.55167335377909,  
+					41.8570461783071  
+				]  
+			]  
+		}  
+	},  
+	"minimumAllowedSpeed": {  
+		"value": 60  
+	},  
+	"refRoad": {  
+		"type": "Relationship",  
+		"value": "Spain-Road-A62"  
+	},  
+	"maximumAllowedSpeed": {  
+		"value": 120  
+	},  
+	"laneUsage": {  
+		"value": [  
+			"forward",  
+			"forward"  
+		]  
+	},  
+	"status": {  
+		"value": "open"  
+	},  
+	"statusDescription": {  
+		"value": "Bridge state = DOWN"  
+	}  
 }  
 ```  
 #### RoadSegment NGSI-LD Schlüsselwerte Beispiel  
 Hier ist ein Beispiel für ein RoadSegment im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-osm-24702186",  
-  "type": "RoadSegment",  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "oneway"  
-    ]  
-  },  
-  "endPoint": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -4.55167335377909,  
-        41.8570461783071  
-      ]  
-    }  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Valladolid-Due\u00f1as"  
-  },  
-  "startPoint": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -4.7299180606009,  
-        41.6844918725019  
-      ]  
-    }  
-  },  
-  "allowedVehicleType": {  
-    "type": "Property",  
-    "value": [  
-      "car",  
-      "bus",  
-      "lorry",  
-      "trailer",  
-      "tanker",  
-      "van",  
-      "caravan"  
-    ]  
-  },  
-  "source": {  
-    "type": "Property",  
-    "value": "http://wwww.openstreetmap.org"  
-  },  
-  "totalLaneNumber": {  
-    "type": "Property",  
-    "value": 2  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "LineString",  
-      "coordinates": [  
-        [  
-          -4.7299180606009,  
-          41.6844918725019  
-        ],  
-        [  
-          -4.72855890957602,  
-          41.6860596957855  
-        ],  
-        [  
-          -4.5520357341647,  
-          41.8569278186523  
-        ],  
-        [  
-          -4.55167335377909,  
-          41.8570461783071  
-        ]  
-      ]  
-    }  
-  },  
-  "minimumAllowedSpeed": {  
-    "type": "Property",  
-    "value": 60  
-  },  
-  "refRoad": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Road:Spain-Road-A62"  
-  },  
-  "maximumAllowedSpeed": {  
-    "type": "Property",  
-    "value": 120  
-  },  
-  "laneUsage": {  
-    "type": "Property",  
-    "value": [  
-      "forward",  
-      "forward"  
-    ]  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+	"id": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-osm-24702186",  
+	"type": "RoadSegment",  
+	"allowedVehicleType": [  
+		"car",  
+		"bus",  
+		"lorry",  
+		"trailer",  
+		"tanker",  
+		"van",  
+		"caravan"  
+	],  
+	"category": [  
+		"oneway"  
+	],  
+	"endPoint": {  
+		"coordinates": [  
+			-4.55167335377909,  
+			41.8570461783071  
+		],  
+		"type": "Point"  
+	},  
+	"laneUsage": [  
+		"forward",  
+		"forward"  
+	],  
+	"location": {  
+		"coordinates": [  
+			[  
+				-4.7299180606009,  
+				41.6844918725019  
+			],  
+			[  
+				-4.72855890957602,  
+				41.6860596957855  
+			],  
+			[  
+				-4.5520357341647,  
+				41.8569278186523  
+			],  
+			[  
+				-4.55167335377909,  
+				41.8570461783071  
+			]  
+		],  
+		"type": "LineString"  
+	},  
+	"maximumAllowedSpeed": 120,  
+	"minimumAllowedSpeed": 60,  
+	"name": "Valladolid-DueÃ±as",  
+	"refRoad": "urn:ngsi-ld:Road:Spain-Road-A62",  
+	"source": "http://wwww.openstreetmap.org",  
+	"startPoint": {  
+		"coordinates": [  
+			-4.7299180606009,  
+			41.6844918725019  
+		],  
+		"type": "Point"  
+	},  
+	"totalLaneNumber": 2,  
+	"status": "open",  
+	"statusDescription": "Bridge state = DOWN",  
+	"@context": [  
+		"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+	]  
 }  
 ```  
 #### RoadSegment NGSI-LD normalisiert Beispiel  
 Hier ein Beispiel für ein RoadSegment im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "allowedVehicleType": [  
-    "car",  
-    "bus",  
-    "lorry",  
-    "trailer",  
-    "tanker",  
-    "van",  
-    "caravan"  
-  ],  
-  "category": [  
-    "oneway"  
-  ],  
-  "endPoint": {  
-    "coordinates": [  
-      -4.55167335377909,  
-      41.8570461783071  
-    ],  
-    "type": "Point"  
-  },  
-  "id": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-osm-24702186",  
-  "laneUsage": [  
-    "forward",  
-    "forward"  
-  ],  
-  "location": {  
-    "coordinates": [  
-      [  
-        -4.7299180606009,  
-        41.6844918725019  
-      ],  
-      [  
-        -4.72855890957602,  
-        41.6860596957855  
-      ],  
-      [  
-        -4.5520357341647,  
-        41.8569278186523  
-      ],  
-      [  
-        -4.55167335377909,  
-        41.8570461783071  
-      ]  
-    ],  
-    "type": "LineString"  
-  },  
-  "maximumAllowedSpeed": 120,  
-  "minimumAllowedSpeed": 60,  
-  "name": "Valladolid-Due\u00f1as",  
-  "refRoad": "urn:ngsi-ld:Road:Spain-Road-A62",  
-  "source": "http://wwww.openstreetmap.org",  
-  "startPoint": {  
-    "coordinates": [  
-      -4.7299180606009,  
-      41.6844918725019  
-    ],  
-    "type": "Point"  
-  },  
-  "totalLaneNumber": 2,  
-  "type": "RoadSegment"  
+	"id": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-osm-24702186",  
+	"type": "RoadSegment",  
+	"allowedVehicleType": {  
+		"type": "Property",  
+		"value": [  
+			"car",  
+			"bus",  
+			"lorry",  
+			"trailer",  
+			"tanker",  
+			"van",  
+			"caravan"  
+		]  
+	},  
+	"category": {  
+		"type": "Property",  
+		"value": [  
+			"oneway"  
+		]  
+	},  
+	"endPoint": {  
+		"type": "Property",  
+		"value": {  
+			"type": "Point",  
+			"coordinates": [  
+				-4.55167335377909,  
+				41.8570461783071  
+			]  
+		}  
+	},  
+	"laneUsage": {  
+		"type": "Property",  
+		"value": [  
+			"forward",  
+			"forward"  
+		]  
+	},  
+	"location": {  
+		"type": "GeoProperty",  
+		"value": {  
+			"type": "LineString",  
+			"coordinates": [  
+				[  
+					-4.7299180606009,  
+					41.6844918725019  
+				],  
+				[  
+					-4.72855890957602,  
+					41.6860596957855  
+				],  
+				[  
+					-4.5520357341647,  
+					41.8569278186523  
+				],  
+				[  
+					-4.55167335377909,  
+					41.8570461783071  
+				]  
+			]  
+		}  
+	},  
+	"maximumAllowedSpeed": {  
+		"type": "Property",  
+		"value": 120  
+	},  
+	"minimumAllowedSpeed": {  
+		"type": "Property",  
+		"value": 60  
+	},  
+	"name": {  
+		"type": "Property",  
+		"value": "Valladolid-DueÃ±as"  
+	},  
+	"refRoad": {  
+		"type": "Relationship",  
+		"object": "urn:ngsi-ld:Road:Spain-Road-A62"  
+	},  
+	"source": {  
+		"type": "Property",  
+		"value": "http://wwww.openstreetmap.org"  
+	},  
+	"startPoint": {  
+		"type": "Property",  
+		"value": {  
+			"type": "Point",  
+			"coordinates": [  
+				-4.7299180606009,  
+				41.6844918725019  
+			]  
+		}  
+	},  
+	"totalLaneNumber": {  
+		"type": "Property",  
+		"value": 2  
+	},  
+	"status": {  
+		"type": "Property",  
+		"value": "open"  
+	},  
+	"statusDescription": {  
+		"type": "Property",  
+		"value": "Bridge state = DOWN"  
+	},  
+	"@context": [  
+		"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+		"https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+	]  
 }  
 ```  
-Siehe [FAQ 10](https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht
+Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
