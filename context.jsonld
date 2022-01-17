@@ -228,6 +228,7 @@
         "stationName": "https://smartdatamodels.org/dataModel.Transportation/stationName",
         "stationType": "https://smartdatamodels.org/dataModel.Transportation/stationType",
         "status": "ngsi-ld:status",
+        "statusDescription": "https://smartdatamodels.org/dataModel.Transportation/statusDescription",
         "subwayImpacted": "https://smartdatamodels.org/dataModel.Transportation/subwayImpacted",
         "territorialArea": "https://smartdatamodels.org/dataModel.Transportation/territorialArea",
         "ticketTypeCode": "https://smartdatamodels.org/dataModel.Transportation/ticketTypeCode",
