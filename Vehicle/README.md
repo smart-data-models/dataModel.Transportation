@@ -1,4 +1,5 @@
-# Vehicle
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)
+# Vehicle
 Version: 0.2.0
 
 ## Description 
