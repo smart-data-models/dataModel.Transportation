@@ -6,8 +6,16 @@
     "length": 355,
     "name": "A-62",
     "refRoadSegment": [
-        "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-forwards",
-        "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-backwards"
+     {
+          type: "Relationship",
+          object: "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-forwards",
+          datasetId: "urn:ngsi-ld:Relationship:Spain-RoadSegment-A62-0-355-forwards"
+     },
+    {
+          type: "Relationship",
+          object: "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-backwards",
+          datasetId: "urn:ngsi-ld:Relationship:Spain-RoadSegment-A62-0-355-backwards"
+     }
     ],
     "responsible": "Ministerio de Fomento - Gobierno de Espa\u00f1a",
     "roadClass": "motorway",
