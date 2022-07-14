@@ -1,20 +1,58 @@
 Entity: CrowdFlowObserved  
-=========================  
-[Open License](https://github.com/smart-data-models//dataModel.Transportation/blob/master/CrowdFlowObserved/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Global description: **CrowdFlowObserved**  
+=========================
+  
 
-## List of properties  
+[Open License](https://github.com/smart-data-models//dataModel.Transportation/blob/master/CrowdFlowObserved/LICENSE.md)  
 
-- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `averageCrowdSpeed`: Average speed of the crowd transiting during the observation period  - `averageHeadwayTime`: Average headway time. Headway time is the time  
-    elapsed between two consecutive persons  - `congested`: Flags whether there was a crowd congestion during the observation period in the referred walkway. The absence of this attribute means no crowd congestion  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dateObserved`: The date and time of this observation in ISO8601 UTC format. It can be represented by an specific time instant or by an ISO8601 interval. As a workaround for the lack of support of Orion Context Broker for datetime intervals, it can be used two separate attributes: `dateObservedFrom`, `dateObservedTo`  - `dateObservedFrom`: Observation period start date and time. See `dateObserved`.  - `dateObservedTo`: Observation period end date and time. See `dateObserved`.  - `description`: A description of this item  - `direction`: Usual direction of travel in the walkway referred by this observation with respect to the city center. Enum:'inbound, outbound'  - `id`: Unique identifier of the entity  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `occupancy`: Fraction of the observation time where a person has been occupying the observed walkway  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `peopleCount`: Concerned road segment on which the observation has been made  - `refRoadSegment`: Concerned road segment on which the observation has been made  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type. It has to be CrowdFlowObserved    
-Required properties  
-- `dateObserved`  - `id`  - `type`    
-An observation related to the movement of people at a certain place and time.  
-## Data Model description of properties  
-Sorted alphabetically (click for details)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+
+Global description: **CrowdFlowObserved**  
+
+
+## List of properties  
+
+
+- `address`: The mailing address  
+- `alternateName`: An alternative name for this item  
+- `areaServed`: The geographic area where a service or offered item is provided  
+- `averageCrowdSpeed`: Average speed of the crowd transiting during the observation period  
+- `averageHeadwayTime`: Average headway time. Headway time is the time  
+    elapsed between two consecutive persons  
+- `congested`: Flags whether there was a crowd congestion during the observation period in the referred walkway. The absence of this attribute means no crowd congestion  
+- `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  
+- `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  
+- `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  
+- `dateObserved`: The date and time of this observation in ISO8601 UTC format. It can be represented by an specific time instant or by an ISO8601 interval. As a workaround for the lack of support of Orion Context Broker for datetime intervals, it can be used two separate attributes: `dateObservedFrom`, `dateObservedTo`  
+- `dateObservedFrom`: Observation period start date and time. See `dateObserved`.  
+- `dateObservedTo`: Observation period end date and time. See `dateObserved`.  
+- `description`: A description of this item  
+- `direction`: Usual direction of travel in the walkway referred by this observation with respect to the city center. Enum:'inbound, outbound'  
+- `id`: Unique identifier of the entity  
+- `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  
+- `name`: The name of this item.  
+- `occupancy`: Fraction of the observation time where a person has been occupying the observed walkway  
+- `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  
+- `peopleCount`: Total number of people detected during this observation  
+- `refRoadSegment`: Concerned road segment on which the observation has been made  
+- `seeAlso`: list of uri pointing to additional resources about the item  
+- `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  
+- `type`: NGSI Entity type. It has to be CrowdFlowObserved  
+  
+
+Required properties  
+- `dateObserved`  
+- `id`  
+- `type`  
+  
+
+An observation related to the movement of people at a certain place and time.  
+
+## Data Model description of properties  
+
+Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
-```yaml  
+
+```yaml  
 CrowdFlowObserved:    
   description: CrowdFlowObserved    
   properties:    
@@ -368,11 +406,16 @@ CrowdFlowObserved:
   type: object    
 ```  
 </details>    
-## Example payloads    
-#### CrowdFlowObserved NGSI-v2 key-values Example    
-Here is an example of a CrowdFlowObserved in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
-```json  
-{  
+
+## Example payloads    
+
+#### CrowdFlowObserved NGSI-v2 key-values Example    
+
+Here is an example of a CrowdFlowObserved in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+
+```json  
+
+{  
   "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
   "type": "CrowdFlowObserved",  
   "dateObserved": "2018-08-07T11:10:00/2018-08-07T11:15:00",  
@@ -392,10 +435,14 @@ CrowdFlowObserved:
   }  
 }  
 ```  
-#### CrowdFlowObserved NGSI-v2 normalized Example    
-Here is an example of a CrowdFlowObserved in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
-```json  
-{  
+
+#### CrowdFlowObserved NGSI-v2 normalized Example    
+
+Here is an example of a CrowdFlowObserved in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+
+```json  
+
+{  
   "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
   "type": "CrowdFlowObserved",  
   "dateObserved": {  
@@ -434,10 +481,14 @@ CrowdFlowObserved:
   }  
 }  
 ```  
-#### CrowdFlowObserved NGSI-LD key-values Example    
-Here is an example of a CrowdFlowObserved in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
-```json  
-{  
+
+#### CrowdFlowObserved NGSI-LD key-values Example    
+
+Here is an example of a CrowdFlowObserved in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+
+```json  
+
+{  
   "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
   "type": "CrowdFlowObserved",  
   "dateObserved": {  
@@ -500,10 +551,14 @@ CrowdFlowObserved:
   ]  
 }  
 ```  
-#### CrowdFlowObserved NGSI-LD normalized Example    
-Here is an example of a CrowdFlowObserved in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
-```json  
-{  
+
+#### CrowdFlowObserved NGSI-LD normalized Example    
+
+Here is an example of a CrowdFlowObserved in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+
+```json  
+
+{  
   "@context": [  
     "https://smartdatamodels.org/context.jsonld",  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
