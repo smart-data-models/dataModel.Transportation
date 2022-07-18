@@ -56,7 +56,7 @@
                 "peopleCount": {
                     "type": "integer",
                     "minimum": 0,
-                    "description": "Property. Concerned road segment on which the observation has been made. Model:'https://schema.org/Number'."
+                    "description": "Property. Total number of people detected during this observation."
                 },
                 "occupancy": {
                     "type": "number",
