@@ -1,13 +1,15 @@
-Entity: CrowdFlowObserved  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: CrowdFlowObserved  
 =========================  
 [Open License](https://github.com/smart-data-models//dataModel.Transportation/blob/master/CrowdFlowObserved/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **CrowdFlowObserved**  
+version: 0.0.2  
 
 ## List of properties  
 
 - `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `averageCrowdSpeed`: Average speed of the crowd transiting during the observation period  - `averageHeadwayTime`: Average headway time. Headway time is the time  
-    elapsed between two consecutive persons  - `congested`: Flags whether there was a crowd congestion during the observation period in the referred walkway. The absence of this attribute means no crowd congestion  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dateObserved`: The date and time of this observation in ISO8601 UTC format. It can be represented by an specific time instant or by an ISO8601 interval. As a workaround for the lack of support of Orion Context Broker for datetime intervals, it can be used two separate attributes: `dateObservedFrom`, `dateObservedTo`  - `dateObservedFrom`: Observation period start date and time. See `dateObserved`.  - `dateObservedTo`: Observation period end date and time. See `dateObserved`.  - `description`: A description of this item  - `direction`: Usual direction of travel in the walkway referred by this observation with respect to the city center. Enum:'inbound, outbound'  - `id`: Unique identifier of the entity  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `occupancy`: Fraction of the observation time where a person has been occupying the observed walkway  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `peopleCount`: Concerned road segment on which the observation has been made  - `refRoadSegment`: Concerned road segment on which the observation has been made  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type. It has to be CrowdFlowObserved    
+    elapsed between two consecutive persons  - `congested`: Flags whether there was a crowd congestion during the observation period in the referred walkway. The absence of this attribute means no crowd congestion  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dateObserved`: The date and time of this observation in ISO8601 UTC format. It can be represented by an specific time instant or by an ISO8601 interval. As a workaround for the lack of support of Orion Context Broker for datetime intervals, it can be used two separate attributes: `dateObservedFrom`, `dateObservedTo`  - `dateObservedFrom`: Observation period start date and time. See `dateObserved`.  - `dateObservedTo`: Observation period end date and time. See `dateObserved`.  - `description`: A description of this item  - `direction`: Usual direction of travel in the walkway referred by this observation with respect to the city center. Enum:'inbound, outbound'  - `id`: Unique identifier of the entity  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `occupancy`: Fraction of the observation time where a person has been occupying the observed walkway  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `peopleCount`: Total number of people detected during this observation.  - `refRoadSegment`: Concerned road segment on which the observation has been made  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type. It has to be CrowdFlowObserved    
 Required properties  
 - `dateObserved`  - `id`  - `type`    
 An observation related to the movement of people at a certain place and time.  
@@ -317,11 +319,10 @@ CrowdFlowObserved:
       x-ngsi:    
         type: Property    
     peopleCount:    
-      description: 'Concerned road segment on which the observation has been made'    
+      description: 'Total number of people detected during this observation.'    
       minimum: 0    
       type: integer    
       x-ngsi:    
-        model: https://schema.org/Number.    
         type: Property    
     refRoadSegment:    
       anyOf:    
@@ -366,6 +367,12 @@ CrowdFlowObserved:
     - type    
     - dateObserved    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/CrowdFlowObserved/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/CrowdFlowObserved/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## Example payloads    
@@ -438,108 +445,107 @@ CrowdFlowObserved:
 Here is an example of a CrowdFlowObserved in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
-  "type": "CrowdFlowObserved",  
-  "dateObserved": {  
-    "type": "Property",  
-    "value": "2018-08-07T11:10:00/2018-08-07T11:15:00"  
-  },  
-  "direction": {  
-    "type": "Property",  
-    "value": "inbound"  
-  },  
-  "dateObservedFrom": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2018-08-07T11:10:00Z"  
-    }  
-  },  
-  "peopleCount": {  
-    "type": "Property",  
-    "value": 100  
-  },  
-  "averageHeadwayTime": {  
-    "type": "Property",  
-    "value": 5  
-  },  
-  "dateObservedTo": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2018-08-07T11:15:00Z"  
-    }  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "LineString",  
-      "coordinates": [  
-        [  
-          -4.73735395519672,  
-          41.6538181849672  
-        ],  
-        [  
-          -4.73414858659993,  
-          41.6600594193478  
-        ],  
-        [  
-          -4.73447575302641,  
-          41.659585195093  
-        ]  
-      ]  
-    }  
-  },  
-  "congested": {  
-    "type": "Property",  
-    "value": false  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
+    "type": "CrowdFlowObserved",  
+    "averageHeadwayTime": {  
+        "type": "Property",  
+        "value": 5  
+    },  
+    "congested": {  
+        "type": "Property",  
+        "value": false  
+    },  
+    "dateObserved": {  
+        "type": "Property",  
+        "value": "2018-08-07T11:10:00/2018-08-07T11:15:00"  
+    },  
+    "dateObservedFrom": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2018-08-07T11:10:00Z"  
+        }  
+    },  
+    "dateObservedTo": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2018-08-07T11:15:00Z"  
+        }  
+    },  
+    "direction": {  
+        "type": "Property",  
+        "value": "inbound"  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "LineString",  
+            "coordinates": [  
+                [  
+                    -4.73735395519672,  
+                    41.6538181849672  
+                ],  
+                [  
+                    -4.73414858659993,  
+                    41.6600594193478  
+                ],  
+                [  
+                    -4.73447575302641,  
+                    41.659585195093  
+                ]  
+            ]  
+        }  
+    },  
+    "peopleCount": {  
+        "type": "Property",  
+        "value": 100  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### CrowdFlowObserved NGSI-LD normalized Example    
 Here is an example of a CrowdFlowObserved in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "averageHeadwayTime": 5,  
-  "congested": false,  
-  "dateObserved": "2018-08-07T11:10:00/2018-08-07T11:15:00",  
-  "dateObservedFrom": {  
-    "@type": "DateTime",  
-    "@value": "2018-08-07T11:10:00Z"  
-  },  
-  "dateObservedTo": {  
-    "@type": "DateTime",  
-    "@value": "2018-08-07T11:15:00Z"  
-  },  
-  "direction": "inbound",  
-  "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
-  "location": {  
-    "coordinates": [  
-      [  
-        -4.73735395519672,  
-        41.6538181849672  
-      ],  
-      [  
-        -4.73414858659993,  
-        41.6600594193478  
-      ],  
-      [  
-        -4.73447575302641,  
-        41.659585195093  
-      ]  
-    ],  
-    "type": "LineString"  
-  },  
-  "peopleCount": 100,  
-  "type": "CrowdFlowObserved"  
+    "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
+    "type": "CrowdFlowObserved",  
+    "averageHeadwayTime": 5,  
+    "congested": false,  
+    "dateObserved": "2018-08-07T11:10:00/2018-08-07T11:15:00",  
+    "dateObservedFrom": {  
+        "@type": "DateTime",  
+        "@value": "2018-08-07T11:10:00Z"  
+    },  
+    "dateObservedTo": {  
+        "@type": "DateTime",  
+        "@value": "2018-08-07T11:15:00Z"  
+    },  
+    "direction": "inbound",  
+    "location": {  
+        "coordinates": [  
+            [  
+                -4.73735395519672,  
+                41.6538181849672  
+            ],  
+            [  
+                -4.73414858659993,  
+                41.6600594193478  
+            ],  
+            [  
+                -4.73447575302641,  
+                41.659585195093  
+            ]  
+        ],  
+        "type": "LineString"  
+    },  
+    "peopleCount": 100,  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
