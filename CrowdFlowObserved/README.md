@@ -1,6 +1,5 @@
-[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)
-# CrowdFlowObserved
-Version: 0.0.1
+# CrowdFlowObserved
+Version: 0.0.2
 
 ## Description 
 
