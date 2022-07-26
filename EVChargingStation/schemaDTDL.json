@@ -1,0 +1,352 @@
+{
+    "@id": "dtmi:com:ngsi-ld:EVChargingStation;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "Smart Data Models - Transportation / EV Charging Station adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/EVChargingStation/schema.json",
+    "description": "EV Charging Station",
+    "displayName": "EVChargingStation",
+    "contents": [
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "amperage",
+            "writable": true,
+            "displayName": "amperage",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The total amperage offered by the charging station."
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The geographic area where a service or offered item is provided"
+        },
+        {
+            "name": "availableCapacity",
+            "writable": true,
+            "displayName": "availableCapacity",
+            "@type": "Property",
+            "schema": "integer",
+            "comment": "The number of vehicles which currently can be charged. It must lower or equal than `capacity`."
+        },
+        {
+            "name": "capacity",
+            "writable": true,
+            "displayName": "capacity",
+            "@type": "Property",
+            "schema": "integer",
+            "comment": "The total number of vehicles which can be charged at the same time. The total number of sockets can be higher. "
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item."
+        },
+        {
+            "name": "network",
+            "writable": true,
+            "displayName": "network",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of the Network, with that the operator cooperates. "
+        },
+        {
+            "name": "openingHours",
+            "writable": true,
+            "displayName": "openingHours",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Opening hours of the charging station. "
+        },
+        {
+            "name": "operator",
+            "writable": true,
+            "displayName": "operator",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Charging station's operator. "
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "socketNumber",
+            "writable": true,
+            "displayName": "socketNumber",
+            "@type": "Property",
+            "schema": "integer",
+            "comment": "The total number of sockets offered by this charging station"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+        },
+        {
+            "name": "voltage",
+            "writable": true,
+            "displayName": "voltage",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The total voltage offered by the charging station"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "acceptedPaymentMethod",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Type(s) of charge when using this station. Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'",
+            "displayName": "acceptedPaymentMethod"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "allowedVehicleType",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Vehicle type(s) which can be charged. Enum:'bicycle, bus, car, caravan, motorcycle, motorscooter, truck' ",
+            "displayName": "allowedVehicleType"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "chargeType",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Type(s) of charge when using this station. Enum:'annualPayment, flat, free, monthlyPayment, other'",
+            "displayName": "chargeType"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "socketType",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "The type of sockets offered by this station. Enum:'Caravan_Mains_Socket, CHAdeMO, CCS/SAE, Dual_CHAdeMO, Dual_J-1772, Dual_Mennekes, J-1772, Mennekes, Other, Tesla, Type2, Type3, Wall_Euro'",
+            "displayName": "socketType"
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "contactPoint",
+            "comment": "The details to contact with the item.",
+            "displayName": "contactPoint",
+            "fields": [
+                {
+                    "name": "areaServed",
+                    "schema": "string"
+                },
+                {
+                    "name": "availabilityRestriction",
+                    "schema": "array"
+                },
+                {
+                    "name": "availableLanguage",
+                    "schema": "string"
+                },
+                {
+                    "name": "contactOption",
+                    "schema": "string"
+                },
+                {
+                    "name": "contactType",
+                    "schema": "string"
+                },
+                {
+                    "name": "email",
+                    "schema": "string"
+                },
+                {
+                    "name": "faxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "name",
+                    "schema": "string"
+                },
+                {
+                    "name": "productSupported",
+                    "schema": "string"
+                },
+                {
+                    "name": "telephone",
+                    "schema": "string"
+                },
+                {
+                    "name": "url",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPolygon",
+            "schema": "multiPolygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "status",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "almostEmpty",
+                        "displayName": "almostEmpty",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "almostFull",
+                        "displayName": "almostFull",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "empty",
+                        "displayName": "empty",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "full",
+                        "displayName": "full",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "outOfService",
+                        "displayName": "outOfService",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "withIncidence",
+                        "displayName": "withIncidence",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "working",
+                        "displayName": "working",
+                        "enumValue": 7
+                    }
+                ]
+            }
+        }
+    ]
+}
