@@ -1,0 +1,721 @@
+{
+    "@id": "dtmi:com:ngsi-ld:CityWork;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "Smart Data Models - Transportation /  CityWork schema adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/CityWork/schema.json",
+    "description": "The Data Model is a contextual description of urban works carried out on a road axis and which can impact individual (Cars, motorcycle, bicycles, .\u2026) or common transport (Tram, Bus, subway). It contains a geographic representation making it possible to locate its work from a specific JSON Object and at a more global level (Road segment, Road, District, ...) in order to assess the potential impacts on the circulation. A GeoJSON object may represent a region of space (a Geometry), a spatially-bounded entity (",
+    "displayName": "CityWork",
+    "contents": [
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "contractingAuthority",
+            "writable": true,
+            "displayName": "contractingAuthority",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Name of the contracting authority"
+        },
+        {
+            "name": "countOfBusLineImpacted",
+            "writable": true,
+            "displayName": "countOfBusLineImpacted",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Count of Bus Lines impacted by the works"
+        },
+        {
+            "name": "countOfDerogation",
+            "writable": true,
+            "displayName": "countOfDerogation",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Count of derogations granted to the work Number"
+        },
+        {
+            "name": "countOfEventImpacted",
+            "writable": true,
+            "displayName": "countOfEventImpacted",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Count of Events impacted by the works"
+        },
+        {
+            "name": "countOfRailwayLineImpacted",
+            "writable": true,
+            "displayName": "countOfRailwayLineImpacted",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Count of Railway Lines impacted by the works"
+        },
+        {
+            "name": "countOfRoadImpacted",
+            "writable": true,
+            "displayName": "countOfRoadImpacted",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Count of roads impacted by the works"
+        },
+        {
+            "name": "countOfSchoolBusLineImpacted",
+            "writable": true,
+            "displayName": "countOfSchoolBusLineImpacted",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Count of School Bus Lines impacted by the works"
+        },
+        {
+            "name": "countOfSchoolImpacted",
+            "writable": true,
+            "displayName": "countOfSchoolImpacted",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Count of University, School, or other educational resource impacted by the works"
+        },
+        {
+            "name": "countOfStationImpacted",
+            "writable": true,
+            "displayName": "countOfStationImpacted",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Count of Railway stations impacted by the works"
+        },
+        {
+            "name": "countOfSubwayLineImpacted",
+            "writable": true,
+            "displayName": "countOfSubwayLineImpacted",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Count of Subway Lines impacted by the works"
+        },
+        {
+            "name": "countOfTramwayLineImpacted",
+            "writable": true,
+            "displayName": "countOfTramwayLineImpacted",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Count of tramway lines impacted by the works"
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "dateLastReported",
+            "writable": true,
+            "displayName": "dateLastReported",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "A timestamp which denotes the last time when the device successfully reported data. The date and time of this observation in ISO8601 UTCformat"
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "endDate",
+            "writable": true,
+            "displayName": "endDate",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "End date and time of the works in an ISO8601 UTC format. The attribute can be used in addition to the `workDate` attribute when it corresponds to a time interval to be highlighted"
+        },
+        {
+            "name": "isMainRoadImpactedHTR",
+            "writable": true,
+            "displayName": "isMainRoadImpactedHTR",
+            "@type": "Property",
+            "schema": "boolean",
+            "comment": "Value to indicate whether the main traffic road is impacted. Default false. https://schema.org/Boolean"
+        },
+        {
+            "name": "isMobile",
+            "writable": true,
+            "displayName": "isMobile",
+            "@type": "Property",
+            "schema": "boolean",
+            "comment": "Characteristic on the mobility of the works : false for Fixed (default) and true for Mobile"
+        },
+        {
+            "name": "mainContractingCompany",
+            "writable": true,
+            "displayName": "mainContractingCompany",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The Main Contracting Company responsible of the works"
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item."
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+        },
+        {
+            "name": "startDate",
+            "writable": true,
+            "displayName": "startDate",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Start date and time of the works in an ISO8601 UTC format. The attribute can be used in addition to the `workDate` attribute when it corresponds to a time interval to be highlighted"
+        },
+        {
+            "name": "territorialArea",
+            "writable": true,
+            "displayName": "territorialArea",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Territorial area. Level higher to the attribute 'areaServed'. A list of Free Text"
+        },
+        {
+            "name": "workDate",
+            "writable": true,
+            "displayName": "workDate",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Date and time (Day or period) of the works. It can be represented by an specific time string"
+        },
+        {
+            "name": "workLastDateUpdate",
+            "writable": true,
+            "displayName": "workLastDateUpdate",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Last date for updating a contractual element of the work"
+        },
+        {
+            "name": "workNumber",
+            "writable": true,
+            "displayName": "workNumber",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Number assigned to the work"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "allowedVehicle",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Type of vehicle authorized to circulate. A combination of these values. Enum:'all Vehicle, bicycle, bus, car, companiesTrucks,  emergencyVehicle, firefighters, lorry, motorcycle, police, subway, sweepingMachine, trailer, tramway, trucks, van'",
+            "displayName": "allowedVehicle"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "busImpacted",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "Bus lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of 'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId / segmentName / segmentLocation'",
+            "displayName": "busImpacted"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "decrees",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List of text where each element is a string with the URL to download or the name of the decree.",
+            "displayName": "decrees"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "derogation",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "Derogation granted for carrying out work on days and times. A structured value from 0 to N occurrences where each items has the following format `derogationType` :  with sub properties 'startDate, endDate, dayOfWeek, comment'",
+            "displayName": "derogation"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "encroachment",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Impact of the works on public, private area. A combination of these values. Enum:'other, private, public'",
+            "displayName": "encroachment"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "eventsImpacted",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "List of free text or to the entity [Events](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/Event/doc/spec.md) if exist.",
+            "displayName": "eventsImpacted"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "infrastructureFunction",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": " Function of the infrastructure impacted by the works. Enum:'collection, distribution, other, transportation'",
+            "displayName": "infrastructureFunction"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "maxAuthorizedTonnage",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "Roads impacted by the works with Maximum tonnage authorized. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of 'roadId / roadName / roadLocation'. Second subproperties, 'maxTonnage'",
+            "displayName": "maxAuthorizedTonnage"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "openingHoursSpecification",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "A structured value providing information about the opening hours of a place or a certain service inside a place",
+            "displayName": "openingHoursSpecification"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "othersContractingCompany",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List of Text where each element is a string with the name of the contracting Companies under the responsibility of the main Contracting Company.",
+            "displayName": "othersContractingCompany"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "railwayImpacted",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "Rail lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of 'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId / segmentName / segmentLocation'",
+            "displayName": "railwayImpacted"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "roadImpacted",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "Roads impacted by the works and the details of the roads concerned by the work. A structured value from 0 to N occurrences where each items is a string in the format : 'roadImpact':[List of Segment Impacted or Free Text or geo-property, separated by a comma]. If `isMainRoadImpactedHTR` = true, The first item is this one.",
+            "displayName": "roadImpacted"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "roadImpactedMT",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A list of roads defined as Major Traffic, impacted by the works. Values are also included in the roadImpacted attribute.",
+            "displayName": "roadImpactedMT"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "roadImpactedSA",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A list of roads defined as sensitive areas, impacted by the works. Values are also included in the roadImpacted attribute.",
+            "displayName": "roadImpactedSA"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "schoolBusImpacted",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "Scholl Bus lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of 'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId / segmentName / segmentLocation'",
+            "displayName": "schoolBusImpacted"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "schoolImpacted",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "List of free text or [GeoProperty] or a Reference to an entity [SCHOOL] if exist. ",
+            "displayName": "schoolImpacted"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "stationImpacted",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "Station Impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, 'stationType'. Second subproperties, one of 'stationId / stationName / stationLocation'",
+            "displayName": "stationImpacted"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "subwayImpacted",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "Subway lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of 'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId / segmentName / segmentLocation'",
+            "displayName": "subwayImpacted"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "tramwayImpacted",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "Tramway Line impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of 'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId / segmentName / segmentLocation'",
+            "displayName": "tramwayImpacted"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "workDisposition",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "Specific rules taken for the works. A structured value from 0 to N occurrences where each items has the following format : `Disposition`: with sub properties  `startDate`, `endDate`,  `dayOfWeek`, `comment`. Enum:'alternatingLights , bicyclePathClosure, bicyclePathDeviation, bicyclePathReduction, circulationManualControl, laneClosure, laneDeviation, laneReduction, noRestriction, parkingForbidden, parkingModification, sidewalkClosure, sidewalkClosureOrReduction, sidewalkReduction, speedReduction'",
+            "displayName": "workDisposition"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "workLevel",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Positioning of the works in relation to a ground reference system. A combination of these elements. Enum:'aerial, ground, mixed, other, roofing, surface, underground, wall'",
+            "displayName": "workLevel"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "workNature",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Nature of the works. A combination of these values.Enum:'additionalInvestigations, brushCutting, cleaning, collection, connection, consolidation, construction, control, counting, craneLifting, creation, demolition, drivingSwitch, experimentation, extension, filmShooting, Installation-OR-layout, investigation, landFill, maintenance, manholeOpening, ManholeOpeningToRestoreService, miscellaneousInstallation, miscellaneousWorks, mowingDeburring, other, overheadLinesWorksIntervention, pruning, pulling, refurbish",
+            "displayName": "workNature"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "workOtherImpact",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Other impact. A list of free values",
+            "displayName": "workOtherImpact"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "workReason",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Reasons of the works in case of urgent intervention. A combination of these values. Enum:'collapse, derailment, fire, flood, gasLeak, landslide, other, powerCut, rockfall, sagging, waterLeak'",
+            "displayName": "workReason"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "workTarget",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Categories of works regarding the different profession. A combination of these elements. Enum:'bicyclePath, busCorridor, catainers, cityMotorBike, cityBike, cityCar, cityScooter, coldAndAirCon, coldGroup, copperCable, CoringPenetrometry, drinkingWater, electricityNetworks, exploratoryWork, fireHydrants, frameRoof, gasNetworks, generator, historicalMonuments, infrastructure, landscapedArea, movingHoistNacelleTruck, networks, offStreetParking, opticalFibers, other, overheadLine, papersCollection, pavement, pu",
+            "displayName": "workTarget"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "workZone",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Zone of Works. A combination of these values. Enum:' airport, beach, bicyclePath, bridge, busCorridor, dock, floodArea, harbor, heliport, mountainousArea, offRoad, other, parking, parksGardens, path, protectArea, railwayLine, riskArea, river, road, rockyArea, sevesoArea, sideWalk, subwayLine, tramwayLine, tunnel'",
+            "displayName": "workZone"
+        },
+        {
+            "@type": "object",
+            "name": "contactPoint",
+            "comment": "The details to contact with the item.",
+            "displayName": "contactPoint",
+            "fields": [
+                {
+                    "name": "areaServed",
+                    "schema": "string"
+                },
+                {
+                    "name": "availabilityRestriction",
+                    "schema": "array"
+                },
+                {
+                    "name": "availableLanguage",
+                    "schema": "string"
+                },
+                {
+                    "name": "contactOption",
+                    "schema": "string"
+                },
+                {
+                    "name": "contactType",
+                    "schema": "string"
+                },
+                {
+                    "name": "email",
+                    "schema": "string"
+                },
+                {
+                    "name": "faxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "name",
+                    "schema": "string"
+                },
+                {
+                    "name": "productSupported",
+                    "schema": "string"
+                },
+                {
+                    "name": "telephone",
+                    "schema": "string"
+                },
+                {
+                    "name": "url",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "typeOfInterventionRequest",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "authorizationRequest",
+                        "displayName": "authorizationRequest",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "interventionNotice",
+                        "displayName": "interventionNotice",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "other",
+                        "displayName": "other",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "urgentWorks",
+                        "displayName": "urgentWorks",
+                        "enumValue": 4
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "workState",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "all",
+                        "displayName": "all",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "approved",
+                        "displayName": "approved",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "authorized",
+                        "displayName": "authorized",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "canceled",
+                        "displayName": "canceled",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "completed",
+                        "displayName": "completed",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "decreeToBeSigned",
+                        "displayName": "decreeToBeSigned",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "draft",
+                        "displayName": "draft",
+                        "enumValue": 7
+                    },
+                    {
+                        "name": "editedDecrees",
+                        "displayName": "editedDecrees",
+                        "enumValue": 8
+                    },
+                    {
+                        "name": "instructionInProgress",
+                        "displayName": "instructionInProgress",
+                        "enumValue": 9
+                    },
+                    {
+                        "name": "investigated",
+                        "displayName": "investigated",
+                        "enumValue": 10
+                    },
+                    {
+                        "name": "nonCompliantOccupation",
+                        "displayName": "nonCompliantOccupation",
+                        "enumValue": 11
+                    },
+                    {
+                        "name": "open",
+                        "displayName": "open",
+                        "enumValue": 12
+                    },
+                    {
+                        "name": "other",
+                        "displayName": "other",
+                        "enumValue": 13
+                    },
+                    {
+                        "name": "pendingAuthorization",
+                        "displayName": "pendingAuthorization",
+                        "enumValue": 14
+                    },
+                    {
+                        "name": "pendingCancellation",
+                        "displayName": "pendingCancellation",
+                        "enumValue": 15
+                    },
+                    {
+                        "name": "planningCompleted",
+                        "displayName": "planningCompleted",
+                        "enumValue": 16
+                    },
+                    {
+                        "name": "pendingDocument",
+                        "displayName": "pendingDocument",
+                        "enumValue": 17
+                    },
+                    {
+                        "name": "pendingExtension",
+                        "displayName": "pendingExtension",
+                        "enumValue": 18
+                    },
+                    {
+                        "name": "pendingPlanning",
+                        "displayName": "pendingPlanning",
+                        "enumValue": 19
+                    },
+                    {
+                        "name": "planned",
+                        "displayName": "planned",
+                        "enumValue": 20
+                    },
+                    {
+                        "name": "received",
+                        "displayName": "received",
+                        "enumValue": 21
+                    },
+                    {
+                        "name": "reject",
+                        "displayName": "reject",
+                        "enumValue": 22
+                    },
+                    {
+                        "name": "supported",
+                        "displayName": "supported",
+                        "enumValue": 23
+                    },
+                    {
+                        "name": "validatedInPlanning",
+                        "displayName": "validatedInPlanning",
+                        "enumValue": 24
+                    }
+                ]
+            }
+        }
+    ]
+}
