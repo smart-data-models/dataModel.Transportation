@@ -1,17 +1,19 @@
-エンティティEVChargingStation  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティEVChargingStation  
 =======================  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Transportation/blob/master/EVChargingStation/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**EVチャージングステーション  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述です。**EVチャージングステーション  
+バージョン: 0.0.3  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `acceptedPaymentMethod`: このステーションを使用する際のチャージのタイプ（複数可）。Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'のいずれかです。  - `address`: 郵送先住所  - `allowedVehicleType`: 課金可能な車両タイプ。Enum:'bicycle, bus, car, caravan, motorcycle, motorscooter, truck'.  - `alternateName`: このアイテムの別称  - `amperage`: 充電ステーションが提供する総アンペア数。  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `availableCapacity`: 現在、充電可能な車両の数。これは `capacity` よりも小さいか、同じでなければなりません。  - `capacity`: 同時に充電可能な車両の総数です。ソケットの総数はもっと多くてもいい。  - `chargeType`: このステーションを使用する際の料金の種類。Enum:'annualPayment, flat, free, monthlyPayment, other'.  - `contactPoint`: チャージングステーションのコンタクトポイント  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `network`: オペレーターが協力しているネットワークの名前です。  - `openingHours`: 充電スタンドの営業時間  - `operator`: 充電ステーションの運営者。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `socketNumber`: この充電ステーションで提供されるソケットの合計数  - `socketType`: このステーションで提供されているソケットの種類です。Enum:'Caravan_Mains_Socket, CHAdeMO, CCS/SAE, Dual_CHAdeMO, Dual_J-1772, Dual_Mennekes, J-1772, Mennekes, Other, Tesla, Type2, Type3, Wall_Euro'.  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `status`: 充電ステーションの状態。Enum:'almostEmpty, almostFull, empty, full, outOfService, withIncidence, working'.またはその他のアプリケーション固有のもの。  - `type`: NGSI エンティティタイプ。EVChargingStationである必要があります。  - `voltage`: 充電ステーションが提供する総電圧    
-必須項目  
+- `acceptedPaymentMethod`: このステーションを使用する際の料金の種類。Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'。  - `address`: 郵送先住所  - `allowedVehicleType`: 充電可能な車両タイプ。Enum:'bicycle, bus, car, caravan, motorcycle, motorscooter, truck' （自転車、バス、車、キャラバン、バイク、モータースクーター、トラック  - `alternateName`: この項目の別称  - `amperage`: 充電ステーションが提供する総アンペア数。  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `availableCapacity`: 現在充電可能な車の台数。容量`より小さいか等しくなければならない。  - `capacity`: 同時に充電できる車の総台数です。総ソケット数はもっと多くてもいい。  - `chargeType`: このステーションを使用する際の料金のタイプ（複数可）。Enum:'annualPayment, flat, free, monthlyPayment, other'.  - `contactPoint`: 商品に関するお問い合わせ先です。  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `network`: 事業者が連携しているネットワークの名称。  - `openingHours`: 充電スタンドの営業時間  - `operator`: 充電スタンドの運営者。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `socketNumber`: この充電ステーションが提供するコンセントの総数  - `socketType`: このステーションが提供するソケットの種類。Enum:'Caravan_Mains_Socket, CHAdeMO, CCS/SAE, Dual_CHAdeMO, Dual_J-1772, Dual_Mennekes, J-1772, Mennekes, その他, Tesla, Type2, Type3, Wall_Euro'.  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `status`: 充電ステーションの状態。Enum:'almostEmpty, almostFull, empty, full, outOfService, withIncidence, working'.または、その他のアプリケーション固有のもの。  - `type`: NGSI エンティティタイプ。EVChargingStationでなければならない。  - `voltage`: 充電スタンドが提供する総電圧    
+必要なプロパティ  
 - `allowedVehicleType`  - `capacity`  - `id`  - `socketType`  - `type`    
-電気自動車にエネルギーを供給する公共の充電ステーション。充電時間は、ステーションの最大出力、充電中の車の数、現在のバッテリー残量によって異なります。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+電気自動車にエネルギーを供給する公共の充電ステーション。充電時間は、ステーションの最大出力、充電中の車両台数、現在のバッテリー残量によって異なります。  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 EVChargingStation:    
@@ -130,10 +132,67 @@ EVChargingStation:
         model: https://schema.org/Text    
         type: Property    
     contactPoint:    
-      description: 'Charging station contact point'    
+      description: 'The details to contact with the item.'    
+      properties:    
+        areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Supersedes serviceArea.'    
+          type: string    
+        availabilityRestriction:    
+          anyOf:    
+            - description: 'Property. Array of identifiers format of any NGSI entity.'    
+              items:    
+                maxLength: 256    
+                minLength: 1    
+                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+                type: string    
+              type: array    
+            - description: 'Property. Array of identifiers format of any NGSI entity.'    
+              items:    
+                format: uri    
+                type: string    
+              type: array    
+          description: 'Relationship. Model:''http://schema.org/hoursAvailable''. This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class.'    
+        availableLanguage:    
+          anyOf:    
+            - anyOf:    
+                - type: string    
+                - items:    
+                    type: string    
+                  type: array    
+          description: 'Property. Model:''http://schema.org/availableLanguage''. A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language'    
+        contactOption:    
+          anyOf:    
+            - type: string    
+            - items:    
+                type: string    
+              type: array    
+          description: 'Property. Model:''http://schema.org/contactOption''. An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).'    
+        contactType:    
+          description: 'Property. Contact type of this item.'    
+          type: string    
+        email:    
+          description: 'Property. Email address of owner.'    
+          format: idn-email    
+          type: string    
+        faxNumber:    
+          description: 'Property. Model:''http://schema.org/Text''. The fax number.'    
+          type: string    
+        name:    
+          description: 'Property. The name of this item.'    
+          type: string    
+        productSupported:    
+          description: 'Property. Model:''http://schema.org/Text''. The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").'    
+          type: string    
+        telephone:    
+          description: 'Property. Telephone of this contact.'    
+          type: string    
+        url:    
+          description: 'Property. URL which provides a description or further information about this item.'    
+          format: uri    
+          type: string    
       type: object    
       x-ngsi:    
-        model: https://schema.org/contactPoint.    
+        model: https://schema.org/ContactPoint    
         type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
@@ -443,12 +502,12 @@ EVChargingStation:
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/EVChargingStation/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/EVChargingStation/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.2    
+  x-version: 0.0.3    
 ```  
 </details>    
 ## ペイロードの例  
-#### EVChargingStation NGSI-v2 キーバリューの例  
-EVChargingStationをkey-valuesとしてJSON-LD形式で表現した例です。これは`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### EVChargingStation NGSI-v2 key-value の例。  
+ここでは、EVChargingStationをJSON-LD形式でkey-valuesとして表現した例を示す。これは、`options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータを返す。  
 ```json  
 {  
   "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
@@ -474,8 +533,8 @@ EVChargingStation:
   "source": "https://openchargemap.org/"  
 }  
 ```  
-#### EVChargingStation NGSI-v2規格化例  
-EVChargingStationを正規化したJSON-LD形式の例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### EVChargingStation NGSI-v2 正規化例  
+EVChargingStation を JSON-LD 形式で正規化した例を示す。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
@@ -523,116 +582,115 @@ EVChargingStation:
   }  
 }  
 ```  
-#### EVChargingStation NGSI-LDのキーバリューの例。  
-EVChargingStationをkey-valuesとしてJSON-LD形式で表現した例を示します。これは、`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### EVChargingStation NGSI-LD キー値の例  
+ここでは、EVChargingStationをJSON-LD形式でkey-valuesとして表現した例を示す。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
-  "type": "EVChargingStation",  
-  "socketType": {  
-    "type": "Property",  
-    "value": [  
-      "Wall_Euro"  
+    "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
+    "type": "EVChargingStation",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressLocality": "Valladolid",  
+            "addressCountry": "Espa\u00f1a",  
+            "streetAddress": "Paseo de Zorrilla, 191",  
+            "type": "PostalAddress"  
+        }  
+    },  
+    "allowedVehicleType": {  
+        "type": "Property",  
+        "value": [  
+            "car"  
+        ]  
+    },  
+    "capacity": {  
+        "type": "Property",  
+        "value": 2  
+    },  
+    "chargeType": {  
+        "type": "Property",  
+        "value": [  
+            "free"  
+        ]  
+    },  
+    "contactPoint": {  
+        "type": "Property",  
+        "value": {  
+            "email": "vehiculoelectrico@ava.es"  
+        }  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -4.747901,  
+                41.618265  
+            ]  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Agencia de Innovaci\u00f3n"  
+    },  
+    "operator": {  
+        "type": "Property",  
+        "value": "Iberdrola"  
+    },  
+    "socketType": {  
+        "type": "Property",  
+        "value": [  
+            "Wall_Euro"  
+        ]  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": "https://openchargemap.org/"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
-  },  
-  "capacity": {  
-    "type": "Property",  
-    "value": 2  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Agencia de Innovaci\u00f3n"  
-  },  
-  "allowedVehicleType": {  
-    "type": "Property",  
-    "value": [  
-      "car"  
-    ]  
-  },  
-  "source": {  
-    "type": "Property",  
-    "value": "https://openchargemap.org/"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -4.747901,  
-        41.618265  
-      ]  
-    }  
-  },  
-  "chargeType": {  
-    "type": "Property",  
-    "value": [  
-      "free"  
-    ]  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressLocality": "Valladolid",  
-      "addressCountry": "Espa\u00f1a",  
-      "streetAddress": "Paseo de Zorrilla, 191",  
-      "type": "PostalAddress"  
-    }  
-  },  
-  "operator": {  
-    "type": "Property",  
-    "value": "Iberdrola"  
-  },  
-  "contactPoint": {  
-    "type": "Property",  
-    "value": {  
-      "email": "vehiculoelectrico@ava.es"  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
-#### EVChargingStation NGSI-LDの正規化例  
-ここでは、EVChargingStationを正規化したJSON-LD形式の例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### EVChargingStation NGSI-LD 正規化例  
+EVChargingStation を JSON-LD 形式で正規化した例を示す。これは、オプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "address": {  
-    "addressCountry": "Espa\u00f1a",  
-    "addressLocality": "Valladolid",  
-    "streetAddress": "Paseo de Zorrilla, 191",  
-    "type": "PostalAddress"  
-  },  
-  "allowedVehicleType": [  
-    "car"  
-  ],  
-  "capacity": 2,  
-  "chargeType": [  
-    "free"  
-  ],  
-  "contactPoint": {  
-    "email": "vehiculoelectrico@ava.es"  
-  },  
-  "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
-  "location": {  
-    "coordinates": [  
-      -4.747901,  
-      41.618265  
+    "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
+    "type": "EVChargingStation",  
+    "address": {  
+        "addressCountry": "Espa\u00f1a",  
+        "addressLocality": "Valladolid",  
+        "streetAddress": "Paseo de Zorrilla, 191",  
+        "type": "PostalAddress"  
+    },  
+    "allowedVehicleType": [  
+        "car"  
     ],  
-    "type": "Point"  
-  },  
-  "name": "Agencia de Innovaci\u00f3n",  
-  "operator": "Iberdrola",  
-  "socketType": [  
-    "Wall_Euro"  
-  ],  
-  "source": "https://openchargemap.org/",  
-  "type": "EVChargingStation"  
+    "capacity": 2,  
+    "chargeType": [  
+        "free"  
+    ],  
+    "contactPoint": {  
+        "email": "vehiculoelectrico@ava.es"  
+    },  
+    "location": {  
+        "coordinates": [  
+            -4.747901,  
+            41.618265  
+        ],  
+        "type": "Point"  
+    },  
+    "name": "Agencia de Innovaci\u00f3n",  
+    "operator": "Iberdrola",  
+    "socketType": [  
+        "Wall_Euro"  
+    ],  
+    "source": "https://openchargemap.org/",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
