@@ -1,18 +1,20 @@
-エンティティCrowdFlowObserved  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティCrowdFlowObserved  
 =======================  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Transportation/blob/master/CrowdFlowObserved/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな説明。**CrowdFlowObserved**（クラウドフロー・オブ・ザ・イヤー  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述です。**CrowdFlowObserved** (クラウドフロー観察)  
+バージョン: 0.0.2  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `averageCrowdSpeed`: 観測期間中に通過する群衆の平均速度  - `averageHeadwayTime`: 平均ヘッドウェイタイムヘッドウェイタイムとは  
-    連続する2人の間の経過時間です。  - `congested`: 観察期間中に、参照された通路に群衆の混雑があったかどうかを示すフラグ。この属性がない場合は、混雑がないことを意味する。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateObserved`: この観測の日付と時刻をISO8601 UTC形式で表したもの。これは、特定の時間の瞬間、またはISO8601の間隔で表すことができます。Orion Context Brokerがデータタイムのインターバルをサポートしていないため、回避策として、2つの別々の属性を使用することができます。DateObservedFrom`, `dateObservedTo` です。  - `dateObservedFrom`: 観測期間の開始日時が設定されています。dateObserved`を参照してください。  - `dateObservedTo`: 観測期間の終了日時が設定されています。dateObserved`を参照してください。  - `description`: このアイテムの説明  - `direction`: この観測で参照される歩道の、都心に対する通常の進行方向。Enum:'inbound, outbound' (インバウンド、アウトバウンド)  - `id`: エンティティのユニークな識別子  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `occupancy`: 観察された通路を人が占有していた観察時間の割合  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `peopleCount`: 観測が行われた道路セグメント  - `refRoadSegment`: 観測が行われた道路セグメント  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSIのEntityタイプ。CrowdFlowObservedである必要があります。    
-必須項目  
+- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `averageCrowdSpeed`: 観測期間中の群衆の平均通過速度  - `averageHeadwayTime`: 平均ヘッドウェイ時間。ヘッドウェイ時間とは  
+    連続した2人の間に経過した時間  - `congested`: 参照された通路で、観測期間中に混雑があったかどうかを示すフラグ。この属性がない場合は、混雑がないことを意味する。  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateObserved`: ISO8601 UTCフォーマットでのこの観測の日付と時間。これは、特定の時間の瞬間かISO8601の間隔で表すことができます。Orion Context Broker が日時の間隔をサポートしていないことに対する回避策として、2つの別々の属性を使用することができます。dateObservedFrom`, `dateObservedTo` の2つの属性を使用することができる。  - `dateObservedFrom`: 観測期間の開始日時。dateObserved` を参照してください。  - `dateObservedTo`: 観測期間の終了日時。dateObserved` を参照してください。  - `description`: このアイテムの説明  - `direction`: この観測で参照される歩道の、市街地に対する通常の進行方向。列挙:'インバウンド、アウトバウンド'  - `id`: エンティティの一意な識別子  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `occupancy`: 観測された通路に人がいた観測時間の割合  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `peopleCount`: この観測で検出された人の総数。  - `refRoadSegment`: 観測された該当道路区間  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI Entityの種類。CrowdFlowObservedでなければならない。    
+必要なプロパティ  
 - `dateObserved`  - `id`  - `type`    
-ある場所、ある時間での人の動きに関する観察です。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+ある場所と時間における人の動きに関連した観察。  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 CrowdFlowObserved:    
@@ -317,11 +319,10 @@ CrowdFlowObserved:
       x-ngsi:    
         type: Property    
     peopleCount:    
-      description: 'Concerned road segment on which the observation has been made'    
+      description: 'Total number of people detected during this observation.'    
       minimum: 0    
       type: integer    
       x-ngsi:    
-        model: https://schema.org/Number.    
         type: Property    
     refRoadSegment:    
       anyOf:    
@@ -371,12 +372,12 @@ CrowdFlowObserved:
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/CrowdFlowObserved/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/CrowdFlowObserved/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## ペイロードの例  
-#### CrowdFlowObserved NGSI-v2 key-valuesの例。  
-CrowdFlowObservedをkey-valuesとしてJSON-LD形式で出力した例です。これはNGSI-v2で`options=keyValues`を使用した場合と互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### CrowdFlowで観測されたNGSI-v2鍵の値 例  
+CrowdFlowObservedをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返されます。  
 ```json  
 {  
   "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
@@ -398,8 +399,8 @@ CrowdFlowObserved:
   }  
 }  
 ```  
-#### CrowdFlowObserved NGSI-v2を正規化した例。  
-CrowdFlowObservedをJSON-LD形式で正規化した例です。これはオプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### CrowdFlowObserved NGSI-v2 正規化例  
+CrowdFlowObservedをJSON-LD形式で正規化した例です。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
@@ -440,112 +441,111 @@ CrowdFlowObserved:
   }  
 }  
 ```  
-#### CrowdFlowObserved NGSI-LD key-values Example  
-CrowdFlowObservedをkey-valuesとしてJSON-LD形式で出力した例です。これは`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### CrowdFlowで観測されたNGSI-LDのキー値の例  
+CrowdFlowObservedをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータが返されます。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
-  "type": "CrowdFlowObserved",  
-  "dateObserved": {  
-    "type": "Property",  
-    "value": "2018-08-07T11:10:00/2018-08-07T11:15:00"  
-  },  
-  "direction": {  
-    "type": "Property",  
-    "value": "inbound"  
-  },  
-  "dateObservedFrom": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2018-08-07T11:10:00Z"  
-    }  
-  },  
-  "peopleCount": {  
-    "type": "Property",  
-    "value": 100  
-  },  
-  "averageHeadwayTime": {  
-    "type": "Property",  
-    "value": 5  
-  },  
-  "dateObservedTo": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2018-08-07T11:15:00Z"  
-    }  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "LineString",  
-      "coordinates": [  
-        [  
-          -4.73735395519672,  
-          41.6538181849672  
-        ],  
-        [  
-          -4.73414858659993,  
-          41.6600594193478  
-        ],  
-        [  
-          -4.73447575302641,  
-          41.659585195093  
-        ]  
-      ]  
-    }  
-  },  
-  "congested": {  
-    "type": "Property",  
-    "value": false  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
+    "type": "CrowdFlowObserved",  
+    "averageHeadwayTime": {  
+        "type": "Property",  
+        "value": 5  
+    },  
+    "congested": {  
+        "type": "Property",  
+        "value": false  
+    },  
+    "dateObserved": {  
+        "type": "Property",  
+        "value": "2018-08-07T11:10:00/2018-08-07T11:15:00"  
+    },  
+    "dateObservedFrom": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2018-08-07T11:10:00Z"  
+        }  
+    },  
+    "dateObservedTo": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2018-08-07T11:15:00Z"  
+        }  
+    },  
+    "direction": {  
+        "type": "Property",  
+        "value": "inbound"  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "LineString",  
+            "coordinates": [  
+                [  
+                    -4.73735395519672,  
+                    41.6538181849672  
+                ],  
+                [  
+                    -4.73414858659993,  
+                    41.6600594193478  
+                ],  
+                [  
+                    -4.73447575302641,  
+                    41.659585195093  
+                ]  
+            ]  
+        }  
+    },  
+    "peopleCount": {  
+        "type": "Property",  
+        "value": 100  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### CrowdFlowObserved NGSI-LDを正規化した例。  
-CrowdFlowObservedをJSON-LD形式で正規化した例です。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### CrowdFlowObserved NGSI-LD 正規化例  
+CrowdFlowObservedをJSON-LD形式で正規化した例です。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "averageHeadwayTime": 5,  
-  "congested": false,  
-  "dateObserved": "2018-08-07T11:10:00/2018-08-07T11:15:00",  
-  "dateObservedFrom": {  
-    "@type": "DateTime",  
-    "@value": "2018-08-07T11:10:00Z"  
-  },  
-  "dateObservedTo": {  
-    "@type": "DateTime",  
-    "@value": "2018-08-07T11:15:00Z"  
-  },  
-  "direction": "inbound",  
-  "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
-  "location": {  
-    "coordinates": [  
-      [  
-        -4.73735395519672,  
-        41.6538181849672  
-      ],  
-      [  
-        -4.73414858659993,  
-        41.6600594193478  
-      ],  
-      [  
-        -4.73447575302641,  
-        41.659585195093  
-      ]  
-    ],  
-    "type": "LineString"  
-  },  
-  "peopleCount": 100,  
-  "type": "CrowdFlowObserved"  
+    "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
+    "type": "CrowdFlowObserved",  
+    "averageHeadwayTime": 5,  
+    "congested": false,  
+    "dateObserved": "2018-08-07T11:10:00/2018-08-07T11:15:00",  
+    "dateObservedFrom": {  
+        "@type": "DateTime",  
+        "@value": "2018-08-07T11:10:00Z"  
+    },  
+    "dateObservedTo": {  
+        "@type": "DateTime",  
+        "@value": "2018-08-07T11:15:00Z"  
+    },  
+    "direction": "inbound",  
+    "location": {  
+        "coordinates": [  
+            [  
+                -4.73735395519672,  
+                41.6538181849672  
+            ],  
+            [  
+                -4.73414858659993,  
+                41.6600594193478  
+            ],  
+            [  
+                -4.73447575302641,  
+                41.659585195093  
+            ]  
+        ],  
+        "type": "LineString"  
+    },  
+    "peopleCount": 100,  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  

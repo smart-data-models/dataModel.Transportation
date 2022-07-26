@@ -11,7 +11,7 @@ info:
   description:  |
     CrowdFlowObserved
   title: CrowdFlowObserved
-  version: "1.0.0"
+  version: "0.0.2"
 openapi: "3.0.0"
 
 paths: 

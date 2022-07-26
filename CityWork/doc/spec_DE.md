@@ -1,12 +1,14 @@
-Entität: CityWork  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entität: CityWork  
 =================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Transportation/blob/master/CityWork/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **Das Datenmodell ist eine kontextuelle Beschreibung der städtischen Arbeiten, die auf einer Straßenachse durchgeführt werden und die sich auf den Individualverkehr (Autos, Motorräder, Fahrräder, ....) oder den öffentlichen Verkehr (Straßenbahn, Bus, U-Bahn) auswirken können. Es enthält eine geografische Darstellung, die es ermöglicht, die Arbeiten anhand eines bestimmten JSON-Objekts und auf einer globaleren Ebene (Straßenabschnitt, Straße, Bezirk, ...) zu lokalisieren, um die potenziellen Auswirkungen auf den Verkehr zu bewerten. Ein GeoJSON-Objekt kann eine Region im Raum (eine Geometrie), eine räumlich begrenzte Einheit (ein Feature) oder eine Liste von Features (eine Feature Collection) darstellen. Weitere Informationen über die Modellierung und die möglichen Werte finden Sie im Dokument [geojson](https://tools.ietf.org/pdf/draft-ietf-geojson-03.pdf).**  
+Version: 0.3.0  
 
 ## Liste der Eigenschaften  
 
-- `allowedVehicle`: Typ des zum Verkehr zugelassenen Fahrzeugs. Eine Kombination aus diesen Werten. Enum:'all Vehicle, bicycle, bus, car, companiesTrucks, emergencyVehicle, firefighters, lorry, motorcycle, police, subway, sweepingMachine, trailer, tramway, trucks, van'  - `alternateName`: Ein alternativer Name für diesen Artikel  - `busImpacted`: Buslinien, die von den Arbeiten betroffen sind. Ein strukturierter Wert von 0 bis N Ausprägungen mit 2 Untereigenschaften pro Element. Erste Untereigenschaft, eine von "lineId / lineName / lineLocation". Zweite Untereigenschaft, eine von "segmentId / segmentName / segmentLocation".  - `contactPoint`: Die Angaben zur Kontaktaufnahme mit dem Artikel.  - `contractingAuthority`: Name des öffentlichen Auftraggebers  - `countOfBusLineImpacted`: Anzahl der Buslinien, die von den Arbeiten betroffen sind  - `countOfDerogation`: Anzahl der gewährten Ausnahmeregelungen für das Werk Anzahl  - `countOfEventImpacted`: Anzahl der Ereignisse, die von den Arbeiten betroffen sind  - `countOfRailwayLineImpacted`: Anzahl der von den Bauarbeiten betroffenen Eisenbahnstrecken  - `countOfRoadImpacted`: Anzahl der von den Bauarbeiten betroffenen Straßen  - `countOfSchoolBusLineImpacted`: Anzahl der Schulbuslinien, die von den Arbeiten betroffen sind  - `countOfSchoolImpacted`: Anzahl der Universitäten, Schulen oder anderen Bildungseinrichtungen, die von den Arbeiten betroffen sind  - `countOfStationImpacted`: Anzahl der Bahnhöfe, die von den Arbeiten betroffen sind  - `countOfSubwayLineImpacted`: Anzahl der von den Bauarbeiten betroffenen U-Bahn-Linien  - `countOfTramwayLineImpacted`: Anzahl der von den Bauarbeiten betroffenen Straßenbahnlinien  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateLastReported`: Ein Zeitstempel, der den letzten Zeitpunkt angibt, zu dem das Gerät erfolgreich Daten gemeldet hat. Das Datum und die Uhrzeit dieser Beobachtung im ISO8601 UTC-Format  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `decrees`: Eine Textliste, bei der jedes Element eine Zeichenkette mit der herunterzuladenden URL oder dem Namen des Erlasses ist.  - `derogation`: Ausnahmegenehmigung für die Durchführung von Arbeiten an Tagen und zu Zeiten. Ein strukturierter Wert von 0 bis N Vorkommen, wobei jedes Element das folgende Format hat: "derogationType" mit den Untereigenschaften "startDate, endDate, dayOfWeek, comment".  - `description`: Eine Beschreibung dieses Artikels  - `encroachment`: Auswirkungen der Arbeiten auf den öffentlichen und privaten Bereich. Eine Kombination aus diesen Werten. Enum:'andere, privat, öffentlich'  - `endDate`: Enddatum und -uhrzeit der Arbeiten im ISO8601 UTC-Format. Das Attribut kann zusätzlich zum Attribut `workDate` verwendet werden, wenn es einem hervorzuhebenden Zeitintervall entspricht  - `eventsImpacted`: Liste mit freiem Text oder zur Entität [Ereignisse](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/Event/doc/spec.md), falls vorhanden.  - `id`: Eindeutiger Bezeichner der Entität  - `infrastructureFunction`:  Funktion der Infrastruktur, die von den Arbeiten betroffen ist. Enum:'Sammlung, Verteilung, Sonstiges, Transport'  - `isMainRoadImpactedHTR`: Wert, der angibt, ob die Hauptverkehrsstraße betroffen ist. Standardwert false. https://schema.org/Boolean  - `isMobile`: Merkmal für die Mobilität der Arbeiten: false für feststehend (Standard) und true für mobil  - `mainContractingCompany`: Das für die Arbeiten verantwortliche Hauptauftragnehmerunternehmen  - `maxAuthorizedTonnage`: Von den Arbeiten betroffene Straßen mit maximal zulässiger Tonnage. Ein strukturierter Wert von 0 bis N Ausprägungen mit 2 Untereigenschaften pro Element. Erste Untereigenschaft, eine von "roadId / roadName / roadLocation". Zweite Untereigenschaft, "maxTonnage".  - `name`: Der Name dieses Artikels.  - `openingHoursSpecification`: Ein strukturierter Wert, der Informationen über die Öffnungszeiten eines Ortes oder einer bestimmten Dienstleistung an einem Ort liefert  - `othersContractingCompany`: Eine Textliste, bei der jedes Element eine Zeichenkette mit dem Namen der vertragsschließenden Unternehmen unter der Verantwortung des Hauptvertragsunternehmens ist.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `railwayImpacted`: Von den Bauarbeiten betroffene Bahnstrecken. Ein strukturierter Wert von 0 bis N Vorkommen mit 2 Untereigenschaften pro Element. Erste Untereigenschaft, eine von "lineId / lineName / lineLocation". Zweite Untereigenschaft, eine von "segmentId / segmentName / segmentLocation".  - `roadImpacted`: Straßen, die von den Arbeiten betroffen sind, und die Einzelheiten der von den Arbeiten betroffenen Straßen. Ein strukturierter Wert von 0 bis N Vorkommen, wobei jedes Element eine Zeichenkette im folgenden Format ist: 'roadImpact':[Liste der betroffenen Segmente oder Freitext oder Geo-Eigenschaft, getrennt durch ein Komma]. Wenn "isMainRoadImpactedHTR" = true, ist das erste Element dieses.  - `roadImpactedMT`: Eine Liste der als Hauptverkehrsstraßen definierten Straßen, die von den Bauarbeiten betroffen sind. Die Werte sind auch in dem Attribut roadImpacted enthalten.  - `roadImpactedSA`: Eine Liste der als empfindliche Gebiete definierten Straßen, die von den Arbeiten betroffen sind. Die Werte sind auch in dem Attribut roadImpacted enthalten.  - `schoolBusImpacted`: Scholl Buslinien, die von den Bauarbeiten betroffen sind. Ein strukturierter Wert von 0 bis N Vorkommen mit 2 Untereigenschaften pro Element. Erste Untereigenschaft, eine von "lineId / lineName / lineLocation". Zweite Untereigenschaft, eine von "segmentId / segmentName / segmentLocation".  - `schoolImpacted`: Liste mit freiem Text oder [GeoProperty] oder ein Verweis auf eine Einheit [SCHOOL], falls vorhanden.  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der vollständig qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `startDate`: Datum und Uhrzeit des Beginns der Arbeiten im Format ISO8601 UTC. Das Attribut kann zusätzlich zum Attribut `workDate` verwendet werden, wenn es einem hervorzuhebenden Zeitintervall entspricht  - `stationImpacted`: Von den Arbeiten betroffener Bahnhof. Ein strukturierter Wert von 0 bis N Ausprägungen mit 2 Untereigenschaften pro Element. Erste Untereigenschaft, 'stationType'. Zweite Untereigenschaft, eine von "stationId / stationName / stationLocation".  - `subwayImpacted`: Von den Bauarbeiten betroffene U-Bahn-Linien. Ein strukturierter Wert von 0 bis N Vorkommen mit 2 Untereigenschaften pro Element. Erste Untereigenschaft, eine von 'lineId / lineName / lineLocation'. Zweite Untereigenschaft, eine von "segmentId / segmentName / segmentLocation".  - `territorialArea`: Territoriales Gebiet. Höhere Ebene als das Attribut "areaServed". Eine Liste von Freitext  - `tramwayImpacted`: Straßenbahnlinie, die von den Arbeiten betroffen ist. Ein strukturierter Wert von 0 bis N Vorkommen mit 2 Untereigenschaften pro Element. Erste Untereigenschaft, eine von 'lineId / lineName / lineLocation'. Zweite Untereigenschaft, eine von "segmentId / segmentName / segmentLocation".  - `type`: NGSI-Entitätstyp. Es muss CityWork sein  - `typeOfInterventionRequest`: Ursprüngliche Art des Antrags auf Durchführung der Arbeiten. Enum:'authorizationRequest, interventionNotice, other, urgentWorks'  - `workDate`: Datum und Uhrzeit (Tag oder Zeitraum) der Arbeiten. Sie kann durch eine bestimmte Zeitfolge dargestellt werden  - `workDisposition`: Spezifische Regeln für die Arbeiten. Ein strukturierter Wert von 0 bis N Vorkommen, wobei jedes Element das folgende Format hat: `Disposition`: mit Untereigenschaften `startDate`, `endDate`, `dayOfWeek`, `comment`. Enum:'alternatingLights , bicyclePathClosure, bicyclePathDeviation, bicyclePathReduction, circulationManualControl, laneClosure, laneDeviation, laneReduction, noRestriction, parkingForbidden, parkingModification, sidewalkClosure, sidewalkClosureOrReduction, sidewalkReduction, speedReduction'  - `workLastDateUpdate`: Letzter Termin für die Aktualisierung eines Vertragselements der Arbeit  - `workLevel`: Positionierung des Bauwerks in Bezug auf ein Bodenbezugssystem. Eine Kombination aus diesen Elementen. Enum:'Antenne, Boden, gemischt, andere, Dach, Oberfläche, Untergrund, Wand'  - `workNature`: Art des Werks. Eine Kombination aus diesen Werten.Enum:'additionalInvestigations, brushCutting, cleaning, collection, connection, consolidation, construction, control, counting, craneLifting, creation, demolition, drivingSwitch, experimentation, extension, filmShooting, Installation-OR-layout, investigation, landFill, maintenance, manholeOpening, ManholeOpeningToRestoreService, miscellaneousInstallation, mowingDeburring, Sonstiges, FreileitungsarbeitenEingriff, Beschneiden, Ziehen, Sanierung, Instandsetzung, Verstärkung, Erneuerung, Renovierung, Reparatur, Ersatz, Aufschüttung, Straßenschilder, Sicherheits- und Konformitätsarbeiten, SicherheitsschienenEinbau, Absteckung, AbstützungEinbau, OberflächenBesetzungsGenehmigung, Vermessung, Teerung, TonnageBefreiung, BaumSchnitt, GrabenÖffnung, Ausbau'  - `workNumber`: Dem Werk zugewiesene Nummer  - `workOtherImpact`: Andere Auswirkungen. Eine Liste der freien Werte  - `workReason`: Gründe für die Arbeiten im Falle eines dringenden Eingriffs. Eine Kombination aus diesen Werten. Enum:'Einsturz, Entgleisung, Feuer, Überschwemmung, Gasaustritt, Erdrutsch, Sonstiges, Stromausfall, Steinschlag, Absacken, Wasseraustritt'  - `workState`: Der Arbeit zugewiesene Nummer. Enum:'all, approved, authorized, canceled, completed, decreeToBeSigned, draft, editedDecrees, instructionInProgress, investigated, nonCompliantOccupation, open, pendingAuthorization, pendingCancellation, planningCompleted, pendingDocument, pendingExtension, pendingPlanning, planned, received, reject, supported, validatedInPlanning'  - `workTarget`: Kategorien von Arbeiten, die die verschiedenen Berufe betreffen. Eine Kombination aus diesen Elementen. Enum:'bicyclePath, busCorridor, catainers, cityMotorBike, cityBike, cityCar, cityScooter, coldAndAirCon, coldGroup, copperCable, CoringPenetrometry, drinkingWater, electricityNetworks, exploratoryWork, FeuerHydranten, frameRoof, Gasnetze, Generator, HistorischeDenkmäler, Infrastruktur, Landschaftsgebiet, MovingHoistNacelleTruck, Netzwerke, OffStreetParking, OptischeFasern, Andere, OverheadLine, PapiereSammlung, Gehweg, publicDecorativeLighting, publicDomain, publicTransport, railway, rainyWaters, rMTNetworks, roads, roadsAndPublicDomain, sanitation, scaffolding, sideWalk, speedReductionDevices, streetParking, surfaceOccupation, supportStructures, tagsAndPosters, telecomNetworks, telecom-RMT-VideoNetworks, trafficSignalingRegulation, tramway, urbanFurniture, urbanHeating, variousWorks, videoNetworks, vrd'  - `workZone`: Zone der Arbeiten. Eine Kombination aus diesen Werten. Enum:' Flughafen, Strand, Fahrradweg, Brücke, Buskorridor, Dock, Überschwemmungsgebiet, Hafen, Hubschrauberlandeplatz, bergiges Gebiet, OffRoad, andere, Parken, ParksGärten, Pfad, Schutzgebiet, Eisenbahnlinie, Risikogebiet, Fluss, Straße, felsiges Gebiet, SevesoGebiet, SideWalk, U-Bahnlinie, Straßenbahnlinie, Tunnel'    
+- `allowedVehicle`: Typ des zum Verkehr zugelassenen Fahrzeugs. Eine Kombination aus diesen Werten. Enum:'all Vehicle, bicycle, bus, car, companiesTrucks, emergencyVehicle, firefighters, lorry, motorcycle, police, subway, sweepingMachine, trailer, tramway, trucks, van'  - `alternateName`: Ein alternativer Name für diesen Artikel  - `busImpacted`: Buslinien, die von den Arbeiten betroffen sind. Ein strukturierter Wert von 0 bis N Ausprägungen mit 2 Untereigenschaften pro Element. Erste Untereigenschaft, eine von "lineId / lineName / lineLocation". Zweite Untereigenschaft, eine von "segmentId / segmentName / segmentLocation".  - `contactPoint`: Die Angaben zur Kontaktaufnahme mit dem Artikel.  - `contractingAuthority`: Name des öffentlichen Auftraggebers  - `countOfBusLineImpacted`: Anzahl der Buslinien, die von den Arbeiten betroffen sind  - `countOfDerogation`: Anzahl der gewährten Ausnahmeregelungen für das Werk Anzahl  - `countOfEventImpacted`: Anzahl der Ereignisse, die von den Arbeiten betroffen sind  - `countOfRailwayLineImpacted`: Anzahl der von den Bauarbeiten betroffenen Eisenbahnstrecken  - `countOfRoadImpacted`: Anzahl der von den Bauarbeiten betroffenen Straßen  - `countOfSchoolBusLineImpacted`: Anzahl der Schulbuslinien, die von den Arbeiten betroffen sind  - `countOfSchoolImpacted`: Anzahl der Universitäten, Schulen oder anderen Bildungseinrichtungen, die von den Arbeiten betroffen sind  - `countOfStationImpacted`: Anzahl der Bahnhöfe, die von den Arbeiten betroffen sind  - `countOfSubwayLineImpacted`: Anzahl der von den Bauarbeiten betroffenen U-Bahn-Linien  - `countOfTramwayLineImpacted`: Anzahl der von den Bauarbeiten betroffenen Straßenbahnlinien  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateLastReported`: Ein Zeitstempel, der den letzten Zeitpunkt angibt, zu dem das Gerät erfolgreich Daten gemeldet hat. Das Datum und die Uhrzeit dieser Beobachtung im ISO8601 UTC-Format  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `decrees`: Eine Textliste, bei der jedes Element eine Zeichenkette mit der herunterzuladenden URL oder dem Namen des Erlasses ist.  - `derogation`: Ausnahmegenehmigung für die Durchführung von Arbeiten an Tagen und zu Zeiten. Ein strukturierter Wert von 0 bis N Vorkommen, wobei jedes Element das folgende Format hat: "derogationType" mit den Untereigenschaften "startDate, endDate, dayOfWeek, comment".  - `description`: Eine Beschreibung dieses Artikels  - `encroachment`: Auswirkungen der Arbeiten auf den öffentlichen und privaten Bereich. Eine Kombination aus diesen Werten. Enum:'andere, privat, öffentlich'  - `endDate`: Enddatum und -uhrzeit der Arbeiten im ISO8601 UTC-Format. Das Attribut kann zusätzlich zum Attribut `workDate` verwendet werden, wenn es einem hervorzuhebenden Zeitintervall entspricht  - `eventsImpacted`: Liste mit freiem Text oder zur Entität [Ereignisse](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/Event/doc/spec.md), falls vorhanden.  - `id`: Eindeutiger Bezeichner der Entität  - `infrastructureFunction`:  Funktion der Infrastruktur, die von den Arbeiten betroffen ist. Enum:'Sammlung, Verteilung, Sonstiges, Transport'  - `isMainRoadImpactedHTR`: Wert, der angibt, ob die Hauptverkehrsstraße beeinträchtigt ist. Standardwert false. https://schema.org/Boolean  - `isMobile`: Merkmal für die Mobilität der Arbeiten: false für fest (Standard) und true für mobil  - `mainContractingCompany`: Das für die Arbeiten verantwortliche Hauptauftragnehmerunternehmen  - `maxAuthorizedTonnage`: Von den Arbeiten betroffene Straßen mit maximal zulässiger Tonnage. Ein strukturierter Wert von 0 bis N Ausprägungen mit 2 Untereigenschaften pro Element. Erste Untereigenschaft, eine von "roadId / roadName / roadLocation". Zweite Untereigenschaft, 'maxTonnage'.  - `name`: Der Name dieses Artikels.  - `openingHoursSpecification`: Ein strukturierter Wert, der Informationen über die Öffnungszeiten eines Ortes oder einer bestimmten Dienstleistung an einem Ort liefert  - `othersContractingCompany`: Eine Textliste, bei der jedes Element eine Zeichenkette mit dem Namen der vertragsschließenden Unternehmen unter der Verantwortung des Hauptvertragsunternehmens ist.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `railwayImpacted`: Von den Bauarbeiten betroffene Bahnstrecken. Ein strukturierter Wert von 0 bis N Vorkommen mit 2 Untereigenschaften pro Element. Erste Untereigenschaft, eine von "lineId / lineName / lineLocation". Zweite Untereigenschaft, eine von "segmentId / segmentName / segmentLocation".  - `roadImpacted`: Straßen, die von den Arbeiten betroffen sind, und Einzelheiten zu den von den Arbeiten betroffenen Straßen. Ein strukturierter Wert von 0 bis N Vorkommen, wobei jedes Element eine Zeichenkette im folgenden Format ist: 'roadImpact':[Liste der betroffenen Segmente oder Freitext oder Geo-Eigenschaft, getrennt durch ein Komma]. Wenn "isMainRoadImpactedHTR" = true, ist das erste Element dieses.  - `roadImpactedMT`: Eine Liste der als Hauptverkehrsstraßen definierten Straßen, die von den Bauarbeiten betroffen sind. Die Werte sind auch in dem Attribut roadImpacted enthalten.  - `roadImpactedSA`: Eine Liste der als empfindliche Gebiete definierten Straßen, die von den Arbeiten betroffen sind. Die Werte sind auch in dem Attribut roadImpacted enthalten.  - `schoolBusImpacted`: Scholl Buslinien, die von den Bauarbeiten betroffen sind. Ein strukturierter Wert von 0 bis N Vorkommen mit 2 Untereigenschaften pro Element. Erste Untereigenschaft, eine von "lineId / lineName / lineLocation". Zweite Untereigenschaft, eine von "segmentId / segmentName / segmentLocation".  - `schoolImpacted`: Liste mit freiem Text oder [GeoProperty] oder ein Verweis auf eine Einheit [SCHOOL], falls vorhanden.  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `startDate`: Datum und Uhrzeit des Beginns der Arbeiten im Format ISO8601 UTC. Das Attribut kann zusätzlich zum Attribut `workDate` verwendet werden, wenn es einem hervorzuhebenden Zeitintervall entspricht  - `stationImpacted`: Von den Arbeiten betroffener Bahnhof. Ein strukturierter Wert von 0 bis N Ausprägungen mit 2 Untereigenschaften pro Element. Erste Untereigenschaft, 'stationType'. Zweite Untereigenschaft, eine von "stationId / stationName / stationLocation".  - `subwayImpacted`: Von den Bauarbeiten betroffene U-Bahn-Linien. Ein strukturierter Wert von 0 bis N Vorkommen mit 2 Untereigenschaften pro Element. Erste Untereigenschaft, eine von 'lineId / lineName / lineLocation'. Zweite Untereigenschaft, eine von "segmentId / segmentName / segmentLocation".  - `territorialArea`: Territoriales Gebiet. Höhere Ebene als das Attribut "areaServed". Eine Liste von Freitext  - `tramwayImpacted`: Straßenbahnlinie, die von den Arbeiten betroffen ist. Ein strukturierter Wert von 0 bis N Vorkommen mit 2 Untereigenschaften pro Element. Erste Untereigenschaft, eine von 'lineId / lineName / lineLocation'. Zweite Untereigenschaft, eine von "segmentId / segmentName / segmentLocation".  - `type`: NGSI-Entitätstyp. Es muss CityWork sein  - `typeOfInterventionRequest`: Ursprüngliche Art des Antrags auf Durchführung der Arbeiten. Enum:'authorizationRequest, interventionNotice, other, urgentWorks'  - `workDate`: Datum und Uhrzeit (Tag oder Zeitraum) der Arbeiten. Sie kann durch eine bestimmte Zeitfolge dargestellt werden  - `workDisposition`: Spezifische Regeln für die Arbeiten. Ein strukturierter Wert von 0 bis N Vorkommen, wobei jedes Element das folgende Format hat: `Disposition`: mit Untereigenschaften `startDate`, `endDate`, `dayOfWeek`, `comment`. Enum:'alternatingLights , bicyclePathClosure, bicyclePathDeviation, bicyclePathReduction, circulationManualControl, laneClosure, laneDeviation, laneReduction, noRestriction, parkingForbidden, parkingModification, sidewalkClosure, sidewalkClosureOrReduction, sidewalkReduction, speedReduction'  - `workLastDateUpdate`: Letzter Termin für die Aktualisierung eines Vertragselements der Arbeit  - `workLevel`: Positionierung des Bauwerks in Bezug auf ein Bodenbezugssystem. Eine Kombination aus diesen Elementen. Enum:'Antenne, Boden, gemischt, andere, Dach, Oberfläche, Untergrund, Wand'  - `workNature`: Art des Werks. Eine Kombination aus diesen Werten.Enum:'additionalInvestigations, brushCutting, cleaning, collection, connection, consolidation, construction, control, counting, craneLifting, creation, demolition, drivingSwitch, experimentation, extension, filmShooting, Installation-OR-layout, investigation, landFill, maintenance, manholeOpening, ManholeOpeningToRestoreService, miscellaneousInstallation, mowingDeburring, Sonstiges, FreileitungsarbeitenEingriff, Beschneiden, Ziehen, Sanierung, Sanierung, Verstärkung, Erneuerung, Renovierung, Reparatur, Ersatz, Aufschüttung, Straßenschilder, Sicherheits- und Konformitätsarbeiten, SicherheitsschienenEinbau, Sicherung der Umgrenzung, StandortEinbau, Absteckung, UnterstützungEinbau, OberflächenBesetzungsGenehmigung, Vermessung, Teerung, TonnageBefreiung, BaumSchneiden, GrabenÖffnung, Ausbau'  - `workNumber`: Dem Werk zugewiesene Nummer  - `workOtherImpact`: Andere Auswirkungen. Eine Liste der freien Werte  - `workReason`: Gründe für die Arbeiten im Falle eines dringenden Eingriffs. Eine Kombination aus diesen Werten. Enum:'Einsturz, Entgleisung, Feuer, Überschwemmung, Gasaustritt, Erdrutsch, Sonstiges, Stromausfall, Steinschlag, Absacken, Wasseraustritt'  - `workState`: Der Arbeit zugewiesene Nummer. Enum:'all, approved, authorized, canceled, completed, decreeToBeSigned, draft, editedDecrees, instructionInProgress, investigated, nonCompliantOccupation, open, pendingAuthorization, pendingCancellation, planningCompleted, pendingDocument, pendingExtension, pendingPlanning, planned, received, reject, supported, validatedInPlanning'  - `workTarget`: Kategorien von Arbeiten, die die verschiedenen Berufe betreffen. Eine Kombination aus diesen Elementen. Enum:'bicyclePath, busCorridor, catainers, cityMotorBike, cityBike, cityCar, cityScooter, coldAndAirCon, coldGroup, copperCable, CoringPenetrometry, drinkingWater, electricityNetworks, exploratoryWork, FeuerHydranten, frameRoof, Gasnetze, Generator, HistorischeDenkmäler, Infrastruktur, Landschaftsgebiet, MovingHoistNacelleTruck, Netzwerke, OffStreetParking, OptischeFasern, Andere, OverheadLine, PapiereSammlung, Gehweg, publicDecorativeLighting, publicDomain, publicTransport, railway, rainyWaters, rMTNetworks, roads, roadsAndPublicDomain, sanitation, scaffolding, sideWalk, speedReductionDevices, streetParking, surfaceOccupation, supportStructures, tagsAndPosters, telecomNetworks, telecom-RMT-VideoNetworks, trafficSignalingRegulation, tramway, urbanFurniture, urbanHeating, variousWorks, videoNetworks, vrd'  - `workZone`: Zone der Arbeiten. Eine Kombination aus diesen Werten. Enum:' Flughafen, Strand, Fahrradweg, Brücke, Buskorridor, Dock, Überschwemmungsgebiet, Hafen, Hubschrauberlandeplatz, bergiges Gebiet, OffRoad, andere, Parken, ParksGärten, Pfad, Schutzgebiet, Eisenbahnlinie, Risikogebiet, Fluss, Straße, felsiges Gebiet, SevesoGebiet, SideWalk, U-Bahnlinie, Straßenbahnlinie, Tunnel'    
 Erforderliche Eigenschaften  
 - `id`  - `location`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -235,6 +237,39 @@ CityWork:
     contactPoint:    
       description: 'The details to contact with the item.'    
       properties:    
+        areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Supersedes serviceArea.'    
+          type: string    
+        availabilityRestriction:    
+          anyOf:    
+            - description: 'Property. Array of identifiers format of any NGSI entity.'    
+              items:    
+                maxLength: 256    
+                minLength: 1    
+                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+                type: string    
+              type: array    
+            - description: 'Property. Array of identifiers format of any NGSI entity.'    
+              items:    
+                format: uri    
+                type: string    
+              type: array    
+          description: 'Relationship. Model:''http://schema.org/hoursAvailable''. This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class.'    
+        availableLanguage:    
+          anyOf:    
+            - anyOf:    
+                - type: string    
+                - items:    
+                    type: string    
+                  type: array    
+          description: 'Property. Model:''http://schema.org/availableLanguage''. A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language'    
+        contactOption:    
+          anyOf:    
+            - type: string    
+            - items:    
+                type: string    
+              type: array    
+          description: 'Property. Model:''http://schema.org/contactOption''. An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).'    
         contactType:    
           description: 'Property. Contact type of this item.'    
           type: string    
@@ -242,8 +277,14 @@ CityWork:
           description: 'Property. Email address of owner.'    
           format: idn-email    
           type: string    
+        faxNumber:    
+          description: 'Property. Model:''http://schema.org/Text''. The fax number.'    
+          type: string    
         name:    
           description: 'Property. The name of this item.'    
+          type: string    
+        productSupported:    
+          description: 'Property. Model:''http://schema.org/Text''. The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").'    
           type: string    
         telephone:    
           description: 'Property. Telephone of this contact.'    
@@ -483,27 +524,58 @@ CityWork:
         properties:    
           closes:    
             format: time    
+            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           dayOfWeek:    
-            enum:    
-              - Monday    
-              - Tuesday    
-              - Wednesday    
-              - Thursday    
-              - Friday    
-              - Saturday    
-              - Sunday    
-              - PublicHolidays    
+            anyOf:    
+              - description: 'Property. Array of days of the week.'    
+                enum:    
+                  - Monday    
+                  - Tuesday    
+                  - Wednesday    
+                  - Thursday    
+                  - Friday    
+                  - Saturday    
+                  - Sunday    
+                  - PublicHolidays    
+                type: string    
+              - description: 'Property. Array of days of the week.'    
+                enum:    
+                  - https://schema.org/Monday    
+                  - https://schema.org/Tuesday    
+                  - https://schema.org/Wednesday    
+                  - https://schema.org/Thursday    
+                  - https://schema.org/Friday    
+                  - https://schema.org/Saturday    
+                  - https://schema.org/Sunday    
+                  - https://schema.org/PublicHolidays    
+                type: string    
+            description: 'Property. Model:''http://schema.org/dayOfWeek''. The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays).'    
             type: string    
           opens:    
             format: time    
+            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           validFrom:    
-            format: date-time    
-            type: string    
+            anyOf:    
+              - description: 'Property. Model:''http://schema.org/Date.'    
+                format: date    
+                type: string    
+              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                format: date-time    
+                type: string    
+            description: 'Property. The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
           validThrough:    
-            format: date-time    
+            anyOf:    
+              - description: 'Property. Model:''http://schema.org/Date.'    
+                format: date    
+                type: string    
+              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                format: date-time    
+                type: string    
+            description: 'Property. The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
             type: string    
+        type: object    
       minItems: 1    
       type: array    
       x-ngsi:    
@@ -1442,7 +1514,7 @@ CityWork:
 }  
 ```  
 #### CityWork NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für ein CityWork im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-v2 kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für ein CityWork im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:CityWork:CityWork:MNCA-CW-2020Q2-006",  
@@ -1955,854 +2027,854 @@ CityWork:
 Hier ist ein Beispiel für ein CityWork im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:CityWork:CityWork:MNCA-CW-2020Q2-006",  
-  "type": "CityWork",  
-  "name": "Nce-Airport-CW2020Q2-006",  
-  "alternateName": "AirPort global Observation",  
-  "description": "Widening work on access roads and installation of a new electrical and digital network for the connection of T1 & T2 terminals",  
-  "location": {  
-    "type": "Polygon",  
-    "coordinates": [  
-      [  
-        43.20315,  
-        7.20186  
-      ],  
-      [  
-        43.20384,  
-        7.20372  
-      ],  
-      [  
-        43.20388,  
-        7.20493  
-      ],  
-      [  
-        43.19938,  
-        7.20312  
-      ],  
-      [  
-        43.20045,  
-        7.20152  
-      ],  
-      [  
-        43.20315,  
-        7.20186  
-      ]  
-    ]  
-  },  
-  "areaServed": "Nice Aeroport",  
-  "territorialArea": "subwaypole Nice",  
-  "dateLastReported": "2020-04-02T10:30:00Z",  
-  "workNumber": "CW2020Q2-006",  
-  "workState": "open",  
-  "workDate": "2020-03-17T08:45:00Z/2020-04-22T18:45:00Z",  
-  "startDate": "2020-03-17T08:45:00Z",  
-  "endDate": "2020-04-22T18:45:00Z",  
-  "openingHoursSpecification": [  
-    {  
-      "dayOfWeek": "Monday",  
-      "opens": "07:00:00",  
-      "closes": "20:00:00"  
+    "id": "urn:ngsi-ld:CityWork:CityWork:MNCA-CW-2020Q2-006",  
+    "type": "CityWork",  
+    "allowedVehicle": [  
+        "firefighters",  
+        "police",  
+        "emergencyVehicle",  
+        "companiesTrucks"  
+    ],  
+    "alternateName": "AirPort global Observation",  
+    "areaServed": "Nice Aeroport",  
+    "busImpacted": [  
+        {  
+            "lineImpacted": "urn:ngsi-ld:BusLine:L205"  
+        }  
+    ],  
+    "contactPoint": {  
+        "name": "Service des AO"  
     },  
-    {  
-      "dayOfWeek": "Tuesday",  
-      "opens": "07:00:00",  
-      "closes": "20:00:00"  
-    },  
-    {  
-      "dayOfWeek": "Wednesday",  
-      "opens": "07:00:00",  
-      "closes": "20:00:00"  
-    },  
-    {  
-      "dayOfWeek": "Thursday",  
-      "opens": "07:00:00",  
-      "closes": "20:00:00"  
-    },  
-    {  
-      "dayOfWeek": "Friday",  
-      "opens": "07:00:00",  
-      "closes": "20:00:00"  
-    },  
-    {  
-      "dayOfWeek": "Saturday",  
-      "opens": "08:30:00",  
-      "closes": "17:00:00"  
-    }  
-  ],  
-  "contractingAuthority": "MNCA - subwaypole Nice Cote d'Azur",  
-  "contactPoint": {  
-    "name": "Service des AO"  
-  },  
-  "decrees": [  
-    "https://MNCA/CityWork/Decree/CW-2020Q2-006",  
-    "CW-2020Q2-006",  
-    "CW-2020Q2-006-Av-001",  
-    "CW-2020Q2-006-Av-002"  
-  ],  
-  "workLastDateUpdate": "2020-03-17T08:45:00Z",  
-  "mainContractingCompagny": "XRP - NICOLSPA",  
-  "othersContractingCompagny": [  
-    "VRD - Terrassement Nicois",  
-    "ELEC - Electricite de Nice",  
-    "NUM - Consortium operateur"  
-  ],  
-  "workLevel": [  
-    "ground",  
-    "underground"  
-  ],  
-  "workTarget": [  
-    "roads",  
-    "pavement",  
-    "electricityNetworks",  
-    "opticalFibers",  
-    "videoNetworks",  
-    "vrd"  
-  ],  
-  "workNature": [  
-    "landFill",  
-    "repair",  
-    "tonnageExemption",  
-    "securingPerimeter",  
-    "trenchOpening",  
-    "tarring"  
-  ],  
-  "infrastructureFunction": [  
-    "distribution",  
-    "collection"  
-  ],  
-  "encroachment": [  
-    "public",  
-    "private"  
-  ],  
-  "typeOfInterventionRequest": "authorizationRequest",  
-  "workReason": [  
-    "sagging",  
-    "powerCut"  
-  ],  
-  "workZone": [  
-    "road",  
-    "sideWalk",  
-    "busCorridor",  
-    "tramwayLine"  
-  ],  
-  "workDisposition": [  
-    {  
-      "disposition": "laneReduction",  
-      "startDate": "2020-05-11T08:00:00Z",  
-      "endDate": "2020-05-15T18:30:00Z",  
-      "dayOfWeek": [  
-        "Monday",  
-        "Tuesday",  
-        "Wednesday",  
-        "Thursday",  
-        "Friday"  
-      ],  
-      "comment": "Switching from 2 lanes to 1 lane - BusCorridor not available"  
-    },  
-    {  
-      "disposition": "sidewalkReduction",  
-      "startDate": "2020-05-12T00:00:00Z",  
-      "endDate": "2020-05-14T24:00:00Z",  
-      "dayOfWeek": [  
-        "Monday",  
-        "Tuesday",  
-        "Wednesday",  
-        "Thursday",  
-        "Friday"  
-      ]  
-    },  
-    {  
-      "disposition": "alternatingLights",  
-      "startDate": "2020-05-11T08:00:00Z",  
-      "endDate": "2020-05-15T18:30:00Z",  
-      "dayOfWeek": [  
-        "Monday",  
-        "Tuesday",  
-        "Wednesday",  
-        "Thursday",  
-        "Friday"  
-      ]  
-    },  
-    {  
-      "disposition": "speedReduction",  
-      "startDate": "2020-05-12T00:00:00Z",  
-      "dayOfWeek": [  
-        "Monday",  
-        "Tuesday",  
-        "Wednesday",  
-        "Thursday",  
-        "Friday",  
-        "Saturday",  
-        "Sunday"  
-      ],  
-      "comment": "Speed Switching from 2 lanes to 1 lane"  
-    }  
-  ],  
-  "workOtherImpact": [  
-      "layingCablesOnGround",  
-      "shopsTerrace"  
-    ]  
-  ,  
-  "isMobile": false,  
-  "countOfDerogation": 2,  
-  "derogation": [  
-    {  
-      "derogationType": "Work Nigth during Workday",  
-      "startDate": "2020-05-11T20:30:00Z",  
-      "endDate": "2020-05-15T23:30:00",  
-      "dayOfWeek": [  
-        "Monday",  
-        "Tuesday",  
-        "Wednesday",  
-        "Thursday",  
-        "Friday"  
-      ]  
-    },  
-    {  
-      "derogationType": "BRH",  
-      "startDate": "2020-05-13T20:30:00Z",  
-      "endDate": "2020-05-13T23:30:00Z",  
-      "dayOfWeek": [  
-        "Wednesday"  
-      ]  
-    }  
-  ],  
-  "isMainRoadImpactedHTR": true,  
-  "countOfRoadImpacted": 3,  
-  "roadImpacted": [  
-    {  
-      "roadId": "urn:ngsi-ld:Road:N202",  
-      "segmentImpacted": [  
-        "urn:ngsi-ld:RoadSegment:N202-12",  
-        "urn:ngsi-ld:RoadSegment:N202-13"  
-      ]  
-    },  
-    {  
-      "roadId": "Road:D021",  
-      "segmentImpacted": [  
-        "12",  
-        "13",  
-        "14",  
-        "15"  
-      ]  
-    },  
-    {  
-      "roadId": "urn:ngsi-ld:Road:D032",  
-      "segmentArea": {  
-        "type": "LineString",  
+    "contractingAuthority": "MNCA - subwaypole Nice Cote d'Azur",  
+    "countOfBusLineImpacted": 1,  
+    "countOfDerogation": 2,  
+    "countOfEventImpacted": 2,  
+    "countOfRailwayLineImpacted": 1,  
+    "countOfRoadImpacted": 3,  
+    "countOfSchoolImpacted": 2,  
+    "countOfStationImpacted": 4,  
+    "countOfTramwayLineImpacted": 2,  
+    "dateLastReported": "2020-04-02T10:30:00Z",  
+    "decrees": [  
+        "https://MNCA/CityWork/Decree/CW-2020Q2-006",  
+        "CW-2020Q2-006",  
+        "CW-2020Q2-006-Av-001",  
+        "CW-2020Q2-006-Av-002"  
+    ],  
+    "derogation": [  
+        {  
+            "derogationType": "Work Nigth during Workday",  
+            "startDate": "2020-05-11T20:30:00Z",  
+            "endDate": "2020-05-15T23:30:00",  
+            "dayOfWeek": [  
+                "Monday",  
+                "Tuesday",  
+                "Wednesday",  
+                "Thursday",  
+                "Friday"  
+            ]  
+        },  
+        {  
+            "derogationType": "BRH",  
+            "startDate": "2020-05-13T20:30:00Z",  
+            "endDate": "2020-05-13T23:30:00Z",  
+            "dayOfWeek": [  
+                "Wednesday"  
+            ]  
+        }  
+    ],  
+    "description": "Widening work on access roads and installation of a new electrical and digital network for the connection of T1 & T2 terminals",  
+    "encroachment": [  
+        "public",  
+        "private"  
+    ],  
+    "endDate": "2020-04-22T18:45:00Z",  
+    "eventsImpact": [  
+        "urn:ngsi-ld:events:MNCA-EV-JazzCimiez",  
+        "NiceMarathon"  
+    ],  
+    "infrastructureFunction": [  
+        "distribution",  
+        "collection"  
+    ],  
+    "isMainRoadImpactedHTR": true,  
+    "isMobile": false,  
+    "location": {  
+        "type": "Polygon",  
         "coordinates": [  
-          [  
-            102.0,  
-            0.0  
-          ],  
-          [  
-            103.0,  
-            1.0  
-          ],  
-          [  
-            104.0,  
-            0.0  
-          ],  
-          [  
-            105.0,  
-            1.0  
-          ]  
+            [  
+                43.20315,  
+                7.20186  
+            ],  
+            [  
+                43.20384,  
+                7.20372  
+            ],  
+            [  
+                43.20388,  
+                7.20493  
+            ],  
+            [  
+                43.19938,  
+                7.20312  
+            ],  
+            [  
+                43.20045,  
+                7.20152  
+            ],  
+            [  
+                43.20315,  
+                7.20186  
+            ]  
         ]  
-      }  
-    }  
-  ],  
-  "allowedVehicle": [  
-    "firefighters",  
-    "police",  
-    "emergencyVehicle",  
-    "companiesTrucks"  
-  ],  
-  "maxAuthorizedTonnage": [  
-    {  
-      "roadImpacted": "urn:ngsi-ld:Road:N202",  
-      "maxTonnage": 30  
     },  
-    {  
-      "roadImpacted": "Road:D021",  
-      "maxTonnage": 20  
-    },  
-    {  
-      "roadImpacted": "urn:ngsi-ld:Road:D032",  
-      "maxTonnage": 15.2  
-    }  
-  ],  
-  "countOfBusLineImpacted": 1,  
-  "busImpacted": [  
-    {  
-      "lineImpacted": "urn:ngsi-ld:BusLine:L205"  
-    }  
-  ],  
-  "countOfTramwayLineImpacted": 2,  
-  "tramwayImpacted": [  
-    {  
-      "lineImpacted": "TramWayLine:L01",  
-      "segmentImpacted": [  
-        "urn:ngsi-ld:TramWaySegment:L01-12",  
-        "urn:ngsi-ld:TramWaySegment:L01-19"  
-      ]  
-    },  
-    {  
-      "lineImpacted": "TramWayLine:L03",  
-      "segmentImpacted": [  
-        "urn:ngsi-ld:TramWaySegment:L03-19"  
-      ]  
-    }  
-  ],  
-  "countOfRailwayLineImpacted": 1,  
-  "railwayImpacted": [  
-    {  
-      "lineImpacted": "Nice-Grasse",  
-      "segmentImpact": [  
-        "Nice Saint Augustin section"  
-      ]  
-    }  
-  ],  
-  "countOfSchoolImpacted": 2,  
-  "schoolImpacted": [  
-    "Lycée Massena",  
-    "Université Campus Saint Jean"  
-  ],  
-  "countOfStationImpacted": 4,  
-  "stationImpacted": [  
-    {  
-      "stationType": "bus",  
-      "stationId": [  
-        "urn:ngsi-ld:station:L205-S13",  
-        "urn:ngsi-ld:station:L205-S14"  
-      ]  
-    },  
-    {  
-      "stationType": "tram",  
-      "stationId": [  
-        "L01-S12",  
-        "L01-S19"  
-      ]  
-    }  
-  ],  
-  "countOfEventImpacted": 2,  
-  "eventsImpact": [  
-    "urn:ngsi-ld:events:MNCA-EV-JazzCimiez",  
-    "NiceMarathon"  
-  ],  
-  "@context": [  
-    "https://smartdatamodels.org/context",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "mainContractingCompagny": "XRP - NICOLSPA",  
+    "maxAuthorizedTonnage": [  
+        {  
+            "roadImpacted": "urn:ngsi-ld:Road:N202",  
+            "maxTonnage": 30  
+        },  
+        {  
+            "roadImpacted": "Road:D021",  
+            "maxTonnage": 20  
+        },  
+        {  
+            "roadImpacted": "urn:ngsi-ld:Road:D032",  
+            "maxTonnage": 15.2  
+        }  
+    ],  
+    "name": "Nce-Airport-CW2020Q2-006",  
+    "openingHoursSpecification": [  
+        {  
+            "dayOfWeek": "Monday",  
+            "opens": "07:00:00",  
+            "closes": "20:00:00"  
+        },  
+        {  
+            "dayOfWeek": "Tuesday",  
+            "opens": "07:00:00",  
+            "closes": "20:00:00"  
+        },  
+        {  
+            "dayOfWeek": "Wednesday",  
+            "opens": "07:00:00",  
+            "closes": "20:00:00"  
+        },  
+        {  
+            "dayOfWeek": "Thursday",  
+            "opens": "07:00:00",  
+            "closes": "20:00:00"  
+        },  
+        {  
+            "dayOfWeek": "Friday",  
+            "opens": "07:00:00",  
+            "closes": "20:00:00"  
+        },  
+        {  
+            "dayOfWeek": "Saturday",  
+            "opens": "08:30:00",  
+            "closes": "17:00:00"  
+        }  
+    ],  
+    "othersContractingCompagny": [  
+        "VRD - Terrassement Nicois",  
+        "ELEC - Electricite de Nice",  
+        "NUM - Consortium operateur"  
+    ],  
+    "railwayImpacted": [  
+        {  
+            "lineImpacted": "Nice-Grasse",  
+            "segmentImpact": [  
+                "Nice Saint Augustin section"  
+            ]  
+        }  
+    ],  
+    "roadImpacted": [  
+        {  
+            "roadId": "urn:ngsi-ld:Road:N202",  
+            "segmentImpacted": [  
+                "urn:ngsi-ld:RoadSegment:N202-12",  
+                "urn:ngsi-ld:RoadSegment:N202-13"  
+            ]  
+        },  
+        {  
+            "roadId": "Road:D021",  
+            "segmentImpacted": [  
+                "12",  
+                "13",  
+                "14",  
+                "15"  
+            ]  
+        },  
+        {  
+            "roadId": "urn:ngsi-ld:Road:D032",  
+            "segmentArea": {  
+                "type": "LineString",  
+                "coordinates": [  
+                    [  
+                        102.0,  
+                        0.0  
+                    ],  
+                    [  
+                        103.0,  
+                        1.0  
+                    ],  
+                    [  
+                        104.0,  
+                        0.0  
+                    ],  
+                    [  
+                        105.0,  
+                        1.0  
+                    ]  
+                ]  
+            }  
+        }  
+    ],  
+    "schoolImpacted": [  
+        "Lyc\u00e9e Massena",  
+        "Universit\u00e9 Campus Saint Jean"  
+    ],  
+    "startDate": "2020-03-17T08:45:00Z",  
+    "stationImpacted": [  
+        {  
+            "stationType": "bus",  
+            "stationId": [  
+                "urn:ngsi-ld:station:L205-S13",  
+                "urn:ngsi-ld:station:L205-S14"  
+            ]  
+        },  
+        {  
+            "stationType": "tram",  
+            "stationId": [  
+                "L01-S12",  
+                "L01-S19"  
+            ]  
+        }  
+    ],  
+    "territorialArea": "subwaypole Nice",  
+    "tramwayImpacted": [  
+        {  
+            "lineImpacted": "TramWayLine:L01",  
+            "segmentImpacted": [  
+                "urn:ngsi-ld:TramWaySegment:L01-12",  
+                "urn:ngsi-ld:TramWaySegment:L01-19"  
+            ]  
+        },  
+        {  
+            "lineImpacted": "TramWayLine:L03",  
+            "segmentImpacted": [  
+                "urn:ngsi-ld:TramWaySegment:L03-19"  
+            ]  
+        }  
+    ],  
+    "typeOfInterventionRequest": "authorizationRequest",  
+    "workDate": "2020-03-17T08:45:00Z/2020-04-22T18:45:00Z",  
+    "workDisposition": [  
+        {  
+            "disposition": "laneReduction",  
+            "startDate": "2020-05-11T08:00:00Z",  
+            "endDate": "2020-05-15T18:30:00Z",  
+            "dayOfWeek": [  
+                "Monday",  
+                "Tuesday",  
+                "Wednesday",  
+                "Thursday",  
+                "Friday"  
+            ],  
+            "comment": "Switching from 2 lanes to 1 lane - BusCorridor not available"  
+        },  
+        {  
+            "disposition": "sidewalkReduction",  
+            "startDate": "2020-05-12T00:00:00Z",  
+            "endDate": "2020-05-14T24:00:00Z",  
+            "dayOfWeek": [  
+                "Monday",  
+                "Tuesday",  
+                "Wednesday",  
+                "Thursday",  
+                "Friday"  
+            ]  
+        },  
+        {  
+            "disposition": "alternatingLights",  
+            "startDate": "2020-05-11T08:00:00Z",  
+            "endDate": "2020-05-15T18:30:00Z",  
+            "dayOfWeek": [  
+                "Monday",  
+                "Tuesday",  
+                "Wednesday",  
+                "Thursday",  
+                "Friday"  
+            ]  
+        },  
+        {  
+            "disposition": "speedReduction",  
+            "startDate": "2020-05-12T00:00:00Z",  
+            "dayOfWeek": [  
+                "Monday",  
+                "Tuesday",  
+                "Wednesday",  
+                "Thursday",  
+                "Friday",  
+                "Saturday",  
+                "Sunday"  
+            ],  
+            "comment": "Speed Switching from 2 lanes to 1 lane"  
+        }  
+    ],  
+    "workLastDateUpdate": "2020-03-17T08:45:00Z",  
+    "workLevel": [  
+        "ground",  
+        "underground"  
+    ],  
+    "workNature": [  
+        "landFill",  
+        "repair",  
+        "tonnageExemption",  
+        "securingPerimeter",  
+        "trenchOpening",  
+        "tarring"  
+    ],  
+    "workNumber": "CW2020Q2-006",  
+    "workOtherImpact": [  
+        "layingCablesOnGround",  
+        "shopsTerrace"  
+    ],  
+    "workReason": [  
+        "sagging",  
+        "powerCut"  
+    ],  
+    "workState": "open",  
+    "workTarget": [  
+        "roads",  
+        "pavement",  
+        "electricityNetworks",  
+        "opticalFibers",  
+        "videoNetworks",  
+        "vrd"  
+    ],  
+    "workZone": [  
+        "road",  
+        "sideWalk",  
+        "busCorridor",  
+        "tramwayLine"  
+    ],  
+    "@context": [  
+        "https://smartdatamodels.org/context",  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### CityWork NGSI-LD normalisiert Beispiel  
 Hier ist ein Beispiel für ein CityWork im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:CityWork:CityWork:MNCA-CW-2020Q2-006",  
-  "type": "CityWork",  
-  "name": {  
-    "type": "Property",  
-    "value": "Nce-Airport-CW2020Q2-006"  
-  },  
-  "alternateName": {  
-    "type": "Property",  
-    "value": "AirPort global Observation"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Widening work on access roads and installation of a new electrical and digital network for the connection of T1 & T2 terminals"  
-  },  
-  "location": {  
-    "type": "Geoproperty",  
-    "value": {  
-      "type": "Polygon",  
-      "coordinates": [  
-        [  
-          43.20315,  
-          7.20186  
-        ],  
-        [  
-          43.20384,  
-          7.20372  
-        ],  
-        [  
-          43.20388,  
-          7.20493  
-        ],  
-        [  
-          43.19938,  
-          7.20312  
-        ],  
-        [  
-          43.20045,  
-          7.20152  
-        ],  
-        [  
-          43.20315,  
-          7.20186  
-        ]  
-      ]  
-    }  
-  },  
-  "areaServed": {  
-    "type": "Property",  
-    "value": "Nice Aeroport"  
-  },  
-  "territorialArea": {  
-    "type": "Property",  
-    "value": "subwaypole Nice"  
-  },  
-  "dateLastReported": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2020-04-02T10:30:00Z"  
-    }  
-  },  
-  "workNumber": {  
-    "type": "Property",  
-    "value": "CW2020Q2-006"  
-  },  
-  "workState": {  
-    "type": "Property",  
-    "value": "open"  
-  },  
-  "workDate": {  
-    "type": "DateTime",  
-    "value": "2020-03-17T08:45:00Z/2020-04-22T18:45:00Z"  
-  },  
-  "startDate": {  
-    "type": "DateTime",  
-    "value": "2020-03-17T08:45:00Z"  
-  },  
-  "endDate": {  
-    "type": "DateTime",  
-    "value": "2020-04-22T18:45:00Z"  
-  },  
-  "openingHoursSpecification": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "dayOfWeek": "Monday",  
-        "Opens": "07.00",  
-        "closes": "20.00"  
-      },  
-      {  
-        "dayOfWeek": "Tuesday",  
-        "Opens": "07.00",  
-        "closes": "20.00"  
-      },  
-      {  
-        "dayOfWeek": "Wednesday",  
-        "Opens": "07.00",  
-        "closes": "20.00"  
-      },  
-      {  
-        "dayOfWeek": "Thursday",  
-        "Opens": "07.00",  
-        "closes": "20.00"  
-      },  
-      {  
-        "dayOfWeek": "Friday",  
-        "Opens": "07.00",  
-        "closes": "20.00"  
-      },  
-      {  
-        "dayOfWeek": "Saturday",  
-        "Opens": "08.30",  
-        "closes": "17.00"  
-      }  
-    ]  
-  },  
-  "contractingAuthority": {  
-    "type": "Property",  
-    "value": "MNCA - subwaypole Nice Cote d'Azur"  
-  },  
-  "contactPoint": {  
-    "type": "Property",  
-    "value": "Service des AO"  
-  },  
-  "decrees": {  
-    "type": "Property",  
-    "value": [  
-      "https://MNCA/CityWork/Decree/CW-2020Q2-006",  
-      "CW-2020Q2-006",  
-      "CW-2020Q2-006-Av-001",  
-      "CW-2020Q2-006-Av-002"  
-    ]  
-  },  
-  "workLastDateUpdate": {  
-    "type": "DateTime",  
-    "value": "2020-03-17T08:45:00Z"  
-  },  
-  "mainContractingCompany": {  
-    "type": "Property",  
-    "value": "XRP - NICOLSPA"  
-  },  
-  "othersContractingCompany": {  
-    "type": "Property",  
-    "value": [  
-      "VRD - Terrassement Nicois",  
-      "ELEC - Electricite de Nice",  
-      "NUM - Consortium operateur"  
-    ]  
-  },  
-  "workLevel": {  
-    "type": "Property",  
-    "value": [  
-      "ground",  
-      "underGround"  
-    ]  
-  },  
-  "workTarget": {  
-    "type": "Property",  
-    "value": [  
-      "electricityNetworks",  
-      "opticalFibers",  
-      "pavement",  
-      "roads",  
-      "videoNetworks",  
-      "vrd"  
-    ]  
-  },  
-  "workNature": {  
-    "type": "Property",  
-    "value": [  
-      "landFill",  
-      "repair",  
-      "securingPerimeter",  
-      "tarring",  
-      "tonnageExemption",  
-      "trenchOpening"  
-    ]  
-  },  
-  "infrastructureFunction": {  
-    "type": "Property",  
-    "value": [  
-      "collection",  
-      "distribution"  
-    ]  
-  },  
-  "encroachment": {  
-    "type": "Property",  
-    "value": [  
-      "private",  
-      "public"  
-    ]  
-  },  
-  "typeOfInteventionRequest": {  
-    "type": "Property",  
-    "value": "authorizationRequest"  
-  },  
-  "workReason": {  
-    "type": "Property",  
-    "value": [  
-      "powerCut",  
-      "sagging"  
-    ]  
-  },  
-  "workZone": {  
-    "type": "Property",  
-    "value": [  
-      "busCorridor",  
-      "road",  
-      "sideWalk",  
-      "tramwayLine"  
-    ]  
-  },  
-  "workDisposition": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "disposition": "laneReduction",  
-        "startDate": "2020-05-11T08:00:00Z",  
-        "endDate": "2020-05-15T18:30:00Z",  
-        "dayOfWeek": [  
-          "Monday",  
-          "Tuesday",  
-          "Wednesday",  
-          "Thursday",  
-          "Friday"  
-        ],  
-        "comment": "Switching from 2 lanes to 1 lane - BusCorridor not available"  
-      },  
-      {  
-        "disposition": "sidewalkReduction",  
-        "startDate": "2020-05-12T00:00:00Z",  
-        "endDate": "2020-05-14T24:00:00Z",  
-        "dayOfWeek": [  
-          "Monday",  
-          "Tuesday",  
-          "Wednesday",  
-          "Thursday",  
-          "Friday",  
-          "Saturday",  
-          "Sunday"  
-        ]  
-      },  
-      {  
-        "disposition": "alternatingLights",  
-        "startDate": "2020-05-11T08:00:00Z",  
-        "endDate": "2020-05-15T18:30:00Z",  
-        "dayOfWeek": [  
-          "Monday",  
-          "Tuesday",  
-          "Wednesday",  
-          "Thursday",  
-          "Friday"  
-        ]  
-      },  
-      {  
-        "disposition": "speedReduction",  
-        "startDate": "2020-05-12T00:00:00Z",  
-        "dayOfWeek": [  
-          "Monday",  
-          "Tuesday",  
-          "Wednesday",  
-          "Thursday",  
-          "Friday",  
-          "Saturday",  
-          "Sunday"  
-        ],  
-        "comment": "Speed Switching from 2 lanes to 1 lane"  
-      }  
-    ],  
-    "workOtherImpact": {  
-      "type": "Property",  
-      "value": [  
-        "layingCablesOnGround",  
-        "shopsTerrace"  
-      ]  
+    "id": "urn:ngsi-ld:CityWork:CityWork:MNCA-CW-2020Q2-006",  
+    "type": "CityWork",  
+    "alternateName": {  
+        "type": "Property",  
+        "value": "AirPort global Observation"  
     },  
-    "isMobile": {  
-      "type": "Property",  
-      "value": false  
+    "areaServed": {  
+        "type": "Property",  
+        "value": "Nice Aeroport"  
     },  
-    "countOfDerogation": {  
-      "type": "Property",  
-      "value": 2  
+    "contactPoint": {  
+        "type": "Property",  
+        "value": "Service des AO"  
     },  
-    "derogation": {  
-      "type": "Property",  
-      "value": [  
-        {  
-          "derogationType": "Work Nigth during Workday",  
-          "startDate": "2020-05-11T20:30:00Z",  
-          "endDate": "2020-05-15T23:30:00",  
-          "dayOfWeek": [  
-            "Monday",  
-            "Tuesday",  
-            "Wednesday",  
-            "Thursday",  
-            "Friday",  
-            "Saturday",  
-            "Sunday"  
-          ]  
-        },  
-        {  
-          "derogationType": "BRH",  
-          "startDate": "2020-05-13T20:30:00Z ",  
-          "endDate": "2020-05-13T23:30:00Z",  
-          "dayOfWeek": "Wednesday"  
+    "contractingAuthority": {  
+        "type": "Property",  
+        "value": "MNCA - subwaypole Nice Cote d'Azur"  
+    },  
+    "dateLastReported": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2020-04-02T10:30:00Z"  
         }  
-      ]  
     },  
-    "isMainRoadImpactedHTR": {  
-      "type": "Property",  
-      "value": true  
+    "decrees": {  
+        "type": "Property",  
+        "value": [  
+            "https://MNCA/CityWork/Decree/CW-2020Q2-006",  
+            "CW-2020Q2-006",  
+            "CW-2020Q2-006-Av-001",  
+            "CW-2020Q2-006-Av-002"  
+        ]  
     },  
-    "countOfRoadImpacted": {  
-      "type": "Property",  
-      "value": 3  
+    "description": {  
+        "type": "Property",  
+        "value": "Widening work on access roads and installation of a new electrical and digital network for the connection of T1 & T2 terminals"  
     },  
-    "roadImpacted": {  
-      "type": "Property",  
-      "value": [  
-        {  
-          "roadId": "urn:ngsi-ld:Road:N202",  
-          "segmentId": [  
-            "urn:ngsi-ld:RoadSegment:N202-12",  
-            "urn:ngsi-ld:RoadSegment:N202-13"  
-          ]  
-        },  
-        {  
-          "roadId": "Road:D021",  
-          "segmentName": [  
-            "Nº 12",  
-            "Nº 13",  
-            "Nº 14"  
-          ]  
-        },  
-        {  
-          "roadId": "urn:ngsi-ld:Road:D032",  
-          "segmentLocation": [  
-            {  
-              "type": "LineString",  
-              "coordinates": [  
+    "encroachment": {  
+        "type": "Property",  
+        "value": [  
+            "private",  
+            "public"  
+        ]  
+    },  
+    "endDate": {  
+        "type": "DateTime",  
+        "value": "2020-04-22T18:45:00Z"  
+    },  
+    "infrastructureFunction": {  
+        "type": "Property",  
+        "value": [  
+            "collection",  
+            "distribution"  
+        ]  
+    },  
+    "location": {  
+        "type": "Geoproperty",  
+        "value": {  
+            "type": "Polygon",  
+            "coordinates": [  
                 [  
-                  102.0,  
-                  0.0  
+                    43.20315,  
+                    7.20186  
                 ],  
                 [  
-                  103.0,  
-                  1.0  
+                    43.20384,  
+                    7.20372  
                 ],  
                 [  
-                  104.0,  
-                  0.0  
+                    43.20388,  
+                    7.20493  
                 ],  
                 [  
-                  105.0,  
-                  1.0  
+                    43.19938,  
+                    7.20312  
+                ],  
+                [  
+                    43.20045,  
+                    7.20152  
+                ],  
+                [  
+                    43.20315,  
+                    7.20186  
                 ]  
-              ]  
+            ]  
+        }  
+    },  
+    "mainContractingCompany": {  
+        "type": "Property",  
+        "value": "XRP - NICOLSPA"  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Nce-Airport-CW2020Q2-006"  
+    },  
+    "openingHoursSpecification": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "dayOfWeek": "Monday",  
+                "Opens": "07.00",  
+                "closes": "20.00"  
             },  
             {  
-              "type": "Point",  
-              "coordinates": [  
-                43.655675,  
-                7.161232  
-              ]  
+                "dayOfWeek": "Tuesday",  
+                "Opens": "07.00",  
+                "closes": "20.00"  
+            },  
+            {  
+                "dayOfWeek": "Wednesday",  
+                "Opens": "07.00",  
+                "closes": "20.00"  
+            },  
+            {  
+                "dayOfWeek": "Thursday",  
+                "Opens": "07.00",  
+                "closes": "20.00"  
+            },  
+            {  
+                "dayOfWeek": "Friday",  
+                "Opens": "07.00",  
+                "closes": "20.00"  
+            },  
+            {  
+                "dayOfWeek": "Saturday",  
+                "Opens": "08.30",  
+                "closes": "17.00"  
             }  
-          ]  
-        },  
-        {  
-          "roadLocation": {  
-            "type": "Point",  
-            "coordinates": [  
-              43.67428,  
-              7.161589  
+        ]  
+    },  
+    "othersContractingCompany": {  
+        "type": "Property",  
+        "value": [  
+            "VRD - Terrassement Nicois",  
+            "ELEC - Electricite de Nice",  
+            "NUM - Consortium operateur"  
+        ]  
+    },  
+    "startDate": {  
+        "type": "DateTime",  
+        "value": "2020-03-17T08:45:00Z"  
+    },  
+    "territorialArea": {  
+        "type": "Property",  
+        "value": "subwaypole Nice"  
+    },  
+    "typeOfInteventionRequest": {  
+        "type": "Property",  
+        "value": "authorizationRequest"  
+    },  
+    "workDate": {  
+        "type": "DateTime",  
+        "value": "2020-03-17T08:45:00Z/2020-04-22T18:45:00Z"  
+    },  
+    "workDisposition": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "disposition": "laneReduction",  
+                "startDate": "2020-05-11T08:00:00Z",  
+                "endDate": "2020-05-15T18:30:00Z",  
+                "dayOfWeek": [  
+                    "Monday",  
+                    "Tuesday",  
+                    "Wednesday",  
+                    "Thursday",  
+                    "Friday"  
+                ],  
+                "comment": "Switching from 2 lanes to 1 lane - BusCorridor not available"  
+            },  
+            {  
+                "disposition": "sidewalkReduction",  
+                "startDate": "2020-05-12T00:00:00Z",  
+                "endDate": "2020-05-14T24:00:00Z",  
+                "dayOfWeek": [  
+                    "Monday",  
+                    "Tuesday",  
+                    "Wednesday",  
+                    "Thursday",  
+                    "Friday",  
+                    "Saturday",  
+                    "Sunday"  
+                ]  
+            },  
+            {  
+                "disposition": "alternatingLights",  
+                "startDate": "2020-05-11T08:00:00Z",  
+                "endDate": "2020-05-15T18:30:00Z",  
+                "dayOfWeek": [  
+                    "Monday",  
+                    "Tuesday",  
+                    "Wednesday",  
+                    "Thursday",  
+                    "Friday"  
+                ]  
+            },  
+            {  
+                "disposition": "speedReduction",  
+                "startDate": "2020-05-12T00:00:00Z",  
+                "dayOfWeek": [  
+                    "Monday",  
+                    "Tuesday",  
+                    "Wednesday",  
+                    "Thursday",  
+                    "Friday",  
+                    "Saturday",  
+                    "Sunday"  
+                ],  
+                "comment": "Speed Switching from 2 lanes to 1 lane"  
+            }  
+        ],  
+        "workOtherImpact": {  
+            "type": "Property",  
+            "value": [  
+                "layingCablesOnGround",  
+                "shopsTerrace"  
             ]  
-          }  
-        }  
-      ]  
-    },  
-    "allowedVehicle": {  
-      "type": "Property",  
-      "value": [  
-        "companiesTrucks",  
-        "emergencyVehicle",  
-        "firefighters",  
-        "police"  
-      ]  
-    },  
-    "maxAuthorizedTonnage": {  
-      "type": "Property",  
-      "value": [  
-        {  
-          "roadImpacted": "urn:ngsi-ld:Road:N202",  
-          "maxTonnage": 30  
         },  
-        {  
-          "roadImpacted": "Road:D021",  
-          "maxTonnage": 20  
+        "isMobile": {  
+            "type": "Property",  
+            "value": false  
         },  
-        {  
-          "roadImpacted": "urn:ngsi-ld:Road:D032",  
-          "maxTonnage": 15.2  
-        }  
-      ]  
-    },  
-    "countOfBusLineImpacted": {  
-      "type": "Property",  
-      "value": 1  
-    },  
-    "busImpacted": {  
-      "type": "Property",  
-      "value": [  
-        {  
-          "lineImpacted": "urn:ngsi-ld:BusLine:L205"  
-        }  
-      ]  
-    },  
-    "countOfTramwayLineImpacted": {  
-      "type": "Property",  
-      "value": 2  
-    },  
-    "tramwayImpacted": {  
-      "type": "Property ",  
-      "value": [  
-        {  
-          "lineImpacted": "TramWayLine:L01",  
-          "segmentImpacted": [  
-            "urn:ngsi-ld:TramWaySegment:L01-12",  
-            "urn:ngsi-ld:TramWaySegment:L01-19"  
-          ]  
+        "countOfDerogation": {  
+            "type": "Property",  
+            "value": 2  
         },  
-        {  
-          "lineImpacted": "TramWayLine:L03",  
-          "segmentImpacted": [  
-            "urn:ngsi-ld:TramWaySegment:L03-19"  
-          ]  
-        }  
-      ]  
-    },  
-    "countOfRailwayLineImpacted": {  
-      "type": "Property",  
-      "value": 1  
-    },  
-    "railwayImpacted": {  
-      "type": "Property ",  
-      "value": [  
-        {  
-          "lineImpacted": "Nice-Grasse",  
-          "segmentImpact": [  
-            "Nice Saint Augustin section"  
-          ]  
-        }  
-      ]  
-    },  
-    "countOfSchoolImpacted": {  
-      "type": "Property",  
-      "value": 2  
-    },  
-    "schoolImpacted": {  
-      "type": "Property",  
-      "value": [  
-        "Lycée Massena",  
-        "Université Campus Saint Jean"  
-      ]  
-    },  
-    "countOfStationImpacted": {  
-      "type": "Property",  
-      "value": 4  
-    },  
-    "stationImpacted": {  
-      "type": "Property ",  
-      "value": [  
-        {  
-          "stationType": "bus",  
-          "stationId": [  
-            "urn:ngsi-ld:station:L205-S13",  
-            "urn:ngsi-ld:station:L205-S14"  
-          ]  
+        "derogation": {  
+            "type": "Property",  
+            "value": [  
+                {  
+                    "derogationType": "Work Nigth during Workday",  
+                    "startDate": "2020-05-11T20:30:00Z",  
+                    "endDate": "2020-05-15T23:30:00",  
+                    "dayOfWeek": [  
+                        "Monday",  
+                        "Tuesday",  
+                        "Wednesday",  
+                        "Thursday",  
+                        "Friday",  
+                        "Saturday",  
+                        "Sunday"  
+                    ]  
+                },  
+                {  
+                    "derogationType": "BRH",  
+                    "startDate": "2020-05-13T20:30:00Z ",  
+                    "endDate": "2020-05-13T23:30:00Z",  
+                    "dayOfWeek": "Wednesday"  
+                }  
+            ]  
         },  
-        {  
-          "stationType": "tram",  
-          "stationId": [  
-            "L01-S12",  
-            "L01-S19"  
-          ]  
-        }  
-      ]  
+        "isMainRoadImpactedHTR": {  
+            "type": "Property",  
+            "value": true  
+        },  
+        "countOfRoadImpacted": {  
+            "type": "Property",  
+            "value": 3  
+        },  
+        "roadImpacted": {  
+            "type": "Property",  
+            "value": [  
+                {  
+                    "roadId": "urn:ngsi-ld:Road:N202",  
+                    "segmentId": [  
+                        "urn:ngsi-ld:RoadSegment:N202-12",  
+                        "urn:ngsi-ld:RoadSegment:N202-13"  
+                    ]  
+                },  
+                {  
+                    "roadId": "Road:D021",  
+                    "segmentName": [  
+                        "N\u00ba 12",  
+                        "N\u00ba 13",  
+                        "N\u00ba 14"  
+                    ]  
+                },  
+                {  
+                    "roadId": "urn:ngsi-ld:Road:D032",  
+                    "segmentLocation": [  
+                        {  
+                            "type": "LineString",  
+                            "coordinates": [  
+                                [  
+                                    102.0,  
+                                    0.0  
+                                ],  
+                                [  
+                                    103.0,  
+                                    1.0  
+                                ],  
+                                [  
+                                    104.0,  
+                                    0.0  
+                                ],  
+                                [  
+                                    105.0,  
+                                    1.0  
+                                ]  
+                            ]  
+                        },  
+                        {  
+                            "type": "Point",  
+                            "coordinates": [  
+                                43.655675,  
+                                7.161232  
+                            ]  
+                        }  
+                    ]  
+                },  
+                {  
+                    "roadLocation": {  
+                        "type": "Point",  
+                        "coordinates": [  
+                            43.67428,  
+                            7.161589  
+                        ]  
+                    }  
+                }  
+            ]  
+        },  
+        "allowedVehicle": {  
+            "type": "Property",  
+            "value": [  
+                "companiesTrucks",  
+                "emergencyVehicle",  
+                "firefighters",  
+                "police"  
+            ]  
+        },  
+        "maxAuthorizedTonnage": {  
+            "type": "Property",  
+            "value": [  
+                {  
+                    "roadImpacted": "urn:ngsi-ld:Road:N202",  
+                    "maxTonnage": 30  
+                },  
+                {  
+                    "roadImpacted": "Road:D021",  
+                    "maxTonnage": 20  
+                },  
+                {  
+                    "roadImpacted": "urn:ngsi-ld:Road:D032",  
+                    "maxTonnage": 15.2  
+                }  
+            ]  
+        },  
+        "countOfBusLineImpacted": {  
+            "type": "Property",  
+            "value": 1  
+        },  
+        "busImpacted": {  
+            "type": "Property",  
+            "value": [  
+                {  
+                    "lineImpacted": "urn:ngsi-ld:BusLine:L205"  
+                }  
+            ]  
+        },  
+        "countOfTramwayLineImpacted": {  
+            "type": "Property",  
+            "value": 2  
+        },  
+        "tramwayImpacted": {  
+            "type": "Property ",  
+            "value": [  
+                {  
+                    "lineImpacted": "TramWayLine:L01",  
+                    "segmentImpacted": [  
+                        "urn:ngsi-ld:TramWaySegment:L01-12",  
+                        "urn:ngsi-ld:TramWaySegment:L01-19"  
+                    ]  
+                },  
+                {  
+                    "lineImpacted": "TramWayLine:L03",  
+                    "segmentImpacted": [  
+                        "urn:ngsi-ld:TramWaySegment:L03-19"  
+                    ]  
+                }  
+            ]  
+        },  
+        "countOfRailwayLineImpacted": {  
+            "type": "Property",  
+            "value": 1  
+        },  
+        "railwayImpacted": {  
+            "type": "Property ",  
+            "value": [  
+                {  
+                    "lineImpacted": "Nice-Grasse",  
+                    "segmentImpact": [  
+                        "Nice Saint Augustin section"  
+                    ]  
+                }  
+            ]  
+        },  
+        "countOfSchoolImpacted": {  
+            "type": "Property",  
+            "value": 2  
+        },  
+        "schoolImpacted": {  
+            "type": "Property",  
+            "value": [  
+                "Lyc\u00e9e Massena",  
+                "Universit\u00e9 Campus Saint Jean"  
+            ]  
+        },  
+        "countOfStationImpacted": {  
+            "type": "Property",  
+            "value": 4  
+        },  
+        "stationImpacted": {  
+            "type": "Property ",  
+            "value": [  
+                {  
+                    "stationType": "bus",  
+                    "stationId": [  
+                        "urn:ngsi-ld:station:L205-S13",  
+                        "urn:ngsi-ld:station:L205-S14"  
+                    ]  
+                },  
+                {  
+                    "stationType": "tram",  
+                    "stationId": [  
+                        "L01-S12",  
+                        "L01-S19"  
+                    ]  
+                }  
+            ]  
+        },  
+        "countOfEventImpacted": {  
+            "type": "Property",  
+            "value": 2  
+        },  
+        "eventsImpact": {  
+            "type": "Property",  
+            "value": [  
+                "urn:ngsi-ld:events:MNCA-EV-JazzCimiez",  
+                "NiceMarathon"  
+            ]  
+        },  
+        "@context": [  
+            "https://smartdatamodels.org/ld/context",  
+            "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        ]  
     },  
-    "countOfEventImpacted": {  
-      "type": "Property",  
-      "value": 2  
+    "workLastDateUpdate": {  
+        "type": "DateTime",  
+        "value": "2020-03-17T08:45:00Z"  
     },  
-    "eventsImpact": {  
-      "type": "Property",  
-      "value": [  
-        "urn:ngsi-ld:events:MNCA-EV-JazzCimiez",  
-        "NiceMarathon"  
-      ]  
+    "workLevel": {  
+        "type": "Property",  
+        "value": [  
+            "ground",  
+            "underGround"  
+        ]  
     },  
-    "@context": [  
-      "https://smartdatamodels.org/ld/context",  
-      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
-  }  
+    "workNature": {  
+        "type": "Property",  
+        "value": [  
+            "landFill",  
+            "repair",  
+            "securingPerimeter",  
+            "tarring",  
+            "tonnageExemption",  
+            "trenchOpening"  
+        ]  
+    },  
+    "workNumber": {  
+        "type": "Property",  
+        "value": "CW2020Q2-006"  
+    },  
+    "workReason": {  
+        "type": "Property",  
+        "value": [  
+            "powerCut",  
+            "sagging"  
+        ]  
+    },  
+    "workState": {  
+        "type": "Property",  
+        "value": "open"  
+    },  
+    "workTarget": {  
+        "type": "Property",  
+        "value": [  
+            "electricityNetworks",  
+            "opticalFibers",  
+            "pavement",  
+            "roads",  
+            "videoNetworks",  
+            "vrd"  
+        ]  
+    },  
+    "workZone": {  
+        "type": "Property",  
+        "value": [  
+            "busCorridor",  
+            "road",  
+            "sideWalk",  
+            "tramwayLine"  
+        ]  
+    }  
 }  
 ```  
 Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  

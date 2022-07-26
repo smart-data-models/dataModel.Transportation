@@ -1,12 +1,14 @@
-Entidad: TransportStation  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entidad: TransportStation  
 =========================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.Transportation/blob/master/TransportStation/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descripción global: **El modelo de datos es una descripción general de las estaciones urbanas (Metro, Autobús, Tranvía, Helipuerto, ...) según la norma GFTS https://developers.google.com/transit/gtfs/reference/#stopstxt, así como la descripción detallada de las mismas (medios de acceso, andén, asistencia, ...).**.  
+versión: 0.1.2  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `contactPoint`: Los datos para contactar con el artículo.  - `contractingAuthority`: Nombre del poder adjudicador.  - `contractingCompany`: Nombre de la empresa contratante responsable de la explotación de la estación.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateLastReported`: Una marca de tiempo que denota la última vez que el dispositivo comunicó datos con éxito. Fecha y hora en formato ISO8601 UTC.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `dimension`: Dimensión global. El formato está estructurado por una subpropiedad de 3 elementos. El código de la unidad (texto) se da utilizando los [Códigos comunes de UN/CEFACT](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Por ejemplo, **MTR** representa Metros  - `id`: Identificador único de la entidad  - `installationMode`: Ubicación relativa a la referencia de tierra. Enum:'aéreo, terrestre, subterráneo, submarino'  - `inventory`: Mapeo general de datos sólo para `locationType` = 0, 1, 3, 4. El formato está estructurado por una subpropiedad de 4 elementos.  - `levelId`: Planta en la que se encuentra la ubicación. Índice numérico asociado a la planta. Indica la posición relativa de esta planta en relación con las demás. El índice 0 indica la planta baja. Las plantas por encima del nivel del suelo se indican con índices positivos, y las etapas subterráneas con índices negativos.  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `locationType`: Enlace al repositorio estándar de GTFS que describe las diferentes ubicaciones [Tipo de ubicación]. 0 Parada o andén (lugar donde los usuarios suben o bajan en un vehículo de transporte público). 1 Estación (área o estructura física que comprende uno o más andenes). 2 Entrada o salida (lugar donde los usuarios pueden entrar/salir de una estación desde la calle). 3 Intersección genérica (ubicación en una estación que no corresponde a ningún otro valor de `location_type`). 4 Zona de embarque de un lugar específico de un andén donde los usuarios pueden subir/bajar en un vehículo.  - `name`: El nombre de este artículo.  - `openingHoursSpecification`: Un valor estructurado que proporciona información sobre el horario de apertura de un lugar o de un determinado servicio dentro de un lugar  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `parentStation`: Enlace al repositorio estándar GTFS que describe los diferentes vínculos entre la estación y el andén [Parent STATION]. Caso '1' location_type = 0 (Parada / andén ), el campo parent_station contiene el ID de una estación. Caso '2' location_type = 1 (Estación), este campo debe estar vacío. Caso '3' location_type = 2 (Entrada / salida) o location_type = 3 (intersección genérica), el campo parent_station contiene el ID de una estación location_type = 1. Caso '4' location_type = 4 (zona de embarque), el campo parent_station contiene el ID de un andén.  - `platformCode`: Identificador de andén para una parada de tipo andén `location_type` = 0 cuando la parada está en una estación.  - `refPointOfInterest`: Una referencia a un punto de interés asociado a esta observación.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `stationConnected`: Conexiones posibles desde esta estación. Un valor estructurado de 0 a N ocurrencias donde cada elemento es una cadena con el formato `tipo de estación` : [Lista de líneas conectadas, separadas por una coma]. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorraíl, ferrocarril, metro, tren, tranvía, trolebús'  - `stationType`: Tipo de estación de transporte. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorraíl, ferrocarril, metro, trolebús, tranvía'  - `type`: Tipo de entidad NGSI. Tiene que ser TransportStation  - `webSite`: Enlace a la página web oficial para más información..  - `wheelChairAccessible`: Acceso posible para personas con movilidad reducida. Para las paradas sin padres 0 no hay información disponible sobre la accesibilidad de la parada. 1 algunos vehículos en esta parada pueden subir a un usuario PMR. 2 un usuario PMR no puede embarcar en esta parada. Para una parada que forma parte de una estación 0 la parada hereda el comportamiento de wheelchair_boarding de la estación padre, si se rellena. 1 los carriles proporcionan acceso en silla de ruedas a la parada / andén desde el exterior de la estación. 2 ningún carril proporciona acceso en silla de ruedas a la parada / andén desde el exterior de la estación. Para las entradas/salidas de la estación 0 la entrada de la estación hereda el comportamiento de wheelchair_boarding de la estación principal, si se especifica. 1 la entrada de la estación es accesible para sillas de ruedas. 2 ninguna ruta accesible para sillas de ruedas conecta la entrada de la estación con las paradas / andenes.  - `zoneId`: Zona de precios de la estación.    
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `contactPoint`: Los datos para contactar con el artículo.  - `contractingAuthority`: Nombre del poder adjudicador.  - `contractingCompany`: Nombre de la empresa contratante responsable de la explotación de la estación.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateLastReported`: Una marca de tiempo que denota la última vez que el dispositivo comunicó datos con éxito. Fecha y hora en formato ISO8601 UTC.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `dimension`: Dimensión global. El formato está estructurado por una subpropiedad de 3 elementos. El código de la unidad (texto) se da utilizando los [Códigos comunes de UN/CEFACT](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Por ejemplo, **MTR** representa Metros  - `id`: Identificador único de la entidad  - `installationMode`: Ubicación relativa a la referencia de tierra. Enum:'aéreo, terrestre, subterráneo, submarino'  - `inventory`: Mapeo general de datos sólo para `locationType` = 0, 1, 3, 4. El formato está estructurado por una subpropiedad de 4 elementos.  - `levelId`: Planta en la que se encuentra la ubicación. Índice numérico asociado a la planta. Indica la posición relativa de esta planta en relación con las demás. El índice 0 indica la planta baja. Las plantas por encima del nivel del suelo se indican con índices positivos, y las etapas subterráneas con índices negativos.  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `locationType`: Enlace al repositorio estándar de GTFS que describe las diferentes ubicaciones [Tipo de ubicación]. 0 Parada o andén (lugar donde los usuarios suben o bajan en un vehículo de transporte público). 1 Estación (área o estructura física que comprende uno o más andenes). 2 Entrada o salida (lugar donde los usuarios pueden entrar/salir de una estación desde la calle). 3 Intersección genérica (ubicación en una estación que no corresponde a ningún otro valor de `location_type`). 4 Zona de embarque de un lugar específico de un andén donde los usuarios pueden subir/bajar en un vehículo.  - `name`: El nombre de este artículo.  - `openingHoursSpecification`: Un valor estructurado que proporciona información sobre el horario de apertura de un lugar o de un determinado servicio dentro de un lugar  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `parentStation`: Enlace al repositorio estándar GTFS que describe los diferentes vínculos entre la estación y el andén [Parent STATION]. Caso '1' location_type = 0 (Parada / andén ), el campo parent_station contiene el ID de una estación. Caso '2' location_type = 1 (Estación), este campo debe estar vacío. Caso '3' location_type = 2 (Entrada / salida) o location_type = 3 (intersección genérica), el campo parent_station contiene el ID de una estación location_type = 1. Caso '4' location_type = 4 (zona de embarque), el campo parent_station contiene el ID de un andén.  - `platformCode`: Identificador de andén para una parada de tipo andén `location_type` = 0 cuando la parada está en una estación.  - `refPointOfInterest`: Una referencia a un punto de interés asociado a esta observación.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `stationConnected`: Conexiones posibles desde esta estación. Un valor estructurado de 0 a N ocurrencias donde cada elemento es una cadena con el formato `tipo de estación` : [Lista de líneas conectadas, separadas por una coma]. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorraíl, ferrocarril, metro, tren, tranvía, trolebús'  - `stationType`: Tipo de estación de transporte. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorraíl, ferrocarril, metro, trolebús, tranvía'  - `type`: Tipo de entidad NGSI. Tiene que ser TransportStation  - `webSite`: Enlace a la página web oficial para más información..  - `wheelChairAccessible`: Acceso posible para personas con movilidad reducida. Para las paradas sin padres 0 no hay información disponible sobre la accesibilidad de la parada. 1 algunos vehículos en esta parada pueden subir a un usuario PMR. 2 un usuario PMR no puede embarcar en esta parada. Para una parada que forma parte de una estación 0 la parada hereda el comportamiento de wheelchair_boarding de la estación padre, si se rellena. 1 los carriles proporcionan acceso en silla de ruedas a la parada / andén desde el exterior de la estación. 2 ningún carril proporciona acceso en silla de ruedas a la parada / andén desde el exterior de la estación. Para las entradas / salidas de la estación 0 la entrada de la estación hereda el comportamiento de wheelchair_boarding de la estación principal, si se especifica. 1 la entrada de la estación es accesible para sillas de ruedas. 2 ninguna ruta accesible para sillas de ruedas conecta la entrada de la estación con las paradas / andenes.  - `zoneId`: Zona de precios de la estación.    
 Propiedades requeridas  
 - `dateLastReported`  - `dateObserved`  - `id`  - `location`  - `locationType`  - `stationType`  - `type`  ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
@@ -54,6 +56,39 @@ TransportStation:
     contactPoint:    
       description: 'The details to contact with the item.'    
       properties:    
+        areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Supersedes serviceArea.'    
+          type: string    
+        availabilityRestriction:    
+          anyOf:    
+            - description: 'Property. Array of identifiers format of any NGSI entity.'    
+              items:    
+                maxLength: 256    
+                minLength: 1    
+                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+                type: string    
+              type: array    
+            - description: 'Property. Array of identifiers format of any NGSI entity.'    
+              items:    
+                format: uri    
+                type: string    
+              type: array    
+          description: 'Relationship. Model:''http://schema.org/hoursAvailable''. This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class.'    
+        availableLanguage:    
+          anyOf:    
+            - anyOf:    
+                - type: string    
+                - items:    
+                    type: string    
+                  type: array    
+          description: 'Property. Model:''http://schema.org/availableLanguage''. A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language'    
+        contactOption:    
+          anyOf:    
+            - type: string    
+            - items:    
+                type: string    
+              type: array    
+          description: 'Property. Model:''http://schema.org/contactOption''. An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).'    
         contactType:    
           description: 'Property. Contact type of this item.'    
           type: string    
@@ -61,8 +96,14 @@ TransportStation:
           description: 'Property. Email address of owner.'    
           format: idn-email    
           type: string    
+        faxNumber:    
+          description: 'Property. Model:''http://schema.org/Text''. The fax number.'    
+          type: string    
         name:    
           description: 'Property. The name of this item.'    
+          type: string    
+        productSupported:    
+          description: 'Property. Model:''http://schema.org/Text''. The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").'    
           type: string    
         telephone:    
           description: 'Property. Telephone of this contact.'    
@@ -354,27 +395,58 @@ TransportStation:
         properties:    
           closes:    
             format: time    
+            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           dayOfWeek:    
-            enum:    
-              - Monday    
-              - Tuesday    
-              - Wednesday    
-              - Thursday    
-              - Friday    
-              - Saturday    
-              - Sunday    
-              - PublicHolidays    
+            anyOf:    
+              - description: 'Property. Array of days of the week.'    
+                enum:    
+                  - Monday    
+                  - Tuesday    
+                  - Wednesday    
+                  - Thursday    
+                  - Friday    
+                  - Saturday    
+                  - Sunday    
+                  - PublicHolidays    
+                type: string    
+              - description: 'Property. Array of days of the week.'    
+                enum:    
+                  - https://schema.org/Monday    
+                  - https://schema.org/Tuesday    
+                  - https://schema.org/Wednesday    
+                  - https://schema.org/Thursday    
+                  - https://schema.org/Friday    
+                  - https://schema.org/Saturday    
+                  - https://schema.org/Sunday    
+                  - https://schema.org/PublicHolidays    
+                type: string    
+            description: 'Property. Model:''http://schema.org/dayOfWeek''. The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays).'    
             type: string    
           opens:    
             format: time    
+            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           validFrom:    
-            format: date-time    
-            type: string    
+            anyOf:    
+              - description: 'Property. Model:''http://schema.org/Date.'    
+                format: date    
+                type: string    
+              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                format: date-time    
+                type: string    
+            description: 'Property. The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
           validThrough:    
-            format: date-time    
+            anyOf:    
+              - description: 'Property. Model:''http://schema.org/Date.'    
+                format: date    
+                type: string    
+              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                format: date-time    
+                type: string    
+            description: 'Property. The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
             type: string    
+        type: object    
       minItems: 1    
       type: array    
       x-ngsi:    
@@ -1009,433 +1081,432 @@ TransportStation:
 Aquí hay un ejemplo de un TransportStation en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Station:Station:MNCA-STram-L02-AP-T2",  
-  "type": "Station",  
-  "name": {  
-    "type": "Property",  
-    "value": "NCE-Tram-Station-L02-AP-T2"  
-  },  
-  "alternateName": {  
-    "type": "Property",  
-    "value": "Nice - Tramway Station Description - L02-AP-T2"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Description and services provided in the station"  
-  },  
-  "seeAlso": {  
-    "type": "Property",  
-    "value": "http://tramway.nice.fr/wp-content/uploads/2019/10/BD_pocket_plan_MAJ03_2019_20082019.pdf"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "point",  
-      "coordinates": [  
-        43.66481,  
-        7.196545  
-      ]  
-    }  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressCountry": "FR",  
-      "addressLocality": "Nice",  
-      "streetAddress": "Airport - Terminal 2 - Door A2"  
-    }  
-  },  
-  "areaServed": {  
-    "type": "Property",  
-    "value": "Nice Airport"  
-  },  
-  "dateLastReported": {  
-    "type": "DateTime",  
-    "value": "2020-03-17T08:45:00Z"  
-  },  
-  "stationType": {  
-    "type": "Property",  
-    "value": "Tram"  
-  },  
-  "locationType": {  
-    "type": "Property",  
-    "value": 1  
-  },  
-  "levelId": {  
-    "type": "Property",  
-    "value": 0  
-  },  
-  "zoneId": {  
-    "type": "Property",  
-    "value": "B"  
-  },  
-  "wheelChairAccessible": {  
-    "type": "Property",  
-    "value": 1  
-  },  
-  "openingHoursSpecification": {  
-    "type": "object",  
-    "value": [  
-      {  
-        "dayOfWeek": "Monday, Tuesday, Wednesday, Thursday, Friday",  
-        "opens": "07.00",  
-        "closes": "22.00"  
-      },  
-      {  
-        "dayOfWeek": "Saturday",  
-        "opens": "08.00",  
-        "closes": "23.00"  
-      },  
-      {  
-        "dayOfWeek": "Sunday",  
-        "opens": "8.30",  
-        "closes": "21.00"  
-      },  
-      {  
-        "dayOfWeek": "PublicHolidays",  
-        "opens": "8.00",  
-        "closes": "21.30"  
-      }  
-    ],  
-    "validFrom": "-01-01",  
-    "validThrough": "-31-12"  
-  },  
-  "owner": {  
-    "type": "Property",  
-    "value": [  
-      "Street furniture Urbain & Retail"  
-    ]  
-  },  
-  "contractingAuthority": {  
-    "type": "Property",  
-    "value": "MNCA - Metropole Nice Cote d'Azur"  
-  },  
-  "contractingCompagny": {  
-    "type": "Property",  
-    "value": "R\u00e9gie Ligne d'Azur"  
-  },  
-  "contactPoint": {  
-    "type": "Property",  
-    "value": "www.lignesdazur.com"  
-  },  
-  "webSite": {  
-    "type": "Property",  
-    "value": "https://tramway.nice.fr/Plan-Station-L02-AP-T2.pdf"  
-  },  
-  "instalationMode": {  
-    "type": "Property",  
-    "value": "ground"  
-  },  
-  "dimension": {  
-    "type": "Property",  
-    "value": {  
-      "length": 300,  
-      "width": 25,  
-      "thickness": 6.35  
-    }  
-  },  
-  "inventory": {  
-    "type": "Property",  
-    "value": {  
-      "nbOfIOPoint": 2,  
-      "nbOfLane": 1,  
-      "nbOfPlatform": 1,  
-      "PlatformType": "lateral"  
-    }  
-  },  
-  "stationConnected": {  
-    "type": "Property",  
-    "value": {  
-      "tram": {  
+    "id": "urn:ngsi-ld:Station:Station:MNCA-STram-L02-AP-T2",  
+    "type": "Station",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressCountry": "FR",  
+            "addressLocality": "Nice",  
+            "streetAddress": "Airport - Terminal 2 - Door A2"  
+        }  
+    },  
+    "alternateName": {  
+        "type": "Property",  
+        "value": "Nice - Tramway Station Description - L02-AP-T2"  
+    },  
+    "architecte": {  
+        "type": "Property",  
+        "value": "Nice Architecture"  
+    },  
+    "areaServed": {  
+        "type": "Property",  
+        "value": "Nice Airport"  
+    },  
+    "commissioningDate": {  
+        "type": "DateTime",  
+        "value": "2018-09-15"  
+    },  
+    "constructionDate": {  
+        "type": "DateTime",  
+        "value": "2016-19-08"  
+    },  
+    "contactPoint": {  
+        "type": "Property",  
+        "value": "www.lignesdazur.com"  
+    },  
+    "contractingAuthority": {  
+        "type": "Property",  
+        "value": "MNCA - Metropole Nice Cote d'Azur"  
+    },  
+    "contractingCompagny": {  
+        "type": "Property",  
+        "value": "R\u00e9gie Ligne d'Azur"  
+    },  
+    "currencyAccepted": {  
         "type": "Property",  
         "value": [  
-          "Tram 2 - CADAM / Nikaia",  
-          "Tram 3 - Saint Isidore / Stade Allianz Riviera"  
+            "EUR"  
         ]  
-      },  
-      "train": {  
+    },  
+    "dateLastReported": {  
+        "type": "DateTime",  
+        "value": "2020-03-17T08:45:00Z"  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Description and services provided in the station"  
+    },  
+    "dimension": {  
+        "type": "Property",  
+        "value": {  
+            "length": 300,  
+            "width": 25,  
+            "thickness": 6.35  
+        }  
+    },  
+    "featuredArtist ": {  
         "type": "Property",  
         "value": [  
-          "Gare SNCF Nice Saint Augustin (600m)"  
+            "Leopold",  
+            "De Renaiss"  
         ]  
-      },  
-      "bus": {  
+    },  
+    "instalationMode": {  
+        "type": "Property",  
+        "value": "ground"  
+    },  
+    "inventory": {  
+        "type": "Property",  
+        "value": {  
+            "nbOfIOPoint": 2,  
+            "nbOfLane": 1,  
+            "nbOfPlatform": 1,  
+            "PlatformType": "lateral"  
+        }  
+    },  
+    "levelId": {  
+        "type": "Property",  
+        "value": 0  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "point",  
+            "coordinates": [  
+                43.66481,  
+                7.196545  
+            ]  
+        }  
+    },  
+    "locationType": {  
+        "type": "Property",  
+        "value": 1  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "NCE-Tram-Station-L02-AP-T2"  
+    },  
+    "openingHoursSpecification": {  
+        "type": "object",  
+        "value": [  
+            {  
+                "dayOfWeek": "Monday, Tuesday, Wednesday, Thursday, Friday",  
+                "opens": "07.00",  
+                "closes": "22.00"  
+            },  
+            {  
+                "dayOfWeek": "Saturday",  
+                "opens": "08.00",  
+                "closes": "23.00"  
+            },  
+            {  
+                "dayOfWeek": "Sunday",  
+                "opens": "8.30",  
+                "closes": "21.00"  
+            },  
+            {  
+                "dayOfWeek": "PublicHolidays",  
+                "opens": "8.00",  
+                "closes": "21.30"  
+            }  
+        ],  
+        "validFrom": "-01-01",  
+        "validThrough": "-31-12"  
+    },  
+    "owner": {  
         "type": "Property",  
         "value": [  
-          "L20 - Giono / Les Pugets",  
-          "L20 - Centre Commercial St Isidore",  
-          "L21 - Le Gu\u00e9 / Polygone Riviera",  
-          "L54 - Centre Commercial Cap 3000 - St Jeannet",  
-          "L90 - La Bolline",  
-          "91 Auron",  
-          "L92 - Isola 2000"  
+            "Street furniture Urbain & Retail"  
         ]  
-      }  
-    }  
-  },  
-  "services": {  
-    "type": "Property",  
-    "value": {  
-      "purchaseDevice": {  
+    },  
+    "paymentAccepted": {  
         "type": "Property",  
-        "value": true  
-      },  
-      "interactiveDevice": {  
+        "value": [  
+            "Cash",  
+            "CreditCard"  
+        ]  
+    },  
+    "seeAlso": {  
         "type": "Property",  
-        "value": true  
-      },  
-      "timetableDevice": {  
+        "value": "http://tramway.nice.fr/wp-content/uploads/2019/10/BD_pocket_plan_MAJ03_2019_20082019.pdf"  
+    },  
+    "services": {  
         "type": "Property",  
-        "value": true  
-      },  
-      "voiceDevice": {  
+        "value": {  
+            "purchaseDevice": {  
+                "type": "Property",  
+                "value": true  
+            },  
+            "interactiveDevice": {  
+                "type": "Property",  
+                "value": true  
+            },  
+            "timetableDevice": {  
+                "type": "Property",  
+                "value": true  
+            },  
+            "voiceDevice": {  
+                "type": "Property",  
+                "value": true  
+            },  
+            "informationBoardDevice": {  
+                "type": "Property",  
+                "value": true  
+            },  
+            "messageDevice": {  
+                "type": "Property",  
+                "value": false  
+            },  
+            "shelters": {  
+                "type": "Property",  
+                "value": true  
+            },  
+            "restBench": {  
+                "type": "Property",  
+                "value": false  
+            },  
+            "emergencyPhone": {  
+                "type": "Property",  
+                "value": false  
+            },  
+            "videoSurveillance": {  
+                "type": "Property",  
+                "value": true  
+            },  
+            "defibrillator": {  
+                "type": "Property",  
+                "value": false  
+            },  
+            "wheelChairAccessible": {  
+                "type": "Property",  
+                "value": true  
+            }  
+        }  
+    },  
+    "stationConnected": {  
         "type": "Property",  
-        "value": true  
-      },  
-      "informationBoardDevice": {  
+        "value": {  
+            "tram": {  
+                "type": "Property",  
+                "value": [  
+                    "Tram 2 - CADAM / Nikaia",  
+                    "Tram 3 - Saint Isidore / Stade Allianz Riviera"  
+                ]  
+            },  
+            "train": {  
+                "type": "Property",  
+                "value": [  
+                    "Gare SNCF Nice Saint Augustin (600m)"  
+                ]  
+            },  
+            "bus": {  
+                "type": "Property",  
+                "value": [  
+                    "L20 - Giono / Les Pugets",  
+                    "L20 - Centre Commercial St Isidore",  
+                    "L21 - Le Gu\u00e9 / Polygone Riviera",  
+                    "L54 - Centre Commercial Cap 3000 - St Jeannet",  
+                    "L90 - La Bolline",  
+                    "91 Auron",  
+                    "L92 - Isola 2000"  
+                ]  
+            }  
+        }  
+    },  
+    "stationType": {  
         "type": "Property",  
-        "value": true  
-      },  
-      "messageDevice": {  
+        "value": "Tram"  
+    },  
+    "webSite": {  
         "type": "Property",  
-        "value": false  
-      },  
-      "shelters": {  
+        "value": "https://tramway.nice.fr/Plan-Station-L02-AP-T2.pdf"  
+    },  
+    "wheelChairAccessible": {  
         "type": "Property",  
-        "value": true  
-      },  
-      "restBench": {  
+        "value": 1  
+    },  
+    "zoneId": {  
         "type": "Property",  
-        "value": false  
-      },  
-      "emergencyPhone": {  
-        "type": "Property",  
-        "value": false  
-      },  
-      "videoSurveillance": {  
-        "type": "Property",  
-        "value": true  
-      },  
-      "defibrillator": {  
-        "type": "Property",  
-        "value": false  
-      },  
-      "wheelChairAccessible": {  
-        "type": "Property",  
-        "value": true  
-      }  
-    }  
-  },  
-  "paymentAccepted": {  
-    "type": "Property",  
-    "value": [  
-      "Cash",  
-      "CreditCard"  
+        "value": "B"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
-  },  
-  "currencyAccepted": {  
-    "type": "Property",  
-    "value": [  
-      "EUR"  
-    ]  
-  },  
-  "constructionDate": {  
-    "type": "DateTime",  
-    "value": "2016-19-08"  
-  },  
-  "commissioningDate": {  
-    "type": "DateTime",  
-    "value": "2018-09-15"  
-  },  
-  "architecte": {  
-    "type": "Property",  
-    "value": "Nice Architecture"  
-  },  
-  "featuredArtist ": {  
-    "type": "Property",  
-    "value": [  
-      "Leopold",  
-      "De Renaiss"  
-    ]  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
 #### TransportStation NGSI-LD normalizada Ejemplo  
-Aquí hay un ejemplo de un TransportStation en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de TransportStation en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Station:Station:MNCA-STram-L02-AP-T2",  
-  "type": "Station",  
-  "name": "NCE-Tram-Station-L02-AP-T2",  
-  "alternateName": "Nice - Tramway Station Description - L02-AP-T2",  
-  "description": "Description and services provided in the station",  
-  "seeAlso": "http://tramway.nice.fr/wp-content/uploads/2019/10/BD_pocket_plan_MAJ03_2019_20082019.pdf",  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      43.66481,  
-      7.196545  
+    "id": "urn:ngsi-ld:Station:Station:MNCA-STram-L02-AP-T2",  
+    "type": "Station",  
+    "address": {  
+        "addressCountry": "FR",  
+        "addressLocality": "Nice",  
+        "streetAddress": "Airport - Terminal 2 - Door A2"  
+    },  
+    "alternateName": "Nice - Tramway Station Description - L02-AP-T2",  
+    "architect": "Nice Architecture",  
+    "areaServed": "Nice Airport",  
+    "commissioningDate": "2018-09-15",  
+    "constructionDate": "2016-19-08",  
+    "contactPoint": {  
+        "url": "uri:ngsi:www.lignesdazur.com"  
+    },  
+    "contractingAuthority": "MNCA - Metropole Nice Cote d'Azur",  
+    "contractingCompagny": "R\u00e9gie Ligne d'Azur",  
+    "currencyAccepted": [  
+        "EUR"  
+    ],  
+    "dateLastReported": "2020-03-17T08:45:00Z",  
+    "dateObserved": "2020-03-17T08:45:00Z",  
+    "description": "Description and services provided in the station",  
+    "dimension": {  
+        "length": 300,  
+        "width": 25,  
+        "thickness": 6.35  
+    },  
+    "featuredArtist ": [  
+        "Leopold",  
+        "De Renaiss"  
+    ],  
+    "instalationMode": "ground",  
+    "inventory": {  
+        "nbOfIOPoint": 2,  
+        "nbOfLane": 1,  
+        "nbOfPlatform": 1,  
+        "PlatformType": [  
+            "lateral"  
+        ]  
+    },  
+    "levelId": 0,  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            43.66481,  
+            7.196545  
+        ]  
+    },  
+    "locationType": 1,  
+    "name": "NCE-Tram-Station-L02-AP-T2",  
+    "openingHoursSpecification": [  
+        {  
+            "dayOfWeek": "Monday",  
+            "opens": "07:00:00",  
+            "closes": "22:00:00",  
+            "validFrom": "2021-01-01T00:00:00",  
+            "validThrough": "2021-12-31T23:59:59"  
+        },  
+        {  
+            "dayOfWeek": "Tuesday",  
+            "opens": "07:00:00",  
+            "closes": "22:00:00",  
+            "validFrom": "2021-01-01T00:00:00",  
+            "validThrough": "2021-12-31T23:59:59"  
+        },  
+        {  
+            "dayOfWeek": "Wednesday",  
+            "opens": "07:00:00",  
+            "closes": "22:00:00",  
+            "validFrom": "2021-01-01T00:00:00",  
+            "validThrough": "2021-12-31T23:59:59"  
+        },  
+        {  
+            "dayOfWeek": "Thursday",  
+            "opens": "07:00:00",  
+            "closes": "22:00:00",  
+            "validFrom": "2021-01-01T00:00:00",  
+            "validThrough": "2021-12-31T23:59:59"  
+        },  
+        {  
+            "dayOfWeek": "Friday",  
+            "opens": "07:00:00",  
+            "closes": "22:00:00",  
+            "validFrom": "2021-01-01T00:00:00",  
+            "validThrough": "2021-12-31T23:59:59"  
+        },  
+        {  
+            "dayOfWeek": "Saturday",  
+            "opens": "08:00:00",  
+            "closes": "23:00:00",  
+            "validFrom": "2021-01-01T00:00:00",  
+            "validThrough": "2021-12-31T23:59:59"  
+        },  
+        {  
+            "dayOfWeek": "Sunday",  
+            "opens": "08:30:00",  
+            "closes": "21:00:00",  
+            "validFrom": "2021-01-01T00:00:00",  
+            "validThrough": "2021-12-31T23:59:59"  
+        },  
+        {  
+            "dayOfWeek": "PublicHolidays",  
+            "opens": "08:30:00",  
+            "closes": "21:00:00",  
+            "validFrom": "2021-01-01T00:00:00",  
+            "validThrough": "2021-12-31T23:59:59"  
+        }  
+    ],  
+    "owner": [  
+        "uri:ngsi:StreetRetail"  
+    ],  
+    "paymentAccepted": [  
+        "Cash",  
+        "CreditCard"  
+    ],  
+    "seeAlso": "http://tramway.nice.fr/wp-content/uploads/2019/10/BD_pocket_plan_MAJ03_2019_20082019.pdf",  
+    "services": {  
+        "purchaseDevice": true,  
+        "interactiveDevice": true,  
+        "timetableDevice": true,  
+        "voiceDevice": true,  
+        "informationBoardDevice": true,  
+        "messageDevice": false,  
+        "shelters": true,  
+        "restBench": false,  
+        "emergencyPhone": false,  
+        "videoSurveillance": true,  
+        "defibrillator": false,  
+        "wheelChairAccessible": true  
+    },  
+    "stationConnected": [  
+        {  
+            "stationType": "tram",  
+            "linesConnected": [  
+                "Tram 2 - CADAM / Nikaia",  
+                "Tram 3 - Saint Isidore / Stade Allianz Riviera"  
+            ]  
+        },  
+        {  
+            "stationType": "train",  
+            "linesConnected": [  
+                "Gare SNCF Nice Saint Augustin (600m)"  
+            ]  
+        },  
+        {  
+            "stationType": "bus",  
+            "linesConnected": [  
+                "L20 - Giono / Les Pugets",  
+                "L20 - Centre Commercial St Isidore",  
+                "L21 - Le Gu\u00e9 / Polygone Riviera",  
+                "L54 - Centre Commercial Cap 3000 - St Jeannet",  
+                "L90 - La Bolline",  
+                "91 Auron",  
+                "L92 - Isola 2000"  
+            ]  
+        }  
+    ],  
+    "stationType": [  
+        "tram"  
+    ],  
+    "webSite": "https://tramway.nice.fr/Plan-Station-L02-AP-T2.pdf",  
+    "wheelChairAccessible": 1,  
+    "zoneId": "B",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
     ]  
-  },  
-  "address": {  
-    "addressCountry": "FR",  
-    "addressLocality": "Nice",  
-    "streetAddress": "Airport - Terminal 2 - Door A2"  
-  },  
-  "areaServed": "Nice Airport",  
-  "dateLastReported": "2020-03-17T08:45:00Z",  
-  "dateObserved": "2020-03-17T08:45:00Z",  
-  "stationType": [  
-    "tram"  
-  ],  
-  "locationType": 1,  
-  "levelId": 0,  
-  "zoneId": "B",  
-  "wheelChairAccessible": 1,  
-  "openingHoursSpecification": [  
-    {  
-      "dayOfWeek": "Monday",  
-      "opens": "07:00:00",  
-      "closes": "22:00:00",  
-      "validFrom": "2021-01-01T00:00:00",  
-      "validThrough": "2021-12-31T23:59:59"  
-    },  
-    {  
-      "dayOfWeek": "Tuesday",  
-      "opens": "07:00:00",  
-      "closes": "22:00:00",  
-      "validFrom": "2021-01-01T00:00:00",  
-      "validThrough": "2021-12-31T23:59:59"  
-    },  
-    {  
-      "dayOfWeek": "Wednesday",  
-      "opens": "07:00:00",  
-      "closes": "22:00:00",  
-      "validFrom": "2021-01-01T00:00:00",  
-      "validThrough": "2021-12-31T23:59:59"  
-    },  
-    {  
-      "dayOfWeek": "Thursday",  
-      "opens": "07:00:00",  
-      "closes": "22:00:00",  
-      "validFrom": "2021-01-01T00:00:00",  
-      "validThrough": "2021-12-31T23:59:59"  
-    },  
-    {  
-      "dayOfWeek": "Friday",  
-      "opens": "07:00:00",  
-      "closes": "22:00:00",  
-      "validFrom": "2021-01-01T00:00:00",  
-      "validThrough": "2021-12-31T23:59:59"  
-    },  
-    {  
-      "dayOfWeek": "Saturday",  
-      "opens": "08:00:00",  
-      "closes": "23:00:00",  
-      "validFrom": "2021-01-01T00:00:00",  
-      "validThrough": "2021-12-31T23:59:59"  
-    },  
-    {  
-      "dayOfWeek": "Sunday",  
-      "opens": "08:30:00",  
-      "closes": "21:00:00",  
-      "validFrom": "2021-01-01T00:00:00",  
-      "validThrough": "2021-12-31T23:59:59"  
-    },  
-    {  
-      "dayOfWeek": "PublicHolidays",  
-      "opens": "08:30:00",  
-      "closes": "21:00:00",  
-      "validFrom": "2021-01-01T00:00:00",  
-      "validThrough": "2021-12-31T23:59:59"  
-    }  
-  ],  
-  "owner": [  
-    "uri:ngsi:StreetRetail"  
-  ],  
-  "contractingAuthority": "MNCA - Metropole Nice Cote d'Azur",  
-  "contractingCompagny": "R\u00e9gie Ligne d'Azur",  
-  "contactPoint": {  
-    "url": "uri:ngsi:www.lignesdazur.com"  
-  },  
-  "webSite": "https://tramway.nice.fr/Plan-Station-L02-AP-T2.pdf",  
-  "instalationMode": "ground",  
-  "dimension": {  
-    "length": 300,  
-    "width": 25,  
-    "thickness": 6.35  
-  },  
-  "inventory": {  
-    "nbOfIOPoint": 2,  
-    "nbOfLane": 1,  
-    "nbOfPlatform": 1,  
-    "PlatformType": [  
-      "lateral"  
-    ]  
-  },  
-  "stationConnected": [  
-    {  
-      "stationType": "tram",  
-      "linesConnected": [  
-        "Tram 2 - CADAM / Nikaia",  
-        "Tram 3 - Saint Isidore / Stade Allianz Riviera"  
-      ]  
-    },  
-    {  
-      "stationType": "train",  
-      "linesConnected": [  
-        "Gare SNCF Nice Saint Augustin (600m)"  
-      ]  
-    },  
-    {  
-      "stationType": "bus",  
-      "linesConnected": [  
-        "L20 - Giono / Les Pugets",  
-        "L20 - Centre Commercial St Isidore",  
-        "L21 - Le Gu\u00e9 / Polygone Riviera",  
-        "L54 - Centre Commercial Cap 3000 - St Jeannet",  
-        "L90 - La Bolline",  
-        "91 Auron",  
-        "L92 - Isola 2000"  
-      ]  
-    }  
-  ],  
-  "services": {  
-    "purchaseDevice": true,  
-    "interactiveDevice": true,  
-    "timetableDevice": true,  
-    "voiceDevice": true,  
-    "informationBoardDevice": true,  
-    "messageDevice": false,  
-    "shelters": true,  
-    "restBench": false,  
-    "emergencyPhone": false,  
-    "videoSurveillance": true,  
-    "defibrillator": false,  
-    "wheelChairAccessible": true  
-  },  
-  "paymentAccepted": [  
-    "Cash",  
-    "CreditCard"  
-  ],  
-  "currencyAccepted": [  
-    "EUR"  
-  ],  
-  "constructionDate": "2016-19-08",  
-  "commissioningDate": "2018-09-15",  
-  "architect": "Nice Architecture",  
-  "featuredArtist ": [  
-    "Leopold",  
-    "De Renaiss"  
-  ],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
 Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  

@@ -300,11 +300,10 @@ CrowdFlowObserved:
       x-ngsi:
         type: Property
     peopleCount:
-      description: 'Concerned road segment on which the observation has been made'
+      description: 'Total number of people detected during this observation.'
       minimum: 0
       type: integer
       x-ngsi:
-        model: https://schema.org/Number.
         type: Property
     refRoadSegment:
       anyOf:
@@ -354,4 +353,4 @@ CrowdFlowObserved:
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/CrowdFlowObserved/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/CrowdFlowObserved/schema.json
   x-model-tags: ""
-  x-version: 0.0.1
+  x-version: 0.0.2

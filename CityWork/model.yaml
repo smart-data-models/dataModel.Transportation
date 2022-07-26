@@ -221,6 +221,39 @@ CityWork:
     contactPoint:
       description: 'The details to contact with the item.'
       properties:
+        areaServed:
+          description: 'Property. The geographic area where a service or offered item is provided. Supersedes serviceArea.'
+          type: string
+        availabilityRestriction:
+          anyOf:
+            - description: 'Property. Array of identifiers format of any NGSI entity.'
+              items:
+                maxLength: 256
+                minLength: 1
+                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+                type: string
+              type: array
+            - description: 'Property. Array of identifiers format of any NGSI entity.'
+              items:
+                format: uri
+                type: string
+              type: array
+          description: 'Relationship. Model:''http://schema.org/hoursAvailable''. This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class.'
+        availableLanguage:
+          anyOf:
+            - anyOf:
+                - type: string
+                - items:
+                    type: string
+                  type: array
+          description: 'Property. Model:''http://schema.org/availableLanguage''. A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language'
+        contactOption:
+          anyOf:
+            - type: string
+            - items:
+                type: string
+              type: array
+          description: 'Property. Model:''http://schema.org/contactOption''. An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).'
         contactType:
           description: 'Property. Contact type of this item.'
           type: string
@@ -228,8 +261,14 @@ CityWork:
           description: 'Property. Email address of owner.'
           format: idn-email
           type: string
+        faxNumber:
+          description: 'Property. Model:''http://schema.org/Text''. The fax number.'
+          type: string
         name:
           description: 'Property. The name of this item.'
+          type: string
+        productSupported:
+          description: 'Property. Model:''http://schema.org/Text''. The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").'
           type: string
         telephone:
           description: 'Property. Telephone of this contact.'
@@ -469,27 +508,58 @@ CityWork:
         properties:
           closes:
             format: time
+            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$
             type: string
           dayOfWeek:
-            enum:
-              - Monday
-              - Tuesday
-              - Wednesday
-              - Thursday
-              - Friday
-              - Saturday
-              - Sunday
-              - PublicHolidays
+            anyOf:
+              - description: 'Property. Array of days of the week.'
+                enum:
+                  - Monday
+                  - Tuesday
+                  - Wednesday
+                  - Thursday
+                  - Friday
+                  - Saturday
+                  - Sunday
+                  - PublicHolidays
+                type: string
+              - description: 'Property. Array of days of the week.'
+                enum:
+                  - https://schema.org/Monday
+                  - https://schema.org/Tuesday
+                  - https://schema.org/Wednesday
+                  - https://schema.org/Thursday
+                  - https://schema.org/Friday
+                  - https://schema.org/Saturday
+                  - https://schema.org/Sunday
+                  - https://schema.org/PublicHolidays
+                type: string
+            description: 'Property. Model:''http://schema.org/dayOfWeek''. The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays).'
             type: string
           opens:
             format: time
+            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$
             type: string
           validFrom:
-            format: date-time
-            type: string
+            anyOf:
+              - description: 'Property. Model:''http://schema.org/Date.'
+                format: date
+                type: string
+              - description: 'Property. Model:''http://schema.org/DateTime.'
+                format: date-time
+                type: string
+            description: 'Property. The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'
           validThrough:
-            format: date-time
+            anyOf:
+              - description: 'Property. Model:''http://schema.org/Date.'
+                format: date
+                type: string
+              - description: 'Property. Model:''http://schema.org/DateTime.'
+                format: date-time
+                type: string
+            description: 'Property. The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'
             type: string
+        type: object
       minItems: 1
       type: array
       x-ngsi:
