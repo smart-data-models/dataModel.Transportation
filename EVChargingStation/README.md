@@ -1,6 +1,5 @@
-[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)
-# EVChargingStation
-Version: 0.0.2
+# EVChargingStation
+Version: 0.0.3
 
 ## Description 
 
