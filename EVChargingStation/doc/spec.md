@@ -1,12 +1,14 @@
-Entity: EVChargingStation  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: EVChargingStation  
 =========================  
 [Open License](https://github.com/smart-data-models//dataModel.Transportation/blob/master/EVChargingStation/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **EV Charging Station**  
+version: 0.0.3  
 
 ## List of properties  
 
-- `acceptedPaymentMethod`: Type(s) of charge when using this station. Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'  - `address`: The mailing address  - `allowedVehicleType`: Vehicle type(s) which can be charged. Enum:'bicycle, bus, car, caravan, motorcycle, motorscooter, truck'   - `alternateName`: An alternative name for this item  - `amperage`: The total amperage offered by the charging station.  - `areaServed`: The geographic area where a service or offered item is provided  - `availableCapacity`: The number of vehicles which currently can be charged. It must lower or equal than `capacity`.  - `capacity`: The total number of vehicles which can be charged at the same time. The total number of sockets can be higher.   - `chargeType`: Type(s) of charge when using this station. Enum:'annualPayment, flat, free, monthlyPayment, other'  - `contactPoint`: Charging station contact point  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`: Unique identifier of the entity  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `network`: The name of the Network, with that the operator cooperates.   - `openingHours`: Opening hours of the charging station.   - `operator`: Charging station's operator.   - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`: list of uri pointing to additional resources about the item  - `socketNumber`: The total number of sockets offered by this charging station  - `socketType`: The type of sockets offered by this station. Enum:'Caravan_Mains_Socket, CHAdeMO, CCS/SAE, Dual_CHAdeMO, Dual_J-1772, Dual_Mennekes, J-1772, Mennekes, Other, Tesla, Type2, Type3, Wall_Euro'  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `status`: Status of the charging station. Enum:'almostEmpty, almostFull, empty, full, outOfService, withIncidence, working'. Or any other application-specific.  - `type`: NGSI Entity type. It has to be EVChargingStation  - `voltage`: The total voltage offered by the charging station    
+- `acceptedPaymentMethod`: Type(s) of charge when using this station. Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'  - `address`: The mailing address  - `allowedVehicleType`: Vehicle type(s) which can be charged. Enum:'bicycle, bus, car, caravan, motorcycle, motorscooter, truck'   - `alternateName`: An alternative name for this item  - `amperage`: The total amperage offered by the charging station.  - `areaServed`: The geographic area where a service or offered item is provided  - `availableCapacity`: The number of vehicles which currently can be charged. It must lower or equal than `capacity`.  - `capacity`: The total number of vehicles which can be charged at the same time. The total number of sockets can be higher.   - `chargeType`: Type(s) of charge when using this station. Enum:'annualPayment, flat, free, monthlyPayment, other'  - `contactPoint`: The details to contact with the item.  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`: Unique identifier of the entity  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `network`: The name of the Network, with that the operator cooperates.   - `openingHours`: Opening hours of the charging station.   - `operator`: Charging station's operator.   - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`: list of uri pointing to additional resources about the item  - `socketNumber`: The total number of sockets offered by this charging station  - `socketType`: The type of sockets offered by this station. Enum:'Caravan_Mains_Socket, CHAdeMO, CCS/SAE, Dual_CHAdeMO, Dual_J-1772, Dual_Mennekes, J-1772, Mennekes, Other, Tesla, Type2, Type3, Wall_Euro'  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `status`: Status of the charging station. Enum:'almostEmpty, almostFull, empty, full, outOfService, withIncidence, working'. Or any other application-specific.  - `type`: NGSI Entity type. It has to be EVChargingStation  - `voltage`: The total voltage offered by the charging station    
 Required properties  
 - `allowedVehicleType`  - `capacity`  - `id`  - `socketType`  - `type`    
 A public charging station supplying energy to electrical vehicles. The charge time depends on the maximum power output of the station, the number of vehicles currently charging and the current battery level.  
@@ -130,10 +132,67 @@ EVChargingStation:
         model: https://schema.org/Text    
         type: Property    
     contactPoint:    
-      description: 'Charging station contact point'    
+      description: 'The details to contact with the item.'    
+      properties:    
+        areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Supersedes serviceArea.'    
+          type: string    
+        availabilityRestriction:    
+          anyOf:    
+            - description: 'Property. Array of identifiers format of any NGSI entity.'    
+              items:    
+                maxLength: 256    
+                minLength: 1    
+                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+                type: string    
+              type: array    
+            - description: 'Property. Array of identifiers format of any NGSI entity.'    
+              items:    
+                format: uri    
+                type: string    
+              type: array    
+          description: 'Relationship. Model:''http://schema.org/hoursAvailable''. This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class.'    
+        availableLanguage:    
+          anyOf:    
+            - anyOf:    
+                - type: string    
+                - items:    
+                    type: string    
+                  type: array    
+          description: 'Property. Model:''http://schema.org/availableLanguage''. A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language'    
+        contactOption:    
+          anyOf:    
+            - type: string    
+            - items:    
+                type: string    
+              type: array    
+          description: 'Property. Model:''http://schema.org/contactOption''. An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).'    
+        contactType:    
+          description: 'Property. Contact type of this item.'    
+          type: string    
+        email:    
+          description: 'Property. Email address of owner.'    
+          format: idn-email    
+          type: string    
+        faxNumber:    
+          description: 'Property. Model:''http://schema.org/Text''. The fax number.'    
+          type: string    
+        name:    
+          description: 'Property. The name of this item.'    
+          type: string    
+        productSupported:    
+          description: 'Property. Model:''http://schema.org/Text''. The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").'    
+          type: string    
+        telephone:    
+          description: 'Property. Telephone of this contact.'    
+          type: string    
+        url:    
+          description: 'Property. URL which provides a description or further information about this item.'    
+          format: uri    
+          type: string    
       type: object    
       x-ngsi:    
-        model: https://schema.org/contactPoint.    
+        model: https://schema.org/ContactPoint    
         type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
@@ -438,6 +497,12 @@ EVChargingStation:
     - capacity    
     - allowedVehicleType    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/EVChargingStation/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/EVChargingStation/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.3    
 ```  
 </details>    
 ## Example payloads    
@@ -521,112 +586,111 @@ EVChargingStation:
 Here is an example of a EVChargingStation in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
-  "type": "EVChargingStation",  
-  "socketType": {  
-    "type": "Property",  
-    "value": [  
-      "Wall_Euro"  
+    "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
+    "type": "EVChargingStation",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressLocality": "Valladolid",  
+            "addressCountry": "Espa\u00f1a",  
+            "streetAddress": "Paseo de Zorrilla, 191",  
+            "type": "PostalAddress"  
+        }  
+    },  
+    "allowedVehicleType": {  
+        "type": "Property",  
+        "value": [  
+            "car"  
+        ]  
+    },  
+    "capacity": {  
+        "type": "Property",  
+        "value": 2  
+    },  
+    "chargeType": {  
+        "type": "Property",  
+        "value": [  
+            "free"  
+        ]  
+    },  
+    "contactPoint": {  
+        "type": "Property",  
+        "value": {  
+            "email": "vehiculoelectrico@ava.es"  
+        }  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -4.747901,  
+                41.618265  
+            ]  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Agencia de Innovaci\u00f3n"  
+    },  
+    "operator": {  
+        "type": "Property",  
+        "value": "Iberdrola"  
+    },  
+    "socketType": {  
+        "type": "Property",  
+        "value": [  
+            "Wall_Euro"  
+        ]  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": "https://openchargemap.org/"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
-  },  
-  "capacity": {  
-    "type": "Property",  
-    "value": 2  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Agencia de Innovaci\u00f3n"  
-  },  
-  "allowedVehicleType": {  
-    "type": "Property",  
-    "value": [  
-      "car"  
-    ]  
-  },  
-  "source": {  
-    "type": "Property",  
-    "value": "https://openchargemap.org/"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -4.747901,  
-        41.618265  
-      ]  
-    }  
-  },  
-  "chargeType": {  
-    "type": "Property",  
-    "value": [  
-      "free"  
-    ]  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressLocality": "Valladolid",  
-      "addressCountry": "Espa\u00f1a",  
-      "streetAddress": "Paseo de Zorrilla, 191",  
-      "type": "PostalAddress"  
-    }  
-  },  
-  "operator": {  
-    "type": "Property",  
-    "value": "Iberdrola"  
-  },  
-  "contactPoint": {  
-    "type": "Property",  
-    "value": {  
-      "email": "vehiculoelectrico@ava.es"  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
 #### EVChargingStation NGSI-LD normalized Example    
 Here is an example of a EVChargingStation in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "address": {  
-    "addressCountry": "Espa\u00f1a",  
-    "addressLocality": "Valladolid",  
-    "streetAddress": "Paseo de Zorrilla, 191",  
-    "type": "PostalAddress"  
-  },  
-  "allowedVehicleType": [  
-    "car"  
-  ],  
-  "capacity": 2,  
-  "chargeType": [  
-    "free"  
-  ],  
-  "contactPoint": {  
-    "email": "vehiculoelectrico@ava.es"  
-  },  
-  "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
-  "location": {  
-    "coordinates": [  
-      -4.747901,  
-      41.618265  
+    "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
+    "type": "EVChargingStation",  
+    "address": {  
+        "addressCountry": "Espa\u00f1a",  
+        "addressLocality": "Valladolid",  
+        "streetAddress": "Paseo de Zorrilla, 191",  
+        "type": "PostalAddress"  
+    },  
+    "allowedVehicleType": [  
+        "car"  
     ],  
-    "type": "Point"  
-  },  
-  "name": "Agencia de Innovaci\u00f3n",  
-  "operator": "Iberdrola",  
-  "socketType": [  
-    "Wall_Euro"  
-  ],  
-  "source": "https://openchargemap.org/",  
-  "type": "EVChargingStation"  
+    "capacity": 2,  
+    "chargeType": [  
+        "free"  
+    ],  
+    "contactPoint": {  
+        "email": "vehiculoelectrico@ava.es"  
+    },  
+    "location": {  
+        "coordinates": [  
+            -4.747901,  
+            41.618265  
+        ],  
+        "type": "Point"  
+    },  
+    "name": "Agencia de Innovaci\u00f3n",  
+    "operator": "Iberdrola",  
+    "socketType": [  
+        "Wall_Euro"  
+    ],  
+    "source": "https://openchargemap.org/",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
