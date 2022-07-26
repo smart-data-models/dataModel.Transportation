@@ -1,0 +1,433 @@
+{
+    "@id": "dtmi:com:ngsi-ld:TransportStation;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "Station schema adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/TransportStation/schema.json",
+    "description": "The data model is a general description of urban stations (Metro, Bus, Tram, Heliport, ...) according to the GFTS standard https://developers.google.com/transit/gtfs/reference/#stopstxt, as well the detailed description of these (means of access, platform, assistance, ...).",
+    "displayName": "TransportStation",
+    "contents": [
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The geographic area where a service or offered item is provided"
+        },
+        {
+            "name": "contractingAuthority",
+            "writable": true,
+            "displayName": "contractingAuthority",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Name of the contracting authority."
+        },
+        {
+            "name": "contractingCompany",
+            "writable": true,
+            "displayName": "contractingCompany",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Name of the contracting company responsible for the exploitation of the station."
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "dateLastReported",
+            "writable": true,
+            "displayName": "dateLastReported",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "A timestamp which denotes the last time when the device successfully reported data. Date and time in an ISO8601 UTCformat."
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "levelId",
+            "writable": true,
+            "displayName": "levelId",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Floor on which the location is located. Numerical index associated with the floor. Indicates the relative position of this stage in relation to the others. The index 0 indicates the ground floor. The floors above ground level are indicated by positive indices, and the underground stages by negative indices."
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item."
+        },
+        {
+            "name": "parentStation",
+            "writable": true,
+            "displayName": "parentStation"
+        },
+        {
+            "name": "platformCode",
+            "writable": true,
+            "displayName": "platformCode",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Platform identifier for a platform type stop `location_type` = 0 when the stop is in a station."
+        },
+        {
+            "name": "refPointOfInterest",
+            "writable": true,
+            "displayName": "refPointOfInterest"
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+        },
+        {
+            "name": "webSite",
+            "writable": true,
+            "displayName": "webSite",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Link to the official website for more information.."
+        },
+        {
+            "name": "zoneId",
+            "writable": true,
+            "displayName": "zoneId",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Pricing zone of the station."
+        },
+        {
+            "@type": "Telemetry",
+            "name": "openingHoursSpecification",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "A structured value providing information about the opening hours of a place or a certain service inside a place",
+            "displayName": "openingHoursSpecification"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "stationConnected",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "Connections possible from this station. A structured value from 0 to N occurrences where each items is a string in the format `stationType` : [List of Lines connected, separated by a comma]. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, train, tram, trolleybus'",
+            "displayName": "stationConnected"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "stationType",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Type of transport station. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, trolleybus, tram'",
+            "displayName": "stationType"
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "contactPoint",
+            "comment": "The details to contact with the item.",
+            "displayName": "contactPoint",
+            "fields": [
+                {
+                    "name": "areaServed",
+                    "schema": "string"
+                },
+                {
+                    "name": "availabilityRestriction",
+                    "schema": "array"
+                },
+                {
+                    "name": "availableLanguage",
+                    "schema": "string"
+                },
+                {
+                    "name": "contactOption",
+                    "schema": "string"
+                },
+                {
+                    "name": "contactType",
+                    "schema": "string"
+                },
+                {
+                    "name": "email",
+                    "schema": "string"
+                },
+                {
+                    "name": "faxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "name",
+                    "schema": "string"
+                },
+                {
+                    "name": "productSupported",
+                    "schema": "string"
+                },
+                {
+                    "name": "telephone",
+                    "schema": "string"
+                },
+                {
+                    "name": "url",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "dimension",
+            "comment": "Global dimension. The format is structured by a sub-property of 3 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **MTR** represents Meters",
+            "displayName": "dimension",
+            "fields": [
+                {
+                    "name": "depth",
+                    "schema": "long"
+                },
+                {
+                    "name": "height",
+                    "schema": "long"
+                },
+                {
+                    "name": "width",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "inventory",
+            "comment": "General data mapping only for `locationType` = 0, 1, 3, 4. The format is structured by a sub-property of 4 items.",
+            "displayName": "inventory",
+            "fields": [
+                {
+                    "name": "PlatformType",
+                    "schema": "array"
+                },
+                {
+                    "name": "nbOfIOPoint",
+                    "schema": "long"
+                },
+                {
+                    "name": "nbOfLane",
+                    "schema": "long"
+                },
+                {
+                    "name": "nbOfPlatform",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPolygon",
+            "schema": "multiPolygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "installationMode",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "aerial",
+                        "displayName": "aerial",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "ground",
+                        "displayName": "ground",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "underGround",
+                        "displayName": "underGround",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "underSea",
+                        "displayName": "underSea",
+                        "enumValue": 4
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "locationType",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": 0,
+                        "displayName": 0,
+                        "enumValue": 1
+                    },
+                    {
+                        "name": 1,
+                        "displayName": 1,
+                        "enumValue": 2
+                    },
+                    {
+                        "name": 2,
+                        "displayName": 2,
+                        "enumValue": 3
+                    },
+                    {
+                        "name": 3,
+                        "displayName": 3,
+                        "enumValue": 4
+                    },
+                    {
+                        "name": 4,
+                        "displayName": 4,
+                        "enumValue": 5
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "wheelChairAccessible",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": 0,
+                        "displayName": 0,
+                        "enumValue": 1
+                    },
+                    {
+                        "name": 1,
+                        "displayName": 1,
+                        "enumValue": 2
+                    },
+                    {
+                        "name": 2,
+                        "displayName": 2,
+                        "enumValue": 3
+                    }
+                ]
+            }
+        }
+    ]
+}
