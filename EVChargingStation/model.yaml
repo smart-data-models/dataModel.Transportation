@@ -114,10 +114,67 @@ EVChargingStation:
         model: https://schema.org/Text
         type: Property
     contactPoint:
-      description: 'Charging station contact point'
+      description: 'The details to contact with the item.'
+      properties:
+        areaServed:
+          description: 'Property. The geographic area where a service or offered item is provided. Supersedes serviceArea.'
+          type: string
+        availabilityRestriction:
+          anyOf:
+            - description: 'Property. Array of identifiers format of any NGSI entity.'
+              items:
+                maxLength: 256
+                minLength: 1
+                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+                type: string
+              type: array
+            - description: 'Property. Array of identifiers format of any NGSI entity.'
+              items:
+                format: uri
+                type: string
+              type: array
+          description: 'Relationship. Model:''http://schema.org/hoursAvailable''. This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class.'
+        availableLanguage:
+          anyOf:
+            - anyOf:
+                - type: string
+                - items:
+                    type: string
+                  type: array
+          description: 'Property. Model:''http://schema.org/availableLanguage''. A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language'
+        contactOption:
+          anyOf:
+            - type: string
+            - items:
+                type: string
+              type: array
+          description: 'Property. Model:''http://schema.org/contactOption''. An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).'
+        contactType:
+          description: 'Property. Contact type of this item.'
+          type: string
+        email:
+          description: 'Property. Email address of owner.'
+          format: idn-email
+          type: string
+        faxNumber:
+          description: 'Property. Model:''http://schema.org/Text''. The fax number.'
+          type: string
+        name:
+          description: 'Property. The name of this item.'
+          type: string
+        productSupported:
+          description: 'Property. Model:''http://schema.org/Text''. The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").'
+          type: string
+        telephone:
+          description: 'Property. Telephone of this contact.'
+          type: string
+        url:
+          description: 'Property. URL which provides a description or further information about this item.'
+          format: uri
+          type: string
       type: object
       x-ngsi:
-        model: https://schema.org/contactPoint.
+        model: https://schema.org/ContactPoint
         type: Property
     dataProvider:
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'
@@ -427,4 +484,4 @@ EVChargingStation:
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/EVChargingStation/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/EVChargingStation/schema.json
   x-model-tags: ""
-  x-version: 0.0.2
+  x-version: 0.0.3
