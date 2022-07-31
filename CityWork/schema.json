@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.3.0",
+  "$schemaVersion": "0.4.0",
   "modelTags": "",
   "$id": "https://smart-data-models.github.io/dataModel.Transportation/CityWork/schema.json",
   "title": "Smart Data Models - Transportation /  CityWork schema",
@@ -11,7 +11,7 @@
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
     {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
       "properties": {
