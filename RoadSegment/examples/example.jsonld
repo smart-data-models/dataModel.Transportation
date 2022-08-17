@@ -93,7 +93,9 @@
   "cyclePathPlacement": "NOT_AVAILABLE",
   "totalCyclePathWidth": 5,
   "agency_name": "CORPORATION",
-  "ulbName": "KANNUR MUNICIPAL CORPORATION",
+  "municipalityInfo": {
+    "ulbName": "KANNUR MUNICIPAL CORPORATION"
+  },
   "@context": [
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
   ]

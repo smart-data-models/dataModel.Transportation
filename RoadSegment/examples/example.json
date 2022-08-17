@@ -93,5 +93,7 @@
   "cyclePathPlacement": "NOT_AVAILABLE",
   "totalCyclePathWidth": 5,
   "agency_name": "CORPORATION",
-  "ulbName": "KANNUR MUNICIPAL CORPORATION"
+  "municipalityInfo": {
+    "ulbName": "KANNUR MUNICIPAL CORPORATION"
+  }
 }

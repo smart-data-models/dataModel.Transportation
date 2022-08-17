@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.4.0",
+  "$schemaVersion": "0.4.1",
   "modelTags": "IUDX",
   "$id": "https://smart-data-models.github.io/dataModel.Transportation/RoadSegment/schema.json",
   "title": "Smart Data Models - Transportation / Road Segment",
@@ -195,6 +195,10 @@
           "type": "number",
           "description": "Property. Total length of the walkway present in the road corresponding to this observation."
         },
+        "totalPedestrianPathWidth": {
+          "type": "number",
+          "description": "Property. Total width of the walkway present in the road corresponding to this observation."
+        },
         "culvertCount": {
           "type": "number",
           "description": "Property. Number of culverts prevalent in the trace of the road corresponding to this observation."
@@ -287,13 +291,6 @@
         "rightOfWayWidth": {
           "type": "number",
           "description": "Property. Right of Way (RoW) is the total land area available for the roadway. Its width accommodates for carriages way + other necessities + future extension, along the road's alignment."
-        },
-        "allowedVehicleType": {
-          "type": "array",
-          "description": "Property. Represents the vehicle type(s) allowed to ply on the road segment corresponding to this observation.",
-          "items": {
-            "type": "string"
-          }
         },
         "cyclePathLeftHeight": {
           "type": "number",

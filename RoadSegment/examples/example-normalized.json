@@ -219,8 +219,10 @@
     "type": "string",
     "value": "CORPORATION"
   },
-  "ulbName": {
-    "type": "string",
-    "value": "KANNUR MUNICIPAL CORPORATION"
+  "municipalityInfo": {
+    "type": "StructuredValue",
+    "value": {
+      "ulbName": "KANNUR MUNICIPAL CORPORATION"
+    }
   }
 }

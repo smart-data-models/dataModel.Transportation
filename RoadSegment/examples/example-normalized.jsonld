@@ -230,9 +230,11 @@
     "type": "Property",
     "value": "CORPORATION"
   },
-  "ulbName": {
+ "municipalityInfo": {
     "type": "Property",
-    "value": "KANNUR MUNICIPAL CORPORATION"
+    "value": {
+      "ulbName": "KANNUR MUNICIPAL CORPORATION"
+    }
   },
 	"@context": [
 		"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
