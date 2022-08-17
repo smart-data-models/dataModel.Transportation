@@ -1,10 +1,9 @@
-[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)
-# RoadSegment
-Version: 0.3.0
+# RoadSegment
+Version: 0.4.1
 
 ## Description 
 
-This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road. 
+This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road.
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Transportation/RoadSegment/swagger.yaml)
