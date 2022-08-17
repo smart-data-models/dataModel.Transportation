@@ -1,6 +1,31 @@
 CityWork:
   description: 'The Data Model is a contextual description of urban works carried out on a road axis and which can impact individual (Cars, motorcycle, bicycles, .…) or common transport (Tram, Bus, subway). It contains a geographic representation making it possible to locate its work from a specific JSON Object and at a more global level (Road segment, Road, District, ...) in order to assess the potential impacts on the circulation. A GeoJSON object may represent a region of space (a Geometry), a spatially-bounded entity (a Feature), or a list of features (a Feature Collection). refer to the document [geojson](https://tools.ietf.org/pdf/draft-ietf-geojson-03.pdf) for more information about the modeling and the possible value.'
   properties:
+    address:
+      description: 'The mailing address'
+      properties:
+        addressCountry:
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''
+          type: string
+        addressLocality:
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''
+          type: string
+        addressRegion:
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''
+          type: string
+        postOfficeBoxNumber:
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''
+          type: string
+        postalCode:
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''
+          type: string
+        streetAddress:
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''
+          type: string
+      type: object
+      x-ngsi:
+        model: https://schema.org/address
+        type: Property
     allowedVehicle:
       description: 'Type of vehicle authorized to circulate. A combination of these values. Enum:''all Vehicle, bicycle, bus, car, companiesTrucks,  emergencyVehicle, firefighters, lorry, motorcycle, police, subway, sweepingMachine, trailer, tramway, trucks, van'''
       items:
@@ -29,6 +54,12 @@ CityWork:
       description: 'An alternative name for this item'
       type: string
       x-ngsi:
+        type: Property
+    areaServed:
+      description: 'The geographic area where a service or offered item is provided'
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
         type: Property
     busImpacted:
       description: 'Bus lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of ''lineId / lineName / lineLocation''. Second subproperties, one of ''segmentId / segmentName / segmentLocation'''
@@ -469,6 +500,11 @@ CityWork:
       x-ngsi:
         model: https://schema.org/Boolean
         type: Property
+    location:
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+      oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
+      x-ngsi:
+        type: Geoproperty
     mainContractingCompany:
       description: 'The Main Contracting Company responsible of the works'
       type: string
@@ -1155,4 +1191,4 @@ CityWork:
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/CityWork/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/CityWork/schema.json
   x-model-tags: ""
-  x-version: 0.3.0
+  x-version: 0.4.0
