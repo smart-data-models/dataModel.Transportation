@@ -102,6 +102,138 @@
 		"type": "Property",
 		"value": "Bridge state = DOWN"
 	},
+	"carriagewayLength": {
+    "type": "Property",
+    "value": 0.095454461114818
+  },
+  "totalPedestrianPathWidth": {
+    "type": "Property",
+    "value": 7
+  },
+  "bridgeCount": {
+    "type": "Property",
+    "value": 1
+  },
+  "pedestrianPathLeftHeight": {
+    "type": "Property",
+    "value": 2
+  },
+  "maximumAllowedHeight": {
+    "type": "Property",
+    "value": 72
+  },
+  "totalPedestrianPathLength": {
+    "type": "Property",
+    "value": 0.09
+  },
+  "culvertCount": {
+    "type": "Property",
+    "value": 0
+  },
+  "roadName": {
+    "type": "Property",
+    "value": "GREEN VILLA ROAD TO CHAITHRAM HOUSE"
+  },
+  "roadClass": {
+    "type": "Property",
+    "value": "OTHER_PUBLIC_ROAD"
+  },
+  "medianHeight": {
+    "type": "Property",
+    "value": 3.6
+  },
+  "roadWork": {
+    "type": "Property",
+    "value": "OTHER"
+  },
+  "roadID": {
+    "type": "Property",
+    "value": "5272"
+  },
+  "cyclePathRightWidth": {
+    "type": "Property",
+    "value": 2.5
+  },
+  "roadMaterial": {
+    "type": "Property",
+    "value": "TAR"
+  },
+  "medianWidth": {
+    "type": "Property",
+    "value": 1.5
+  },
+  "carriagewayWidth": {
+    "type": "Property",
+    "value": 3
+  },
+  "cyclePathRightHeight": {
+    "type": "Property",
+    "value": 1
+  },
+  "roadDirection": {
+    "type": "Property",
+    "value": "N"
+  },
+  "medianLength": {
+    "type": "Property",
+    "value": 0.09
+  },
+  "pedestrianPathMaterial": {
+    "type": "Property",
+    "value": "PAVEMENT BLOCK"
+  },
+  "cyclePathLeftWidth": {
+    "type": "Property",
+    "value": 2.5
+  },
+  "maximumAllowedWidth": {
+    "type": "Property",
+    "value": 74
+  },
+  "rightOfWayWidth": {
+    "type": "Property",
+    "value": 4
+  },
+  "cyclePathLeftHeight": {
+    "type": "Property",
+    "value": 1
+  },
+  "maximumAllowedWeight": {
+    "type": "Property",
+    "value": 109
+  },
+  "pedestrianPathRightWidth": {
+    "type": "Property",
+    "value": 3.5
+  },
+  "pedestrianPathLeftWidth": {
+    "type": "Property",
+    "value": 3.5
+  },
+  "pedestrianPathPlacement": {
+    "type": "Property",
+    "value": "NOT_AVAILABLE"
+  },
+  "pedestrianPathRightHeight": {
+    "type": "Property",
+    "value": 2
+  },
+  "cyclePathPlacement": {
+    "type": "Property",
+    "value": "NOT_AVAILABLE"
+  },
+  "totalCyclePathWidth": {
+    "type": "Property",
+    "value": 5
+  },
+  "agency_name": {
+    "type": "Property",
+    "value": "CORPORATION"
+  },
+  "ulbName": {
+    "type": "Property",
+    "value": "KANNUR MUNICIPAL CORPORATION"
+  },
 	"@context": [
 		"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
 		"https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"

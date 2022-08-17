@@ -8,3 +8,11 @@ currentAdopters:
  project: 
  comments: Can be used to model the effect of bridge or lock openings on traffic that runs over them. 
  startDate: '2022-01-15'
+-
+ adopter: IUDX
+ description: A Data Model for road segments in the cities.
+ mail:
+ organization:
+ project:
+ comments:
+ startDate: '2022-08-17'
