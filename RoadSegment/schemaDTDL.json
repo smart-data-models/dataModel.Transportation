@@ -3,9 +3,17 @@
     "@type": "Interface",
     "@context": "dtmi:dtdl:context;2",
     "comment": "Smart Data Models - Transportation / Road Segment adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/RoadSegment/schema.json",
-    "description": "This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road. ",
+    "description": "This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road.",
     "displayName": "RoadSegment",
     "contents": [
+        {
+            "name": "agency_name",
+            "writable": true,
+            "displayName": "agency_name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The agency_name field contains the full name of the agency or organisation responsible for maintenance of the entity under consideration. SameAs: 'agency_name' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)"
+        },
         {
             "name": "alternateName",
             "writable": true,
@@ -23,12 +31,89 @@
             "comment": "The geographic area where a service or offered item is provided"
         },
         {
+            "name": "bridgeCount",
+            "writable": true,
+            "displayName": "bridgeCount",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Number of bridges in the road segment corresponding to this observation. Takes 0 (zero) as the value when the road segment has no bridges."
+        },
+        {
+            "name": "carriagewayLength",
+            "writable": true,
+            "displayName": "carriagewayLength",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Total length of the carriage way of the road segment corresponding to this observation."
+        },
+        {
+            "name": "carriagewayWidth",
+            "writable": true,
+            "displayName": "carriagewayWidth",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Total width of the carriage way of the road segment corresponding to this observation."
+        },
+        {
             "name": "color",
             "writable": true,
             "displayName": "color",
             "@type": "Property",
             "schema": "string",
             "comment": "The color of the product"
+        },
+        {
+            "name": "culvertCount",
+            "writable": true,
+            "displayName": "culvertCount",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Number of culverts prevalent in the trace of the road corresponding to this observation."
+        },
+        {
+            "name": "cyclePathLeftHeight",
+            "writable": true,
+            "displayName": "cyclePathLeftHeight",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Height of the cycle track on the left edge of the road corresponding to this observation."
+        },
+        {
+            "name": "cyclePathLeftWidth",
+            "writable": true,
+            "displayName": "cyclePathLeftWidth",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Width of the cycle track on the left edge of the road corresponding to this observation."
+        },
+        {
+            "name": "cyclePathMaterial",
+            "writable": true,
+            "displayName": "cyclePathMaterial",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Construction material used for laying the cycle path on the sides of the road corresponding to this observation."
+        },
+        {
+            "name": "cyclePathRightHeight",
+            "writable": true,
+            "displayName": "cyclePathRightHeight",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Height of the cycle track on the right edge of the road corresponding to this observation."
+        },
+        {
+            "name": "cyclePathRightWidth",
+            "writable": true,
+            "displayName": "cyclePathRightWidth",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Width of the cycle track on the right edge of the road corresponding to this observation."
+        },
+        {
+            "name": "dataDescriptor",
+            "writable": true,
+            "displayName": "dataDescriptor"
         },
         {
             "name": "dataProvider",
@@ -100,7 +185,7 @@
             "displayName": "maximumAllowedSpeed",
             "@type": "Property",
             "schema": "long",
-            "comment": "Maximum allowed speed while transiting this road segment. More restrictive limits might be applied to specific vehicle types (trucks, caravans, etc.)"
+            "comment": "Maximum allowed speed plying the road segment. More restrictive limits might be applied to specific vehicle types (trucks, caravans, etc.)"
         },
         {
             "name": "maximumAllowedWeight",
@@ -109,6 +194,38 @@
             "@type": "Property",
             "schema": "long",
             "comment": "Maximum allowed weight for vehicles transiting this road segment"
+        },
+        {
+            "name": "maximumAllowedWidth",
+            "writable": true,
+            "displayName": "maximumAllowedWidth",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Maximum allowed width for vehicles using the entity corresponding to this observation."
+        },
+        {
+            "name": "medianHeight",
+            "writable": true,
+            "displayName": "medianHeight",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Height of the median or central reservation in the road corresponding to this observation."
+        },
+        {
+            "name": "medianLength",
+            "writable": true,
+            "displayName": "medianLength",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Length of the median or central reservation in the road corresponding to this observation."
+        },
+        {
+            "name": "medianWidth",
+            "writable": true,
+            "displayName": "medianWidth",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Width of the median or central reservation in the road corresponding to this observation."
         },
         {
             "name": "minimumAllowedSpeed",
@@ -127,9 +244,97 @@
             "comment": "The name of this item."
         },
         {
+            "name": "pedestrianPathLeftHeight",
+            "writable": true,
+            "displayName": "pedestrianPathLeftHeight",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Height of the walkway placed on the left edge of the road corresponding to this observation."
+        },
+        {
+            "name": "pedestrianPathLeftWidth",
+            "writable": true,
+            "displayName": "pedestrianPathLeftWidth",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Width of the walkway placed on the left edge of the road corresponding to this observation."
+        },
+        {
+            "name": "pedestrianPathMaterial",
+            "writable": true,
+            "displayName": "pedestrianPathMaterial",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Construction material used for laying the walkway / footpath on the sides of the road corresponding to this observation."
+        },
+        {
+            "name": "pedestrianPathPlacement",
+            "writable": true,
+            "displayName": "pedestrianPathPlacement",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Describes the presence and placement of pedestrian along the road segment corresponding to this observation. Enum:'RIGHT, LEFT, BOTH, NOT_AVAILABLE'"
+        },
+        {
+            "name": "pedestrianPathRightHeight",
+            "writable": true,
+            "displayName": "pedestrianPathRightHeight",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Height of the walkway placed on the right edge of the road corresponding to this observation."
+        },
+        {
+            "name": "pedestrianPathRightWidth",
+            "writable": true,
+            "displayName": "pedestrianPathRightWidth",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Width of the walkway placed on the right edge of the road corresponding to this observation."
+        },
+        {
             "name": "refRoad",
             "writable": true,
             "displayName": "refRoad"
+        },
+        {
+            "name": "rightOfWayWidth",
+            "writable": true,
+            "displayName": "rightOfWayWidth",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Right of Way (RoW) is the total land area available for the roadway. Its width accommodates for carriages way + other necessities + future extension, along the road's alignment."
+        },
+        {
+            "name": "roadDirection",
+            "writable": true,
+            "displayName": "roadDirection",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Represents the direction the road is heading to. Enum:' ['N, S, E, W'. The values N,S,E,W represent North,South,East,West respectively."
+        },
+        {
+            "name": "roadId",
+            "writable": true,
+            "displayName": "roadId",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Unique internal representation of the road corresponding to this observation."
+        },
+        {
+            "name": "roadMaterial",
+            "writable": true,
+            "displayName": "roadMaterial",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The construction material used for laying the carriageway corresponding to this observation. For eg. concrete, earthen, tar etc."
+        },
+        {
+            "name": "roadName",
+            "writable": true,
+            "displayName": "roadName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of the road corresponding to this observation."
         },
         {
             "name": "seeAlso",
@@ -169,12 +374,36 @@
             "comment": "Additional information to the status attribute."
         },
         {
+            "name": "totalCyclePathWidth",
+            "writable": true,
+            "displayName": "totalCyclePathWidth",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Total width of the cycle track present in the road corresponding to this observation."
+        },
+        {
             "name": "totalLaneNumber",
             "writable": true,
             "displayName": "totalLaneNumber",
             "@type": "Property",
             "schema": "long",
             "comment": "Total number of lanes offered by this road segment"
+        },
+        {
+            "name": "totalPedestrianPathLength",
+            "writable": true,
+            "displayName": "totalPedestrianPathLength",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Total length of the walkway present in the road corresponding to this observation."
+        },
+        {
+            "name": "totalPedestrianPathWidth",
+            "writable": true,
+            "displayName": "totalPedestrianPathWidth",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Total width of the walkway present in the road corresponding to this observation."
         },
         {
             "name": "width",
@@ -262,6 +491,70 @@
                 },
                 {
                     "name": "streetAddress",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "laneInfo",
+            "comment": "Describes the aspects of lanes of the road corresponding to this observation.",
+            "displayName": "laneInfo",
+            "fields": [
+                {
+                    "name": "laneDirection",
+                    "schema": "enum"
+                },
+                {
+                    "name": "laneId",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "municipalityInfo",
+            "comment": "Municipality information corresponding to this observation.",
+            "displayName": "municipalityInfo",
+            "fields": [
+                {
+                    "name": "cityId",
+                    "schema": "string"
+                },
+                {
+                    "name": "cityName",
+                    "schema": "string"
+                },
+                {
+                    "name": "district",
+                    "schema": "string"
+                },
+                {
+                    "name": "stateName",
+                    "schema": "string"
+                },
+                {
+                    "name": "ulbName",
+                    "schema": "string"
+                },
+                {
+                    "name": "wardId",
+                    "schema": "string"
+                },
+                {
+                    "name": "wardName",
+                    "schema": "string"
+                },
+                {
+                    "name": "wardNum",
+                    "schema": "long"
+                },
+                {
+                    "name": "zoneId",
+                    "schema": "string"
+                },
+                {
+                    "name": "zoneName",
                     "schema": "string"
                 }
             ]
@@ -355,6 +648,161 @@
             "@type": "Telemetry",
             "name": "startPoint_MultiPolygon",
             "schema": "multiPolygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "cyclePathPlacement",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "BOTH",
+                        "displayName": "BOTH",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "LEFT",
+                        "displayName": "LEFT",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "NOT_AVAILABLE",
+                        "displayName": "NOT_AVAILABLE",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "RIGHT",
+                        "displayName": "RIGHT",
+                        "enumValue": 4
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "roadClass",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "MAJOR_DISTRICT_ROAD",
+                        "displayName": "MAJOR_DISTRICT_ROAD",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "MAJOR_CITY_ROAD",
+                        "displayName": "MAJOR_CITY_ROAD",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "MINOR_CITY_ROAD",
+                        "displayName": "MINOR_CITY_ROAD",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "NATIONAL_HIGHWAY",
+                        "displayName": "NATIONAL_HIGHWAY",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "OTHER_DISTRICT_ROAD",
+                        "displayName": "OTHER_DISTRICT_ROAD",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "OTHER_PUBLIC_ROAD",
+                        "displayName": "OTHER_PUBLIC_ROAD",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "PORT_ROAD",
+                        "displayName": "PORT_ROAD",
+                        "enumValue": 7
+                    },
+                    {
+                        "name": "PRIVATE_ROAD",
+                        "displayName": "PRIVATE_ROAD",
+                        "enumValue": 8
+                    },
+                    {
+                        "name": "SERVICE_ROAD",
+                        "displayName": "SERVICE_ROAD",
+                        "enumValue": 9
+                    },
+                    {
+                        "name": "STATE_HIGHWAY",
+                        "displayName": "STATE_HIGHWAY",
+                        "enumValue": 10
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "roadWork",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "COLLAPSE",
+                        "displayName": "COLLAPSE",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "DERAILMENT",
+                        "displayName": "DERAILMENT",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "FIRE",
+                        "displayName": "FIRE",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "FLOOD",
+                        "displayName": "FLOOD",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "GASLEAK",
+                        "displayName": "GASLEAK",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "LANDSLIDE",
+                        "displayName": "LANDSLIDE",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "OTHER",
+                        "displayName": "OTHER",
+                        "enumValue": 7
+                    },
+                    {
+                        "name": "POWERCUT",
+                        "displayName": "POWERCUT",
+                        "enumValue": 8
+                    },
+                    {
+                        "name": "ROCKFALL",
+                        "displayName": "ROCKFALL",
+                        "enumValue": 9
+                    },
+                    {
+                        "name": "SAGGING",
+                        "displayName": "SAGGING",
+                        "enumValue": 10
+                    },
+                    {
+                        "name": "WATERLEAK",
+                        "displayName": "WATERLEAK",
+                        "enumValue": 11
+                    }
+                ]
+            }
         }
     ]
 }
