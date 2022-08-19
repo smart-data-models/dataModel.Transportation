@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.0.3",
-  "modelTags": "",
+  "$schemaVersion": "0.1.0",
+  "modelTags": "IUDX",
   "$id": "https://smart-data-models.github.io/dataModel.Transportation/EVChargingStation/schema.json",
   "title": "Smart Data Models - Transportation / EV Charging Station",
   "description": "EV Charging Station",
@@ -152,6 +152,102 @@
           },
           "minItems": 1,
           "uniqueItems": true
+        },
+        "dataDescriptor": {
+          "type": "string",
+          "format": "uri",
+          "description": "Relationship. URI pointing to the data-descriptor entity"
+        },
+        "powerConsumption": {
+          "type": "number",
+          "description": "Property. Power consumed by the entity corresponding to this observation."
+        },
+        "chargingUnitId": {
+          "type": "string",
+          "description": "Property. The Id of the charging point in the EV charging station corresponding to this observation."
+        },
+        "transactionId": {
+          "type": "string",
+          "description": "Property. Unique transaction Id of the entity corresponding to this observation."
+        },
+        "transactionType": {
+          "type": "string",
+          "description": "Property. Type of the transaction based on the mode of payment (For eg. mobile/UPI, card, etc) or mode of service (For eg. Issue, ReIssue, Entry, Exit etc.) corresponding to this observation."
+        },
+        "stationName": {
+          "type": "string",
+          "description": "Property. The name station corresponding to this observation. It can be the name of bike docking station, charging station, etc."
+        },
+        "amountCollected": {
+          "type": "number",
+          "description": "Property. Amount collected towards the service corresponding to this observation."
+        },
+        "taxAmountCollected": {
+          "type": "number",
+          "description": "Property. The amount of tax levied on the products, things and services which includes sales tax, value-added tax, service tax, Good and Service tax, customs duty, etc."
+        },
+        "endDateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Reported end time corresponding to this observation."
+        },
+        "startDateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Reported start time corresponding to this observation."
+        },
+        "vehicleType": {
+          "type": "string",
+          "description": "Property. Type of vehicle from the point of view of its structural characteristics. This is different than the vehicle category . Model:'https://schema.org/Text'. Enum:'agriculturalVehicle, ambulance, anyVehicle, articulatedVehicle, autorickshaw, bicycle, binTrolley, BRT bus, BRT minibus, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, compactor, constructionOrMaintenanceVehicle, dumper, e-moped, e-scooter, e-motorcycle,fire tender, fourWheelDrive, highSidedVehicle, hopper, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, police van, sweepingMachine, tanker, tempo, threeWheeledVehicle, tipper, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'. The following values defined by _VehicleTypeEnum_ and _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)",
+          "enum": [
+            "agriculturalVehicle",
+            "ambulance",
+            "articulatedVehicle",
+            "autorickshaw",
+            "bicycle",
+            "binTrolley",
+            "BRT bus",
+            "BRT minibus",
+            "bus",
+            "car",
+            "caravan",
+            "carOrLightVehicle",
+            "carWithCaravan",
+            "carWithTrailer",
+            "cleaningTrolley",
+            "compactor",
+            "constructionOrMaintenanceVehicle",
+            "dumper",
+            "e-moped",
+            "e-scooter",
+            "e-motorcycle",
+            "fire tender",
+            "fourWheelDrive",
+            "highSidedVehicle",
+            "hopper",
+            "lorry",
+            "minibus",
+            "moped",
+            "motorcycle",
+            "motorcycleWithSideCar",
+            "motorscooter",
+            "police van",
+            "sweepingMachine",
+            "tanker",
+            "tempo",
+            "threeWheeledVehicle",
+            "tipper",
+            "trailer",
+            "tram",
+            "twoWheeledVehicle",
+            "trolley",
+            "van"
+          ]
+        },
+        "observationDateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Last reported time of observation."
         }
       }
     }

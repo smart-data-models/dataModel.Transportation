@@ -2,29 +2,44 @@
   "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",
   "type": "EVChargingStation",
   "socketType": {
-    "value": ["Wall_Euro"]
+    "type": "array",
+    "value": [
+      "Wall_Euro"
+    ]
   },
   "capacity": {
+    "type": "Number",
     "value": 2
   },
   "name": {
+    "type": "Text",
     "value": "Agencia de Innovaci\u00f3n"
   },
   "allowedVehicleType": {
-    "value": ["car"]
+    "type": "array",
+    "value": [
+      "car"
+    ]
   },
   "source": {
+    "type": "Text",
     "value": "https://openchargemap.org/"
   },
   "location": {
     "type": "geo:json",
     "value": {
       "type": "Point",
-      "coordinates": [-4.747901, 41.618265]
+      "coordinates": [
+        -4.747901,
+        41.618265
+      ]
     }
   },
   "chargeType": {
-    "value": ["free"]
+    "type": "array",
+    "value": [
+      "free"
+    ]
   },
   "address": {
     "type": "PostalAddress",
@@ -35,11 +50,60 @@
     }
   },
   "operator": {
+    "type": "Text",
     "value": "Iberdrola"
   },
   "contactPoint": {
+    "type": "StructuredValue",
     "value": {
       "email": "vehiculoelectrico@ava.es"
     }
+  },
+  "powerConsumption": {
+    "type": "number",
+    "value": 10.0
+  },
+  "chargingUnitId": {
+    "type": "string",
+    "value": "PZEV01-DeltaBharatAC001-SCTLGandhiPark001"
+  },
+  "transactionId": {
+    "type": "string",
+    "value": "84068784"
+  },
+  "transactionType": {
+    "type": "string",
+    "value": "RFID"
+  },
+  "stationName": {
+    "type": "string",
+    "value": "SmartCityTvmGandhiParkOne"
+  },
+  "amountCollected": {
+    "type": "number",
+    "value": 0.08
+  },
+  "taxAmountCollected": {
+    "type": "Number",
+    "value": 0.0
+  },
+  "endDateTime": {
+    "format": "date-time",
+    "type": "string",
+    "value": "2022-06-28T20:28:41+05:30"
+  },
+  "startDateTime": {
+    "format": "date-time",
+    "type": "string",
+    "value": "2022-06-28T20:27:27+05:30"
+  },
+  "vehicleType": {
+    "type": "string",
+    "value": "e-motorcycle"
+  },
+  "observationDateTime": {
+    "format": "date-time",
+    "type": "string",
+    "value": "2022-06-28T20:27:29+05:30"
   }
 }
