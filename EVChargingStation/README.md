@@ -1,5 +1,5 @@
 # EVChargingStation
-Version: 0.0.3
+Version: 0.1.0
 
 ## Description 
 
@@ -28,8 +28,6 @@ Link to the [example](https://smart-data-models.github.io/dataModel.Transportati
 Link to the [example](https://smart-data-models.github.io/dataModel.Transportation/EVChargingStation/examples/example-normalized.json) (normalized) for NGSI-V2
 
 Link to the [example](https://smart-data-models.github.io/dataModel.Transportation/EVChargingStation/examples/example-normalized.jsonld) (normalized) for NGSI-LD
-
-Link to the [example](https://smart-data-models.github.io/dataModel.Transportation/EVChargingStation/examples/example-geojsonfeature.json) (geojson feature) for NGSI-LD
 ### Dynamic Examples generation
 
 Link to the [Generator](https://smartdatamodels.org/extra/ngsi-ld_generator.php?schemaUrl=https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/EVChargingStation/schema.json&email=info@smartdatamodels.org) of NGSI-LD normalized payloads compliant with this data model. Refresh for new values
