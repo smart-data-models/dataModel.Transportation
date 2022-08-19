@@ -15,6 +15,14 @@
             "comment": "An alternative name for this item"
         },
         {
+            "name": "amountCollected",
+            "writable": true,
+            "displayName": "amountCollected",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Amount collected towards the service corresponding to this observation."
+        },
+        {
             "name": "amperage",
             "writable": true,
             "displayName": "amperage",
@@ -45,6 +53,21 @@
             "@type": "Property",
             "schema": "integer",
             "comment": "The total number of vehicles which can be charged at the same time. The total number of sockets can be higher. "
+        },
+        {
+            "name": "chargingUnitId",
+            "writable": true,
+            "displayName": "chargingUnitId",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The Id of the charging point in the EV charging station corresponding to this observation."
+        },
+        {
+            "name": "dataDescriptor",
+            "writable": true,
+            "displayName": "dataDescriptor",
+            "@type": "Relationship",
+            "comment": "URI pointing to the data-descriptor entity"
         },
         {
             "name": "dataProvider",
@@ -79,6 +102,14 @@
             "comment": "A description of this item"
         },
         {
+            "name": "endDateTime",
+            "writable": true,
+            "displayName": "endDateTime",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Reported end time corresponding to this observation."
+        },
+        {
             "name": "name",
             "writable": true,
             "displayName": "name",
@@ -95,6 +126,14 @@
             "comment": "The name of the Network, with that the operator cooperates. "
         },
         {
+            "name": "observationDateTime",
+            "writable": true,
+            "displayName": "observationDateTime",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Last reported time of observation."
+        },
+        {
             "name": "openingHours",
             "writable": true,
             "displayName": "openingHours",
@@ -109,6 +148,14 @@
             "@type": "Property",
             "schema": "string",
             "comment": "Charging station's operator. "
+        },
+        {
+            "name": "powerConsumption",
+            "writable": true,
+            "displayName": "powerConsumption",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Power consumed by the entity corresponding to this observation."
         },
         {
             "name": "seeAlso",
@@ -130,6 +177,46 @@
             "@type": "Property",
             "schema": "string",
             "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+        },
+        {
+            "name": "startDateTime",
+            "writable": true,
+            "displayName": "startDateTime",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Reported start time corresponding to this observation."
+        },
+        {
+            "name": "stationName",
+            "writable": true,
+            "displayName": "stationName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name station corresponding to this observation. It can be the name of bike docking station, charging station, etc."
+        },
+        {
+            "name": "taxAmountCollected",
+            "writable": true,
+            "displayName": "taxAmountCollected",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The amount of tax levied on the products, things and services which includes sales tax, value-added tax, service tax, Good and Service tax, customs duty, etc."
+        },
+        {
+            "name": "transactionId",
+            "writable": true,
+            "displayName": "transactionId",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Unique transaction Id of the entity corresponding to this observation."
+        },
+        {
+            "name": "transactionType",
+            "writable": true,
+            "displayName": "transactionType",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Type of the transaction based on the mode of payment (For eg. mobile/UPI, card, etc) or mode of service (For eg. Issue, ReIssue, Entry, Exit etc.) corresponding to this observation."
         },
         {
             "name": "voltage",
@@ -344,6 +431,226 @@
                         "name": "working",
                         "displayName": "working",
                         "enumValue": 7
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "vehicleType",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "agriculturalVehicle",
+                        "displayName": "agriculturalVehicle",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "ambulance",
+                        "displayName": "ambulance",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "articulatedVehicle",
+                        "displayName": "articulatedVehicle",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "autorickshaw",
+                        "displayName": "autorickshaw",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "bicycle",
+                        "displayName": "bicycle",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "binTrolley",
+                        "displayName": "binTrolley",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "BRT bus",
+                        "displayName": "BRT bus",
+                        "enumValue": 7
+                    },
+                    {
+                        "name": "BRT minibus",
+                        "displayName": "BRT minibus",
+                        "enumValue": 8
+                    },
+                    {
+                        "name": "bus",
+                        "displayName": "bus",
+                        "enumValue": 9
+                    },
+                    {
+                        "name": "car",
+                        "displayName": "car",
+                        "enumValue": 10
+                    },
+                    {
+                        "name": "caravan",
+                        "displayName": "caravan",
+                        "enumValue": 11
+                    },
+                    {
+                        "name": "carOrLightVehicle",
+                        "displayName": "carOrLightVehicle",
+                        "enumValue": 12
+                    },
+                    {
+                        "name": "carWithCaravan",
+                        "displayName": "carWithCaravan",
+                        "enumValue": 13
+                    },
+                    {
+                        "name": "carWithTrailer",
+                        "displayName": "carWithTrailer",
+                        "enumValue": 14
+                    },
+                    {
+                        "name": "cleaningTrolley",
+                        "displayName": "cleaningTrolley",
+                        "enumValue": 15
+                    },
+                    {
+                        "name": "compactor",
+                        "displayName": "compactor",
+                        "enumValue": 16
+                    },
+                    {
+                        "name": "constructionOrMaintenanceVehicle",
+                        "displayName": "constructionOrMaintenanceVehicle",
+                        "enumValue": 17
+                    },
+                    {
+                        "name": "dumper",
+                        "displayName": "dumper",
+                        "enumValue": 18
+                    },
+                    {
+                        "name": "e-moped",
+                        "displayName": "e-moped",
+                        "enumValue": 19
+                    },
+                    {
+                        "name": "e-scooter",
+                        "displayName": "e-scooter",
+                        "enumValue": 20
+                    },
+                    {
+                        "name": "e-motorcycle",
+                        "displayName": "e-motorcycle",
+                        "enumValue": 21
+                    },
+                    {
+                        "name": "fire tender",
+                        "displayName": "fire tender",
+                        "enumValue": 22
+                    },
+                    {
+                        "name": "fourWheelDrive",
+                        "displayName": "fourWheelDrive",
+                        "enumValue": 23
+                    },
+                    {
+                        "name": "highSidedVehicle",
+                        "displayName": "highSidedVehicle",
+                        "enumValue": 24
+                    },
+                    {
+                        "name": "hopper",
+                        "displayName": "hopper",
+                        "enumValue": 25
+                    },
+                    {
+                        "name": "lorry",
+                        "displayName": "lorry",
+                        "enumValue": 26
+                    },
+                    {
+                        "name": "minibus",
+                        "displayName": "minibus",
+                        "enumValue": 27
+                    },
+                    {
+                        "name": "moped",
+                        "displayName": "moped",
+                        "enumValue": 28
+                    },
+                    {
+                        "name": "motorcycle",
+                        "displayName": "motorcycle",
+                        "enumValue": 29
+                    },
+                    {
+                        "name": "motorcycleWithSideCar",
+                        "displayName": "motorcycleWithSideCar",
+                        "enumValue": 30
+                    },
+                    {
+                        "name": "motorscooter",
+                        "displayName": "motorscooter",
+                        "enumValue": 31
+                    },
+                    {
+                        "name": "police van",
+                        "displayName": "police van",
+                        "enumValue": 32
+                    },
+                    {
+                        "name": "sweepingMachine",
+                        "displayName": "sweepingMachine",
+                        "enumValue": 33
+                    },
+                    {
+                        "name": "tanker",
+                        "displayName": "tanker",
+                        "enumValue": 34
+                    },
+                    {
+                        "name": "tempo",
+                        "displayName": "tempo",
+                        "enumValue": 35
+                    },
+                    {
+                        "name": "threeWheeledVehicle",
+                        "displayName": "threeWheeledVehicle",
+                        "enumValue": 36
+                    },
+                    {
+                        "name": "tipper",
+                        "displayName": "tipper",
+                        "enumValue": 37
+                    },
+                    {
+                        "name": "trailer",
+                        "displayName": "trailer",
+                        "enumValue": 38
+                    },
+                    {
+                        "name": "tram",
+                        "displayName": "tram",
+                        "enumValue": 39
+                    },
+                    {
+                        "name": "twoWheeledVehicle",
+                        "displayName": "twoWheeledVehicle",
+                        "enumValue": 40
+                    },
+                    {
+                        "name": "trolley",
+                        "displayName": "trolley",
+                        "enumValue": 41
+                    },
+                    {
+                        "name": "van",
+                        "displayName": "van",
+                        "enumValue": 42
                     }
                 ]
             }
