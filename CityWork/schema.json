@@ -489,7 +489,7 @@
                 "items": {
                   "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
                 },
-                "description": "Property. Segment Location. A GeoProperty."
+                "description": "Geoproperty. Segment Location of the road impacted."
               },
               "segmentName": {
                 "type": "array",
@@ -596,7 +596,7 @@
                 "items": {
                   "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
                 },
-                "description": "Property. Segment Location. A GeoProperty."
+                "description": "Geoproperty. Segment Location of the bus impacted"
               },
               "segmentName": {
                 "type": "array",
@@ -638,7 +638,7 @@
                 "items": {
                   "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
                 },
-                "description": "Property. Segment Location. A GeoProperty."
+                "description": "Geoproperty. Segment Location of the school Bus Impacted"
               },
               "segmentName": {
                 "type": "array",
@@ -678,7 +678,7 @@
               },
               "segmentLocation": {
                 "type": "array",
-                "description": "Property. Segment Location. A GeoProperty.",
+                "description": "Geoproperty. Segment Location of the tramwayImpacted",
                 "items": {
                   "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
                 }
@@ -719,7 +719,7 @@
               },
               "segmentLocation": {
                 "type": "array",
-                "description": "Property. Segment Location. A GeoProperty.",
+                "description": "Geoproperty. Segment Location of the subwayImpacted",
                 "items": {
                   "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
                 }
@@ -760,7 +760,7 @@
               },
               "segmentLocation": {
                 "type": "array",
-                "description": "Property. Segment Location. A GeoProperty.",
+                "description": "Geoproperty. Segment Location of the railwayImpacted",
                 "items": {
                   "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
                 }
@@ -781,7 +781,7 @@
         },
         "schoolImpacted": {
           "type": "array",
-          "description": "Property. List of free text or [GeoProperty] or a Reference to an entity [SCHOOL] if exist. ",
+          "description": "Property. List of free text or a Reference to an entity [SCHOOL] if exist. ",
           "items": {
             "type": "string"
           }
@@ -831,7 +831,7 @@
                 "items": {
                   "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
                 },
-                "description": "Property. Station Location. A GeoProperty."
+                "description": "Geoproperty. Station Location of the stationImpacted."
               }
             }
           }
