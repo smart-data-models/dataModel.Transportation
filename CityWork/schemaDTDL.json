@@ -410,7 +410,7 @@
                 "@type": "Array",
                 "elementSchema": "string"
             },
-            "comment": "List of free text or [GeoProperty] or a Reference to an entity [SCHOOL] if exist. ",
+            "comment": "List of free text or a Reference to an entity [SCHOOL] if exist. ",
             "displayName": "schoolImpacted"
         },
         {
