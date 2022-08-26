@@ -235,7 +235,7 @@ CityWork:
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
             type: array
           segmentLocation:
-            description: 'Property. Segment Location. A GeoProperty.'
+            description: 'Geoproperty. Segment Location of the bus impacted'
             items:
               description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
@@ -544,7 +544,6 @@ CityWork:
         properties:
           closes:
             format: time
-            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$
             type: string
           dayOfWeek:
             anyOf:
@@ -574,7 +573,6 @@ CityWork:
             type: string
           opens:
             format: time
-            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$
             type: string
           validFrom:
             anyOf:
@@ -634,7 +632,7 @@ CityWork:
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
             type: array
           segmentLocation:
-            description: 'Property. Segment Location. A GeoProperty.'
+            description: 'Geoproperty. Segment Location of the railwayImpacted'
             items:
               description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
@@ -667,7 +665,7 @@ CityWork:
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
             type: array
           segmentLocation:
-            description: 'Property. Segment Location. A GeoProperty.'
+            description: 'Geoproperty. Segment Location of the road impacted.'
             items:
               description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
@@ -713,7 +711,7 @@ CityWork:
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
             type: array
           segmentLocation:
-            description: 'Property. Segment Location. A GeoProperty.'
+            description: 'Geoproperty. Segment Location of the school Bus Impacted'
             items:
               description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
@@ -728,7 +726,7 @@ CityWork:
       x-ngsi:
         type: Property
     schoolImpacted:
-      description: 'List of free text or [GeoProperty] or a Reference to an entity [SCHOOL] if exist. '
+      description: 'List of free text or a Reference to an entity [SCHOOL] if exist. '
       items:
         type: string
       type: array
@@ -769,7 +767,7 @@ CityWork:
               description: 'Property. Unique identifier of the entity'
             type: array
           stationLocation:
-            description: 'Property. Station Location. A GeoProperty.'
+            description: 'Geoproperty. Station Location of the stationImpacted.'
             items:
               description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
@@ -815,7 +813,7 @@ CityWork:
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
             type: array
           segmentLocation:
-            description: 'Property. Segment Location. A GeoProperty.'
+            description: 'Geoproperty. Segment Location of the subwayImpacted'
             items:
               description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
@@ -853,7 +851,7 @@ CityWork:
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
             type: array
           segmentLocation:
-            description: 'Property. Segment Location. A GeoProperty.'
+            description: 'Geoproperty. Segment Location of the tramwayImpacted'
             items:
               description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
@@ -1187,8 +1185,8 @@ CityWork:
     - location
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/CityWork/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/CityWork/schema.json
   x-model-tags: ""
-  x-version: 0.4.0
+  x-version: 0.4.1
