@@ -53,7 +53,8 @@ Vehicle:
         type: Property
     cargoWeight:
       description: 'Current weight of the vehicle''s cargo'
-      exclusiveMinimum: 0
+      exclusiveMinimum: true
+      minimum: 0
       type: number
       x-ngsi:
         model: https://schema.org/Number
@@ -202,10 +203,12 @@ Vehicle:
     heading:
       description: 'Denotes the direction of travel of the vehicle and is specified in decimal degrees, where 0 <= `heading` < 360, counting clockwise relative to the true north. If the vehicle is stationary (i.e. the value of the `speed` attribute is `0`), then the value of the heading attribute must be equal to `-1`'
       oneOf:
-        - maximum: 360
+        - exclusiveMaximum: true
+          maximum: 360
           minimum: 0
           type: number
-        - const: -1
+        - enum:
+            - -1
           type: number
       x-ngsi:
         model: https://schema.org/Number
@@ -710,8 +713,8 @@ Vehicle:
     - location
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/Vehicle/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/Vehicle/schema.json
   x-model-tags: IUDX
-  x-version: 0.2.0
+  x-version: 0.2.1
