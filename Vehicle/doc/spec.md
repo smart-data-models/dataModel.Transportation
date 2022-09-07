@@ -1,8 +1,10 @@
-Entity: Vehicle  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: Vehicle  
 ===============  
 [Open License](https://github.com/smart-data-models//dataModel.Transportation/blob/master/Vehicle/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.**  
+version: 0.2.1  
 
 ## List of properties  
 
@@ -67,7 +69,8 @@ Vehicle:
         type: Property    
     cargoWeight:    
       description: 'Current weight of the vehicle''s cargo'    
-      exclusiveMinimum: 0    
+      exclusiveMinimum: true    
+      minimum: 0    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
@@ -216,10 +219,12 @@ Vehicle:
     heading:    
       description: 'Denotes the direction of travel of the vehicle and is specified in decimal degrees, where 0 <= `heading` < 360, counting clockwise relative to the true north. If the vehicle is stationary (i.e. the value of the `speed` attribute is `0`), then the value of the heading attribute must be equal to `-1`'    
       oneOf:    
-        - maximum: 360    
+        - exclusiveMaximum: true    
+          maximum: 360    
           minimum: 0    
           type: number    
-        - const: -1    
+        - enum:    
+            - -1    
           type: number    
       x-ngsi:    
         model: https://schema.org/Number    
@@ -724,11 +729,11 @@ Vehicle:
     - location    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/Vehicle/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/Vehicle/schema.json    
   x-model-tags: IUDX    
-  x-version: 0.2.0    
+  x-version: 0.2.1    
 ```  
 </details>    
 ## Example payloads    
@@ -968,233 +973,232 @@ Vehicle:
 Here is an example of a Vehicle in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",  
-  "type": "Vehicle",  
-  "areaServed": "Centro",  
-  "cargoWeight": 314,  
-  "category": [  
-    "municipalServices"  
-  ],  
-  "location": {  
-    "coordinates": [  
-      -3.164485591715449,  
-      40.62785133667262  
+    "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",  
+    "type": "Vehicle",  
+    "areaServed": "Centro",  
+    "bearing": 43,  
+    "cargoWeight": 314,  
+    "category": [  
+        "municipalServices"  
     ],  
-    "type": "Point"  
-  },  
-  "name": "C Recogida 1",  
-  "refVehicleModel": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",  
-  "serviceProvided": [  
-    "gargabeCollection",  
-    "wasteContainerCleaning"  
-  ],  
-  "serviceStatus": "onRoute",  
-  "speed": 50,  
-  "vehiclePlateIdentifier": "3456ABC",  
-  "vehicleType": "lorry",  
-  "bearing": 43,  
-  "fuelEfficiency": 13,  
-  "fuelType": "Petrol",  
-  "fuelFilled": 6,  
-  "tripNetWeightCollected": 12,  
-  "vehicleTrackerDevice": "Installed",  
-  "wardId": "4",  
-  "license_plate": "KA052134",  
-  "currentTripCount": 1,  
-  "reportId": "21645",  
-  "zoneName": "South Zone",  
-  "vehicleAltitude": 600,  
-  "deviceSimNumber": "9942142573",  
-  "wardName": "Kempegowda Ward",  
-  "deviceBatteryStatus": "Connected",  
-  "ignitionStatus": true,  
-  "vehicleRunningStatus": "running",  
-  "observationDateTime": "2021-03-11T15:51:02+05:30",  
-  "serviceOnDuty": false,  
-  "emergencyVehicleType": "ambulance",  
-  "municipalityInfo":{  
-    "district":"Bangalore Urban",  
-    "ulbName":"BMC",  
-    "cityId":"23",  
-    "wardId":"23",  
-    "stateName":"Karnataka",  
-    "cityName":"Bangalore",  
-    "zoneName":"South",  
-    "wardName":"Bangalore Urban",  
-    "zoneId":"2",  
-    "wardNum":4  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "iudx:EmergencyVehicle"  
-  ]  
+    "currentTripCount": 1,  
+    "deviceBatteryStatus": "Connected",  
+    "deviceSimNumber": "9942142573",  
+    "emergencyVehicleType": "ambulance",  
+    "fuelEfficiency": 13,  
+    "fuelFilled": 6,  
+    "fuelType": "Petrol",  
+    "ignitionStatus": true,  
+    "license_plate": "KA052134",  
+    "location": {  
+        "coordinates": [  
+            -3.164485591715449,  
+            40.62785133667262  
+        ],  
+        "type": "Point"  
+    },  
+    "municipalityInfo": {  
+        "district": "Bangalore Urban",  
+        "ulbName": "BMC",  
+        "cityId": "23",  
+        "wardId": "23",  
+        "stateName": "Karnataka",  
+        "cityName": "Bangalore",  
+        "zoneName": "South",  
+        "wardName": "Bangalore Urban",  
+        "zoneId": "2",  
+        "wardNum": 4  
+    },  
+    "name": "C Recogida 1",  
+    "observationDateTime": "2021-03-11T15:51:02+05:30",  
+    "refVehicleModel": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",  
+    "reportId": "21645",  
+    "serviceOnDuty": false,  
+    "serviceProvided": [  
+        "gargabeCollection",  
+        "wasteContainerCleaning"  
+    ],  
+    "serviceStatus": "onRoute",  
+    "speed": 50,  
+    "tripNetWeightCollected": 12,  
+    "vehicleAltitude": 600,  
+    "vehiclePlateIdentifier": "3456ABC",  
+    "vehicleRunningStatus": "running",  
+    "vehicleTrackerDevice": "Installed",  
+    "vehicleType": "lorry",  
+    "wardId": "4",  
+    "wardName": "Kempegowda Ward",  
+    "zoneName": "South Zone",  
+    "@context": [  
+        "iudx:EmergencyVehicle",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### Vehicle NGSI-LD normalized Example    
 Here is an example of a Vehicle in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",  
-  "type": "Vehicle",  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "municipalServices"  
-    ]  
-  },  
-  "vehicleType": {  
-    "type": "Property",  
-    "value": "lorry"  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "C Recogida 1"  
-  },  
-  "vehiclePlateIdentifier": {  
-    "type": "Property",  
-    "value": "3456ABC"  
-  },  
-  "refVehicleModel": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -3.164485591715449,  
-        40.62785133667262  
-      ]  
+    "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",  
+    "type": "Vehicle",  
+    "areaServed": {  
+        "type": "Property",  
+        "value": "Centro"  
     },  
-    "observedAt": "2018-09-27T12:00:00Z"  
-  },  
-  "areaServed": {  
-    "type": "Property",  
-    "value": "Centro"  
-  },  
-  "serviceStatus": {  
-    "type": "Property",  
-    "value": "onRoute"  
-  },  
-  "cargoWeight": {  
-    "type": "Property",  
-    "value": 314  
-  },  
-  "speed": {  
-    "type": "Property",  
-    "value": 50,  
-    "observedAt": "2018-09-27T12:00:00Z"  
-  },  
-  "serviceProvided": {  
-    "type": "Property",  
-    "value": [  
-      "gargabeCollection",  
-      "wasteContainerCleaning"  
+    "bearing": {  
+        "type": "Property",  
+        "value": 43  
+    },  
+    "cargoWeight": {  
+        "type": "Property",  
+        "value": 314  
+    },  
+    "category": {  
+        "type": "Property",  
+        "value": [  
+            "municipalServices"  
+        ]  
+    },  
+    "currentTripCount": {  
+        "type": "Property",  
+        "value": 1  
+    },  
+    "deviceBatteryStatus": {  
+        "type": "Property",  
+        "value": "Connected"  
+    },  
+    "deviceSimNumber": {  
+        "type": "Property",  
+        "value": "9942142573"  
+    },  
+    "emergencyVehicleType": {  
+        "type": "Property",  
+        "value": "ambulance"  
+    },  
+    "fuelEfficiency": {  
+        "type": "Property",  
+        "value": 13  
+    },  
+    "fuelFilled": {  
+        "type": "Property",  
+        "value": 6  
+    },  
+    "fuelType": {  
+        "type": "Property",  
+        "value": "Petrol"  
+    },  
+    "ignitionStatus": {  
+        "type": "Property",  
+        "value": true  
+    },  
+    "license_plate": {  
+        "type": "Property",  
+        "value": "KA052134"  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -3.164485591715449,  
+                40.62785133667262  
+            ]  
+        },  
+        "observedAt": "2018-09-27T12:00:00Z"  
+    },  
+    "municipalityInfo": {  
+        "type": "Property",  
+        "value": {  
+            "district": "Bangalore Urban",  
+            "ulbName": "BMC",  
+            "cityId": "23",  
+            "wardId": "23",  
+            "stateName": "Karnataka",  
+            "cityName": "Bangalore",  
+            "zoneName": "South",  
+            "wardName": "Bangalore Urban",  
+            "zoneId": "2",  
+            "wardNum": 4  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "C Recogida 1"  
+    },  
+    "observationDateTime": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-03-11T15:51:02+05:30"  
+        }  
+    },  
+    "refVehicleModel": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic"  
+    },  
+    "reportId": {  
+        "type": "Property",  
+        "value": "21645"  
+    },  
+    "serviceOnDuty": {  
+        "type": "Property",  
+        "value": false  
+    },  
+    "serviceProvided": {  
+        "type": "Property",  
+        "value": [  
+            "gargabeCollection",  
+            "wasteContainerCleaning"  
+        ]  
+    },  
+    "serviceStatus": {  
+        "type": "Property",  
+        "value": "onRoute"  
+    },  
+    "speed": {  
+        "type": "Property",  
+        "value": 50,  
+        "observedAt": "2018-09-27T12:00:00Z"  
+    },  
+    "tripNetWeightCollected": {  
+        "type": "Property",  
+        "value": 12  
+    },  
+    "vehicleAltitude": {  
+        "type": "Property",  
+        "value": 600  
+    },  
+    "vehiclePlateIdentifier": {  
+        "type": "Property",  
+        "value": "3456ABC"  
+    },  
+    "vehicleRunningStatus": {  
+        "type": "Property",  
+        "value": "running"  
+    },  
+    "vehicleTrackerDevice": {  
+        "type": "Property",  
+        "value": "Installed"  
+    },  
+    "vehicleType": {  
+        "type": "Property",  
+        "value": "lorry"  
+    },  
+    "wardId": {  
+        "type": "Property",  
+        "value": "4"  
+    },  
+    "wardName": {  
+        "type": "Property",  
+        "value": "Kempegowda Ward"  
+    },  
+    "zoneName": {  
+        "type": "Property",  
+        "value": "South Zone"  
+    },  
+    "@context": [  
+        "iudx:EmergencyVehicle"  
     ]  
-  },  
-  "bearing": {  
-    "type": "Property",  
-    "value": 43  
-  },  
-  "fuelEfficiency": {  
-    "type": "Property",  
-    "value": 13  
-  },  
-  "fuelType": {  
-    "type": "Property",  
-    "value": "Petrol"  
-  },  
-  "fuelFilled": {  
-    "type": "Property",  
-    "value": 6  
-  },  
-  "tripNetWeightCollected": {  
-    "type": "Property",  
-    "value": 12  
-  },  
-  "vehicleTrackerDevice": {  
-    "type": "Property",  
-    "value": "Installed"  
-  },  
-  "wardId": {  
-    "type": "Property",  
-    "value": "4"  
-  },  
-  "license_plate": {  
-    "type": "Property",  
-    "value": "KA052134"  
-  },  
-  "currentTripCount": {  
-    "type": "Property",  
-    "value": 1  
-  },  
-  "reportId": {  
-    "type": "Property",  
-    "value": "21645"  
-  },  
-  "zoneName": {  
-    "type": "Property",  
-    "value": "South Zone"  
-  },  
-  "vehicleAltitude": {  
-    "type": "Property",  
-    "value": 600  
-  },  
-  "deviceSimNumber": {  
-    "type": "Property",  
-    "value": "9942142573"  
-  },  
-  "wardName": {  
-    "type": "Property",  
-    "value": "Kempegowda Ward"  
-  },  
-  "deviceBatteryStatus": {  
-    "type": "Property",  
-    "value": "Connected"  
-  },  
-  "ignitionStatus": {  
-    "type": "Property",  
-    "value": true  
-  },  
-  "vehicleRunningStatus": {  
-    "type": "Property",  
-    "value": "running"  
-  },  
-  "observationDateTime": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2021-03-11T15:51:02+05:30"  
-    }  
-  },  
-  "serviceOnDuty": {  
-    "type": "Property",  
-    "value": false  
-  },  
-  "emergencyVehicleType": {  
-    "type": "Property",  
-    "value": "ambulance"  
-  },  
-  "municipalityInfo": {  
-    "type": "Property",  
-    "value": {  
-      "district": "Bangalore Urban",  
-      "ulbName": "BMC",  
-      "cityId": "23",  
-      "wardId": "23",  
-      "stateName": "Karnataka",  
-      "cityName": "Bangalore",  
-      "zoneName": "South",  
-      "wardName": "Bangalore Urban",  
-      "zoneId": "2",  
-      "wardNum": 4  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "iudx:EmergencyVehicle"  
-  ]  
 }  
 ```  
 See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
