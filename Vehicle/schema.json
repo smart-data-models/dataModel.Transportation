@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.2.0",
+  "$schemaVersion": "0.2.1",
   "modelTags": "IUDX",
   "$id": "https://smart-data-models.github.io/dataModel.Transportation/Vehicle/schema.json",
   "title": "Smart Data Models - Vehicle",
@@ -118,11 +118,12 @@
             {
               "type": "number",
               "minimum": 0,
-              "maximum": 360
+              "maximum": 360,
+              "exclusiveMaximum": true
             },
             {
               "type": "number",
-              "const": -1
+              "enum": [-1]
             }
           ],
           "description": "Property. Denotes the direction of travel of the vehicle and is specified in decimal degrees, where 0 <= `heading` < 360, counting clockwise relative to the true north. If the vehicle is stationary (i.e. the value of the `speed` attribute is `0`), then the value of the heading attribute must be equal to `-1`. Model:'https://schema.org/Number'. Units:'Degree'"
@@ -130,7 +131,8 @@
         "cargoWeight": {
           "type": "number",
           "description": "Property. Current weight of the vehicle's cargo. Model:'https://schema.org/Number'. Units:'Kilograms'",
-          "exclusiveMinimum": 0
+          "minimum": 0,
+          "exclusiveMinimum": true
         },
         "vehicleIdentificationNumber": {
           "type": "string",
