@@ -502,5 +502,8 @@
             "sideWalk",
             "tramwayLine"
         ]
-    }
+    },
+    "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
+  ]
 }

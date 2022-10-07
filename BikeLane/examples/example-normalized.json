@@ -46,5 +46,8 @@
   "laneLength": {
     "type": "Number",
     "value": 150
-  }
+  },
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
+  ]
 }
