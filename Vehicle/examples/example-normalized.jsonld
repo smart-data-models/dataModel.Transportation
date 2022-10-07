@@ -157,6 +157,7 @@
         "value": "South Zone"
     },
     "@context": [
-        "iudx:EmergencyVehicle"
+        "iudx:EmergencyVehicle",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
     ]
 }
