@@ -11,5 +11,7 @@
         "vehicle:VehicleModel:modelName-1"
     ],
     "restrictionValidityHours": "Tu,Th 16:00-20:00",
-    "@context": []
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
+    ]
 }
