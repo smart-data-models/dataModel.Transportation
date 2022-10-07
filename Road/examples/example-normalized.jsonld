@@ -6,20 +6,21 @@
     "length": 355,
     "name": "A-62",
     "refRoadSegment": [
-     {
-          "type": "Relationship",
-          "object": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-forwards",
-          "datasetId": "urn:ngsi-ld:Relationship:Spain-RoadSegment-A62-0-355-forwards"
-     },
-    {
-          "type": "Relationship",
-          "object": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-backwards",
-          "datasetId": "urn:ngsi-ld:Relationship:Spain-RoadSegment-A62-0-355-backwards"
-     }
+        {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-forwards",
+            "datasetId": "urn:ngsi-ld:Relationship:Spain-RoadSegment-A62-0-355-forwards"
+        },
+        {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-backwards",
+            "datasetId": "urn:ngsi-ld:Relationship:Spain-RoadSegment-A62-0-355-backwards"
+        }
     ],
     "responsible": "Ministerio de Fomento - Gobierno de Espa\u00f1a",
     "roadClass": "motorway",
     "@context": [
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
     ]
 }
