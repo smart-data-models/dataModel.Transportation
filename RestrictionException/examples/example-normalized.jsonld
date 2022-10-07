@@ -12,6 +12,7 @@
         "vehicle:VehicleModel:modelName-1"
     ],
     "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"
+        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
     ]
 }
