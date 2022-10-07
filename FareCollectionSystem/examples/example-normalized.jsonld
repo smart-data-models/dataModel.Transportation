@@ -220,5 +220,7 @@
         "type": "Property",
         "value": "5821JZS"
     },
-    "@context": []
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
+    ]
 }
