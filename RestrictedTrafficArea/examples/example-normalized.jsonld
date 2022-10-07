@@ -19,5 +19,7 @@
     "regulation": "Decree:54785/2004, Deliberation:425/2004",
     "source": "https://dati.comune.milano.it/dataset/ds51_trafficotrasporti_aree_pedonali_ztl_zone_30_",
     "validityEndDate": "2049-12-31T23:00:00.00Z",
-    "@context": []
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
+    ]
 }
