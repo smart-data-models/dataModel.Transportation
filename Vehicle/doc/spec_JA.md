@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 エンティティ車両  
-========  
+========<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Transportation/blob/master/Vehicle/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 グローバルな記述です。**このエンティティは、特定の車両モデルをモデル化し、そのモデルに属する複数の車両インスタンスに共通するすべてのプロパティを含む**。  
 バージョン: 0.2.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `annotations`: アイテムに関するアノテーション  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `bearing`: 真北から時計回りで測定した車両の GPS 角度を与える。GTFS Realtime message-Position(https://developers.google.com/transit/gtfs-realtime/reference#message-position)の'bearing'フィールドと同じです。  - `cargoWeight`: 現在の車両積載重量  - `category`: 外部から見た車両カテゴリー。これは、`vehicleType`プロパティで表される車両タイプ（自動車、貨物自動車など）とは異なる。Enum:'municipalServices, nonTracked, private, public, specialUsage, tracked'（自治体サービス、非追跡、私有、公共、特別利用、追跡）。追跡車両とは、リモートシステムによって位置が常時追跡されている車両のことである。GPS受信機とネットワーク接続を備え、報告された位置（位置、速度、方向...）を定期的に更新する。  - `color`: 製品の色  - `currentTripCount`: この観測に対応する車両が、ある運用日に行ったトリップの現在の回数。  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateFirstUsed`: 車両が最初に使用された日時を示すタイムスタンプ  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateVehicleFirstRegistered`: 各公共機関への車両の最初の登録日  - `description`: このアイテムの説明  - `deviceBatteryStatus`: 報告デバイスのバッテリ充電状態を示す。Enum:'connected, disconnected'。  - `deviceSimNumber`: 車両に搭載されている端末のSIM番号を付与します。  - `emergencyVehicleType`: この観測に対応する緊急車両のタイプ。Enum:'policeCar, policeMotorcycle, policeVan, policeSWAT, fireEngine, waterTender, airAmbulance, ambulance, motorcycleAmbulance, rescueVehicle, hazardousMaterialsApparatus, towTruck.  - `feature`: 車両に搭載されている機能。Enum:' abs, airbag, alarm, backCamera, disabledRamp, gps, internetConnection, overspeed, proximitySensor, wifi'.または、アプリケーションによって必要とされるその他のもの。1つの機能の複数のインスタンスを表現するために、次の構文を使用することができます。<feature>,<occurences>`。例えば、4つのエアバッグを持つ車は `airbag,4` で表される。  - `fleetVehicleId`: 所属する車両群から見た車両の識別子  - `fuelEfficiency`: 単位使用燃料あたりの走行距離で、一般的には1リットルあたりのキロメートル（km/L）。  - `fuelFilled`: この観測に対応する車両に充填された燃料の量（リッター）。  - `fuelType`: この観測に対応する車両のエンジンまたはエンジンに適した燃料の種類。  - `heading`: 車両の進行方向を表し、真北から時計回りに数えて 0 <= `heading` < 360 となるように10進数で指定します。車両が静止している場合（つまり `speed` 属性の値が `0` ）、heading 属性の値は `-1` と等しくなければなりません。  - `id`: エンティティの一意な識別子  - `ignitionStatus`: 車両の点火状態を示す。真は点火済み  - `image`: アイテムの画像  - `license_plate`: 車両のナンバーを示す。SameAs: GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)の license_plate フィールド'.  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `mileageFromOdometer`: オドメーターから読み取れる、特定の自動車が製造されてから走行した距離の総和  - `municipalityInfo`: この観測に対応する自治体情報。  - `name`: このアイテムの名称です。  - `observationDateTime`: 最後に報告された観測時刻  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `previousLocation`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `purchaseDate`: 現在の所有者が車両などを購入した日付  - `refVehicleModel`: VehicleModel への参照。  - `reportId`: この観察に対応する課題またはレポートまたはフィードバックまたはトランザクションに割り当てられた一意のID。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `serviceOnDuty`: この観測に対応する緊急車両が提供するサービスの性質。真は、この観測に対応する緊急車両が緊急呼び出しに立ち会っている/サービスしていることを示し、そうでなければ偽である。  - `serviceProvided`: 車両が提供可能な、または割り当てられたサービス。Enum:'auxiliaryServices, cargoTransport, construction, fairground, garbageCollection, goodsSelling, maintenance, parksAndGardens, roadSignalling, specialTransport, streetCleaning, streetLighting, urbanTransit, wasteContainerCleaning'.または、特定のアプリケーションで必要とされるその他の値。  - `serviceStatus`: 車両の状態（提供するサービスの観点から、自家用車には適用できない）。駐車中` : 車両は駐車中で、現在何のサービスも提供していない。onRoute` : 車両は任務を遂行中である。コンマで区切られた修飾語(s)を追加することで、現在どのようなミッションがその車両を運んでいるのかを示すことができる。例えば `onRoute,garbageCollection` は、車両がルート上にあり、ゴミ収集のミッション中であることを示すのに使用することができる。'broken' :車両が一時的に故障していることを表します。outOfService` : 車両は道路上にあるが、どのミッションも行っていない、おそらくパーキングエリアに移動している。Enum:'broken, onRoute, outOfService, parked'.  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `speed`: 車両の現在速度の水平成分の大きさを示し、Kilometers per Hour で指定する。speed 属性が指定された場合、その値は非負の実数でなければなりません。何らかの理由で速度が一時的に不明な場合は、`-1`を使用してもよい。  - `tripNetWeightCollected`: この観測に対応する車両が走行終了時に収集した正味重量。  - `type`: NGSI Entity タイプ。これは車両でなければなりません。  - `vehicleAltitude`: GPSによる自車両の現在の高度を表示します。  - `vehicleConfiguration`: 5dr hatchback ST 2.5 MT 225 hp」や「limited edition」など、車両の構成を示す短いテキスト。  - `vehicleIdentificationNumber`: VIN（Vehicle Identification Number）は、自動車業界が個々の自動車を識別するために使用する固有の通し番号です  - `vehiclePlateIdentifier`: 車両に取り付けられた車両登録プレート上に表示される識別子またはコードで、公的な識別のために使用されます。登録識別子は、数字または英数字で、発行機関の地域内で一意である。規範的な参考文献。DATEXII `vehicleRegistrationPlateIdentifier` (車両登録プレート識別子)  - `vehicleRunningStatus`: 報告デバイスのバッテリ充電状態を示す。Enum: 'running, waiting, stopped'.  - `vehicleSpecialUsage`: 商用レンタル、自動車教習所、タクシーなど、特殊な用途で使用されているかどうかを示す。多くの国では、自動車を販売する際にこの情報を明らかにすることが法律で義務付けられている。Enum:'ambulance, fireBrigade, military, police, schoolTransportation, taxi, trashManagement' （救急車、消防団、軍隊、警察、学校、タクシー、ゴミ処理  - `vehicleTrackerDevice`: この観測に対応する車両に装着されたGPS装置またはトラッキング装置の設置状況。  - `vehicleType`: 構造的な特性から見た車両の種類。これは、車両カテゴリとは異なる。Enumです。'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle.Alloward, automobile, carWithCaravAN, auto, automobile, motorcycle.Alloward, automobile, carWithCaravAN, automobile, automobile, automobile, automobile, carWithCaravan, automobile, automobile, automobile, automobile, carwideFly, automobile, automobile, carwideFlymotorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumbersRegistrationPlates, withOddNumbersRegistrationPlates, other'.VehicleTypeEnum_ と _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm) で定義され、他の用途のために拡張された以下の値です。  - `wardId`: この観測に対応するエンティティのワードID。  - `wardName`: この観測に対応するエンティティの区名。  - `zoneName`: この観測に対応するエンティティのゾーン名    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `annotations[array]`: アイテムに関するアノテーション  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `bearing[number]`: 真北から時計回りで測定した車両の GPS 角度を与える。GTFS Realtime message-Position(https://developers.google.com/transit/gtfs-realtime/reference#message-position)の'bearing'フィールドと同じです。  . Model: [https://schema.org/Number](https://schema.org/Number)- `cargoWeight[number]`: 現在の車両積載重量  . Model: [https://schema.org/Number](https://schema.org/Number)- `category[array]`: 外部から見た車両カテゴリー。これは、`vehicleType`プロパティで表される車両タイプ（自動車、貨物自動車など）とは異なる。Enum:'municipalServices, nonTracked, private, public, specialUsage, tracked'（自治体サービス、非追跡、私有、公共、特別利用、追跡）。追跡車両とは、リモートシステムによって位置が常時追跡されている車両のことである。GPS受信機とネットワーク接続を備え、報告された位置（位置、速度、方向...）を定期的に更新する。  . Model: [https://schema.org/Text](https://schema.org/Text)- `color[string]`: 製品の色  . Model: [https://schema.org/color](https://schema.org/color)- `currentTripCount[number]`: この観測に対応する車両が、ある運用日に行ったトリップの現在の回数。  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateFirstUsed[string]`: 車両が最初に使用された日時を示すタイムスタンプ  . Model: [https://schema.org/DateTime.](https://schema.org/DateTime.)- `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateVehicleFirstRegistered[string]`: 各公共機関への車両の最初の登録日  . Model: [https://schema.org/dateVehicleFirstRegistered.](https://schema.org/dateVehicleFirstRegistered.)- `description[string]`: このアイテムの説明  - `deviceBatteryStatus[string]`: 報告デバイスのバッテリ充電状態を示す。Enum:'connected, disconnected'。  . Model: [https://schema.org/Text](https://schema.org/Text)- `deviceSimNumber[string]`: 車両に搭載されている端末のSIM番号を付与します。  . Model: [https://schema.org/Text](https://schema.org/Text)- `emergencyVehicleType[string]`: この観測に対応する緊急車両のタイプ。Enum:'policeCar, policeMotorcycle, policeVan, policeSWAT, fireEngine, waterTender, airAmbulance, ambulance, motorcycleAmbulance, rescueVehicle, hazardousMaterialsApparatus, towTruck.  . Model: [https://schema.org/Text](https://schema.org/Text)- `feature[array]`: 車両に搭載されている機能。Enum:' abs, airbag, alarm, backCamera, disabledRamp, gps, internetConnection, overspeed, proximitySensor, wifi'.または、アプリケーションによって必要とされるその他のもの。1つの機能の複数のインスタンスを表現するために、次の構文を使用することができます。<feature>,<occurences>`。例えば、4つのエアバッグを持つ車は `airbag,4` で表される。  . Model: [https://schema.org/Text](https://schema.org/Text)- `fleetVehicleId[string]`: 所属する車両群から見た車両の識別子  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `fuelEfficiency[number]`: 単位使用燃料あたりの走行距離で、一般的には1リットルあたりのキロメートル（km/L）。  . Model: [https://schema.org/Number](https://schema.org/Number)- `fuelFilled[number]`: この観測に対応する車両に充填された燃料の量（リッター）。  . Model: [https://schema.org/Number](https://schema.org/Number)- `fuelType[string]`: この観測に対応する車両のエンジンまたはエンジンに適した燃料の種類。  . Model: [https://schema.org/Text](https://schema.org/Text)- `heading[*]`: 車両の進行方向を表し、真北から時計回りに数えて 0 <= `heading` < 360 となるように10進数で指定します。車両が静止している場合（つまり `speed` 属性の値が `0` ）、heading 属性の値は `-1` と等しくなければなりません。  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: エンティティの一意な識別子  - `ignitionStatus[boolean]`: 車両の点火状態を示す。真は点火済み  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `image[string]`: アイテムの画像  . Model: [https://schema.org/URL](https://schema.org/URL)- `license_plate[string]`: 車両のナンバーを示す。SameAs: GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)の license_plate フィールド'.  . Model: [https://schema.org/Text](https://schema.org/Text)- `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `mileageFromOdometer[number]`: オドメーターから読み取れる、特定の自動車が製造されてから走行した距離の総和  . Model: [https://schema.org/mileageFromOdometer.](https://schema.org/mileageFromOdometer.)- `municipalityInfo[object]`: この観測に対応する自治体情報。  . Model: [https://schema.org/Text](https://schema.org/Text)- `name[string]`: このアイテムの名称です。  - `observationDateTime[string]`: 最後に報告された観測時刻  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `previousLocation[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `purchaseDate[string]`: 現在の所有者が車両などを購入した日付  . Model: [https://schema.org/purchaseDate.](https://schema.org/purchaseDate.)- `refVehicleModel[*]`: VehicleModel への参照。  . Model: [https://schema.org/URL](https://schema.org/URL)- `reportId[string]`: この観察に対応する課題またはレポートまたはフィードバックまたはトランザクションに割り当てられた一意のID。  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `serviceOnDuty[string]`: この観測に対応する緊急車両が提供するサービスの性質。真は、この観測に対応する緊急車両が緊急呼び出しに立ち会っている/サービスしていることを示し、そうでなければ偽である。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `serviceProvided[array]`: 車両が提供可能な、または割り当てられたサービス。Enum:'auxiliaryServices, cargoTransport, construction, fairground, garbageCollection, goodsSelling, maintenance, parksAndGardens, roadSignalling, specialTransport, streetCleaning, streetLighting, urbanTransit, wasteContainerCleaning'.または、特定のアプリケーションで必要とされるその他の値。  . Model: [https://schema.org/Text](https://schema.org/Text)- `serviceStatus[string]`: 車両の状態（提供するサービスの観点から、自家用車には適用できない）。駐車中` : 車両は駐車中で、現在何のサービスも提供していない。onRoute` : 車両は任務を遂行中である。コンマで区切られた修飾語(s)を追加することで、現在どのようなミッションがその車両を運んでいるのかを示すことができる。例えば `onRoute,garbageCollection` は、車両がルート上にあり、ゴミ収集のミッション中であることを示すのに使用することができる。'broken' :車両が一時的に故障していることを表します。outOfService` : 車両は道路上にあるが、どのミッションも行っていない、おそらくパーキングエリアに移動している。Enum:'broken, onRoute, outOfService, parked'.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `speed[*]`: 車両の現在速度の水平成分の大きさを示し、Kilometers per Hour で指定する。speed 属性が指定された場合、その値は非負の実数でなければなりません。何らかの理由で速度が一時的に不明な場合は、`-1` を使用してもよい。  . Model: [https://schema.org/Number](https://schema.org/Number)- `tripNetWeightCollected[number]`: この観測に対応する車両が走行終了時に収集した正味重量。  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: NGSI Entity タイプ。これは車両でなければなりません。  - `vehicleAltitude[string]`: GPSによる自車両の現在の高度を表示します。  . Model: [https://schema.org/Text](https://schema.org/Text)- `vehicleConfiguration[string]`: 5dr hatchback ST 2.5 MT 225 hp」や「limited edition」など、車両の構成を示す短いテキスト。  . Model: [https://schema.org/vehicleConfiguration.](https://schema.org/vehicleConfiguration.)- `vehicleIdentificationNumber[string]`: VIN（Vehicle Identification Number）は、自動車業界が個々の自動車を識別するために使用する固有の通し番号です  . Model: [https://schema.org/vehicleIdentificationNumber.](https://schema.org/vehicleIdentificationNumber.)- `vehiclePlateIdentifier[string]`: 車両に取り付けられた車両登録プレート上に表示される識別子またはコードで、公的な識別のために使用されます。登録識別子は、数字または英数字で、発行機関の地域内で一意である。規範的な参考文献。DATEXII `vehicleRegistrationPlateIdentifier` (車両登録プレート識別子)  . Model: [https://schema.org/Text](https://schema.org/Text)- `vehicleRunningStatus[string]`: 報告デバイスのバッテリ充電状態を示す。Enum: 'running, waiting, stopped'.  . Model: [https://schema.org/Text](https://schema.org/Text)- `vehicleSpecialUsage[string]`: 商用レンタル、自動車教習所、タクシーなど、特殊な用途で使用されているかどうかを示す。多くの国では、自動車を販売する際にこの情報を明らかにすることが法律で義務付けられている。Enum:'ambulance, fireBrigade, military, police, schoolTransportation, taxi, trashManagement' （救急車、消防団、軍隊、警察、学校、タクシー、ゴミ処理  . Model: [https://schema.org/vehicleSpecialUsage](https://schema.org/vehicleSpecialUsage)- `vehicleTrackerDevice[string]`: この観測に対応する車両に装着されたGPS装置またはトラッキング装置の設置状況。  . Model: [https://schema.org/Text](https://schema.org/Text)- `vehicleType[string]`: 構造的な特性から見た車両の種類。これは、車両カテゴリとは異なる。Enumです。'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle.All rights reserved, Copyright © 2008-2013 Japan Certification Services, Inc,motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumbersRegistrationPlates, withOddNumberedRegistrationPlates, other'.VehicleTypeEnum_ と _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm) で定義され、他の用途のために拡張された以下の値です。  . Model: [https://schema.org/Text](https://schema.org/Text)- `wardId[string]`: この観測に対応するエンティティのワードID。  . Model: [https://schema.org/Text](https://schema.org/Text)- `wardName[string]`: この観測に対応するエンティティの区名。  . Model: [https://schema.org/Text](https://schema.org/Text)- `zoneName[string]`: この観測に対応するエンティティのゾーン名  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `category`  - `id`  - `location`  - `type`  - `vehicleType`  ## プロパティのデータモデル記述  
+- `category`  - `id`  - `location`  - `type`  - `vehicleType`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Vehicle:    
@@ -736,9 +750,14 @@ Vehicle:
   x-version: 0.2.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### 車両 NGSI-v2 キー値例  
 ここでは、VehicleをJSON-LD形式でkey-valuesにした例を示す。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "vehicle:WasteManagement:1",  
@@ -799,8 +818,10 @@ Vehicle:
   }  
 }  
 ```  
+</details>  
 #### 車両 NGSI-v2 正規化例  
 以下は、VehicleをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "vehicle:WasteManagement:1",  
@@ -969,8 +990,10 @@ Vehicle:
   }  
 }  
 ```  
+</details>  
 #### 車両 NGSI-LD キー値例  
 ここでは、VehicleをJSON-LD形式でkey-valuesにした例を示す。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",  
@@ -1035,8 +1058,10 @@ Vehicle:
     ]  
 }  
 ```  
+</details>  
 #### 車両 NGSI-LD 正規化例  
 ここでは、VehicleをJSON-LD形式で正規化した例を示す。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",  
@@ -1197,8 +1222,17 @@ Vehicle:
         "value": "South Zone"  
     },  
     "@context": [  
-        "iudx:EmergencyVehicle"  
+        "iudx:EmergencyVehicle",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
