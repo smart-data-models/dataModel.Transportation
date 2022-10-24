@@ -1,17 +1,32 @@
-エンティティ制限された交通エリア（RestrictedTrafficArea  
-======================================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティRestrictedTrafficArea  
+===========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Transportation/blob/master/RestrictedTrafficArea/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな説明。**都市の中で、自動車などの交通量が制限されているエリア。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述。**自動車やその他の乗り物によって発生する交通が制限される都市のエリア。  
+バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `category`: 制限された交通エリアのカテゴリー。このフィールドの目的は、一般的に言って、制限された交通エリアのエンティティをタグ付けすることを可能にすることである。特殊性と詳細な説明は、対応する特定の属性の下で見つけられるべきである。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `notAllowedVehicleType`: 交通規制区域を横断できない車種。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `regulation`: 特定の交通規制区域の規則を示すURL。  - `restrictionExceptions`: 特定の時間帯に制限された交通エリアを通過することを許可された個々の車両タイプ。  - `restrictionValidityHours`: 交通規制が有効な曜日と時間帯。  - `security`: 交通規制があることで、セキュリティ面でも安心です。  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `specialRestrictions`: 特定の時間帯に制限された交通エリアを通過することができない個々の車種。  - `type`: NGSI エンティティタイプ。これはRestrictedTrafficAreaでなければならない。  - `validityEndDate`: 制限が解除された日。  - `validityStartDate`: 制限が適用される日付です。    
-必須項目  
-- `id`  - `type`    
-シンクロニシティプロジェクトのデータモデル  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[array]`: 交通規制区域のカテゴリ（ies）。このフィールドの目的は、一般的に言えば、交通制限区域エンティティにタグを付けることを可能にすることである。特殊性と詳細な説明は、対応する特定の属性の下で見つけられるべきである。  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `id[*]`: エンティティの一意な識別子  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `notAllowedVehicleType[array]`: 交通規制区域を通行できない車種。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `regulation[string]`: 特定の交通規制区域の規則を示す URL。  - `restrictionExceptions[array]`: 特定の時間帯に交通規制区域を横断することを許可された個々の車種のこと。  - `restrictionValidityHours[string]`: 交通規制が適用される曜日と時間帯。  - `security[array]`: 交通規制があるため、セキュリティ面でも安心です。  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `specialRestrictions[array]`: 特定の時間帯に交通規制区域を横断できない個別車種。  - `type[string]`: NGSI Entity タイプ。RestrictedTrafficAreaでなければならない。  - `validityEndDate[string]`: 制限が解除される日。  - `validityStartDate[string]`: 制限を適用する日付。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+シンクロニシティプロジェクトから生まれたデータモデル  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 RestrictedTrafficArea:    
@@ -424,9 +439,14 @@ RestrictedTrafficArea:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### RestrictedTrafficArea NGSI-v2のキーバリューの例。  
-RestrictedTrafficAreaをkey-valuesとしてJSON-LD形式で出力した例です。これは、`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### RestrictedTrafficArea NGSI-v2 key-value の例。  
+以下は、RestrictedTrafficAreaをJSON-LD形式でkey-valuesにした例である。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
@@ -451,8 +471,10 @@ RestrictedTrafficArea:
   "validityEndDate": "2049-12-31T23:00:00.00Z"  
 }  
 ```  
+</details>  
 #### RestrictedTrafficArea NGSI-v2 正規化例  
-ここでは、正規化されたJSON-LD形式のRestrictedTrafficAreaの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、RestrictedTrafficAreaをJSON-LD形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
@@ -501,86 +523,98 @@ RestrictedTrafficArea:
   }  
 }  
 ```  
-#### RestrictedTrafficArea NGSI-LDのキーバリューの例。  
-RestrictedTrafficAreaをkey-valuesとしてJSON-LD形式で出力した例です。これは、`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### RestrictedTrafficArea NGSI-LD キー値例  
+RestrictedTrafficAreaをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
-  "type": "RestrictedTrafficArea",  
-  "category": {  
-    "type": "array",  
-    "value": [  
-      "onlyPedestrian"  
+    "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
+    "type": "RestrictedTrafficArea",  
+    "category": {  
+        "type": "array",  
+        "value": [  
+            "onlyPedestrian"  
+        ]  
+    },  
+    "description": {  
+        "type": "string",  
+        "value": "Panel:AP - Stretches:lato civici dispari da piazza Tricolore a via Kramer - Bollards: - Notes:"  
+    },  
+    "location": {  
+        "type": "geo:json",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                9.214544,  
+                45.483353  
+            ]  
+        }  
+    },  
+    "name": {  
+        "type": "string",  
+        "value": "Corso Concordia Area"  
+    },  
+    "notAllowedVehicleType": {  
+        "type": "array",  
+        "value": [  
+            "anyVehicle"  
+        ]  
+    },  
+    "regulation": {  
+        "type": "string",  
+        "value": "Decree:54785/2004, Deliberation:425/2004"  
+    },  
+    "source": {  
+        "type": "string",  
+        "value": "https://dati.comune.milano.it/dataset/ds51_trafficotrasporti_aree_pedonali_ztl_zone_30_"  
+    },  
+    "validityEndDate": {  
+        "type": "DateTime",  
+        "value": "2049-12-31T23:00:00.00Z"  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
-  },  
-  "description": {  
-    "type": "string",  
-    "value": "Panel:AP - Stretches:lato civici dispari da piazza Tricolore a via Kramer - Bollards: - Notes:"  
-  },  
-  "location": {  
-    "type": "geo:json",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        9.214544,  
-        45.483353  
-      ]  
-    }  
-  },  
-  "name": {  
-    "type": "string",  
-    "value": "Corso Concordia Area"  
-  },  
-  "notAllowedVehicleType": {  
-    "type": "array",  
-    "value": [  
-      "anyVehicle"  
-    ]  
-  },  
-  "regulation": {  
-    "type": "string",  
-    "value": "Decree:54785/2004, Deliberation:425/2004"  
-  },  
-  "source": {  
-    "type": "string",  
-    "value": "https://dati.comune.milano.it/dataset/ds51_trafficotrasporti_aree_pedonali_ztl_zone_30_"  
-  },  
-  "validityEndDate": {  
-    "type": "DateTime",  
-    "value": "2049-12-31T23:00:00.00Z"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
 }  
 ```  
-#### RestrictedTrafficArea NGSI-LDの正規化例  
-ここでは、正規化されたJSON-LD形式のRestrictedTrafficAreaの例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### RestrictedTrafficArea NGSI-LD 正規化例  
+RestrictedTrafficArea を JSON-LD 形式で正規化した例を示す。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
-  "type": "RestrictedTrafficArea",  
-  "category": [  
-    "onlyPedestrian"  
-  ],  
-  "description": "Panel:AP - Stretches:lato civici dispari da piazza Tricolore a via Kramer - Bollards: - Notes:",  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      9.214544,  
-      45.483353  
+    "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
+    "type": "RestrictedTrafficArea",  
+    "category": [  
+        "onlyPedestrian"  
+    ],  
+    "description": "Panel:AP - Stretches:lato civici dispari da piazza Tricolore a via Kramer - Bollards: - Notes:",  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            9.214544,  
+            45.483353  
+        ]  
+    },  
+    "name": "Corso Concordia Area",  
+    "notAllowedVehicleType": [  
+        "anyVehicle"  
+    ],  
+    "regulation": "Decree:54785/2004, Deliberation:425/2004",  
+    "source": "https://dati.comune.milano.it/dataset/ds51_trafficotrasporti_aree_pedonali_ztl_zone_30_",  
+    "validityEndDate": "2049-12-31T23:00:00.00Z",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
-  },  
-  "name": "Corso Concordia Area",  
-  "notAllowedVehicleType": [  
-    "anyVehicle"  
-  ],  
-  "regulation": "Decree:54785/2004, Deliberation:425/2004",  
-  "source": "https://dati.comune.milano.it/dataset/ds51_trafficotrasporti_aree_pedonali_ztl_zone_30_",  
-  "validityEndDate": "2049-12-31T23:00:00.00Z",  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
