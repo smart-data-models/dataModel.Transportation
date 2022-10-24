@@ -1,17 +1,32 @@
-Entidad: FleetVehicleStatus  
-===========================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entidad: FleetVehicleStatus  
+===========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.Transportation/blob/master/FleetVehicleStatus/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Descripción global: **Esta entidad contiene una descripción armonizada del estado de un vehículo de flota genérico. Esta entidad se asocia principalmente con el segmento vertical del transporte y la logística, pero también puede utilizarse en muchas otras aplicaciones de la IO relacionadas.  
+versión: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `bearing`: El rumbo actual del vehículo de la flota en grados con respecto al Norte. El elemento timestamp del atributo debe indicar cuándo se obtuvo la lectura.  - `currentOperative`: El operador actual (por ejemplo, el conductor) del vehículo descrito como persona de Schema.org  - `currentStatus`: Una descripción del estado actual del vehículo, por ejemplo, Enum:'desplegado, terminado, finalizado, en servicio, en marcha'  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `fleetVehicle`: Referencia a la entidad FleetVehicle a la que se refiere esta entidad de estado.  - `fleetVehicleOperation`: Referencia a la entidad FleetVehicleOperation a la que se refiere esta entidad de estado.  - `id`: Identificador único de la entidad  - `inRestrictedArea`: Indica si se sabe que el vehículo está en una zona restringida en el momento de la actualización del estado.  - `lastFuellingAmount`: El nivel de combustible añadido al vehículo en el último repostaje. El elemento "timestamp" del atributo debe indicar cuándo se repostó el vehículo. Datos que deben registrarse en litros  - `lastKnownPosition`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `lastKnownPositionUpdatedAt`: La marca de tiempo de la última actualización de la posición conocida del vehículo de la flota.  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `mileageFromOdometer`: La distancia total que ha recorrido el vehículo de la flota según el cuentakilómetros de a bordo en kilómetros (unitCode KMT) o millas (unitCode SMI). Véase también Schema.org Vehicle/ mileageFromOdometer. El elemento timestamp registra cuándo se tomó la lectura del cuentakilómetros.  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `restFuelAmount`: El nivel de combustible registrado cuando el vehículo estuvo en reposo por última vez (es decir, parado). El elemento "timestamp" del atributo debe indicar cuándo estuvo el vehículo en reposo por última vez. Los datos deben registrarse en litros.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `speed`: La velocidad actual del vehículo de la flota (km/h). El elemento timestamp del atributo debe indicar cuándo se obtuvo la lectura  - `type`: Identificador de la entidad NGSI. Debe ser FleetVehicleStatus    
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
+- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `bearing[number]`: El rumbo actual del vehículo de la flota en grados con respecto al Norte. El elemento timestamp del atributo debe indicar cuándo se obtuvo la lectura.  - `currentOperative[object]`: El operador actual (por ejemplo, el conductor) del vehículo descrito como persona de Schema.org  . Model: [https://schema.org/Person](https://schema.org/Person)- `currentStatus[string]`: Una descripción del estado actual del vehículo, por ejemplo, Enum:'desplegado, terminado, finalizado, en servicio, en marcha'  - `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description[string]`: Una descripción de este artículo  - `fleetVehicle[*]`: Referencia a la entidad FleetVehicle a la que se refiere esta entidad de estado.  - `fleetVehicleOperation[*]`: Referencia a la entidad FleetVehicleOperation a la que se refiere esta entidad de estado.  - `id[*]`: Identificador único de la entidad  - `inRestrictedArea[boolean]`: Indica si se sabe que el vehículo está en una zona restringida en el momento de la actualización del estado.  - `lastFuellingAmount[number]`: El nivel de combustible añadido al vehículo en el último repostaje. El elemento "timestamp" del atributo debe indicar cuándo se repostó el vehículo. Datos que deben registrarse en litros  - `lastKnownPosition[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `lastKnownPositionUpdatedAt[string]`: La marca de tiempo de la última actualización de la posición conocida del vehículo de la flota.  - `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `mileageFromOdometer[number]`: La distancia total que ha recorrido el vehículo de la flota según el cuentakilómetros de a bordo en kilómetros (unitCode KMT) o millas (unitCode SMI). Véase también Schema.org Vehicle/ mileageFromOdometer. El elemento timestamp registra cuándo se tomó la lectura del cuentakilómetros.  - `name[string]`: El nombre de este artículo.  - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `restFuelAmount[number]`: El nivel de combustible registrado cuando el vehículo estuvo en reposo por última vez (es decir, parado). El elemento "timestamp" del atributo debe indicar cuándo estuvo el vehículo en reposo por última vez. Los datos deben registrarse en litros.  - `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `speed[number]`: La velocidad actual del vehículo de la flota (km/h). El elemento timestamp del atributo debe indicar cuándo se obtuvo la lectura  - `type[string]`: Identificador de la entidad NGSI. Debe ser FleetVehicleStatus  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propiedades requeridas  
-- `id`  - `type`    
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Este modelo de datos procede del proyecto original de GSMA IoT, https://www.gsma.com/iot/iot-big-data/. Hay algunas adaptaciones menores para cumplir los requisitos de los modelos de datos inteligentes.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 FleetVehicleStatus:    
@@ -381,9 +396,14 @@ FleetVehicleStatus:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### FleetVehicleStatus NGSI-v2 key-values Ejemplo  
 Este es un ejemplo de FleetVehicleStatus en formato JSON-LD como valores clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:FleetVehicleStatus:16ea1c5c-5aa6-11e8-8144-4b82063ca31c",  
@@ -414,8 +434,10 @@ FleetVehicleStatus:
   "mileageFromOdometer": 18756  
 }  
 ```  
+</details>  
 #### FleetVehicleStatus NGSI-v2 normalizado Ejemplo  
 Este es un ejemplo de un FleetVehicleStatus en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:FleetVehicleStatus:16ea1c5c-5aa6-11e8-8144-4b82063ca31c",  
@@ -487,126 +509,140 @@ FleetVehicleStatus:
   }  
 }  
 ```  
+</details>  
 #### FleetVehicleStatus NGSI-LD key-values Ejemplo  
 Este es un ejemplo de FleetVehicleStatus en formato JSON-LD como valores clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleStatus/context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:FleetVehicleStatus:16ea1c5c-5aa6-11e8-8144-4b82063ca31c",  
-  "type": "FleetVehicleStatus",  
-  "source": "https://source.example.com",  
-  "dataProvider": "https://provider.example.com",  
-  "fleetVehicle": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f",  
-  "fleetVehicleOperation": "urn:ngsi-ld:FleetVehicleOperation:a4f0a07a-5aa6-11e8-b70f-4b9d36e53d7b",  
-  "restFuelAmount": 28,  
-  "lastFuellingAmount": 95,  
-  "currentStatus": "finished",  
-  "currentOperative": {  
-    "givenName": "John Smith",  
-    "jobTitle": "Ambulance Operator"  
-  },  
-  "speed": 60,  
-  "unitCode": "KMH",  
-  "bearing": 80,  
-  "lastKnownPosition": {  
-    "type": "Point",  
-    "coordinates": [  
-      -104.99404,  
-      39.75621  
+    "id": "urn:ngsi-ld:FleetVehicleStatus:16ea1c5c-5aa6-11e8-8144-4b82063ca31c",  
+    "type": "FleetVehicleStatus",  
+    "bearing": 80,  
+    "currentOperative": {  
+        "givenName": "John Smith",  
+        "jobTitle": "Ambulance Operator"  
+    },  
+    "currentStatus": "finished",  
+    "dataProvider": "https://provider.example.com",  
+    "fleetVehicle": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f",  
+    "fleetVehicleOperation": "urn:ngsi-ld:FleetVehicleOperation:a4f0a07a-5aa6-11e8-b70f-4b9d36e53d7b",  
+    "inRestrictedArea": true,  
+    "lastFuellingAmount": 95,  
+    "lastKnownPosition": {  
+        "type": "Point",  
+        "coordinates": [  
+            -104.99404,  
+            39.75621  
+        ]  
+    },  
+    "lastKnownPositionUpdatedAt": "2016-08-28T10:18:16Z",  
+    "mileageFromOdometer": 18756,  
+    "restFuelAmount": 28,  
+    "source": "https://source.example.com",  
+    "speed": 60,  
+    "unitCode": "KMH",  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleStatus/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
-  },  
-  "lastKnownPositionUpdatedAt": "2016-08-28T10:18:16Z",  
-  "inRestrictedArea": true,  
-  "mileageFromOdometer": 18756  
 }  
 ```  
+</details>  
 #### FleetVehicleStatus NGSI-LD normalizado Ejemplo  
 Este es un ejemplo de un FleetVehicleStatus en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleStatus/context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:FleetVehicleStatus:16ea1c5c-5aa6-11e8-8144-4b82063ca31c",  
-  "type": "FleetVehicleStatus",  
-  "source": {  
-    "type": "Property",  
-    "value": "https://source.example.com"  
-  },  
-  "dataProvider": {  
-    "type": "Property",  
-    "value": "https://provider.example.com"  
-  },  
-  "fleetVehicle": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f"  
-  },  
-  "fleetVehicleOperation": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:FleetVehicleOperation:a4f0a07a-5aa6-11e8-b70f-4b9d36e53d7b"  
-  },  
-  "restFuelAmount": {  
-    "type": "Property",  
-    "value": 28,  
-    "unitCode": "LTR",  
-    "observedAt": "2016-08-22T10:18:16Z"  
-  },  
-  "lastFuellingAmount": {  
-    "type": "Property",  
-    "value": 95,  
-    "unitCode": "LTR",  
-    "observedAt": "2016-08-22T10:18:16Z"  
-  },  
-  "currentStatus": {  
-    "type": "Property",  
-    "value": "finished"  
-  },  
-  "currentOperative": {  
-    "type": "Property",  
-    "value": {  
-      "givenName": "John Smith",  
-      "jobTitle": "Ambulance Operator",  
-      "@type": "https://schema.org/Person"  
-    }  
-  },  
-  "speed": {  
-    "type": "Property",  
-    "value": 60,  
-    "unitCode": "KMH",  
-    "observedAt": "2016-08-22T10:18:16Z"  
-  },  
-  "bearing": {  
-    "type": "Property",  
-    "value": 80,  
-    "unitCode": "DD",  
-    "observedAt": "2016-08-22T10:18:16Z"  
-  },  
-  "lastKnownPosition": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -104.99404,  
-        39.75621  
-      ]  
-    }  
-  },  
-  "lastKnownPositionUpdatedAt": {  
-    "type": "Property",  
-    "value": "2016-08-28T10:18:16Z"  
-  },  
-  "inRestrictedArea": {  
-    "type": "Property",  
-    "value": true  
-  },  
-  "mileageFromOdometer": {  
-    "type": "Property",  
-    "value": 18756,  
-    "unitCode": "SMI",  
-    "observedAt": "2016-08-22T10:18:16Z"  
-  }  
+    "id": "urn:ngsi-ld:FleetVehicleStatus:16ea1c5c-5aa6-11e8-8144-4b82063ca31c",  
+    "type": "FleetVehicleStatus",  
+    "bearing": {  
+        "type": "Property",  
+        "value": 80,  
+        "unitCode": "DD",  
+        "observedAt": "2016-08-22T10:18:16Z"  
+    },  
+    "currentOperative": {  
+        "type": "Property",  
+        "value": {  
+            "givenName": "John Smith",  
+            "jobTitle": "Ambulance Operator",  
+            "@type": "https://schema.org/Person"  
+        }  
+    },  
+    "currentStatus": {  
+        "type": "Property",  
+        "value": "finished"  
+    },  
+    "dataProvider": {  
+        "type": "Property",  
+        "value": "https://provider.example.com"  
+    },  
+    "fleetVehicle": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f"  
+    },  
+    "fleetVehicleOperation": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:FleetVehicleOperation:a4f0a07a-5aa6-11e8-b70f-4b9d36e53d7b"  
+    },  
+    "inRestrictedArea": {  
+        "type": "Property",  
+        "value": true  
+    },  
+    "lastFuellingAmount": {  
+        "type": "Property",  
+        "value": 95,  
+        "unitCode": "LTR",  
+        "observedAt": "2016-08-22T10:18:16Z"  
+    },  
+    "lastKnownPosition": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -104.99404,  
+                39.75621  
+            ]  
+        }  
+    },  
+    "lastKnownPositionUpdatedAt": {  
+        "type": "Property",  
+        "value": "2016-08-28T10:18:16Z"  
+    },  
+    "mileageFromOdometer": {  
+        "type": "Property",  
+        "value": 18756,  
+        "unitCode": "SMI",  
+        "observedAt": "2016-08-22T10:18:16Z"  
+    },  
+    "restFuelAmount": {  
+        "type": "Property",  
+        "value": 28,  
+        "unitCode": "LTR",  
+        "observedAt": "2016-08-22T10:18:16Z"  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": "https://source.example.com"  
+    },  
+    "speed": {  
+        "type": "Property",  
+        "value": 60,  
+        "unitCode": "KMH",  
+        "observedAt": "2016-08-22T10:18:16Z"  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleStatus/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
