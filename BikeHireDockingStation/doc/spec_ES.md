@@ -1,18 +1,32 @@
-Entidad: BikeHireDockingStation  
-===============================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entidad: BikeHireDockingStation  
+===============================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.Transportation/blob/master/BikeHireDockingStation/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Descripción global: **Estación de alquiler de bicicletas**  
 versión: 0.1.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `agency_fare_url`: URL de una página web que contiene los detalles de las tarifas y que también podría permitir la compra de billetes para esa agencia en línea. Igual que: Campo 'agency_fare_url' de la definición de campo estático GTFS - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)  - `agency_name`: El campo agency_name contiene el nombre completo de la agencia de transporte. Igual que: Campo 'agency_name' de la definición de campo estático GTFS - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)  - `agency_url`: El campo agency_url contiene la URL de la agencia de transporte. Igual que: Campo 'agency_url' de la definición de campo estático GTFS - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `availableBikeNumber`: El número de bicicletas disponibles en la estación de alquiler de bicicletas para ser alquiladas por los usuarios  - `contactPoint`: Los datos para contactar con el artículo.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `freeSlotNumber`: El número de ranuras disponibles para devolver y aparcar bicicletas. Debe ser menor o igual que `totalSlotNumber`.  - `id`: Identificador único de la entidad  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `mediaURL`: URL que proporciona más información de cualquier imagen o medio de comunicación de la denuncia o del lugar.  - `name`: El nombre de este artículo.  - `observationDateTime`: Última hora de observación comunicada.  - `openingHours`: Horarios de apertura de la estación de acoplamiento  - `outOfServiceSlotNumber`: El número de ranuras que están fuera de servicio y no pueden ser utilizadas para alquilar o aparcar una bicicleta. Debe ser menor o igual que `totalSlotNumber`.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `provider`: Proveedor de servicios de alquiler de bicicletas  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `stationCode`: El número de estación o el código de estación de la estación de alquiler de bicicletas correspondiente a la observación.  - `stationName`: El nombre de la estación de alquiler de bicicletas correspondiente a esta observación.  - `status`: Estado de la estación de alquiler de bicicletas. Enum:'working, outOfService, withIncidence, full, almostFull, empty, almostEmpty'. O cualquier otro específico de la aplicación.  - `totalSlotNumber`: El número total de ranuras que ofrece esta estación de acoplamiento de bicicletas  - `type`: Tipo de entidad NGSI. Tiene que ser BikeHireDockingStation    
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
+- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)- `agency_fare_url[string]`: URL de una página web que contiene los detalles de las tarifas y que también podría permitir la compra de billetes para esa agencia en línea. Igual que: Campo 'agency_fare_url' de la definición de campo estático GTFS - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)  - `agency_name[string]`: El campo agency_name contiene el nombre completo de la agencia de transporte. Igual que: Campo 'agency_name' de la definición de campo estático GTFS - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)  . Model: [https://schema.org/Text](https://schema.org/Text)- `agency_url[string]`: El campo agency_url contiene la URL de la agencia de transporte. Igual que: Campo 'agency_url' de la definición de campo estático GTFS - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)  . Model: [https://schema.org/Text](https://schema.org/Text)- `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `availableBikeNumber[integer]`: El número de bicicletas disponibles en la estación de alquiler de bicicletas para ser alquiladas por los usuarios  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `contactPoint[object]`: Los datos para contactar con el artículo.  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description[string]`: Una descripción de este artículo  - `freeSlotNumber[integer]`: El número de ranuras disponibles para devolver y aparcar bicicletas. Debe ser menor o igual que `totalSlotNumber`.  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `id[*]`: Identificador único de la entidad  - `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `mediaURL[string]`: URL que proporciona más información de cualquier imagen o medio de comunicación de la denuncia o el lugar.  . Model: [https://schema.org/Text](https://schema.org/Text)- `name[string]`: El nombre de este artículo.  - `observationDateTime[string]`: Última hora de observación comunicada.  . Model: [https://schema.org/Text](https://schema.org/Text)- `openingHours[string]`: Horarios de apertura de la estación de acoplamiento  . Model: [http://schema.org/openingHours.](http://schema.org/openingHours.)- `outOfServiceSlotNumber[integer]`: El número de ranuras que están fuera de servicio y no pueden ser utilizadas para alquilar o aparcar una bicicleta. Debe ser menor o igual que `totalSlotNumber`.  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `provider[string]`: Proveedor de servicios de alquiler de bicicletas  . Model: [https://schema.org/provider.](https://schema.org/provider.)- `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `stationCode[string]`: El número de estación o el código de estación de la estación de alquiler de bicicletas correspondiente a la observación.  . Model: [https://schema.org/Text](https://schema.org/Text)- `stationName[string]`: El nombre de la estación de alquiler de bicicletas correspondiente a esta observación.  . Model: [https://schema.org/Text](https://schema.org/Text)- `status[string]`: Estado de la estación de alquiler de bicicletas. Enum:'working, outOfService, withIncidence, full, almostFull, empty, almostEmpty'. O cualquier otro específico de la aplicación.  . Model: [https://schema.org/Number](https://schema.org/Number)- `totalSlotNumber[integer]`: El número total de ranuras que ofrece esta estación de acoplamiento de bicicletas  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `type[string]`: Tipo de entidad NGSI. Tiene que ser BikeHireDockingStation  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propiedades requeridas  
-- `id`  - `type`    
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Muchas ciudades ofrecen un sistema de alquiler de bicicletas para los ciudadanos. Estos pueden alquilar una bicicleta en base a diferentes tipos de abonos. Una estación de alquiler de bicicletas en la que los usuarios abonados pueden alquilar y devolver una bicicleta. Ofrece datos sobre sus principales características y la disponibilidad de bicicletas y plazas libres.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 BikeHireDockingStation:    
@@ -405,12 +419,22 @@ BikeHireDockingStation:
     - id    
     - type    
   type: object    
-  version: 0.1.1    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/BikeHireDockingStation/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/BikeHireDockingStation/schema.json    
+  x-model-tags: ""    
+  x-version: 0.1.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### BikeHireDockingStation NGSI-v2 key-values Ejemplo  
 Aquí hay un ejemplo de un BikeHireDockingStation en formato JSON-LD como key-values. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Bcn-BikeHireDockingStation-1",  
@@ -446,8 +470,10 @@ BikeHireDockingStation:
     "agency_fare_url": ""  
 }  
 ```  
+</details>  
 #### BikeHireDockingStation NGSI-v2 normalizado Ejemplo  
-Este es un ejemplo de BikeHireDockingStation en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+Aquí hay un ejemplo de un BikeHireDockingStation en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:Bcn-BikeHireDockingStation-1",  
@@ -534,20 +560,27 @@ BikeHireDockingStation:
   }  
 }  
 ```  
+</details>  
 #### BikeHireDockingStation NGSI-LD key-values Ejemplo  
 Aquí hay un ejemplo de un BikeHireDockingStation en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Bcn-BikeHireDockingStation-1",  
     "type": "BikeHireDockingStation",  
-    "status": "working",  
-    "provider": "University of Mumbay",  
+    "address": {  
+        "addressCountry": "ES",  
+        "addressLocality": "Barcelona",  
+        "streetAddress": "Gran Via Corts Catalanes,760"  
+    },  
+    "agency_fare_url": "",  
+    "agency_name": "PedalSaddle",  
+    "agency_url": "http://pedalsaddle.in/",  
+    "availableBikeNumber": 20,  
     "contactPoint": {  
         "url": "uri:ngsi:www.lignesdazur.com"  
     },  
-    "availableBikeNumber": 20,  
     "freeSlotNumber": 10,  
-    "openingHours": "Mo-Fr 10:00-19:00, Sa 10:00-22:00, Su 10:00-21:00",  
     "location": {  
         "type": "Point",  
         "coordinates": [  
@@ -555,38 +588,51 @@ BikeHireDockingStation:
             41.397952  
         ]  
     },  
-    "address": {  
-        "addressCountry": "ES",  
-        "addressLocality": "Barcelona",  
-        "streetAddress": "Gran Via Corts Catalanes,760"  
-    },  
-    "totalSlotNumber": 100,  
-    "outOfServiceSlotNumber": 21,  
-    "stationName": "Pune",  
     "mediaURL": "http://pedalsaddle.in/",  
-    "agency_url": "http://pedalsaddle.in/",  
-    "agency_name": "PedalSaddle",  
-    "stationCode": "2",  
     "observationDate": "2021-03-11T15:51:02+05:30",  
-    "agency_fare_url": "",  
+    "openingHours": "Mo-Fr 10:00-19:00, Sa 10:00-22:00, Su 10:00-21:00",  
+    "outOfServiceSlotNumber": 21,  
+    "provider": "University of Mumbay",  
+    "stationCode": "2",  
+    "stationName": "Pune",  
+    "status": "working",  
+    "totalSlotNumber": 100,  
     "@context": [  
-        "https://smartdatamodels.org/context.jsonld"  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
 }  
 ```  
+</details>  
 #### BikeHireDockingStation NGSI-LD normalizado Ejemplo  
-Este es un ejemplo de BikeHireDockingStation en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+Aquí hay un ejemplo de un BikeHireDockingStation en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Bcn-BikeHireDockingStation-1",  
     "type": "BikeHireDockingStation",  
-    "status": {  
+    "address": {  
         "type": "Property",  
-        "value": "working"  
+        "value": {  
+            "addressCountry": "ES",  
+            "addressLocality": "Barcelona",  
+            "streetAddress": "Gran Via Corts Catalanes,760"  
+        }  
     },  
-    "provider": {  
+    "agency_fare_url": {  
         "type": "Property",  
-        "value": "University of Mumbay"  
+        "value": ""  
+    },  
+    "agency_name": {  
+        "type": "Property",  
+        "value": "PedalSaddle"  
+    },  
+    "agency_url": {  
+        "type": "Property",  
+        "value": "http://pedalsaddle.in/"  
+    },  
+    "availableBikeNumber": {  
+        "type": "Property",  
+        "value": 20  
     },  
     "contactPoint": {  
         "type": "Property",  
@@ -594,17 +640,9 @@ BikeHireDockingStation:
             "url": "uri:ngsi:www.lignesdazur.com"  
         }  
     },  
-    "availableBikeNumber": {  
-        "type": "Property",  
-        "value": 20  
-    },  
     "freeSlotNumber": {  
         "type": "Property",  
         "value": 10  
-    },  
-    "openingHours": {  
-        "type": "Property",  
-        "value": "Mo-Fr 10:00-19:00, Sa 10:00-22:00, Su 10:00-21:00"  
     },  
     "location": {  
         "type": "Geoproperty",  
@@ -616,41 +654,9 @@ BikeHireDockingStation:
             ]  
         }  
     },  
-    "address": {  
-        "type": "Property",  
-        "value": {  
-            "addressCountry": "ES",  
-            "addressLocality": "Barcelona",  
-            "streetAddress": "Gran Via Corts Catalanes,760"  
-        }  
-    },  
-    "totalSlotNumber": {  
-        "type": "Property",  
-        "value": 100  
-    },  
-    "outOfServiceSlotNumber": {  
-        "type": "Property",  
-        "value": 21  
-    },  
-    "stationName": {  
-        "type": "Property",  
-        "value": "Pune"  
-    },  
     "mediaURL": {  
         "type": "Property",  
         "value": "http://pedalsaddle.in/"  
-    },  
-    "agency_url": {  
-        "type": "Property",  
-        "value": "http://pedalsaddle.in/"  
-    },  
-    "agency_name": {  
-        "type": "Property",  
-        "value": "PedalSaddle"  
-    },  
-    "stationCode": {  
-        "type": "Property",  
-        "value": "2"  
     },  
     "observationDate": {  
         "type": "Property",  
@@ -659,13 +665,45 @@ BikeHireDockingStation:
             "@value": "2021-03-11T15:51:02+05:30"  
         }  
     },  
-    "agency_fare_url": {  
+    "openingHours": {  
         "type": "Property",  
-        "value": ""  
+        "value": "Mo-Fr 10:00-19:00, Sa 10:00-22:00, Su 10:00-21:00"  
+    },  
+    "outOfServiceSlotNumber": {  
+        "type": "Property",  
+        "value": 21  
+    },  
+    "provider": {  
+        "type": "Property",  
+        "value": "University of Mumbay"  
+    },  
+    "stationCode": {  
+        "type": "Property",  
+        "value": "2"  
+    },  
+    "stationName": {  
+        "type": "Property",  
+        "value": "Pune"  
+    },  
+    "status": {  
+        "type": "Property",  
+        "value": "working"  
+    },  
+    "totalSlotNumber": {  
+        "type": "Property",  
+        "value": 100  
     },  
     "@context": [  
-        "https://smartdatamodels.org/context.jsonld"  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
 }  
 ```  
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
