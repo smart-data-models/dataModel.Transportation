@@ -1,15 +1,31 @@
-Entité : ItemFlowObserved  
-=========================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entité : ItemFlowObserved  
+=========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.Transportation/blob/master/ItemFlowObserved/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Description globale : **Le modèle de données destiné à mesurer une observation liée au déplacement d'un élément à un certain endroit et sur une période donnée. Ce modèle de données propose une évolution de deux modèles de données en les fusionnant et en intégrant tous les attributs de la version initiale de [TrafficFlowObserved] et [CrowFlowObserved] et par extension tout type d'élément dont on veut analyser les mouvements. Les attributs `vehicleType` et `vehicleSubType` sont supprimés du modèle de données initial afin de devenir des `itemType` et `itemSubType` génériques de valeurs possibles. (personnes, Type de véhicule, Type de bateau, Type d'avion, ...).**  
+version :  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `averageGapDistance`: Distance moyenne entre deux éléments consécutifs détectés. Le code de l'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **MTR** représente un mètre.  - `averageHeadwayTime`: Temps de passage moyen. Le temps de passage est le temps écoulé entre deux éléments consécutifs. Le code de l'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **SEC** représente la seconde.  - `averageLength`: Longueur moyenne des éléments détectés en transit pendant la période d'observation. Le code de l'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **MTR** représente le mètre.  - `averageSpeed`: Vitesse moyenne des éléments détectés en transit pendant la période d'observation. Le code d'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) . Selon le type de flux, la valeur peut être **KMH** f(véhicule, piéton, etc.) représente Kilomètre par heure (km/h) ou **KNT** représente Nœud (Bateau).  - `congested`: Indique s'il y a eu une congestion de la foule pendant la période d'observation dans la passerelle mentionnée. L'absence de cet attribut signifie qu'il n'y a pas eu d'encombrement.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `dateObserved`: Date de l'entité observée définie par l'utilisateur.  - `dateObservedFrom`: Période d'observation : Date et heure de début dans un format ISO8601 UTC.  - `dateObservedTo`: Période d'observation : Date et heure de fin dans un format ISO8601 UTC.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `intensity`: Nombre total d'éléments détectés pendant cette période d'observation  - `itemSubType`: Référence à un identifiant d'un attribut de "sous-type" existant d'une entité NGSI (Vehicle / BoatType / Person ) ou d'une entité future énumérant un "sous-type" d'élément à compter.  - `itemType`: Référence à un identifiant d'un attribut "Type" existant d'une entité NGSI (Vehicle / BoatType / Person) ou d'une entité future énumérant un "Type" d'élément à compter. Enum : "personnes, navire, véhicule, yacht".  - `laneDirection`: Sens habituel de déplacement dans la voie visée par cette observation. Cet attribut est utile lorsque l'observation ne fait référence à aucun segment de route, permettant de connaître le sens de déplacement du flux de trafic observé. Voir RoadSegment pour une description de la sémantique de ces valeurs.  - `laneId`: Identification des voies. L'identification des voies est effectuée à l'aide des conventions définies par l'entité RoadSegment qui sont basées sur [OpenStreetMap] (http://wiki.openstreetmap.org/wiki/Forward_%26_backward,_left_%26_right).  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `occupancy`: Fraction du temps d'observation où un élément a occupé la voie observée  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `refDevice`: Le ou les dispositifs utilisés pour obtenir les données exprimées par cet enregistrement  - `refRoadSegment`: Segment de route concerné sur lequel l'observation a été faite  - `reversedLane`: Indique si la circulation dans la voie a été inversée pendant la période d'observation. L'absence de cet attribut signifie qu'il n'y a pas eu d'inversion de la voie.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `speedMax`: Vitesse maximale détectée pendant la période d'observation. Le code d'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Selon le type de flux, la valeur peut être **KMH** (véhicule, piéton, ...) représente le kilomètre par heure (km/h) ou **KNT** représente le nœud (bateau).  - `speedMin`: Vitesse minimale détectée pendant la période d'observation. Le code d'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) . Selon le type de flux, la valeur peut être **KMH** (véhicule, piéton, ...) représente le kilomètre par heure (km/h) ou **KNT** représente le nœud (bateau).  - `type`: Type d'entité NGSI. Il doit être ItemFlowObserved.    
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nom alternatif pour cet élément  - `areaServed[string]`: La zone géographique où un service ou un article offert est fourni  . Model: [https://schema.org/Text](https://schema.org/Text)- `averageGapDistance[number]`: Distance moyenne entre deux éléments consécutifs détectés. Le code de l'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **MTR** représente un mètre.  - `averageHeadwayTime[number]`: Temps de passage moyen. Le temps de passage est le temps écoulé entre deux éléments consécutifs. Le code de l'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **SEC** représente la seconde.  - `averageLength[number]`: Longueur moyenne des éléments détectés en transit pendant la période d'observation. Le code de l'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **MTR** représente le mètre.  - `averageSpeed[number]`: Vitesse moyenne des éléments détectés en transit pendant la période d'observation. Le code d'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) . Selon le type de flux, la valeur peut être **KMH** f(véhicule, piéton, etc.) représente Kilomètre par heure (km/h) ou **KNT** représente Nœud (Bateau).  - `congested[boolean]`: Indique s'il y a eu une congestion de la foule pendant la période d'observation dans la passerelle mentionnée. L'absence de cet attribut signifie qu'il n'y a pas eu d'encombrement.  - `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified[string]`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `dateObserved[string]`: Date de l'entité observée définie par l'utilisateur.  - `dateObservedFrom[string]`: Période d'observation : Date et heure de début dans un format ISO8601 UTC.  - `dateObservedTo[string]`: Période d'observation : Date et heure de fin dans un format ISO8601 UTC.  - `description[string]`: Une description de cet article  - `id[*]`: Identifiant unique de l'entité  - `intensity[number]`: Nombre total d'éléments détectés pendant cette période d'observation  - `itemSubType[string]`: Référence à un identifiant d'un attribut de "sous-type" existant d'une entité NGSI (Vehicle / BoatType / Person ) ou d'une entité future énumérant un "sous-type" d'élément à compter.  - `itemType[string]`: Référence à un identifiant d'un attribut "Type" existant d'une entité NGSI (Vehicle / BoatType / Person) ou d'une entité future énumérant un "Type" d'élément à compter. Enum : "personnes, navire, véhicule, yacht".  - `laneDirection[string]`: Sens habituel de déplacement dans la voie visée par cette observation. Cet attribut est utile lorsque l'observation ne fait référence à aucun segment de route, permettant de connaître le sens de déplacement du flux de trafic observé. Voir RoadSegment pour une description de la sémantique de ces valeurs.  - `laneId[integer]`: Identification des voies. L'identification des voies est effectuée à l'aide des conventions définies par l'entité RoadSegment qui sont basées sur [OpenStreetMap] (http://wiki.openstreetmap.org/wiki/Forward_%26_backward,_left_%26_right).  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément.  - `occupancy[number]`: Fraction du temps d'observation où un élément a occupé la voie observée  - `owner[array]`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `refDevice[*]`: Le ou les dispositifs utilisés pour obtenir les données exprimées par cet enregistrement  - `refRoadSegment[*]`: Segment de route concerné sur lequel l'observation a été faite  - `reversedLane[boolean]`: Indique si la circulation dans la voie a été inversée pendant la période d'observation. L'absence de cet attribut signifie qu'il n'y a pas eu d'inversion de la voie.  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source[string]`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `speedMax[number]`: Vitesse maximale détectée pendant la période d'observation. Le code d'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Selon le type de flux, la valeur peut être **KMH** (véhicule, piéton, ...) représente le kilomètre par heure (km/h) ou **KNT** représente le nœud (bateau).  - `speedMin[number]`: Vitesse minimale détectée pendant la période d'observation. Le code d'unité (texte) est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) . Selon le type de flux, la valeur peut être **KMH** (véhicule, piéton, ...) représente le kilomètre par heure (km/h) ou **KNT** représente le nœud (bateau).  - `type[string]`: Type d'entité NGSI. Il doit être ItemFlowObserved.  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propriétés requises  
-- `dateObserved`  - `id`  - `laneId`  - `location`  - `type`  ## Description des propriétés du modèle de données  
+- `dateObserved`  - `id`  - `laneId`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 ItemFlowObserved:    
@@ -419,11 +435,22 @@ ItemFlowObserved:
     - dateObserved    
     - laneId    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/ItemFlowObserved/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/data-models/Transportation/ItemFlowObserved/schema.json    
+  x-model-tags: ""    
+  x-version: ""    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Exemples de charges utiles  
 #### ItemFlowObserved Valeurs-clés NGSI-v2 Exemple  
 Voici un exemple d'un ItemFlowObserved au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "FlowObserved:BFO-NCE-MNCA-SP-001",  
@@ -463,8 +490,10 @@ ItemFlowObserved:
   "reverseLane": false  
 }  
 ```  
+</details>  
 #### ItemFlowObserved NGSI-v2 normalisé Exemple  
 Voici un exemple d'un ItemFlowObserved au format JSON-LD tel que normalisé. Il est compatible avec la NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "FlowObserved:BFO-NCE-MNCA-SP-001",  
@@ -573,177 +602,189 @@ ItemFlowObserved:
   }  
 }  
 ```  
+</details>  
 #### ItemFlowObserved Valeurs-clés NGSI-LD Exemple  
 Voici un exemple d'un ItemFlowObserved au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et retourne les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "itemFlowObserved:BFO-NCE-MNCA-SP-001",  
-  "type": "ItemFlowObserved",  
-  "address": {  
-    "addressCountry": "FR",  
-    "addressLocality": "Nice",  
-    "streetAddress": "Port Lympia"  
-  },  
-  "areaServed": "Nice Harbor",  
-  "averageGapDistance": 35.28,  
-  "averageHeadwayTime": 156,  
-  "averageLength": 7.44,  
-  "averageSpeed": 2.7,  
-  "congested": false,  
-  "dateObserved": "2020-03-20T16:30:00Z",  
-  "dateObservedFrom": "2020-03-20T16:30:00Z",  
-  "dateObservedTo": "2020-03-20T22:30:00Z",  
-  "description": "Boat Flow Observed from Nice Harbor.",  
-  "intensity": 12,  
-  "itemType": "yacht",  
-  "itemSubtype": "monoHull",  
-  "laneDirection": "outbound",  
-  "laneId": 1,  
-  "location": {  
-    "coordinates": [  
-      7.196545,  
-      43.664809  
-    ],  
-    "type": "Point"  
-  },  
-  "maxSpeed": 3.8,  
-  "minSpeed": 2.6,  
-  "name": "BFO-NCE-MNCA-SP-001",  
-  "occupancy": 0.1562,  
-  "refDevice": "Device:BFO-NCE-MNCA-SP-001-Dev-02",  
-  "reverseLane": false,  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "id": "itemFlowObserved:BFO-NCE-MNCA-SP-001",  
+    "type": "ItemFlowObserved",  
+    "address": {  
+        "addressCountry": "FR",  
+        "addressLocality": "Nice",  
+        "streetAddress": "Port Lympia"  
+    },  
+    "areaServed": "Nice Harbor",  
+    "averageGapDistance": 35.28,  
+    "averageHeadwayTime": 156,  
+    "averageLength": 7.44,  
+    "averageSpeed": 2.7,  
+    "congested": false,  
+    "dateObserved": "2020-03-20T16:30:00Z",  
+    "dateObservedFrom": "2020-03-20T16:30:00Z",  
+    "dateObservedTo": "2020-03-20T22:30:00Z",  
+    "description": "Boat Flow Observed from Nice Harbor.",  
+    "intensity": 12,  
+    "itemSubtype": "monoHull",  
+    "itemType": "yacht",  
+    "laneDirection": "outbound",  
+    "laneId": 1,  
+    "location": {  
+        "coordinates": [  
+            7.196545,  
+            43.664809  
+        ],  
+        "type": "Point"  
+    },  
+    "maxSpeed": 3.8,  
+    "minSpeed": 2.6,  
+    "name": "BFO-NCE-MNCA-SP-001",  
+    "occupancy": 0.1562,  
+    "refDevice": "Device:BFO-NCE-MNCA-SP-001-Dev-02",  
+    "reverseLane": false,  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### ItemFlowObserved NGSI-LD normalisé Exemple  
 Voici un exemple d'un ItemFlowObserved au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "FlowObserved:BFO-NCE-MNCA-SP-001",  
-  "type": "ItemFlowObserved",  
-  "name": {  
-    "type": "Property",  
-    "value": "BFO-NCE-MNCA-SP-001"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Boat Flow Observed from Nice Harbor."  
-  },  
-  "location": {  
-    "type": "Geoproperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        7.196545,  
-        43.664809  
-      ]  
-    }  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "streetAddress": "Port Lympia",  
-      "addressLocality": "Nice",  
-      "addressCountry": "FR"  
-    }  
-  },  
-  "areaServed": {  
-    "type": "Property",  
-    "value": "Nice Harbor"  
-  },  
-  "dateObserved": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2020-03-20T16:30:00Z"  
-    }  
-  },  
-  "dateObservedFrom": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2020-03-20T16:30:00Z"  
-    }  
-  },  
-  "dateObservedTo": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2020-03-20T22:30:00Z"  
-    }  
-  },  
-  "refDevice": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Device:BFO-NCE-MNCA-SP-001-Dev-02"  
-  },  
-  "itemType": {  
-    "type": "Property",  
-    "value": "yatching"  
-  },  
-  "itemSubType": {  
-    "type": "Property",  
-    "value": "monoHull"  
-  },  
-  "laneId": {  
-    "type": "Property",  
-    "value": 1  
-  },  
-  "laneDirection": {  
-    "type": "Property",  
-    "value": "outbound"  
-  },  
-  "reverseLane": {  
-    "type": "Property",  
-    "value": false  
-  },  
-  "intensity": {  
-    "type": "Property",  
-    "value": 12  
-  },  
-  "occupancy": {  
-    "type": "Property",  
-    "value": 0.1562  
-  },  
-  "congested": {  
-    "type": "Property",  
-    "value": false  
-  },  
-  "averageSpeed": {  
-    "type": "Property",  
-    "value": 2.7,  
-    "unitCode": "KNT"  
-  },  
-  "averageLength": {  
-    "type": "Property",  
-    "value": 7.44,  
-    "unitCode": "MTR"  
-  },  
-  "averageHeadwayTime": {  
-    "type": "Property",  
-    "value": 156,  
-    "unitCode": "SEC"  
-  },  
-  "averageGapDistance": {  
-    "type": "Property",  
-    "value": 35.28,  
-    "unitCode": "MTR"  
-  },  
-  "minSpeed": {  
-    "type": "Property",  
-    "value": 2.6,  
-    "unitCode": "KNT"  
-  },  
-  "maxSpeed": {  
-    "type": "Property",  
-    "value": 3.8,  
-    "unitCode": "KNT"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "FlowObserved:BFO-NCE-MNCA-SP-001",  
+    "type": "ItemFlowObserved",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "streetAddress": "Port Lympia",  
+            "addressLocality": "Nice",  
+            "addressCountry": "FR"  
+        }  
+    },  
+    "areaServed": {  
+        "type": "Property",  
+        "value": "Nice Harbor"  
+    },  
+    "averageGapDistance": {  
+        "type": "Property",  
+        "value": 35.28,  
+        "unitCode": "MTR"  
+    },  
+    "averageHeadwayTime": {  
+        "type": "Property",  
+        "value": 156,  
+        "unitCode": "SEC"  
+    },  
+    "averageLength": {  
+        "type": "Property",  
+        "value": 7.44,  
+        "unitCode": "MTR"  
+    },  
+    "averageSpeed": {  
+        "type": "Property",  
+        "value": 2.7,  
+        "unitCode": "KNT"  
+    },  
+    "congested": {  
+        "type": "Property",  
+        "value": false  
+    },  
+    "dateObserved": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2020-03-20T16:30:00Z"  
+        }  
+    },  
+    "dateObservedFrom": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2020-03-20T16:30:00Z"  
+        }  
+    },  
+    "dateObservedTo": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2020-03-20T22:30:00Z"  
+        }  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Boat Flow Observed from Nice Harbor."  
+    },  
+    "intensity": {  
+        "type": "Property",  
+        "value": 12  
+    },  
+    "itemSubType": {  
+        "type": "Property",  
+        "value": "monoHull"  
+    },  
+    "itemType": {  
+        "type": "Property",  
+        "value": "yatching"  
+    },  
+    "laneDirection": {  
+        "type": "Property",  
+        "value": "outbound"  
+    },  
+    "laneId": {  
+        "type": "Property",  
+        "value": 1  
+    },  
+    "location": {  
+        "type": "Geoproperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                7.196545,  
+                43.664809  
+            ]  
+        }  
+    },  
+    "maxSpeed": {  
+        "type": "Property",  
+        "value": 3.8,  
+        "unitCode": "KNT"  
+    },  
+    "minSpeed": {  
+        "type": "Property",  
+        "value": 2.6,  
+        "unitCode": "KNT"  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "BFO-NCE-MNCA-SP-001"  
+    },  
+    "occupancy": {  
+        "type": "Property",  
+        "value": 0.1562  
+    },  
+    "refDevice": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Device:BFO-NCE-MNCA-SP-001-Dev-02"  
+    },  
+    "reverseLane": {  
+        "type": "Property",  
+        "value": false  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
