@@ -1,17 +1,32 @@
-Entity:FleetVehicleStatus  
-=========================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティフリート車両状態（FleetVehicleStatus  
+=================================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Transportation/blob/master/FleetVehicleStatus/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**このエンティティには、一般的な車両の状態に関する統一された記述が含まれています。このエンティティは、主に輸送と物流の垂直セグメントに関連していますが、他の多くの関連するIoTアプリケーションにも使用される可能性があります。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述。**このエンティティは、一般的な車両の状態に関する調和された記述を含む。このエンティティは、主に輸送と物流の垂直セグメントに関連しているが、他の多くの関連するIoTアプリケーションでも使用されるかもしれません。  
+バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `bearing`: フリートビークルの現在の方位を北に対しての度数で示す。属性のtimestamp要素は、読み取り値がいつ得られたかを示すべきである。  - `currentOperative`: Schema.org personとして記述された車両の現在の操作者（例：ドライバー）。  - `currentStatus`: 車両の現在の状態の説明 例：Enum:'deployed, finished, terminated, servicing, starting'  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `fleetVehicle`: このステータスエンティティが関連するFleetVehicleエンティティへの参照。  - `fleetVehicleOperation`: このステータスエンティティが関連するFleetVehicleOperationエンティティへの参照。  - `id`: エンティティのユニークな識別子  - `inRestrictedArea`: ステータス更新時に、車両が制限区域内にいることがわかっているかどうかを示す。  - `lastFuellingAmount`: 前回の給油時に車両に追加された燃料のレベルを示す。属性のtimestamp要素は、車両がいつ燃料補給されたかを示すべきである。記録されるデータの単位はLitres  - `lastKnownPosition`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `lastKnownPositionUpdatedAt`: フリートビークルの最後に確認された位置更新のタイムスタンプです。  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `mileageFromOdometer`: 搭載されたオドメーターによるフリートビークルの総走行距離をキロメーター（unitCode KMT）またはマイル（unitCode SMI）で表したもの。Schema.org Vehicle/ mileageFromOdometer も参照してください。timestamp 要素は、オドメーターの読み取りが行われた日時を記録します。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `restFuelAmount`: 車両が最後に静止していた（すなわち、停止していた）ときに記録された燃料のレベル。属性のtimestamp要素は、車両が最後に静止していた時間を示す必要がある。記録されるデータはリットル単位。  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `speed`: フリート車両の現在の速度（km/h）です。属性のtimestamp要素は、読み取り値がいつ取得されたかを示す必要があります。  - `type`: NGSI Entity 識別子。それはFleetVehicleStatusでなければならない。    
-必須項目  
-- `id`  - `type`    
-このデータモデルは、GSMAのIoTプロジェクト（https://www.gsma.com/iot/iot-big-data/）の原型となるものです。スマートデータモデルの要件を満たすために、いくつかのマイナーな調整が行われています。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `bearing[number]`: 艦隊の車両の現在の方位を、北に対する度合いで示す。属性のタイムスタンプ要素は、読み取りが行われた時刻を示すべきである。  - `currentOperative[object]`: Schema.orgの人物として記述された車両の現在の操作者（運転手など）。  . Model: [https://schema.org/Person](https://schema.org/Person)- `currentStatus[string]`: 車両の現在の状態の説明 例：Enum:'deployed, finished, terminated, servicing, starting'  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `fleetVehicle[*]`: この状態エンティティが関連する FleetVehicle エンティティへの参照。  - `fleetVehicleOperation[*]`: この状態エンティティが関連する FleetVehicleOperation エンティティへの参照。  - `id[*]`: エンティティの一意な識別子  - `inRestrictedArea[boolean]`: ステータス更新時に車両が制限区域にあることが判明しているかどうかを示す。  - `lastFuellingAmount[number]`: 最後の給油時に車両に加えられた燃料のレベル。この属性のタイムスタンプ要素には、車両に燃料が充填された時刻を示すべきである。記録されるデータ（単位：Litres  - `lastKnownPosition[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `lastKnownPositionUpdatedAt[string]`: フリート車両の最後の既知の位置更新のタイムスタンプ。  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `mileageFromOdometer[number]`: フリート車両が車載オドメータに従って走行した総距離をキロメートル（unitCode KMT）またはマイル（unitCode SMI）単位で示す。Schema.org Vehicle/ mileageFromOdometer も参照のこと。timestamp 要素は、走行距離計の読み取りが行われた時刻を記録する。  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `restFuelAmount[number]`: 車両が最後に静止していた（すなわち停止していた）ときに記録された燃料のレベル。属性のタイムスタンプ要素は、車両が最後に静止していた時刻を示すべきである。リッターで記録されるデータ。  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `speed[number]`: フリート車両の現在の速度（km/h）。属性のタイムスタンプ要素には、読み取りが行われた時刻を示す必要があります。  - `type[string]`: NGSI エンティティ識別子。これはFleetVehicleStatusでなければならない。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+このデータモデルは、オリジナルのプロジェクトGSMA IoTプロジェクト（https://www.gsma.com/iot/iot-big-data/）に由来しています。スマートデータモデルの要件を満たすために、若干の修正が加えられています。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 FleetVehicleStatus:    
@@ -381,9 +396,14 @@ FleetVehicleStatus:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### FleetVehicleStatus NGSI-v2 キー・バリューの例  
-ここではFleetVehicleStatusをJSON-LD形式でkey-valuesにした例を紹介します。これは`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### FleetVehicleStatus NGSI-v2 key-value 例．  
+以下は、FleetVehicleStatusをJSON-LD形式でkey-valuesとした例である。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:FleetVehicleStatus:16ea1c5c-5aa6-11e8-8144-4b82063ca31c",  
@@ -414,8 +434,10 @@ FleetVehicleStatus:
   "mileageFromOdometer": 18756  
 }  
 ```  
-#### FleetVehicleStatus NGSI-v2 正規化された例。  
-ここでは、正規化されたJSON-LD形式のFleetVehicleStatusの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### FleetVehicleStatus NGSI-v2 正規化例  
+以下は、FleetVehicleStatus を JSON-LD 形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:FleetVehicleStatus:16ea1c5c-5aa6-11e8-8144-4b82063ca31c",  
@@ -487,126 +509,140 @@ FleetVehicleStatus:
   }  
 }  
 ```  
-#### FleetVehicleStatus NGSI-LD のキーバリューの例。  
-ここではFleetVehicleStatusをJSON-LD形式でkey-valuesにした例を紹介します。これは`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### FleetVehicleStatus NGSI-LD キー値例  
+FleetVehicleStatusをJSON-LD形式でkey-valuesとした例です。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleStatus/context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:FleetVehicleStatus:16ea1c5c-5aa6-11e8-8144-4b82063ca31c",  
-  "type": "FleetVehicleStatus",  
-  "source": "https://source.example.com",  
-  "dataProvider": "https://provider.example.com",  
-  "fleetVehicle": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f",  
-  "fleetVehicleOperation": "urn:ngsi-ld:FleetVehicleOperation:a4f0a07a-5aa6-11e8-b70f-4b9d36e53d7b",  
-  "restFuelAmount": 28,  
-  "lastFuellingAmount": 95,  
-  "currentStatus": "finished",  
-  "currentOperative": {  
-    "givenName": "John Smith",  
-    "jobTitle": "Ambulance Operator"  
-  },  
-  "speed": 60,  
-  "unitCode": "KMH",  
-  "bearing": 80,  
-  "lastKnownPosition": {  
-    "type": "Point",  
-    "coordinates": [  
-      -104.99404,  
-      39.75621  
-    ]  
-  },  
-  "lastKnownPositionUpdatedAt": "2016-08-28T10:18:16Z",  
-  "inRestrictedArea": true,  
-  "mileageFromOdometer": 18756  
-}  
-```  
-#### FleetVehicleStatus NGSI-LD 正規化例  
-ここでは、正規化されたJSON-LD形式のFleetVehicleStatusの例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
-```json  
-{  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleStatus/context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:FleetVehicleStatus:16ea1c5c-5aa6-11e8-8144-4b82063ca31c",  
-  "type": "FleetVehicleStatus",  
-  "source": {  
-    "type": "Property",  
-    "value": "https://source.example.com"  
-  },  
-  "dataProvider": {  
-    "type": "Property",  
-    "value": "https://provider.example.com"  
-  },  
-  "fleetVehicle": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f"  
-  },  
-  "fleetVehicleOperation": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:FleetVehicleOperation:a4f0a07a-5aa6-11e8-b70f-4b9d36e53d7b"  
-  },  
-  "restFuelAmount": {  
-    "type": "Property",  
-    "value": 28,  
-    "unitCode": "LTR",  
-    "observedAt": "2016-08-22T10:18:16Z"  
-  },  
-  "lastFuellingAmount": {  
-    "type": "Property",  
-    "value": 95,  
-    "unitCode": "LTR",  
-    "observedAt": "2016-08-22T10:18:16Z"  
-  },  
-  "currentStatus": {  
-    "type": "Property",  
-    "value": "finished"  
-  },  
-  "currentOperative": {  
-    "type": "Property",  
-    "value": {  
-      "givenName": "John Smith",  
-      "jobTitle": "Ambulance Operator",  
-      "@type": "https://schema.org/Person"  
-    }  
-  },  
-  "speed": {  
-    "type": "Property",  
-    "value": 60,  
+    "id": "urn:ngsi-ld:FleetVehicleStatus:16ea1c5c-5aa6-11e8-8144-4b82063ca31c",  
+    "type": "FleetVehicleStatus",  
+    "bearing": 80,  
+    "currentOperative": {  
+        "givenName": "John Smith",  
+        "jobTitle": "Ambulance Operator"  
+    },  
+    "currentStatus": "finished",  
+    "dataProvider": "https://provider.example.com",  
+    "fleetVehicle": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f",  
+    "fleetVehicleOperation": "urn:ngsi-ld:FleetVehicleOperation:a4f0a07a-5aa6-11e8-b70f-4b9d36e53d7b",  
+    "inRestrictedArea": true,  
+    "lastFuellingAmount": 95,  
+    "lastKnownPosition": {  
+        "type": "Point",  
+        "coordinates": [  
+            -104.99404,  
+            39.75621  
+        ]  
+    },  
+    "lastKnownPositionUpdatedAt": "2016-08-28T10:18:16Z",  
+    "mileageFromOdometer": 18756,  
+    "restFuelAmount": 28,  
+    "source": "https://source.example.com",  
+    "speed": 60,  
     "unitCode": "KMH",  
-    "observedAt": "2016-08-22T10:18:16Z"  
-  },  
-  "bearing": {  
-    "type": "Property",  
-    "value": 80,  
-    "unitCode": "DD",  
-    "observedAt": "2016-08-22T10:18:16Z"  
-  },  
-  "lastKnownPosition": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -104.99404,  
-        39.75621  
-      ]  
-    }  
-  },  
-  "lastKnownPositionUpdatedAt": {  
-    "type": "Property",  
-    "value": "2016-08-28T10:18:16Z"  
-  },  
-  "inRestrictedArea": {  
-    "type": "Property",  
-    "value": true  
-  },  
-  "mileageFromOdometer": {  
-    "type": "Property",  
-    "value": 18756,  
-    "unitCode": "SMI",  
-    "observedAt": "2016-08-22T10:18:16Z"  
-  }  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleStatus/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+</details>  
+#### FleetVehicleStatus NGSI-LD 正規化例  
+以下は、FleetVehicleStatus を JSON-LD 形式で正規化した例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+    "id": "urn:ngsi-ld:FleetVehicleStatus:16ea1c5c-5aa6-11e8-8144-4b82063ca31c",  
+    "type": "FleetVehicleStatus",  
+    "bearing": {  
+        "type": "Property",  
+        "value": 80,  
+        "unitCode": "DD",  
+        "observedAt": "2016-08-22T10:18:16Z"  
+    },  
+    "currentOperative": {  
+        "type": "Property",  
+        "value": {  
+            "givenName": "John Smith",  
+            "jobTitle": "Ambulance Operator",  
+            "@type": "https://schema.org/Person"  
+        }  
+    },  
+    "currentStatus": {  
+        "type": "Property",  
+        "value": "finished"  
+    },  
+    "dataProvider": {  
+        "type": "Property",  
+        "value": "https://provider.example.com"  
+    },  
+    "fleetVehicle": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f"  
+    },  
+    "fleetVehicleOperation": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:FleetVehicleOperation:a4f0a07a-5aa6-11e8-b70f-4b9d36e53d7b"  
+    },  
+    "inRestrictedArea": {  
+        "type": "Property",  
+        "value": true  
+    },  
+    "lastFuellingAmount": {  
+        "type": "Property",  
+        "value": 95,  
+        "unitCode": "LTR",  
+        "observedAt": "2016-08-22T10:18:16Z"  
+    },  
+    "lastKnownPosition": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -104.99404,  
+                39.75621  
+            ]  
+        }  
+    },  
+    "lastKnownPositionUpdatedAt": {  
+        "type": "Property",  
+        "value": "2016-08-28T10:18:16Z"  
+    },  
+    "mileageFromOdometer": {  
+        "type": "Property",  
+        "value": 18756,  
+        "unitCode": "SMI",  
+        "observedAt": "2016-08-22T10:18:16Z"  
+    },  
+    "restFuelAmount": {  
+        "type": "Property",  
+        "value": 28,  
+        "unitCode": "LTR",  
+        "observedAt": "2016-08-22T10:18:16Z"  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": "https://source.example.com"  
+    },  
+    "speed": {  
+        "type": "Property",  
+        "value": 60,  
+        "unitCode": "KMH",  
+        "observedAt": "2016-08-22T10:18:16Z"  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleStatus/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
+}  
+```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
