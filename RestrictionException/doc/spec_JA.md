@@ -1,17 +1,32 @@
-Entityです。RestrictionException  
-=============================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティRestrictionException  
+==========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Transportation/blob/master/RestrictionException/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな説明です。**例えば、特定の種類の車両に適用される特定の許可を記述することができます**。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述です。**交通規制例外は、交通規制区域で報告された規制を特殊化した特定のケースを表します。例えば、特定の種類の車両に適用される特定の許可を記述できます。  
+バージョン: 0.1.0  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `allowedVehicleType`: 交通規制エリアを通過できる車種  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `exceptionValidityHours`: 例外が有効となる曜日と時間帯  - `id`: エンティティのユニークな識別子  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `refRestrictedTrafficArea`: この例外が属する「交通規制区域」。  - `refVehicleModel`: 例外が設定されている車両の特性を特定する  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI エンティティタイプ。RestrictionExceptionでなければならない。    
-必須項目  
-- `allowedVehicleType`  - `id`  - `refRestrictedTrafficArea`  - `type`    
-シンクロニシティプロジェクトのデータモデル  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `allowedVehicleType[array]`: 交通規制区域の横断を許可された車両の種類。  - `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `exceptionValidityHours[string]`: 例外が適用される曜日と時間帯  . Model: [http://schema.org/openingHours ](http://schema.org/openingHours )- `id[*]`: エンティティの一意な識別子  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `refRestrictedTrafficArea[*]`: この例外が属する交通規制区域。  - `refVehicleModel[array]`: 例外が設定された車両の特性を明示すること。  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: NGSI エンティティタイプ。RestrictionExceptionでなければならない。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `allowedVehicleType`  - `id`  - `refRestrictedTrafficArea`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+シンクロニシティプロジェクトから生まれたデータモデル  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 RestrictionException:    
@@ -362,9 +377,14 @@ RestrictionException:
   x-version: 0.1.0    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### RestrictionException NGSI-v2 key-values の例。  
-JSON-LD形式でkey-valuesとしてRestrictionExceptionを表現した例です。これは`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+RestrictionExceptionをJSON-LD形式でkey-valuesとした例である。これは、`options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータを返す。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictionException:GeoJson:ds51-1",  
@@ -381,8 +401,10 @@ RestrictionException:
   "refRestrictedTrafficArea": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1"  
 }  
 ```  
-#### RestrictionException NGSI-v2 正規化された例  
-正規化されたJSON-LD形式のRestrictionExceptionの例を示します。これはオプションを使わない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### RestrictionException NGSI-v2 正規化例  
+RestrictionExceptionをJSON-LD形式で正規化した例です。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictionException:GeoJson:ds51-1",  
@@ -412,59 +434,73 @@ RestrictionException:
   }  
 }  
 ```  
-#### RestrictionException NGSI-LD のキーバリューの例。  
-JSON-LD形式のRestrictionExceptionをkey-valuesとして表現した例です。これは`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### RestrictionException NGSI-LD キー値の例  
+RestrictionExceptionをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictionException:GeoJson:ds51-1",  
-  "type": "RestrictionException",  
-  "name": {  
-    "type": "string",  
-    "value": "Corso Concordia Area"  
-  },  
-  "allowedVehicleType": {  
-    "type": "array",  
-    "value": [  
-      "dieselCarEuro6",  
-      "petrolCarEuro6"  
+    "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictionException:GeoJson:ds51-1",  
+    "type": "RestrictionException",  
+    "allowedVehicleType": {  
+        "type": "array",  
+        "value": [  
+            "dieselCarEuro6",  
+            "petrolCarEuro6"  
+        ]  
+    },  
+    "exceptionValidityHours": {  
+        "type": "string",  
+        "value": "Tu,Th 16:00-20:00"  
+    },  
+    "name": {  
+        "type": "string",  
+        "value": "Corso Concordia Area"  
+    },  
+    "refRestrictedTrafficArea": {  
+        "type": "string",  
+        "Object": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1"  
+    },  
+    "refVehicleModel": {  
+        "type": "string",  
+        "Object": "vehicle:VehicleModel:modelName-1"  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
-  },  
-  "exceptionValidityHours": {  
-    "type": "string",  
-    "value": "Tu,Th 16:00-20:00"  
-  },  
-  "refVehicleModel": {  
-    "type": "string",  
-    "Object": "vehicle:VehicleModel:modelName-1"  
-  },  
-  "refRestrictedTrafficArea": {  
-    "type": "string",  
-    "Object": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1"  
-  },  
-  "@context": [  
-    "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"  
-  ]  
 }  
 ```  
-#### RestrictionException NGSI-LD 正規化された例  
-正規化されたJSON-LD形式のRestrictionExceptionの例を示します。これはオプションを使わない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### RestrictionException NGSI-LD 正規化例  
+RestrictionExceptionをJSON-LD形式で正規化した例です。これは、オプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictionException:GeoJson:ds51-1",  
-  "type": "RestrictionException",  
-  "name": "Corso Concordia Area",  
-  "allowedVehicleType": [  
-    "dieselCarEuro6",  
-    "petrolCarEuro6"  
-  ],  
-  "exceptionValidityHours": "Tu,Th 16:00-20:00",  
-  "refVehicleModel": [  
-    "vehicle:VehicleModel:modelName-1"  
-  ],  
-  "refRestrictedTrafficArea": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
-  "@context": [  
-    "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictionException:GeoJson:ds51-1",  
+    "type": "RestrictionException",  
+    "allowedVehicleType": [  
+        "dieselCarEuro6",  
+        "petrolCarEuro6"  
+    ],  
+    "exceptionValidityHours": "Tu,Th 16:00-20:00",  
+    "name": "Corso Concordia Area",  
+    "refRestrictedTrafficArea": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
+    "refVehicleModel": [  
+        "vehicle:VehicleModel:modelName-1"  
+    ],  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
