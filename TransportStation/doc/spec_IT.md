@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entità: Stazione di trasporto  
-=============================  
+=============================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.Transportation/blob/master/TransportStation/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Descrizione globale: **Il modello di dati è una descrizione generale delle stazioni urbane (Metro, Bus, Tram, Eliporto, ...) secondo lo standard GFTS https://developers.google.com/transit/gtfs/reference/#stopstxt, così come la descrizione dettagliata di queste (mezzi di accesso, piattaforma, assistenza, ...).**  
 versione: 0.1.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Elenco delle proprietà  
 
-- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  - `contactPoint`: I dettagli da contattare con l'articolo.  - `contractingAuthority`: Nome dell'amministrazione aggiudicatrice.  - `contractingCompany`: Nome della società appaltatrice responsabile dello sfruttamento della stazione.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateLastReported`: Un timestamp che indica l'ultima volta in cui il dispositivo ha riportato dati con successo. Data e ora in formato ISO8601 UTC.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description`: Descrizione dell'articolo  - `dimension`: Dimensione globale. Il formato è strutturato da una sotto-proprietà di 3 elementi. Il codice dell'unità (testo) è fornito utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **MTR** rappresenta i metri.  - `id`: Identificatore univoco dell'entità  - `installationMode`: Posizione rispetto al riferimento al suolo. Enum:'aerial, ground, underGround, underSea'.  - `inventory`: Mappatura generale dei dati solo per `locationType` = 0, 1, 3, 4. Il formato è strutturato da una sotto-proprietà di 4 elementi.  - `levelId`: Piano in cui si trova la posizione. Indice numerico associato al piano. Indica la posizione relativa di questo piano rispetto agli altri. L'indice 0 indica il piano terra. I piani sopra il livello del suolo sono indicati da indici positivi e gli stadi sotterranei da indici negativi.  - `location`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `locationType`: Collegamento all'archivio standard GTFS che descrive le diverse località [Tipo di località]. 0 Fermata o piattaforma (luogo in cui gli utenti salgono o scendono da un veicolo di trasporto pubblico). 1 Stazione (area o struttura fisica che comprende una o più piattaforme). 2 Ingresso o uscita (luogo in cui gli utenti possono entrare/uscire da una stazione dalla strada). 3 Intersezione generica (luogo in una stazione che non corrisponde a nessun altro valore di `tipo_di_localizzazione`). 4 Area di imbarco (luogo specifico su un binario dove gli utenti possono salire/scendere con un veicolo).  - `name`: Il nome di questo elemento.  - `openingHoursSpecification`: Un valore strutturato che fornisce informazioni sugli orari di apertura di un luogo o di un determinato servizio all'interno di un luogo.  - `owner`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `parentStation`: Collegamento all'archivio standard GTFS che descrive il diverso collegamento tra stazione e piattaforma [Parent STATION]. Caso '1' location_type = 0 (Stop / platform ), il campo parent_station contiene l'ID di una stazione. Caso '2' location_type = 1 (Station), questo campo deve essere vuoto. Caso '3' location_type = 2 (Input / output) o location_type = 3 (intersezione generica), il campo parent_station contiene l'ID di una stazione location_type = 1. Caso '4' location_type = 4 (area di imbarco), il campo parent_station contiene l'ID di un binario.  - `platformCode`: Identificatore del binario per una fermata di tipo binario `location_type` = 0 quando la fermata si trova in una stazione.  - `refPointOfInterest`: Riferimento a un punto di interesse associato a questa osservazione.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `stationConnected`: Connessioni possibili da questa stazione. Un valore strutturato da 0 a N occorrenze, dove ogni voce è una stringa nel formato `stationType` : [Elenco delle linee collegate, separate da una virgola]. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, train, tram, trolleybus'.  - `stationType`: Tipo di stazione di trasporto. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, trolleybus, tram'.  - `type`: Tipo di entità NGSI. Deve essere TransportStation  - `webSite`: Link al sito ufficiale per maggiori informazioni.  - `wheelChairAccessible`: Accesso possibile per le persone con mobilità ridotta. Per le fermate senza genitori 0 non sono disponibili informazioni sull'accessibilità della fermata. 1 alcuni veicoli di questa fermata possono far salire un utente PMR. 2 L'utente PMR non può salire su questa fermata. Per una fermata che fa parte di una stazione 0 la fermata eredita il comportamento di imbarco di sedie a rotelle della stazione madre, se questa è compilata. 1 le corsie consentono l'accesso delle sedie a rotelle alla fermata/piattaforma dall'esterno della stazione. 2 nessuna corsia consente l'accesso della sedia a rotelle alla fermata/piattaforma dall'esterno della stazione. Per gli ingressi/uscite della stazione 0 l'ingresso della stazione eredita il comportamento di accesso per sedie a rotelle della stazione principale, se specificato. 1 l'ingresso della stazione è accessibile alle sedie a rotelle. 2 nessun percorso accessibile alle sedie a rotelle collega l'ingresso della stazione alle fermate/piattaforme.  - `zoneId`: Zona tariffaria della stazione.    
+<sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
+- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `contactPoint[object]`: I dettagli da contattare con l'articolo.  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)- `contractingAuthority[string]`: Nome dell'amministrazione aggiudicatrice.  - `contractingCompany[string]`: Nome della società appaltatrice responsabile dello sfruttamento della stazione.  - `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated[string]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateLastReported[string]`: Un timestamp che indica l'ultima volta in cui il dispositivo ha riportato dati con successo. Data e ora in formato ISO8601 UTC.  - `dateModified[string]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description[string]`: Descrizione dell'articolo  - `dimension[object]`: Dimensione globale. Il formato è strutturato da una sottoproprietà di 3 elementi. Il codice dell'unità (testo) è fornito utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **MTR** rappresenta i metri.  - `id[*]`: Identificatore univoco dell'entità  - `installationMode[string]`: Posizione rispetto al riferimento al suolo. Enum:'aerial, ground, underGround, underSea'.  - `inventory[object]`: Mappatura generale dei dati solo per `locationType` = 0, 1, 3, 4. Il formato è strutturato da una sotto-proprietà di 4 elementi.  - `levelId[number]`: Piano in cui si trova la posizione. Indice numerico associato al piano. Indica la posizione relativa di questo piano rispetto agli altri. L'indice 0 indica il piano terra. I piani sopra il livello del suolo sono indicati da indici positivi e gli stadi sotterranei da indici negativi.  - `location[*]`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `locationType[string]`: Collegamento all'archivio standard GTFS che descrive le diverse località [Tipo di località]. 0 Fermata o piattaforma (luogo in cui gli utenti salgono o scendono da un veicolo di trasporto pubblico). 1 Stazione (area o struttura fisica che comprende una o più piattaforme). 2 Ingresso o uscita (luogo in cui gli utenti possono entrare/uscire da una stazione dalla strada). 3 Intersezione generica (luogo in una stazione che non corrisponde a nessun altro valore di `tipo_di_localizzazione`). 4 Area di imbarco (luogo specifico su un binario dove gli utenti possono salire/scendere con un veicolo).  - `name[string]`: Il nome di questo elemento.  - `openingHoursSpecification[array]`: Un valore strutturato che fornisce informazioni sugli orari di apertura di un luogo o di un determinato servizio all'interno di un luogo.  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `parentStation[*]`: Collegamento all'archivio standard GTFS che descrive il diverso collegamento tra stazione e piattaforma [Parent STATION]. Caso '1' location_type = 0 (Stop / platform ), il campo parent_station contiene l'ID di una stazione. Caso '2' location_type = 1 (Station), questo campo deve essere vuoto. Caso '3' location_type = 2 (Input / output) o location_type = 3 (intersezione generica), il campo parent_station contiene l'ID di una stazione location_type = 1. Caso '4' location_type = 4 (area di imbarco), il campo parent_station contiene l'ID di un binario.  - `platformCode[number]`: Identificatore del binario per una fermata di tipo binario `location_type` = 0 quando la fermata si trova in una stazione.  - `refPointOfInterest[*]`: Riferimento a un punto di interesse associato a questa osservazione.  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `stationConnected[array]`: Connessioni possibili da questa stazione. Un valore strutturato da 0 a N occorrenze, dove ogni voce è una stringa nel formato `stationType` : [Elenco delle linee collegate, separate da una virgola]. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, train, tram, trolleybus'.  - `stationType[array]`: Tipo di stazione di trasporto. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, trolleybus, tram'.  - `type[string]`: Tipo di entità NGSI. Deve essere TransportStation  - `webSite[string]`: Link al sito ufficiale per maggiori informazioni.  - `wheelChairAccessible[string]`: Accesso possibile per le persone con mobilità ridotta. Per le fermate senza genitori 0 non sono disponibili informazioni sull'accessibilità della fermata. 1 alcuni veicoli di questa fermata possono far salire un utente PMR. 2 L'utente PMR non può salire su questa fermata. Per una fermata che fa parte di una stazione 0 la fermata eredita il comportamento di imbarco di sedie a rotelle della stazione madre, se questa è compilata. 1 le corsie consentono l'accesso delle sedie a rotelle alla fermata/piattaforma dall'esterno della stazione. 2 nessuna corsia consente l'accesso della sedia a rotelle alla fermata/piattaforma dall'esterno della stazione. Per gli ingressi/uscite della stazione 0 l'ingresso della stazione eredita il comportamento di accesso per sedie a rotelle della stazione principale, se specificato. 1 l'ingresso della stazione è accessibile alle sedie a rotelle. 2 nessun percorso accessibile alle sedie a rotelle collega l'ingresso della stazione alle fermate/piattaforme.  - `zoneId[string]`: Zona tariffaria della stazione.  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Proprietà richieste  
-- `dateLastReported`  - `dateObserved`  - `id`  - `location`  - `locationType`  - `stationType`  - `type`  ## Modello di dati descrizione delle proprietà  
+- `dateLastReported`  - `dateObserved`  - `id`  - `location`  - `locationType`  - `stationType`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 TransportStation:    
@@ -651,9 +665,14 @@ TransportStation:
   x-version: 0.1.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Esempi di payload  
 #### TransportStation NGSI-v2 Valori chiave Esempio  
 Ecco un esempio di TransportStation in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:Station:Station:MNCA-STram-L02-AP-T2",  
@@ -822,8 +841,10 @@ TransportStation:
   ]  
 }  
 ```  
+</details>  
 #### TransportStation NGSI-v2 normalizzato Esempio  
 Ecco un esempio di TransportStation in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si usano opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:Station:Station:MNCA-STram-L02-AP-T2",  
@@ -1077,8 +1098,10 @@ TransportStation:
   }  
 }  
 ```  
+</details>  
 #### TransportStation NGSI-LD valori chiave Esempio  
 Ecco un esempio di TransportStation in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Station:Station:MNCA-STram-L02-AP-T2",  
@@ -1336,8 +1359,10 @@ TransportStation:
     ]  
 }  
 ```  
+</details>  
 #### TransportStation NGSI-LD normalizzato Esempio  
 Ecco un esempio di TransportStation in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si usano opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Station:Station:MNCA-STram-L02-AP-T2",  
@@ -1505,8 +1530,17 @@ TransportStation:
     "wheelChairAccessible": 1,  
     "zoneId": "B",  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
