@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 エンティティEVChargingStation  
-=======================  
+=======================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Transportation/blob/master/EVChargingStation/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 グローバルな記述です。**EVチャージングステーション  
 バージョン: 0.1.0  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `acceptedPaymentMethod`: このステーションを使用する際の料金の種類。Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'。  - `address`: 郵送先住所  - `allowedVehicleType`: 充電可能な車両タイプ。Enum:'bicycle, bus, car, caravan, motorcycle, motorscooter, truck' （自転車、バス、車、キャラバン、バイク、モータースクーター、トラック  - `alternateName`: この項目の別称  - `amountCollected`: この観測に対応するサービスに対して収集された金額。  - `amperage`: 充電ステーションが提供する総アンペア数。  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `availableCapacity`: 現在充電可能な車の台数。容量`より小さいか等しくなければならない。  - `capacity`: 同時に充電できる車の総台数です。総ソケット数はもっと多くてもいい。  - `chargeType`: このステーションを使用する際の料金のタイプ（複数可）。Enum:'annualPayment, flat, free, monthlyPayment, other'.  - `chargingUnitId`: この観測に対応する EV 充電スタンドの充電点の ID。  - `contactPoint`: 商品に関するお問い合わせ先です。  - `dataDescriptor`: データ記述子実体を指すURI  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `endDateTime`: この観測に対応する報告された終了時刻。  - `id`: エンティティの一意な識別子  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `network`: 事業者が連携しているネットワークの名称。  - `observationDateTime`: 最後に報告された観測時刻。  - `openingHours`: 充電スタンドの営業時間  - `operator`: 充電スタンドの運営者。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `powerConsumption`: この観測に対応するエンティティによって消費された電力。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `socketNumber`: この充電ステーションが提供するコンセントの総数  - `socketType`: このステーションが提供するソケットの種類。Enum:'Caravan_Mains_Socket, CHAdeMO, CCS/SAE, Dual_CHAdeMO, Dual_J-1772, Dual_Mennekes, J-1772, Mennekes, その他, Tesla, Type2, Type3, Wall_Euro'.  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `startDateTime`: この観測に対応する報告された開始時刻。  - `stationName`: この観測に対応するステーション名。自転車ドッキングステーション、充電ステーションなどの名前になります。  - `status`: 充電ステーションの状態。Enum:'almostEmpty, almostFull, empty, full, outOfService, withIncidence, working'.または、その他のアプリケーション固有のもの。  - `taxAmountCollected`: 製品、モノ、サービスに対して課される税金のことで、売上税、付加価値税、サービス税、物品サービス税、関税などが含まれます。  - `transactionId`: この観測に対応するエンティティの一意なトランザクションID。  - `transactionType`: この観測に対応する支払いモード（例：モバイル/UPI、カードなど）またはサービスモード（例：発行、再発行、入口、出口など）に基づくトランザクションのタイプ。  - `type`: NGSI エンティティタイプ。EVChargingStationでなければならない。  - `vehicleType`: 構造的な特性から見た車両の種類。これは、車両カテゴリとは異なる。Enumです。'agriculturalVehicle, ambulance, anyVehicle, articulatedVehicle, autorickshaw, bicycle, binTrolley, BRT bus, BRT minibus, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, compactor, constructionOrMaintenanceVehicle, dumper, 電子モペット、電子スクーター、電子モーターサイクル、 fire tender, fourWheelDrive, highSidedVehicle, hopper.All Rights Reserved,（英語のみ）'（英語のみ）', 'car'（英語のみローリー、ミニバス、モペット、オートバイ、オートバイWithSideCar、モータースクーター、警察バン、掃除機、タンカー、テンポ、3輪車、ティッパー、トレーラー、トラム、2輪車、トロリー、バン、触媒コンバータなし車両、キャラバン付き車両、トレーラー付き車両、偶数の登録プレート、奇数の登録プレート、その他'.VehicleTypeEnum_ と _VehicleTypeEnum2_ で定義される以下の値, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)  - `voltage`: 充電スタンドが提供する総電圧    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `acceptedPaymentMethod[array]`: このステーションを使用する際の料金の種類。Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'。  . Model: [https://schema.org/Text](https://schema.org/Text)- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `allowedVehicleType[array]`: 充電可能な車両タイプ。Enum:'bicycle, bus, car, caravan, motorcycle, motorscooter, truck' （自転車、バス、車、キャラバン、バイク、モータースクーター、トラック  . Model: [http://schema.org/Text](http://schema.org/Text)- `alternateName[string]`: この項目の別称  - `amountCollected[number]`: この観測に対応するサービスに対して収集された金額。  - `amperage[number]`: 充電ステーションが提供する総アンペア数。  . Model: [http://schema.org/Number](http://schema.org/Number)- `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `availableCapacity[integer]`: 現在充電可能な車の台数。容量`より小さいか等しくなければならない。  . Model: [http://schema.org/Number](http://schema.org/Number)- `capacity[integer]`: 同時に充電できる車の総台数です。総ソケット数はもっと多くてもいい。  . Model: [http://schema.org/Number](http://schema.org/Number)- `chargeType[array]`: このステーションを使用する際の料金のタイプ（複数可）。Enum:'annualPayment, flat, free, monthlyPayment, other'.  . Model: [https://schema.org/Text](https://schema.org/Text)- `chargingUnitId[string]`: この観測に対応する EV 充電スタンドの充電点の ID。  - `contactPoint[object]`: 商品に関するお問い合わせ先です。  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)- `dataDescriptor[string]`: データ記述子実体を指すURI  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `endDateTime[string]`: この観測に対応する報告された終了時刻。  - `id[*]`: エンティティの一意な識別子  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `network[string]`: 事業者が連携しているネットワークの名称。  . Model: [https://schema.org/Text](https://schema.org/Text)- `observationDateTime[string]`: 最後に報告された観測時刻。  - `openingHours[string]`: 充電スタンドの営業時間  . Model: [http://schema.org/openingHours](http://schema.org/openingHours)- `operator[string]`: 充電スタンドの運営者。  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `powerConsumption[number]`: この観測に対応するエンティティによって消費された電力。  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `socketNumber[integer]`: この充電ステーションが提供するコンセントの総数  . Model: [http://schema.org/Number.](http://schema.org/Number.)- `socketType[array]`: このステーションが提供するソケットの種類。Enum:'Caravan_Mains_Socket, CHAdeMO, CCS/SAE, Dual_CHAdeMO, Dual_J-1772, Dual_Mennekes, J-1772, Mennekes, その他, Tesla, Type2, Type3, Wall_Euro'.  . Model: [http://schema.org/Text](http://schema.org/Text)- `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `startDateTime[string]`: この観測に対応する報告された開始時刻。  - `stationName[string]`: この観測に対応するステーション名。自転車ドッキングステーション、充電ステーションなどの名前になります。  - `status[string]`: 充電ステーションの状態。Enum:'almostEmpty, almostFull, empty, full, outOfService, withIncidence, working'（ほぼ空、ほぼ満杯、空、満杯、サービス停止、事故あり、作業中）。または、その他のアプリケーション固有のもの。  . Model: [http://schema.org/Text](http://schema.org/Text)- `taxAmountCollected[number]`: 製品、モノ、サービスに対して課される税金のことで、売上税、付加価値税、サービス税、物品サービス税、関税などが含まれます。  - `transactionId[string]`: この観測に対応するエンティティの一意なトランザクションID。  - `transactionType[string]`: この観測に対応する支払いモード（例：モバイル/UPI、カードなど）またはサービスモード（例：発行、再発行、入口、出口など）に基づくトランザクションのタイプ。  - `type[string]`: NGSI エンティティタイプ。EVChargingStationでなければならない。  - `vehicleType[string]`: 構造的な特性から見た車両の種類。これは、車両カテゴリとは異なる。Enumです。'agriculturalVehicle, ambulance, anyVehicle, articulatedVehicle, autorickshaw, bicycle, binTrolley, BRT bus, BRT minibus, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, compactor, constructionOrMaintenanceVehicle, dumper, 電子モペット、電子スクーター、電子モーターサイクル、 fire tender, fourWheelDrive, highSidedVehicle, hopper.All Rights Reserved,（英語のみ）'（英語のみ）', 'car'（英語のみ）は、車、自動車部品（自動車用部品）、ミニバン（自動運転車）、トレーラー（荷車用部品）。ローリー、ミニバス、モペット、オートバイ、オートバイWithSideCar、モータースクーター、警察バン、掃除機、タンカー、テンポ、3輪車、ティッパー、トレーラー、トラム、2輪車、トロリー、バン、触媒コンバータなし車両、キャラバン付き車両、トレーラー付き車両、偶数の登録プレート、奇数の登録プレート、その他'.VehicleTypeEnum_ と _VehicleTypeEnum2_ で定義される以下の値, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)  . Model: [https://schema.org/Text](https://schema.org/Text)- `voltage[number]`: 充電スタンドが提供する総電圧  . Model: [http://schema.org/Number](http://schema.org/Number)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `allowedVehicleType`  - `capacity`  - `id`  - `socketType`  - `type`    
+- `allowedVehicleType`  - `capacity`  - `id`  - `socketType`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 電気自動車にエネルギーを供給する公共の充電ステーション。充電時間は、ステーションの最大出力、充電中の車両台数、現在のバッテリー残量によって異なります。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 EVChargingStation:    
@@ -613,9 +626,14 @@ EVChargingStation:
   x-version: 0.1.0    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### EVChargingStation NGSI-v2 key-value の例。  
 ここでは、EVChargingStationをJSON-LD形式でkey-valuesとして表現した例を示す。これは、`options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータを返す。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
@@ -652,8 +670,10 @@ EVChargingStation:
   "observationDateTime": "2022-06-28T20:27:29+05:30"  
 }  
 ```  
+</details>  
 #### EVChargingStation NGSI-v2 正規化例  
 EVChargingStation を JSON-LD 形式で正規化した例を示す。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
@@ -765,177 +785,191 @@ EVChargingStation:
   }  
 }  
 ```  
+</details>  
 #### EVChargingStation NGSI-LD キー値の例  
 ここでは、EVChargingStationをJSON-LD形式でkey-valuesとして表現した例を示す。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
-  "type": "EVChargingStation",  
-  "name": "Agencia de Innovación",  
-  "location": {  
-    "coordinates": [  
-      -4.747901,  
-      41.618265  
+    "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
+    "type": "EVChargingStation",  
+    "name": "Agencia de Innovaci\u00f3n",  
+    "location": {  
+        "coordinates": [  
+            -4.747901,  
+            41.618265  
+        ],  
+        "type": "Point"  
+    },  
+    "capacity": 2,  
+    "socketType": [  
+        "Wall_Euro"  
     ],  
-    "type": "Point"  
-  },  
-  "capacity": 2,  
-  "socketType": [  
-    "Wall_Euro"  
-  ],  
-  "address": {  
-    "streetAddress": "Paseo de Zorrilla, 191",  
-    "addressLocality": "Valladolid",  
-    "addressCountry": "España"  
-  },  
-  "contactPoint": {  
-    "email": "vehiculoelectrico@ava.es"  
-  },  
-  "operator": "Iberdrola",  
-  "allowedVehicleType": [  
-    "car"  
-  ],  
-  "chargeType": [  
-    "free"  
-  ],  
-  "source": "https://openchargemap.org/",  
-  "powerConsumption": 10.0,  
-  "chargingUnitId": "PZEV01-DeltaBharatAC001-SCTLGandhiPark001",  
-  "transactionId": "84068784",  
-  "transactionType": "RFID",  
-  "stationName": "SmartCityTvmGandhiParkOne",  
-  "amountCollected": 0.08,  
-  "taxAmountCollected": 0.0,  
-  "endDateTime": "2022-06-28T20:28:41+05:30",  
-  "startDateTime": "2022-06-28T20:27:27+05:30",  
-  "vehicleType": "e-motorcycle",  
-  "observationDateTime": "2022-06-28T20:27:29+05:30",  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.Transportation/context.jsonld",  
-    "iudx:EVChargingStation"  
-  ]  
+    "address": {  
+        "streetAddress": "Paseo de Zorrilla, 191",  
+        "addressLocality": "Valladolid",  
+        "addressCountry": "Espa\u00f1a"  
+    },  
+    "contactPoint": {  
+        "email": "vehiculoelectrico@ava.es"  
+    },  
+    "operator": "Iberdrola",  
+    "allowedVehicleType": [  
+        "car"  
+    ],  
+    "chargeType": [  
+        "free"  
+    ],  
+    "source": "https://openchargemap.org/",  
+    "powerConsumption": 10.0,  
+    "chargingUnitId": "PZEV01-DeltaBharatAC001-SCTLGandhiPark001",  
+    "transactionId": "84068784",  
+    "transactionType": "RFID",  
+    "stationName": "SmartCityTvmGandhiParkOne",  
+    "amountCollected": 0.08,  
+    "taxAmountCollected": 0.0,  
+    "endDateTime": "2022-06-28T20:28:41+05:30",  
+    "startDateTime": "2022-06-28T20:27:27+05:30",  
+    "vehicleType": "e-motorcycle",  
+    "observationDateTime": "2022-06-28T20:27:29+05:30",  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.Transportation/context.jsonld",  
+        "iudx:EVChargingStation",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### EVChargingStation NGSI-LD 正規化例  
 EVChargingStation を JSON-LD 形式で正規化した例を示す。これは、オプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
-  "type": "EVChargingStation",  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressCountry": "Espa\u00f1a",  
-      "addressLocality": "Valladolid",  
-      "streetAddress": "Paseo de Zorrilla, 191"  
-    }  
-  },  
-  "allowedVehicleType": {  
-    "type": "Property",  
-    "value": [  
-      "car"  
+    "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
+    "type": "EVChargingStation",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressCountry": "Espa\u00f1a",  
+            "addressLocality": "Valladolid",  
+            "streetAddress": "Paseo de Zorrilla, 191"  
+        }  
+    },  
+    "allowedVehicleType": {  
+        "type": "Property",  
+        "value": [  
+            "car"  
+        ]  
+    },  
+    "capacity": {  
+        "type": "Property",  
+        "value": 2  
+    },  
+    "chargeType": {  
+        "type": "Property",  
+        "value": [  
+            "free"  
+        ]  
+    },  
+    "contactPoint": {  
+        "type": "Property",  
+        "value": {  
+            "email": "vehiculoelectrico@ava.es"  
+        }  
+    },  
+    "location": {  
+        "type": "Geoproperty",  
+        "value": {  
+            "coordinates": [  
+                -4.747901,  
+                41.618265  
+            ],  
+            "type": "Point"  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Agencia de Innovaci\u00f3n"  
+    },  
+    "operator": {  
+        "type": "Property",  
+        "value": "Iberdrola"  
+    },  
+    "socketType": {  
+        "type": "Property",  
+        "value": [  
+            "Wall_Euro"  
+        ]  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": "https://openchargemap.org/"  
+    },  
+    "powerConsumption": {  
+        "type": "Property",  
+        "value": 10.0  
+    },  
+    "chargingUnitId": {  
+        "type": "string",  
+        "value": "PZEV01-DeltaBharatAC001-SCTLGandhiPark001"  
+    },  
+    "transactionId": {  
+        "type": "Property",  
+        "value": "84068784"  
+    },  
+    "transactionType": {  
+        "type": "Property",  
+        "value": "RFID"  
+    },  
+    "stationName": {  
+        "type": "Property",  
+        "value": "SmartCityTvmGandhiParkOne"  
+    },  
+    "amountCollected": {  
+        "type": "Property",  
+        "value": 0.08  
+    },  
+    "taxAmountCollected": {  
+        "type": "Property",  
+        "value": 0.0  
+    },  
+    "endDateTime": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "date-time",  
+            "@value": "2022-06-28T20:28:41+05:30"  
+        }  
+    },  
+    "startDateTime": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "date-time",  
+            "@value": "2022-06-28T20:27:27+05:30"  
+        }  
+    },  
+    "vehicleType": {  
+        "type": "Property",  
+        "value": "e-motorcycle"  
+    },  
+    "observationDateTime": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "date-time",  
+            "@value": "2022-06-28T20:27:29+05:30"  
+        }  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.Transportation/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
-  },  
-  "capacity": {  
-    "type": "Property",  
-    "value": 2  
-  },  
-  "chargeType": {  
-    "type": "Property",  
-    "value": [  
-      "free"  
-    ]  
-  },  
-  "contactPoint": {  
-    "type": "Property",  
-    "value": {  
-      "email": "vehiculoelectrico@ava.es"  
-    }  
-  },  
-  "location": {  
-    "type": "Geoproperty",  
-    "value": {  
-      "coordinates": [  
-        -4.747901,  
-        41.618265  
-      ],  
-      "type": "Point"  
-    }  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Agencia de Innovaci\u00f3n"  
-  },  
-  "operator": {  
-    "type": "Property",  
-    "value": "Iberdrola"  
-  },  
-  "socketType": {  
-    "type": "Property",  
-    "value": [  
-      "Wall_Euro"  
-    ]  
-  },  
-  "source": {  
-    "type": "Property",  
-    "value": "https://openchargemap.org/"  
-  },  
-  "powerConsumption": {  
-    "type": "Property",  
-    "value": 10.0  
-  },  
-  "chargingUnitId": {  
-    "type": "string",  
-    "value": "PZEV01-DeltaBharatAC001-SCTLGandhiPark001"  
-  },  
-  "transactionId": {  
-    "type": "Property",  
-    "value": "84068784"  
-  },  
-  "transactionType": {  
-    "type": "Property",  
-    "value": "RFID"  
-  },  
-  "stationName": {  
-    "type": "Property",  
-    "value": "SmartCityTvmGandhiParkOne"  
-  },  
-  "amountCollected": {  
-    "type": "Property",  
-    "value": 0.08  
-  },  
-  "taxAmountCollected": {  
-    "type": "Property",  
-    "value": 0.0  
-  },  
-  "endDateTime": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "date-time",  
-      "@value": "2022-06-28T20:28:41+05:30"  
-    }  
-  },  
-  "startDateTime": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "date-time",  
-      "@value": "2022-06-28T20:27:27+05:30"  
-    }  
-  },  
-  "vehicleType": {  
-    "type": "Property",  
-    "value": "e-motorcycle"  
-  },  
-  "observationDateTime": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "date-time",  
-      "@value": "2022-06-28T20:27:29+05:30"  
-    }  
-  },  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.Transportation/context.jsonld"  
-  ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
