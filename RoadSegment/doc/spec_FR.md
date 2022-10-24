@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entité : RoadSegment  
-====================  
+====================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.Transportation/blob/master/RoadSegment/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Description globale : **Cette entité contient une description géographique et contextuelle harmonisée d'un segment de route. Une collection de segments de route est utilisée pour décrire une route**.  
 version : 0.4.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `agency_name`: Le champ agency_name contient le nom complet de l'agence ou de l'organisation responsable de la maintenance de l'entité considérée. SameAs : Champ 'agency_name' de la définition de champ statique GTFS - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)  - `allowedVehicleType`: Type(s) de véhicule(s) autorisé(s) à transiter par ce segment de route. Enum : 'agriculturalVehicle, bicycle, bus, car, caravan, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, trailer, van, anyVehicle'. Valeurs autorisées : Les valeurs suivantes définies par _VehicleTypeEnum_, [DATEX 2 version 2.3] (http://d2docs.ndwcloud.nu/) :  - `alternateName`: Un nom alternatif pour cet élément  - `annotations`: Annotations sur l'élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `bridgeCount`: Nombre de ponts dans le segment de route correspondant à cette observation. Prend la valeur 0 (zéro) lorsque le segment de route ne comporte aucun pont.  - `carriagewayLength`: Longueur totale de la chaussée du segment de route correspondant à cette observation.  - `carriagewayWidth`: Largeur totale de la chaussée du segment de route correspondant à cette observation.  - `category`: Permet de transmettre des caractéristiques supplémentaires d'un segment de route. Enum : 'oneway, toll, link'.  `oneway` : Indique si le segment de route ne peut être utilisé que dans une seule direction. S'il n'est pas présent, cela signifie que le segment de route peut être utilisé dans les deux sens (avant et arrière). Voir aussi [http://wiki.openstreetmap.org/wiki/Key:oneway](http://wiki.openstreetmap.org/wiki/Key:oneway). `toll` : Indique si le tronçon de route est soumis à un péage. `link` : Indique si ce segment de route est un segment de liaison auxiliaire pour sortir ou entrer sur une route. Voir [https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link). Toute autre valeur significative pour une application.  - `color`: La couleur du produit  - `culvertCount`: Nombre de ponceaux prévalant dans le tracé de la route correspondant à cette observation.  - `cyclePathLeftHeight`: Hauteur de la piste cyclable sur le bord gauche de la route correspondant à cette observation.  - `cyclePathLeftWidth`: Largeur de la piste cyclable sur le bord gauche de la route correspondant à cette observation.  - `cyclePathMaterial`: Matériaux de construction utilisés pour la pose de la piste cyclable sur les côtés de la route correspondant à cette observation.  - `cyclePathPlacement`: Décrit l'emplacement de la piste cyclable le long du segment de route correspondant à cette observation. Enum:' ['RIGHT, LEFT, BOTH, NOT_AVAILABLE'] (en anglais)  - `cyclePathRightHeight`: Hauteur de la piste cyclable sur le bord droit de la route correspondant à cette observation.  - `cyclePathRightWidth`: Largeur de la piste cyclable sur le bord droit de la route correspondant à cette observation.  - `dataDescriptor`: URI pointant vers l'entité data-descriptor  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `endKilometer`: Le numéro de kilomètre (mesuré à partir du point de départ de la route) où se termine ce segment de route.  - `endPoint`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `id`: Identifiant unique de l'entité  - `image`: Une image de l'article  - `laneInfo`: Décrit les aspects des voies de la route correspondant à cette observation.  - `laneUsage`: Cet attribut peut être utilisé pour transmettre des paramètres spécifiques décrivant chaque voie. Il doit contenir une chaîne de caractères par voie de segment de route. L'élément 0 du tableau doit contenir les informations de la voie 1, et ainsi de suite. Le format de la chaîne référencée doit être : <lane_direction>, <lane_minimumAllowedSpeed>, <lane_maximumAllowedSpeed>, <lane_maximumAllowedHeight>, <lane_maximumAllowedWeight>. <lane_direction> est une chaîne de texte dont les valeurs autorisées sont les suivantes : `forward`. La voie est actuellement utilisée dans la direction `forwards`. `backward`. Le couloir est actuellement utilisé dans le sens "arrière". Le seul paramètre obligatoire est `lane_direction`. S'il n'est pas spécifié, le reste des paramètres peut être supposé être égal à ceux spécifiés au niveau de l'entité.  - `length`: Longueur totale de ce segment de route en kilomètres  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `maximumAllowedHeight`: Hauteur maximale autorisée pour les véhicules transitant par ce segment de route  - `maximumAllowedSpeed`: Vitesse maximale autorisée sur le segment de route. Des limites plus restrictives peuvent être appliquées à certains types de véhicules (camions, caravanes, etc.).  - `maximumAllowedWeight`: Poids maximal autorisé pour les véhicules transitant par ce segment de route  - `maximumAllowedWidth`: Largeur maximale autorisée pour les véhicules utilisant l'entité correspondant à cette observation.  - `medianHeight`: Hauteur du terre-plein ou du terre-plein central de la route correspondant à cette observation.  - `medianLength`: Longueur du terre-plein ou du terre-plein central de la route correspondant à cette observation.  - `medianWidth`: Largeur du terre-plein ou du terre-plein central de la route correspondant à cette observation.  - `minimumAllowedSpeed`: Vitesse minimale autorisée lors du passage sur ce segment de route  - `municipalityInfo`: Informations sur la municipalité correspondant à cette observation.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `pedestrianPathLeftHeight`: Hauteur de la passerelle placée sur le bord gauche de la route correspondant à cette observation.  - `pedestrianPathLeftWidth`: Largeur de la passerelle placée sur le bord gauche de la route correspondant à cette observation.  - `pedestrianPathMaterial`: Matériaux de construction utilisés pour la pose de la passerelle / du chemin piétonnier sur les côtés de la route correspondant à cette observation.  - `pedestrianPathPlacement`: Décrit la présence et l'emplacement du piéton le long du segment de route correspondant à cette observation. Enum : 'RIGHT, LEFT, BOTH, NOT_AVAILABLE' (droite, gauche, les deux, non disponible)  - `pedestrianPathRightHeight`: Hauteur de la passerelle placée sur le bord droit de la route correspondant à cette observation.  - `pedestrianPathRightWidth`: Largeur de la passerelle placée sur le bord droit de la route correspondant à cette observation.  - `refRoad`: Route à laquelle appartient ce segment de route.  - `rightOfWayWidth`: L'emprise (Right of Way, RoW) est la surface totale du terrain disponible pour la route. Sa largeur permet d'accueillir le passage des voitures, les autres nécessités et les extensions futures, le long du tracé de la route.  - `roadClass`: Le type de route correspondant à cette observation. Enum : [OTHER_PUBLIC_ROAD, PRIVATE_ROAD, MINOR_CITY_ROAD, MAJOR_DISTRICT_ROAD, MAJOR_CITY_ROAD, NATIONAL_HIGHWAY, SERVICE_ROAD, STATE_HIGHWAY, OTHER_DISTRICT_ROAD, PORT_ROAD].  - `roadDirection`: Représente la direction vers laquelle la route se dirige. Enum:' ['N, S, E, W'. Les valeurs N,S,E,W représentent respectivement le nord, le sud, l'est et l'ouest.  - `roadId`: Représentation interne unique de la route correspondant à cette observation.  - `roadMaterial`: Le matériau de construction utilisé pour la pose de la chaussée correspondant à cette observation. Par exemple, béton, terre, goudron, etc.  - `roadName`: Le nom de la route correspondant à cette observation.  - `roadWork`: Raisons des travaux de voirie en cas d'intervention urgente. Une combinaison de ces valeurs. Enum : 'COLLAPSE, DERAILMENT, FIRE, FLOOD, GASLEAK, LANDSLIDE, OTHER, POWERCUT, ROCKFALL, SAGGING, WATERLEAK'.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `startKilometer`: Le numéro de kilomètre (mesuré à partir du point de départ de la route) où commence ce segment de route.  - `startPoint`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `status`: Conditions de conduite spécifiques sur le segment de route. Utilisez statusDescription pour obtenir des informations supplémentaires. Enum : "ouvert, fermé, limité".  Ouvert" : le segment de route peut être utilisé dans toute sa capacité prévue ; "Fermé" : aucune circulation n'est possible, par exemple en raison de travaux routiers, d'un pont ou d'une écluse ouverts, ou de tout autre événement empêchant la circulation. limitée" : la circulation est possible, mais pas à pleine capacité.  - `statusDescription`: Informations complémentaires à l'attribut d'état.  - `totalCyclePathWidth`: Largeur totale de la piste cyclable présente sur la route correspondant à cette observation.  - `totalLaneNumber`: Nombre total de voies offertes par ce segment de route  - `totalPedestrianPathLength`: Longueur totale de la passerelle présente dans la route correspondant à cette observation.  - `totalPedestrianPathWidth`: Largeur totale de la passerelle présente dans la route correspondant à cette observation.  - `type`: Type d'entité NGSI. Il doit s'agir de RoadSegment  - `width`: Largeur du segment de route.    
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `agency_name[string]`: Le champ agency_name contient le nom complet de l'agence ou de l'organisation responsable de la maintenance de l'entité considérée. SameAs : Champ 'agency_name' de la définition de champ statique GTFS - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)  - `allowedVehicleType[array]`: Type(s) de véhicule(s) autorisé(s) à transiter par ce segment de route. Enum : 'agriculturalVehicle, bicycle, bus, car, caravan, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, trailer, van, anyVehicle'. Valeurs autorisées : Les valeurs suivantes définies par _VehicleTypeEnum_, [DATEX 2 version 2.3] (http://d2docs.ndwcloud.nu/) :  . Model: [https://schema.org/Text](https://schema.org/Text)- `alternateName[string]`: Un nom alternatif pour cet élément  - `annotations[array]`: Annotations sur l'élément  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: La zone géographique où un service ou un article offert est fourni  . Model: [https://schema.org/Text](https://schema.org/Text)- `bridgeCount[number]`: Nombre de ponts dans le segment de route correspondant à cette observation. Prend la valeur 0 (zéro) lorsque le segment de route ne comporte aucun pont.  - `carriagewayLength[number]`: Longueur totale de la chaussée du segment de route correspondant à cette observation.  - `carriagewayWidth[number]`: Largeur totale de la chaussée du segment de route correspondant à cette observation.  - `category[array]`: Permet de transmettre des caractéristiques supplémentaires d'un segment de route. Enum : 'oneway, toll, link'.  `oneway` : Indique si le segment de route ne peut être utilisé que dans une seule direction. S'il n'est pas présent, cela signifie que le segment de route peut être utilisé dans les deux sens (avant et arrière). Voir aussi [http://wiki.openstreetmap.org/wiki/Key:oneway](http://wiki.openstreetmap.org/wiki/Key:oneway). `toll` : Indique si le tronçon de route est soumis à un péage. `link` : Indique si ce segment de route est un segment de liaison auxiliaire pour sortir ou entrer sur une route. Voir [https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link). Toute autre valeur significative pour une application.  . Model: [https://schema.org/Text](https://schema.org/Text)- `color[string]`: La couleur du produit  . Model: [https://schema.org/color](https://schema.org/color)- `culvertCount[number]`: Nombre de ponceaux prévalant dans le tracé de la route correspondant à cette observation.  - `cyclePathLeftHeight[number]`: Hauteur de la piste cyclable sur le bord gauche de la route correspondant à cette observation.  - `cyclePathLeftWidth[number]`: Largeur de la piste cyclable sur le bord gauche de la route correspondant à cette observation.  - `cyclePathMaterial[string]`: Matériaux de construction utilisés pour la pose de la piste cyclable sur les côtés de la route correspondant à cette observation.  - `cyclePathPlacement[string]`: Décrit l'emplacement de la piste cyclable le long du segment de route correspondant à cette observation. Enum:' ['RIGHT, LEFT, BOTH, NOT_AVAILABLE'] (en anglais)  - `cyclePathRightHeight[number]`: Hauteur de la piste cyclable sur le bord droit de la route correspondant à cette observation.  - `cyclePathRightWidth[number]`: Largeur de la piste cyclable sur le bord droit de la route correspondant à cette observation.  - `dataDescriptor[*]`: URI pointant vers l'entité data-descriptor  - `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified[string]`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description[string]`: Une description de cet article  - `endKilometer[number]`: Le numéro de kilomètre (mesuré à partir du point de départ de la route) où se termine ce segment de route.  . Model: [https://schema.org/Number](https://schema.org/Number)- `endPoint[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `id[*]`: Identifiant unique de l'entité  - `image[string]`: Une image de l'article  . Model: [https://schema.org/URL](https://schema.org/URL)- `laneInfo[object]`: Décrit les aspects des voies de la route correspondant à cette observation.  - `laneUsage[array]`: Cet attribut peut être utilisé pour transmettre des paramètres spécifiques décrivant chaque voie. Il doit contenir une chaîne de caractères par voie de segment de route. L'élément 0 du tableau doit contenir les informations de la voie 1, et ainsi de suite. Le format de la chaîne référencée doit être : <lane_direction>, <lane_minimumAllowedSpeed>, <lane_maximumAllowedSpeed>, <lane_maximumAllowedHeight>, <lane_maximumAllowedWeight>. <lane_direction> est une chaîne de texte dont les valeurs autorisées sont les suivantes : `forward`. La voie est actuellement utilisée dans la direction `forwards`. `backward`. Le couloir est actuellement utilisé dans le sens "arrière". Le seul paramètre obligatoire est `lane_direction`. S'il n'est pas spécifié, le reste des paramètres peut être supposé être égal à ceux spécifiés au niveau de l'entité.  . Model: [https://schema.org/Text](https://schema.org/Text)- `length[number]`: Longueur totale de ce segment de route en kilomètres  . Model: [https://schema.org/length](https://schema.org/length)- `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `maximumAllowedHeight[number]`: Hauteur maximale autorisée pour les véhicules transitant par ce segment de route  . Model: [https://schema.org/height](https://schema.org/height)- `maximumAllowedSpeed[number]`: Vitesse maximale autorisée sur le segment de route. Des limites plus restrictives peuvent être appliquées à certains types de véhicules (camions, caravanes, etc.).  . Model: [https://schema.org/Number](https://schema.org/Number)- `maximumAllowedWeight[number]`: Poids maximal autorisé pour les véhicules transitant par ce segment de route  . Model: [https://schema.org/weight](https://schema.org/weight)- `maximumAllowedWidth[number]`: Largeur maximale autorisée pour les véhicules utilisant l'entité correspondant à cette observation.  - `medianHeight[number]`: Hauteur du terre-plein ou du terre-plein central de la route correspondant à cette observation.  - `medianLength[number]`: Longueur du terre-plein ou du terre-plein central de la route correspondant à cette observation.  - `medianWidth[number]`: Largeur du terre-plein ou du terre-plein central de la route correspondant à cette observation.  - `minimumAllowedSpeed[number]`: Vitesse minimale autorisée lors du passage sur ce segment de route  . Model: [https://schema.org/Number](https://schema.org/Number)- `municipalityInfo[object]`: Informations sur la municipalité correspondant à cette observation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `name[string]`: Le nom de cet élément.  - `owner[array]`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `pedestrianPathLeftHeight[number]`: Hauteur de la passerelle placée sur le bord gauche de la route correspondant à cette observation.  - `pedestrianPathLeftWidth[number]`: Largeur de la passerelle placée sur le bord gauche de la route correspondant à cette observation.  - `pedestrianPathMaterial[string]`: Matériaux de construction utilisés pour la pose de la passerelle / du chemin piétonnier sur les côtés de la route correspondant à cette observation.  - `pedestrianPathPlacement[string]`: Décrit la présence et l'emplacement du piéton le long du segment de route correspondant à cette observation. Enum : 'RIGHT, LEFT, BOTH, NOT_AVAILABLE' (droite, gauche, les deux, non disponible)  - `pedestrianPathRightHeight[number]`: Hauteur de la passerelle placée sur le bord droit de la route correspondant à cette observation.  - `pedestrianPathRightWidth[number]`: Largeur de la passerelle placée sur le bord droit de la route correspondant à cette observation.  - `refRoad[*]`: Route à laquelle appartient ce segment de route.  - `rightOfWayWidth[number]`: L'emprise (Right of Way, RoW) est la surface totale du terrain disponible pour la route. Sa largeur permet d'accueillir le passage des voitures, les autres nécessités et les extensions futures, le long du tracé de la route.  - `roadClass[string]`: Le type de route correspondant à cette observation. Enum : [OTHER_PUBLIC_ROAD, PRIVATE_ROAD, MINOR_CITY_ROAD, MAJOR_DISTRICT_ROAD, MAJOR_CITY_ROAD, NATIONAL_HIGHWAY, SERVICE_ROAD, STATE_HIGHWAY, OTHER_DISTRICT_ROAD, PORT_ROAD].  - `roadDirection[string]`: Représente la direction vers laquelle la route se dirige. Enum:' ['N, S, E, W'. Les valeurs N,S,E,W représentent respectivement le nord, le sud, l'est et l'ouest.  - `roadId[string]`: Représentation interne unique de la route correspondant à cette observation.  - `roadMaterial[string]`: Le matériau de construction utilisé pour la pose de la chaussée correspondant à cette observation. Par exemple, béton, terre, goudron, etc.  - `roadName[string]`: Le nom de la route correspondant à cette observation.  - `roadWork[string]`: Raisons des travaux de voirie en cas d'intervention urgente. Une combinaison de ces valeurs. Enum : 'COLLAPSE, DERAILMENT, FIRE, FLOOD, GASLEAK, LANDSLIDE, OTHER, POWERCUT, ROCKFALL, SAGGING, WATERLEAK'.  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source[string]`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `startKilometer[number]`: Le numéro de kilomètre (mesuré à partir du point de départ de la route) où commence ce segment de route.  . Model: [https://schema.org/Number](https://schema.org/Number)- `startPoint[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `status[string]`: Conditions de conduite spécifiques sur le segment de route. Utilisez statusDescription pour obtenir des informations supplémentaires. Enum : "ouvert, fermé, limité".  Ouvert" : le segment de route peut être utilisé dans toute sa capacité prévue ; "Fermé" : aucune circulation n'est possible, par exemple en raison de travaux routiers, d'un pont ou d'une écluse ouverts, ou de tout autre événement empêchant la circulation. limitée" : la circulation est possible, mais pas à pleine capacité.  - `statusDescription[string]`: Informations complémentaires à l'attribut d'état.  - `totalCyclePathWidth[number]`: Largeur totale de la piste cyclable présente sur la route correspondant à cette observation.  - `totalLaneNumber[number]`: Nombre total de voies offertes par ce segment de route  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `totalPedestrianPathLength[number]`: Longueur totale de la passerelle présente dans la route correspondant à cette observation.  - `totalPedestrianPathWidth[number]`: Largeur totale de la passerelle présente dans la route correspondant à cette observation.  - `type[string]`: Type d'entité NGSI. Il doit s'agir de RoadSegment  - `width[number]`: Largeur du segment de route.  . Model: [https://schema.org/Number](https://schema.org/Number)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propriétés requises  
-- `allowedVehicleType`  - `endPoint`  - `id`  - `name`  - `refRoad`  - `startPoint`  - `type`    
+- `allowedVehicleType`  - `endPoint`  - `id`  - `name`  - `refRoad`  - `startPoint`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Les segments de route peuvent comprendre plusieurs voies. Ce modèle de données permet de transmettre des segments de route composés de voies hétérogènes (différentes dans leur utilisation, leur vitesse, leur hauteur, etc.) Les voies sont identifiées à l'aide de nombres entiers compris entre 1 et n, le numéro 1 étant la voie de droite en marche avant. La direction avant est la direction indiquée par le vecteur qui va du point de départ du segment au point d "arrivée du segment. Il s "agit de la même convention que celle utilisée par OpenStreetMap. Cette entité est principalement associée aux segments verticaux de l'automobile et des villes intelligentes, ainsi qu'aux applications IoT connexes. Ce modèle de données a été développé en coopération avec les opérateurs mobiles et la GSMA.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 RoadSegment:    
@@ -733,10 +746,15 @@ RoadSegment:
   x-version: 0.4.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
 Les propriétés `laneUsage` et celles qui indiquent les paramètres maximums autorisés peuvent être dynamiques, par exemple, la direction d'une voie peut être temporairement modifiée pour améliorer les conditions de circulation.  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Exemples de charges utiles  
 #### RoadSegment Valeurs-clés NGSI-v2 Exemple  
 Voici un exemple de RoadSegment au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Spain-RoadSegment-A62-osm-24702186",  
@@ -838,8 +856,10 @@ RoadSegment:
   }  
 }  
 ```  
+</details>  
 #### RoadSegment NGSI-v2 normalisé Exemple  
 Voici un exemple de RoadSegment au format JSON-LD tel que normalisé. Ce format est compatible avec la NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Spain-RoadSegment-A62-osm-24702186",  
@@ -1070,114 +1090,119 @@ RoadSegment:
   }  
 }  
 ```  
+</details>  
 #### RoadSegment Valeurs-clés NGSI-LD Exemple  
 Voici un exemple de RoadSegment au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-osm-24702186",  
-  "type": "RoadSegment",  
-  "allowedVehicleType": [  
-    "car",  
-    "bus",  
-    "lorry",  
-    "trailer",  
-    "tanker",  
-    "van",  
-    "caravan"  
-  ],  
-  "category": [  
-    "oneway"  
-  ],  
-  "endPoint": {  
-    "coordinates": [  
-      -4.55167335377909,  
-      41.8570461783071  
+    "id": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-osm-24702186",  
+    "type": "RoadSegment",  
+    "allowedVehicleType": [  
+        "car",  
+        "bus",  
+        "lorry",  
+        "trailer",  
+        "tanker",  
+        "van",  
+        "caravan"  
     ],  
-    "type": "Point"  
-  },  
-  "laneUsage": [  
-    "forward",  
-    "forward"  
-  ],  
-  "location": {  
-    "coordinates": [  
-      [  
-        -4.7299180606009,  
-        41.6844918725019  
-      ],  
-      [  
-        -4.72855890957602,  
-        41.6860596957855  
-      ],  
-      [  
-        -4.5520357341647,  
-        41.8569278186523  
-      ],  
-      [  
-        -4.55167335377909,  
-        41.8570461783071  
-      ]  
+    "category": [  
+        "oneway"  
     ],  
-    "type": "LineString"  
-  },  
-  "maximumAllowedSpeed": 120,  
-  "minimumAllowedSpeed": 60,  
-  "name": "Valladolid-DueÃ±as",  
-  "refRoad": "urn:ngsi-ld:Road:Spain-Road-A62",  
-  "source": "http://wwww.openstreetmap.org",  
-  "startPoint": {  
-    "coordinates": [  
-      -4.7299180606009,  
-      41.6844918725019  
+    "endPoint": {  
+        "coordinates": [  
+            -4.55167335377909,  
+            41.8570461783071  
+        ],  
+        "type": "Point"  
+    },  
+    "laneUsage": [  
+        "forward",  
+        "forward"  
     ],  
-    "type": "Point"  
-  },  
-  "totalLaneNumber": 2,  
-  "status": "open",  
-  "statusDescription": "Bridge state = DOWN",  
-  "cyclePathMaterial": "ASPHALT",  
-  "carriagewayLength": 0.095454461114818,  
-  "totalPedestrianPathWidth": 7,  
-  "bridgeCount": 1,  
-  "pedestrianPathLeftHeight": 2,  
-  "maximumAllowedHeight": 72,  
-  "totalPedestrianPathLength": 0.09,  
-  "culvertCount": 0,  
-  "roadName": "GREEN VILLA ROAD TO CHAITHRAM HOUSE",  
-  "roadClass": "OTHER_PUBLIC_ROAD",  
-  "medianHeight": 3.6,  
-  "roadWork": "OTHER",  
-  "roadID": "5272",  
-  "cyclePathRightWidth": 2.5,  
-  "roadMaterial": "TAR",  
-  "medianWidth": 1.5,  
-  "carriagewayWidth": 3,  
-  "cyclePathRightHeight": 1,  
-  "roadDirection": "N",  
-  "medianLength": 0.09,  
-  "pedestrianPathMaterial": "PAVEMENT BLOCK",  
-  "cyclePathLeftWidth": 2.5,  
-  "maximumAllowedWidth": 74,  
-  "rightOfWayWidth": 4,  
-  "cyclePathLeftHeight": 1,  
-  "maximumAllowedWeight": 109,  
-  "pedestrianPathRightWidth": 3.5,  
-  "pedestrianPathLeftWidth": 3.5,  
-  "pedestrianPathPlacement": "NOT_AVAILABLE",  
-  "pedestrianPathRightHeight": 2,  
-  "cyclePathPlacement": "NOT_AVAILABLE",  
-  "totalCyclePathWidth": 5,  
-  "agency_name": "CORPORATION",  
-  "municipalityInfo": {  
-    "ulbName": "KANNUR MUNICIPAL CORPORATION"  
-  },  
-  "@context": [  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "location": {  
+        "coordinates": [  
+            [  
+                -4.7299180606009,  
+                41.6844918725019  
+            ],  
+            [  
+                -4.72855890957602,  
+                41.6860596957855  
+            ],  
+            [  
+                -4.5520357341647,  
+                41.8569278186523  
+            ],  
+            [  
+                -4.55167335377909,  
+                41.8570461783071  
+            ]  
+        ],  
+        "type": "LineString"  
+    },  
+    "maximumAllowedSpeed": 120,  
+    "minimumAllowedSpeed": 60,  
+    "name": "Valladolid-Due\u00f1as",  
+    "refRoad": "urn:ngsi-ld:Road:Spain-Road-A62",  
+    "source": "http://wwww.openstreetmap.org",  
+    "startPoint": {  
+        "coordinates": [  
+            -4.7299180606009,  
+            41.6844918725019  
+        ],  
+        "type": "Point"  
+    },  
+    "totalLaneNumber": 2,  
+    "status": "open",  
+    "statusDescription": "Bridge state = DOWN",  
+    "cyclePathMaterial": "ASPHALT",  
+    "carriagewayLength": 0.095454461114818,  
+    "totalPedestrianPathWidth": 7,  
+    "bridgeCount": 1,  
+    "pedestrianPathLeftHeight": 2,  
+    "maximumAllowedHeight": 72,  
+    "totalPedestrianPathLength": 0.09,  
+    "culvertCount": 0,  
+    "roadName": "GREEN VILLA ROAD TO CHAITHRAM HOUSE",  
+    "roadClass": "OTHER_PUBLIC_ROAD",  
+    "medianHeight": 3.6,  
+    "roadWork": "OTHER",  
+    "roadID": "5272",  
+    "cyclePathRightWidth": 2.5,  
+    "roadMaterial": "TAR",  
+    "medianWidth": 1.5,  
+    "carriagewayWidth": 3,  
+    "cyclePathRightHeight": 1,  
+    "roadDirection": "N",  
+    "medianLength": 0.09,  
+    "pedestrianPathMaterial": "PAVEMENT BLOCK",  
+    "cyclePathLeftWidth": 2.5,  
+    "maximumAllowedWidth": 74,  
+    "rightOfWayWidth": 4,  
+    "cyclePathLeftHeight": 1,  
+    "maximumAllowedWeight": 109,  
+    "pedestrianPathRightWidth": 3.5,  
+    "pedestrianPathLeftWidth": 3.5,  
+    "pedestrianPathPlacement": "NOT_AVAILABLE",  
+    "pedestrianPathRightHeight": 2,  
+    "cyclePathPlacement": "NOT_AVAILABLE",  
+    "totalCyclePathWidth": 5,  
+    "agency_name": "CORPORATION",  
+    "municipalityInfo": {  
+        "ulbName": "KANNUR MUNICIPAL CORPORATION"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### RoadSegment NGSI-LD normalisé Exemple  
 Voici un exemple de RoadSegment au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
 	"id": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-osm-24702186",  
@@ -1423,4 +1448,12 @@ RoadSegment:
 	]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
