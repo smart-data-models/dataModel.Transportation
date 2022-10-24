@@ -1,17 +1,32 @@
-Entität: RestrictedTrafficArea  
-==============================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entität: RestrictedTrafficArea  
+==============================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Transportation/blob/master/RestrictedTrafficArea/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **Ein Bereich einer Stadt, in dem der von Autos oder anderen Fahrzeugen erzeugte Verkehr einer Begrenzung unterworfen ist.**  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+Allgemeine Beschreibung: **Ein Gebiet in einer Stadt, in dem der von Autos oder anderen Fahrzeugen erzeugte Verkehr eingeschränkt wird.  
+Version: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `category`: Kategorie(n) des eingeschränkten Verkehrsbereichs. Der Zweck dieses Feldes ist es, allgemein die Kennzeichnung von Einheiten des eingeschränkten Verkehrsbereichs zu ermöglichen. Besonderheiten und ausführliche Beschreibungen sind unter den entsprechenden spezifischen Attributen zu finden.  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `location`:   - `name`: Der Name dieses Elements.  - `notAllowedVehicleType`: Fahrzeugtyp(en), der/die den gesperrten Verkehrsbereich nicht durchqueren darf/dürfen.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `regulation`: Eine URL, die auf die Vorschrift für den spezifischen eingeschränkten Verkehrsbereich verweist.  - `restrictionExceptions`: Einzelner Fahrzeugtyp, der den gesperrten Verkehrsbereich in einem bestimmten Zeitfenster durchfahren darf.  - `restrictionValidityHours`: Wochentage und Stunden, in denen die Verkehrsbeschränkung aktiv ist.  - `security`: Sicherheitsaspekte, die dieser verkehrsberuhigte Bereich bietet.  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `specialRestrictions`: Einzelner Fahrzeugtyp, der den gesperrten Verkehrsbereich in einem bestimmten Zeitfenster nicht durchfahren darf.  - `type`: NGSI-Entitätstyp. Es muss RestrictedTrafficArea sein  - `validityEndDate`: Das Datum, an dem die Einschränkung aufgehoben wird.  - `validityStartDate`: Das Datum, ab dem die Einschränkung angewendet wird.    
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[array]`: Kategorie(n) des eingeschränkten Verkehrsbereichs. Dieses Feld dient der allgemeinen Kennzeichnung von Einheiten des eingeschränkten Verkehrsraums. Besonderheiten und ausführliche Beschreibungen finden sich unter den entsprechenden spezifischen Attributen.  - `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels.  - `notAllowedVehicleType[array]`: Fahrzeugtyp(en), die den gesperrten Bereich nicht durchqueren dürfen.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `regulation[string]`: Eine URL, die auf die Verordnung für das spezifische Verkehrsbeschränkungsgebiet verweist.  - `restrictionExceptions[array]`: Einzelne Fahrzeugtypen, die den gesperrten Verkehrsbereich in einem bestimmten Zeitfenster durchqueren dürfen.  - `restrictionValidityHours[string]`: Wochentage und Stunden, an denen die Verkehrsbeschränkung aktiv ist.  - `security[array]`: Sicherheitsaspekte, die dieser verkehrsberuhigte Bereich bietet.  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `specialRestrictions[array]`: Einzelne Fahrzeugtypen dürfen den gesperrten Verkehrsbereich in einem bestimmten Zeitfenster nicht durchqueren.  - `type[string]`: NGSI-Entitätstyp. Es muss RestrictedTrafficArea sein.  - `validityEndDate[string]`: Das Datum, an dem die Beschränkung aufgehoben wird.  - `validityStartDate[string]`: Das Datum, ab dem die Einschränkung gilt.  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
-- `id`  - `type`    
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Datenmodell aus dem Synchronizitätsprojekt  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 RestrictedTrafficArea:    
@@ -38,17 +53,21 @@ RestrictedTrafficArea:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     category:    
       description: 'Restricted traffic area''s category(ies). The purpose of this field is to allow to tag, generally speaking, restricted traffic area entities. Particularities and detailed descriptions should be found under the corresponding specific attributes.'    
       items:    
@@ -76,22 +95,32 @@ RestrictedTrafficArea:
           - publicPrivate    
         type: string    
       minItems: 1    
-      type: Property    
+      type: array    
       uniqueItems: true    
+      x-ngsi:    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &restrictedtrafficarea_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -103,12 +132,13 @@ RestrictedTrafficArea:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -128,7 +158,8 @@ RestrictedTrafficArea:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -151,7 +182,8 @@ RestrictedTrafficArea:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -176,7 +208,8 @@ RestrictedTrafficArea:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -198,7 +231,8 @@ RestrictedTrafficArea:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -223,7 +257,8 @@ RestrictedTrafficArea:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -250,10 +285,13 @@ RestrictedTrafficArea:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     notAllowedVehicleType:    
       description: 'Vehicle type(s) not allowed to cross the restricted traffic area.'    
       items:    
@@ -293,27 +331,37 @@ RestrictedTrafficArea:
           - van    
         type: string    
       minItems: 1    
-      type: Property    
+      type: array    
       uniqueItems: true    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *restrictedtrafficarea_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     regulation:    
       description: 'A URL pointing to the regulation for the specific restricted traffic area.'    
       format: uri    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     restrictionExceptions:    
       description: 'Individual vehicle type allowed to cross the restricted traffic area in a specific time slot.'    
       items:    
         anyOf: *restrictedtrafficarea_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     restrictionValidityHours:    
       description: 'Days of the week and hours in which the traffic restriction is active.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     security:    
       description: 'Security aspects provided by this restricted traffic area.'    
       items:    
@@ -331,8 +379,10 @@ RestrictedTrafficArea:
           - securityStaff    
         type: string    
       minItems: 1    
-      type: Property    
+      type: array    
       uniqueItems: true    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -343,38 +393,60 @@ RestrictedTrafficArea:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     specialRestrictions:    
       description: 'Individual vehicle type not allowed to cross the restricted traffic area in a specific time slot.'    
       items:    
         anyOf: *restrictedtrafficarea_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     type:    
       description: 'NGSI Entity type. It has to be RestrictedTrafficArea'    
       enum:    
         - RestrictedTrafficArea    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     validityEndDate:    
       description: 'The date at which the restriction is dismissed.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     validityStartDate:    
       description: 'The date from which the restriction is applied.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/RestrictedTrafficArea/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/RestrictedTrafficArea/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Beispiel-Nutzlasten  
 #### RestrictedTrafficArea NGSI-v2 key-values Beispiel  
-Hier ist ein Beispiel für eine RestrictedTrafficArea im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für ein RestrictedTrafficArea im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
@@ -399,8 +471,10 @@ RestrictedTrafficArea:
   "validityEndDate": "2049-12-31T23:00:00.00Z"  
 }  
 ```  
+</details>  
 #### RestrictedTrafficArea NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für eine RestrictedTrafficArea im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine RestrictedTrafficArea im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
@@ -449,86 +523,98 @@ RestrictedTrafficArea:
   }  
 }  
 ```  
+</details>  
 #### RestrictedTrafficArea NGSI-LD key-values Beispiel  
-Hier ist ein Beispiel für eine RestrictedTrafficArea im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-LD bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine RestrictedTrafficArea im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-LD, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
-  "type": "RestrictedTrafficArea",  
-  "category": {  
-    "type": "array",  
-    "value": [  
-      "onlyPedestrian"  
+    "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
+    "type": "RestrictedTrafficArea",  
+    "category": {  
+        "type": "array",  
+        "value": [  
+            "onlyPedestrian"  
+        ]  
+    },  
+    "description": {  
+        "type": "string",  
+        "value": "Panel:AP - Stretches:lato civici dispari da piazza Tricolore a via Kramer - Bollards: - Notes:"  
+    },  
+    "location": {  
+        "type": "geo:json",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                9.214544,  
+                45.483353  
+            ]  
+        }  
+    },  
+    "name": {  
+        "type": "string",  
+        "value": "Corso Concordia Area"  
+    },  
+    "notAllowedVehicleType": {  
+        "type": "array",  
+        "value": [  
+            "anyVehicle"  
+        ]  
+    },  
+    "regulation": {  
+        "type": "string",  
+        "value": "Decree:54785/2004, Deliberation:425/2004"  
+    },  
+    "source": {  
+        "type": "string",  
+        "value": "https://dati.comune.milano.it/dataset/ds51_trafficotrasporti_aree_pedonali_ztl_zone_30_"  
+    },  
+    "validityEndDate": {  
+        "type": "DateTime",  
+        "value": "2049-12-31T23:00:00.00Z"  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
-  },  
-  "description": {  
-    "type": "string",  
-    "value": "Panel:AP - Stretches:lato civici dispari da piazza Tricolore a via Kramer - Bollards: - Notes:"  
-  },  
-  "location": {  
-    "type": "geo:json",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        9.214544,  
-        45.483353  
-      ]  
-    }  
-  },  
-  "name": {  
-    "type": "string",  
-    "value": "Corso Concordia Area"  
-  },  
-  "notAllowedVehicleType": {  
-    "type": "array",  
-    "value": [  
-      "anyVehicle"  
-    ]  
-  },  
-  "regulation": {  
-    "type": "string",  
-    "value": "Decree:54785/2004, Deliberation:425/2004"  
-  },  
-  "source": {  
-    "type": "string",  
-    "value": "https://dati.comune.milano.it/dataset/ds51_trafficotrasporti_aree_pedonali_ztl_zone_30_"  
-  },  
-  "validityEndDate": {  
-    "type": "DateTime",  
-    "value": "2049-12-31T23:00:00.00Z"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
 }  
 ```  
+</details>  
 #### RestrictedTrafficArea NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für eine RestrictedTrafficArea im JSON-LD-Format als normalisiert. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine RestrictedTrafficArea im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
-  "type": "RestrictedTrafficArea",  
-  "category": [  
-    "onlyPedestrian"  
-  ],  
-  "description": "Panel:AP - Stretches:lato civici dispari da piazza Tricolore a via Kramer - Bollards: - Notes:",  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      9.214544,  
-      45.483353  
+    "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1",  
+    "type": "RestrictedTrafficArea",  
+    "category": [  
+        "onlyPedestrian"  
+    ],  
+    "description": "Panel:AP - Stretches:lato civici dispari da piazza Tricolore a via Kramer - Bollards: - Notes:",  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            9.214544,  
+            45.483353  
+        ]  
+    },  
+    "name": "Corso Concordia Area",  
+    "notAllowedVehicleType": [  
+        "anyVehicle"  
+    ],  
+    "regulation": "Decree:54785/2004, Deliberation:425/2004",  
+    "source": "https://dati.comune.milano.it/dataset/ds51_trafficotrasporti_aree_pedonali_ztl_zone_30_",  
+    "validityEndDate": "2049-12-31T23:00:00.00Z",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
-  },  
-  "name": "Corso Concordia Area",  
-  "notAllowedVehicleType": [  
-    "anyVehicle"  
-  ],  
-  "regulation": "Decree:54785/2004, Deliberation:425/2004",  
-  "source": "https://dati.comune.milano.it/dataset/ds51_trafficotrasporti_aree_pedonali_ztl_zone_30_",  
-  "validityEndDate": "2049-12-31T23:00:00.00Z",  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
 }  
 ```  
-Siehe [FAQ 10](https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
