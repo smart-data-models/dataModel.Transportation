@@ -1,15 +1,31 @@
-Entidad: BikeLane  
-=================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entidad: BikeLane  
+=================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.Transportation/blob/master/BikeLane/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Descripción global: **Un esquema genérico de carril bici**  
+versión: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `dateObserved`: La fecha y la hora de esta observación en formato ISO8601 UTC.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `laneLength`: Indica la longitud del carril.  - `laneOccupancy`: Indica el número de vehículos que circulan por el carril.  - `laneWidth`: Indica la anchura del carril.  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI-LD. Tiene que ser BikeLanes    
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
+- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `dateObserved[string]`: La fecha y la hora de esta observación en formato ISO8601 UTC.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `description[string]`: Una descripción de este artículo  - `id[*]`: Identificador único de la entidad  - `laneLength[number]`: Indica la longitud del carril.  . Model: [https://schema.org/Number](https://schema.org/Number)- `laneOccupancy[number]`: Indica el número de vehículos que circulan por el carril.  . Model: [https://schema.org/Number](https://schema.org/Number)- `laneWidth[number]`: Indica la anchura del carril.  . Model: [https://schema.org/Number](https://schema.org/Number)- `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name[string]`: El nombre de este artículo.  - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type[string]`: Tipo de entidad NGSI-LD. Tiene que ser BikeLanes  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propiedades requeridas  
-- `id`  - `type`  ## Descripción del modelo de datos de las propiedades  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 BikeLane:    
@@ -36,37 +52,50 @@ BikeLane:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateObserved:    
       description: 'The date and time of this observation in ISO8601 UTCformat.'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &bikelane_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -78,22 +107,26 @@ BikeLane:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     laneLength:    
       description: 'Indicates the length of the lane.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     laneOccupancy:    
       description: 'Indicates the number of vehicles circulating on the lane.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     laneWidth:    
       description: 'Indicates the width of the lane.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -245,16 +278,21 @@ BikeLane:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *bikelane_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -265,24 +303,40 @@ BikeLane:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI-LD Entity Type. It has to be BikeLanes'    
       enum:    
         - BikeLane    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/BikeLane/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/datamodel.Transportation/BikeLane/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### Ejemplo de valores clave de BikeLane NGSI-v2  
 Aquí hay un ejemplo de un BikeLane en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "BikeLane-AveMed-Benidorm-123456",  
@@ -308,8 +362,10 @@ BikeLane:
   "laneLength": 150  
 }  
 ```  
+</details>  
 #### BikeLane NGSI-v2 normalizado Ejemplo  
-Este es un ejemplo de un carril bici en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+Aquí hay un ejemplo de un BikeLane en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "BikeLane-AveMed-Benidorm-123456",  
@@ -359,139 +415,154 @@ BikeLane:
   "laneLength": {  
     "type": "Number",  
     "value": 150  
-  }  
+  },  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+  ]  
 }  
 ```  
+</details>  
 #### BikeLane NGSI-LD key-values Ejemplo  
 Aquí hay un ejemplo de un BikeLane en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:BikeLane:BikeLane-AveMed-Benidorm-123456",  
-  "type": "BikeLane",  
-  "dateObserved": "2021-02-20T06:45:00Z",  
-  "location": {  
-    "coordinates": [  
-      -8.768460000000001,  
-      42.60214472222222  
-    ],  
-    "type": "Point"  
-  },  
-  "name": "Carril bici - Avenida del Mediterráneo",  
-  "description": "Información del carril bici",  
-  "address": {  
-    "streetAddress": "37 Avenida del Mediterráneo",  
-    "addressCountry": "ES",  
-    "addressLocality": "Benidorm"  
-  },  
-  "laneOccupancy": 7,  
-  "laneWidth": 2,  
-  "laneLength": 150,  
-  "dataProvider": "LaneSensor-12345"  
+    "id": "urn:ngsi-ld:BikeLane:BikeLane-AveMed-Benidorm-123456",  
+    "type": "BikeLane",  
+    "address": {  
+        "streetAddress": "37 Avenida del Mediterr\u00e1neo",  
+        "addressCountry": "ES",  
+        "addressLocality": "Benidorm"  
+    },  
+    "dataProvider": "LaneSensor-12345",  
+    "dateObserved": "2021-02-20T06:45:00Z",  
+    "description": "Informaci\u00f3n del carril bici",  
+    "laneLength": 150,  
+    "laneOccupancy": 7,  
+    "laneWidth": 2,  
+    "location": {  
+        "coordinates": [  
+            -8.768460000000001,  
+            42.60214472222222  
+        ],  
+        "type": "Point"  
+    },  
+    "name": "Carril bici - Avenida del Mediterr\u00e1neo",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### BikeLane NGSI-LD normalizado Ejemplo  
 Este es un ejemplo de un carril bici en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:BikeLane:BikeLane-AveMed-Benidorm-123456",  
-  "type": "BikeLanes",  
-  "dateCreated": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2021-02-20T06:45:00Z"  
+    "id": "urn:ngsi-ld:BikeLane:BikeLane-AveMed-Benidorm-123456",  
+    "type": "BikeLanes",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "streetAddress": "37 Avenida del Mediterr\u00e1neo",  
+            "addressLocality": "Benidorm",  
+            "addressRegion": "Valencia",  
+            "addressCountry": "ES",  
+            "postalCode": "",  
+            "postOfficeBoxNumber": "",  
+            "areaServed": ""  
+        }  
+    },  
+    "alternateName": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "areaServed": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "dataProvider": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "dateCreated": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-02-20T06:45:00Z"  
+        }  
+    },  
+    "dateModified": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-02-20T06:45:00Z"  
+        }  
+    },  
+    "dateObserved": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-02-20T06:45:00Z"  
+        }  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Informaci\u00f3n del carril bici"  
+    },  
+    "laneLength": {  
+        "type": "Property",  
+        "value": 150  
+    },  
+    "laneOccupancy": {  
+        "type": "Property",  
+        "value": 7  
+    },  
+    "laneWidth": {  
+        "type": "Property",  
+        "value": 2  
+    },  
+    "location": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -8.768460000000001,  
+                42.60214472222222  
+            ]  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Carril bici - Avenida del Mediterr\u00e1neo"  
+    },  
+    "owner": {  
+        "type": "Property",  
+        "value": [  
+            "urn:ngsi-ld:BikeLanes:items:DFIF:70960066",  
+            "urn:ngsi-ld:BikeLanes:items:VPLZ:20892051"  
+        ]  
+    },  
+    "seeAlso": {  
+        "type": "Property",  
+        "value": [  
+            "urn:ngsi-ld:BikeLanes:items:VZIJ:73053519",  
+            "urn:ngsi-ld:BikeLanes:items:LZML:32924944"  
+        ]  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": ""  
     }  
-  },  
-  "dateModified": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2021-02-20T06:45:00Z"  
-    }  
-  },  
-  "source": {  
-    "type": "Property",  
-    "value": ""  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Carril bici - Avenida del Mediterráneo"  
-  },  
-  "alternateName": {  
-    "type": "Property",  
-    "value": ""  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Información del carril bici"  
-  },  
-  "dataProvider": {  
-    "type": "Property",  
-    "value": ""  
-  },  
-  "owner": {  
-    "type": "Property",  
-    "value": [  
-      "urn:ngsi-ld:BikeLanes:items:DFIF:70960066",  
-      "urn:ngsi-ld:BikeLanes:items:VPLZ:20892051"  
-    ]  
-  },  
-  "seeAlso": {  
-    "type": "Property",  
-    "value": [  
-      "urn:ngsi-ld:BikeLanes:items:VZIJ:73053519",  
-      "urn:ngsi-ld:BikeLanes:items:LZML:32924944"  
-    ]  
-  },  
-  "location": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -8.768460000000001,  
-      42.60214472222222  
-      ]  
-    }  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "streetAddress": "37 Avenida del Mediterráneo",  
-      "addressLocality": "Benidorm",  
-      "addressRegion": "Valencia",  
-      "addressCountry": "ES",  
-      "postalCode": "",  
-      "postOfficeBoxNumber": "",  
-      "areaServed": ""  
-    }  
-  },  
-  "areaServed": {  
-    "type": "Property",  
-    "value": ""  
-  },  
-  "laneOccupancy": {  
-    "type": "Property",  
-    "value": 7  
-  },  
-  "laneLength": {  
-    "type": "Property",  
-    "value": 150  
-  },  
-  "laneWidth": {  
-    "type": "Property",  
-    "value": 2  
-  },  
-  "dateObserved": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2021-02-20T06:45:00Z"  
-    }  
-  }  
 }  
 ```  
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
