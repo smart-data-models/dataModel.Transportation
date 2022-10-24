@@ -1,18 +1,33 @@
-Entità: TrafficFlowObserved  
-===========================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entità: TrafficFlowObserved  
+===========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.Transportation/blob/master/TrafficFlowObserved/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descrizione globale: **Un'osservazione delle condizioni del flusso di traffico in un certo luogo e momento.**  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+Descrizione globale: **Un'osservazione delle condizioni del flusso di traffico in un determinato luogo e momento.**  
+versione: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Elenco delle proprietà  
 
-- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito un servizio o un articolo offerto  - `averageGapDistance`: Distanza media tra veicoli consecutivi  - `averageHeadwayTime`: Tempo medio di percorrenza. Il tempo di percorrenza è il tempo trascorso tra due veicoli consecutivi  - `averageVehicleLength`: Lunghezza media dei veicoli in transito durante  
-    il periodo di osservazione  - `averageVehicleSpeed`: Velocità media dei veicoli in transito durante il periodo di osservazione  - `congested`:  Segnala se c'è stata una congestione del traffico durante il periodo di osservazione nella corsia indicata. L'assenza di questo attributo significa nessuna congestione del traffico  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateObserved`: La data e l'ora di questa osservazione nel formato ISO8601 UTC. Può essere rappresentato da un istante di tempo specifico o da un intervallo ISO8601. Come workaround per la mancanza di supporto di Orion Context Broker per gli intervalli datetime, si possono usare due attributi separati: `dateObservedFrom`, `dateObservedTo`. [DateTime](https://schema.org/DateTime) o un intervallo ISO8601 rappresentato come [Text](https://schema.org/Text)  - `dateObservedFrom`: Data e ora di inizio del periodo di osservazione. Vedere `dateObserved`.  - `dateObservedTo`: Data e ora di fine del periodo di osservazione. Vedere `dateObserved`.  - `description`: Una descrizione di questo articolo  - `id`: Identificatore unico dell'entità  - `intensity`: Numero totale di veicoli rilevati durante questo periodo di osservazione  - `laneDirection`: Direzione di marcia abituale nella corsia cui si riferisce questa osservazione. Questo attributo è utile quando l'osservazione non fa riferimento ad alcun segmento stradale, permettendo di conoscere il senso di marcia del flusso di traffico osservato. Enum:avanti, indietro". Vedere RoadSegment per una descrizione della semantica di questi valori.  - `laneId`: Identificatore di corsia. L'identificazione della corsia è fatta usando le convenzioni definite dall'entità RoadSegment che sono basate su [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Forward_%26_backward,_left_%26_right).  - `location`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: Il nome di questo articolo.  - `occupancy`: Frazione del tempo di osservazione in cui un veicolo ha occupato la corsia osservata  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `refRoadSegment`: Segmento stradale interessato su cui è stata fatta l'osservazione. Riferimento a un'entità di tipo RoadSegment  - `reversedLane`: Segnala se il traffico nella corsia è stato invertito durante il periodo di osservazione. L'assenza di questo attributo significa nessuna inversione di corsia  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `type`: Tipo di entità NGSI. Deve essere TrafficFlowObserved  - `vehicleSubType`: Permette di specificare un sottotipo di `vehicleType`, per esempio se il `vehicleType` è impostato su `Lorry` il `vehicleSubType` può essere `OGV1` o `OGV2` per trasmettere più informazioni sul tipo esatto di veicolo.  - `vehicleType`: Tipo di veicolo dal punto di vista delle sue caratteristiche strutturali. Enum:'agriculturalVehicle, bicycle, bus, minibus, car, caravan, tram, tanker, carWithCaravan, carWithTrailer, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, trailer, van, constructionOrMaintenanceVehicle, trolley, binTrolley, sweepingMachine, cleaningTrolley'    
+<sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
+- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `averageGapDistance[number]`: Distanza media tra veicoli consecutivi  . Model: [https://schema.org/Number](https://schema.org/Number)- `averageHeadwayTime[number]`: Tempo medio di percorrenza. Il tempo di percorrenza è il tempo trascorso tra due veicoli consecutivi.  . Model: [https://schema.org/Number](https://schema.org/Number)- `averageVehicleLength[number]`: Lunghezza media dei veicoli in transito durante  
+    il periodo di osservazione  . Model: [https://schema.org/Number](https://schema.org/Number)- `averageVehicleSpeed[number]`: Velocità media dei veicoli in transito durante il periodo di osservazione  . Model: [https://schema.org/Number](https://schema.org/Number)- `congested[boolean]`:  Indica se durante il periodo di osservazione si è verificata una congestione del traffico nella corsia di riferimento. L'assenza di questo attributo significa che non c'è stata alcuna congestione del traffico.  . Model: [https://schema.org/Boolean.](https://schema.org/Boolean.)- `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated[string]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified[string]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateObserved[string]`: La data e l'ora di questa osservazione nel formato ISO8601 UTC. Può essere rappresentata da un istante temporale specifico o da un intervallo ISO8601. Come soluzione per la mancanza di supporto di Orion Context Broker per gli intervalli di tempo, si possono usare due attributi separati: `dateObservedFrom`, `dateObservedTo`. [DateTime](https://schema.org/DateTime) o un intervallo ISO8601 rappresentato come [Text](https://schema.org/Text)  . Model: [https://schema.org/DateTime.](https://schema.org/DateTime.)- `dateObservedFrom[string]`: Data e ora di inizio del periodo di osservazione. Vedere `dataOsservata`.  . Model: [https://schema.org/Datetime.](https://schema.org/Datetime.)- `dateObservedTo[string]`: Data e ora di fine del periodo di osservazione. Vedere `dataOsservata`.  . Model: [https://schema.org/Datetime.](https://schema.org/Datetime.)- `description[string]`: Descrizione dell'articolo  - `id[*]`: Identificatore univoco dell'entità  - `intensity[number]`: Numero totale di veicoli rilevati durante il periodo di osservazione  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `laneDirection[string]`: Direzione di marcia abituale nella corsia a cui si riferisce l'osservazione. Questo attributo è utile quando l'osservazione non si riferisce ad alcun segmento stradale, consentendo di conoscere la direzione di marcia del flusso di traffico osservato. Enum:avanti, indietro". Vedere RoadSegment per una descrizione della semantica di questi valori.  . Model: [https://schema.org/Text](https://schema.org/Text)- `laneId[integer]`: Identificatore di corsia. L'identificazione della corsia viene effettuata utilizzando le convenzioni definite dall'entità RoadSegment, basate su [OpenStreetMap] (http://wiki.openstreetmap.org/wiki/Forward_%26_backward,_left_%26_right).  . Model: [https://schema.org/Number](https://schema.org/Number)- `location[*]`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name[string]`: Il nome di questo elemento.  - `occupancy[number]`: Frazione del tempo di osservazione in cui un veicolo ha occupato la corsia osservata  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `refRoadSegment[string]`: Segmento stradale interessato su cui è stata effettuata l'osservazione. Riferimento a un'entità di tipo RoadSegment (segmento stradale)  . Model: [https://schema.org/URL](https://schema.org/URL)- `reversedLane[boolean]`: Indica se il traffico sulla corsia è stato invertito durante il periodo di osservazione. L'assenza di questo attributo significa che non c'è stata inversione di corsia.  . Model: [https://schema.org/Boolean.](https://schema.org/Boolean.)- `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type[string]`: Tipo di entità NGSI. Deve essere TrafficFlowObserved  - `vehicleSubType[string]`: Consente di specificare un sottotipo di `VehicleType`, ad esempio se `vehicleType` è impostato su `Lorry` il `vehicleSubType` può essere `OGV1` o `OGV2` per fornire ulteriori informazioni sul tipo esatto di veicolo.  - `vehicleType[string]`: Tipo di veicolo dal punto di vista delle caratteristiche strutturali. Enum:'veicolo agricolo, bicicletta, autobus, minibus, auto, roulotte, tram, autocisterna, auto con roulotte, auto con rimorchio, autocarro, ciclomotore, motocicletta, motocicletta con auto laterale, motoscooter, rimorchio, furgone, veicolo da costruzione o manutenzione, carrello, carrello portarifiuti, macchina spazzatrice, carrello di pulizia'.  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Proprietà richieste  
-- `dateObserved`  - `id`  - `type`    
+- `dateObserved`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Questa entità è principalmente associata ai segmenti verticali Automotive e Smart City e alle relative applicazioni IoT.  
-## Descrizione del modello di dati delle proprietà  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 TrafficFlowObserved:    
@@ -430,9 +445,14 @@ TrafficFlowObserved:
   x-version: 0.0.1    
 ```  
 </details>    
-## Esempio di payloads  
-#### TrafficFlowObserved NGSI-v2 valori chiave Esempio  
-Ecco un esempio di un TrafficFlowObserved in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
+## Esempi di payload  
+#### Valori chiave di TrafficFlowObserved NGSI-v2 Esempio  
+Ecco un esempio di TrafficFlowObserved in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "TrafficFlowObserved-Valladolid-osm-60821110",  
@@ -463,8 +483,10 @@ TrafficFlowObserved:
   "laneDirection": "forward"  
 }  
 ```  
-#### TrafficFlowObserved NGSI-v2 normalizzato Esempio  
-Ecco un esempio di un TrafficFlowObserved in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+</details>  
+#### TrafficoFlussoOsservato NGSI-v2 normalizzato Esempio  
+Ecco un esempio di TrafficFlowObserved in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "TrafficFlowObserved-Valladolid-osm-60821110",  
@@ -525,147 +547,159 @@ TrafficFlowObserved:
   }  
 }  
 ```  
-#### TrafficFlowObserved NGSI-LD valori-chiave Esempio  
-Ecco un esempio di un TrafficFlowObserved in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+</details>  
+#### Valori chiave NGSI-LD di TrafficFlowObserved Esempio  
+Ecco un esempio di TrafficFlowObserved in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:TrafficFlowObserved:TrafficFlowObserved-Valladolid-osm-60821110",  
-  "type": "TrafficFlowObserved",  
-  "dateObserved": {  
-    "type": "Property",  
-    "value": "2016-12-07T11:10:00/2016-12-07T11:15:00"  
-  },  
-  "laneDirection": {  
-    "type": "Property",  
-    "value": "forward"  
-  },  
-  "dateObservedFrom": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-12-07T11:10:00Z"  
-    }  
-  },  
-  "averageVehicleLength": {  
-    "type": "Property",  
-    "value": 9.87  
-  },  
-  "averageHeadwayTime": {  
-    "type": "Property",  
-    "value": 0.5  
-  },  
-  "occupancy": {  
-    "type": "Property",  
-    "value": 0.76  
-  },  
-  "reversedLane": {  
-    "type": "Property",  
-    "value": false  
-  },  
-  "dateObservedTo": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-12-07T11:15:00Z"  
-    }  
-  },  
-  "intensity": {  
-    "type": "Property",  
-    "value": 197  
-  },  
-  "laneId": {  
-    "type": "Property",  
-    "value": 1  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "LineString",  
-      "coordinates": [  
-        [  
-          -4.73735395519672,  
-          41.6538181849672  
-        ],  
-        [  
-          -4.73414858659993,  
-          41.6600594193478  
-        ],  
-        [  
-          -4.73447575302641,  
-          41.659585195093  
-        ]  
-      ]  
-    }  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressLocality": "Valladolid",  
-      "addressCountry": "ES",  
-      "streetAddress": "Avenida de Salamanca",  
-      "type": "PostalAddress"  
-    }  
-  },  
-  "averageVehicleSpeed": {  
-    "type": "Property",  
-    "value": 52.6  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:TrafficFlowObserved:TrafficFlowObserved-Valladolid-osm-60821110",  
+    "type": "TrafficFlowObserved",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressLocality": "Valladolid",  
+            "addressCountry": "ES",  
+            "streetAddress": "Avenida de Salamanca",  
+            "type": "PostalAddress"  
+        }  
+    },  
+    "averageHeadwayTime": {  
+        "type": "Property",  
+        "value": 0.5  
+    },  
+    "averageVehicleLength": {  
+        "type": "Property",  
+        "value": 9.87  
+    },  
+    "averageVehicleSpeed": {  
+        "type": "Property",  
+        "value": 52.6  
+    },  
+    "dateObserved": {  
+        "type": "Property",  
+        "value": "2016-12-07T11:10:00/2016-12-07T11:15:00"  
+    },  
+    "dateObservedFrom": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-12-07T11:10:00Z"  
+        }  
+    },  
+    "dateObservedTo": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-12-07T11:15:00Z"  
+        }  
+    },  
+    "intensity": {  
+        "type": "Property",  
+        "value": 197  
+    },  
+    "laneDirection": {  
+        "type": "Property",  
+        "value": "forward"  
+    },  
+    "laneId": {  
+        "type": "Property",  
+        "value": 1  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "LineString",  
+            "coordinates": [  
+                [  
+                    -4.73735395519672,  
+                    41.6538181849672  
+                ],  
+                [  
+                    -4.73414858659993,  
+                    41.6600594193478  
+                ],  
+                [  
+                    -4.73447575302641,  
+                    41.659585195093  
+                ]  
+            ]  
+        }  
+    },  
+    "occupancy": {  
+        "type": "Property",  
+        "value": 0.76  
+    },  
+    "reversedLane": {  
+        "type": "Property",  
+        "value": false  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### TrafficFlowObserved NGSI-LD normalizzato Esempio  
-Ecco un esempio di un TrafficFlowObserved in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+</details>  
+#### TrafficoFlussoOsservato NGSI-LD normalizzato Esempio  
+Ecco un esempio di TrafficFlowObserved in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "address": {  
-    "addressCountry": "ES",  
-    "addressLocality": "Valladolid",  
-    "streetAddress": "Avenida de Salamanca",  
-    "type": "PostalAddress"  
-  },  
-  "averageHeadwayTime": 0.5,  
-  "averageVehicleLength": 9.87,  
-  "averageVehicleSpeed": 52.6,  
-  "dateObserved": "2016-12-07T11:10:00/2016-12-07T11:15:00",  
-  "dateObservedFrom": {  
-    "@type": "DateTime",  
-    "@value": "2016-12-07T11:10:00Z"  
-  },  
-  "dateObservedTo": {  
-    "@type": "DateTime",  
-    "@value": "2016-12-07T11:15:00Z"  
-  },  
-  "id": "urn:ngsi-ld:TrafficFlowObserved:TrafficFlowObserved-Valladolid-osm-60821110",  
-  "intensity": 197,  
-  "laneDirection": "forward",  
-  "laneId": 1,  
-  "location": {  
-    "coordinates": [  
-      [  
-        -4.73735395519672,  
-        41.6538181849672  
-      ],  
-      [  
-        -4.73414858659993,  
-        41.6600594193478  
-      ],  
-      [  
-        -4.73447575302641,  
-        41.659585195093  
-      ]  
-    ],  
-    "type": "LineString"  
-  },  
-  "occupancy": 0.76,  
-  "reversedLane": false,  
-  "type": "TrafficFlowObserved"  
+    "id": "urn:ngsi-ld:TrafficFlowObserved:TrafficFlowObserved-Valladolid-osm-60821110",  
+    "type": "TrafficFlowObserved",  
+    "address": {  
+        "addressCountry": "ES",  
+        "addressLocality": "Valladolid",  
+        "streetAddress": "Avenida de Salamanca",  
+        "type": "PostalAddress"  
+    },  
+    "averageHeadwayTime": 0.5,  
+    "averageVehicleLength": 9.87,  
+    "averageVehicleSpeed": 52.6,  
+    "dateObserved": "2016-12-07T11:10:00/2016-12-07T11:15:00",  
+    "dateObservedFrom": {  
+        "@type": "DateTime",  
+        "@value": "2016-12-07T11:10:00Z"  
+    },  
+    "dateObservedTo": {  
+        "@type": "DateTime",  
+        "@value": "2016-12-07T11:15:00Z"  
+    },  
+    "intensity": 197,  
+    "laneDirection": "forward",  
+    "laneId": 1,  
+    "location": {  
+        "coordinates": [  
+            [  
+                -4.73735395519672,  
+                41.6538181849672  
+            ],  
+            [  
+                -4.73414858659993,  
+                41.6600594193478  
+            ],  
+            [  
+                -4.73447575302641,  
+                41.659585195093  
+            ]  
+        ],  
+        "type": "LineString"  
+    },  
+    "occupancy": 0.76,  
+    "reversedLane": false,  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
