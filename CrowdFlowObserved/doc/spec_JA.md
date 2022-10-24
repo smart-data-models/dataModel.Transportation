@@ -1,20 +1,33 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 エンティティCrowdFlowObserved  
-=======================  
+=======================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Transportation/blob/master/CrowdFlowObserved/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 グローバルな記述です。**CrowdFlowObserved** (クラウドフロー観察)  
 バージョン: 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `averageCrowdSpeed`: 観測期間中の群衆の平均通過速度  - `averageHeadwayTime`: 平均ヘッドウェイ時間。ヘッドウェイ時間とは  
-    連続した2人の間に経過した時間  - `congested`: 参照された通路で、観測期間中に混雑があったかどうかを示すフラグ。この属性がない場合は、混雑がないことを意味する。  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateObserved`: ISO8601 UTCフォーマットでのこの観測の日付と時間。これは、特定の時間の瞬間かISO8601の間隔で表すことができます。Orion Context Broker が日時の間隔をサポートしていないことに対する回避策として、2つの別々の属性を使用することができます。dateObservedFrom`, `dateObservedTo` の2つの属性を使用することができる。  - `dateObservedFrom`: 観測期間の開始日時。dateObserved` を参照してください。  - `dateObservedTo`: 観測期間の終了日時。dateObserved` を参照してください。  - `description`: このアイテムの説明  - `direction`: この観測で参照される歩道の、市街地に対する通常の進行方向。列挙:'インバウンド、アウトバウンド'  - `id`: エンティティの一意な識別子  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `occupancy`: 観測された通路に人がいた観測時間の割合  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `peopleCount`: この観測で検出された人の総数。  - `refRoadSegment`: 観測された該当道路区間  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI Entityの種類。CrowdFlowObservedでなければならない。    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `averageCrowdSpeed[number]`: 観測期間中の群衆の平均通過速度  . Model: [https://schema.org/Number](https://schema.org/Number)- `averageHeadwayTime[number]`: 平均ヘッドウェイ時間。ヘッドウェイ時間とは  
+    連続した2人の間に経過した時間  . Model: [https://schema.org/Number](https://schema.org/Number)- `congested[boolean]`: 参照された通路で、観測期間中に混雑があったかどうかを示すフラグ。この属性がない場合は、混雑がないことを意味する。  . Model: [https://schema.org/Boolean.](https://schema.org/Boolean.)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateObserved[string]`: ISO8601 UTCフォーマットでのこの観測の日付と時間。これは、特定の時間の瞬間か、ISO8601の間隔で表すことができます。Orion Context Broker が日時の間隔をサポートしていないことに対する回避策として、2つの別々の属性を使用することができます。dateObservedFrom`, `dateObservedTo` の2つの属性を使用することができる。  . Model: [https://schema.org/URL.](https://schema.org/URL.)- `dateObservedFrom[string]`: 観測期間の開始日時。dateObserved` を参照してください。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateObservedTo[string]`: 観測期間の終了日時。dateObserved` を参照してください。  . Model: [https://schema.org/DateTime.](https://schema.org/DateTime.)- `description[string]`: このアイテムの説明  - `direction[string]`: この観測で参照される歩道の、市街地に対する通常の進行方向。列挙:'インバウンド、アウトバウンド'  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: エンティティの一意な識別子  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `occupancy[number]`: 観測された通路に人がいた観測時間の割合  . Model: [https://schema.org/Number)](https://schema.org/Number))- `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `peopleCount[integer]`: この観測で検出された人の総数。  - `refRoadSegment[*]`: 観測された該当道路区間  . Model: [https://schema.org/URL.](https://schema.org/URL.)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: NGSI Entityの種類。CrowdFlowObservedでなければならない。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `dateObserved`  - `id`  - `type`    
+- `dateObserved`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 ある場所と時間における人の動きに関連した観察。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 CrowdFlowObserved:    
@@ -375,9 +388,14 @@ CrowdFlowObserved:
   x-version: 0.0.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### CrowdFlowで観測されたNGSI-v2鍵の値 例  
 CrowdFlowObservedをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返されます。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
@@ -399,8 +417,10 @@ CrowdFlowObserved:
   }  
 }  
 ```  
+</details>  
 #### CrowdFlowObserved NGSI-v2 正規化例  
 CrowdFlowObservedをJSON-LD形式で正規化した例です。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
@@ -441,8 +461,10 @@ CrowdFlowObserved:
   }  
 }  
 ```  
+</details>  
 #### CrowdFlowで観測されたNGSI-LDのキー値の例  
 CrowdFlowObservedをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータが返されます。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
@@ -507,8 +529,10 @@ CrowdFlowObserved:
     ]  
 }  
 ```  
+</details>  
 #### CrowdFlowObserved NGSI-LD 正規化例  
 CrowdFlowObservedをJSON-LD形式で正規化した例です。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
@@ -544,8 +568,17 @@ CrowdFlowObserved:
     },  
     "peopleCount": 100,  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
