@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 エンティティ道路セグメント  
-=============  
+=============<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Transportation/blob/master/RoadSegment/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 グローバルな記述。**このエンティティは、道路セグメントの調和された地理的および文脈的な記述を含む。道路セグメントの集合体は、道路を記述するために使用される。  
 バージョン: 0.4.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `address`: 郵送先住所  - `agency_name`: agency_name フィールドには、対象となるエンティティの保守に責任を持つ機関または組織のフルネー ムが含まれる。SameAs:GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)の 'agency_name' フィールド。  - `allowedVehicleType`: この道路セグメントを通過することができる車両タイプ（複数可）。Enum:'agriculturalVehicle, bicycle, bus, car, caravan, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, trailer, van, anyVehicle'（農業車両）.許容される値。VehicleTypeEnum_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/) で定義される以下の値。  - `alternateName`: この項目の別称  - `annotations`: アイテムに関するアノテーション  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `bridgeCount`: この観測に対応する道路セグメント内の橋の数。道路セグメントに橋がない場合は0を取る。  - `carriagewayLength`: この観測に対応する道路セグメントの車路の総延長。  - `carriagewayWidth`: この観測に対応する道路セグメントの車道幅の合計。  - `category`: 道路セグメントの特別な特性を伝えることができるようになります。Enum:'oneway, toll, link'.  一方通行`:道路セグメントが一方向にしか使えないかどうかを示すフラグ。このフラグがない場合、道路セグメントは両方向(前後方向)に使用できることを意味する。http://wiki.openstreetmap.org/wiki/Key:oneway](http://wiki.openstreetmap.org/wiki/Key:oneway) も参照してください。toll` : 道路セグメントが有料であるかどうかのフラグ。link` : この道路セグメントが、道路から出たり入ったりするための補助リンクセグメントであるかどうかのフラグです。https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link) を参照。その他、アプリケーションにとって意味のある任意の値。  - `color`: 製品の色  - `culvertCount`: この観測に対応する道路のトレースで普及しているカルバートの数。  - `cyclePathLeftHeight`: この観測に対応する道路左端の自転車道の高さ。  - `cyclePathLeftWidth`: この観測に対応する道路左端の自転車道の幅。  - `cyclePathMaterial`: この観測に対応する道路脇のサイクリングロード敷設に使用した建設資材。  - `cyclePathPlacement`: この観測に対応する道路セグメントに沿ったサイクルトラックの配置を記述する。Enum:' ['RIGHT, LEFT, BOTH, NOT_AVAILABLE' ]。  - `cyclePathRightHeight`: この観測に対応する道路右端の自転車道の高さ。  - `cyclePathRightWidth`: この観測に対応する道路右端の自転車道の幅。  - `dataDescriptor`: データ記述子実体を指すURI  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `endKilometer`: この道路セグメントが終了するキロメートル番号（道路の起点から計測）。  - `endPoint`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `id`: エンティティの一意な識別子  - `image`: アイテムの画像  - `laneInfo`: この観測に対応する道路の車線の様相を記述する。  - `laneUsage`: この属性は、各車線を説明する特定のパラメータを伝えるために使用される。道路セグメントのレーンごとに文字列を含む必要がある。配列の要素 0 には車線 1 の情報を格納し、以下同様とする。参照する文字列の形式は以下の通り。<lane_direction>, <lane_minimumAllowedSpeed>, <lane_maximumAllowedSpeed>, <lane_maximumAllowedHeight>, <lane_maximumAllowedWeight> とする。<lane_direction> はテキスト文字列で、以下の値が使用可能です。forward`.このレーンは現在 `forwards` 方向で使用されています．backward`.レーンは現在 `backwards` 方向に使用されています．必須パラメータは `lane_direction` のみである．指定がない場合、残りのパラメータはエンティティレベルで指定されたものと同じであるとみなすことができる。  - `length`: この道路セグメントの総延長（キロメートル）。  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `maximumAllowedHeight`: この道路区間を通過する車両の最大許容高さ  - `maximumAllowedSpeed`: 道路区間を通行することができる最高速度。特定の車種（トラック、キャラバンなど）には、より厳しい制限が適用される場合がある。  - `maximumAllowedWeight`: この道路区間を通過する車両の最大許容重量  - `maximumAllowedWidth`: この観測に対応するエンティティを使用する車両の最大許容幅。  - `medianHeight`: この観測に対応する道路の中央分離帯または中央保留地の高さ。  - `medianLength`: この観測に対応する道路の中央分離帯または中央保留地の長さ。  - `medianWidth`: この観測に対応する道路の中央分離帯または中央保留地の幅。  - `minimumAllowedSpeed`: この道路区間を通過する際の最低許容速度  - `municipalityInfo`: この観測に対応する市町村情報。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `pedestrianPathLeftHeight`: この観測に対応する道路の左端に設置された歩道の高さ。  - `pedestrianPathLeftWidth`: この観測に対応する道路の左端に設置された歩道の幅。  - `pedestrianPathMaterial`: この観測に対応する道路脇の歩道／歩道敷設に使用された建設資材。  - `pedestrianPathPlacement`: この観測に対応する道路セグメントに沿って、歩行者の存在と配置を記述する。Enum:'RIGHT, LEFT, BOTH, NOT_AVAILABLE' とする。  - `pedestrianPathRightHeight`: この観測に対応する道路の右端に置かれた歩道の高さ。  - `pedestrianPathRightWidth`: この観測に対応する道路の右端に設置された歩道の幅。  - `refRoad`: この道路セグメントが属する道路。  - `rightOfWayWidth`: Right of Way (RoW) は、道路に利用できる土地の総面積である。その幅は、道路の線形に沿って、馬車道、その他の必需品、将来の拡張を収容する。  - `roadClass`: この観測に対応する道路のタイプ。Enum: [OTHER_PUBLIC_ROAD, PRIVATE_ROAD, MINOR_CITY_ROAD, MAJOR_DISTRICT_ROAD, MAJOR_CITY_ROAD, NATIONAL_HIGHWAY, SERVICE_ROAD, STATE_HIGHWAY, OTHER_DISTRICT_ROAD, PORT_ROAD] とする。  - `roadDirection`: 道路が向かっている方向を表す。Enum:' ['N, S, E, W''。値N,S,E,WはそれぞれNorth,South,East,Westを表す。  - `roadId`: この観測に対応する道路の一意な内部表現。  - `roadMaterial`: この観測に対応する車道敷設に使用された建設材料。例：コンクリート、土、タールなど。  - `roadName`: この観測に対応する道路の名前。  - `roadWork`: 緊急に介入する場合の道路工事の理由。これらの値の組み合わせ。Enum:'COLLAPSE, DERAILMENT, FIRE, FLOOD, GASLEAK, LANDSLIDE, OTHER, POWERCUT, ROCKFALL, SAGGING, WATERLEAK'.とする。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `startKilometer`: この道路セグメントの始点となるキロメートル番号（道路の始点から計測）。  - `startPoint`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `status`: 道路セグメントの特定の運転状況。追加情報には、statusDescription を使用する。Enum: 'open, closed, limited'.  open`: 道路セグメントは意図した容量で使用できる。`closed`: 道路工事、橋や鍵が開いている、または他のイベントにより通行ができないため、通行できない。限定された`：通行は可能だが、完全な通行はできない。  - `statusDescription`: status 属性への追加情報。  - `totalCyclePathWidth`: この観測に対応する道路に存在する自転車道の幅の合計。  - `totalLaneNumber`: この道路セグメントが提供する総車線数  - `totalPedestrianPathLength`: この観測に対応する道路に存在する歩道の長さの合計。  - `totalPedestrianPathWidth`: この観測に対応する道路に存在する歩道の幅の合計。  - `type`: NGSI Entity タイプ。これはRoadSegmentでなければならない。  - `width`: 道路の区間幅。    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `agency_name[string]`: agency_name フィールドには、対象となるエンティティの保守に責任を持つ機関または組織のフルネー ムが含まれる。SameAs:GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)の 'agency_name' フィールド。  - `allowedVehicleType[array]`: この道路セグメントを通過することができる車両タイプ（複数可）。Enum:'agriculturalVehicle, bicycle, bus, car, caravan, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, trailer, van, anyVehicle'（農業車両）.許容される値。VehicleTypeEnum_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/) で定義される以下の値。  . Model: [https://schema.org/Text](https://schema.org/Text)- `alternateName[string]`: この項目の別称  - `annotations[array]`: アイテムに関するアノテーション  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `bridgeCount[number]`: この観測に対応する道路セグメント内の橋の数。道路セグメントに橋がない場合は0を取る。  - `carriagewayLength[number]`: この観測に対応する道路セグメントの車路の総延長。  - `carriagewayWidth[number]`: この観測に対応する道路セグメントの車道幅の合計。  - `category[array]`: 道路セグメントの特別な特性を伝えることができるようになります。Enum:'oneway, toll, link'.  一方通行`:道路セグメントが一方向にしか使えないかどうかを示すフラグ。このフラグがない場合、道路セグメントは両方向(前後方向)に使用できることを意味する。http://wiki.openstreetmap.org/wiki/Key:oneway](http://wiki.openstreetmap.org/wiki/Key:oneway) も参照してください。toll` : 道路セグメントが有料であるかどうかのフラグ。link` : この道路セグメントが、道路から出たり入ったりするための補助リンクセグメントであるかどうかのフラグです。https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link) を参照。その他、アプリケーションにとって意味のある任意の値。  . Model: [https://schema.org/Text](https://schema.org/Text)- `color[string]`: 製品の色  . Model: [https://schema.org/color](https://schema.org/color)- `culvertCount[number]`: この観測に対応する道路のトレースで普及しているカルバートの数。  - `cyclePathLeftHeight[number]`: この観測に対応する道路左端の自転車道の高さ。  - `cyclePathLeftWidth[number]`: この観測に対応する道路左端の自転車道の幅。  - `cyclePathMaterial[string]`: この観測に対応する道路脇のサイクリングロード敷設に使用した建設資材。  - `cyclePathPlacement[string]`: この観測に対応する道路セグメントに沿ったサイクルトラックの配置を記述する。Enum:' ['RIGHT, LEFT, BOTH, NOT_AVAILABLE' ]。  - `cyclePathRightHeight[number]`: この観測に対応する道路右端の自転車道の高さ。  - `cyclePathRightWidth[number]`: この観測に対応する道路右端の自転車道の幅。  - `dataDescriptor[*]`: データ記述子実体を指すURI  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `endKilometer[number]`: この道路セグメントが終了するキロメートル番号（道路の起点から計測）。  . Model: [https://schema.org/Number](https://schema.org/Number)- `endPoint[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `id[*]`: エンティティの一意な識別子  - `image[string]`: アイテムの画像  . Model: [https://schema.org/URL](https://schema.org/URL)- `laneInfo[object]`: この観測に対応する道路の車線の様相を記述する。  - `laneUsage[array]`: この属性は、各車線を説明する特定のパラメータを伝えるために使用される。道路セグメントのレーンごとに文字列を含む必要がある。配列の要素 0 には車線 1 の情報を格納し、以下同様とする。参照する文字列の形式は以下の通り。<lane_direction>, <lane_minimumAllowedSpeed>, <lane_maximumAllowedSpeed>, <lane_maximumAllowedHeight>, <lane_maximumAllowedWeight> とする。<lane_direction> はテキスト文字列で、以下の値が使用可能です。forward`.このレーンは現在 `forwards` 方向で使用されています．backward`.レーンは現在 `backwards` 方向に使用されています．必須パラメータは `lane_direction` のみである．指定がない場合、残りのパラメータはエンティティレベルで指定されたものと同じであるとみなすことができる。  . Model: [https://schema.org/Text](https://schema.org/Text)- `length[number]`: この道路セグメントの総延長（キロメートル）。  . Model: [https://schema.org/length](https://schema.org/length)- `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `maximumAllowedHeight[number]`: この道路区間を通過する車両の最大許容高さ  . Model: [https://schema.org/height](https://schema.org/height)- `maximumAllowedSpeed[number]`: 道路区間を通行することができる最高速度。特定の車種（トラック、キャラバンなど）には、より厳しい制限が適用される場合がある。  . Model: [https://schema.org/Number](https://schema.org/Number)- `maximumAllowedWeight[number]`: この道路区間を通過する車両の最大許容重量  . Model: [https://schema.org/weight](https://schema.org/weight)- `maximumAllowedWidth[number]`: この観測に対応するエンティティを使用する車両の最大許容幅。  - `medianHeight[number]`: この観測に対応する道路の中央分離帯または中央保留地の高さ。  - `medianLength[number]`: この観測に対応する道路の中央分離帯または中央保留地の長さ。  - `medianWidth[number]`: この観測に対応する道路の中央分離帯または中央保留地の幅。  - `minimumAllowedSpeed[number]`: この道路区間を通過する際の最低許容速度  . Model: [https://schema.org/Number](https://schema.org/Number)- `municipalityInfo[object]`: この観測に対応する自治体情報。  . Model: [https://schema.org/Text](https://schema.org/Text)- `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `pedestrianPathLeftHeight[number]`: この観測に対応する道路の左端に設置された歩道の高さ。  - `pedestrianPathLeftWidth[number]`: この観測に対応する道路の左端に設置された歩道の幅。  - `pedestrianPathMaterial[string]`: この観測に対応する道路脇の歩道／歩道敷設に使用された建設資材。  - `pedestrianPathPlacement[string]`: この観測に対応する道路セグメントに沿って、歩行者の存在と配置を記述する。Enum:'RIGHT, LEFT, BOTH, NOT_AVAILABLE' とする。  - `pedestrianPathRightHeight[number]`: この観測に対応する道路の右端に置かれた歩道の高さ。  - `pedestrianPathRightWidth[number]`: この観測に対応する道路の右端に設置された歩道の幅。  - `refRoad[*]`: この道路セグメントが属する道路。  - `rightOfWayWidth[number]`: Right of Way (RoW) は、道路に利用できる土地の総面積である。その幅は、道路の線形に沿って、馬車道、その他の必需品、将来の拡張を収容する。  - `roadClass[string]`: この観測に対応する道路のタイプ。Enum: [OTHER_PUBLIC_ROAD, PRIVATE_ROAD, MINOR_CITY_ROAD, MAJOR_DISTRICT_ROAD, MAJOR_CITY_ROAD, NATIONAL_HIGHWAY, SERVICE_ROAD, STATE_HIGHWAY, OTHER_DISTRICT_ROAD, PORT_ROAD] とする。  - `roadDirection[string]`: 道路が向かっている方向を表す。Enum:' ['N, S, E, W''。値N,S,E,WはそれぞれNorth,South,East,Westを表す。  - `roadId[string]`: この観測に対応する道路の一意な内部表現。  - `roadMaterial[string]`: この観測に対応する車道敷設に使用された建設材料。例：コンクリート、土、タールなど。  - `roadName[string]`: この観測に対応する道路の名前。  - `roadWork[string]`: 緊急に介入する場合の道路工事の理由。これらの値の組み合わせ。Enum:'COLLAPSE, DERAILMENT, FIRE, FLOOD, GASLEAK, LANDSLIDE, OTHER, POWERCUT, ROCKFALL, SAGGING, WATERLEAK'.とする。  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `startKilometer[number]`: この道路セグメントの始点となるキロメートル番号（道路の始点から計測）。  . Model: [https://schema.org/Number](https://schema.org/Number)- `startPoint[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `status[string]`: 道路セグメントの特定の運転状況。追加情報には、statusDescription を使用する。Enum: 'open, closed, limited'.  open`: 道路セグメントは意図した容量で使用できる。`closed`: 道路工事、橋や鍵が開いている、または他のイベントにより通行ができないため、通行できない。限定された`：通行は可能だが、完全な通行はできない。  - `statusDescription[string]`: status 属性への追加情報。  - `totalCyclePathWidth[number]`: この観測に対応する道路に存在する自転車道の幅の合計。  - `totalLaneNumber[number]`: この道路セグメントが提供する総車線数  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `totalPedestrianPathLength[number]`: この観測に対応する道路に存在する歩道の長さの合計。  - `totalPedestrianPathWidth[number]`: この観測に対応する道路に存在する歩道の幅の合計。  - `type[string]`: NGSI Entity タイプ。これはRoadSegmentでなければならない。  - `width[number]`: 道路の区間幅。  . Model: [https://schema.org/Number](https://schema.org/Number)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `allowedVehicleType`  - `endPoint`  - `id`  - `name`  - `refRoad`  - `startPoint`  - `type`    
+- `allowedVehicleType`  - `endPoint`  - `id`  - `name`  - `refRoad`  - `startPoint`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 道路セグメントには、複数の車線が含まれることがある。このデータモデルでは、異種車線（用途、速度、高さなどが異なる）で構成される道路セグメントを表現することができる。車線は1〜nの整数値で識別され、1番が前方右側の車線となる。前進方向とは、セグメントの始点から終点に向かうベクトルによって示される方向である。これは、OpenStreetMap で使用されているものと同じである。このエンティティは、主に自動車、スマートシティの垂直セグメントと関連するIoTアプリケーションに関連している。このデータモデルは、携帯電話事業者及びGSMAの協力のもとで開発された。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 RoadSegment:    
@@ -733,10 +746,15 @@ RoadSegment:
   x-version: 0.4.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
 また、`laneUsage`プロパティや最大許容パラメータを伝えるプロパティは動的であり、例えば、交通状況を改善するために一時的にレーンの方向を変更することが可能である。  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### RoadSegment NGSI-v2 key-value の例。  
 ここでは、RoadSegmentをJSON-LD形式でkey-valuesとして表現した例を示す。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Spain-RoadSegment-A62-osm-24702186",  
@@ -838,8 +856,10 @@ RoadSegment:
   }  
 }  
 ```  
+</details>  
 #### RoadSegment NGSI-v2 正規化例  
 以下は、RoadSegmentをJSON-LD形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Spain-RoadSegment-A62-osm-24702186",  
@@ -1070,114 +1090,119 @@ RoadSegment:
   }  
 }  
 ```  
+</details>  
 #### RoadSegment NGSI-LD キー値例  
-ここでは、RoadSegmentをJSON-LD形式でkey-valuesにした例を示す。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+ここでは、RoadSegmentをJSON-LD形式でkey-valuesとして表現した例を示す。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-osm-24702186",  
-  "type": "RoadSegment",  
-  "allowedVehicleType": [  
-    "car",  
-    "bus",  
-    "lorry",  
-    "trailer",  
-    "tanker",  
-    "van",  
-    "caravan"  
-  ],  
-  "category": [  
-    "oneway"  
-  ],  
-  "endPoint": {  
-    "coordinates": [  
-      -4.55167335377909,  
-      41.8570461783071  
+    "id": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-osm-24702186",  
+    "type": "RoadSegment",  
+    "allowedVehicleType": [  
+        "car",  
+        "bus",  
+        "lorry",  
+        "trailer",  
+        "tanker",  
+        "van",  
+        "caravan"  
     ],  
-    "type": "Point"  
-  },  
-  "laneUsage": [  
-    "forward",  
-    "forward"  
-  ],  
-  "location": {  
-    "coordinates": [  
-      [  
-        -4.7299180606009,  
-        41.6844918725019  
-      ],  
-      [  
-        -4.72855890957602,  
-        41.6860596957855  
-      ],  
-      [  
-        -4.5520357341647,  
-        41.8569278186523  
-      ],  
-      [  
-        -4.55167335377909,  
-        41.8570461783071  
-      ]  
+    "category": [  
+        "oneway"  
     ],  
-    "type": "LineString"  
-  },  
-  "maximumAllowedSpeed": 120,  
-  "minimumAllowedSpeed": 60,  
-  "name": "Valladolid-DueÃ±as",  
-  "refRoad": "urn:ngsi-ld:Road:Spain-Road-A62",  
-  "source": "http://wwww.openstreetmap.org",  
-  "startPoint": {  
-    "coordinates": [  
-      -4.7299180606009,  
-      41.6844918725019  
+    "endPoint": {  
+        "coordinates": [  
+            -4.55167335377909,  
+            41.8570461783071  
+        ],  
+        "type": "Point"  
+    },  
+    "laneUsage": [  
+        "forward",  
+        "forward"  
     ],  
-    "type": "Point"  
-  },  
-  "totalLaneNumber": 2,  
-  "status": "open",  
-  "statusDescription": "Bridge state = DOWN",  
-  "cyclePathMaterial": "ASPHALT",  
-  "carriagewayLength": 0.095454461114818,  
-  "totalPedestrianPathWidth": 7,  
-  "bridgeCount": 1,  
-  "pedestrianPathLeftHeight": 2,  
-  "maximumAllowedHeight": 72,  
-  "totalPedestrianPathLength": 0.09,  
-  "culvertCount": 0,  
-  "roadName": "GREEN VILLA ROAD TO CHAITHRAM HOUSE",  
-  "roadClass": "OTHER_PUBLIC_ROAD",  
-  "medianHeight": 3.6,  
-  "roadWork": "OTHER",  
-  "roadID": "5272",  
-  "cyclePathRightWidth": 2.5,  
-  "roadMaterial": "TAR",  
-  "medianWidth": 1.5,  
-  "carriagewayWidth": 3,  
-  "cyclePathRightHeight": 1,  
-  "roadDirection": "N",  
-  "medianLength": 0.09,  
-  "pedestrianPathMaterial": "PAVEMENT BLOCK",  
-  "cyclePathLeftWidth": 2.5,  
-  "maximumAllowedWidth": 74,  
-  "rightOfWayWidth": 4,  
-  "cyclePathLeftHeight": 1,  
-  "maximumAllowedWeight": 109,  
-  "pedestrianPathRightWidth": 3.5,  
-  "pedestrianPathLeftWidth": 3.5,  
-  "pedestrianPathPlacement": "NOT_AVAILABLE",  
-  "pedestrianPathRightHeight": 2,  
-  "cyclePathPlacement": "NOT_AVAILABLE",  
-  "totalCyclePathWidth": 5,  
-  "agency_name": "CORPORATION",  
-  "municipalityInfo": {  
-    "ulbName": "KANNUR MUNICIPAL CORPORATION"  
-  },  
-  "@context": [  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "location": {  
+        "coordinates": [  
+            [  
+                -4.7299180606009,  
+                41.6844918725019  
+            ],  
+            [  
+                -4.72855890957602,  
+                41.6860596957855  
+            ],  
+            [  
+                -4.5520357341647,  
+                41.8569278186523  
+            ],  
+            [  
+                -4.55167335377909,  
+                41.8570461783071  
+            ]  
+        ],  
+        "type": "LineString"  
+    },  
+    "maximumAllowedSpeed": 120,  
+    "minimumAllowedSpeed": 60,  
+    "name": "Valladolid-Due\u00f1as",  
+    "refRoad": "urn:ngsi-ld:Road:Spain-Road-A62",  
+    "source": "http://wwww.openstreetmap.org",  
+    "startPoint": {  
+        "coordinates": [  
+            -4.7299180606009,  
+            41.6844918725019  
+        ],  
+        "type": "Point"  
+    },  
+    "totalLaneNumber": 2,  
+    "status": "open",  
+    "statusDescription": "Bridge state = DOWN",  
+    "cyclePathMaterial": "ASPHALT",  
+    "carriagewayLength": 0.095454461114818,  
+    "totalPedestrianPathWidth": 7,  
+    "bridgeCount": 1,  
+    "pedestrianPathLeftHeight": 2,  
+    "maximumAllowedHeight": 72,  
+    "totalPedestrianPathLength": 0.09,  
+    "culvertCount": 0,  
+    "roadName": "GREEN VILLA ROAD TO CHAITHRAM HOUSE",  
+    "roadClass": "OTHER_PUBLIC_ROAD",  
+    "medianHeight": 3.6,  
+    "roadWork": "OTHER",  
+    "roadID": "5272",  
+    "cyclePathRightWidth": 2.5,  
+    "roadMaterial": "TAR",  
+    "medianWidth": 1.5,  
+    "carriagewayWidth": 3,  
+    "cyclePathRightHeight": 1,  
+    "roadDirection": "N",  
+    "medianLength": 0.09,  
+    "pedestrianPathMaterial": "PAVEMENT BLOCK",  
+    "cyclePathLeftWidth": 2.5,  
+    "maximumAllowedWidth": 74,  
+    "rightOfWayWidth": 4,  
+    "cyclePathLeftHeight": 1,  
+    "maximumAllowedWeight": 109,  
+    "pedestrianPathRightWidth": 3.5,  
+    "pedestrianPathLeftWidth": 3.5,  
+    "pedestrianPathPlacement": "NOT_AVAILABLE",  
+    "pedestrianPathRightHeight": 2,  
+    "cyclePathPlacement": "NOT_AVAILABLE",  
+    "totalCyclePathWidth": 5,  
+    "agency_name": "CORPORATION",  
+    "municipalityInfo": {  
+        "ulbName": "KANNUR MUNICIPAL CORPORATION"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### 道路セグメント NGSI-LD 正規化例  
 以下は、RoadSegmentをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
 	"id": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-osm-24702186",  
@@ -1423,4 +1448,12 @@ RoadSegment:
 	]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
