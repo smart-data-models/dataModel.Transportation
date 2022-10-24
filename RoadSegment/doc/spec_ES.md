@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entidad: RoadSegment  
-====================  
+====================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.Transportation/blob/master/RoadSegment/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Descripción global: **Esta entidad contiene una descripción geográfica y contextual armonizada de un segmento de carretera. Se utiliza una colección de segmentos de carretera para describir una Carretera.**  
 versión: 0.4.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `agency_name`: El campo agency_name contiene el nombre completo de la agencia u organización responsable del mantenimiento de la entidad considerada. Igual que: Campo 'agency_name' de la definición de campo estático GTFS - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)  - `allowedVehicleType`: Tipo(s) de vehículo(s) autorizado(s) a transitar por este segmento de carretera. Enum:'vehículo agrícola, bicicleta, autobús, coche, caravana, cocheConCaravana, cocheConRemolque, vehículoDeConstrucciónOdeMantenimiento, camión, ciclomotor, motocicleta, motocicletaConCocheLateral, motocarro, cisterna, remolque, furgoneta, cualquierVehículo'. Valores permitidos: Los siguientes valores definidos por _VehicleTypeEnum_, [DATEX 2 versión 2.3](http://d2docs.ndwcloud.nu/):  - `alternateName`: Un nombre alternativo para este artículo  - `annotations`: Anotaciones sobre el artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `bridgeCount`: Número de puentes en el segmento de carretera correspondiente a esta observación. Toma 0 (cero) como valor cuando el segmento de carretera no tiene puentes.  - `carriagewayLength`: Longitud total de la vía del segmento de carretera correspondiente a esta observación.  - `carriagewayWidth`: Anchura total de la calzada del segmento de carretera correspondiente a esta observación.  - `category`: Permite transmitir características adicionales de un segmento de carretera. Enum:'oneway, toll, link'.  `oneway`: Indica si el segmento de carretera sólo puede utilizarse en una dirección. Si no está presente, significa que el segmento de carretera puede utilizarse en ambas direcciones (hacia delante y hacia atrás). Véase también [http://wiki.openstreetmap.org/wiki/Key:oneway](http://wiki.openstreetmap.org/wiki/Key:oneway). `toll` : Indica si el tramo de carretera está sujeto a peaje. `link` : Indica si este segmento de carretera es un segmento de enlace auxiliar para salir o entrar en una carretera. Véase [https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link). Cualquier otro valor significativo para una aplicación.  - `color`: El color del producto  - `culvertCount`: Número de alcantarillas que prevalecen en el trazado de la carretera correspondiente a esta observación.  - `cyclePathLeftHeight`: Altura del carril bici en el borde izquierdo de la carretera correspondiente a esta observación.  - `cyclePathLeftWidth`: Anchura del carril bici en el borde izquierdo de la carretera correspondiente a esta observación.  - `cyclePathMaterial`: Material de construcción utilizado para la colocación del carril bici en los laterales de la carretera correspondiente a esta observación.  - `cyclePathPlacement`: Describe la ubicación del carril bici a lo largo del segmento de carretera correspondiente a esta observación. Enum:' ['DERECHA, IZQUIERDA, AMBAS, NOT_AVAILABLE'  - `cyclePathRightHeight`: Altura del carril bici en el borde derecho de la carretera correspondiente a esta observación.  - `cyclePathRightWidth`: Anchura del carril bici en el borde derecho de la carretera correspondiente a esta observación.  - `dataDescriptor`: URI que apunta a la entidad descriptora de datos  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `endKilometer`: El número de kilómetro (medido desde el punto de inicio de la carretera) donde termina este segmento de carretera.  - `endPoint`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `id`: Identificador único de la entidad  - `image`: Una imagen del artículo  - `laneInfo`: Describe los aspectos de los carriles de la carretera correspondientes a esta observación.  - `laneUsage`: Este atributo puede utilizarse para transmitir parámetros específicos que describan cada carril. Debe contener una cadena por carril del segmento de carretera. El elemento 0 de la matriz debe contener la información del carril 1, y así sucesivamente. El formato de la cadena referida debe ser: <carril_dirección>, <carril_velocidad mínima permitida>, <carril_velocidad máxima permitida>, <carril_altura máxima permitida>, <carril_altura máxima permitida>. <lane_direction> es una cadena de texto con los siguientes valores permitidos: `hacia adelante`. El carril se utiliza actualmente en la dirección "hacia adelante". hacia atrás". El carril se utiliza actualmente en la dirección "hacia atrás". El único parámetro obligatorio es `lane_direction`. Si no se especifica, se puede asumir que el resto de parámetros son iguales a los especificados a nivel de entidad.  - `length`: Longitud total de este segmento de carretera en kilómetros  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `maximumAllowedHeight`: Altura máxima permitida para los vehículos que transitan por este tramo de carretera  - `maximumAllowedSpeed`: Velocidad máxima permitida en el segmento de carretera. Pueden aplicarse límites más restrictivos a determinados tipos de vehículos (camiones, caravanas, etc.)  - `maximumAllowedWeight`: Peso máximo permitido para los vehículos que transitan por este tramo de carretera  - `maximumAllowedWidth`: Anchura máxima permitida para los vehículos que utilizan la entidad correspondiente a esta observación.  - `medianHeight`: Altura de la mediana o de la mediana de la carretera correspondiente a esta observación.  - `medianLength`: Longitud de la mediana o de la mediana de la carretera correspondiente a esta observación.  - `medianWidth`: Anchura de la mediana o de la mediana de la carretera correspondiente a esta observación.  - `minimumAllowedSpeed`: Velocidad mínima permitida al transitar por este tramo de carretera  - `municipalityInfo`: Información del municipio correspondiente a esta observación.  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `pedestrianPathLeftHeight`: Altura de la pasarela colocada en el borde izquierdo de la carretera correspondiente a esta observación.  - `pedestrianPathLeftWidth`: Anchura de la pasarela colocada en el borde izquierdo de la carretera correspondiente a esta observación.  - `pedestrianPathMaterial`: Material de construcción utilizado para la colocación de la pasarela / senda en los lados de la carretera correspondiente a esta observación.  - `pedestrianPathPlacement`: Describe la presencia y la ubicación del peatón a lo largo del segmento de carretera correspondiente a esta observación. Enum:'DERECHA, IZQUIERDA, AMBAS, NOT_AVAILABLE'  - `pedestrianPathRightHeight`: Altura de la pasarela colocada en el borde derecho de la carretera correspondiente a esta observación.  - `pedestrianPathRightWidth`: Anchura de la pasarela colocada en el borde derecho de la carretera correspondiente a esta observación.  - `refRoad`: Carretera a la que pertenece este segmento de carretera.  - `rightOfWayWidth`: El derecho de paso (RoW) es la superficie total de terreno disponible para la carretera. Su anchura permite acoger el paso de carruajes + otras necesidades + la futura ampliación, a lo largo de la alineación de la carretera.  - `roadClass`: El tipo de carretera correspondiente a esta observación. Enum: [OTRA_CARRETERA_PÚBLICA, CARRETERA_PRIVADA, CARRETERA_MENOR_CIUDAD, CARRETERA_MÁS_DISTRITAL, CARRETERA_NACIONAL, CARRETERA_DE_SERVICIO, CARRETERA_ESTATAL, OTRA CARRETERA_DISTRITAL, CARRETERA_PORTA].  - `roadDirection`: Representa la dirección a la que se dirige la carretera. Enum:' ['N, S, E, W'. Los valores N,S,E,W representan el norte, el sur, el este y el oeste respectivamente.  - `roadId`: Representación interna única de la carretera correspondiente a esta observación.  - `roadMaterial`: El material de construcción utilizado para la colocación de la calzada correspondiente a esta observación. Por ejemplo, hormigón, tierra, alquitrán, etc.  - `roadName`: El nombre de la carretera correspondiente a esta observación.  - `roadWork`: Motivos de la obra en carretera en caso de intervención urgente. Una combinación de estos valores. Enum:'COLAPSO, DERRUMBO, INCENDIO, INUNDACIÓN, DERRUMBO DE GAS, DESLIZAMIENTO DE TIERRAS, OTROS, CORTE DE ENERGÍA, DESPLAZAMIENTO DE ROCA, AGUANTAMIENTO, DERRUMBO'.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `startKilometer`: El número de kilómetro (medido desde el punto de inicio de la carretera) donde comienza este segmento de carretera.  - `startPoint`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `status`: Condiciones específicas de conducción en el segmento de carretera. Utilice statusDescription para obtener información adicional. Enum: `abierto, cerrado, limitado`.  `abierto`: el segmento de carretera puede utilizarse en toda su capacidad prevista, `cerrado`: no es posible el tráfico, por ejemplo, debido a obras en la carretera, un puente o una esclusa abiertos, o cualquier otro evento que impida el tráfico. Limitado": el tráfico es posible, pero no en toda su capacidad.  - `statusDescription`: Información adicional al atributo de estado.  - `totalCyclePathWidth`: Anchura total del carril bici presente en la carretera correspondiente a esta observación.  - `totalLaneNumber`: Número total de carriles que ofrece este segmento de carretera  - `totalPedestrianPathLength`: Longitud total de la pasarela presente en la carretera correspondiente a esta observación.  - `totalPedestrianPathWidth`: Anchura total de la pasarela presente en la carretera correspondiente a esta observación.  - `type`: Tipo de entidad NGSI. Tiene que ser RoadSegment  - `width`: Anchura del segmento de la carretera.    
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
+- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)- `agency_name[string]`: El campo agency_name contiene el nombre completo de la agencia u organización responsable del mantenimiento de la entidad considerada. Igual que: Campo 'agency_name' de la definición de campo estático GTFS - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)  - `allowedVehicleType[array]`: Tipo(s) de vehículo(s) autorizado(s) a transitar por este segmento de carretera. Enum:'vehículo agrícola, bicicleta, autobús, coche, caravana, cocheConCaravana, cocheConRemolque, vehículoDeConstrucciónOdeMantenimiento, camión, ciclomotor, motocicleta, motocicletaConCocheLateral, motocarro, cisterna, remolque, furgoneta, cualquierVehículo'. Valores permitidos: Los siguientes valores definidos por _VehicleTypeEnum_, [DATEX 2 versión 2.3](http://d2docs.ndwcloud.nu/):  . Model: [https://schema.org/Text](https://schema.org/Text)- `alternateName[string]`: Un nombre alternativo para este artículo  - `annotations[array]`: Anotaciones sobre el artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `bridgeCount[number]`: Número de puentes en el segmento de carretera correspondiente a esta observación. Toma 0 (cero) como valor cuando el segmento de carretera no tiene puentes.  - `carriagewayLength[number]`: Longitud total de la vía del segmento de carretera correspondiente a esta observación.  - `carriagewayWidth[number]`: Anchura total de la calzada del segmento de carretera correspondiente a esta observación.  - `category[array]`: Permite transmitir características adicionales de un segmento de carretera. Enum:'oneway, toll, link'.  `oneway`: Indica si el segmento de carretera sólo puede utilizarse en una dirección. Si no está presente, significa que el segmento de carretera puede utilizarse en ambas direcciones (hacia delante y hacia atrás). Véase también [http://wiki.openstreetmap.org/wiki/Key:oneway](http://wiki.openstreetmap.org/wiki/Key:oneway). `toll` : Indica si el tramo de carretera está sujeto a peaje. `link` : Indica si este segmento de carretera es un segmento de enlace auxiliar para salir o entrar en una carretera. Véase [https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link). Cualquier otro valor significativo para una aplicación.  . Model: [https://schema.org/Text](https://schema.org/Text)- `color[string]`: El color del producto  . Model: [https://schema.org/color](https://schema.org/color)- `culvertCount[number]`: Número de alcantarillas que prevalecen en el trazado de la carretera correspondiente a esta observación.  - `cyclePathLeftHeight[number]`: Altura del carril bici en el borde izquierdo de la carretera correspondiente a esta observación.  - `cyclePathLeftWidth[number]`: Anchura del carril bici en el borde izquierdo de la carretera correspondiente a esta observación.  - `cyclePathMaterial[string]`: Material de construcción utilizado para la colocación del carril bici en los laterales de la carretera correspondiente a esta observación.  - `cyclePathPlacement[string]`: Describe la ubicación del carril bici a lo largo del segmento de carretera correspondiente a esta observación. Enum:' ['DERECHA, IZQUIERDA, AMBAS, NOT_AVAILABLE'  - `cyclePathRightHeight[number]`: Altura del carril bici en el borde derecho de la carretera correspondiente a esta observación.  - `cyclePathRightWidth[number]`: Anchura del carril bici en el borde derecho de la carretera correspondiente a esta observación.  - `dataDescriptor[*]`: URI que apunta a la entidad descriptora de datos  - `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description[string]`: Una descripción de este artículo  - `endKilometer[number]`: El número de kilómetro (medido desde el punto de inicio de la carretera) donde termina este segmento de carretera.  . Model: [https://schema.org/Number](https://schema.org/Number)- `endPoint[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `id[*]`: Identificador único de la entidad  - `image[string]`: Una imagen del artículo  . Model: [https://schema.org/URL](https://schema.org/URL)- `laneInfo[object]`: Describe los aspectos de los carriles de la carretera correspondientes a esta observación.  - `laneUsage[array]`: Este atributo puede utilizarse para transmitir parámetros específicos que describan cada carril. Debe contener una cadena por carril del segmento de carretera. El elemento 0 de la matriz debe contener la información del carril 1, y así sucesivamente. El formato de la cadena referida debe ser <carril_dirección>, <carril_velocidad mínima permitida>, <carril_velocidad máxima permitida>, <carril_altura máxima permitida>, <carril_altura máxima permitida>. <lane_direction> es una cadena de texto con los siguientes valores permitidos: `hacia adelante`. El carril se utiliza actualmente en la dirección "hacia adelante". hacia atrás". El carril se utiliza actualmente en la dirección "hacia atrás". El único parámetro obligatorio es `lane_direction`. Si no se especifica, se puede asumir que el resto de parámetros son iguales a los especificados a nivel de entidad.  . Model: [https://schema.org/Text](https://schema.org/Text)- `length[number]`: Longitud total de este segmento de carretera en kilómetros  . Model: [https://schema.org/length](https://schema.org/length)- `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `maximumAllowedHeight[number]`: Altura máxima permitida para los vehículos que transitan por este tramo de carretera  . Model: [https://schema.org/height](https://schema.org/height)- `maximumAllowedSpeed[number]`: Velocidad máxima permitida en el segmento de carretera. Pueden aplicarse límites más restrictivos a determinados tipos de vehículos (camiones, caravanas, etc.)  . Model: [https://schema.org/Number](https://schema.org/Number)- `maximumAllowedWeight[number]`: Peso máximo permitido para los vehículos que transitan por este tramo de carretera  . Model: [https://schema.org/weight](https://schema.org/weight)- `maximumAllowedWidth[number]`: Anchura máxima permitida para los vehículos que utilizan la entidad correspondiente a esta observación.  - `medianHeight[number]`: Altura de la mediana o de la mediana de la carretera correspondiente a esta observación.  - `medianLength[number]`: Longitud de la mediana o de la mediana de la carretera correspondiente a esta observación.  - `medianWidth[number]`: Anchura de la mediana o de la mediana de la carretera correspondiente a esta observación.  - `minimumAllowedSpeed[number]`: Velocidad mínima permitida al transitar por este tramo de carretera  . Model: [https://schema.org/Number](https://schema.org/Number)- `municipalityInfo[object]`: Información del municipio correspondiente a esta observación.  . Model: [https://schema.org/Text](https://schema.org/Text)- `name[string]`: El nombre de este artículo.  - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `pedestrianPathLeftHeight[number]`: Altura de la pasarela colocada en el borde izquierdo de la carretera correspondiente a esta observación.  - `pedestrianPathLeftWidth[number]`: Anchura de la pasarela colocada en el borde izquierdo de la carretera correspondiente a esta observación.  - `pedestrianPathMaterial[string]`: Material de construcción utilizado para la colocación de la pasarela / senda en los lados de la carretera correspondiente a esta observación.  - `pedestrianPathPlacement[string]`: Describe la presencia y la ubicación del peatón a lo largo del segmento de carretera correspondiente a esta observación. Enum:'DERECHA, IZQUIERDA, AMBAS, NOT_AVAILABLE'  - `pedestrianPathRightHeight[number]`: Altura de la pasarela colocada en el borde derecho de la carretera correspondiente a esta observación.  - `pedestrianPathRightWidth[number]`: Anchura de la pasarela colocada en el borde derecho de la carretera correspondiente a esta observación.  - `refRoad[*]`: Carretera a la que pertenece este segmento de carretera.  - `rightOfWayWidth[number]`: El derecho de paso (RoW) es la superficie total de terreno disponible para la carretera. Su anchura permite acoger el paso de carruajes + otras necesidades + la futura ampliación, a lo largo de la alineación de la carretera.  - `roadClass[string]`: El tipo de carretera correspondiente a esta observación. Enum: [OTRA_CARRETERA_PÚBLICA, CARRETERA_PRIVADA, CARRETERA_MENOR_CIUDAD, CARRETERA_MÁS_DISTRITAL, CARRETERA_NACIONAL, CARRETERA_DE_SERVICIO, CARRETERA_ESTATAL, OTRA CARRETERA_DISTRITAL, CARRETERA_PORTA].  - `roadDirection[string]`: Representa la dirección a la que se dirige la carretera. Enum:' ['N, S, E, W'. Los valores N,S,E,W representan el norte, el sur, el este y el oeste respectivamente.  - `roadId[string]`: Representación interna única de la carretera correspondiente a esta observación.  - `roadMaterial[string]`: El material de construcción utilizado para la colocación de la calzada correspondiente a esta observación. Por ejemplo, hormigón, tierra, alquitrán, etc.  - `roadName[string]`: El nombre de la carretera correspondiente a esta observación.  - `roadWork[string]`: Motivos de la obra en carretera en caso de intervención urgente. Una combinación de estos valores. Enum:'COLAPSO, DERRUMBO, INCENDIO, INUNDACIÓN, DERRUMBO DE GAS, DESLIZAMIENTO DE TIERRAS, OTROS, CORTE DE ENERGÍA, DESPLAZAMIENTO DE ROCA, AGUANTAMIENTO, DERRUMBO'.  - `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `startKilometer[number]`: El número de kilómetro (medido desde el punto de inicio de la carretera) donde comienza este segmento de carretera.  . Model: [https://schema.org/Number](https://schema.org/Number)- `startPoint[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `status[string]`: Condiciones específicas de conducción en el segmento de carretera. Utilice statusDescription para obtener información adicional. Enum: `abierto, cerrado, limitado`.  `abierto`: el segmento de carretera puede utilizarse en toda su capacidad prevista, `cerrado`: no es posible el tráfico, por ejemplo, debido a obras en la carretera, un puente o una esclusa abiertos, o cualquier otro evento que impida el tráfico. Limitado": el tráfico es posible, pero no en toda su capacidad.  - `statusDescription[string]`: Información adicional al atributo de estado.  - `totalCyclePathWidth[number]`: Anchura total del carril bici presente en la carretera correspondiente a esta observación.  - `totalLaneNumber[number]`: Número total de carriles que ofrece este segmento de carretera  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `totalPedestrianPathLength[number]`: Longitud total de la pasarela presente en la carretera correspondiente a esta observación.  - `totalPedestrianPathWidth[number]`: Anchura total de la pasarela presente en la carretera correspondiente a esta observación.  - `type[string]`: Tipo de entidad NGSI. Tiene que ser RoadSegment  - `width[number]`: Anchura del segmento de la carretera.  . Model: [https://schema.org/Number](https://schema.org/Number)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propiedades requeridas  
-- `allowedVehicleType`  - `endPoint`  - `id`  - `name`  - `refRoad`  - `startPoint`  - `type`    
+- `allowedVehicleType`  - `endPoint`  - `id`  - `name`  - `refRoad`  - `startPoint`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Los segmentos de carretera pueden incluir varios carriles. Este modelo de datos permite transmitir segmentos de carretera formados por carriles heterogéneos (diferentes en su uso, velocidad, altura, etc.). Los carriles se identifican utilizando números enteros entre 1 y n, siendo el número 1 el carril de la derecha cuando se avanza. El sentido de avance es la dirección denotada por el vector que va desde el punto de inicio del segmento hasta el punto final del mismo. Se trata de la misma convención que utiliza OpenStreetMap. Esta entidad está asociada principalmente a los segmentos verticales de Automoción y Ciudades Inteligentes y a las aplicaciones IoT relacionadas. Este modelo de datos se ha desarrollado en colaboración con los operadores de telefonía móvil y la GSMA.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 RoadSegment:    
@@ -733,10 +746,15 @@ RoadSegment:
   x-version: 0.4.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
 Las propiedades `laneUsage` y las que transmiten los parámetros máximos permitidos pueden ser dinámicas, por ejemplo, se puede cambiar temporalmente la dirección de un carril para mejorar las condiciones del tráfico.  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### RoadSegment NGSI-v2 key-values Ejemplo  
 Aquí hay un ejemplo de un RoadSegment en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Spain-RoadSegment-A62-osm-24702186",  
@@ -838,8 +856,10 @@ RoadSegment:
   }  
 }  
 ```  
+</details>  
 #### RoadSegment NGSI-v2 normalizado Ejemplo  
 Este es un ejemplo de un RoadSegment en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Spain-RoadSegment-A62-osm-24702186",  
@@ -1070,114 +1090,119 @@ RoadSegment:
   }  
 }  
 ```  
+</details>  
 #### RoadSegment NGSI-LD key-values Ejemplo  
 Aquí hay un ejemplo de un RoadSegment en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-osm-24702186",  
-  "type": "RoadSegment",  
-  "allowedVehicleType": [  
-    "car",  
-    "bus",  
-    "lorry",  
-    "trailer",  
-    "tanker",  
-    "van",  
-    "caravan"  
-  ],  
-  "category": [  
-    "oneway"  
-  ],  
-  "endPoint": {  
-    "coordinates": [  
-      -4.55167335377909,  
-      41.8570461783071  
+    "id": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-osm-24702186",  
+    "type": "RoadSegment",  
+    "allowedVehicleType": [  
+        "car",  
+        "bus",  
+        "lorry",  
+        "trailer",  
+        "tanker",  
+        "van",  
+        "caravan"  
     ],  
-    "type": "Point"  
-  },  
-  "laneUsage": [  
-    "forward",  
-    "forward"  
-  ],  
-  "location": {  
-    "coordinates": [  
-      [  
-        -4.7299180606009,  
-        41.6844918725019  
-      ],  
-      [  
-        -4.72855890957602,  
-        41.6860596957855  
-      ],  
-      [  
-        -4.5520357341647,  
-        41.8569278186523  
-      ],  
-      [  
-        -4.55167335377909,  
-        41.8570461783071  
-      ]  
+    "category": [  
+        "oneway"  
     ],  
-    "type": "LineString"  
-  },  
-  "maximumAllowedSpeed": 120,  
-  "minimumAllowedSpeed": 60,  
-  "name": "Valladolid-DueÃ±as",  
-  "refRoad": "urn:ngsi-ld:Road:Spain-Road-A62",  
-  "source": "http://wwww.openstreetmap.org",  
-  "startPoint": {  
-    "coordinates": [  
-      -4.7299180606009,  
-      41.6844918725019  
+    "endPoint": {  
+        "coordinates": [  
+            -4.55167335377909,  
+            41.8570461783071  
+        ],  
+        "type": "Point"  
+    },  
+    "laneUsage": [  
+        "forward",  
+        "forward"  
     ],  
-    "type": "Point"  
-  },  
-  "totalLaneNumber": 2,  
-  "status": "open",  
-  "statusDescription": "Bridge state = DOWN",  
-  "cyclePathMaterial": "ASPHALT",  
-  "carriagewayLength": 0.095454461114818,  
-  "totalPedestrianPathWidth": 7,  
-  "bridgeCount": 1,  
-  "pedestrianPathLeftHeight": 2,  
-  "maximumAllowedHeight": 72,  
-  "totalPedestrianPathLength": 0.09,  
-  "culvertCount": 0,  
-  "roadName": "GREEN VILLA ROAD TO CHAITHRAM HOUSE",  
-  "roadClass": "OTHER_PUBLIC_ROAD",  
-  "medianHeight": 3.6,  
-  "roadWork": "OTHER",  
-  "roadID": "5272",  
-  "cyclePathRightWidth": 2.5,  
-  "roadMaterial": "TAR",  
-  "medianWidth": 1.5,  
-  "carriagewayWidth": 3,  
-  "cyclePathRightHeight": 1,  
-  "roadDirection": "N",  
-  "medianLength": 0.09,  
-  "pedestrianPathMaterial": "PAVEMENT BLOCK",  
-  "cyclePathLeftWidth": 2.5,  
-  "maximumAllowedWidth": 74,  
-  "rightOfWayWidth": 4,  
-  "cyclePathLeftHeight": 1,  
-  "maximumAllowedWeight": 109,  
-  "pedestrianPathRightWidth": 3.5,  
-  "pedestrianPathLeftWidth": 3.5,  
-  "pedestrianPathPlacement": "NOT_AVAILABLE",  
-  "pedestrianPathRightHeight": 2,  
-  "cyclePathPlacement": "NOT_AVAILABLE",  
-  "totalCyclePathWidth": 5,  
-  "agency_name": "CORPORATION",  
-  "municipalityInfo": {  
-    "ulbName": "KANNUR MUNICIPAL CORPORATION"  
-  },  
-  "@context": [  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "location": {  
+        "coordinates": [  
+            [  
+                -4.7299180606009,  
+                41.6844918725019  
+            ],  
+            [  
+                -4.72855890957602,  
+                41.6860596957855  
+            ],  
+            [  
+                -4.5520357341647,  
+                41.8569278186523  
+            ],  
+            [  
+                -4.55167335377909,  
+                41.8570461783071  
+            ]  
+        ],  
+        "type": "LineString"  
+    },  
+    "maximumAllowedSpeed": 120,  
+    "minimumAllowedSpeed": 60,  
+    "name": "Valladolid-Due\u00f1as",  
+    "refRoad": "urn:ngsi-ld:Road:Spain-Road-A62",  
+    "source": "http://wwww.openstreetmap.org",  
+    "startPoint": {  
+        "coordinates": [  
+            -4.7299180606009,  
+            41.6844918725019  
+        ],  
+        "type": "Point"  
+    },  
+    "totalLaneNumber": 2,  
+    "status": "open",  
+    "statusDescription": "Bridge state = DOWN",  
+    "cyclePathMaterial": "ASPHALT",  
+    "carriagewayLength": 0.095454461114818,  
+    "totalPedestrianPathWidth": 7,  
+    "bridgeCount": 1,  
+    "pedestrianPathLeftHeight": 2,  
+    "maximumAllowedHeight": 72,  
+    "totalPedestrianPathLength": 0.09,  
+    "culvertCount": 0,  
+    "roadName": "GREEN VILLA ROAD TO CHAITHRAM HOUSE",  
+    "roadClass": "OTHER_PUBLIC_ROAD",  
+    "medianHeight": 3.6,  
+    "roadWork": "OTHER",  
+    "roadID": "5272",  
+    "cyclePathRightWidth": 2.5,  
+    "roadMaterial": "TAR",  
+    "medianWidth": 1.5,  
+    "carriagewayWidth": 3,  
+    "cyclePathRightHeight": 1,  
+    "roadDirection": "N",  
+    "medianLength": 0.09,  
+    "pedestrianPathMaterial": "PAVEMENT BLOCK",  
+    "cyclePathLeftWidth": 2.5,  
+    "maximumAllowedWidth": 74,  
+    "rightOfWayWidth": 4,  
+    "cyclePathLeftHeight": 1,  
+    "maximumAllowedWeight": 109,  
+    "pedestrianPathRightWidth": 3.5,  
+    "pedestrianPathLeftWidth": 3.5,  
+    "pedestrianPathPlacement": "NOT_AVAILABLE",  
+    "pedestrianPathRightHeight": 2,  
+    "cyclePathPlacement": "NOT_AVAILABLE",  
+    "totalCyclePathWidth": 5,  
+    "agency_name": "CORPORATION",  
+    "municipalityInfo": {  
+        "ulbName": "KANNUR MUNICIPAL CORPORATION"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### RoadSegment NGSI-LD normalizado Ejemplo  
 Este es un ejemplo de un RoadSegment en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
 	"id": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-osm-24702186",  
@@ -1423,4 +1448,12 @@ RoadSegment:
 	]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
