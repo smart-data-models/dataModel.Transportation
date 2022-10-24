@@ -1,17 +1,32 @@
-エンティティバイクハイアードッキングステーション  
-========================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティBikeHireDockingStation  
+============================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Transportation/blob/master/BikeHireDockingStation/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな説明。**自転車レンタル用ドッキングステーション  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな説明**自転車レンタル用ドッキングステーション  
+バージョン: 0.1.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `agency_fare_url`: 運賃の詳細が記載されており、その代理店のチケットをオンラインで購入することができるウェブページのURL。同じです。GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)の「agent_fare_url」フィールド。  - `agency_name`: agency_nameフィールドには、交通機関のフルネームが入っています。同じです。GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)の「againty_name」フィールド。  - `agency_url`: agency_urlフィールドには、交通機関のURLが含まれています。SameAs:GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)の「agency_url」フィールド。  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `availableBikeNumber`: 自転車レンタルのドッキングステーションに用意されている、ユーザーが借りられる自転車の数  - `contactPoint`: アイテムの連絡先です。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `freeSlotNumber`: バイクの返却や駐輪に利用できるスロットの数です。totalSlotNumber`以下でなければなりません。  - `id`: エンティティのユニークな識別子  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `mediaURL`: 苦情や場所に関する画像やメディアの詳細情報を提供するURL。  - `name`: このアイテムの名前です。  - `observationDateTime`: 最後に報告された観測時刻。  - `openingHours`: ドッキングステーションの営業時間  - `outOfServiceSlotNumber`: 自転車のレンタルや駐輪に使用できない、故障中のスロットの数です。totalSlotNumber`以下でなければなりません。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `provider`: レンタサイクルサービスの提供  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `stationCode`: 観察結果に対応するレンタサイクルのドッキングステーションのステーション番号またはステーションコード。  - `stationName`: この観測結果に対応する自転車レンタルのドッキングステーションの名前。  - `status`: 自転車レンタルのドッキングステーションの状態。Enum:'working, outOfService, withIncidence, full, almostFull, empty, almostEmpty'.またはその他のアプリケーション固有のもの。  - `totalSlotNumber`: このバイクドッキングステーションが提供するスロットの合計数  - `type`: NGSI エンティティタイプ。これはBikeHireDockingStationでなければならない。    
-必須項目  
-- `id`  - `type`    
-多くの都市では、市民のために自転車のレンタルシステムを提供しています。このシステムでは、さまざまなタイプの契約に基づいて自転車をレンタルすることができます。自転車レンタルのドッキングステーションでは、契約しているユーザーが自転車を借りたり返したりすることができる。主な機能や自転車の空き状況、空き枠などのデータを提供しています。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `agency_fare_url[string]`: 運賃の詳細が記載され、その代理店のチケットをオンラインで購入することができるウェブページのURL。と同じです。GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt) にある 'agency_fare_url' フィールド。  - `agency_name[string]`: agency_name フィールドには、交通機関のフルネームが含まれる。SameAs。GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt) にある 'agency_name' フィールド。  . Model: [https://schema.org/Text](https://schema.org/Text)- `agency_url[string]`: agency_url フィールドには、交通機関の URL が含まれます。同上。GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt) にある 'agency_url' フィールド。  . Model: [https://schema.org/Text](https://schema.org/Text)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `availableBikeNumber[integer]`: 利用者がレンタルできる自転車ドッキングステーションにある自転車の台数  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `contactPoint[object]`: 商品に関するお問い合わせ先です。  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `freeSlotNumber[integer]`: 自転車を返却・駐輪するために利用できるスロットの数。totalSlotNumber`以下でなければならない。  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `id[*]`: エンティティの一意な識別子  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `mediaURL[string]`: 苦情や場所に関する画像やメディアなどの詳細情報を提供するURL。  . Model: [https://schema.org/Text](https://schema.org/Text)- `name[string]`: このアイテムの名称です。  - `observationDateTime[string]`: 最後に報告された観測時刻。  . Model: [https://schema.org/Text](https://schema.org/Text)- `openingHours[string]`: ドッキングステーションの営業時間  . Model: [http://schema.org/openingHours.](http://schema.org/openingHours.)- `outOfServiceSlotNumber[integer]`: 自転車のレンタルや駐輪に使用できない、故障中のスロット数です。totalSlotNumber`以下でなければなりません。  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `provider[string]`: 自転車レンタルサービス事業者  . Model: [https://schema.org/provider.](https://schema.org/provider.)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `stationCode[string]`: 観測に対応するレンタサイクルのドッキングステーションのステーション番号またはステーションコード。  . Model: [https://schema.org/Text](https://schema.org/Text)- `stationName[string]`: この観測に対応するレンタサイクルのドッキングステーションの名前。  . Model: [https://schema.org/Text](https://schema.org/Text)- `status[string]`: レンタサイクルのドッキングステーションの状態。Enum:'working, outOfService, withIncidence, full, almostFull, empty, almostEmpty'（稼働中、outOfService、withIncidence、満杯、almostFull、空っぽ）。または、その他のアプリケーション固有のもの。  . Model: [https://schema.org/Number](https://schema.org/Number)- `totalSlotNumber[integer]`: この自転車ドッキングステーションが提供する総スロット数  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `type[string]`: NGSI Entity タイプ。BikeHireDockingStationでなければならない。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+多くの都市では、市民のために自転車のレンタルシステムを提供しています。多くの都市が市民向けに自転車レンタルシステムを提供しており、様々な契約形態で自転車を借りることができる。レンタサイクルのドッキングステーションでは、契約したユーザーが自転車を借りたり、返したりすることができます。その主な機能と自転車や無料スロットの可用性に関するデータを提供します。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 BikeHireDockingStation:    
@@ -412,11 +427,53 @@ BikeHireDockingStation:
   x-version: 0.1.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### BikeHireDockingStation NGSI-v2 のキーバリューの例。  
-BikeHireDockingStationをkey-valuesとしてJSON-LD形式で表現した例です。これは`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### BikeHireDockingStation NGSI-v2 key-value の例。  
+BikeHireDockingStationをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+    "id": "urn:ngsi-ld:Bcn-BikeHireDockingStation-1",  
+    "type": "BikeHireDockingStation",  
+    "status": "working",  
+    "provider": "University of Mumbay",  
+    "contactPoint": {  
+        "url": "uri:ngsi:www.lignesdazur.com"  
+    },  
+    "availableBikeNumber": 20,  
+    "freeSlotNumber": 10,  
+    "openingHours": "Mo-Fr 10:00-19:00, Sa 10:00-22:00, Su 10:00-21:00",  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            2.180042,  
+            41.397952  
+        ]  
+    },  
+    "address": {  
+        "addressCountry": "ES",  
+        "addressLocality": "Barcelona",  
+        "streetAddress": "Gran Via Corts Catalanes,760"  
+    },  
+    "totalSlotNumber": 100,  
+    "outOfServiceSlotNumber": 21,  
+    "stationName": "Pune",  
+    "mediaURL": "http://pedalsaddle.in/",  
+    "agency_url": "http://pedalsaddle.in/",  
+    "agency_name": "PedalSaddle",  
+    "stationCode": "2",  
+    "observationDate": "2021-03-11T15:51:02+05:30",  
+    "agency_fare_url": ""  
+}  
+```  
+</details>  
 #### BikeHireDockingStation NGSI-v2 正規化例  
-ここでは、BikeHireDockingStationを正規化したJSON-LD形式の例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、BikeHireDockingStation を JSON-LD 形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:Bcn-BikeHireDockingStation-1",  
@@ -503,20 +560,27 @@ BikeHireDockingStation:
   }  
 }  
 ```  
-#### BikeHireDockingStation NGSI-LDのキーバリューの例。  
-BikeHireDockingStationをkey-valuesとしてJSON-LD形式で表現した例です。これは`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### BikeHireDockingStation NGSI-LD key-value 例  
+BikeHireDockingStationをJSON-LD形式でkey-valuesにした例です。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Bcn-BikeHireDockingStation-1",  
     "type": "BikeHireDockingStation",  
-    "status": "working",  
-    "provider": "University of Mumbay",  
+    "address": {  
+        "addressCountry": "ES",  
+        "addressLocality": "Barcelona",  
+        "streetAddress": "Gran Via Corts Catalanes,760"  
+    },  
+    "agency_fare_url": "",  
+    "agency_name": "PedalSaddle",  
+    "agency_url": "http://pedalsaddle.in/",  
+    "availableBikeNumber": 20,  
     "contactPoint": {  
         "url": "uri:ngsi:www.lignesdazur.com"  
     },  
-    "availableBikeNumber": 20,  
     "freeSlotNumber": 10,  
-    "openingHours": "Mo-Fr 10:00-19:00, Sa 10:00-22:00, Su 10:00-21:00",  
     "location": {  
         "type": "Point",  
         "coordinates": [  
@@ -524,38 +588,51 @@ BikeHireDockingStation:
             41.397952  
         ]  
     },  
-    "address": {  
-        "addressCountry": "ES",  
-        "addressLocality": "Barcelona",  
-        "streetAddress": "Gran Via Corts Catalanes,760"  
-    },  
-    "totalSlotNumber": 100,  
-    "outOfServiceSlotNumber": 21,  
-    "stationName": "Pune",  
     "mediaURL": "http://pedalsaddle.in/",  
-    "agency_url": "http://pedalsaddle.in/",  
-    "agency_name": "PedalSaddle",  
-    "stationCode": "2",  
     "observationDate": "2021-03-11T15:51:02+05:30",  
-    "agency_fare_url": "",  
+    "openingHours": "Mo-Fr 10:00-19:00, Sa 10:00-22:00, Su 10:00-21:00",  
+    "outOfServiceSlotNumber": 21,  
+    "provider": "University of Mumbay",  
+    "stationCode": "2",  
+    "stationName": "Pune",  
+    "status": "working",  
+    "totalSlotNumber": 100,  
     "@context": [  
-        "https://smartdatamodels.org/context.jsonld"  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
 }  
 ```  
-#### BikeHireDockingStation NGSI-LDの正規化例  
-ここでは、BikeHireDockingStationを正規化したJSON-LD形式の例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### BikeHireDockingStation NGSI-LD 正規化例  
+BikeHireDockingStation を JSON-LD 形式で正規化した例です。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Bcn-BikeHireDockingStation-1",  
     "type": "BikeHireDockingStation",  
-    "status": {  
+    "address": {  
         "type": "Property",  
-        "value": "working"  
+        "value": {  
+            "addressCountry": "ES",  
+            "addressLocality": "Barcelona",  
+            "streetAddress": "Gran Via Corts Catalanes,760"  
+        }  
     },  
-    "provider": {  
+    "agency_fare_url": {  
         "type": "Property",  
-        "value": "University of Mumbay"  
+        "value": ""  
+    },  
+    "agency_name": {  
+        "type": "Property",  
+        "value": "PedalSaddle"  
+    },  
+    "agency_url": {  
+        "type": "Property",  
+        "value": "http://pedalsaddle.in/"  
+    },  
+    "availableBikeNumber": {  
+        "type": "Property",  
+        "value": 20  
     },  
     "contactPoint": {  
         "type": "Property",  
@@ -563,17 +640,9 @@ BikeHireDockingStation:
             "url": "uri:ngsi:www.lignesdazur.com"  
         }  
     },  
-    "availableBikeNumber": {  
-        "type": "Property",  
-        "value": 20  
-    },  
     "freeSlotNumber": {  
         "type": "Property",  
         "value": 10  
-    },  
-    "openingHours": {  
-        "type": "Property",  
-        "value": "Mo-Fr 10:00-19:00, Sa 10:00-22:00, Su 10:00-21:00"  
     },  
     "location": {  
         "type": "Geoproperty",  
@@ -585,41 +654,9 @@ BikeHireDockingStation:
             ]  
         }  
     },  
-    "address": {  
-        "type": "Property",  
-        "value": {  
-            "addressCountry": "ES",  
-            "addressLocality": "Barcelona",  
-            "streetAddress": "Gran Via Corts Catalanes,760"  
-        }  
-    },  
-    "totalSlotNumber": {  
-        "type": "Property",  
-        "value": 100  
-    },  
-    "outOfServiceSlotNumber": {  
-        "type": "Property",  
-        "value": 21  
-    },  
-    "stationName": {  
-        "type": "Property",  
-        "value": "Pune"  
-    },  
     "mediaURL": {  
         "type": "Property",  
         "value": "http://pedalsaddle.in/"  
-    },  
-    "agency_url": {  
-        "type": "Property",  
-        "value": "http://pedalsaddle.in/"  
-    },  
-    "agency_name": {  
-        "type": "Property",  
-        "value": "PedalSaddle"  
-    },  
-    "stationCode": {  
-        "type": "Property",  
-        "value": "2"  
     },  
     "observationDate": {  
         "type": "Property",  
@@ -628,13 +665,45 @@ BikeHireDockingStation:
             "@value": "2021-03-11T15:51:02+05:30"  
         }  
     },  
-    "agency_fare_url": {  
+    "openingHours": {  
         "type": "Property",  
-        "value": ""  
+        "value": "Mo-Fr 10:00-19:00, Sa 10:00-22:00, Su 10:00-21:00"  
+    },  
+    "outOfServiceSlotNumber": {  
+        "type": "Property",  
+        "value": 21  
+    },  
+    "provider": {  
+        "type": "Property",  
+        "value": "University of Mumbay"  
+    },  
+    "stationCode": {  
+        "type": "Property",  
+        "value": "2"  
+    },  
+    "stationName": {  
+        "type": "Property",  
+        "value": "Pune"  
+    },  
+    "status": {  
+        "type": "Property",  
+        "value": "working"  
+    },  
+    "totalSlotNumber": {  
+        "type": "Property",  
+        "value": 100  
     },  
     "@context": [  
-        "https://smartdatamodels.org/context.jsonld"  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
