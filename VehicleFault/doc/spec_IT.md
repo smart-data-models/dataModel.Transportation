@@ -1,15 +1,31 @@
-Entità: VehicleFault  
-====================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entità: VeicoloIncidente  
+========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.Transportation/blob/master/VehicleFault/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descrizione globale: **Questa entità contiene una descrizione armonizzata di un guasto del veicolo. Questa entità è principalmente associata al segmento verticale Automotive, ma potrebbe anche essere rilevante per l'Industria, la Smart City, l'Agricoltura e le relative applicazioni IoT.**  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+Descrizione globale: **Questa entità contiene una descrizione armonizzata di un guasto del veicolo. Questa entità è associata principalmente al segmento verticale Automotive, ma potrebbe essere rilevante anche per l'Industria, le Smart City, l'Agricoltura e le relative applicazioni IoT.**  
+versione: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Elenco delle proprietà  
 
-- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito un servizio o un articolo offerto  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `description`: Una descrizione di questo articolo  - `id`: Identificatore unico dell'entità  - `location`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `model`: L'identificatore del modello del veicolo.  - `name`: Il nome di questo articolo.  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio pienamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `type`: Identificatore di entità NGSI. Deve essere Vehicle-Type  - `vehicle`: Identificatore unico dell'entità  - `vehicleType`: L'identificatore del tipo di veicolo.    
+<sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
+- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated[string]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified[string]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description[string]`: Descrizione dell'articolo  - `id[*]`: Identificatore univoco dell'entità  - `location[*]`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `model[string]`: L'identificativo del modello di veicolo.  - `name[string]`: Il nome di questo elemento.  - `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type[string]`: Identificatore dell'entità NGSI. Deve essere di tipo Veicolo  - `vehicle[*]`: Identificatore univoco dell'entità  - `vehicleType[string]`: L'identificativo del tipo di veicolo.  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Proprietà richieste  
-- `id`  - `type`  ## Descrizione del modello di dati delle proprietà  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 VehicleFault:    
@@ -311,9 +327,14 @@ VehicleFault:
   x-version: 0.0.1    
 ```  
 </details>    
-## Esempio di payloads  
-#### VehicleFault NGSI-v2 valori chiave Esempio  
-Ecco un esempio di un VehicleFault in formato JSON-LD come key-values. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
+## Esempi di payload  
+#### Valori-chiave di VehicleFault NGSI-v2 Esempio  
+Ecco un esempio di un VehicleFault in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:VehicleFault:4939200a-5ef5-4266-8c91-1f82ad3b543b",  
@@ -339,8 +360,10 @@ VehicleFault:
   "faultLog": "Emergency stop. Fault with engine"  
 }  
 ```  
+</details>  
 #### VehicleFault NGSI-v2 normalizzato Esempio  
-Ecco un esempio di un VehicleFault in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di un VehicleFault in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si usano le opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:VehicleFault:4939200a-5ef5-4266-8c91-1f82ad3b543b",  
@@ -393,97 +416,111 @@ VehicleFault:
   }  
 }  
 ```  
-#### VehicleFault NGSI-LD valori-chiave Esempio  
-Ecco un esempio di un VehicleFault in formato JSON-LD come key-values. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+</details>  
+#### Valori chiave NGSI-LD di VehicleFault Esempio  
+Ecco un esempio di un VehicleFault in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:VehicleFault:4939200a-5ef5-4266-8c91-1f82ad3b543b",  
-  "type": "VehicleFault",  
-  "createdAt": "2017-01-01T01:20:00Z",  
-  "modifiedAt": "2017-05-04T12:30:00Z",  
-  "source": "https://source.example.com",  
-  "dataProvider": "https://provider.example.com",  
-  "entityVersion": 2.0,  
-  "vehicle": "urn:ngsi-ld:Vehicle:1fa179a6-b507-4857-ad72-eb5513ef05c6",  
-  "observedAt": "2017-05-04T10:18:16Z",  
-  "eventType": "emergency",  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      -104.99404,  
-      39.75621  
+    "id": "urn:ngsi-ld:VehicleFault:4939200a-5ef5-4266-8c91-1f82ad3b543b",  
+    "type": "VehicleFault",  
+    "createdAt": "2017-01-01T01:20:00Z",  
+    "dataProvider": "https://provider.example.com",  
+    "dtCode": "EMERG-1234-a",  
+    "entityVersion": 2.0,  
+    "eventType": "emergency",  
+    "faultLog": "Emergency stop. Fault with engine",  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            -104.99404,  
+            39.75621  
+        ]  
+    },  
+    "modifiedAt": "2017-05-04T12:30:00Z",  
+    "observedAt": "2017-05-04T10:18:16Z",  
+    "processingType": "systemHandled",  
+    "resolvedAt": "2017-05-04T10:18:16Z",  
+    "source": "https://source.example.com",  
+    "vehicle": "urn:ngsi-ld:Vehicle:1fa179a6-b507-4857-ad72-eb5513ef05c6",  
+    "@context": [  
+        "https://smartdatamodels.github.io/dataModel.Transportation/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
-  },  
-  "processingType": "systemHandled",  
-  "resolvedAt": "2017-05-04T10:18:16Z",  
-  "dtCode": "EMERG-1234-a",  
-  "faultLog": "Emergency stop. Fault with engine",  
-  "@context": [  
-    "https://smartdatamodels.github.io/dataModel.Transportation/context.jsonld"  
-  ]  
 }  
 ```  
-#### VehicleFault NGSI-LD normalizzato Esempio  
-Ecco un esempio di un VehicleFault in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+</details>  
+#### VeicoloIncidente NGSI-LD normalizzato Esempio  
+Ecco un esempio di un VehicleFault in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.github.io/dataModel.Transportation/context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:VehicleFault:4939200a-5ef5-4266-8c91-1f82ad3b543b",  
-  "type": "VehicleFault",  
-  "source": {  
-    "type": "Property",  
-    "value": "https://source.example.com"  
-  },  
-  "dataProvider": {  
-    "type": "Property",  
-    "value": "https://provider.example.com"  
-  },  
-  "vehicle": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Vehicle:1fa179a6-b507-4857-ad72-eb5513ef05c6"  
-  },  
-  "observedAt": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2017-05-04T10:18:16Z"  
-    }  
-  },  
-  "eventType": {  
-    "type": "Property",  
-    "value": "emergency"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -104.99404,  
-        39.75621  
-      ]  
-    }  
-  },  
-  "processingType": {  
-    "type": "Property",  
-    "value": "systemHandled"  
-  },  
-  "resolvedAt": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2017-05-04T10:18:16Z"  
-    }  
-  },  
-  "dtCode": {  
-    "type": "Property",  
-    "value": "EMERG-1234-a"  
-  },  
-  "faultLog": {  
-    "type": "Property",  
-    "value": "Emergency stop. Fault with engine"  
-  }  
+    "id": "urn:ngsi-ld:VehicleFault:4939200a-5ef5-4266-8c91-1f82ad3b543b",  
+    "type": "VehicleFault",  
+    "dataProvider": {  
+        "type": "Property",  
+        "value": "https://provider.example.com"  
+    },  
+    "dtCode": {  
+        "type": "Property",  
+        "value": "EMERG-1234-a"  
+    },  
+    "eventType": {  
+        "type": "Property",  
+        "value": "emergency"  
+    },  
+    "faultLog": {  
+        "type": "Property",  
+        "value": "Emergency stop. Fault with engine"  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -104.99404,  
+                39.75621  
+            ]  
+        }  
+    },  
+    "observedAt": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2017-05-04T10:18:16Z"  
+        }  
+    },  
+    "processingType": {  
+        "type": "Property",  
+        "value": "systemHandled"  
+    },  
+    "resolvedAt": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2017-05-04T10:18:16Z"  
+        }  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": "https://source.example.com"  
+    },  
+    "vehicle": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Vehicle:1fa179a6-b507-4857-ad72-eb5513ef05c6"  
+    },  
+    "@context": [  
+        "https://smartdatamodels.github.io/dataModel.Transportation/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
