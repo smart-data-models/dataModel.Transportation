@@ -1,17 +1,32 @@
-Entityです。FleetVehicleOperation（フリートビークルオペレーション  
-==============================================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティFleetVehicleOperation  
+===========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Transportation/blob/master/FleetVehicleOperation/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**このエンティティには、配達や郵便集配などの一般的なフリートビークルオペレーションの調和のとれた記述が含まれています。このエンティティは、主に輸送と物流の垂直セグメントに関連していますが、他の多くの関連IoTアプリケーションにも使用される可能性があります。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述。**このエンティティは、配送や郵便集荷などの一般的なフリート車両操作の調和された記述を含む。このエンティティは、主に輸送と物流の垂直セグメントに関連しているが、他の多くの関連するIoTアプリケーションでも使用されるかもしれません。  
+バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `endedAt`: イベントや操作が終わった/完了したことがわかっている場合の終了日時。まだ終了していない場合はNull/omitted。  - `fleetVehicle`: この操作に関連するFleetVehicleエンティティへの参照。  - `fleetVehicleOperation`: このステータスエンティティが関連するFleetVehicleOperationエンティティへの参照。  - `id`: エンティティのユニークな識別子  - `initiatingLocation`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `operationType`: イベントまたは操作のフリーテキストタイプ e.g. 患者搬送の要請、郵便物の収集、配達、制限区域への接近、オーバースピード。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `responseTime`: イベントへの応答時間を秒単位で示す。関連するobservedAtのタイムスタンプは、最後の更新がいつ記録されたかを示す。例：救急車が患者に到着するまでの応答時間の記録  - `result`: イベントやオペレーションの最終的な結果。  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `startedAt`: イベントや操作が発生した開始日時。  - `transportTime`: フリートビークルが現在のオペレーションのために人や物資の輸送に費やした時間を示す。例：救急車が病院の救急外来に患者を搬送するのに費やした時間を示す。  - `type`: NGSI Entity 識別子。それはFleetVehicleOperationでなければならない。    
-必須項目  
-- `id`  - `type`    
-このデータモデルは、GSMAのIoTプロジェクト（https://www.gsma.com/iot/iot-big-data/）の原型となるものです。スマートデータモデルの要件を満たすために、いくつかのマイナーな調整が行われています。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `endedAt[string]`: イベントや操作が終了/完了したことが確認された終了日時。未終了の場合はNull/omitted。  - `fleetVehicle[*]`: この操作が関連する FleetVehicle エンティティへの参照。  - `fleetVehicleOperation[*]`: この状態エンティティが関連する FleetVehicleOperation エンティティへの参照。  - `id[*]`: エンティティの一意な識別子  - `initiatingLocation[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `operationType[string]`: イベントまたは操作のフリーテキストタイプ 例：患者搬送の要請、郵便物の集配、制限区域に接近、速度超過。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `responseTime[number]`: イベントに応答する時間を秒単位で示す。関連する observedAt のタイムスタンプは、最終更新がいつ記録されたかを示す。例：救急車が患者に到着するまでの応答時間を記録する。  - `result[string]`: イベントまたは操作の最終結果。  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `startedAt[string]`: イベントまたは操作が発生した開始日時。  - `transportTime[number]`: フリート車両が現在の業務のために人や物資を輸送するのに費やした時間を示す。例：救急車が病院の救急部に患者を搬送するのに費やした時間を示す。  - `type[string]`: NGSI エンティティ識別子。FleetVehicleOperationでなければならない。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+このデータモデルは、オリジナルのプロジェクトGSMA IoTプロジェクト（https://www.gsma.com/iot/iot-big-data/）に由来しています。スマートデータモデルの要件を満たすために、若干の修正が加えられています。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 FleetVehicleOperation:    
@@ -354,9 +369,14 @@ FleetVehicleOperation:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### FleetVehicleOperation NGSI-v2 のキーバリューの例。  
-ここでは、FleetVehicleOperationをJSON-LD形式のkey-valuesで表現した例を紹介します。これは`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### FleetVehicleOperation NGSI-v2 key-value の例。  
+以下は、FleetVehicleOperationをJSON-LD形式でkey-valuesにした例である。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:FleetVehicleOperation:8e876a60-5aa3-11e8-b350-d7b51a09fb6c",  
@@ -381,8 +401,10 @@ FleetVehicleOperation:
   "transportTime": 1220  
 }  
 ```  
-#### FleetVehicleOperation NGSI-v2で正規化された例。  
-ここでは、正規化されたJSON-LD形式のFleetVehicleOperationの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### FleetVehicleOperation NGSI-v2 正規化例  
+以下は、FleetVehicleOperation を JSON-LD 形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:FleetVehicleOperation:8e876a60-5aa3-11e8-b350-d7b51a09fb6c",  
@@ -443,108 +465,122 @@ FleetVehicleOperation:
   }  
 }  
 ```  
-#### FleetVehicleOperation NGSI-LD のキーバリューの例。  
-ここでは、FleetVehicleOperationをkey-valuesとしてJSON-LD形式で記述した例を紹介します。これは、`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### FleetVehicleOperation NGSI-LD キー値例  
+FleetVehicleOperationをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleOperation/context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:FleetVehicleOperation:8e876a60-5aa3-11e8-b350-d7b51a09fb6c",  
-  "type": "FleetVehicleOperation",  
-  "source": "https://source.example.com",  
-  "dataProvider": "https://provider.example.com",  
-  "fleetVehicle": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f",  
-  "fleetVehicleStatus": "urn:ngsi-ld:FleetVehicleStatus:0284e0dc-5aa4-11e8-97e6-2351fc70c286",  
-  "initiatingLocation": {  
-    "type": "Point",  
-    "coordinates": [  
-      -104.99404,  
-      39.75621  
+    "id": "urn:ngsi-ld:FleetVehicleOperation:8e876a60-5aa3-11e8-b350-d7b51a09fb6c",  
+    "type": "FleetVehicleOperation",  
+    "dataProvider": "https://provider.example.com",  
+    "description": "An emergency transportation of a 3 year old boy",  
+    "endedAt": "2016-08-28T10:18:16Z",  
+    "fleetVehicle": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f",  
+    "fleetVehicleStatus": "urn:ngsi-ld:FleetVehicleStatus:0284e0dc-5aa4-11e8-97e6-2351fc70c286",  
+    "initiatingLocation": {  
+        "type": "Point",  
+        "coordinates": [  
+            -104.99404,  
+            39.75621  
+        ]  
+    },  
+    "operationType": "Patient transportation",  
+    "responseTime": 2500,  
+    "result": "Completed",  
+    "source": "https://source.example.com",  
+    "startedAt": "2016-08-22T10:18:16Z",  
+    "transportTime": 1220,  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleOperation/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
-  },  
-  "startedAt": "2016-08-22T10:18:16Z",  
-  "endedAt": "2016-08-28T10:18:16Z",  
-  "operationType": "Patient transportation",  
-  "description": "An emergency transportation of a 3 year old boy",  
-  "result": "Completed",  
-  "responseTime": 2500,  
-  "transportTime": 1220  
 }  
 ```  
-#### FleetVehicleOperation NGSI-LDの正規化例  
-正規化されたJSON-LD形式のFleetVehicleOperationの例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### FleetVehicleOperation NGSI-LD 正規化例  
+以下は、FleetVehicleOperation を JSON-LD 形式で正規化した例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleOperation/context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:FleetVehicleOperation:8e876a60-5aa3-11e8-b350-d7b51a09fb6c",  
-  "type": "FleetVehicleOperation",  
-  "source": {  
-    "type": "Property",  
-    "value": "https://source.example.com"  
-  },  
-  "dataProvider": {  
-    "type": "Property",  
-    "value": "https://provider.example.com"  
-  },  
-  "fleetVehicle": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f"  
-  },  
-  "fleetVehicleStatus": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:FleetVehicleStatus:0284e0dc-5aa4-11e8-97e6-2351fc70c286"  
-  },  
-  "initiatingLocation": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -104.99404,  
-        39.75621  
-      ]  
-    }  
-  },  
-  "startedAt": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-08-22T10:18:16Z"  
-    }  
-  },  
-  "endedAt": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-08-28T10:18:16Z"  
-    }  
-  },  
-  "operationType": {  
-    "type": "Property",  
-    "value": "Patient transportation"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "An emergency transportation of a 3 year old boy"  
-  },  
-  "result": {  
-    "type": "Property",  
-    "value": "Completed"  
-  },  
-  "responseTime": {  
-    "type": "Property",  
-    "value": 2500,  
-    "unitCode": "SEC",  
-    "observedAt": "2016-08-28T10:18:16Z"  
-  },  
-  "transportTime": {  
-    "type": "Property",  
-    "value": 1220,  
-    "unitCode": "SEC",  
-    "observedAt": "2016-08-28T10:18:16Z"  
-  }  
+    "id": "urn:ngsi-ld:FleetVehicleOperation:8e876a60-5aa3-11e8-b350-d7b51a09fb6c",  
+    "type": "FleetVehicleOperation",  
+    "dataProvider": {  
+        "type": "Property",  
+        "value": "https://provider.example.com"  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "An emergency transportation of a 3 year old boy"  
+    },  
+    "endedAt": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-08-28T10:18:16Z"  
+        }  
+    },  
+    "fleetVehicle": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f"  
+    },  
+    "fleetVehicleStatus": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:FleetVehicleStatus:0284e0dc-5aa4-11e8-97e6-2351fc70c286"  
+    },  
+    "initiatingLocation": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -104.99404,  
+                39.75621  
+            ]  
+        }  
+    },  
+    "operationType": {  
+        "type": "Property",  
+        "value": "Patient transportation"  
+    },  
+    "responseTime": {  
+        "type": "Property",  
+        "value": 2500,  
+        "unitCode": "SEC",  
+        "observedAt": "2016-08-28T10:18:16Z"  
+    },  
+    "result": {  
+        "type": "Property",  
+        "value": "Completed"  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": "https://source.example.com"  
+    },  
+    "startedAt": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-08-22T10:18:16Z"  
+        }  
+    },  
+    "transportTime": {  
+        "type": "Property",  
+        "value": 1220,  
+        "unitCode": "SEC",  
+        "observedAt": "2016-08-28T10:18:16Z"  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleOperation/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
