@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 エンティティトランスポートステーション  
-===================  
+===================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Transportation/blob/master/TransportStation/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 グローバルな記述です。**データモデルは、GFTS 標準 https://developers.google.com/transit/gtfs/reference/#stopstxt に従った都市の駅（メトロ、バス、トラム、ヘリポート、...）の一般的な記述と、これらの詳細な記述（アクセス手段、プラットフォーム、補助、...）である**。  
 バージョン: 0.1.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `contactPoint`: 商品に関するお問い合わせ先です。  - `contractingAuthority`: 契約当局の名称  - `contractingCompany`: 局の利用を担当する契約会社の名称。  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateLastReported`: デバイスが正常にデータを報告した最後の時刻を示すタイムスタンプ。ISO8601 UTCフォーマットによる日付と時刻。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `dimension`: グローバル次元。フォーマットは、3 項目のサブプロパティで構成される。単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を用いて与えられます。例えば、**MTR** は Meters（メートル）を表す。  - `id`: エンティティの一意な識別子  - `installationMode`: 地上基準からの相対位置。Enum:'aerial, ground, underGround, underSea'.  - `inventory`: 一般的なデータマッピングは `locationType` = 0, 1, 3, 4 の場合のみです。フォーマットは、4項目のサブプロパティで構成される。  - `levelId`: ロケーションが配置されている階。フロアに関連する数値のインデックス。このステージの他のステージに対する相対的な位置を示す。0は1階を表す。地上階は正のインデックスで、地下階は負のインデックスで示される。  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `locationType`: 異なる場所を記述した GTFS 標準リポジトリへのリンク [場所タイプ]。0 停留所またはプラットフォーム（公共交通機関の利用者が乗降する場所）。1 駅（1つ以上のプラットフォームからなる区域または物理的構造物）。2 出入口（利用者が道路から駅に出入りできる場所）。3 一般的な交差点 (他の `location_type` 値に対応しない、駅内の場所)。4 乗降場 (プラットフォーム上の特定の場所で、利用者が乗り物に乗ったり降りたりする場所)。  - `name`: このアイテムの名称です。  - `openingHoursSpecification`: ある場所の営業時間や、ある場所の中の特定のサービスに関する情報を提供する構造化された値  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `parentStation`: 駅とプラットフォーム間の異なるリンクを記述した GTFS 標準リポジトリ [Parent STATION] へのリンク。ケース '1' location_type = 0 (Stop / platform ), parent_station フィールドは、駅の ID を含む。ケース '2' location_type = 1 (駅), このフィールドは空でなければならない。ケース '3' location_type = 2 (Input / output) または location_type = 3 (generic intersection), parent_station フィールドは、location_type = 1 の駅の ID を含んでいる。ケース '4' location_type = 4 (乗り場), parent_station フィールドはプラットホームの ID を含んでいる。  - `platformCode`: プラットフォーム型停留所の識別子 `location_type` = 0 駅に停車している場合は、0 となる。  - `refPointOfInterest`: この観測に関連する注目点への参照。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `stationConnected`: このステーションから可能な接続。0からNまでの構造化された値で、各項目は `stationType` : [List of Lines connected, separated by a comma] という形式の文字列である。Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, train, tram, trolleybus'.  - `stationType`: 交通機関の駅の種類。Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, trolleybus, tram'.  - `type`: NGSI Entity タイプ。これはTransportStationでなければならない。  - `webSite`: 詳しくは公式サイトへリンクしています。  - `wheelChairAccessible`: 移動に不自由のある人のためのアクセスは可能です。親のいない停留所の場合 0 その停留所のアクセシビリティに関する情報はありません。1 この停留所では、PMR利用者が乗車できる車両がある。2 この停留所ではPRMユーザーは乗車できない。駅の一部である停留所の場合 0 親駅が埋まっている場合、その停留所は親駅の車椅子搭乗動作を受け継ぐ。1 車線は、駅の外から停留所／プラットフォームへの車椅子アクセスを提供する。2 車線は駅の外から停留所／プラットフォームへの車椅子アクセスを提供しない。駅の入力／出力について 0 駅の入力は、指定された場合、主要駅の wheelchair_boarding 動作を継承する。1 駅の入り口は車椅子でアクセス可能である。2 駅の入口から停留所／プラットフォームまで、車椅子でアクセス可能な経路がない。  - `zoneId`: 駅のプライシングゾーン。    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `contactPoint[object]`: 商品に関するお問い合わせ先です。  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)- `contractingAuthority[string]`: 契約当局の名称  - `contractingCompany[string]`: 局の利用を担当する契約会社の名称。  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateLastReported[string]`: デバイスが正常にデータを報告した最後の時刻を示すタイムスタンプ。ISO8601 UTCフォーマットによる日付と時刻。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `dimension[object]`: グローバル次元。フォーマットは、3 項目のサブプロパティで構成される。単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を用いて与えられます。例えば、**MTR** は Meters（メートル）を表す。  - `id[*]`: エンティティの一意な識別子  - `installationMode[string]`: 地上基準からの相対位置。Enum:'aerial, ground, underGround, underSea'.  - `inventory[object]`: 一般的なデータマッピングは `locationType` = 0, 1, 3, 4 の場合のみです。フォーマットは、4項目のサブプロパティで構成される。  - `levelId[number]`: ロケーションが配置されている階。フロアに関連する数値のインデックス。このステージの他のステージとの相対的な位置関係を示す。0は1階を表す。地上階は正のインデックスで、地下階は負のインデックスで示される。  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `locationType[string]`: 異なる場所を記述した GTFS 標準リポジトリへのリンク [場所タイプ]。0 停留所またはプラットフォーム（公共交通機関の利用者が乗降する場所）。1 駅（1つ以上のプラットフォームからなる区域または物理的構造物）。2 出入口（利用者が道路から駅に出入りできる場所）。3 一般的な交差点 (他の `location_type` 値に対応しない、駅内の場所)。4 乗降場 (プラットフォーム上の特定の場所で、利用者が乗り物に乗ったり降りたりする場所)。  - `name[string]`: このアイテムの名称です。  - `openingHoursSpecification[array]`: ある場所の営業時間や、ある場所の中の特定のサービスに関する情報を提供する構造化された値  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `parentStation[*]`: 駅とプラットフォーム間の異なるリンクを記述した GTFS 標準リポジトリ [Parent STATION] へのリンク。ケース '1' location_type = 0 (Stop / platform ), parent_station フィールドは、駅の ID を含む。ケース '2' location_type = 1 (駅), このフィールドは空でなければならない。ケース '3' location_type = 2 (Input / output) または location_type = 3 (generic intersection), parent_station フィールドは、location_type = 1 の駅の ID を含んでいる。ケース '4' location_type = 4 (乗り場), parent_station フィールドはプラットホームの ID を含んでいる。  - `platformCode[number]`: プラットフォーム型停留所の識別子 `location_type` = 0 駅に停車している場合は、0 となる。  - `refPointOfInterest[*]`: この観測に関連する注目点への参照。  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `stationConnected[array]`: このステーションから可能な接続。0からNまでの構造化された値で、各項目は `stationType` : [List of Lines connected, separated by a comma] という形式の文字列である。Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, train, tram, trolleybus' （エアリアルリフト、バス、ケーブルトラム、フェリー、フニクラ、モノレール、地下鉄、電車、トラム、トロリーバス  - `stationType[array]`: 交通機関の駅の種類。Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, trolleybus, tram'.  - `type[string]`: NGSI Entity タイプ。これはTransportStationでなければならない。  - `webSite[string]`: 詳しくは公式サイトへリンクしています。  - `wheelChairAccessible[string]`: 移動に不自由のある人のためのアクセスは可能です。親のいない停留所の場合 0 その停留所のアクセシビリティに関する情報はありません。1 この停留所では、PMR利用者が乗車できる車両がある。2 この停留所ではPRMユーザーは乗車できない。駅の一部である停留所の場合 0 親駅が埋まっている場合、その停留所は親駅の車椅子搭乗動作を受け継ぐ。1 車線は、駅の外から停留所／プラットフォームへの車椅子アクセスを提供する。2 車線は駅の外から停留所／プラットフォームへの車椅子アクセスを提供しない。駅の入力／出力について 0 駅の入力は、指定された場合、主要駅の wheelchair_boarding 動作を継承する。1 駅の入り口は車椅子でアクセス可能である。2 駅の入口から停留所／プラットフォームまで、車椅子でアクセスできる経路がない。  - `zoneId[string]`: 駅のプライシングゾーン。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `dateLastReported`  - `dateObserved`  - `id`  - `location`  - `locationType`  - `stationType`  - `type`  ## プロパティのデータモデル記述  
+- `dateLastReported`  - `dateObserved`  - `id`  - `location`  - `locationType`  - `stationType`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 TransportStation:    
@@ -651,9 +665,14 @@ TransportStation:
   x-version: 0.1.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### TransportStation NGSI-v2 key-value の例。  
 ここでは、TransportStationをJSON-LD形式でkey-valuesにした例を示す。これは `options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:Station:Station:MNCA-STram-L02-AP-T2",  
@@ -822,8 +841,10 @@ TransportStation:
   ]  
 }  
 ```  
+</details>  
 #### TransportStation NGSI-v2 正規化例  
 以下は、TransportStation を JSON-LD 形式で正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:Station:Station:MNCA-STram-L02-AP-T2",  
@@ -1077,8 +1098,10 @@ TransportStation:
   }  
 }  
 ```  
+</details>  
 #### TransportStation NGSI-LD キー値の例  
 ここでは、TransportStationをJSON-LD形式でkey-valuesにした例を示す。これは `options=keyValues` を使用したときに NGSI-LD と互換性があり、個々のエンティティのコンテキストデータを返す。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Station:Station:MNCA-STram-L02-AP-T2",  
@@ -1336,8 +1359,10 @@ TransportStation:
     ]  
 }  
 ```  
+</details>  
 #### トランスポートステーション NGSI-LD 正規化例  
 以下は、TransportStation を JSON-LD 形式で正規化した例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Station:Station:MNCA-STram-L02-AP-T2",  
@@ -1505,8 +1530,17 @@ TransportStation:
     "wheelChairAccessible": 1,  
     "zoneId": "B",  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
