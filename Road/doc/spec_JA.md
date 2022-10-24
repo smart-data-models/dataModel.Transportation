@@ -1,16 +1,32 @@
-エンティティ道路  
-========  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+事業体道路  
+=====<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Transportation/blob/master/Road/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**このエンティティには、調和のとれた地理的および文脈的な道路の説明が含まれています**。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述。**このエンティティは、道路の地理的および文脈的な説明を含んでいる**。  
+バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `annotations`: アイテムに関するアノテーション  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `color`: 商品の色について  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `image`: アイテムのイメージ  - `length`: この道路の総延長（km  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `refRoadSegment`: この道路を定義する道路セグメント。RoadSegmentタイプのエンティティへの参照リスト  - `responsible`: 道路の責任者、すなわち道路の維持管理を担当する組織または企業  - `roadClass`: この道路の分類です。Enum:'m motorway, primary, residential, secondary, service, tertiary, trunk, unclassified'.  許可された値OpenStreetMap](http://wiki.openstreetmap.org/wiki/Key:highway)で記述されたもの。  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI エンティティタイプ。ロードである必要があります。    
-必須項目  
-道路は、1つまたは複数のRoadSegmentエンティティで構成されています。道路セグメントは通常、高速道路の異なる車道をモデル化するために使用されます。自転車専用レーンの存在も、道路セグメントを使ってモデル化する必要があります。また、道路セグメントは、制限速度が異なるセグメントなど、異質なセグメントを持つ道路をモデル化する際にも重要な役割を果たします。このエンティティは、主に自動車およびスマートシティの垂直セグメントと、関連するIoTアプリケーションに関連しています。このデータモデルは、携帯電話事業者およびGSMAの協力を得て開発されました。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `annotations[array]`: アイテムに関するアノテーション  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `color[string]`: 製品の色  . Model: [https://schema.org/color](https://schema.org/color)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `id[*]`: エンティティの一意な識別子  - `image[string]`: アイテムの画像  . Model: [https://schema.org/URL](https://schema.org/URL)- `length[number]`: この道路の総延長（キロメートル  . Model: [https://schema.org/length](https://schema.org/length)- `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `refRoadSegment[array]`: この道路を定義する道路セグメント。RoadSegment 型のエンティティへの参照のリスト  . Model: [https://schema.org/URL](https://schema.org/URL)- `responsible[string]`: 道路の責任者、すなわち道路の維持管理を担当する組織または企業  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `roadClass[string]`: この道路の分類。Enum:'motorway, primary, residential, secondary, service, tertiary, trunk, unclassified'（高速道路、一次、住宅地、二次、サービス、三次、幹線、未分類）。  許容される値。OpenStreetMap](http://wiki.openstreetmap.org/wiki/Key:highway)で記述されているもの。  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: NGSI エンティティの種類。ロードでなければならない  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+<!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+道路は、1つまたは複数のRoadSegmentエンティティで構成されています。道路セグメントは通常、例えば高速道路の異なる車道をモデル化するために使用される。自転車専用レーンの存在も、道路セグメントを使用してモデル化する必要がある。また、道路セグメントは、異種セグメントを持つ道路、たとえば制限速度が異なるセグメントをモデル化するときにも重要な役割を果たす。このエンティティは、主に自動車とスマートシティの垂直セグメントと関連するIoTアプリケーションに関連している。このデータモデルは、携帯電話事業者およびGSMAの協力のもと開発されました。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Road:    
@@ -346,9 +362,14 @@ Road:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### Road NGSI-v2 key-valuesの例。  
-JSON-LD形式のRoadをkey-valuesにした例を紹介します。これは`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### ロードNGSI-v2キーバリューの例  
+ここでは、RoadをJSON-LD形式でkey-valuesにした例を示す。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Spain-Road-A62",  
@@ -365,8 +386,10 @@ Road:
   "responsible": "Ministerio de Fomento - Gobierno de España"  
 }  
 ```  
-#### 道路 NGSI-v2 正規化例  
-ここでは、JSON-LD形式のRoadを正規化した例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### ロードNGSI-v2正規化例  
+以下は、RoadをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Spain-Road-A62",  
@@ -398,69 +421,89 @@ Road:
   }  
 }  
 ```  
-#### Road NGSI-LDのキーバリューの例  
-ここでは、Roadをkey-valuesとしてJSON-LD形式で記述した例を紹介します。これは`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### 道路 NGSI-LD キー値例  
+ここでは、RoadをJSON-LD形式でkey-valuesとした場合の例を示す。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:Road:Spain-Road-A62",  
-  "type": "Road",  
-  "refRoadSegment": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-forwards",  
-      "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-backwards"  
+    "id": "urn:ngsi-ld:Road:Spain-Road-A62",  
+    "type": "Road",  
+    "alternateName": {  
+        "type": "Property",  
+        "value": "E-80"  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Autov\u00eda de Castilla"  
+    },  
+    "length": {  
+        "type": "Property",  
+        "value": 355  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "A-62"  
+    },  
+    "refRoadSegment": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-forwards",  
+            "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-backwards"  
+        ]  
+    },  
+    "responsible": {  
+        "type": "Property",  
+        "value": "Ministerio de Fomento - Gobierno de Espa\u00f1a"  
+    },  
+    "roadClass": {  
+        "type": "Property",  
+        "value": "motorway"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
-  },  
-  "roadClass": {  
-    "type": "Property",  
-    "value": "motorway"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Autov\u00eda de Castilla"  
-  },  
-  "responsible": {  
-    "type": "Property",  
-    "value": "Ministerio de Fomento - Gobierno de Espa\u00f1a"  
-  },  
-  "length": {  
-    "type": "Property",  
-    "value": 355  
-  },  
-  "alternateName": {  
-    "type": "Property",  
-    "value": "E-80"  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "A-62"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
+</details>  
 #### 道路 NGSI-LD 正規化例  
-ここでは、JSON-LD形式のRoadを正規化した例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、RoadをJSON-LD形式で正規化した例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "alternateName": "E-80",  
-  "description": "Autov\u00eda de Castilla",  
-  "id": "urn:ngsi-ld:Road:Spain-Road-A62",  
-  "length": 355,  
-  "name": "A-62",  
-  "refRoadSegment": [  
-    "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-forwards",  
-    "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-backwards"  
-  ],  
-  "responsible": "Ministerio de Fomento - Gobierno de Espa\u00f1a",  
-  "roadClass": "motorway",  
-  "type": "Road"  
+    "id": "urn:ngsi-ld:Road:Spain-Road-A62",  
+    "type": "Road",  
+    "alternateName": "E-80",  
+    "description": "Autov\u00eda de Castilla",  
+    "length": 355,  
+    "name": "A-62",  
+    "refRoadSegment": [  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-forwards",  
+            "datasetId": "urn:ngsi-ld:Relationship:Spain-RoadSegment-A62-0-355-forwards"  
+        },  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-backwards",  
+            "datasetId": "urn:ngsi-ld:Relationship:Spain-RoadSegment-A62-0-355-backwards"  
+        }  
+    ],  
+    "responsible": "Ministerio de Fomento - Gobierno de Espa\u00f1a",  
+    "roadClass": "motorway",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
