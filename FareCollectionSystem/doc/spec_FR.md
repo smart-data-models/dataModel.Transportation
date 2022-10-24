@@ -1,13 +1,31 @@
-Entité : FareCollectionSystem  
-=============================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entité : FareCollectionSystem  
+=============================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.Transportation/blob/master/FareCollectionSystem/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+Description globale : **Un système de collecte des tarifs de transport public Modèle de données**  
+version : 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
-Propriétés requises  
-- Aucune propriété requise  ## Description des propriétés du modèle de données  
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nom alternatif pour cet élément  - `areaServed[string]`: La zone géographique où un service ou un article offert est fourni  . Model: [https://schema.org/Text](https://schema.org/Text)- `cardId[string]`: Id unique du ticket de la transaction ou Id de la carte à puce utilisée dans la transaction.  . Model: [https://schema.org/Text](https://schema.org/Text)- `currentTripCount[number]`: Le nombre actuel de trajets effectués par le véhicule correspondant à cette observation le jour d'exploitation donné.  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified[string]`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description[string]`: Une description de cet article  - `destinationStopCategory[string]`: Type de l'arrêt de bus de destination correspondant à cette observation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `destinationStopId[string]`: Identité unique de l'arrêt de bus où le passager débarque du bus correspondant à cette observation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `destinationStopName[string]`: Le nom de l'arrêt de bus de destination correspondant à cette observation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `direction_id[number]`: Indique la direction du déplacement du véhicule correspondant à cette observation, peut être référencé à partir du flux statique GTFS trips.txt. Identique à : Champ "direction_id" du GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)  . Model: [https://schema.org/Number](https://schema.org/Number)- `entryAreaCode[string]`: Code régional de l'arrêt d'embarquement du passager (utilisé par l'agence de perception des droits). Par exemple, si l'arrêt est un arrêt de service de bus de ville ou un arrêt de bus de banlieue ou un autre type d'arrêt de service, etc.  . Model: [https://schema.org/Text](https://schema.org/Text)- `equipmentCompanyCode[string]`: Code de la société/de l'agence pour l'équipement de transaction (utilisé par l'agence de perception des tarifs). Par exemple, 103 - CBS (city bus service),102 - BRTS etc.  . Model: [https://schema.org/Text](https://schema.org/Text)- `equipmentId[string]`: Id unique de l'équipement correspondant à cette observation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `equipmentSequenceNumber[number]`: Numéro de séquence pour l'équipement donné.  . Model: [https://schema.org/Number](https://schema.org/Number)- `equipmentStopId[string]`: Stop Id (BRTS) où est installé l'équipement correspondant à cette transaction.  . Model: [https://schema.org/Text](https://schema.org/Text)- `equipmentType[string]`: Type d'équipement ou le nom de l'équipement correspondant à cette observation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `equipmentTypeCode[string]`: Code unique indiquant le type d'équipement utilisé dans la transaction (utilisé par l'agence de perception des tarifs). ENUM [1B, 42, 02, 08, 41] 1B - POS, 42 - HTT, 02- Mobile, 08- Porte tarifaire, 41- Valideur de poteau.  . Model: [https://schema.org/Text](https://schema.org/Text)- `exitAreaCode[string]`: Code régional de l'arrêt de descente du passager (utilisé par l'agence de perception des droits). Par exemple, si l'arrêt est un arrêt de service de bus de ville ou un arrêt BRTS ou un autre type d'arrêt de service, etc.  . Model: [https://schema.org/Text](https://schema.org/Text)- `fareForAdult[number]`: Le tarif pour un adulte dans le trajet correspondant à cette observation.  . Model: [https://schema.org/Number](https://schema.org/Number)- `fareForChild[number]`: Le tarif pour un enfant dans le voyage correspondant à cette observation.  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: Identifiant unique de l'entité  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément.  - `observationDateTime[string]`: Dernière heure d'observation signalée.  . Model: [https://schema.org/Text](https://schema.org/Text)- `occupancyLevel[string]`: Niveau d'occupation dans le bus de transport public correspondant à cette observation. Le "rouge" indique que le niveau d'encombrement dans le bus est ÉLEVÉ, le "jaune" indique que le niveau d'encombrement dans le bus est MODÉRÉ et le "vert" indique que le niveau d'encombrement dans le bus est FAIBLE.  . Model: [https://schema.org/Text](https://schema.org/Text)- `originDestinationCode[string]`: Le code des arrêts d'origine et de destination correspondant à cette observation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `originStopCategory[string]`: Type de l'arrêt de bus d'origine correspondant à cette observation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `originStopId[string]`: Id unique de l'arrêt de bus où le passager monte dans le bus correspondant à cette observation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `originStopName[string]`: Le nom de l'arrêt de bus d'origine correspondant à cette observation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `passengerCount[number]`: Nombre de passagers voyageant dans le bus de transport public correspondant à cette observation. Ce nombre est calculé sur la base des transactions de billetterie en temps réel dans le bus de transport public.  . Model: [https://schema.org/Number](https://schema.org/Number)- `route_id[string]`: Id de l'itinéraire attribué à l'itinéraire sur lequel le bus/véhicule correspondant au bus de cette observation circule actuellement. Identique à : Champ 'route_id' du GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `shiftOfOperation[string]`: Poste d'exploitation du véhicule de transport en commun exploité par l'organisme de perception des droits de douane/l'organisme de transport en commun ou l'employé correspondant à cette observation. Indiqué par "1" lorsque le véhicule est exploité en première équipe, "2" lorsque le véhicule est exploité en deuxième équipe et "3" lorsque le véhicule est exploité en troisième équipe.  . Model: [https://schema.org/Text](https://schema.org/Text)- `source[string]`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `stage[number]`: Nombre total d'étapes entre l'arrêt de bus d'origine et l'arrêt de bus de destination.  . Model: [https://schema.org/Number](https://schema.org/Number)- `ticketTypeCode[string]`: Code unique du type de billet du voyage correspondant.  . Model: [https://schema.org/Text](https://schema.org/Text)- `transactionDateTime[string]`: Date-heure de la transaction correspondant à cette observation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `transactionType[string]`: Type de transaction correspondant à cette observation. Par exemple : émission, réémission, entrée, sortie, etc.  . Model: [https://schema.org/Text](https://schema.org/Text)- `transactionTypeDescription[string]`: Description du type de transaction. Explication des différents codes transactionTypeId utilisés dans les données.  . Model: [https://schema.org/Text](https://schema.org/Text)- `transactionVehicleNum[number]`: Code utilisé par l'agence de perception des droits pour le numéro de véhicule correspondant à la transaction.  . Model: [https://schema.org/Number](https://schema.org/Number)- `travelDistance[number]`: La distance entre l'arrêt de bus d'origine et l'arrêt de bus de destination correspondant à cette observation.  . Model: [https://schema.org/Number](https://schema.org/Number)- `trip_id[string]`: Id/nom du trajet attribué au bus correspondant à cette observation, en tenant compte de l'heure de la journée et de la direction du trajet sur le routeId donné. SameAs : Champ 'trip_id' du GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Type d'entité NGSI. Il doit s'agir de FareCollectionSystem.  - `vehicle_label[string]`: Étiquette visible par l'utilisateur, c'est-à-dire quelque chose qui doit être montré au passager pour l'aider à identifier le bon véhicule. Idem : Champ "label" du message GTFS Realtime-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+Propriétés requises  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 FareCollectionSystem:    
@@ -490,14 +508,26 @@ FareCollectionSystem:
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
-  required: []    
+  required:    
+    - id    
+    - type    
   type: object    
-  version: 0.0.1    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/FareCollectionSystem/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/FareCollectionSystem/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Exemples de charges utiles  
 #### FareCollectionSystem Valeurs-clés NGSI-v2 Exemple  
 Voici un exemple de FareCollectionSystem au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:FareCollectionSystem:id:RJSB:34513580",  
@@ -570,140 +600,58 @@ FareCollectionSystem:
   "vehicle_label": "5821JZS"  
 }  
 ```  
-Non disponible l'exemple d'un FareCollectionSystem au format JSON-LD tel que normalisé. Il est compatible avec la NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
-#### FareCollectionSystem Valeurs clés NGSI-LD Exemple  
-Voici un exemple de FareCollectionSystem au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-LD lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
-```json  
-{  
-  "id": "urn:ngsi-ld:FareCollectionSystem:id:RJSB:34513580",  
-  "type": "FareCollectionSystem",  
-  "address": {  
-    "addressCountry": "France",  
-    "addressLocality": "Nice",  
-    "addressRegion": "Provenza-Alpes-Costa Azul",  
-    "postOfficeBoxNumber": "",  
-    "postalCode": "06000",  
-    "streetAddress": "Av. Nicolas II"  
-  },  
-  "alternateName": "",  
-  "areaServed": "Nice",  
-  "cardId": "987201910",  
-  "currentTripCount": 12,  
-  "dataProvider": "",  
-  "dateCreated": "2020-11-02T06:16:42Z",  
-  "dateModified": "2020-12-27T15:13:17Z",  
-  "description": "Fare collection system Nize for regional routes",  
-  "destinationStopCategory": "Airport",  
-  "destinationStopId": "Nice-Airport",  
-  "destinationStopName": "Hour risk somebody deal system discussion other plan. Stage the film occur.",  
-  "direction_id": 1,  
-  "entryAreaCode": "city-bus-service",  
-  "equipmentCompanyCode": "103",  
-  "equipmentId": "S23",  
-  "equipmentSequenceNumber": 2,  
-  "equipmentStopId": "BRTS-Sen-23",  
-  "equipmentType": "Entry sensor",  
-  "equipmentTypeCode": "42",  
-  "exitAreaCode": "city-bus-service",  
-  "fareForAdult": 4.5,  
-  "fareForChild": 3.6,  
-  "location": {  
-    "coordinates": [  
-      43.7034,  
-      7.2663  
-    ],  
-    "type": "Point"  
-  },  
-  "name": "Fare collection system Nize",  
-  "observationDateTime": "1988-12-24T07:06:19Z",  
-  "occupancyLevel": "Green",  
-  "originDestinationCode": "23",  
-  "originStopCategory": "Bus stop",  
-  "originStopId": "9",  
-  "originStopName": "Vauban",  
-  "owner": [  
-    "urn:ngsi-ld:FareCollectionSystem:items:XMXR:79897582",  
-    "urn:ngsi-ld:FareCollectionSystem:items:SKAX:98192518"  
-  ],  
-  "passengerCount": 6,  
-  "route_id": "4",  
-  "seeAlso": [  
-    "urn:ngsi-ld:FareCollectionSystem:items:VSVS:72352464",  
-    "urn:ngsi-ld:FareCollectionSystem:items:VMFR:36424993"  
-  ],  
-  "shiftOfOperation": "2",  
-  "source": "",  
-  "stage": 4,  
-  "ticketTypeCode": "Normal",  
-  "transactionDateTime": "2021-08-20T15:45:22Z",  
-  "transactionType": "Issue",  
-  "transactionTypeDescription": "Regular Fare.",  
-  "transactionTypeId": "2401",  
-  "transactionVehicleNum": 23,  
-  "travelDistance": 7.5,  
-  "trip_id": "4A",  
-  "vehicle_label": "5821JZS",  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
-}  
-```  
-#### FareCollectionSystem NGSI-LD normalisé Exemple  
-Voici un exemple de FareCollectionSystem au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+</details>  
+#### FareCollectionSystem NGSI-v2 normalisé Exemple  
+Voici un exemple de FareCollectionSystem au format JSON-LD tel que normalisé. Il est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:FareCollectionSystem:id:RJSB:34513580",  
   "type": "FareCollectionSystem",  
   "dateCreated": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2020-11-02T06:16:42Z"  
-    }  
+    "type": "DateTime",  
+    "value": "2020-11-02T06:16:42Z"  
   },  
   "dateModified": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2020-12-27T15:13:17Z"  
-    }  
+    "type": "DateTime",  
+    "value": "2020-12-27T15:13:17Z"  
   },  
   "source": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": ""  
   },  
   "name": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Fare collection system Nize"  
   },  
   "alternateName": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": ""  
   },  
   "description": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Fare collection system Nize for regional routes"  
   },  
   "dataProvider": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": ""  
   },  
   "owner": {  
-    "type": "Property",  
+    "type": "array",  
     "value": [  
       "urn:ngsi-ld:FareCollectionSystem:items:XMXR:79897582",  
       "urn:ngsi-ld:FareCollectionSystem:items:SKAX:98192518"  
     ]  
   },  
   "seeAlso": {  
-    "type": "Property",  
+    "type": "array",  
     "value": [  
       "urn:ngsi-ld:FareCollectionSystem:items:VSVS:72352464",  
       "urn:ngsi-ld:FareCollectionSystem:items:VMFR:36424993"  
     ]  
   },  
   "location": {  
-    "type": "Property",  
+    "type": "geo:json",  
     "value": {  
       "type": "Point",  
       "coordinates": [  
@@ -713,7 +661,7 @@ FareCollectionSystem:
     }  
   },  
   "address": {  
-    "type": "Property",  
+    "type": "PostalAddress",  
     "value": {  
       "streetAddress": "Av. Nicolas II",  
       "addressLocality": "Nice",  
@@ -724,153 +672,147 @@ FareCollectionSystem:
     }  
   },  
   "areaServed": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Nice"  
   },  
   "destinationStopName": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Hour risk somebody deal system discussion other plan. Stage the film occur."  
   },  
   "occupancyLevel": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Green"  
   },  
   "travelDistance": {  
-    "type": "Property",  
+    "type": "number",  
     "value": 7.5  
   },  
   "passengerCount": {  
-    "type": "Property",  
+    "type": "number",  
     "value": 6  
   },  
   "transactionType": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Issue"  
   },  
   "ticketTypeCode": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Normal"  
   },  
   "originStopName": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Vauban"  
   },  
   "entryAreaCode": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "city-bus-service"  
   },  
   "cardId": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "987201910"  
   },  
   "transactionTypeId": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "2401"  
   },  
   "stage": {  
-    "type": "Property",  
+    "type": "number",  
     "value": 4  
   },  
   "equipmentId": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "S23"  
   },  
   "direction_id": {  
-    "type": "Property",  
+    "type": "number",  
     "value": 1  
   },  
   "equipmentSequenceNumber": {  
-    "type": "Property",  
+    "type": "number",  
     "value": 2  
   },  
   "shiftOfOperation": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "2"  
   },  
   "route_id": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "4"  
   },  
   "trip_id": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "4A"  
   },  
   "originStopCategory": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Bus stop"  
   },  
   "vehicle_label": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "5821JZS"  
   },  
   "fareForChild": {  
-    "type": "Property",  
+    "type": "number",  
     "value": 3.6  
   },  
   "transactionDateTime": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2021-08-20T15:45:22Z"  
-    }  
+    "type": "DateTime",  
+    "value":  "2021-08-20T15:45:22Z"  
   },  
   "destinationStopId": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Nice-Airport"  
   },  
   "originDestinationCode": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "23"  
   },  
   "currentTripCount": {  
-    "type": "Property",  
+    "type": "number",  
     "value": 12  
   },  
   "equipmentTypeCode": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "42"  
   },  
   "destinationStopCategory": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Airport"  
   },  
   "transactionVehicleNum": {  
-    "type": "Property",  
+    "type": "number",  
     "value": 23  
   },  
   "fareForAdult": {  
-    "type": "Property",  
+    "type": "number",  
     "value": 4.5  
   },  
   "observationDateTime": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "1988-12-24T07:06:19Z"  
-    }  
+    "type": "DateTime",  
+    "value": "1988-12-24T07:06:19Z"  
   },  
   "equipmentCompanyCode": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "103"  
   },  
   "transactionTypeDescription": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Regular Fare."  
   },  
   "exitAreaCode": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "city-bus-service"  
   },  
   "equipmentType": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Entry sensor"  
   },  
   "equipmentStopId": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "BRTS-Sen-23"  
   },  
   "originStopId": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "9"  
   },  
   "@context": [  
@@ -878,4 +820,323 @@ FareCollectionSystem:
   ]  
 }  
 ```  
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude
+</details>  
+#### FareCollectionSystem Valeurs-clés NGSI-LD Exemple  
+Voici un exemple de FareCollectionSystem au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-LD lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+    "id": "urn:ngsi-ld:FareCollectionSystem:id:RJSB:34513580",  
+    "type": "FareCollectionSystem",  
+    "address": {  
+        "addressCountry": "France",  
+        "addressLocality": "Nice",  
+        "addressRegion": "Provenza-Alpes-Costa Azul",  
+        "postOfficeBoxNumber": "",  
+        "postalCode": "06000",  
+        "streetAddress": "Av. Nicolas II"  
+    },  
+    "alternateName": "",  
+    "areaServed": "Nice",  
+    "cardId": "987201910",  
+    "currentTripCount": 12,  
+    "dataProvider": "",  
+    "dateCreated": "2020-11-02T06:16:42Z",  
+    "dateModified": "2020-12-27T15:13:17Z",  
+    "description": "Fare collection system Nize for regional routes",  
+    "destinationStopCategory": "Airport",  
+    "destinationStopId": "Nice-Airport",  
+    "destinationStopName": "Hour risk somebody deal system discussion other plan. Stage the film occur.",  
+    "direction_id": 1,  
+    "entryAreaCode": "city-bus-service",  
+    "equipmentCompanyCode": "103",  
+    "equipmentId": "S23",  
+    "equipmentSequenceNumber": 2,  
+    "equipmentStopId": "BRTS-Sen-23",  
+    "equipmentType": "Entry sensor",  
+    "equipmentTypeCode": "42",  
+    "exitAreaCode": "city-bus-service",  
+    "fareForAdult": 4.5,  
+    "fareForChild": 3.6,  
+    "location": {  
+        "coordinates": [  
+            43.7034,  
+            7.2663  
+        ],  
+        "type": "Point"  
+    },  
+    "name": "Fare collection system Nize",  
+    "observationDateTime": "1988-12-24T07:06:19Z",  
+    "occupancyLevel": "Green",  
+    "originDestinationCode": "23",  
+    "originStopCategory": "Bus stop",  
+    "originStopId": "9",  
+    "originStopName": "Vauban",  
+    "owner": [  
+        "urn:ngsi-ld:FareCollectionSystem:items:XMXR:79897582",  
+        "urn:ngsi-ld:FareCollectionSystem:items:SKAX:98192518"  
+    ],  
+    "passengerCount": 6,  
+    "route_id": "4",  
+    "seeAlso": [  
+        "urn:ngsi-ld:FareCollectionSystem:items:VSVS:72352464",  
+        "urn:ngsi-ld:FareCollectionSystem:items:VMFR:36424993"  
+    ],  
+    "shiftOfOperation": "2",  
+    "source": "",  
+    "stage": 4,  
+    "ticketTypeCode": "Normal",  
+    "transactionDateTime": "2021-08-20T15:45:22Z",  
+    "transactionType": "Issue",  
+    "transactionTypeDescription": "Regular Fare.",  
+    "transactionTypeId": "2401",  
+    "transactionVehicleNum": 23,  
+    "travelDistance": 7.5,  
+    "trip_id": "4A",  
+    "vehicle_label": "5821JZS",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
+}  
+```  
+</details>  
+#### FareCollectionSystem NGSI-LD normalisé Exemple  
+Voici un exemple de FareCollectionSystem au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+    "id": "urn:ngsi-ld:FareCollectionSystem:id:RJSB:34513580",  
+    "type": "FareCollectionSystem",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "streetAddress": "Av. Nicolas II",  
+            "addressLocality": "Nice",  
+            "addressRegion": "Provenza-Alpes-Costa Azul",  
+            "addressCountry": "France",  
+            "postalCode": "06000",  
+            "postOfficeBoxNumber": ""  
+        }  
+    },  
+    "alternateName": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "areaServed": {  
+        "type": "Property",  
+        "value": "Nice"  
+    },  
+    "cardId": {  
+        "type": "Property",  
+        "value": "987201910"  
+    },  
+    "currentTripCount": {  
+        "type": "Property",  
+        "value": 12  
+    },  
+    "dataProvider": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "dateCreated": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2020-11-02T06:16:42Z"  
+        }  
+    },  
+    "dateModified": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2020-12-27T15:13:17Z"  
+        }  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Fare collection system Nize for regional routes"  
+    },  
+    "destinationStopCategory": {  
+        "type": "Property",  
+        "value": "Airport"  
+    },  
+    "destinationStopId": {  
+        "type": "Property",  
+        "value": "Nice-Airport"  
+    },  
+    "destinationStopName": {  
+        "type": "Property",  
+        "value": "Hour risk somebody deal system discussion other plan. Stage the film occur."  
+    },  
+    "direction_id": {  
+        "type": "Property",  
+        "value": 1  
+    },  
+    "entryAreaCode": {  
+        "type": "Property",  
+        "value": "city-bus-service"  
+    },  
+    "equipmentCompanyCode": {  
+        "type": "Property",  
+        "value": "103"  
+    },  
+    "equipmentId": {  
+        "type": "Property",  
+        "value": "S23"  
+    },  
+    "equipmentSequenceNumber": {  
+        "type": "Property",  
+        "value": 2  
+    },  
+    "equipmentStopId": {  
+        "type": "Property",  
+        "value": "BRTS-Sen-23"  
+    },  
+    "equipmentType": {  
+        "type": "Property",  
+        "value": "Entry sensor"  
+    },  
+    "equipmentTypeCode": {  
+        "type": "Property",  
+        "value": "42"  
+    },  
+    "exitAreaCode": {  
+        "type": "Property",  
+        "value": "city-bus-service"  
+    },  
+    "fareForAdult": {  
+        "type": "Property",  
+        "value": 4.5  
+    },  
+    "fareForChild": {  
+        "type": "Property",  
+        "value": 3.6  
+    },  
+    "location": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                43.7034,  
+                7.2663  
+            ]  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Fare collection system Nize"  
+    },  
+    "observationDateTime": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "1988-12-24T07:06:19Z"  
+        }  
+    },  
+    "occupancyLevel": {  
+        "type": "Property",  
+        "value": "Green"  
+    },  
+    "originDestinationCode": {  
+        "type": "Property",  
+        "value": "23"  
+    },  
+    "originStopCategory": {  
+        "type": "Property",  
+        "value": "Bus stop"  
+    },  
+    "originStopId": {  
+        "type": "Property",  
+        "value": "9"  
+    },  
+    "originStopName": {  
+        "type": "Property",  
+        "value": "Vauban"  
+    },  
+    "owner": {  
+        "type": "Property",  
+        "value": [  
+            "urn:ngsi-ld:FareCollectionSystem:items:XMXR:79897582",  
+            "urn:ngsi-ld:FareCollectionSystem:items:SKAX:98192518"  
+        ]  
+    },  
+    "passengerCount": {  
+        "type": "Property",  
+        "value": 6  
+    },  
+    "route_id": {  
+        "type": "Property",  
+        "value": "4"  
+    },  
+    "seeAlso": {  
+        "type": "Property",  
+        "value": [  
+            "urn:ngsi-ld:FareCollectionSystem:items:VSVS:72352464",  
+            "urn:ngsi-ld:FareCollectionSystem:items:VMFR:36424993"  
+        ]  
+    },  
+    "shiftOfOperation": {  
+        "type": "Property",  
+        "value": "2"  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "stage": {  
+        "type": "Property",  
+        "value": 4  
+    },  
+    "ticketTypeCode": {  
+        "type": "Property",  
+        "value": "Normal"  
+    },  
+    "transactionDateTime": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-08-20T15:45:22Z"  
+        }  
+    },  
+    "transactionType": {  
+        "type": "Property",  
+        "value": "Issue"  
+    },  
+    "transactionTypeDescription": {  
+        "type": "Property",  
+        "value": "Regular Fare."  
+    },  
+    "transactionTypeId": {  
+        "type": "Property",  
+        "value": "2401"  
+    },  
+    "transactionVehicleNum": {  
+        "type": "Property",  
+        "value": 23  
+    },  
+    "travelDistance": {  
+        "type": "Property",  
+        "value": 7.5  
+    },  
+    "trip_id": {  
+        "type": "Property",  
+        "value": "4A"  
+    },  
+    "vehicle_label": {  
+        "type": "Property",  
+        "value": "5821JZS"  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
+}  
+```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
