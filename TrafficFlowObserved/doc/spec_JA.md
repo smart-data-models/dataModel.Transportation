@@ -1,18 +1,33 @@
-エンティティTrafficFlowObserved  
-=========================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティTrafficFlowObserved  
+=========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Transportation/blob/master/TrafficFlowObserved/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**ある場所、ある時間における交通流の状態を観察すること。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述。**ある場所と時間における交通の流れの状態を観察すること。  
+バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `averageGapDistance`: 連続する車両間の平均ギャップ距離  - `averageHeadwayTime`: 平均ヘッドウェイタイムヘッドウェイタイムとは、連続する2台の車両間の経過時間のことです。  - `averageVehicleLength`: 観測期間中に通過した車両の平均長さ  
-    観測期間中の  - `averageVehicleSpeed`: 観測期間中に通過した車両の平均速度  - `congested`: 観察期間中に、参照された車線で交通渋滞が発生したかどうかを示すフラグ。この属性がない場合は、交通渋滞がないことを意味する。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateObserved`: この観測の日付と時刻をISO8601 UTC形式で表したもの。これは、特定の時間の瞬間、またはISO8601の間隔で表すことができます。Orion Context Brokerがdatetime intervalsをサポートしていないための回避策として、2つの別々の属性を使用することができます。dateObservedFrom`, `dateObservedTo`.[DateTime](https://schema.org/DateTime)または[Text](https://schema.org/Text)として表現されるISO8601のインターバルです。  - `dateObservedFrom`: 観測期間の開始日時が設定されています。DateObserved`を参照してください。  - `dateObservedTo`: 観測期間の終了日時が設定されています。参照：`dateObserved`（観察された日付  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `intensity`: この観測期間中に検出された車両の総台数  - `laneDirection`: この観測で参照された車線の通常の進行方向。この属性は、観測結果がどの道路セグメントも参照していない場合に有用であり、観測された交通流の進行方向を知ることができる。Enum:forward, backward'.これらの値の意味については、RoadSegmentを参照してください。  - `laneId`: レーンの識別。車線の識別は、[OpenStreetMap](http://wiki.openstreetmap.org/wiki/Forward_%26_backward,_left_%26_right)をベースにしたRoadSegmentエンティティで定義された規約を使用しています。  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `occupancy`: 観測された車線を車両が占有していた観測時間の割合  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `refRoadSegment`: 観察が行われた関係する道路セグメント。RoadSegmentタイプのエンティティへの参照  - `reversedLane`: 観察期間中に車線の交通が逆流したかどうかを示すフラグ。この属性がない場合は、車線の逆走がないことを意味する  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSIのEntityタイプ。それはTrafficFlowObservedでなければならない。  - `vehicleSubType`: 例えば、`vehicleType` が `Lorry` に設定されている場合、`vehicleSubType` には `OGV1` や `OGV2` を指定して、車両の正確なタイプに関する詳細情報を伝えることができます。  - `vehicleType`: 構造上の特徴から見た車両の種類。Enum:'agriculturalVehicle, bicycle, bus, minibus, car, caravan, tram, tanker, carWithCaravan, carWithTrailer, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, trailer, van, constructionOrMaintenanceVehicle, trolley, binTrolley, sweepingMachine, cleaningTrolley'.    
-必須項目  
-- `dateObserved`  - `id`  - `type`    
-この企業は、主にオートモーティブとスマートシティの垂直セグメントおよび関連するIoTアプリケーションに関連しています。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `averageGapDistance[number]`: 連続車間距離の平均値  . Model: [https://schema.org/Number](https://schema.org/Number)- `averageHeadwayTime[number]`: 平均ヘッドウェイ時間。ヘッドウェイ時間とは、連続する2台の車両が通過するまでの楕円形の時間です  . Model: [https://schema.org/Number](https://schema.org/Number)- `averageVehicleLength[number]`: 観測期間中に通過した車両の平均長  
+    観測期間中  . Model: [https://schema.org/Number](https://schema.org/Number)- `averageVehicleSpeed[number]`: 観測期間中に通過した車両の平均速度  . Model: [https://schema.org/Number](https://schema.org/Number)- `congested[boolean]`: 観測期間中に参照レーンに渋滞が発生したか否かのフラグ。この属性がない場合、渋滞が発生していないことを示す。  . Model: [https://schema.org/Boolean.](https://schema.org/Boolean.)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateObserved[string]`: ISO8601 UTCフォーマットでのこの観測の日付と時間。これは、特定の時間の瞬間かISO8601の間隔で表すことができます。Orion Context Broker が日時の間隔をサポートしていないことに対する回避策として、2つの別々の属性を使用することができます。dateObservedFrom`, `dateObservedTo` です。[DateTime](https://schema.org/DateTime) または [Text](https://schema.org/Text) として表される ISO8601 のインターバル。  . Model: [https://schema.org/DateTime.](https://schema.org/DateTime.)- `dateObservedFrom[string]`: 観測期間の開始日時。dateObserved` を参照。  . Model: [https://schema.org/Datetime.](https://schema.org/Datetime.)- `dateObservedTo[string]`: 観測期間の終了日時。DateObserved` を参照。  . Model: [https://schema.org/Datetime.](https://schema.org/Datetime.)- `description[string]`: このアイテムの説明  - `id[*]`: エンティティの一意な識別子  - `intensity[number]`: 今回の観測期間中に検出された車両の総台数  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `laneDirection[string]`: この観測で参照される車線の通常の進行方向。この属性は、観測された交通流の進行方向を知ることができ、どの道路セグメントも参照していない場合に有用である。Enum:forward, backward'.これらの値のセマンティクスの説明については、RoadSegment を参照のこと。  . Model: [https://schema.org/Text](https://schema.org/Text)- `laneId[integer]`: 車線識別。車線の識別は、[OpenStreetMap](http://wiki.openstreetmap.org/wiki/Forward_%26_backward,_left_%26_right)に準拠したRoadSegmentエンティティで定義された規約を使用しています。  . Model: [https://schema.org/Number](https://schema.org/Number)- `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `occupancy[number]`: 観測車線を占有した観測時間の割合  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `refRoadSegment[string]`: 観測された道路セグメント。RoadSegment 型のエンティティへの参照。  . Model: [https://schema.org/URL](https://schema.org/URL)- `reversedLane[boolean]`: 観測期間中に車線の逆走があったかどうかを示すフラグ。この属性がない場合は、レーン逆転がないことを意味する  . Model: [https://schema.org/Boolean.](https://schema.org/Boolean.)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: NGSI Entity タイプ。TrafficFlowObservedでなければならない。  - `vehicleSubType[string]`: 例えば、`vehicleType` が `Lorry` の場合、`vehicleSubType` は `OGV1` や `OGV2` で、より正確な車両の種類を伝えることができるようにすることができる。  - `vehicleType[string]`: 構造的特徴から見た車両のタイプ。Enum:'agriculturalVehicle, bicycle, bus, minibus, car, caravan, tram, tanker, carWithCaravan, carWithTrailer, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, trailer, van, constructionOrMaintenanceVehicle, trolley, binTrolley, sweepingMachine, cleaningTrolley'.  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `dateObserved`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+この事業体は、主に自動車およびスマートシティの垂直セグメントと関連するIoTアプリケーションに関連しています。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 TrafficFlowObserved:    
@@ -430,9 +445,14 @@ TrafficFlowObserved:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### TrafficFlowObserved NGSI-v2 key-valuesの例。  
-ここでは、JSON-LD形式のTrafficFlowObservedをkey-valuesで表現した例を紹介します。これは、`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### TrafficFlowObserved NGSI-v2 key-value の例。  
+TrafficFlowObservedをJSON-LD形式でkey-valuesとした例です。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "TrafficFlowObserved-Valladolid-osm-60821110",  
@@ -463,8 +483,10 @@ TrafficFlowObserved:
   "laneDirection": "forward"  
 }  
 ```  
-#### TrafficFlowObserved NGSI-v2 の正規化された例。  
-ここでは、正規化されたJSON-LD形式のTrafficFlowObservedの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### TrafficFlowObserved NGSI-v2 正規化例  
+以下は、TrafficFlowObservedをJSON-LD形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "TrafficFlowObserved-Valladolid-osm-60821110",  
@@ -525,147 +547,159 @@ TrafficFlowObserved:
   }  
 }  
 ```  
-#### TrafficFlowObserved NGSI-LD key-valuesの例。  
-ここでは、JSON-LD形式のTrafficFlowObservedをkey-valuesにした例を紹介します。これは、`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### TrafficFlowObserved NGSI-LD key-value の例。  
+TrafficFlowObservedをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータが返されます。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:TrafficFlowObserved:TrafficFlowObserved-Valladolid-osm-60821110",  
-  "type": "TrafficFlowObserved",  
-  "dateObserved": {  
-    "type": "Property",  
-    "value": "2016-12-07T11:10:00/2016-12-07T11:15:00"  
-  },  
-  "laneDirection": {  
-    "type": "Property",  
-    "value": "forward"  
-  },  
-  "dateObservedFrom": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-12-07T11:10:00Z"  
-    }  
-  },  
-  "averageVehicleLength": {  
-    "type": "Property",  
-    "value": 9.87  
-  },  
-  "averageHeadwayTime": {  
-    "type": "Property",  
-    "value": 0.5  
-  },  
-  "occupancy": {  
-    "type": "Property",  
-    "value": 0.76  
-  },  
-  "reversedLane": {  
-    "type": "Property",  
-    "value": false  
-  },  
-  "dateObservedTo": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-12-07T11:15:00Z"  
-    }  
-  },  
-  "intensity": {  
-    "type": "Property",  
-    "value": 197  
-  },  
-  "laneId": {  
-    "type": "Property",  
-    "value": 1  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "LineString",  
-      "coordinates": [  
-        [  
-          -4.73735395519672,  
-          41.6538181849672  
-        ],  
-        [  
-          -4.73414858659993,  
-          41.6600594193478  
-        ],  
-        [  
-          -4.73447575302641,  
-          41.659585195093  
-        ]  
-      ]  
-    }  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressLocality": "Valladolid",  
-      "addressCountry": "ES",  
-      "streetAddress": "Avenida de Salamanca",  
-      "type": "PostalAddress"  
-    }  
-  },  
-  "averageVehicleSpeed": {  
-    "type": "Property",  
-    "value": 52.6  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:TrafficFlowObserved:TrafficFlowObserved-Valladolid-osm-60821110",  
+    "type": "TrafficFlowObserved",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressLocality": "Valladolid",  
+            "addressCountry": "ES",  
+            "streetAddress": "Avenida de Salamanca",  
+            "type": "PostalAddress"  
+        }  
+    },  
+    "averageHeadwayTime": {  
+        "type": "Property",  
+        "value": 0.5  
+    },  
+    "averageVehicleLength": {  
+        "type": "Property",  
+        "value": 9.87  
+    },  
+    "averageVehicleSpeed": {  
+        "type": "Property",  
+        "value": 52.6  
+    },  
+    "dateObserved": {  
+        "type": "Property",  
+        "value": "2016-12-07T11:10:00/2016-12-07T11:15:00"  
+    },  
+    "dateObservedFrom": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-12-07T11:10:00Z"  
+        }  
+    },  
+    "dateObservedTo": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-12-07T11:15:00Z"  
+        }  
+    },  
+    "intensity": {  
+        "type": "Property",  
+        "value": 197  
+    },  
+    "laneDirection": {  
+        "type": "Property",  
+        "value": "forward"  
+    },  
+    "laneId": {  
+        "type": "Property",  
+        "value": 1  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "LineString",  
+            "coordinates": [  
+                [  
+                    -4.73735395519672,  
+                    41.6538181849672  
+                ],  
+                [  
+                    -4.73414858659993,  
+                    41.6600594193478  
+                ],  
+                [  
+                    -4.73447575302641,  
+                    41.659585195093  
+                ]  
+            ]  
+        }  
+    },  
+    "occupancy": {  
+        "type": "Property",  
+        "value": 0.76  
+    },  
+    "reversedLane": {  
+        "type": "Property",  
+        "value": false  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### TrafficFlowObserved NGSI-LDの正規化例  
-ここでは、JSON-LD形式のTrafficFlowObservedを正規化した例を紹介します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### TrafficFlowObserved NGSI-LD 正規化例  
+TrafficFlowObservedをJSON-LD形式で正規化した例です。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "address": {  
-    "addressCountry": "ES",  
-    "addressLocality": "Valladolid",  
-    "streetAddress": "Avenida de Salamanca",  
-    "type": "PostalAddress"  
-  },  
-  "averageHeadwayTime": 0.5,  
-  "averageVehicleLength": 9.87,  
-  "averageVehicleSpeed": 52.6,  
-  "dateObserved": "2016-12-07T11:10:00/2016-12-07T11:15:00",  
-  "dateObservedFrom": {  
-    "@type": "DateTime",  
-    "@value": "2016-12-07T11:10:00Z"  
-  },  
-  "dateObservedTo": {  
-    "@type": "DateTime",  
-    "@value": "2016-12-07T11:15:00Z"  
-  },  
-  "id": "urn:ngsi-ld:TrafficFlowObserved:TrafficFlowObserved-Valladolid-osm-60821110",  
-  "intensity": 197,  
-  "laneDirection": "forward",  
-  "laneId": 1,  
-  "location": {  
-    "coordinates": [  
-      [  
-        -4.73735395519672,  
-        41.6538181849672  
-      ],  
-      [  
-        -4.73414858659993,  
-        41.6600594193478  
-      ],  
-      [  
-        -4.73447575302641,  
-        41.659585195093  
-      ]  
-    ],  
-    "type": "LineString"  
-  },  
-  "occupancy": 0.76,  
-  "reversedLane": false,  
-  "type": "TrafficFlowObserved"  
+    "id": "urn:ngsi-ld:TrafficFlowObserved:TrafficFlowObserved-Valladolid-osm-60821110",  
+    "type": "TrafficFlowObserved",  
+    "address": {  
+        "addressCountry": "ES",  
+        "addressLocality": "Valladolid",  
+        "streetAddress": "Avenida de Salamanca",  
+        "type": "PostalAddress"  
+    },  
+    "averageHeadwayTime": 0.5,  
+    "averageVehicleLength": 9.87,  
+    "averageVehicleSpeed": 52.6,  
+    "dateObserved": "2016-12-07T11:10:00/2016-12-07T11:15:00",  
+    "dateObservedFrom": {  
+        "@type": "DateTime",  
+        "@value": "2016-12-07T11:10:00Z"  
+    },  
+    "dateObservedTo": {  
+        "@type": "DateTime",  
+        "@value": "2016-12-07T11:15:00Z"  
+    },  
+    "intensity": 197,  
+    "laneDirection": "forward",  
+    "laneId": 1,  
+    "location": {  
+        "coordinates": [  
+            [  
+                -4.73735395519672,  
+                41.6538181849672  
+            ],  
+            [  
+                -4.73414858659993,  
+                41.6600594193478  
+            ],  
+            [  
+                -4.73447575302641,  
+                41.659585195093  
+            ]  
+        ],  
+        "type": "LineString"  
+    },  
+    "occupancy": 0.76,  
+    "reversedLane": false,  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
