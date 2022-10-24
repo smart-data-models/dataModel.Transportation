@@ -1,17 +1,32 @@
-Entität: FleetVehicle  
-=====================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entität: FleetVehicle  
+=====================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Transportation/blob/master/FleetVehicle/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **Diese Einheit enthält eine harmonisierte Beschreibung eines generischen Flottenfahrzeugs wie eines Lieferfahrzeugs, eines Krankenwagens oder eines Postfahrzeugs. Diese Entität ist in erster Linie mit dem vertikalen Segment der Transport- und Logistikbranche verbunden, kann aber auch für viele andere verwandte IoT-Anwendungen verwendet werden.**  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+Globale Beschreibung: **Diese Einheit enthält eine harmonisierte Beschreibung eines generischen Flottenfahrzeugs wie eines Lieferfahrzeugs, eines Krankenwagens oder eines Postfahrzeugs. Diese Entität wird in erster Linie mit dem vertikalen Segment von Transport und Logistik in Verbindung gebracht, kann aber auch für viele andere verwandte IoT-Anwendungen verwendet werden.**  
+Version: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `fleetVehicleType`: Die Art des Fahrzeugs, z. B. (nicht beschränkt auf) diese. Enum:'Taxi, Krankenwagen, Post, Feuerwehr & Rettung, Lieferung'  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `operatingCompany`: Angaben zur Organisation, die dieses Flottenfahrzeug betreibt. Basierend auf Schema.org Organisation  - `operator`: Der übliche Betreiber/Fahrer/Halter dieses Flottenfahrzeugs, codiert als Schema.org-Person  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type`: NGSI Entity-Kennung. Es muss FleetVehicle sein  - `vehicle`: Verweis auf die zugehörige Fahrzeuginstanz, die die wichtigsten Attribute dieses Flottenfahrzeugs beschreibt.    
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `fleetVehicleType[string]`: Die Art des Fahrzeugs, z. B. (nicht beschränkt auf) die folgenden. Enum:'Taxi, Krankenwagen, Post, Feuerwehr & Rettung, Lieferung'  - `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels.  - `operatingCompany[string]`: Angaben zur Organisation, die dieses Flottenfahrzeug betreibt. Basierend auf Schema.org Organisation  . Model: [https://schema.org/Organization](https://schema.org/Organization)- `operator[*]`: Der übliche Betreiber/Fahrer/Halter dieses Flottenfahrzeugs, codiert als Schema.org-Person  . Model: [https://schema.org/Person](https://schema.org/Person)- `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `type[string]`: NGSI Entity-Kennung. Es muss FleetVehicle sein  - `vehicle[*]`: Verweis auf die zugehörige Fahrzeuginstanz, die die wichtigsten Attribute dieses Flottenfahrzeugs beschreibt.  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
-- `id`  - `type`    
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Dieses Datenmodell stammt aus dem ursprünglichen GSMA IoT-Projekt, https://www.gsma.com/iot/iot-big-data/. Es wurden einige kleinere Anpassungen vorgenommen, um den Anforderungen intelligenter Datenmodelle zu entsprechen.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 FleetVehicle:    
@@ -328,9 +343,14 @@ FleetVehicle:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Beispiel-Nutzlasten  
 #### FleetVehicle NGSI-v2 key-values Beispiel  
-Hier ist ein Beispiel für ein FleetVehicle im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für ein FleetVehicle im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:FleetVehicle:630b8818-5aa2-11e8-91c6-bf6b90c0ad02",  
@@ -343,8 +363,10 @@ FleetVehicle:
   "operator": "urn:ngsi-ld:Person:fe018d4e-46f8-11e8-ae6b-df5577f85836"  
 }  
 ```  
+</details>  
 #### FleetVehicle NGSI-v2 normalisiert Beispiel  
 Hier ist ein Beispiel für ein FleetVehicle im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:FleetVehicle:630b8818-5aa2-11e8-91c6-bf6b90c0ad02",  
@@ -375,59 +397,73 @@ FleetVehicle:
   }  
 }  
 ```  
+</details>  
 #### FleetVehicle NGSI-LD key-values Beispiel  
 Hier ist ein Beispiel für ein FleetVehicle im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smart-data-models.github.io/datamodel.Transportation/FleetVehicle/context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:FleetVehicle:630b8818-5aa2-11e8-91c6-bf6b90c0ad02",  
-  "type": "FleetVehicle",  
-  "source": "https://source.example.com",  
-  "dataProvider": "https://provider.example.com",  
-  "vehicle": "urn:ngsi-ld:Vehicle:76a67054-5aa2-11e8-b0ee-43cfe58d3cd1",  
-  "fleetVehicleType": "Ambulance",  
-  "operatingCompany": "NHS",  
-  "operator": "urn:ngsi-ld:Person:fe018d4e-46f8-11e8-ae6b-df5577f85836"  
+    "id": "urn:ngsi-ld:FleetVehicle:630b8818-5aa2-11e8-91c6-bf6b90c0ad02",  
+    "type": "FleetVehicle",  
+    "dataProvider": "https://provider.example.com",  
+    "fleetVehicleType": "Ambulance",  
+    "operatingCompany": "NHS",  
+    "operator": "urn:ngsi-ld:Person:fe018d4e-46f8-11e8-ae6b-df5577f85836",  
+    "source": "https://source.example.com",  
+    "vehicle": "urn:ngsi-ld:Vehicle:76a67054-5aa2-11e8-b0ee-43cfe58d3cd1",  
+    "@context": [  
+        "https://smart-data-models.github.io/datamodel.Transportation/FleetVehicle/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### FleetVehicle NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für ein FleetVehicle im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für ein FleetVehicle im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smart-data-models.github.io/datamodel.Transportation/FleetVehicle/context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:FleetVehicle:630b8818-5aa2-11e8-91c6-bf6b90c0ad02",  
-  "type": "FleetVehicle",  
-  "source": {  
-    "type": "Property",  
-    "value": "https://source.example.com"  
-  },  
-  "dataProvider": {  
-    "type": "Property",  
-    "value": "https://provider.example.com"  
-  },  
-  "vehicle": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Vehicle:76a67054-5aa2-11e8-b0ee-43cfe58d3cd1"  
-  },  
-  "fleetVehicleType": {  
-    "type": "Property",  
-    "value": "Ambulance"  
-  },  
-  "operatingCompany": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "https://schema.org/Organization",  
-      "@value": "NHS"  
-    }  
-  },  
-  "operator": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Person:fe018d4e-46f8-11e8-ae6b-df5577f85836"  
-  }  
+    "id": "urn:ngsi-ld:FleetVehicle:630b8818-5aa2-11e8-91c6-bf6b90c0ad02",  
+    "type": "FleetVehicle",  
+    "dataProvider": {  
+        "type": "Property",  
+        "value": "https://provider.example.com"  
+    },  
+    "fleetVehicleType": {  
+        "type": "Property",  
+        "value": "Ambulance"  
+    },  
+    "operatingCompany": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "https://schema.org/Organization",  
+            "@value": "NHS"  
+        }  
+    },  
+    "operator": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Person:fe018d4e-46f8-11e8-ae6b-df5577f85836"  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": "https://source.example.com"  
+    },  
+    "vehicle": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Vehicle:76a67054-5aa2-11e8-b0ee-43cfe58d3cd1"  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/datamodel.Transportation/FleetVehicle/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
-Siehe [FAQ 10](https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
