@@ -1,16 +1,32 @@
-Entità: Strada  
-==============  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entità: Strada  
+==============<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.Transportation/blob/master/Road/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descrizione globale: **Questa entità contiene una descrizione geografica e contestuale armonizzata di una strada.  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+Descrizione globale: **Questa entità contiene una descrizione geografica e contestuale armonizzata di una strada **.  
+versione: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Elenco delle proprietà  
 
-- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `annotations`: Annotazioni sull'elemento  - `areaServed`: L'area geografica in cui viene fornito un servizio o un articolo offerto  - `color`: Il colore del prodotto  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `description`: Una descrizione di questo articolo  - `id`: Identificatore unico dell'entità  - `image`: Un'immagine dell'oggetto  - `length`: Lunghezza totale di questa strada in chilometri  - `location`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: Il nome di questo articolo.  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `refRoadSegment`: Segmenti di strada che definiscono questa strada. Elenco di riferimenti a entità di tipo RoadSegment  - `responsible`: Responsabile della strada, cioè l'organismo o la società incaricata della sua manutenzione  - `roadClass`: La classificazione di questa strada. Enum:'motorway, primary, residential, secondary, service, tertiary, trunk, unclassified'.  Valori consentiti: Quelli descritti da [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Key:highway).  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `type`: Tipo di entità NGSI. Deve essere Road    
+<sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
+- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nome alternativo per questa voce  - `annotations[array]`: Annotazioni sull'elemento  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `color[string]`: Il colore del prodotto  . Model: [https://schema.org/color](https://schema.org/color)- `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated[string]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified[string]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description[string]`: Descrizione dell'articolo  - `id[*]`: Identificatore univoco dell'entità  - `image[string]`: Un'immagine dell'articolo  . Model: [https://schema.org/URL](https://schema.org/URL)- `length[number]`: Lunghezza totale della strada in chilometri  . Model: [https://schema.org/length](https://schema.org/length)- `location[*]`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name[string]`: Il nome di questo elemento.  - `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `refRoadSegment[array]`: Segmenti stradali che definiscono questa strada. Elenco dei riferimenti alle entità di tipo RoadSegment  . Model: [https://schema.org/URL](https://schema.org/URL)- `responsible[string]`: Responsabile della strada, ovvero l'organismo o la società incaricata della sua manutenzione.  . Model: [https://schema.org/Text.](https://schema.org/Text.)- `roadClass[string]`: La classificazione di questa strada. Enum:'autostrada, primaria, residenziale, secondaria, di servizio, terziaria, tronco, non classificata'.  Valori ammessi: Quelli descritti da [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Key:highway).  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type[string]`: Tipo di entità NGSI. Deve essere Strada  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Proprietà richieste  
-Le strade sono composte da una o più entità RoadSegment. I segmenti di strada sono di solito usati per modellare le diverse carreggiate delle autostrade, per esempio. Anche la presenza di piste ciclabili dedicate dovrebbe essere modellata usando segmenti stradali. I segmenti stradali giocano anche un ruolo importante quando si modellano strade con segmenti eterogenei, per esempio segmenti in cui i limiti di velocità sono diversi. Questa entità è principalmente associata ai segmenti verticali Automotive e Smart City e alle relative applicazioni IoT. Questo modello di dati è stato sviluppato in collaborazione con gli operatori mobili e la GSMA.  
-## Descrizione del modello di dati delle proprietà  
+<!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+Le strade sono costituite da una o più entità RoadSegment. I segmenti stradali sono solitamente utilizzati per modellare le diverse carreggiate delle autostrade, ad esempio. Anche la presenza di piste ciclabili dedicate deve essere modellata utilizzando segmenti stradali. I segmenti stradali svolgono un ruolo importante anche nella modellazione di strade con segmenti eterogenei, ad esempio segmenti in cui i limiti di velocità sono diversi. Questa entità è principalmente associata ai segmenti verticali Automotive e Smart City e alle relative applicazioni IoT. Questo modello di dati è stato sviluppato in collaborazione con gli operatori di telefonia mobile e il GSMA.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Road:    
@@ -346,9 +362,14 @@ Road:
   x-version: 0.0.1    
 ```  
 </details>    
-## Esempio di payloads  
-#### Strada NGSI-v2 valori chiave Esempio  
-Ecco un esempio di una strada in formato JSON-LD come key-values. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
+## Esempi di payload  
+#### Strada NGSI-v2 valori-chiave Esempio  
+Ecco un esempio di una strada in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Spain-Road-A62",  
@@ -365,8 +386,10 @@ Road:
   "responsible": "Ministerio de Fomento - Gobierno de España"  
 }  
 ```  
+</details>  
 #### Strada NGSI-v2 normalizzata Esempio  
-Ecco un esempio di una strada in formato JSON-LD normalizzata. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di Strada in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Spain-Road-A62",  
@@ -398,69 +421,89 @@ Road:
   }  
 }  
 ```  
+</details>  
 #### Strada NGSI-LD valori-chiave Esempio  
-Ecco un esempio di una strada in formato JSON-LD come key-values. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di una strada in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:Road:Spain-Road-A62",  
-  "type": "Road",  
-  "refRoadSegment": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-forwards",  
-      "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-backwards"  
+    "id": "urn:ngsi-ld:Road:Spain-Road-A62",  
+    "type": "Road",  
+    "alternateName": {  
+        "type": "Property",  
+        "value": "E-80"  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Autov\u00eda de Castilla"  
+    },  
+    "length": {  
+        "type": "Property",  
+        "value": 355  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "A-62"  
+    },  
+    "refRoadSegment": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-forwards",  
+            "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-backwards"  
+        ]  
+    },  
+    "responsible": {  
+        "type": "Property",  
+        "value": "Ministerio de Fomento - Gobierno de Espa\u00f1a"  
+    },  
+    "roadClass": {  
+        "type": "Property",  
+        "value": "motorway"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
-  },  
-  "roadClass": {  
-    "type": "Property",  
-    "value": "motorway"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Autov\u00eda de Castilla"  
-  },  
-  "responsible": {  
-    "type": "Property",  
-    "value": "Ministerio de Fomento - Gobierno de Espa\u00f1a"  
-  },  
-  "length": {  
-    "type": "Property",  
-    "value": 355  
-  },  
-  "alternateName": {  
-    "type": "Property",  
-    "value": "E-80"  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "A-62"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
+</details>  
 #### Strada NGSI-LD normalizzata Esempio  
-Ecco un esempio di una strada in formato JSON-LD normalizzata. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di Strada in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "alternateName": "E-80",  
-  "description": "Autov\u00eda de Castilla",  
-  "id": "urn:ngsi-ld:Road:Spain-Road-A62",  
-  "length": 355,  
-  "name": "A-62",  
-  "refRoadSegment": [  
-    "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-forwards",  
-    "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-backwards"  
-  ],  
-  "responsible": "Ministerio de Fomento - Gobierno de Espa\u00f1a",  
-  "roadClass": "motorway",  
-  "type": "Road"  
+    "id": "urn:ngsi-ld:Road:Spain-Road-A62",  
+    "type": "Road",  
+    "alternateName": "E-80",  
+    "description": "Autov\u00eda de Castilla",  
+    "length": 355,  
+    "name": "A-62",  
+    "refRoadSegment": [  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-forwards",  
+            "datasetId": "urn:ngsi-ld:Relationship:Spain-RoadSegment-A62-0-355-forwards"  
+        },  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-0-355-backwards",  
+            "datasetId": "urn:ngsi-ld:Relationship:Spain-RoadSegment-A62-0-355-backwards"  
+        }  
+    ],  
+    "responsible": "Ministerio de Fomento - Gobierno de Espa\u00f1a",  
+    "roadClass": "motorway",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
