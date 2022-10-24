@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entidad: EVChargingStation  
-==========================  
+==========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.Transportation/blob/master/EVChargingStation/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Descripción global: **Estación de recarga de vehículos eléctricos  
 versión: 0.1.0  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Lista de propiedades  
 
-- `acceptedPaymentMethod`: Tipo(s) de cargo al utilizar esta estación. Enum:'Por transferencia bancaria por adelantado, Por factura, En efectivo, Por cheque por adelantado, Contra reembolso, Débito directo, GoogleCheckout, PayPal, PaySwarm'  - `address`: La dirección postal  - `allowedVehicleType`: Tipo(s) de vehículo que se puede(n) cargar. Enum:'bicicleta, autobús, coche, caravana, motocicleta, moto, camión'  - `alternateName`: Un nombre alternativo para este artículo  - `amountCollected`: Importe recaudado por el servicio correspondiente a esta observación.  - `amperage`: El amperaje total ofrecido por la estación de carga.  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `availableCapacity`: El número de vehículos que se pueden cargar actualmente. Debe ser menor o igual que la `capacidad`.  - `capacity`: El número total de vehículos que pueden cargarse al mismo tiempo. El número total de enchufes puede ser mayor.  - `chargeType`: Tipo(s) de cargo al utilizar esta estación. Enum:'pago anual, plano, gratuito, pago mensual, otro'  - `chargingUnitId`: El Id del punto de carga en la estación de carga de vehículos eléctricos correspondiente a esta observación.  - `contactPoint`: Los datos para contactar con el artículo.  - `dataDescriptor`: URI que apunta a la entidad descriptora de datos  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `endDateTime`: Hora de finalización comunicada correspondiente a esta observación.  - `id`: Identificador único de la entidad  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `network`: El nombre de la Red con la que coopera el operador.  - `observationDateTime`: Última hora de observación comunicada.  - `openingHours`: Horario de apertura de la estación de carga.  - `operator`: Operador de la estación de carga.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `powerConsumption`: Potencia consumida por la entidad correspondiente a esta observación.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `socketNumber`: El número total de enchufes que ofrece esta estación de carga  - `socketType`: El tipo de enchufes que ofrece esta estación. Enum:'Enchufe_de_caravana, CHAdeMO, CCS/SAE, Dual_CHAdeMO, Dual_J-1772, Dual_Mennekes, J-1772, Mennekes, Otros, Tesla, Tipo2, Tipo3, Wall_Euro'.  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `startDateTime`: Hora de inicio informada correspondiente a esta observación.  - `stationName`: El nombre de la estación correspondiente a esta observación. Puede ser el nombre de la estación de acoplamiento de bicicletas, la estación de carga, etc.  - `status`: Estado de la estación de carga. Enum:'almostEmpty, almostFull, empty, full, outOfService, withIncidence, working'. O cualquier otro específico de la aplicación.  - `taxAmountCollected`: El importe de los impuestos que gravan los productos, las cosas y los servicios, que incluye el impuesto sobre las ventas, el impuesto sobre el valor añadido, el impuesto sobre los servicios, el impuesto sobre bienes y servicios, los derechos de aduana, etc.  - `transactionId`: Id. de transacción único de la entidad correspondiente a esta observación.  - `transactionType`: Tipo de transacción basada en el modo de pago (por ejemplo, móvil/UPI, tarjeta, etc.) o modo de servicio (por ejemplo, emisión, reemisión, entrada, salida, etc.) correspondiente a esta observación.  - `type`: Tipo de entidad NGSI. Tiene que ser EVChargingStation  - `vehicleType`: Tipo de vehículo desde el punto de vista de sus características estructurales. Es diferente de la categoría del vehículo. Enum:"Vehículo agrícola, ambulancia, cualquier vehículo, vehículo articulado, calesa, bicicleta, carro de basura, autobús BRT, minibús BRT, autobús, coche, caravana, coche o vehículo ligero, coche con caravana, coche con remolque, carro de limpieza, compactador, vehículo de construcción o mantenimiento, volquete, ciclomotor eléctrico, moto eléctrica, camión de bomberos, tracción a las cuatro ruedas, vehículo de gran altura, tolva, camión, minibús, ciclomotor, motocicleta, motocicleta con coche lateral, motocarro, furgón policial, máquina barredora, cisterna, vehículo temporal, vehículo de tres ruedas, volquete, remolque, tranvía, vehículo de dos ruedas, carro, furgoneta, vehículo sin convertidor catalítico, vehículo con caravana, vehículo con remolque, con placas de matrícula pares, con placas de matrícula impares, otros". Los siguientes valores definidos por _VehicleTypeEnum_ y _VehicleTypeEnum2_, [DATEX 2 versión 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)  - `voltage`: La tensión total ofrecida por la estación de carga    
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
+- `acceptedPaymentMethod[array]`: Tipo(s) de cargo al utilizar esta estación. Enum:'Por transferencia bancaria por adelantado, Por factura, En efectivo, Por cheque por adelantado, Contra reembolso, Débito directo, GoogleCheckout, PayPal, PaySwarm'  . Model: [https://schema.org/Text](https://schema.org/Text)- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)- `allowedVehicleType[array]`: Tipo(s) de vehículo que se puede(n) cargar. Enum:'bicicleta, autobús, coche, caravana, motocicleta, moto, camión'  . Model: [http://schema.org/Text](http://schema.org/Text)- `alternateName[string]`: Un nombre alternativo para este artículo  - `amountCollected[number]`: Importe recaudado por el servicio correspondiente a esta observación.  - `amperage[number]`: El amperaje total ofrecido por la estación de carga.  . Model: [http://schema.org/Number](http://schema.org/Number)- `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `availableCapacity[integer]`: El número de vehículos que se pueden cargar actualmente. Debe ser menor o igual que la `capacidad`.  . Model: [http://schema.org/Number](http://schema.org/Number)- `capacity[integer]`: El número total de vehículos que pueden cargarse al mismo tiempo. El número total de enchufes puede ser mayor.  . Model: [http://schema.org/Number](http://schema.org/Number)- `chargeType[array]`: Tipo(s) de cargo al utilizar esta estación. Enum:'pago anual, plano, gratuito, pago mensual, otro'  . Model: [https://schema.org/Text](https://schema.org/Text)- `chargingUnitId[string]`: El Id del punto de carga en la estación de carga de vehículos eléctricos correspondiente a esta observación.  - `contactPoint[object]`: Los datos para contactar con el artículo.  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)- `dataDescriptor[string]`: URI que apunta a la entidad descriptora de datos  - `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description[string]`: Una descripción de este artículo  - `endDateTime[string]`: Hora de finalización comunicada correspondiente a esta observación.  - `id[*]`: Identificador único de la entidad  - `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name[string]`: El nombre de este artículo.  - `network[string]`: El nombre de la Red con la que coopera el operador.  . Model: [https://schema.org/Text](https://schema.org/Text)- `observationDateTime[string]`: Última hora de observación comunicada.  - `openingHours[string]`: Horario de apertura de la estación de carga.  . Model: [http://schema.org/openingHours](http://schema.org/openingHours)- `operator[string]`: Operador de la estación de carga.  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `powerConsumption[number]`: Potencia consumida por la entidad correspondiente a esta observación.  - `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `socketNumber[integer]`: El número total de enchufes que ofrece esta estación de carga  . Model: [http://schema.org/Number.](http://schema.org/Number.)- `socketType[array]`: El tipo de enchufes que ofrece esta estación. Enum:'Enchufe_de_caravana, CHAdeMO, CCS/SAE, Dual_CHAdeMO, Dual_J-1772, Dual_Mennekes, J-1772, Mennekes, Otros, Tesla, Tipo2, Tipo3, Wall_Euro'.  . Model: [http://schema.org/Text](http://schema.org/Text)- `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `startDateTime[string]`: Hora de inicio informada correspondiente a esta observación.  - `stationName[string]`: El nombre de la estación correspondiente a esta observación. Puede ser el nombre de la estación de acoplamiento de bicicletas, la estación de carga, etc.  - `status[string]`: Estado de la estación de carga. Enum:'almostEmpty, almostFull, empty, full, outOfService, withIncidence, working'. O cualquier otro específico de la aplicación.  . Model: [http://schema.org/Text](http://schema.org/Text)- `taxAmountCollected[number]`: El importe de los impuestos que gravan los productos, las cosas y los servicios, que incluye el impuesto sobre las ventas, el impuesto sobre el valor añadido, el impuesto sobre los servicios, el impuesto sobre bienes y servicios, los derechos de aduana, etc.  - `transactionId[string]`: Id. de transacción único de la entidad correspondiente a esta observación.  - `transactionType[string]`: Tipo de transacción basada en el modo de pago (por ejemplo, móvil/UPI, tarjeta, etc.) o modo de servicio (por ejemplo, emisión, reemisión, entrada, salida, etc.) correspondiente a esta observación.  - `type[string]`: Tipo de entidad NGSI. Tiene que ser EVChargingStation  - `vehicleType[string]`: Tipo de vehículo desde el punto de vista de sus características estructurales. Es diferente de la categoría del vehículo. Enum:"Vehículo agrícola, ambulancia, cualquier vehículo, vehículo articulado, calesa, bicicleta, carro de basura, autobús BRT, minibús BRT, autobús, coche, caravana, coche o vehículo ligero, coche con caravana, coche con remolque, carro de limpieza, compactador, vehículo de construcción o mantenimiento, volquete, ciclomotor eléctrico, moto eléctrica, camión de bomberos, tracción a las cuatro ruedas, vehículo de gran altura, tolva, camión, minibús, ciclomotor, motocicleta, motocicleta con coche lateral, motocarro, furgón policial, máquina barredora, cisterna, vehículo temporal, vehículo de tres ruedas, volquete, remolque, tranvía, vehículo de dos ruedas, carro, furgoneta, vehículo sin convertidor catalítico, vehículo con caravana, vehículo con remolque, con placas de matrícula pares, con placas de matrícula impares, otros". Los siguientes valores definidos por _VehicleTypeEnum_ y _VehicleTypeEnum2_, [DATEX 2 versión 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)  . Model: [https://schema.org/Text](https://schema.org/Text)- `voltage[number]`: La tensión total ofrecida por la estación de carga  . Model: [http://schema.org/Number](http://schema.org/Number)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propiedades requeridas  
-- `allowedVehicleType`  - `capacity`  - `id`  - `socketType`  - `type`    
+- `allowedVehicleType`  - `capacity`  - `id`  - `socketType`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Una estación de carga pública que suministra energía a los vehículos eléctricos. El tiempo de carga depende de la potencia máxima de la estación, del número de vehículos que se estén cargando y del nivel actual de la batería.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 EVChargingStation:    
@@ -613,9 +626,14 @@ EVChargingStation:
   x-version: 0.1.0    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### EVChargingStation NGSI-v2 key-values Ejemplo  
 Aquí hay un ejemplo de una EVChargingStation en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
@@ -652,8 +670,10 @@ EVChargingStation:
   "observationDateTime": "2022-06-28T20:27:29+05:30"  
 }  
 ```  
+</details>  
 #### EVChargingStation NGSI-v2 normalizada Ejemplo  
 Aquí hay un ejemplo de una EVChargingStation en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
@@ -765,177 +785,191 @@ EVChargingStation:
   }  
 }  
 ```  
+</details>  
 #### EVChargingStation NGSI-LD key-values Ejemplo  
 Aquí hay un ejemplo de una EVChargingStation en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
-  "type": "EVChargingStation",  
-  "name": "Agencia de Innovación",  
-  "location": {  
-    "coordinates": [  
-      -4.747901,  
-      41.618265  
+    "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
+    "type": "EVChargingStation",  
+    "name": "Agencia de Innovaci\u00f3n",  
+    "location": {  
+        "coordinates": [  
+            -4.747901,  
+            41.618265  
+        ],  
+        "type": "Point"  
+    },  
+    "capacity": 2,  
+    "socketType": [  
+        "Wall_Euro"  
     ],  
-    "type": "Point"  
-  },  
-  "capacity": 2,  
-  "socketType": [  
-    "Wall_Euro"  
-  ],  
-  "address": {  
-    "streetAddress": "Paseo de Zorrilla, 191",  
-    "addressLocality": "Valladolid",  
-    "addressCountry": "España"  
-  },  
-  "contactPoint": {  
-    "email": "vehiculoelectrico@ava.es"  
-  },  
-  "operator": "Iberdrola",  
-  "allowedVehicleType": [  
-    "car"  
-  ],  
-  "chargeType": [  
-    "free"  
-  ],  
-  "source": "https://openchargemap.org/",  
-  "powerConsumption": 10.0,  
-  "chargingUnitId": "PZEV01-DeltaBharatAC001-SCTLGandhiPark001",  
-  "transactionId": "84068784",  
-  "transactionType": "RFID",  
-  "stationName": "SmartCityTvmGandhiParkOne",  
-  "amountCollected": 0.08,  
-  "taxAmountCollected": 0.0,  
-  "endDateTime": "2022-06-28T20:28:41+05:30",  
-  "startDateTime": "2022-06-28T20:27:27+05:30",  
-  "vehicleType": "e-motorcycle",  
-  "observationDateTime": "2022-06-28T20:27:29+05:30",  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.Transportation/context.jsonld",  
-    "iudx:EVChargingStation"  
-  ]  
+    "address": {  
+        "streetAddress": "Paseo de Zorrilla, 191",  
+        "addressLocality": "Valladolid",  
+        "addressCountry": "Espa\u00f1a"  
+    },  
+    "contactPoint": {  
+        "email": "vehiculoelectrico@ava.es"  
+    },  
+    "operator": "Iberdrola",  
+    "allowedVehicleType": [  
+        "car"  
+    ],  
+    "chargeType": [  
+        "free"  
+    ],  
+    "source": "https://openchargemap.org/",  
+    "powerConsumption": 10.0,  
+    "chargingUnitId": "PZEV01-DeltaBharatAC001-SCTLGandhiPark001",  
+    "transactionId": "84068784",  
+    "transactionType": "RFID",  
+    "stationName": "SmartCityTvmGandhiParkOne",  
+    "amountCollected": 0.08,  
+    "taxAmountCollected": 0.0,  
+    "endDateTime": "2022-06-28T20:28:41+05:30",  
+    "startDateTime": "2022-06-28T20:27:27+05:30",  
+    "vehicleType": "e-motorcycle",  
+    "observationDateTime": "2022-06-28T20:27:29+05:30",  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.Transportation/context.jsonld",  
+        "iudx:EVChargingStation",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### EVChargingStation NGSI-LD normalizada Ejemplo  
 Aquí hay un ejemplo de una EVChargingStation en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
-  "type": "EVChargingStation",  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressCountry": "Espa\u00f1a",  
-      "addressLocality": "Valladolid",  
-      "streetAddress": "Paseo de Zorrilla, 191"  
-    }  
-  },  
-  "allowedVehicleType": {  
-    "type": "Property",  
-    "value": [  
-      "car"  
+    "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
+    "type": "EVChargingStation",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressCountry": "Espa\u00f1a",  
+            "addressLocality": "Valladolid",  
+            "streetAddress": "Paseo de Zorrilla, 191"  
+        }  
+    },  
+    "allowedVehicleType": {  
+        "type": "Property",  
+        "value": [  
+            "car"  
+        ]  
+    },  
+    "capacity": {  
+        "type": "Property",  
+        "value": 2  
+    },  
+    "chargeType": {  
+        "type": "Property",  
+        "value": [  
+            "free"  
+        ]  
+    },  
+    "contactPoint": {  
+        "type": "Property",  
+        "value": {  
+            "email": "vehiculoelectrico@ava.es"  
+        }  
+    },  
+    "location": {  
+        "type": "Geoproperty",  
+        "value": {  
+            "coordinates": [  
+                -4.747901,  
+                41.618265  
+            ],  
+            "type": "Point"  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Agencia de Innovaci\u00f3n"  
+    },  
+    "operator": {  
+        "type": "Property",  
+        "value": "Iberdrola"  
+    },  
+    "socketType": {  
+        "type": "Property",  
+        "value": [  
+            "Wall_Euro"  
+        ]  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": "https://openchargemap.org/"  
+    },  
+    "powerConsumption": {  
+        "type": "Property",  
+        "value": 10.0  
+    },  
+    "chargingUnitId": {  
+        "type": "string",  
+        "value": "PZEV01-DeltaBharatAC001-SCTLGandhiPark001"  
+    },  
+    "transactionId": {  
+        "type": "Property",  
+        "value": "84068784"  
+    },  
+    "transactionType": {  
+        "type": "Property",  
+        "value": "RFID"  
+    },  
+    "stationName": {  
+        "type": "Property",  
+        "value": "SmartCityTvmGandhiParkOne"  
+    },  
+    "amountCollected": {  
+        "type": "Property",  
+        "value": 0.08  
+    },  
+    "taxAmountCollected": {  
+        "type": "Property",  
+        "value": 0.0  
+    },  
+    "endDateTime": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "date-time",  
+            "@value": "2022-06-28T20:28:41+05:30"  
+        }  
+    },  
+    "startDateTime": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "date-time",  
+            "@value": "2022-06-28T20:27:27+05:30"  
+        }  
+    },  
+    "vehicleType": {  
+        "type": "Property",  
+        "value": "e-motorcycle"  
+    },  
+    "observationDateTime": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "date-time",  
+            "@value": "2022-06-28T20:27:29+05:30"  
+        }  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.Transportation/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
-  },  
-  "capacity": {  
-    "type": "Property",  
-    "value": 2  
-  },  
-  "chargeType": {  
-    "type": "Property",  
-    "value": [  
-      "free"  
-    ]  
-  },  
-  "contactPoint": {  
-    "type": "Property",  
-    "value": {  
-      "email": "vehiculoelectrico@ava.es"  
-    }  
-  },  
-  "location": {  
-    "type": "Geoproperty",  
-    "value": {  
-      "coordinates": [  
-        -4.747901,  
-        41.618265  
-      ],  
-      "type": "Point"  
-    }  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Agencia de Innovaci\u00f3n"  
-  },  
-  "operator": {  
-    "type": "Property",  
-    "value": "Iberdrola"  
-  },  
-  "socketType": {  
-    "type": "Property",  
-    "value": [  
-      "Wall_Euro"  
-    ]  
-  },  
-  "source": {  
-    "type": "Property",  
-    "value": "https://openchargemap.org/"  
-  },  
-  "powerConsumption": {  
-    "type": "Property",  
-    "value": 10.0  
-  },  
-  "chargingUnitId": {  
-    "type": "string",  
-    "value": "PZEV01-DeltaBharatAC001-SCTLGandhiPark001"  
-  },  
-  "transactionId": {  
-    "type": "Property",  
-    "value": "84068784"  
-  },  
-  "transactionType": {  
-    "type": "Property",  
-    "value": "RFID"  
-  },  
-  "stationName": {  
-    "type": "Property",  
-    "value": "SmartCityTvmGandhiParkOne"  
-  },  
-  "amountCollected": {  
-    "type": "Property",  
-    "value": 0.08  
-  },  
-  "taxAmountCollected": {  
-    "type": "Property",  
-    "value": 0.0  
-  },  
-  "endDateTime": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "date-time",  
-      "@value": "2022-06-28T20:28:41+05:30"  
-    }  
-  },  
-  "startDateTime": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "date-time",  
-      "@value": "2022-06-28T20:27:27+05:30"  
-    }  
-  },  
-  "vehicleType": {  
-    "type": "Property",  
-    "value": "e-motorcycle"  
-  },  
-  "observationDateTime": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "date-time",  
-      "@value": "2022-06-28T20:27:29+05:30"  
-    }  
-  },  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.Transportation/context.jsonld"  
-  ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
