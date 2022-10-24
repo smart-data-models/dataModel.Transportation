@@ -1,20 +1,33 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entidad: CrowdFlowObserved  
-==========================  
+==========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.Transportation/blob/master/CrowdFlowObserved/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Descripción global: **CrowdFlowObserved**  
 versión: 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `averageCrowdSpeed`: Velocidad media de la multitud que transita durante el periodo de observación  - `averageHeadwayTime`: Tiempo medio de recorrido. El tiempo de recorrido es el tiempo  
-    transcurrido entre dos personas consecutivas  - `congested`: Indica si hubo congestión de público durante el período de observación en el pasillo referido. La ausencia de este atributo significa que no hubo congestión de multitudes  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `dateObserved`: La fecha y la hora de esta observación en formato ISO8601 UTC. Puede representarse mediante un instante de tiempo específico o mediante un intervalo ISO8601. Como solución a la falta de soporte de Orion Context Broker para los intervalos de fecha, se pueden utilizar dos atributos separados: `dateObservedFrom`, `dateObservedTo`.  - `dateObservedFrom`: Fecha y hora de inicio del periodo de observación. Véase `fechaObservada`.  - `dateObservedTo`: Fecha y hora de finalización del periodo de observación. Véase `fechaObservada`.  - `description`: Una descripción de este artículo  - `direction`: Sentido habitual de la marcha en el paseo al que se refiere esta observación con respecto al centro de la ciudad. Enum:'entrada, salida'  - `id`: Identificador único de la entidad  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `occupancy`: Fracción del tiempo de observación en el que una persona ha estado ocupando el pasillo observado  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `peopleCount`: Número total de personas detectadas durante esta observación.  - `refRoadSegment`: Tramo de carretera afectado en el que se ha realizado la observación  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI. Tiene que ser CrowdFlowObserved    
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
+- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `averageCrowdSpeed[number]`: Velocidad media de la multitud que transita durante el periodo de observación  . Model: [https://schema.org/Number](https://schema.org/Number)- `averageHeadwayTime[number]`: Tiempo medio de recorrido. El tiempo de recorrido es el tiempo  
+    transcurrido entre dos personas consecutivas  . Model: [https://schema.org/Number](https://schema.org/Number)- `congested[boolean]`: Indica si hubo congestión de público durante el período de observación en el pasillo referido. La ausencia de este atributo significa que no hubo congestión de multitudes  . Model: [https://schema.org/Boolean.](https://schema.org/Boolean.)- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `dateObserved[string]`: La fecha y la hora de esta observación en formato ISO8601 UTC. Puede representarse mediante un instante de tiempo específico o mediante un intervalo ISO8601. Como solución a la falta de soporte de Orion Context Broker para los intervalos de fecha, se pueden utilizar dos atributos separados: `dateObservedFrom`, `dateObservedTo`.  . Model: [https://schema.org/URL.](https://schema.org/URL.)- `dateObservedFrom[string]`: Fecha y hora de inicio del periodo de observación. Véase `fechaObservada`.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateObservedTo[string]`: Fecha y hora de finalización del periodo de observación. Véase `fechaObservada`.  . Model: [https://schema.org/DateTime.](https://schema.org/DateTime.)- `description[string]`: Una descripción de este artículo  - `direction[string]`: Sentido habitual de la marcha en el paseo al que se refiere esta observación con respecto al centro de la ciudad. Enum:'entrada, salida'  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: Identificador único de la entidad  - `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name[string]`: El nombre de este artículo.  - `occupancy[number]`: Fracción del tiempo de observación en el que una persona ha estado ocupando el pasillo observado  . Model: [https://schema.org/Number)](https://schema.org/Number))- `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `peopleCount[integer]`: Número total de personas detectadas durante esta observación.  - `refRoadSegment[*]`: Tramo de carretera afectado en el que se ha realizado la observación  . Model: [https://schema.org/URL.](https://schema.org/URL.)- `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type[string]`: Tipo de entidad NGSI. Tiene que ser CrowdFlowObserved  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propiedades requeridas  
-- `dateObserved`  - `id`  - `type`    
+- `dateObserved`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Una observación relacionada con el movimiento de personas en un lugar y momento determinados.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 CrowdFlowObserved:    
@@ -375,9 +388,14 @@ CrowdFlowObserved:
   x-version: 0.0.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### CrowdFlowObserved NGSI-v2 key-values Ejemplo  
 Aquí hay un ejemplo de un CrowdFlowObserved en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
@@ -399,8 +417,10 @@ CrowdFlowObserved:
   }  
 }  
 ```  
+</details>  
 #### CrowdFlowObserved NGSI-v2 normalizado Ejemplo  
 Aquí hay un ejemplo de un CrowdFlowObserved en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
@@ -441,8 +461,10 @@ CrowdFlowObserved:
   }  
 }  
 ```  
+</details>  
 #### CrowdFlowObserved NGSI-LD key-values Ejemplo  
 Aquí hay un ejemplo de un CrowdFlowObserved en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
@@ -507,8 +529,10 @@ CrowdFlowObserved:
     ]  
 }  
 ```  
+</details>  
 #### CrowdFlowObserved NGSI-LD normalizado Ejemplo  
 Este es un ejemplo de un CrowdFlowObserved en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
@@ -544,8 +568,17 @@ CrowdFlowObserved:
     },  
     "peopleCount": 100,  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
