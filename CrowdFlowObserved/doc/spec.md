@@ -1,20 +1,33 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entity: CrowdFlowObserved  
-=========================  
+=========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Open License](https://github.com/smart-data-models//dataModel.Transportation/blob/master/CrowdFlowObserved/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Global description: **CrowdFlowObserved**  
 version: 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## List of properties  
 
-- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `averageCrowdSpeed`: Average speed of the crowd transiting during the observation period  - `averageHeadwayTime`: Average headway time. Headway time is the time  
-    elapsed between two consecutive persons  - `congested`: Flags whether there was a crowd congestion during the observation period in the referred walkway. The absence of this attribute means no crowd congestion  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dateObserved`: The date and time of this observation in ISO8601 UTC format. It can be represented by an specific time instant or by an ISO8601 interval. As a workaround for the lack of support of Orion Context Broker for datetime intervals, it can be used two separate attributes: `dateObservedFrom`, `dateObservedTo`  - `dateObservedFrom`: Observation period start date and time. See `dateObserved`.  - `dateObservedTo`: Observation period end date and time. See `dateObserved`.  - `description`: A description of this item  - `direction`: Usual direction of travel in the walkway referred by this observation with respect to the city center. Enum:'inbound, outbound'  - `id`: Unique identifier of the entity  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `occupancy`: Fraction of the observation time where a person has been occupying the observed walkway  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `peopleCount`: Total number of people detected during this observation.  - `refRoadSegment`: Concerned road segment on which the observation has been made  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type. It has to be CrowdFlowObserved    
+<sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
+- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `averageCrowdSpeed[number]`: Average speed of the crowd transiting during the observation period  . Model: [https://schema.org/Number](https://schema.org/Number)- `averageHeadwayTime[number]`: Average headway time. Headway time is the time  
+    elapsed between two consecutive persons  . Model: [https://schema.org/Number](https://schema.org/Number)- `congested[boolean]`: Flags whether there was a crowd congestion during the observation period in the referred walkway. The absence of this attribute means no crowd congestion  . Model: [https://schema.org/Boolean.](https://schema.org/Boolean.)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dateObserved[string]`: The date and time of this observation in ISO8601 UTC format. It can be represented by an specific time instant or by an ISO8601 interval. As a workaround for the lack of support of Orion Context Broker for datetime intervals, it can be used two separate attributes: `dateObservedFrom`, `dateObservedTo`  . Model: [https://schema.org/URL.](https://schema.org/URL.)- `dateObservedFrom[string]`: Observation period start date and time. See `dateObserved`.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateObservedTo[string]`: Observation period end date and time. See `dateObserved`.  . Model: [https://schema.org/DateTime.](https://schema.org/DateTime.)- `description[string]`: A description of this item  - `direction[string]`: Usual direction of travel in the walkway referred by this observation with respect to the city center. Enum:'inbound, outbound'  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: Unique identifier of the entity  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item.  - `occupancy[number]`: Fraction of the observation time where a person has been occupying the observed walkway  . Model: [https://schema.org/Number)](https://schema.org/Number))- `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `peopleCount[integer]`: Total number of people detected during this observation.  - `refRoadSegment[*]`: Concerned road segment on which the observation has been made  . Model: [https://schema.org/URL.](https://schema.org/URL.)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type[string]`: NGSI Entity type. It has to be CrowdFlowObserved  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Required properties  
-- `dateObserved`  - `id`  - `type`    
+- `dateObserved`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 An observation related to the movement of people at a certain place and time.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Data Model description of properties  
 Sorted alphabetically (click for details)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 CrowdFlowObserved:    
@@ -375,9 +388,14 @@ CrowdFlowObserved:
   x-version: 0.0.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Example payloads    
 #### CrowdFlowObserved NGSI-v2 key-values Example    
 Here is an example of a CrowdFlowObserved in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
@@ -399,8 +417,10 @@ CrowdFlowObserved:
   }  
 }  
 ```  
+</details>  
 #### CrowdFlowObserved NGSI-v2 normalized Example    
 Here is an example of a CrowdFlowObserved in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
@@ -441,8 +461,10 @@ CrowdFlowObserved:
   }  
 }  
 ```  
+</details>  
 #### CrowdFlowObserved NGSI-LD key-values Example    
 Here is an example of a CrowdFlowObserved in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
@@ -507,8 +529,10 @@ CrowdFlowObserved:
     ]  
 }  
 ```  
+</details>  
 #### CrowdFlowObserved NGSI-LD normalized Example    
 Here is an example of a CrowdFlowObserved in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
@@ -544,8 +568,17 @@ CrowdFlowObserved:
     },  
     "peopleCount": 100,  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
