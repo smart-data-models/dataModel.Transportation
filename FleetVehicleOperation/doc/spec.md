@@ -1,17 +1,32 @@
-Entity: FleetVehicleOperation  
-=============================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: FleetVehicleOperation  
+=============================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Open License](https://github.com/smart-data-models//dataModel.Transportation/blob/master/FleetVehicleOperation/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Global description: **This entity contains a harmonised description of a generic fleet vehicle operation such as a delivery, or a postal collection. This entity is primarily associated with the vertical segment of the transport and logistics but may also be used many other related IoT applications.**  
+version: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## List of properties  
 
-- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `endedAt`: The end date and time of the event when the event or operation is known to be over/complete. Null/omitted if not yet ended.  - `fleetVehicle`: Reference to the FleetVehicle entity to which this operation relates.  - `fleetVehicleOperation`: Reference to the FleetVehicleOperation entity to which this status entity relates.  - `id`: Unique identifier of the entity  - `initiatingLocation`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `operationType`: The free text type of the event or operation e.g. e.g. Call for a patient transportation, postal collection, delivery, close to a restricted area, overspeed.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `responseTime`: Indicates the time to respond to an event, in seconds. The associated observedAt timestamp indicates when the last update was recorded. E.g. records the response time for an ambulance to reach to a patient  - `result`: The final result of the event or operation.  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `startedAt`: The start date and time when the event or operation was triggered.  - `transportTime`: Indicates the time that the fleet vehicle has spent transporting people or supplies for the current operation. E.g. indicates the time an ambulance spent transporting a patient to a hospital emergency department.  - `type`: NGSI Entity identifier. It has to be FleetVehicleOperation    
+<sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
+- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description[string]`: A description of this item  - `endedAt[string]`: The end date and time of the event when the event or operation is known to be over/complete. Null/omitted if not yet ended.  - `fleetVehicle[*]`: Reference to the FleetVehicle entity to which this operation relates.  - `fleetVehicleOperation[*]`: Reference to the FleetVehicleOperation entity to which this status entity relates.  - `id[*]`: Unique identifier of the entity  - `initiatingLocation[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item.  - `operationType[string]`: The free text type of the event or operation e.g. e.g. Call for a patient transportation, postal collection, delivery, close to a restricted area, overspeed.  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `responseTime[number]`: Indicates the time to respond to an event, in seconds. The associated observedAt timestamp indicates when the last update was recorded. E.g. records the response time for an ambulance to reach to a patient  - `result[string]`: The final result of the event or operation.  - `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `startedAt[string]`: The start date and time when the event or operation was triggered.  - `transportTime[number]`: Indicates the time that the fleet vehicle has spent transporting people or supplies for the current operation. E.g. indicates the time an ambulance spent transporting a patient to a hospital emergency department.  - `type[string]`: NGSI Entity identifier. It has to be FleetVehicleOperation  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Required properties  
-- `id`  - `type`    
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 This data model comes from the original project GSMA IoT project, https://www.gsma.com/iot/iot-big-data/. There are some minor adaptations to meet requirements of smart data models.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Data Model description of properties  
 Sorted alphabetically (click for details)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 FleetVehicleOperation:    
@@ -354,9 +369,14 @@ FleetVehicleOperation:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Example payloads    
 #### FleetVehicleOperation NGSI-v2 key-values Example    
 Here is an example of a FleetVehicleOperation in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:FleetVehicleOperation:8e876a60-5aa3-11e8-b350-d7b51a09fb6c",  
@@ -381,8 +401,10 @@ FleetVehicleOperation:
   "transportTime": 1220  
 }  
 ```  
+</details>  
 #### FleetVehicleOperation NGSI-v2 normalized Example    
 Here is an example of a FleetVehicleOperation in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:FleetVehicleOperation:8e876a60-5aa3-11e8-b350-d7b51a09fb6c",  
@@ -443,108 +465,122 @@ FleetVehicleOperation:
   }  
 }  
 ```  
+</details>  
 #### FleetVehicleOperation NGSI-LD key-values Example    
 Here is an example of a FleetVehicleOperation in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleOperation/context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:FleetVehicleOperation:8e876a60-5aa3-11e8-b350-d7b51a09fb6c",  
-  "type": "FleetVehicleOperation",  
-  "source": "https://source.example.com",  
-  "dataProvider": "https://provider.example.com",  
-  "fleetVehicle": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f",  
-  "fleetVehicleStatus": "urn:ngsi-ld:FleetVehicleStatus:0284e0dc-5aa4-11e8-97e6-2351fc70c286",  
-  "initiatingLocation": {  
-    "type": "Point",  
-    "coordinates": [  
-      -104.99404,  
-      39.75621  
+    "id": "urn:ngsi-ld:FleetVehicleOperation:8e876a60-5aa3-11e8-b350-d7b51a09fb6c",  
+    "type": "FleetVehicleOperation",  
+    "dataProvider": "https://provider.example.com",  
+    "description": "An emergency transportation of a 3 year old boy",  
+    "endedAt": "2016-08-28T10:18:16Z",  
+    "fleetVehicle": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f",  
+    "fleetVehicleStatus": "urn:ngsi-ld:FleetVehicleStatus:0284e0dc-5aa4-11e8-97e6-2351fc70c286",  
+    "initiatingLocation": {  
+        "type": "Point",  
+        "coordinates": [  
+            -104.99404,  
+            39.75621  
+        ]  
+    },  
+    "operationType": "Patient transportation",  
+    "responseTime": 2500,  
+    "result": "Completed",  
+    "source": "https://source.example.com",  
+    "startedAt": "2016-08-22T10:18:16Z",  
+    "transportTime": 1220,  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleOperation/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
-  },  
-  "startedAt": "2016-08-22T10:18:16Z",  
-  "endedAt": "2016-08-28T10:18:16Z",  
-  "operationType": "Patient transportation",  
-  "description": "An emergency transportation of a 3 year old boy",  
-  "result": "Completed",  
-  "responseTime": 2500,  
-  "transportTime": 1220  
 }  
 ```  
+</details>  
 #### FleetVehicleOperation NGSI-LD normalized Example    
 Here is an example of a FleetVehicleOperation in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleOperation/context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:FleetVehicleOperation:8e876a60-5aa3-11e8-b350-d7b51a09fb6c",  
-  "type": "FleetVehicleOperation",  
-  "source": {  
-    "type": "Property",  
-    "value": "https://source.example.com"  
-  },  
-  "dataProvider": {  
-    "type": "Property",  
-    "value": "https://provider.example.com"  
-  },  
-  "fleetVehicle": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f"  
-  },  
-  "fleetVehicleStatus": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:FleetVehicleStatus:0284e0dc-5aa4-11e8-97e6-2351fc70c286"  
-  },  
-  "initiatingLocation": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -104.99404,  
-        39.75621  
-      ]  
-    }  
-  },  
-  "startedAt": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-08-22T10:18:16Z"  
-    }  
-  },  
-  "endedAt": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-08-28T10:18:16Z"  
-    }  
-  },  
-  "operationType": {  
-    "type": "Property",  
-    "value": "Patient transportation"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "An emergency transportation of a 3 year old boy"  
-  },  
-  "result": {  
-    "type": "Property",  
-    "value": "Completed"  
-  },  
-  "responseTime": {  
-    "type": "Property",  
-    "value": 2500,  
-    "unitCode": "SEC",  
-    "observedAt": "2016-08-28T10:18:16Z"  
-  },  
-  "transportTime": {  
-    "type": "Property",  
-    "value": 1220,  
-    "unitCode": "SEC",  
-    "observedAt": "2016-08-28T10:18:16Z"  
-  }  
+    "id": "urn:ngsi-ld:FleetVehicleOperation:8e876a60-5aa3-11e8-b350-d7b51a09fb6c",  
+    "type": "FleetVehicleOperation",  
+    "dataProvider": {  
+        "type": "Property",  
+        "value": "https://provider.example.com"  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "An emergency transportation of a 3 year old boy"  
+    },  
+    "endedAt": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-08-28T10:18:16Z"  
+        }  
+    },  
+    "fleetVehicle": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f"  
+    },  
+    "fleetVehicleStatus": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:FleetVehicleStatus:0284e0dc-5aa4-11e8-97e6-2351fc70c286"  
+    },  
+    "initiatingLocation": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -104.99404,  
+                39.75621  
+            ]  
+        }  
+    },  
+    "operationType": {  
+        "type": "Property",  
+        "value": "Patient transportation"  
+    },  
+    "responseTime": {  
+        "type": "Property",  
+        "value": 2500,  
+        "unitCode": "SEC",  
+        "observedAt": "2016-08-28T10:18:16Z"  
+    },  
+    "result": {  
+        "type": "Property",  
+        "value": "Completed"  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": "https://source.example.com"  
+    },  
+    "startedAt": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-08-22T10:18:16Z"  
+        }  
+    },  
+    "transportTime": {  
+        "type": "Property",  
+        "value": 1220,  
+        "unitCode": "SEC",  
+        "observedAt": "2016-08-28T10:18:16Z"  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleOperation/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+    ]  
 }  
 ```  
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
