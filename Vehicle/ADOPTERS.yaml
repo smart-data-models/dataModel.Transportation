@@ -8,3 +8,11 @@ currentAdopters:
  project: 
  comments: The added attributes may also be used for other events that temporarely limit of block traffic on a roadSegment.
  startDate: 2022-01-15
+-
+ adopter: ADDIX Internet Services GmbH
+ description: https://addix.net/leistungen/smart-city.html
+ mail: vertrieb@addix.net
+ organization: Smart City
+ project: CAPTN 5G
+ comments: Extension of the enumeration for the attribute vehicleType to also cover different watercraft.
+ startDate: 2022-11-03

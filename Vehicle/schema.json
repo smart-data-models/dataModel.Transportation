@@ -78,6 +78,13 @@
             "vehicleWithTrailer",
             "withEvenNumberedRegistrationPlates",
             "withOddNumberedRegistrationPlates",
+            "pilotVessel",
+            "passengerVessel",
+            "cargoVessel",
+            "tug",
+            "militaryVessel",
+            "sailingVessel",
+            "vessel",
             "other"
           ]
         },
