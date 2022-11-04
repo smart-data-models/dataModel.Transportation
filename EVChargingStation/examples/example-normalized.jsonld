@@ -32,7 +32,7 @@
         }
     },
     "location": {
-        "type": "Geoproperty",
+        "type": "GeoProperty",
         "value": {
             "coordinates": [
                 -4.747901,
