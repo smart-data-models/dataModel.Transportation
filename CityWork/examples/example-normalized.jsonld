@@ -56,7 +56,7 @@
         ]
     },
     "location": {
-        "type": "Geoproperty",
+        "type": "GeoProperty",
         "value": {
             "type": "Polygon",
             "coordinates": [
