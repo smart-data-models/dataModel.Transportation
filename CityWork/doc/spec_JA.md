@@ -107,9 +107,9 @@ CityWork:
                 type: string    
             description: 'Property. Unique identifier of the entity'    
           lineLocation:    
-            description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+            description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
             oneOf: &citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
-              - description: 'Geoproperty. Geojson reference to the item. Point'    
+              - description: 'GeoProperty. Geojson reference to the item. Point'    
                 properties:    
                   bbox:    
                     items:    
@@ -130,7 +130,7 @@ CityWork:
                   - coordinates    
                 title: 'GeoJSON Point'    
                 type: object    
-              - description: 'Geoproperty. Geojson reference to the item. LineString'    
+              - description: 'GeoProperty. Geojson reference to the item. LineString'    
                 properties:    
                   bbox:    
                     items:    
@@ -154,7 +154,7 @@ CityWork:
                   - coordinates    
                 title: 'GeoJSON LineString'    
                 type: object    
-              - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+              - description: 'GeoProperty. Geojson reference to the item. Polygon'    
                 properties:    
                   bbox:    
                     items:    
@@ -180,7 +180,7 @@ CityWork:
                   - coordinates    
                 title: 'GeoJSON Polygon'    
                 type: object    
-              - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+              - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
                 properties:    
                   bbox:    
                     items:    
@@ -203,7 +203,7 @@ CityWork:
                   - coordinates    
                 title: 'GeoJSON MultiPoint'    
                 type: object    
-              - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+              - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
                 properties:    
                   bbox:    
                     items:    
@@ -229,7 +229,7 @@ CityWork:
                   - coordinates    
                 title: 'GeoJSON MultiLineString'    
                 type: object    
-              - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+              - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
                 properties:    
                   bbox:    
                     items:    
@@ -261,13 +261,13 @@ CityWork:
             type: string    
           segmentId:    
             items:    
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
             type: array    
           segmentLocation:    
-            description: 'Geoproperty. Segment Location of the bus impacted'    
+            description: 'GeoProperty. Segment Location of the bus impacted'    
             items:    
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
             type: array    
           segmentName:    
@@ -534,7 +534,7 @@ CityWork:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
       x-ngsi:    
-        type: Geoproperty    
+        type: GeoProperty    
     mainContractingCompany:    
       description: 'The Main Contracting Company responsible of the works'    
       type: string    
@@ -554,7 +554,7 @@ CityWork:
           roadImpacted:    
             type: string    
           roadLocation:    
-            description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+            description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
             oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
           roadName:    
             description: 'Property. Road Name'    
@@ -652,19 +652,19 @@ CityWork:
             anyOf: *citywork_-_properties_-_id_-_anyof    
             description: 'Property. Unique identifier of the entity'    
           lineLocation:    
-            description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+            description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
             oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
           lineName:    
             type: string    
           segmentId:    
             items:    
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
             type: array    
           segmentLocation:    
-            description: 'Geoproperty. Segment Location of the railwayImpacted'    
+            description: 'GeoProperty. Segment Location of the railwayImpacted'    
             items:    
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
             type: array    
           segmentName:    
@@ -684,20 +684,20 @@ CityWork:
             anyOf: *citywork_-_properties_-_id_-_anyof    
             description: 'Property. Unique identifier of the entity'    
           roadLocation:    
-            description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+            description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
             oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
           roadName:    
             description: 'Property. Road Name'    
             type: string    
           segmentId:    
             items:    
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
             type: array    
           segmentLocation:    
-            description: 'Geoproperty. Segment Location of the road impacted.'    
+            description: 'GeoProperty. Segment Location of the road impacted.'    
             items:    
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
             type: array    
           segmentName:    
@@ -731,19 +731,19 @@ CityWork:
             anyOf: *citywork_-_properties_-_id_-_anyof    
             description: 'Property. Unique identifier of the entity'    
           lineLocation:    
-            description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+            description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
             oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
           lineName:    
             type: string    
           segmentId:    
             items:    
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
             type: array    
           segmentLocation:    
-            description: 'Geoproperty. Segment Location of the school Bus Impacted'    
+            description: 'GeoProperty. Segment Location of the school Bus Impacted'    
             items:    
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
             type: array    
           segmentName:    
@@ -797,9 +797,9 @@ CityWork:
               description: 'Property. Unique identifier of the entity'    
             type: array    
           stationLocation:    
-            description: 'Geoproperty. Station Location of the stationImpacted.'    
+            description: 'GeoProperty. Station Location of the stationImpacted.'    
             items:    
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
             type: array    
           stationName:    
@@ -833,19 +833,19 @@ CityWork:
             anyOf: *citywork_-_properties_-_id_-_anyof    
             description: 'Property. Unique identifier of the entity'    
           lineLocation:    
-            description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+            description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
             oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
           lineName:    
             type: string    
           segmentId:    
             items:    
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
             type: array    
           segmentLocation:    
-            description: 'Geoproperty. Segment Location of the subwayImpacted'    
+            description: 'GeoProperty. Segment Location of the subwayImpacted'    
             items:    
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
             type: array    
           segmentName:    
@@ -870,20 +870,20 @@ CityWork:
             anyOf: *citywork_-_properties_-_id_-_anyof    
             description: 'Property. Unique identifier of the entity'    
           lineLocation:    
-            description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+            description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
             oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
           lineName:    
             description: 'Property. Line Name.'    
             type: string    
           segmentId:    
             items:    
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
             type: array    
           segmentLocation:    
-            description: 'Geoproperty. Segment Location of the tramwayImpacted'    
+            description: 'GeoProperty. Segment Location of the tramwayImpacted'    
             items:    
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof    
             type: array    
           segmentName:    
@@ -2487,7 +2487,7 @@ CityWork:
         ]  
     },  
     "location": {  
-        "type": "Geoproperty",  
+        "type": "GeoProperty",  
         "value": {  
             "type": "Polygon",  
             "coordinates": [  
