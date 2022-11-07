@@ -20,6 +20,7 @@
 所需属性  
 - `anonymizedId`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
+这是模型是为了在需要一些PII跟踪时使用，因此需要对标识符进行匿名化处理，以便仍然提供一些有用的见解，但使用不可逆的匿名化（散列）函数。  正如通常的情况一样，有规定的标准化属性来表明检测的当前和以前的位置。它们旨在持有另一个实体ID，因为让检测器也以实体的形式复制，可以提供更好的数据建模体验。最后，增加了一个算法属性，以帮助对PII进行匿名的几种方式和方法。  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## 数据模型的属性描述  
@@ -479,6 +480,7 @@ AnonymousCommuterId:
 ```  
 </details><!-- /80-Examples -->  
 <!-- 90-FooterNotes -->  
+该模型由Purple Blob S.L.提供，并根据我们的METIS匿名人流产品的观点和需要进行定制。我们对开发广泛使用的AnonymousCommuterId互操作数据模型持开放态度，因此，请随时联系adelgado@purpleblob.net 或 iruiz@purpleblob.net 以进行更多讨论，或者更好的是，在Github上开一个问题  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
 参见[常见问题10](https://smartdatamodels.org/index.php/faqs/)，以获得关于如何处理量级单位的答案。  
