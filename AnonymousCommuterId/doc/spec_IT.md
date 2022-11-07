@@ -20,6 +20,7 @@
 Proprietà richieste  
 - `anonymizedId`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
+Questo modello è destinato a essere utilizzato quando è necessario tracciare alcune PII e quindi è necessario anonimizzare gli identificatori per fornire ancora alcuni approfondimenti utili, ma utilizzando una funzione di anonimizzazione (hashing) non reversibile.  Come di solito accade, sono previsti attributi standardizzati per indicare la posizione attuale e precedente del rilevamento. Sono destinati a contenere un altro ID di entità, perché avere i rilevatori replicati anche sotto forma di entità offre un'esperienza di modellazione dei dati molto migliore. Infine, è stato aggiunto un attributo algoritmo per facilitare i diversi modi e metodologie di anonimizzazione delle PII.  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## Modello di dati descrizione delle proprietà  
@@ -479,6 +480,7 @@ AnonymousCommuterId:
 ```  
 </details><!-- /80-Examples -->  
 <!-- 90-FooterNotes -->  
+Questo modello è stato fornito da Purple Blob S.L. e adattato alle esigenze del nostro prodotto METIS per il flusso di persone anonimizzate. Siamo aperti allo sviluppo di un modello di dati interoperabile AnonymousCommuterId di largo uso e quindi non esitate a contattare adelgado@purpleblob.net o iruiz@purpleblob.net per ulteriori discussioni o, ancora meglio, ad aprire una issue su Github!  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
 Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
