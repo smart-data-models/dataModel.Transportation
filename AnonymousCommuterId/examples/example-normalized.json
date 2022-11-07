@@ -1,0 +1,42 @@
+{
+   "id": "ngsi-ld:HUES:001",
+    "anonymizedId": {
+        "type": "Text",
+        "value": "D20220AC3478565F"
+    },
+    "type": "AnonymousCommuterId",
+    "orig": {
+        "type": "Text",
+        "value": "City hall"
+    },
+    "dest": {
+        "type": "Text",
+        "value": "Library"
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                43.23161118206764,
+                -2.844695196525928
+            ]
+        }
+    },
+    "date": {
+        "type": "DateTime",
+        "value": "2022-09-05T08:25:35.00Z"
+    },
+    "algorithm": {
+        "type": "Text",
+        "value": "SHA1"
+    },
+    "dateCreated": {
+        "type": "DateTime",
+        "value": "2022-09-05T09:25:35.00Z"
+    },
+    "dateModified": {
+        "type": "DateTime",
+        "value": "2022-09-12T09:25:35.00Z"
+    }
+}

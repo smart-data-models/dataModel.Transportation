@@ -1,93 +1,114 @@
 description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
 contributors:
-- name: Jose M.
-  surname: Cantera
-  mail: jmcanterafonseca4github@gmail.com
-  organization: CanteraFonseca.EU
-  project: 
-  comments: 
-  year: 2022
-- name: Dmitrii
-  surname: Demin
-  mail: mail@demin.co
-  organization: 
-  project: 
-  comments: 
-  year: 2022
-- name: Federico M.
-  surname: Facca
-  mail: 
-  organization: Martel Innovate
-  project: 
-  comments: 
-  year: 2022
-- name: Marc
-  surname: Fajula
-  mail: marc.fajula.soldevila@everis.com
-  organization: Everis
-  project: 
-  comments: 
-  year: 2022
-- name: Paolo
-  surname: Fosci
-  mail: 
-  organization: 
-  project: 
-  comments: 
-  year: 2022
-- name: Jason
-  surname: Fox
-  mail: 
-  organization: FIWARE Foundation
-  project: 
-  comments: 
-  year: 2022
-- name: Bertrand
-  surname: Le Droumaguet
-  mail: bertrand.le-droumaguet@atos.net
-  organization: Atos - Sophia Antipolis
-  project: Data Lake
-  comments: SmartCity Project
-  year: 2022
-- name: Martino
-  surname: Maggio
-  mail: martino.maggio@eng.it
-  organization: Engineering
-  project: Synchronicity
-  comments: 
-  year: 2022
-- name: Massimo
-  surname: Mangoni
-  mail: 
-  organization: 
-  project: 
-  comments: 
-  year: 2022
-- name: Stephane
-  surname: Roux
-  mail: stephane.roux@nicecotedazur.org
-  organization: Metropole Nice Cote D'Azur
-  project: Data Lake
-  comments: SmartCity Project
-  year: 2022
-- name: Joud
-  surname: Sayed Issa
-  mail: joudsayedissa@gmail.com
-  organization: 
-  project: 
-  comments: 
-  year: 2022
-- name: Gert
-  surname: Van de Wouwer
-  mail: Gert.VandeWouwer@gmail.com
-  organization: Digipolis Antwerpen
-  project: 
-  comments: 
-  year: 2022
-- name: Srikrishnan
-  surname: 
-  mail: shyam28598@gmail.com
-  organization: IUDX
-  project: 
-  comments: 
-  year: 2022
+  - name: Jose M.
+    surname: Cantera
+    mail: jmcanterafonseca4github@gmail.com
+    organization: CanteraFonseca.EU
+    project:
+    comments:
+    year: 2022
+  - name: Dmitrii
+    surname: Demin
+    mail: mail@demin.co
+    organization:
+    project:
+    comments:
+    year: 2022
+  - name: Federico M.
+    surname: Facca
+    mail:
+    organization: Martel Innovate
+    project:
+    comments:
+    year: 2022
+  - name: Marc
+    surname: Fajula
+    mail: marc.fajula.soldevila@everis.com
+    organization: Everis
+    project:
+    comments:
+    year: 2022
+  - name: Paolo
+    surname: Fosci
+    mail:
+    organization:
+    project:
+    comments:
+    year: 2022
+  - name: Jason
+    surname: Fox
+    mail:
+    organization: FIWARE Foundation
+    project:
+    comments:
+    year: 2022
+  - name: Gorka
+    surname: Garcia
+    mail: ggarcia@purpleblob.net
+    organization: Purple Blob
+    project:
+    comments:
+    year: 2022
+  - name: Jone Begoña
+    surname: Ibarzabal
+    mail: jibarzabal@purpleblob.net
+    organization: Purple Blob
+    project:
+    comments:
+    year: 2022
+  - name: Bertrand
+    surname: Le Droumaguet
+    mail: bertrand.le-droumaguet@atos.net
+    organization: Atos - Sophia Antipolis
+    project: Data Lake
+    comments: SmartCity Project
+    year: 2022
+  - name: Martino
+    surname: Maggio
+    mail: martino.maggio@eng.it
+    organization: Engineering
+    project: Synchronicity
+    comments:
+    year: 2022
+  - name: Massimo
+    surname: Mangoni
+    mail:
+    organization:
+    project:
+    comments:
+    year: 2022
+  - name: Stephane
+    surname: Roux
+    mail: stephane.roux@nicecotedazur.org
+    organization: Metropole Nice Cote D'Azur
+    project: Data Lake
+    comments: SmartCity Project
+    year: 2022
+  - name: Iñigo
+    surname: Ruiz
+    mail: iruiz@purpleblob.net
+    organization: Purple Blob
+    project:
+    comments:
+    year: 2022
+  - name: Joud
+    surname: Sayed Issa
+    mail: joudsayedissa@gmail.com
+    organization:
+    project:
+    comments:
+    year: 2022
+  - name: Gert
+    surname: Van de Wouwer
+    mail: Gert.VandeWouwer@gmail.com
+    organization: Digipolis Antwerpen
+    project:
+    comments:
+    year: 2022
+  - name: Srikrishnan
+    surname:
+    mail: shyam28598@gmail.com
+    organization: IUDX
+    project:
+    comments:
+    year: 2022

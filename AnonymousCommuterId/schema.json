@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$schemaVersion": "0.0.1",
+  "$id": "https://smart-data-models.github.io/dataModel.Transportation/AnonymousCommuterId/schema.json",
+  "title": "Anonymous Commuter Id",
+  "modelTags": "",
+  "description": "Anonymized identifier for flow monitoring. Includes an origin and destiny property to map its path.",
+  "type": "object",
+  "required": [
+    "id",
+    "anonymizedId",
+    "type"
+  ],
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "AnonymousCommuterId"
+          ],
+          "description": "Property. NGSI entity type. It has to be AnonymousCommuterId"
+        },
+        "date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Date of the detected anonymous identifier."
+        },
+        "orig": {
+          "type": "string",
+          "description": "String value of origin id, last entity where the anonymous id was detected."
+        },
+        "dest": {
+          "type": "string",
+          "description": "String value of destination id, actual entity where the anonymous id was detected."
+        },
+        "anonymizedId": {
+          "type": "string",
+          "description": "Anonymized identifier"
+        },
+        "source": {
+          "type": "string",
+          "description": "String value of source of this AnonymousCommuterId, eg. (ALPR, People Monitoring, Face Recognition, etc...)"
+        },
+        "algorithm": {
+          "type": "string",
+          "description": "Name of the algorithm used to anonymize the Id"
+        }
+      }
+    }
+  ]
+}

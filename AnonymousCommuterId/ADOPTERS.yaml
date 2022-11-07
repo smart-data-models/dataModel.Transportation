@@ -1,0 +1,18 @@
+description: This is a compilation list of the current adopters of the data model AnonymousCommuterId of the Subject incubated/SMARTCITIES. All fields are non mandatory. More info at https://smart-data-models.github.io/data-models/templates/dataModel/CURRENT_ADOPTERS.yaml
+currentAdopters:
+-
+ adopter: DTI Huesca
+ description: Data model for anonymous detection of people and anonymous flow monitoring
+ mail: 
+ organization: Huesca council
+ project: DTI Huesca
+ comments: 
+ startDate: August 2021
+-
+ adopter: Galdakao
+ description: Data model for anonymous detection of people and anonymous flow monitoring
+ mail:
+ organization: Galdakao city hall
+ project: Galdakao
+ comments: 
+ startDate: July 2021
