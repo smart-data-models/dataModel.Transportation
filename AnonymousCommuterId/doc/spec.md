@@ -20,6 +20,7 @@
 Required properties  
 - `anonymizedId`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
+This is model is intended to be used when some PII tracking is needed, and thus it's needed to anonymize the identifiers in order to still provide some useful insights, but using a non-reversible anonymizing (hashing) function.  As it is usually the case, there are provisioned standardized attributes to indicate the current and previous location of the detection. They are intended to hold another entity ID, because having the detectors also replicated in the form  of entities provides a much better data modelling experience. Finally, an algorithm attribute was added in order to aid with the several ways and methodologies of anonymizing PII.  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## Data Model description of properties  
@@ -479,6 +480,7 @@ AnonymousCommuterId:
 ```  
 </details><!-- /80-Examples -->  
 <!-- 90-FooterNotes -->  
+This model was contributed by Purple Blob S.L., and tailored according to the views and necessities of our METIS anonymized people flow product. We are open about the development of a wide use AnonymousCommuterId interoperable data model, and thus, feel free to contact adelgado@purpleblob.net or iruiz@purpleblob.net for additional discussion, or even better, open a Github Issue!  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
 See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
