@@ -20,6 +20,7 @@
 Propiedades requeridas  
 - `anonymizedId`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
+Este modelo está pensado para ser utilizado cuando se necesita algún tipo de rastreo PII, y por lo tanto es necesario anonimizar los identificadores con el fin de seguir proporcionando algunas ideas útiles, pero utilizando una función de anonimización no reversible (hashing).  Como suele ser el caso, existen atributos estandarizados para indicar la ubicación actual y anterior de la detección. Están pensados para albergar otro ID de entidad, ya que tener los detectores también replicados en forma de entidades proporciona una experiencia de modelado de datos mucho mejor. Por último, se ha añadido un atributo de algoritmo para ayudar con las diversas formas y metodologías de anonimizar la IIP.  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## Descripción del modelo de datos de las propiedades  
