@@ -20,6 +20,7 @@
 Erforderliche Eigenschaften  
 - `anonymizedId`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
+Dieses Modell soll verwendet werden, wenn ein gewisses Maß an Verfolgung von personenbezogenen Daten erforderlich ist und daher die Identifikatoren anonymisiert werden müssen, um dennoch einige nützliche Einblicke zu erhalten, wobei jedoch eine nicht umkehrbare Anonymisierungsfunktion (Hashing) verwendet wird.  Wie üblich gibt es standardisierte Attribute, die den aktuellen und den vorherigen Standort der Erkennung angeben. Diese Attribute sollen eine weitere Entitäts-ID enthalten, da eine Replikation der Detektoren in Form von Entitäten eine wesentlich bessere Datenmodellierung ermöglicht. Schließlich wurde ein Algorithmus-Attribut hinzugefügt, um die verschiedenen Arten und Methoden der Anonymisierung von personenbezogenen Daten zu unterstützen.  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## Datenmodell Beschreibung der Eigenschaften  
@@ -479,6 +480,7 @@ AnonymousCommuterId:
 ```  
 </details><!-- /80-Examples -->  
 <!-- 90-FooterNotes -->  
+Dieses Modell wurde von Purple Blob S.L. beigesteuert und entsprechend den Ansichten und Notwendigkeiten unseres METIS-Produkts für anonymisierte Personenströme angepasst. Wir sind offen für die Entwicklung eines weit verbreiteten interoperablen AnonymousCommuterId-Datenmodells. Für weitere Diskussionen können Sie sich gerne an adelgado@purpleblob.net oder iruiz@purpleblob.net wenden, oder noch besser, ein Github Issue eröffnen!  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
 Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
