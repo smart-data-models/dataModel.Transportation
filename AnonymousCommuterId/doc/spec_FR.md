@@ -20,6 +20,7 @@
 Propriétés requises  
 - `anonymizedId`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
+Ce modèle est destiné à être utilisé lorsqu'un certain suivi des IPI est nécessaire, et qu'il faut donc anonymiser les identifiants afin de fournir des informations utiles, mais en utilisant une fonction d'anonymisation (hachage) non réversible.  Comme c'est généralement le cas, des attributs normalisés sont prévus pour indiquer l'emplacement actuel et précédent de la détection. Ils sont destinés à contenir un autre ID d'entité, car le fait d'avoir les détecteurs également répliqués sous forme d'entités offre une bien meilleure expérience de modélisation des données. Enfin, un attribut d'algorithme a été ajouté afin de faciliter les différentes manières et méthodologies d'anonymisation des IPI.  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## Description des propriétés du modèle de données  
@@ -479,6 +480,7 @@ AnonymousCommuterId:
 ```  
 </details><!-- /80-Examples -->  
 <!-- 90-FooterNotes -->  
+Ce modèle a été fourni par Purple Blob S.L., et adapté aux vues et aux besoins de notre produit METIS de flux de personnes anonymes. Nous sommes ouverts au développement d'un modèle de données interopérable AnonymousCommuterId à large usage, et donc, n'hésitez pas à contacter adelgado@purpleblob.net ou iruiz@purpleblob.net pour de plus amples discussions, ou encore mieux, à ouvrir un problème Github !  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
 Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
