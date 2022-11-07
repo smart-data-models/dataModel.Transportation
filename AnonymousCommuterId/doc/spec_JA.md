@@ -15,11 +15,12 @@
 ## プロパティ一覧  
 
 <sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
-- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `algorithm[string]`: Idを匿名化するために使用されるアルゴリズムの名前  - `alternateName[string]`: この項目の別称  - `anonymizedId[string]`: 匿名化された識別子  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `date[string]`: 検出された匿名識別子の日付。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `dest[string]`: 宛先 ID の文字列値、匿名 ID が検出された実際のエンティティ。  - `id[*]`: エンティティの一意な識別子  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `orig[string]`: 匿名IDが検出された最後のエンティティであるオリジンIDの文字列値。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: このAnonymousCommuterIdのソースの文字列値、例えば（ALPR、人物監視、顔認識、その他...）。  - `type[string]`: NGSIエンティティタイプ。AnonymousCommuterId である必要があります。  <!-- /30-PropertiesList -->  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `algorithm[string]`: Idを匿名化するために使用されるアルゴリズムの名前  - `alternateName[string]`: この項目の別称  - `anonymizedId[string]`: 匿名化された識別子  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `date[string]`: 検出された匿名識別子の日付。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `dest[string]`: 宛先 ID の文字列値、匿名 ID が検出された実際のエンティティ。  - `id[*]`: エンティティの一意な識別子  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `orig[string]`: 匿名IDが検出された最後のエンティティであるオリジンIDの文字列値。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: このAnonymousCommuterIdのソースの文字列値、例えば（ALPR、人物監視、顔認識、その他...）。  - `type[string]`: NGSIエンティティタイプ。AnonymousCommuterId である必要があります。  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 必要なプロパティ  
 - `anonymizedId`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
+このモデルは、何らかのPIIトラッキングが必要な場合に使用されることを意図しており、したがって、まだ有用な洞察を提供するために識別子を匿名化する必要がありますが、非可逆匿名化（ハッシュ）関数を使用しています。  通常そうであるように、検出の現在および以前の場所を示すために、標準化された属性が用意されています。検出器もエンティティの形で複製されることで、より優れたデータモデリングが可能になるため、これらは別のエンティティIDを保持することを意図している。最後に、PIIを匿名化するいくつかの方法と手法を支援するために、アルゴリズム属性が追加された。  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
@@ -479,6 +480,7 @@ AnonymousCommuterId:
 ```  
 </details><!-- /80-Examples -->  
 <!-- 90-FooterNotes -->  
+このモデルはPurple Blob S.L.によって提供され、当社のMETIS匿名化人流製品の見解と必要性に応じて調整されたものです。我々は、広く利用されるAnonymousCommuterId相互運用性データモデルの開発についてオープンであり、したがって、追加の議論については、adelgado@purpleblob.net または iruiz@purpleblob.net に気軽に連絡するか、Github Issueを開設してください  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
