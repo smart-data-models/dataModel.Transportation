@@ -7,6 +7,8 @@ These models have been devised to be as generic as possible, thus allowing to de
 ### List of data models
 
 The following entity types are available:
+- [AnonymousCommuterId](https://github.com/smart-data-models/dataModel.Transportation/blob/master/AnonymousCommuterId/README.md). Anonymized identifier for flow monitoring. Includes an origin and destiny property to map its path.
+
 - [BikeHireDockingStation](https://github.com/smart-data-models/dataModel.Transportation/blob/master/BikeHireDockingStation/README.md). Bike Hire Docking Station
 
 - [BikeLane](https://github.com/smart-data-models/dataModel.Transportation/blob/master/BikeLane/README.md). A generic bike lane schema
@@ -54,7 +56,7 @@ The following entity types are available:
 
 
 ### Contributors
-[Link](https://github.com/smart-data-models/dataModel.Transportation/blob/master/CONTRIBUTORS.yaml) to the 13 current contributors of the data models of this Subject.
+[Link](https://github.com/smart-data-models/dataModel.Transportation/blob/master/CONTRIBUTORS.yaml) to the 16 current contributors of the data models of this Subject.
 
 
 ### Contribution
