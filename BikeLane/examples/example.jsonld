@@ -1,11 +1,18 @@
 {
     "id": "urn:ngsi-ld:BikeLane:BikeLane-AveMed-Benidorm-123456",
     "type": "BikeLane",
+    "identifier": "123456",
     "address": {
+        "identifier": "7477",
         "streetAddress": "37 Avenida del Mediterr\u00e1neo",
         "addressCountry": "ES",
         "addressLocality": "Benidorm"
     },
+    "subtype": "bicycle lane",
+    "typology": "signage cycle path",
+    "infrastructureType": "crossing",
+    "laneDirection": "bidirectional",
+    "regulation": "unregulated",
     "dataProvider": "LaneSensor-12345",
     "dateObserved": "2021-02-20T06:45:00Z",
     "description": "Informaci\u00f3n del carril bici",
@@ -13,11 +20,15 @@
     "laneOccupancy": 7,
     "laneWidth": 2,
     "location": {
+        "type": "MultiLineString",
         "coordinates": [
-            -8.768460000000001,
-            42.60214472222222
-        ],
-        "type": "Point"
+            [
+                [170.0, 45.0], [180.0, 45.0]
+            ],
+            [
+                [-180.0, 45.0], [-170.0, 45.0]
+            ]
+        ]
     },
     "name": "Carril bici - Avenida del Mediterr\u00e1neo",
     "@context": [

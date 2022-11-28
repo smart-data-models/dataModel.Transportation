@@ -1,5 +1,6 @@
 notesHeader:
 
 notesMiddle:
+Adaptation of the BikeLine model to cover the MultiLineString geometry representation of a Bike Line plus additional properties to describe the the entity under the scope of the SPOTTED project.
 
 notesFooter:

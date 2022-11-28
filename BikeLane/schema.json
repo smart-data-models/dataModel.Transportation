@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$schemaVersion": "0.0.1",
-    "modelTags": "",
+    "$schemaVersion": "0.0.2",
+    "modelTags": "SPOTTED",
     "$id": "https://smart-data-models.github.io/datamodel.Transportation/BikeLane/schema.json",
     "title": "Smart Data Models - Bike Lane Schema",
     "description": "A generic bike lane schema",
@@ -22,17 +22,46 @@
                     ],
                     "description": "Property. NGSI-LD Entity Type. It has to be BikeLanes"
                 },
+                "identifier": {
+                    "type": "string",
+                    "description": "Property. Model:'https://schema.org/Text'. Unique cycle route code."
+                },
                 "laneOccupancy": {
                     "type": "number",
                     "description": "Property. Model:'https://schema.org/Number'. Indicates the number of vehicles circulating on the lane."
                 },
                 "laneLength": {
                     "type": "number",
-                    "description": "Property. Model:'https://schema.org/Number'. Indicates the length of the lane."
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'meter'. Indicates the length of the lane."
                 },
                 "laneWidth": {
                     "type": "number",
                     "description": "Property. Model:'https://schema.org/Number'. Indicates the width of the lane."
+                },
+                "subtype": {
+                    "type": "string",
+                    "enum": [
+                        "bicycle lane",
+                        "urban lane",
+                        "green lane"
+                    ],
+                    "description": "Property. Model:'https://schema.org/Text'. Type of (sub)bicycle path."
+                },
+                "typology": {
+                    "type": "string",
+                    "description": "Property. Model:'https://schema.org/Text'. Type of cycle path (delimitation, location, function)."
+                },
+                "infrastructureType": {
+                    "type": "string",
+                    "description": "Property. Model:'https://schema.org/Text'. Type of location/infrastructure hosting the lane."
+                },
+                "laneDirection": {
+                    "type": "string",
+                    "description": "Property. Model:'https://schema.org/Text'. Direction of travel."
+                },
+                "regulation": {
+                    "type": "string",
+                    "description": "Property. Model:'https://schema.org/Text'. Regulation applied to the corresponding Bike path."
                 },
                 "dateObserved": {
                     "type": "string",
