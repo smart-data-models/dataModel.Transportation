@@ -32,7 +32,7 @@ TransportStation:
   description: "The data model is a general description of urban stations (Metro, Bus, Tram, Heliport, ...) according to the GFTS standard https://developers.google.com/transit/gtfs/reference/#stopstxt, as well the detailed description of these (means of access, platform, assistance, ...)."    
   properties:    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
           description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
@@ -43,6 +43,9 @@ TransportStation:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'    
+          type: string    
         postOfficeBoxNumber:    
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
@@ -52,37 +55,40 @@ TransportStation:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
+        streetNr:    
+          description: Number identifying a specific property on a public street.    
+          type: string    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     contactPoint:    
-      description: 'The details to contact with the item.'    
+      description: The details to contact with the item.    
       properties:    
         areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Supersedes serviceArea.'    
+          description: Property. The geographic area where a service or offered item is provided. Supersedes serviceArea.    
           type: string    
         availabilityRestriction:    
           anyOf:    
-            - description: 'Property. Array of identifiers format of any NGSI entity.'    
+            - description: Property. Array of identifiers format of any NGSI entity.    
               items:    
                 maxLength: 256    
                 minLength: 1    
                 pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
                 type: string    
               type: array    
-            - description: 'Property. Array of identifiers format of any NGSI entity.'    
+            - description: Property. Array of identifiers format of any NGSI entity.    
               items:    
                 format: uri    
                 type: string    
@@ -104,26 +110,26 @@ TransportStation:
               type: array    
           description: 'Property. Model:''http://schema.org/contactOption''. An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).'    
         contactType:    
-          description: 'Property. Contact type of this item.'    
+          description: Property. Contact type of this item.    
           type: string    
         email:    
-          description: 'Property. Email address of owner.'    
+          description: Property. Email address of owner.    
           format: idn-email    
           type: string    
         faxNumber:    
           description: 'Property. Model:''http://schema.org/Text''. The fax number.'    
           type: string    
         name:    
-          description: 'Property. The name of this item.'    
+          description: Property. The name of this item.    
           type: string    
         productSupported:    
           description: 'Property. Model:''http://schema.org/Text''. The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").'    
           type: string    
         telephone:    
-          description: 'Property. Telephone of this contact.'    
+          description: Property. Telephone of this contact.    
           type: string    
         url:    
-          description: 'Property. URL which provides a description or further information about this item.'    
+          description: Property. URL which provides a description or further information about this item.    
           format: uri    
           type: string    
       type: object    
@@ -131,40 +137,40 @@ TransportStation:
         model: https://schema.org/ContactPoint    
         type: Property    
     contractingAuthority:    
-      description: 'Name of the contracting authority.'    
+      description: Name of the contracting authority.    
       type: string    
       x-ngsi:    
         type: Property    
     contractingCompany:    
-      description: 'Name of the contracting company responsible for the exploitation of the station.'    
+      description: Name of the contracting company responsible for the exploitation of the station.    
       type: string    
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity.    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateLastReported:    
-      description: 'A timestamp which denotes the last time when the device successfully reported data. Date and time in an ISO8601 UTCformat.'    
+      description: A timestamp which denotes the last time when the device successfully reported data. Date and time in an ISO8601 UTCformat.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
@@ -186,15 +192,15 @@ TransportStation:
         units: meters    
     id:    
       anyOf: &transportstation_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     installationMode:    
@@ -237,7 +243,7 @@ TransportStation:
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: Geoproperty. Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -256,9 +262,9 @@ TransportStation:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+        - description: Geoproperty. Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -280,9 +286,9 @@ TransportStation:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+        - description: Geoproperty. Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -306,9 +312,9 @@ TransportStation:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+        - description: Geoproperty. Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -329,9 +335,9 @@ TransportStation:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+        - description: Geoproperty. Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -355,9 +361,9 @@ TransportStation:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+        - description: Geoproperty. Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -383,10 +389,10 @@ TransportStation:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
       x-ngsi:    
-        type: GeoProperty    
+        type: Geoproperty    
     locationType:    
       description: 'Link to the GTFS standard repository describing the different location [Location Type]. 0 Stop or platform (place where users get on or off in a public transport vehicle). 1 Station (area or physical structure comprising one or more platforms). 2 Entrance or Exit (place where users can enter / exit a station from the street). 3 Generic intersection (location in a station that doesn''t correspond to any other `location_type` value). 4 Boarding area of a specific location on a platform where users can get on / off in a vehicle.'    
       enum:    
@@ -395,25 +401,24 @@ TransportStation:
         - 2    
         - 3    
         - 4    
-      type: string    
+      type: number    
       x-ngsi:    
         type: Property    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item.    
       type: string    
       x-ngsi:    
         type: Property    
     openingHoursSpecification:    
-      description: 'A structured value providing information about the opening hours of a place or a certain service inside a place'    
+      description: A structured value providing information about the opening hours of a place or a certain service inside a place    
       items:    
         properties:    
           closes:    
             format: time    
-            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           dayOfWeek:    
             anyOf:    
-              - description: 'Property. Array of days of the week.'    
+              - description: Property. Array of days of the week.    
                 enum:    
                   - Monday    
                   - Tuesday    
@@ -424,7 +429,7 @@ TransportStation:
                   - Sunday    
                   - PublicHolidays    
                 type: string    
-              - description: 'Property. Array of days of the week.'    
+              - description: Property. Array of days of the week.    
                 enum:    
                   - https://schema.org/Monday    
                   - https://schema.org/Tuesday    
@@ -439,7 +444,6 @@ TransportStation:
             type: string    
           opens:    
             format: time    
-            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           validFrom:    
             anyOf:    
@@ -467,46 +471,46 @@ TransportStation:
         model: https://schema.org/openingHoursSpecification    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
         anyOf: *transportstation_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        description: Property. Unique identifier of the entity    
       type: array    
       x-ngsi:    
         type: Property    
     parentStation:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
       description: 'Link to the GTFS standard repository describing the different link between Station and Platform [Parent STATION]. Case ''1'' location_type = 0 (Stop / platform ), the parent_station field contains the ID of a station. Case ''2'' location_type = 1  (Station), this field must be empty. Case ''3'' location_type = 2 (Input / output) or location_type = 3 (generic intersection), the parent_station field contains the ID of a station location_type = 1. Case ''4'' location_type = 4 (boarding area), the parent_station field contains the ID of a platform.'    
       x-ngsi:    
         type: Relationship    
     platformCode:    
-      description: 'Platform identifier for a platform type stop `location_type` = 0 when the stop is in a station.'    
+      description: Platform identifier for a platform type stop `location_type` = 0 when the stop is in a station.    
       type: number    
       x-ngsi:    
         type: Property    
     refPointOfInterest:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'A reference to a point of interest associated to this observation.'    
+      description: A reference to a point of interest associated to this observation.    
       x-ngsi:    
         type: Relationship    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -543,7 +547,7 @@ TransportStation:
         items:    
           anyOf:    
             - anyOf: *transportstation_-_properties_-_owner_-_items_-_anyof    
-              description: 'Property. Unique identifier of the entity'    
+              description: Property. Unique identifier of the entity    
             - type: string    
         type: array    
       items:    
@@ -623,14 +627,14 @@ TransportStation:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be TransportStation'    
+      description: NGSI Entity type. It has to be TransportStation    
       enum:    
         - TransportStation    
       type: string    
       x-ngsi:    
         type: Property    
     webSite:    
-      description: 'Link to the official website for more information..'    
+      description: Link to the official website for more information..    
       type: string    
       x-ngsi:    
         type: Property    
@@ -640,29 +644,24 @@ TransportStation:
         - 0    
         - 1    
         - 2    
-      type: string    
+      type: number    
       x-ngsi:    
         type: Property    
     zoneId:    
-      description: 'Pricing zone of the station.'    
+      description: Pricing zone of the station.    
       type: string    
       x-ngsi:    
         type: Property    
   required:    
     - id    
     - type    
-    - location    
-    - dateObserved    
-    - dateLastReported    
-    - stationType    
-    - locationType    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/TransportStation/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/data-models/Transportation/TransportStation/schema.json    
   x-model-tags: ""    
-  x-version: 0.1.2    
+  x-version: 0.1.3    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
