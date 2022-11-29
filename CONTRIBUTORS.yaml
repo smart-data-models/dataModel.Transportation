@@ -63,6 +63,13 @@ contributors:
     project: Data Lake
     comments: SmartCity Project
     year: 2022
+  - name: Fernando
+    surname: López
+    mail: fernando.lopez@fiware.org
+    organization: FIWARE Foundation
+    project: SPOTTED
+    comments:
+    year: 2022
   - name: Martino
     surname: Maggio
     mail: martino.maggio@eng.it

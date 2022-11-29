@@ -8,3 +8,11 @@ currentAdopters:
  project: 
  comments: 
  startDate: 
+-
+ adopter: SPOTTED Project
+ description: Satellite Open Data for Smart City Services Development
+ mail:
+ organization:
+ project: https://cef-spotted.eu
+ comments:
+ startDate: 2022-11-28

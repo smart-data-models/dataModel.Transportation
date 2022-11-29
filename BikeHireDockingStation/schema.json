@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$schemaVersion": "0.1.1",
-    "modelTags": "",
+    "$schemaVersion": "0.1.5",
+    "modelTags": "SPOTTED",
     "$id": "https://smart-data-models.github.io/dataModel.Transportation/BikeHireDockingStation/schema.json",
     "title": " - Transportation / Bike Hire Docking Station",
     "description": "Bike Hire Docking Station",
@@ -21,6 +21,10 @@
                         "BikeHireDockingStation"
                     ],
                     "description": "Property. NGSI Entity type. It has to be BikeHireDockingStation"
+                },
+                "identifier": {
+                    "type": "string",
+                    "description": "Property. Model:'https://schema.org/Text'. Unique BikeHireDockingStation code."
                 },
                 "totalSlotNumber": {
                     "type": "integer",
@@ -96,6 +100,27 @@
                 "agency_fare_url": {
                     "type": "string",
                     "description": "Property. URL of a web page that contains the details of the fares and also could allow to purchase tickets for that agency online. SameAs: 'agency_fare_url' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt) "
+                },
+                "stationType": {
+                    "type": "string",
+                    "description": "Property. Model:'https://schema.org/Text'. Type of electrical installation.",
+                    "enum": [
+                        "monophasic",
+                        "biphasic",
+                        "virtual"
+                    ]
+                },
+                "stationLocation": {
+                    "type": "string",
+                    "description": "Property. Model:'https://schema.org/Text'.  Location of the station.",
+                    "enum": [
+                        "Street",
+                        "Sidewalk"
+                    ]
+                },
+                "year": {
+                    "type": "string",
+                    "description": "Property. Model:'https://schema.org/Text'. Year corresponding to this observation and is described in YYYY format, for eg. '2020'."
                 }
             }
         }
