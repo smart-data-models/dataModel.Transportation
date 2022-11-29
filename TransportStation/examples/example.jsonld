@@ -1,6 +1,9 @@
 {
     "id": "urn:ngsi-ld:Station:Station:MNCA-STram-L02-AP-T2",
     "type": "TransportStation",
+    "identifier": 19972,
+    "lineId": "59",
+    "lineName": "Sarfatti",
     "address": {
         "addressCountry": "FR",
         "addressLocality": "Nice",

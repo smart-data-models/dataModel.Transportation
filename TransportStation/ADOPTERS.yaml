@@ -1,6 +1,14 @@
 description: This is a compilation list of the current adopters of the data model TransportStation of the Subject Transportation.
 currentAdopters:
 -
+ adopter: Fernando López
+ description: Project Manager
+ mail: fernando.lopez@fiware.org
+ organization: FIWARE Foundation
+ project: SPOTTED
+ comments:
+ startDate: November 2022
+-
  adopter: Stephane ROUX
  description: Project Manager
  mail: stephane.Roux@nicecotedazur.org
