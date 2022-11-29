@@ -87,6 +87,14 @@
             "comment": "Floor on which the location is located. Numerical index associated with the floor. Indicates the relative position of this stage in relation to the others. The index 0 indicates the ground floor. The floors above ground level are indicated by positive indices, and the underground stages by negative indices."
         },
         {
+            "name": "locationType",
+            "writable": true,
+            "displayName": "locationType",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Link to the GTFS standard repository describing the different location [Location Type]. 0 Stop or platform (place where users get on or off in a public transport vehicle). 1 Station (area or physical structure comprising one or more platforms). 2 Entrance or Exit (place where users can enter / exit a station from the street). 3 Generic intersection (location in a station that doesn't correspond to any other `location_type` value). 4 Boarding area of a specific location on a platform where users can get on /"
+        },
+        {
             "name": "name",
             "writable": true,
             "displayName": "name",
@@ -132,6 +140,14 @@
             "@type": "Property",
             "schema": "string",
             "comment": "Link to the official website for more information.."
+        },
+        {
+            "name": "wheelChairAccessible",
+            "writable": true,
+            "displayName": "wheelChairAccessible",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Access possible for Person with Reduced Mobility. For stops without parents 0 no information is available regarding the accessibility of the stop. 1 some vehicles at this stop can board a PMR user. 2 PRM user cannot board  at this stop. For a stop that is part of a station 0 the stop inherits the wheelchair_boarding behavior of the parent station, if it is filled in. 1 lanes provide wheelchair access to the stop / platform  from outside the station. 2 no lane provides wheelchair access to the stop / platfor"
         },
         {
             "name": "zoneId",
@@ -200,6 +216,10 @@
                     "schema": "string"
                 },
                 {
+                    "name": "district",
+                    "schema": "string"
+                },
+                {
                     "name": "postOfficeBoxNumber",
                     "schema": "string"
                 },
@@ -209,6 +229,10 @@
                 },
                 {
                     "name": "streetAddress",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetNr",
                     "schema": "string"
                 }
             ]
@@ -365,66 +389,6 @@
                         "name": "underSea",
                         "displayName": "underSea",
                         "enumValue": 4
-                    }
-                ]
-            }
-        },
-        {
-            "@type": "Telemetry",
-            "name": "locationType",
-            "schema": {
-                "@type": "Enum",
-                "valueSchema": "string",
-                "enumValues": [
-                    {
-                        "name": 0,
-                        "displayName": 0,
-                        "enumValue": 1
-                    },
-                    {
-                        "name": 1,
-                        "displayName": 1,
-                        "enumValue": 2
-                    },
-                    {
-                        "name": 2,
-                        "displayName": 2,
-                        "enumValue": 3
-                    },
-                    {
-                        "name": 3,
-                        "displayName": 3,
-                        "enumValue": 4
-                    },
-                    {
-                        "name": 4,
-                        "displayName": 4,
-                        "enumValue": 5
-                    }
-                ]
-            }
-        },
-        {
-            "@type": "Telemetry",
-            "name": "wheelChairAccessible",
-            "schema": {
-                "@type": "Enum",
-                "valueSchema": "string",
-                "enumValues": [
-                    {
-                        "name": 0,
-                        "displayName": 0,
-                        "enumValue": 1
-                    },
-                    {
-                        "name": 1,
-                        "displayName": 1,
-                        "enumValue": 2
-                    },
-                    {
-                        "name": 2,
-                        "displayName": 2,
-                        "enumValue": 3
                     }
                 ]
             }
