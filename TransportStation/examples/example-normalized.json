@@ -1,6 +1,6 @@
 {
   "id": "urn:ngsi-ld:Station:Station:MNCA-STram-L02-AP-T2",
-  "type": "Station",
+  "type": "TransportStation",
   "name": {
     "type": "Property",
     "value": "NCE-Tram-Station-L02-AP-T2"

@@ -12,7 +12,7 @@
     }
   },
   "properties": {
-    "type": "Station",
+    "type": "TransportStation",
     "name": {
       "type": "Property",
       "value": "NCE-Tram-Station-L02-AP-T2"
