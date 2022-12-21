@@ -1,0 +1,3 @@
+/* (Beta) Export of data model VehicleFault of the subject dataModel.Transportation for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE VehicleFault_type AS ENUM ('VehicleFault');
+CREATE TABLE VehicleFault (address json, alternateName text, areaServed text, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, id text, location json, model text, name text, owner json, seeAlso json, source text, type VehicleFault_type, vehicle json, vehicleType text);
