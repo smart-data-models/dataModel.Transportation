@@ -1,0 +1,3 @@
+/* (Beta) Export of data model Road of the subject dataModel.Transportation for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE roadClass_type AS ENUM ('motorway', 'primary', 'residential', 'secondary', 'service', 'tertiary', 'trunk', 'unclassified');CREATE TYPE Road_type AS ENUM ('Road');
+CREATE TABLE Road (address json, alternateName text, annotations json, areaServed text, color text, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, id text, image text, length text, location json, name text, owner json, refRoadSegment json, responsible text, roadClass roadClass_type, seeAlso json, source text, type Road_type);
