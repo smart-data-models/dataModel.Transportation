@@ -1,0 +1,3 @@
+/* (Beta) Export of data model TrafficViolation of the subject dataModel.Transportation for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE paymentStatus_type AS ENUM ('Paid', 'Unpaid');CREATE TYPE TrafficViolation_type AS ENUM ('TrafficViolation');
+CREATE TABLE TrafficViolation (address json, alternateName text, amountCollected text, areaServed text, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, equipmentId text, equipmentType text, id text, location json, mediaURL text, name text, observationDateTime timestamp, owner json, paymentStatus paymentStatus_type, reportId text, seeAlso json, source text, titleCode text, type TrafficViolation_type);
