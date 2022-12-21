@@ -1,0 +1,3 @@
+/* (Beta) Export of data model RestrictedTrafficArea of the subject dataModel.Transportation for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE RestrictedTrafficArea_type AS ENUM ('RestrictedTrafficArea');
+CREATE TABLE RestrictedTrafficArea (address json, alternateName text, areaServed text, category json, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, id text, location json, name text, notAllowedVehicleType json, owner json, regulation text, restrictionExceptions json, restrictionValidityHours text, security json, seeAlso json, source text, specialRestrictions json, type RestrictedTrafficArea_type, validityEndDate timestamp, validityStartDate timestamp);
