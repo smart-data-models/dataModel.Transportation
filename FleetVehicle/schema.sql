@@ -1,0 +1,3 @@
+/* (Beta) Export of data model FleetVehicle of the subject dataModel.Transportation for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE FleetVehicle_type AS ENUM ('FleetVehicle');
+CREATE TABLE FleetVehicle (address json, alternateName text, areaServed text, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, fleetVehicleType text, id text, location json, name text, operatingCompany text, operator text, owner json, seeAlso json, source text, type FleetVehicle_type, vehicle text);
