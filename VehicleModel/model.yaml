@@ -2,7 +2,7 @@ VehicleModel:
   description: 'This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.'
   properties:
     address:
-      description: 'The mailing address'
+      description: The mailing address
       properties:
         addressCountry:
           description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''
@@ -13,6 +13,9 @@ VehicleModel:
         addressRegion:
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''
           type: string
+        district:
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'
+          type: string
         postOfficeBoxNumber:
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''
           type: string
@@ -22,17 +25,20 @@ VehicleModel:
         streetAddress:
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''
           type: string
+        streetNr:
+          description: Number identifying a specific property on a public street.
+          type: string
       type: object
       x-ngsi:
         model: https://schema.org/address
         type: Property
     alternateName:
-      description: 'An alternative name for this item'
+      description: An alternative name for this item
       type: string
       x-ngsi:
         type: Property
     annotations:
-      description: 'Annotations about the item'
+      description: Annotations about the item
       items:
         type: string
       type: array
@@ -40,13 +46,13 @@ VehicleModel:
         model: https://schema.org/Text
         type: Property
     areaServed:
-      description: 'The geographic area where a service or offered item is provided'
+      description: The geographic area where a service or offered item is provided
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     brandName:
-      description: 'Vehicle''s brand name'
+      description: Vehicle's brand name
       type: string
       x-ngsi:
         model: https://schema.org/brand.
@@ -60,48 +66,48 @@ VehicleModel:
         type: Property
         units: Liters
     color:
-      description: 'The color of the product'
+      description: The color of the product
       type: string
       x-ngsi:
         model: https://schema.org/color
         type: Property
     dataProvider:
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      description: A sequence of characters identifying the provider of the harmonised data entity.
       type: string
       x-ngsi:
         type: Property
     dateCreated:
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     dateModified:
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     depth:
-      description: 'Vehicle''s depth'
+      description: Vehicle's depth
       minimum: 0
       type: number
       x-ngsi:
         model: https://schema.org/depth.
         type: Property
     description:
-      description: 'A description of this item'
+      description: A description of this item
       type: string
       x-ngsi:
         type: Property
     fuelConsumption:
-      description: 'The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km)'
+      description: The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km)
       minimum: 0
       type: number
       x-ngsi:
         model: https://schema.org/fuelConsumption
         type: Property
-        units: 'liters per 100 kilometer'
+        units: liters per 100 kilometer
     fuelType:
       description: 'The type of fuel suitable for the engine or engines of the vehicle. Enum:''autogas, biodiesel, ethanol, cng, diesel, electric, gasoline, hybrid electric/diesel, hybrid electric/petrol, hydrogen, lpg, petrol, petrol(unleaded), petrol(leaded), other'''
       enum:
@@ -125,7 +131,7 @@ VehicleModel:
         model: https://schema.org/DateTime
         type: Property
     height:
-      description: 'Vehicle''s height'
+      description: Vehicle's height
       minimum: 0
       type: number
       x-ngsi:
@@ -133,19 +139,19 @@ VehicleModel:
         type: Property
     id:
       anyOf: &vehiclemodel_-_properties_-_owner_-_items_-_anyof
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Unique identifier of the entity'
+      description: Unique identifier of the entity
       x-ngsi:
         type: Property
     image:
-      description: 'An image of the item'
+      description: An image of the item
       format: uri
       type: string
       x-ngsi:
@@ -154,7 +160,7 @@ VehicleModel:
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
-        - description: 'Geoproperty. Geojson reference to the item. Point'
+        - description: GeoProperty. Geojson reference to the item. Point
           properties:
             bbox:
               items:
@@ -173,9 +179,9 @@ VehicleModel:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Point'
+          title: GeoJSON Point
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. LineString'
+        - description: GeoProperty. Geojson reference to the item. LineString
           properties:
             bbox:
               items:
@@ -197,9 +203,9 @@ VehicleModel:
           required:
             - type
             - coordinates
-          title: 'GeoJSON LineString'
+          title: GeoJSON LineString
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. Polygon'
+        - description: GeoProperty. Geojson reference to the item. Polygon
           properties:
             bbox:
               items:
@@ -223,9 +229,9 @@ VehicleModel:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Polygon'
+          title: GeoJSON Polygon
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'
+        - description: GeoProperty. Geojson reference to the item. MultiPoint
           properties:
             bbox:
               items:
@@ -246,9 +252,9 @@ VehicleModel:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPoint'
+          title: GeoJSON MultiPoint
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+        - description: GeoProperty. Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -272,9 +278,9 @@ VehicleModel:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiLineString'
+          title: GeoJSON MultiLineString
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+        - description: GeoProperty. Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -300,37 +306,37 @@ VehicleModel:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPolygon'
+          title: GeoJSON MultiPolygon
           type: object
       x-ngsi:
-        type: Geoproperty
+        type: GeoProperty
     manufacturerName:
-      description: 'Vehicle''s manufacturer name'
+      description: Vehicle's manufacturer name
       type: string
       x-ngsi:
         model: https://schema.org/Text.
         type: Property
     modelName:
-      description: 'Vehicle''s model name'
+      description: Vehicle's model name
       type: string
       x-ngsi:
         model: https://schema.org/model.
         type: Property
     name:
-      description: 'The name of this item.'
+      description: The name of this item.
       type: string
       x-ngsi:
         type: Property
     owner:
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
         anyOf: *vehiclemodel_-_properties_-_owner_-_items_-_anyof
-        description: 'Property. Unique identifier of the entity'
+        description: Property. Unique identifier of the entity
       type: array
       x-ngsi:
         type: Property
     seeAlso:
-      description: 'list of uri pointing to additional resources about the item'
+      description: list of uri pointing to additional resources about the item
       oneOf:
         - items:
             format: uri
@@ -347,27 +353,27 @@ VehicleModel:
       x-ngsi:
         type: Property
     type:
-      description: 'NGSI Entity type. It has to be VehicleModel'
+      description: NGSI Entity type. It has to be VehicleModel
       enum:
         - VehicleModel
       type: string
       x-ngsi:
         type: Property
     url:
-      description: 'URL which provides a description of this vehicle model'
+      description: URL which provides a description of this vehicle model
       format: uri
       type: string
       x-ngsi:
         model: https://schema.org/URL.
         type: Property
     vehicleEngine:
-      description: 'Information about the engine or engines of the vehicle'
+      description: Information about the engine or engines of the vehicle
       type: string
       x-ngsi:
         model: https://schema.org/vehicleEngine.
         type: Property
     vehicleModelDate:
-      description: 'The release date of a vehicle model (often used to differentiate versions of the same make and model)'
+      description: The release date of a vehicle model (often used to differentiate versions of the same make and model)
       format: date-time
       type: string
       x-ngsi:
@@ -403,14 +409,14 @@ VehicleModel:
         model: https://schema.org/Text
         type: Property
     weight:
-      description: 'Vehicle''s weigth'
+      description: Vehicle's weigth
       minimum: 0
       type: number
       x-ngsi:
         model: https://schema.org/weigth.
         type: Property
     width:
-      description: 'Vehicle''s width'
+      description: Vehicle's width
       minimum: 0
       type: number
       x-ngsi:
@@ -426,7 +432,7 @@ VehicleModel:
     - manufacturerName
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/VehicleModel/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/VehicleModel/schema.json
   x-model-tags: ""
