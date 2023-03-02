@@ -2,7 +2,7 @@ CityWork:
   description: 'The Data Model is a contextual description of urban works carried out on a road axis and which can impact individual (Cars, motorcycle, bicycles, .…) or common transport (Tram, Bus, subway). It contains a geographic representation making it possible to locate its work from a specific JSON Object and at a more global level (Road segment, Road, District, ...) in order to assess the potential impacts on the circulation. A GeoJSON object may represent a region of space (a Geometry), a spatially-bounded entity (a Feature), or a list of features (a Feature Collection). refer to the document [geojson](https://tools.ietf.org/pdf/draft-ietf-geojson-03.pdf) for more information about the modeling and the possible value.'
   properties:
     address:
-      description: 'The mailing address'
+      description: The mailing address
       properties:
         addressCountry:
           description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''
@@ -13,6 +13,9 @@ CityWork:
         addressRegion:
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''
           type: string
+        district:
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'
+          type: string
         postOfficeBoxNumber:
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''
           type: string
@@ -21,6 +24,9 @@ CityWork:
           type: string
         streetAddress:
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''
+          type: string
+        streetNr:
+          description: Number identifying a specific property on a public street.
           type: string
       type: object
       x-ngsi:
@@ -51,12 +57,12 @@ CityWork:
       x-ngsi:
         type: Property
     alternateName:
-      description: 'An alternative name for this item'
+      description: An alternative name for this item
       type: string
       x-ngsi:
         type: Property
     areaServed:
-      description: 'The geographic area where a service or offered item is provided'
+      description: The geographic area where a service or offered item is provided
       type: string
       x-ngsi:
         model: https://schema.org/Text
@@ -67,19 +73,19 @@ CityWork:
         properties:
           lineId:
             anyOf: &citywork_-_properties_-_id_-_anyof
-              - description: 'Property. Identifier format of any NGSI entity'
+              - description: Property. Identifier format of any NGSI entity
                 maxLength: 256
                 minLength: 1
                 pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
                 type: string
-              - description: 'Property. Identifier format of any NGSI entity'
+              - description: Property. Identifier format of any NGSI entity
                 format: uri
                 type: string
-            description: 'Property. Unique identifier of the entity'
+            description: Property. Unique identifier of the entity
           lineLocation:
-            description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+            description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
             oneOf: &citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
-              - description: 'Geoproperty. Geojson reference to the item. Point'
+              - description: GeoProperty. Geojson reference to the item. Point
                 properties:
                   bbox:
                     items:
@@ -98,9 +104,9 @@ CityWork:
                 required:
                   - type
                   - coordinates
-                title: 'GeoJSON Point'
+                title: GeoJSON Point
                 type: object
-              - description: 'Geoproperty. Geojson reference to the item. LineString'
+              - description: GeoProperty. Geojson reference to the item. LineString
                 properties:
                   bbox:
                     items:
@@ -122,9 +128,9 @@ CityWork:
                 required:
                   - type
                   - coordinates
-                title: 'GeoJSON LineString'
+                title: GeoJSON LineString
                 type: object
-              - description: 'Geoproperty. Geojson reference to the item. Polygon'
+              - description: GeoProperty. Geojson reference to the item. Polygon
                 properties:
                   bbox:
                     items:
@@ -148,9 +154,9 @@ CityWork:
                 required:
                   - type
                   - coordinates
-                title: 'GeoJSON Polygon'
+                title: GeoJSON Polygon
                 type: object
-              - description: 'Geoproperty. Geojson reference to the item. MultiPoint'
+              - description: GeoProperty. Geojson reference to the item. MultiPoint
                 properties:
                   bbox:
                     items:
@@ -171,9 +177,9 @@ CityWork:
                 required:
                   - type
                   - coordinates
-                title: 'GeoJSON MultiPoint'
+                title: GeoJSON MultiPoint
                 type: object
-              - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+              - description: GeoProperty. Geojson reference to the item. MultiLineString
                 properties:
                   bbox:
                     items:
@@ -197,9 +203,9 @@ CityWork:
                 required:
                   - type
                   - coordinates
-                title: 'GeoJSON MultiLineString'
+                title: GeoJSON MultiLineString
                 type: object
-              - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+              - description: GeoProperty. Geojson reference to the item. MultiLineString
                 properties:
                   bbox:
                     items:
@@ -225,23 +231,23 @@ CityWork:
                 required:
                   - type
                   - coordinates
-                title: 'GeoJSON MultiPolygon'
+                title: GeoJSON MultiPolygon
                 type: object
           lineName:
             type: string
           segmentId:
             items:
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
             type: array
           segmentLocation:
-            description: 'Geoproperty. Segment Location of the bus impacted'
+            description: Geoproperty. Segment Location of the bus impacted
             items:
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
             type: array
           segmentName:
-            description: 'Property. Segment Name.'
+            description: Property. Segment Name.
             items:
               type: string
             type: array
@@ -250,21 +256,21 @@ CityWork:
       x-ngsi:
         type: Property
     contactPoint:
-      description: 'The details to contact with the item.'
+      description: The details to contact with the item.
       properties:
         areaServed:
-          description: 'Property. The geographic area where a service or offered item is provided. Supersedes serviceArea.'
+          description: Property. The geographic area where a service or offered item is provided. Supersedes serviceArea.
           type: string
         availabilityRestriction:
           anyOf:
-            - description: 'Property. Array of identifiers format of any NGSI entity.'
+            - description: Property. Array of identifiers format of any NGSI entity.
               items:
                 maxLength: 256
                 minLength: 1
                 pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
                 type: string
               type: array
-            - description: 'Property. Array of identifiers format of any NGSI entity.'
+            - description: Property. Array of identifiers format of any NGSI entity.
               items:
                 format: uri
                 type: string
@@ -286,26 +292,26 @@ CityWork:
               type: array
           description: 'Property. Model:''http://schema.org/contactOption''. An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).'
         contactType:
-          description: 'Property. Contact type of this item.'
+          description: Property. Contact type of this item.
           type: string
         email:
-          description: 'Property. Email address of owner.'
+          description: Property. Email address of owner.
           format: idn-email
           type: string
         faxNumber:
           description: 'Property. Model:''http://schema.org/Text''. The fax number.'
           type: string
         name:
-          description: 'Property. The name of this item.'
+          description: Property. The name of this item.
           type: string
         productSupported:
           description: 'Property. Model:''http://schema.org/Text''. The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").'
           type: string
         telephone:
-          description: 'Property. Telephone of this contact.'
+          description: Property. Telephone of this contact.
           type: string
         url:
-          description: 'Property. URL which provides a description or further information about this item.'
+          description: Property. URL which provides a description or further information about this item.
           format: uri
           type: string
       type: object
@@ -313,43 +319,43 @@ CityWork:
         model: https://schema.org/ContactPoint
         type: Property
     contractingAuthority:
-      description: 'Name of the contracting authority'
+      description: Name of the contracting authority
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     countOfBusLineImpacted:
-      description: 'Count of Bus Lines impacted by the works'
+      description: Count of Bus Lines impacted by the works
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     countOfDerogation:
-      description: 'Count of derogations granted to the work Number'
+      description: Count of derogations granted to the work Number
       type: number
       x-ngsi:
         model: https://schema.org/number
         type: Property
     countOfEventImpacted:
-      description: 'Count of Events impacted by the works'
+      description: Count of Events impacted by the works
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     countOfRailwayLineImpacted:
-      description: 'Count of Railway Lines impacted by the works'
+      description: Count of Railway Lines impacted by the works
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     countOfRoadImpacted:
-      description: 'Count of roads impacted by the works'
+      description: Count of roads impacted by the works
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     countOfSchoolBusLineImpacted:
-      description: 'Count of School Bus Lines impacted by the works'
+      description: Count of School Bus Lines impacted by the works
       type: number
       x-ngsi:
         model: https://schema.org/Number
@@ -361,49 +367,49 @@ CityWork:
         model: https://schema.org/Number
         type: Property
     countOfStationImpacted:
-      description: 'Count of Railway stations impacted by the works'
+      description: Count of Railway stations impacted by the works
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     countOfSubwayLineImpacted:
-      description: 'Count of Subway Lines impacted by the works'
+      description: Count of Subway Lines impacted by the works
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     countOfTramwayLineImpacted:
-      description: 'Count of tramway lines impacted by the works'
+      description: Count of tramway lines impacted by the works
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     dataProvider:
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      description: A sequence of characters identifying the provider of the harmonised data entity.
       type: string
       x-ngsi:
         type: Property
     dateCreated:
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     dateLastReported:
-      description: 'A timestamp which denotes the last time when the device successfully reported data. The date and time of this observation in ISO8601 UTCformat'
+      description: A timestamp which denotes the last time when the device successfully reported data. The date and time of this observation in ISO8601 UTCformat
       format: date-time
       type: string
       x-ngsi:
         model: https://schema.org/DateTime
         type: Property
     dateModified:
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     decrees:
-      description: 'A List of text where each element is a string with the URL to download or the name of the decree.'
+      description: A List of text where each element is a string with the URL to download or the name of the decree.
       items:
         type: string
       type: array
@@ -441,7 +447,7 @@ CityWork:
       x-ngsi:
         type: Property
     description:
-      description: 'A description of this item'
+      description: A description of this item
       type: string
       x-ngsi:
         type: Property
@@ -458,7 +464,7 @@ CityWork:
         model: https://schema.org/Text
         type: Property
     endDate:
-      description: 'End date and time of the works in an ISO8601 UTC format. The attribute can be used in addition to the `workDate` attribute when it corresponds to a time interval to be highlighted'
+      description: End date and time of the works in an ISO8601 UTC format. The attribute can be used in addition to the `workDate` attribute when it corresponds to a time interval to be highlighted
       format: date-time
       type: string
       x-ngsi:
@@ -473,7 +479,7 @@ CityWork:
         type: Property
     id:
       anyOf: *citywork_-_properties_-_id_-_anyof
-      description: 'Unique identifier of the entity'
+      description: Unique identifier of the entity
       x-ngsi:
         type: Property
     infrastructureFunction:
@@ -504,9 +510,9 @@ CityWork:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
       x-ngsi:
-        type: Geoproperty
+        type: GeoProperty
     mainContractingCompany:
-      description: 'The Main Contracting Company responsible of the works'
+      description: The Main Contracting Company responsible of the works
       type: string
       x-ngsi:
         model: https://schema.org/Text
@@ -516,30 +522,30 @@ CityWork:
       items:
         properties:
           maxTonnage:
-            description: 'Property. Maximum tonnage authorized for the road. The unit code (text) **TNE** which represents Tonne Metric.'
+            description: Property. Maximum tonnage authorized for the road. The unit code (text) **TNE** which represents Tonne Metric.
             type: number
           roadId:
             anyOf: *citywork_-_properties_-_id_-_anyof
-            description: 'Property. Unique identifier of the entity'
+            description: Property. Unique identifier of the entity
           roadImpacted:
             type: string
           roadLocation:
-            description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+            description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
             oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
           roadName:
-            description: 'Property. Road Name'
+            description: Property. Road Name
             type: string
         type: object
       type: array
       x-ngsi:
         type: Property
     name:
-      description: 'The name of this item.'
+      description: The name of this item.
       type: string
       x-ngsi:
         type: Property
     openingHoursSpecification:
-      description: 'A structured value providing information about the opening hours of a place or a certain service inside a place'
+      description: A structured value providing information about the opening hours of a place or a certain service inside a place
       items:
         properties:
           closes:
@@ -547,7 +553,7 @@ CityWork:
             type: string
           dayOfWeek:
             anyOf:
-              - description: 'Property. Array of days of the week.'
+              - description: Property. Array of days of the week.
                 enum:
                   - Monday
                   - Tuesday
@@ -558,7 +564,7 @@ CityWork:
                   - Sunday
                   - PublicHolidays
                 type: string
-              - description: 'Property. Array of days of the week.'
+              - description: Property. Array of days of the week.
                 enum:
                   - https://schema.org/Monday
                   - https://schema.org/Tuesday
@@ -600,17 +606,17 @@ CityWork:
         model: https://schema.org/openingHoursSpecification
         type: Property
     othersContractingCompany:
-      description: 'A List of Text where each element is a string with the name of the contracting Companies under the responsibility of the main Contracting Company.'
+      description: A List of Text where each element is a string with the name of the contracting Companies under the responsibility of the main Contracting Company.
       items:
         type: string
       type: array
       x-ngsi:
         type: Property
     owner:
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
         anyOf: *citywork_-_properties_-_id_-_anyof
-        description: 'Property. Unique identifier of the entity'
+        description: Property. Unique identifier of the entity
       type: array
       x-ngsi:
         type: Property
@@ -620,25 +626,25 @@ CityWork:
         properties:
           lineId:
             anyOf: *citywork_-_properties_-_id_-_anyof
-            description: 'Property. Unique identifier of the entity'
+            description: Property. Unique identifier of the entity
           lineLocation:
-            description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+            description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
             oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
           lineName:
             type: string
           segmentId:
             items:
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
             type: array
           segmentLocation:
-            description: 'Geoproperty. Segment Location of the railwayImpacted'
+            description: Geoproperty. Segment Location of the railwayImpacted
             items:
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
             type: array
           segmentName:
-            description: 'Property. Segment Name.'
+            description: Property. Segment Name.
             items:
               type: string
             type: array
@@ -652,26 +658,26 @@ CityWork:
         properties:
           roadId:
             anyOf: *citywork_-_properties_-_id_-_anyof
-            description: 'Property. Unique identifier of the entity'
+            description: Property. Unique identifier of the entity
           roadLocation:
-            description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+            description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
             oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
           roadName:
-            description: 'Property. Road Name'
+            description: Property. Road Name
             type: string
           segmentId:
             items:
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
             type: array
           segmentLocation:
-            description: 'Geoproperty. Segment Location of the road impacted.'
+            description: Geoproperty. Segment Location of the road impacted.
             items:
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
             type: array
           segmentName:
-            description: 'Property. Segment Name.'
+            description: Property. Segment Name.
             items:
               type: string
             type: array
@@ -699,25 +705,25 @@ CityWork:
         properties:
           lineId:
             anyOf: *citywork_-_properties_-_id_-_anyof
-            description: 'Property. Unique identifier of the entity'
+            description: Property. Unique identifier of the entity
           lineLocation:
-            description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+            description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
             oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
           lineName:
             type: string
           segmentId:
             items:
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
             type: array
           segmentLocation:
-            description: 'Geoproperty. Segment Location of the school Bus Impacted'
+            description: Geoproperty. Segment Location of the school Bus Impacted
             items:
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
             type: array
           segmentName:
-            description: 'Property. Segment Name.'
+            description: Property. Segment Name.
             items:
               type: string
             type: array
@@ -733,7 +739,7 @@ CityWork:
       x-ngsi:
         type: Property
     seeAlso:
-      description: 'list of uri pointing to additional resources about the item'
+      description: list of uri pointing to additional resources about the item
       oneOf:
         - items:
             format: uri
@@ -750,7 +756,7 @@ CityWork:
       x-ngsi:
         type: Property
     startDate:
-      description: 'Start date and time of the works in an ISO8601 UTC format. The attribute can be used in addition to the `workDate` attribute when it corresponds to a time interval to be highlighted'
+      description: Start date and time of the works in an ISO8601 UTC format. The attribute can be used in addition to the `workDate` attribute when it corresponds to a time interval to be highlighted
       format: date-time
       type: string
       x-ngsi:
@@ -764,16 +770,16 @@ CityWork:
             description: 'Property. List of free text or reference to the entity [TransportStation](https://github.com/smart-data-models/dataModel.Transportation/blob/master/TransportStation/doc/spec.md) if used.'
             items:
               anyOf: *citywork_-_properties_-_id_-_anyof
-              description: 'Property. Unique identifier of the entity'
+              description: Property. Unique identifier of the entity
             type: array
           stationLocation:
-            description: 'Geoproperty. Station Location of the stationImpacted.'
+            description: Geoproperty. Station Location of the stationImpacted.
             items:
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
             type: array
           stationName:
-            description: 'Property. Station Name.'
+            description: Property. Station Name.
             items:
               type: string
             type: array
@@ -801,21 +807,21 @@ CityWork:
         properties:
           lineId:
             anyOf: *citywork_-_properties_-_id_-_anyof
-            description: 'Property. Unique identifier of the entity'
+            description: Property. Unique identifier of the entity
           lineLocation:
-            description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+            description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
             oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
           lineName:
             type: string
           segmentId:
             items:
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
             type: array
           segmentLocation:
-            description: 'Geoproperty. Segment Location of the subwayImpacted'
+            description: Geoproperty. Segment Location of the subwayImpacted
             items:
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
             type: array
           segmentName:
@@ -827,7 +833,7 @@ CityWork:
       x-ngsi:
         type: Property
     territorialArea:
-      description: 'Territorial area. Level higher to the attribute ''areaServed''. A list of Free Text'
+      description: Territorial area. Level higher to the attribute 'areaServed'. A list of Free Text
       type: string
       x-ngsi:
         model: https://schema.org/Text
@@ -838,22 +844,22 @@ CityWork:
         properties:
           lineId:
             anyOf: *citywork_-_properties_-_id_-_anyof
-            description: 'Property. Unique identifier of the entity'
+            description: Property. Unique identifier of the entity
           lineLocation:
-            description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+            description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
             oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
           lineName:
-            description: 'Property. Line Name.'
+            description: Property. Line Name.
             type: string
           segmentId:
             items:
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
             type: array
           segmentLocation:
-            description: 'Geoproperty. Segment Location of the tramwayImpacted'
+            description: Geoproperty. Segment Location of the tramwayImpacted
             items:
-              description: 'Geoproperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
               oneOf: *citywork_-_properties_-_busimpacted_-_items_-_properties_-_segmentid_-_items_-_oneof
             type: array
           segmentName:
@@ -865,7 +871,7 @@ CityWork:
       x-ngsi:
         type: Property
     type:
-      description: 'NGSI Entity type. It has to be CityWork'
+      description: NGSI Entity type. It has to be CityWork
       enum:
         - CityWork
       type: string
@@ -883,7 +889,7 @@ CityWork:
         model: https://schema.org/Text
         type: Property
     workDate:
-      description: 'Date and time (Day or period) of the works. It can be represented by an specific time string'
+      description: Date and time (Day or period) of the works. It can be represented by an specific time string
       type: string
       x-ngsi:
         model: https://schema.org/DateTime
@@ -937,7 +943,7 @@ CityWork:
       x-ngsi:
         type: Property
     workLastDateUpdate:
-      description: 'Last date for updating a contractual element of the work'
+      description: Last date for updating a contractual element of the work
       format: date-time
       type: string
       x-ngsi:
@@ -1019,13 +1025,13 @@ CityWork:
       x-ngsi:
         type: Property
     workNumber:
-      description: 'Number assigned to the work'
+      description: Number assigned to the work
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     workOtherImpact:
-      description: 'Other impact. A list of free values'
+      description: Other impact. A list of free values
       items:
         type: string
       type: array
