@@ -1,8 +1,8 @@
 TrafficFlowObserved:
-  description: 'An observation of traffic flow conditions at a certain place and time.'
+  description: An observation of traffic flow conditions at a certain place and time.
   properties:
     address:
-      description: 'The mailing address'
+      description: The mailing address
       properties:
         addressCountry:
           description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''
@@ -13,6 +13,9 @@ TrafficFlowObserved:
         addressRegion:
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''
           type: string
+        district:
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'
+          type: string
         postOfficeBoxNumber:
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''
           type: string
@@ -22,37 +25,40 @@ TrafficFlowObserved:
         streetAddress:
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''
           type: string
+        streetNr:
+          description: Number identifying a specific property on a public street.
+          type: string
       type: object
       x-ngsi:
         model: https://schema.org/address
         type: Property
     alternateName:
-      description: 'An alternative name for this item'
+      description: An alternative name for this item
       type: string
       x-ngsi:
         type: Property
     areaServed:
-      description: 'The geographic area where a service or offered item is provided'
+      description: The geographic area where a service or offered item is provided
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     averageGapDistance:
-      description: 'Average gap distance between consecutive vehicles'
+      description: Average gap distance between consecutive vehicles
       minimum: 0
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
-        units: 'meter (m)'
+        units: meter (m)
     averageHeadwayTime:
-      description: 'Average headway time. Headway time is the time ellapsed between two consecutive vehicles'
+      description: Average headway time. Headway time is the time ellapsed between two consecutive vehicles
       minimum: 0
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
-        units: 'second (s)'
+        units: second (s)
     averageVehicleLength:
       description: |-
         Average length of the vehicles transiting during
@@ -62,15 +68,15 @@ TrafficFlowObserved:
       x-ngsi:
         model: https://schema.org/Number
         type: Property
-        units: 'meter (m)'
+        units: meter (m)
     averageVehicleSpeed:
-      description: 'Average speed of the vehicles transiting during the observation period'
+      description: Average speed of the vehicles transiting during the observation period
       minimum: 0
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
-        units: 'Kilometer per hour (Km/h)'
+        units: Kilometer per hour (Km/h)
     congested:
       description: ' Flags whether there was a traffic congestion during the observation period in the referred lane. The absence of this attribute means no traffic congestion'
       type: boolean
@@ -78,18 +84,18 @@ TrafficFlowObserved:
         model: https://schema.org/Boolean.
         type: Property
     dataProvider:
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      description: A sequence of characters identifying the provider of the harmonised data entity.
       type: string
       x-ngsi:
         type: Property
     dateCreated:
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     dateModified:
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
@@ -101,39 +107,39 @@ TrafficFlowObserved:
         model: https://schema.org/DateTime.
         type: Property
     dateObservedFrom:
-      description: 'Observation period start date and time. See `dateObserved`'
+      description: Observation period start date and time. See `dateObserved`
       format: date-time
       type: string
       x-ngsi:
         model: https://schema.org/Datetime.
         type: Property
     dateObservedTo:
-      description: 'Observation period end date and time. See `dateObserved`'
+      description: Observation period end date and time. See `dateObserved`
       format: date-time
       type: string
       x-ngsi:
         model: https://schema.org/Datetime.
         type: Property
     description:
-      description: 'A description of this item'
+      description: A description of this item
       type: string
       x-ngsi:
         type: Property
     id:
       anyOf: &trafficflowobserved_-_properties_-_owner_-_items_-_anyof
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Unique identifier of the entity'
+      description: Unique identifier of the entity
       x-ngsi:
         type: Property
     intensity:
-      description: 'Total number of vehicles detected during this observation period'
+      description: Total number of vehicles detected during this observation period
       minimum: 0
       type: number
       x-ngsi:
@@ -151,14 +157,14 @@ TrafficFlowObserved:
     laneId:
       description: 'Lane identifier. Lane identification is done using the conventions defined by RoadSegment entity which are based on [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Forward_%26_backward,_left_%26_right).'
       minimum: 1
-      type: integer
+      type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
-        - description: 'Geoproperty. Geojson reference to the item. Point'
+        - description: GeoProperty. Geojson reference to the item. Point
           properties:
             bbox:
               items:
@@ -177,9 +183,9 @@ TrafficFlowObserved:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Point'
+          title: GeoJSON Point
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. LineString'
+        - description: GeoProperty. Geojson reference to the item. LineString
           properties:
             bbox:
               items:
@@ -201,9 +207,9 @@ TrafficFlowObserved:
           required:
             - type
             - coordinates
-          title: 'GeoJSON LineString'
+          title: GeoJSON LineString
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. Polygon'
+        - description: GeoProperty. Geojson reference to the item. Polygon
           properties:
             bbox:
               items:
@@ -227,9 +233,9 @@ TrafficFlowObserved:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Polygon'
+          title: GeoJSON Polygon
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'
+        - description: GeoProperty. Geojson reference to the item. MultiPoint
           properties:
             bbox:
               items:
@@ -250,9 +256,9 @@ TrafficFlowObserved:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPoint'
+          title: GeoJSON MultiPoint
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+        - description: GeoProperty. Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -276,9 +282,9 @@ TrafficFlowObserved:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiLineString'
+          title: GeoJSON MultiLineString
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+        - description: GeoProperty. Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -304,17 +310,17 @@ TrafficFlowObserved:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPolygon'
+          title: GeoJSON MultiPolygon
           type: object
       x-ngsi:
-        type: Geoproperty
+        type: GeoProperty
     name:
-      description: 'The name of this item.'
+      description: The name of this item.
       type: string
       x-ngsi:
         type: Property
     occupancy:
-      description: 'Fraction of the observation time where a vehicle has been occupying the observed lane'
+      description: Fraction of the observation time where a vehicle has been occupying the observed lane
       maximum: 1
       minimum: 0
       type: number
@@ -322,28 +328,28 @@ TrafficFlowObserved:
         model: https://schema.org/Number.
         type: Property
     owner:
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
         anyOf: *trafficflowobserved_-_properties_-_owner_-_items_-_anyof
-        description: 'Property. Unique identifier of the entity'
+        description: Property. Unique identifier of the entity
       type: array
       x-ngsi:
         type: Property
     refRoadSegment:
-      description: 'Concerned road segment on which the observation has been made. Reference to an entity of type RoadSegment'
+      description: Concerned road segment on which the observation has been made. Reference to an entity of type RoadSegment
       format: uri
       type: string
       x-ngsi:
         model: https://schema.org/URL
         type: Relationship
     reversedLane:
-      description: 'Flags whether traffic in the lane was reversed during the observation period. The absence of this attribute means no lane reversion'
+      description: Flags whether traffic in the lane was reversed during the observation period. The absence of this attribute means no lane reversion
       type: boolean
       x-ngsi:
         model: https://schema.org/Boolean.
         type: Property
     seeAlso:
-      description: 'list of uri pointing to additional resources about the item'
+      description: list of uri pointing to additional resources about the item
       oneOf:
         - items:
             format: uri
@@ -360,7 +366,7 @@ TrafficFlowObserved:
       x-ngsi:
         type: Property
     type:
-      description: 'NGSI Entity type. It has to be TrafficFlowObserved'
+      description: NGSI Entity type. It has to be TrafficFlowObserved
       enum:
         - TrafficFlowObserved
       type: string
@@ -406,7 +412,7 @@ TrafficFlowObserved:
     - dateObserved
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/TrafficFlowObserved/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/TrafficFlowObserved/schema.json
   x-model-tags: ""
