@@ -2,7 +2,7 @@ Vehicle:
   description: 'This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.'
   properties:
     address:
-      description: 'The mailing address'
+      description: The mailing address
       properties:
         addressCountry:
           description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''
@@ -13,6 +13,9 @@ Vehicle:
         addressRegion:
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''
           type: string
+        district:
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'
+          type: string
         postOfficeBoxNumber:
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''
           type: string
@@ -22,17 +25,20 @@ Vehicle:
         streetAddress:
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''
           type: string
+        streetNr:
+          description: Number identifying a specific property on a public street.
+          type: string
       type: object
       x-ngsi:
         model: https://schema.org/address
         type: Property
     alternateName:
-      description: 'An alternative name for this item'
+      description: An alternative name for this item
       type: string
       x-ngsi:
         type: Property
     annotations:
-      description: 'Annotations about the item'
+      description: Annotations about the item
       items:
         type: string
       type: array
@@ -40,7 +46,7 @@ Vehicle:
         model: https://schema.org/Text
         type: Property
     areaServed:
-      description: 'The geographic area where a service or offered item is provided'
+      description: The geographic area where a service or offered item is provided
       type: string
       x-ngsi:
         model: https://schema.org/Text
@@ -52,7 +58,7 @@ Vehicle:
         model: https://schema.org/Number
         type: Property
     cargoWeight:
-      description: 'Current weight of the vehicle''s cargo'
+      description: Current weight of the vehicle's cargo
       exclusiveMinimum: true
       minimum: 0
       type: number
@@ -76,50 +82,50 @@ Vehicle:
         model: https://schema.org/Text
         type: Property
     color:
-      description: 'The color of the product'
+      description: The color of the product
       type: string
       x-ngsi:
         model: https://schema.org/color
         type: Property
     currentTripCount:
-      description: 'The current count of trips made by the vehicle corresponding to this observation on the given day of operation.'
+      description: The current count of trips made by the vehicle corresponding to this observation on the given day of operation.
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     dataProvider:
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      description: A sequence of characters identifying the provider of the harmonised data entity.
       type: string
       x-ngsi:
         type: Property
     dateCreated:
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     dateFirstUsed:
-      description: 'Timestamp which denotes when the vehicle was first used'
+      description: Timestamp which denotes when the vehicle was first used
       format: date
       type: string
       x-ngsi:
         model: https://schema.org/DateTime.
         type: Property
     dateModified:
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     dateVehicleFirstRegistered:
-      description: 'The date of the first registration of the vehicle with the respective public authorities'
+      description: The date of the first registration of the vehicle with the respective public authorities
       format: date
       type: string
       x-ngsi:
         model: https://schema.org/dateVehicleFirstRegistered.
         type: Property
     description:
-      description: 'A description of this item'
+      description: A description of this item
       type: string
       x-ngsi:
         type: Property
@@ -133,7 +139,7 @@ Vehicle:
         model: https://schema.org/Text
         type: Property
     deviceSimNumber:
-      description: 'Gives the SIM number of the device in the vehicle.'
+      description: Gives the SIM number of the device in the vehicle.
       type: string
       x-ngsi:
         model: https://schema.org/Text
@@ -177,7 +183,7 @@ Vehicle:
         model: https://schema.org/Text
         type: Property
     fleetVehicleId:
-      description: 'The identifier of the vehicle in the context of the fleet of vehicles to which it belongs'
+      description: The identifier of the vehicle in the context of the fleet of vehicles to which it belongs
       type: string
       x-ngsi:
         model: https://schema.org/Text.
@@ -189,13 +195,13 @@ Vehicle:
         model: https://schema.org/Number
         type: Property
     fuelFilled:
-      description: 'Amount of fuel filled in liters to the vehicle corresponding to this observation.'
+      description: Amount of fuel filled in liters to the vehicle corresponding to this observation.
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     fuelType:
-      description: 'The type of fuel suitable for the engine or engines of the vehicle corresponding to this observation.'
+      description: The type of fuel suitable for the engine or engines of the vehicle corresponding to this observation.
       type: string
       x-ngsi:
         model: https://schema.org/Text
@@ -216,25 +222,25 @@ Vehicle:
         units: Degree
     id:
       anyOf: &vehicle_-_properties_-_owner_-_items_-_anyof
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Unique identifier of the entity'
+      description: Unique identifier of the entity
       x-ngsi:
         type: Property
     ignitionStatus:
-      description: 'Gives the ignition status of the vehicle. True means ignited'
+      description: Gives the ignition status of the vehicle. True means ignited
       type: boolean
       x-ngsi:
         model: https://schema.org/Boolean
         type: Property
     image:
-      description: 'An image of the item'
+      description: An image of the item
       format: uri
       type: string
       x-ngsi:
@@ -249,7 +255,7 @@ Vehicle:
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf: &vehicle_-_properties_-_previouslocation_-_oneof
-        - description: 'Geoproperty. Geojson reference to the item. Point'
+        - description: GeoProperty. Geojson reference to the item. Point
           properties:
             bbox:
               items:
@@ -268,9 +274,9 @@ Vehicle:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Point'
+          title: GeoJSON Point
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. LineString'
+        - description: GeoProperty. Geojson reference to the item. LineString
           properties:
             bbox:
               items:
@@ -292,9 +298,9 @@ Vehicle:
           required:
             - type
             - coordinates
-          title: 'GeoJSON LineString'
+          title: GeoJSON LineString
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. Polygon'
+        - description: GeoProperty. Geojson reference to the item. Polygon
           properties:
             bbox:
               items:
@@ -318,9 +324,9 @@ Vehicle:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Polygon'
+          title: GeoJSON Polygon
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'
+        - description: GeoProperty. Geojson reference to the item. MultiPoint
           properties:
             bbox:
               items:
@@ -341,9 +347,9 @@ Vehicle:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPoint'
+          title: GeoJSON MultiPoint
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+        - description: GeoProperty. Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -367,9 +373,9 @@ Vehicle:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiLineString'
+          title: GeoJSON MultiLineString
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+        - description: GeoProperty. Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -395,10 +401,10 @@ Vehicle:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPolygon'
+          title: GeoJSON MultiPolygon
           type: object
       x-ngsi:
-        type: Geoproperty
+        type: GeoProperty
     mileageFromOdometer:
       description: 'The total distance travelled by the particular vehicle since its initial production, as read from its odometer'
       type: number
@@ -406,7 +412,7 @@ Vehicle:
         model: https://schema.org/mileageFromOdometer.
         type: Property
     municipalityInfo:
-      description: 'Municipality information corresponding to this observation.'
+      description: Municipality information corresponding to this observation.
       properties:
         cityId:
           description: 'Property. Model:''https://schema.org/Text''. City ID corresponding to this observation.'
@@ -443,22 +449,22 @@ Vehicle:
         model: https://schema.org/Text
         type: Property
     name:
-      description: 'The name of this item.'
+      description: The name of this item.
       type: string
       x-ngsi:
         type: Property
     observationDateTime:
-      description: 'Last reported time of observation'
+      description: Last reported time of observation
       format: date-time
       type: string
       x-ngsi:
         model: https://schema.org/DateTime
         type: Property
     owner:
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
         anyOf: *vehicle_-_properties_-_owner_-_items_-_anyof
-        description: 'Property. Unique identifier of the entity'
+        description: Property. Unique identifier of the entity
       type: array
       x-ngsi:
         type: Property
@@ -466,9 +472,9 @@ Vehicle:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf: *vehicle_-_properties_-_previouslocation_-_oneof
       x-ngsi:
-        type: Geoproperty
+        type: GeoProperty
     purchaseDate:
-      description: 'The date the item e.g. vehicle was purchased by the current owner'
+      description: The date the item e.g. vehicle was purchased by the current owner
       format: date-time
       type: string
       x-ngsi:
@@ -476,26 +482,26 @@ Vehicle:
         type: Property
     refVehicleModel:
       anyOf:
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Reference to a VehicleModel'
+      description: Reference to a VehicleModel
       x-ngsi:
         model: https://schema.org/URL
         type: Relationship
     reportId:
-      description: 'Unique Id assigned for the issue or report or feedback or transaction corresponding to this observation.'
+      description: Unique Id assigned for the issue or report or feedback or transaction corresponding to this observation.
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     seeAlso:
-      description: 'list of uri pointing to additional resources about the item'
+      description: list of uri pointing to additional resources about the item
       oneOf:
         - items:
             format: uri
@@ -507,7 +513,7 @@ Vehicle:
       x-ngsi:
         type: Property
     serviceOnDuty:
-      description: 'Nature of service provided by emergency vehicle corresponding to this observation. True indicates the emergency vehicle corresponding to this observation is attending to/ servicing to an emergency call of duty and is False otherwise.'
+      description: Nature of service provided by emergency vehicle corresponding to this observation. True indicates the emergency vehicle corresponding to this observation is attending to/ servicing to an emergency call of duty and is False otherwise.
       type: string
       x-ngsi:
         model: https://schema.org/Boolean
@@ -564,20 +570,20 @@ Vehicle:
         type: Property
         units: Km/h
     tripNetWeightCollected:
-      description: 'The net weight collected by the vehicle corresponding to this observation at the end of the trip.'
+      description: The net weight collected by the vehicle corresponding to this observation at the end of the trip.
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     type:
-      description: 'NGSI Entity type. It has to be Vehicle'
+      description: NGSI Entity type. It has to be Vehicle
       enum:
         - Vehicle
       type: string
       x-ngsi:
         type: Property
     vehicleAltitude:
-      description: 'Gives the current altitude of the vehicle using GPS'
+      description: Gives the current altitude of the vehicle using GPS
       type: string
       x-ngsi:
         model: https://schema.org/Text
@@ -589,7 +595,7 @@ Vehicle:
         model: https://schema.org/vehicleConfiguration.
         type: Property
     vehicleIdentificationNumber:
-      description: 'The Vehicle Identification Number (VIN) is a unique serial number used by the automotive industry to identify individual motor vehicles'
+      description: The Vehicle Identification Number (VIN) is a unique serial number used by the automotive industry to identify individual motor vehicles
       type: string
       x-ngsi:
         model: https://schema.org/vehicleIdentificationNumber.
@@ -625,7 +631,7 @@ Vehicle:
         model: https://schema.org/vehicleSpecialUsage
         type: Property
     vehicleTrackerDevice:
-      description: 'Installation status of the GPS device or the tracking device fitted to the vehicle corresponding to this observation.'
+      description: Installation status of the GPS device or the tracking device fitted to the vehicle corresponding to this observation.
       type: string
       x-ngsi:
         model: https://schema.org/Text
@@ -640,8 +646,8 @@ Vehicle:
         - autorickshaw
         - bicycle
         - binTrolley
-        - 'BRT mini bus·'
-        - 'BRT bus'
+        - BRT mini bus·
+        - BRT bus
         - bus
         - car
         - caravan
@@ -682,25 +688,32 @@ Vehicle:
         - vehicleWithTrailer
         - withEvenNumberedRegistrationPlates
         - withOddNumberedRegistrationPlates
+        - pilotVessel
+        - passengerVessel
+        - cargoVessel
+        - tug
+        - militaryVessel
+        - sailingVessel
+        - vessel
         - other
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     wardId:
-      description: 'Ward ID of the entity corresponding to this observation.'
+      description: Ward ID of the entity corresponding to this observation.
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     wardName:
-      description: 'Ward name of the entity corresponding to this observation.'
+      description: Ward name of the entity corresponding to this observation.
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     zoneName:
-      description: 'Zone name of the entity corresponding to this observation'
+      description: Zone name of the entity corresponding to this observation
       type: string
       x-ngsi:
         model: https://schema.org/Text
