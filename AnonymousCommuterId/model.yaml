@@ -35,6 +35,8 @@ AnonymousCommuterId:
     algorithm:
       description: Name of the algorithm used to anonymize the Id
       type: string
+      x-ngsi:
+        type: Property
     alternateName:
       description: An alternative name for this item
       type: string
@@ -43,6 +45,8 @@ AnonymousCommuterId:
     anonymizedId:
       description: Anonymized identifier
       type: string
+      x-ngsi:
+        type: Property
     areaServed:
       description: The geographic area where a service or offered item is provided
       type: string
@@ -80,6 +84,8 @@ AnonymousCommuterId:
     dest:
       description: 'String value of destination id, actual entity where the anonymous id was detected.'
       type: string
+      x-ngsi:
+        type: Property
     id:
       anyOf: &anonymouscommuterid_-_properties_-_owner_-_items_-_anyof
         - description: Property. Identifier format of any NGSI entity
@@ -254,6 +260,8 @@ AnonymousCommuterId:
     orig:
       description: 'String value of origin id, last entity where the anonymous id was detected.'
       type: string
+      x-ngsi:
+        type: Property
     owner:
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
@@ -277,6 +285,8 @@ AnonymousCommuterId:
     source:
       description: 'String value of source of this AnonymousCommuterId, eg. (ALPR, People Monitoring, Face Recognition, etc...)'
       type: string
+      x-ngsi:
+        type: Property
     type:
       description: NGSI entity type. It has to be AnonymousCommuterId
       enum:
@@ -294,4 +304,4 @@ AnonymousCommuterId:
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/AnonymousCommuterId/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/AnonymousCommuterId/schema.json
   x-model-tags: ""
-  x-version: 0.0.1
+  x-version: 0.0.2
