@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "$schemaVersion": "0.0.1",
+  "$schemaVersion": "0.0.2",
   "$id": "https://smart-data-models.github.io/dataModel.Transportation/AnonymousCommuterId/schema.json",
   "title": "Anonymous Commuter Id",
   "modelTags": "",
@@ -34,23 +34,23 @@
         },
         "orig": {
           "type": "string",
-          "description": "String value of origin id, last entity where the anonymous id was detected."
+          "description": "Property. String value of origin id, last entity where the anonymous id was detected."
         },
         "dest": {
           "type": "string",
-          "description": "String value of destination id, actual entity where the anonymous id was detected."
+          "description": "Property. String value of destination id, actual entity where the anonymous id was detected."
         },
         "anonymizedId": {
           "type": "string",
-          "description": "Anonymized identifier"
+          "description": "Property. Anonymized identifier"
         },
         "source": {
           "type": "string",
-          "description": "String value of source of this AnonymousCommuterId, eg. (ALPR, People Monitoring, Face Recognition, etc...)"
+          "description": "Property. String value of source of this AnonymousCommuterId, eg. (ALPR, People Monitoring, Face Recognition, etc...)"
         },
         "algorithm": {
           "type": "string",
-          "description": "Name of the algorithm used to anonymize the Id"
+          "description": "Property. Name of the algorithm used to anonymize the Id"
         }
       }
     }
