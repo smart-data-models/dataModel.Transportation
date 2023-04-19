@@ -1,0 +1,3 @@
+/* (Beta) Export of data model AnprFlowObserved of the subject dataModel.Transportation for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE AnprFlowObserved_type AS ENUM ('AnprFlowObserved');
+CREATE TABLE AnprFlowObserved (address json, alternateName text, areaServed text, dataProvider text, dateCreated timestamp, dateModified timestamp, dateObserved timestamp, dateReceived timestamp, description text, id text, laneId text, location json, name text, observedBy text, observedVehicle json, owner json, refImages json, seeAlso json, source text, type AnprFlowObserved_type, vehiclePlateNotRead text, zonesServed json);
