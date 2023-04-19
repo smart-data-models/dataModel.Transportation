@@ -1,0 +1,63 @@
+{
+  "id": "anprFlowObserved:LEZ-Noorderlaan",
+  "type": "AnprFlowObserved",
+  "address": {
+    "type": "Property",
+    "value": {
+      "addressCountry": "BE",
+      "addressLocality": "Antwerp",
+      "streetAddress": "Noorderlaan"
+    }
+  },
+  "dateObserved": {
+    "type": "Property",
+    "value": {
+      "@type": "DateTime",
+      "@value": "2022-09-01T16:30:00Z"
+    }
+  },
+  "laneId": {
+    "type": "Property",
+    "value": "ABC123"
+  },
+  "areaServed": {
+    "type": "Property",
+    "value": "Antwerp"
+  },
+  "zonesServed": {
+    "type": "Property",
+    "value": {
+      "type": "string",
+      "coordinates": [
+        "Antwerp"
+      ]
+    }
+  },
+  "vehiclePlateNotRead": {
+    "type": "Property",
+    "value": false
+  },
+  "observedVehicle": {
+    "type": "Property",
+    "value": {
+      "direction": "towards",
+      "speed": 50,
+      "brand": "Audi",
+      "model": "A3",
+      "color": "black",
+      "country": "BE",
+      "licensePlate": "1-ABC-123"
+    }
+  },
+  "refImages": {
+    "type": "Property",
+    "value": {
+      "type": "s3://bucket/object-xxx-plate",
+      "contentType": "image/jpg",
+      "imageType": "anpr"
+    }
+  },
+    "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "anprFlowObserved:LEZ-Noorderlaan",
+  "type": "AnprFlowObserved",
+  "address": {
+    "type": "StructuredValue",
+    "value": {
+      "addressCountry": "BE",
+      "addressLocality": "Antwerp",
+      "streetAddress": "Noorderlaan"
+    }
+  },
+  "dateObserved": {
+    "type": "DateTime",
+    "@value": "2022-09-01T16:30:00Z"
+  },
+  "laneId": {
+    "type": "Text",
+    "value": "ABC123"
+  },
+  "areaServed": {
+    "type": "Text",
+    "value": "Antwerp"
+  },
+  "zonesServed": {
+    "type": "StructuredValue",
+    "value": {
+      "type": "string",
+      "coordinates": [
+        "Antwerp"
+      ]
+    }
+  },
+  "vehiclePlateNotRead": {
+    "type": "Boolean",
+    "value": false
+  },
+  "observedVehicle": {
+    "type": "StructuredValue",
+    "value": {
+      "direction": "towards",
+      "speed": 50,
+      "brand": "Audi",
+      "model": "A3",
+      "color": "black",
+      "country": "BE",
+      "licensePlate": "1-ABC-123"
+    }
+  },
+  "refImages": {
+    "type": "StructuredValue",
+    "value": {
+      "type": "s3://bucket/object-xxx-plate",
+      "contentType": "image/jpg",
+      "imageType": "anpr"
+    }
+  }
+}
