@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "schemaVersion": "0.0.1",
+  "$schemaVersion": "0.0.1",
   "modelTags": "",
   "$id": "https://gitlab.inuits.io/tom.vda/dataModel.Police/AnprFlowObserved/schema.json",
   "title": "ANPR Flow Observed schema",
