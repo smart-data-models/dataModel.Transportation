@@ -1,4 +1,5 @@
 notesHeader:   This data model describes the main entities involved with smart applications that deal with police issues. This set of entities is primarily associated with the Automotive and Smart City vertical segments and related IoT applications. When feasible, references to existing schema.org entity types and attributes are included. This model has been devised to be as generic as possible, thus allowing to  be used by different police departements and zones like ANPR,  Trajectory control and Police Vehicles
+
 notesMiddle:
 
 notesFooter:
