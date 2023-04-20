@@ -8,7 +8,7 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 グローバルな記述です：**このデータモデルは、ある場所、ある時間における車両の通過に関連する観測を表す。このデータモデルは [dataModel.Transportation/ItemFlowObserved] に基づき、ANPR 固有のプロパティと観測画像へのリンクで拡張されている。  
-のバージョンです：  
+バージョン：0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
@@ -455,9 +455,9 @@ AnprFlowObserved:
   x-derived-from: ""    
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/AnprFlowObserved/LICENSE.md    
-  x-model-schema: https://gitlab.inuits.io/tom.vda/dataModel.Police/AnprFlowObserved/schema.json    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/AnprFlowObserved/schema.json    
   x-model-tags: ""    
-  x-version: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
