@@ -52,7 +52,7 @@
           "type": "string"
         },
         "zonesServed": {
-          "description": "Array of zones that are able to receive or read the observations",
+          "description": "Property. Array of zones that are able to receive or read the observations",
           "type": "array",
           "items": {
             "type": "string"
