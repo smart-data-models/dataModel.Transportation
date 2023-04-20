@@ -11,7 +11,7 @@ info:
   description:  |
     The data model represents an observation linked to the passing of a vehicle at a certain location and at a given time. This Data Model is based on the [dataModel.Transportation/ItemFlowObserved], extended with ANPR specific properties and links to the observation images.
   title: AnprFlowObserved
-  version: ""
+  version: "0.0.1"
 openapi: "3.0.0"
 
 paths: 

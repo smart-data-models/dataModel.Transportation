@@ -8,7 +8,7 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 Globale Beschreibung: **Das Datenmodell stellt eine Beobachtung dar, die mit dem Vorbeifahren eines Fahrzeugs an einem bestimmten Ort und zu einer bestimmten Zeit verbunden ist. Dieses Datenmodell basiert auf dem [dataModel.Transportation/ItemFlowObserved], erweitert um ANPR-spezifische Eigenschaften und Links zu den Beobachtungsbildern.**  
-Version:  
+Version: 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
@@ -455,9 +455,9 @@ AnprFlowObserved:
   x-derived-from: ""    
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/AnprFlowObserved/LICENSE.md    
-  x-model-schema: https://gitlab.inuits.io/tom.vda/dataModel.Police/AnprFlowObserved/schema.json    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/AnprFlowObserved/schema.json    
   x-model-tags: ""    
-  x-version: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
