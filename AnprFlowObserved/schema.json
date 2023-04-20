@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/schema#",
   "$schemaVersion": "0.0.1",
   "modelTags": "",
-  "$id": "https://gitlab.inuits.io/tom.vda/dataModel.Police/AnprFlowObserved/schema.json",
+  "$id": "https://smart-data-models.github.io/dataModel.Transportation/AnprFlowObserved/schema.json",
   "title": "ANPR Flow Observed schema",
   "description": "The data model represents an observation linked to the passing of a vehicle at a certain location and at a given time. This Data Model is based on the [dataModel.Transportation/ItemFlowObserved], extended with ANPR specific properties and links to the observation images.",
   "type": "object",
