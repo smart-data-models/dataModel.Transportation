@@ -1,6 +1,7 @@
 {
     "@context": {
         "AnonymousCommuterId": "https://smartdatamodels.org/dataModel.Transportation/AnonymousCommuterId",
+        "AnprFlowObserved": "https://smartdatamodels.org/dataModel.Transportation/AnprFlowObserved",
         "BikeHireDockingStation": "https://smartdatamodels.org/dataModel.Transportation/BikeHireDockingStation",
         "BikeLane": "https://smartdatamodels.org/dataModel.Transportation/BikeLane",
         "CityWork": "https://smartdatamodels.org/dataModel.Transportation/CityWork",
@@ -99,6 +100,7 @@
         "dateObserved": "https://smartdatamodels.org/dateObserved",
         "dateObservedFrom": "https://smartdatamodels.org/dataModel.Transportation/dateObservedFrom",
         "dateObservedTo": "https://smartdatamodels.org/dataModel.Transportation/dateObservedTo",
+        "dateReceived": "https://smartdatamodels.org/dataModel.Transportation/dateReceived",
         "dateVehicleFirstRegistered": "https://smartdatamodels.org/dataModel.Transportation/dateVehicleFirstRegistered",
         "decrees": "https://smartdatamodels.org/dataModel.Transportation/decrees",
         "depth": "https://smartdatamodels.org/dataModel.Transportation/depth",
@@ -198,6 +200,8 @@
         "numPedestrianDead": "https://smartdatamodels.org/dataModel.Transportation/numPedestrianDead",
         "numPedestrianInjured": "https://smartdatamodels.org/dataModel.Transportation/numPedestrianInjured",
         "observationDateTime": "https://smartdatamodels.org/dataModel.Transportation/observationDateTime",
+        "observedBy": "https://smartdatamodels.org/dataModel.Transportation/observedBy",
+        "observedVehicle": "https://smartdatamodels.org/dataModel.Transportation/observedVehicle",
         "occupancy": "https://smartdatamodels.org/dataModel.Transportation/occupancy",
         "occupancyLevel": "https://smartdatamodels.org/dataModel.Transportation/occupancyLevel",
         "openingHours": "https://smartdatamodels.org/openingHours",
@@ -231,6 +235,7 @@
         "purchaseDate": "https://smartdatamodels.org/dataModel.Transportation/purchaseDate",
         "railwayImpacted": "https://smartdatamodels.org/dataModel.Transportation/railwayImpacted",
         "refDevice": "https://smartdatamodels.org/dataModel.Transportation/refDevice",
+        "refImages": "https://smartdatamodels.org/dataModel.Transportation/refImages",
         "refPointOfInterest": "https://smartdatamodels.org/dataModel.Transportation/refPointOfInterest",
         "refRestrictedTrafficArea": "https://smartdatamodels.org/dataModel.Transportation/refRestrictedTrafficArea",
         "refRoad": "https://smartdatamodels.org/dataModel.Transportation/refRoad",
@@ -324,6 +329,7 @@
         "vehicleIdentificationNumber": "https://smartdatamodels.org/dataModel.Transportation/vehicleIdentificationNumber",
         "vehicleModelDate": "https://smartdatamodels.org/dataModel.Transportation/vehicleModelDate",
         "vehiclePlateIdentifier": "https://smartdatamodels.org/dataModel.Transportation/vehiclePlateIdentifier",
+        "vehiclePlateNotRead": "https://smartdatamodels.org/dataModel.Transportation/vehiclePlateNotRead",
         "vehicleRunningStatus": "https://smartdatamodels.org/dataModel.Transportation/vehicleRunningStatus",
         "vehicleSpecialUsage": "https://smartdatamodels.org/dataModel.Transportation/vehicleSpecialUsage",
         "vehicleSubType": "https://smartdatamodels.org/dataModel.Transportation/vehicleSubType",
@@ -352,6 +358,7 @@
         "workTarget": "https://smartdatamodels.org/dataModel.Transportation/workTarget",
         "workZone": "https://smartdatamodels.org/dataModel.Transportation/workZone",
         "zoneId": "https://smartdatamodels.org/dataModel.Transportation/zoneId",
-        "zoneName": "https://smartdatamodels.org/dataModel.Transportation/zoneName"
+        "zoneName": "https://smartdatamodels.org/dataModel.Transportation/zoneName",
+        "zonesServed": "https://smartdatamodels.org/dataModel.Transportation/zonesServed"
     }
 }
