@@ -411,10 +411,12 @@ AnprFlowObserved:
       x-ngsi:
         type: Property
     zonesServed:
-      description: Array of zones that are able to receive or read the observations
+      description: Property. Array of zones that are able to receive or read the observations
       items:
         type: string
       type: array
+      x-ngsi:
+        type: Property
   required:
     - id
     - type
