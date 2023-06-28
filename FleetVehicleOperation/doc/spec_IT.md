@@ -15,7 +15,7 @@
 ## Elenco delle proprietà  
 
 <sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
-- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated[string]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified[string]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description[string]`: Descrizione dell'articolo  - `endedAt[string]`: La data e l'ora di fine dell'evento, quando si sa che l'evento o l'operazione sono terminati. Null/omitted se non è ancora terminato.  - `fleetVehicle[*]`: Riferimento all'entità FleetVehicle a cui si riferisce l'operazione.  - `fleetVehicleOperation[*]`: Riferimento all'entità FleetVehicleOperation a cui si riferisce questa entità di stato.  - `id[*]`: Identificatore univoco dell'entità  - `initiatingLocation[*]`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `location[*]`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name[string]`: Il nome di questo elemento.  - `operationType[string]`: Il tipo di testo libero dell'evento o dell'operazione, ad es. chiamata per il trasporto di un paziente, raccolta postale, consegna, vicinanza a un'area riservata, eccesso di velocità.  - `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `responseTime[number]`: Indica il tempo di risposta a un evento, in secondi. Il timestamp observedAt associato indica quando è stato registrato l'ultimo aggiornamento. Ad esempio, registra il tempo di risposta di un'ambulanza per raggiungere un paziente.  - `result[string]`: Il risultato finale dell'evento o dell'operazione.  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `startedAt[string]`: La data e l'ora di inizio dell'evento o dell'operazione.  - `transportTime[number]`: Indica il tempo trascorso dal veicolo della flotta per il trasporto di persone o forniture per l'operazione in corso. Ad esempio, indica il tempo trascorso da un'ambulanza per trasportare un paziente al pronto soccorso di un ospedale.  - `type[string]`: Identificatore dell'entità NGSI. Deve essere FleetVehicleOperation (Operazione Veicolo).  <!-- /30-PropertiesList -->  
+- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated[string]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified[string]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description[string]`: Descrizione dell'articolo  - `endedAt[string]`: La data e l'ora di fine dell'evento, quando si sa che l'evento o l'operazione sono terminati. Null/omitted se non è ancora terminato.  - `fleetVehicle[*]`: Riferimento all'entità FleetVehicle a cui si riferisce l'operazione.  - `fleetVehicleOperation[*]`: Riferimento all'entità FleetVehicleOperation a cui si riferisce questa entità di stato.  - `id[*]`: Identificatore univoco dell'entità  - `initiatingLocation[*]`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `location[*]`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name[string]`: Il nome di questo elemento.  - `operationType[string]`: Il tipo di testo libero dell'evento o dell'operazione, ad es. chiamata per il trasporto di un paziente, raccolta postale, consegna, vicinanza a un'area riservata, eccesso di velocità.  - `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `responseTime[number]`: Indica il tempo di risposta a un evento, in secondi. Il timestamp observedAt associato indica quando è stato registrato l'ultimo aggiornamento. Ad esempio, registra il tempo di risposta di un'ambulanza per raggiungere un paziente.  - `result[string]`: Il risultato finale dell'evento o dell'operazione.  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `startedAt[string]`: La data e l'ora di inizio dell'evento o dell'operazione.  - `transportTime[number]`: Indica il tempo trascorso dal veicolo della flotta per il trasporto di persone o forniture per l'operazione in corso. Ad esempio, indica il tempo trascorso da un'ambulanza per trasportare un paziente al pronto soccorso di un ospedale.  - `type[string]`: Identificatore dell'entità NGSI. Deve essere FleetVehicleOperation (Operazione Veicolo).  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Proprietà richieste  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
@@ -33,7 +33,7 @@ FleetVehicleOperation:
   description: 'This entity contains a harmonised description of a generic fleet vehicle operation such as a delivery, or a postal collection. This entity is primarily associated with the vertical segment of the transport and logistics but may also be used many other related IoT applications.'    
   properties:    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
           description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
@@ -44,6 +44,9 @@ FleetVehicleOperation:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'    
+          type: string    
         postOfficeBoxNumber:    
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
@@ -53,92 +56,95 @@ FleetVehicleOperation:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
+        streetNr:    
+          description: Number identifying a specific property on a public street.    
+          type: string    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity.    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     endedAt:    
-      description: 'The end date and time of the event when the event or operation is known to be over/complete. Null/omitted if not yet ended.'    
+      description: The end date and time of the event when the event or operation is known to be over/complete. Null/omitted if not yet ended.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     fleetVehicle:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Reference to the FleetVehicle entity to which this operation relates.'    
+      description: Reference to the FleetVehicle entity to which this operation relates.    
       x-ngsi:    
         type: Relationship    
     fleetVehicleOperation:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Reference to the FleetVehicleOperation entity to which this status entity relates.'    
+      description: Reference to the FleetVehicleOperation entity to which this status entity relates.    
       x-ngsi:    
         type: Relationship    
     id:    
       anyOf: &fleetvehicleoperation_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     initiatingLocation:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf: &fleetvehicleoperation_-_properties_-_location_-_oneof    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: GeoProperty. Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -157,9 +163,9 @@ FleetVehicleOperation:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+        - description: GeoProperty. Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -181,9 +187,9 @@ FleetVehicleOperation:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+        - description: GeoProperty. Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -207,9 +213,9 @@ FleetVehicleOperation:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+        - description: GeoProperty. Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -230,9 +236,9 @@ FleetVehicleOperation:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+        - description: GeoProperty. Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -256,9 +262,9 @@ FleetVehicleOperation:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+        - description: GeoProperty. Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -284,7 +290,7 @@ FleetVehicleOperation:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
       x-ngsi:    
         type: GeoProperty    
@@ -294,7 +300,7 @@ FleetVehicleOperation:
       x-ngsi:    
         type: GeoProperty    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item.    
       type: string    
       x-ngsi:    
         type: Property    
@@ -304,10 +310,10 @@ FleetVehicleOperation:
       x-ngsi:    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
         anyOf: *fleetvehicleoperation_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        description: Property. Unique identifier of the entity    
       type: array    
       x-ngsi:    
         type: Property    
@@ -318,12 +324,12 @@ FleetVehicleOperation:
         type: Property    
         units: seconds    
     result:    
-      description: 'The final result of the event or operation.'    
+      description: The final result of the event or operation.    
       type: string    
       x-ngsi:    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -340,18 +346,18 @@ FleetVehicleOperation:
       x-ngsi:    
         type: Property    
     startedAt:    
-      description: 'The start date and time when the event or operation was triggered.'    
+      description: The start date and time when the event or operation was triggered.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     transportTime:    
-      description: 'Indicates the time that the fleet vehicle has spent transporting people or supplies for the current operation. E.g. indicates the time an ambulance spent transporting a patient to a hospital emergency department.'    
+      description: Indicates the time that the fleet vehicle has spent transporting people or supplies for the current operation. E.g. indicates the time an ambulance spent transporting a patient to a hospital emergency department.    
       type: number    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity identifier. It has to be FleetVehicleOperation'    
+      description: NGSI Entity identifier. It has to be FleetVehicleOperation    
       enum:    
         - FleetVehicleOperation    
       type: string    
@@ -362,7 +368,7 @@ FleetVehicleOperation:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/FleetVehicleOperation/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleOperation/schema.json    
   x-model-tags: GSMA    
@@ -374,7 +380,7 @@ FleetVehicleOperation:
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
 ## Esempi di payload  
-#### Valori chiave NGSI-v2 di FleetVehicleOperation Esempio  
+#### FleetVehicleOperation Valori chiave NGSI-v2 Esempio  
 Ecco un esempio di FleetVehicleOperation in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
@@ -466,7 +472,7 @@ FleetVehicleOperation:
 }  
 ```  
 </details>  
-#### FleetVehicleOperation Valori chiave NGSI-LD Esempio  
+#### Valori chiave NGSI-LD di FleetVehicleOperation Esempio  
 Ecco un esempio di FleetVehicleOperation in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
@@ -492,7 +498,6 @@ FleetVehicleOperation:
     "startedAt": "2016-08-22T10:18:16Z",  
     "transportTime": 1220,  
     "@context": [  
-        "https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleOperation/context.jsonld",  
         "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
     ]  
 }  
