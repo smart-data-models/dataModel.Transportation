@@ -78,7 +78,6 @@
         "observedAt": "2016-08-22T10:18:16Z"
     },
     "@context": [
-        "https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleStatus/context.jsonld",
         "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
     ]
 }
