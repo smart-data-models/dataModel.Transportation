@@ -11,8 +11,7 @@
         "type": "Property",
         "value": {
             "givenName": "John Smith",
-            "jobTitle": "Ambulance Operator",
-            "@type": "https://schema.org/Person"
+            "jobTitle": "Ambulance Operator"
         }
     },
     "currentStatus": {
