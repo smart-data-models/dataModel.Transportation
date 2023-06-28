@@ -42,7 +42,6 @@
     "observationDateTime": "2022-06-28T20:27:29+05:30",
     "@context": [
         "https://smart-data-models.github.io/dataModel.Transportation/context.jsonld",
-        "iudx:EVChargingStation",
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
+        "iudx:EVChargingStation"
     ]
 }

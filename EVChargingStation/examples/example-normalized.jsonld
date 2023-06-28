@@ -1,119 +1,118 @@
 {
-    "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",
-    "type": "EVChargingStation",
-    "address": {
-        "type": "Property",
-        "value": {
-            "addressCountry": "Espa\u00f1a",
-            "addressLocality": "Valladolid",
-            "streetAddress": "Paseo de Zorrilla, 191"
-        }
-    },
-    "allowedVehicleType": {
-        "type": "Property",
-        "value": [
-            "car"
-        ]
-    },
-    "capacity": {
-        "type": "Property",
-        "value": 2
-    },
-    "chargeType": {
-        "type": "Property",
-        "value": [
-            "free"
-        ]
-    },
-    "contactPoint": {
-        "type": "Property",
-        "value": {
-            "email": "vehiculoelectrico@ava.es"
-        }
-    },
-    "location": {
-        "type": "GeoProperty",
-        "value": {
-            "coordinates": [
-                -4.747901,
-                41.618265
-            ],
-            "type": "Point"
-        }
-    },
-    "name": {
-        "type": "Property",
-        "value": "Agencia de Innovaci\u00f3n"
-    },
-    "operator": {
-        "type": "Property",
-        "value": "Iberdrola"
-    },
-    "socketType": {
-        "type": "Property",
-        "value": [
-            "Wall_Euro"
-        ]
-    },
-    "source": {
-        "type": "Property",
-        "value": "https://openchargemap.org/"
-    },
-    "powerConsumption": {
-        "type": "Property",
-        "value": 10.0
-    },
-    "chargingUnitId": {
-        "type": "string",
-        "value": "PZEV01-DeltaBharatAC001-SCTLGandhiPark001"
-    },
-    "transactionId": {
-        "type": "Property",
-        "value": "84068784"
-    },
-    "transactionType": {
-        "type": "Property",
-        "value": "RFID"
-    },
-    "stationName": {
-        "type": "Property",
-        "value": "SmartCityTvmGandhiParkOne"
-    },
-    "amountCollected": {
-        "type": "Property",
-        "value": 0.08
-    },
-    "taxAmountCollected": {
-        "type": "Property",
-        "value": 0.0
-    },
-    "endDateTime": {
-        "type": "Property",
-        "value": {
-            "@type": "date-time",
-            "@value": "2022-06-28T20:28:41+05:30"
-        }
-    },
-    "startDateTime": {
-        "type": "Property",
-        "value": {
-            "@type": "date-time",
-            "@value": "2022-06-28T20:27:27+05:30"
-        }
-    },
-    "vehicleType": {
-        "type": "Property",
-        "value": "e-motorcycle"
-    },
-    "observationDateTime": {
-        "type": "Property",
-        "value": {
-            "@type": "date-time",
-            "@value": "2022-06-28T20:27:29+05:30"
-        }
-    },
-    "@context": [
-        "https://smart-data-models.github.io/dataModel.Transportation/context.jsonld",
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
+  "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",
+  "type": "EVChargingStation",
+  "address": {
+    "type": "Property",
+    "value": {
+      "addressCountry": "Espa\u00f1a",
+      "addressLocality": "Valladolid",
+      "streetAddress": "Paseo de Zorrilla, 191"
+    }
+  },
+  "allowedVehicleType": {
+    "type": "Property",
+    "value": [
+      "car"
     ]
+  },
+  "capacity": {
+    "type": "Property",
+    "value": 2
+  },
+  "chargeType": {
+    "type": "Property",
+    "value": [
+      "free"
+    ]
+  },
+  "contactPoint": {
+    "type": "Property",
+    "value": {
+      "email": "vehiculoelectrico@ava.es"
+    }
+  },
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "coordinates": [
+        -4.747901,
+        41.618265
+      ],
+      "type": "Point"
+    }
+  },
+  "name": {
+    "type": "Property",
+    "value": "Agencia de Innovaci\u00f3n"
+  },
+  "operator": {
+    "type": "Property",
+    "value": "Iberdrola"
+  },
+  "socketType": {
+    "type": "Property",
+    "value": [
+      "Wall_Euro"
+    ]
+  },
+  "source": {
+    "type": "Property",
+    "value": "https://openchargemap.org/"
+  },
+  "powerConsumption": {
+    "type": "Property",
+    "value": 10.0
+  },
+  "chargingUnitId": {
+    "type": "Property",
+    "value": "PZEV01-DeltaBharatAC001-SCTLGandhiPark001"
+  },
+  "transactionId": {
+    "type": "Property",
+    "value": "84068784"
+  },
+  "transactionType": {
+    "type": "Property",
+    "value": "RFID"
+  },
+  "stationName": {
+    "type": "Property",
+    "value": "SmartCityTvmGandhiParkOne"
+  },
+  "amountCollected": {
+    "type": "Property",
+    "value": 0.08
+  },
+  "taxAmountCollected": {
+    "type": "Property",
+    "value": 0.0
+  },
+  "endDateTime": {
+    "type": "Property",
+    "value": {
+      "@type": "DateTime",
+      "@value": "2022-06-28T20:28:41+05:30"
+    }
+  },
+  "startDateTime": {
+    "type": "Property",
+    "value": {
+      "@type": "DateTime",
+      "@value": "2022-06-28T20:27:27+05:30"
+    }
+  },
+  "vehicleType": {
+    "type": "Property",
+    "value": "e-motorcycle"
+  },
+  "observationDateTime": {
+    "type": "Property",
+    "value": {
+      "@type": "DateTime",
+      "@value": "2022-06-28T20:27:29+05:30"
+    }
+  },
+  "@context": [
+    "https://smart-data-models.github.io/dataModel.Transportation/context.jsonld"
+  ]
 }
