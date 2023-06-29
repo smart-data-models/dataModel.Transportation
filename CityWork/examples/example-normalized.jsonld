@@ -50,7 +50,7 @@
       "@type": "DateTime",
       "@value": "2020-04-22T18:45:00Z"
     }
-  }
+  },
   "infrastructureFunction": {
     "type": "Property",
     "value": [
