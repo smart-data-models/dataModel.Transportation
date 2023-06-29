@@ -54,7 +54,6 @@
         "object": "urn:ngsi-ld:Vehicle:1fa179a6-b507-4857-ad72-eb5513ef05c6"
     },
     "@context": [
-        "https://smartdatamodels.github.io/dataModel.Transportation/context.jsonld",
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
+        "https://smart-data-models.github.io/dataModel.Transportation/context.jsonld"
     ]
 }
