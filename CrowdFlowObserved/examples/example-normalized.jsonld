@@ -13,7 +13,7 @@
     "type": "Property",
     "value": {
       "@type": "DateTime",
-      "@value": "2018-08-07T11:10:00/2018-08-07T11:15:00"
+      "@value": "2018-08-07T11:10:00"
     }
   },
   "dateObservedFrom": {

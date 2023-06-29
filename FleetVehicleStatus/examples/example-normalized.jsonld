@@ -53,7 +53,7 @@
   "lastKnownPositionUpdatedAt": {
     "type": "Property",
     "value": {
-      "type": "DateTime",
+      "@type": "DateTime",
       "@value": "2016-08-28T10:18:16Z"
     }
   },

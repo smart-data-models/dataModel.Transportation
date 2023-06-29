@@ -7,7 +7,6 @@
       "addressLocality": "Valladolid",
       "addressCountry": "ES",
       "streetAddress": "Avenida de Salamanca",
-      "type": "PostalAddress"
     }
   },
   "averageHeadwayTime": {
@@ -26,7 +25,7 @@
     "type": "Property",
     "value": {
       "@type": "DateTime",
-      "@value": "2016-12-07T11:10:00/2016-12-07T11:15:00"
+      "@value": "2016-12-07T11:10:00"
     }
   },
   "dateObservedFrom": {
