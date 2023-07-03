@@ -41,11 +41,11 @@
   },
   "contractingAuthority": {
     "type": "Property",
-    "value": "MNCA - Metropole Nice Cote d'Azur"
+    "value": "MNCA - Metropole Nice Cote d Azur"
   },
   "contractingCompagny": {
     "type": "Property",
-    "value": "Regie Ligne d'Azur"
+    "value": "Regie Ligne d Azur"
   },
   "currencyAccepted": {
     "type": "Property",
