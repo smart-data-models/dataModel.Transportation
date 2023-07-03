@@ -154,7 +154,7 @@
     "type": "Property",
     "value": "subwaypole Nice"
   },
-  "typeOfInteventionRequest": {
+  "typeOfInterventionRequest": {
     "type": "Property",
     "value": "authorizationRequest"
   },
