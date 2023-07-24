@@ -1,6 +1,10 @@
 {
   "id": "urn:ngsi-ld:FleetVehicleStatus:16ea1c5c-5aa6-11e8-8144-4b82063ca31c",
   "type": "FleetVehicleStatus",
+  "battery": {
+    "type": "Number",
+    "value": 81.3
+  },
   "source": {
     "type": "URL",
     "value": "https://source.example.com"
