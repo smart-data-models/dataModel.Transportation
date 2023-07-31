@@ -33,18 +33,18 @@ BikeHireDockingStation:
         model: https://schema.org/address
         type: Property
     agency_fare_url:
-      description: "URL of a web page that contains the details of the fares and also could allow to purchase tickets for that agency online. SameAs: 'agency_fare_url' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt) "
+      description: "Property. URL of a web page that contains the details of the fares and also could allow to purchase tickets for that agency online. SameAs: 'agency_fare_url' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt) "
       type: string
       x-ngsi:
         type: Property
     agency_name:
-      description: "The agency_name field contains the full name of the transit agency. SameAs: 'agency_name' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)"
+      description: "Property. Model:'https://schema.org/Text'. The agency_name field contains the full name of the transit agency. SameAs: 'agency_name' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)"
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     agency_url:
-      description: "The agency_url field contains the URL of the transit agency. SameAs: 'agency_url' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)"
+      description: "Property. Model:'https://schema.org/Text'. The agency_url field contains the URL of the transit agency. SameAs: 'agency_url' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)"
       format: uri
       type: string
       x-ngsi:
@@ -62,7 +62,7 @@ BikeHireDockingStation:
         model: https://schema.org/Text
         type: Property
     availableBikeNumber:
-      description: The number of bikes available in the bike hire docking station to be hired by users
+      description: 'Property. The number of bikes available in the bike hire docking station to be hired by users. Model:''https://schema.org/Number''.'
       minimum: 0
       type: number
       x-ngsi:
@@ -154,7 +154,7 @@ BikeHireDockingStation:
       x-ngsi:
         type: Property
     freeSlotNumber:
-      description: The number of slots available for returning and parking bikes. It must lower or equal than `totalSlotNumber`
+      description: 'Property. The number of slots available for returning and parking bikes. It must lower or equal than `totalSlotNumber`. Model:''https://schema.org/Number''.'
       minimum: 0
       type: number
       x-ngsi:
@@ -327,7 +327,7 @@ BikeHireDockingStation:
       x-ngsi:
         type: GeoProperty
     mediaURL:
-      description: URL providing further information of any image(s) or media of the complaint or place.
+      description: 'Property. Model:''https://schema.org/Text''. URL providing further information of any image(s) or media of the complaint or place.'
       format: uri
       type: string
       x-ngsi:
@@ -339,20 +339,20 @@ BikeHireDockingStation:
       x-ngsi:
         type: Property
     observationDateTime:
-      description: Last reported time of observation.
+      description: 'Property. Model:''https://schema.org/Text''. Last reported time of observation.'
       format: date-time
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     openingHours:
-      description: Opening hours of the docking station
+      description: 'Property. Opening hours of the docking station. Model:''http://schema.org/openingHours''.'
       type: string
       x-ngsi:
         model: http://schema.org/openingHours.
         type: Property
     outOfServiceSlotNumber:
-      description: The number of slots that are out of order and cannot be used to hire or park a bike. It must lower or equal than `totalSlotNumber`
+      description: 'Property. The number of slots that are out of order and cannot be used to hire or park a bike. It must lower or equal than `totalSlotNumber`. Model:''https://schema.org/Number''.'
       minimum: 0
       type: number
       x-ngsi:
@@ -367,7 +367,7 @@ BikeHireDockingStation:
       x-ngsi:
         type: Property
     provider:
-      description: Bike hire service provider
+      description: 'Property. Bike hire service provider. Model:''https://schema.org/provider''.'
       type: string
       x-ngsi:
         model: https://schema.org/provider.
@@ -390,19 +390,19 @@ BikeHireDockingStation:
       x-ngsi:
         type: Property
     stationCode:
-      description: The station number or station code of the bike hire docking station corresponding to the observation.
+      description: 'Property. Model:''https://schema.org/Text''. The station number or station code of the bike hire docking station corresponding to the observation.'
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     stationName:
-      description: The name of the bike hire docking station corresponding to this observation.
+      description: 'Property. Model:''https://schema.org/Text''. The name of the bike hire docking station corresponding to this observation.'
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     status:
-      description: 'Status of the bike hire docking station. Enum:''working, outOfService, withIncidence, full, almostFull, empty, almostEmpty''. Or any other application specific.'
+      description: 'Property. Status of the bike hire docking station. Enum:''working, outOfService, withIncidence, full, almostFull, empty, almostEmpty''. Model:''https://schema.org/Number''. Or any other application specific.'
       enum:
         - almostEmpty
         - almostFull
@@ -416,14 +416,14 @@ BikeHireDockingStation:
         model: https://schema.org/Number
         type: Property
     totalSlotNumber:
-      description: The total number of slots offered by this bike docking station
+      description: 'Property. The total number of slots offered by this bike docking station. Model:''https://schema.org/Number''.'
       minimum: 0
       type: number
       x-ngsi:
         model: https://schema.org/Number.
         type: Property
     type:
-      description: NGSI Entity type. It has to be BikeHireDockingStation
+      description: Property. NGSI Entity type. It has to be BikeHireDockingStation
       enum:
         - BikeHireDockingStation
       type: string
