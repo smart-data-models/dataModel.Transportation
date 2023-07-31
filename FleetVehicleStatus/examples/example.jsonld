@@ -1,7 +1,7 @@
 {
   "id": "urn:ngsi-ld:FleetVehicleStatus:16ea1c5c-5aa6-11e8-8144-4b82063ca31c",
   "type": "FleetVehicleStatus",
-  "battery": 81.3,
+  "battery": 0.81,
   "bearing": 80,
   "currentOperative": {
     "givenName": "John Smith",

@@ -3,8 +3,7 @@
   "type": "FleetVehicleStatus",
   "battery": {
     "type": "Property",
-    "value": 81.3,
-    "unitCode": "P1",
+    "value": 0.81,
     "observedAt": "2016-08-22T10:18:16Z"
   },
   "bearing": {

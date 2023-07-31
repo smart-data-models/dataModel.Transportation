@@ -93,8 +93,8 @@
         },
         "battery": {
           "type": "number",
-          "minimum": 0.0,
-          "maximum": 100.0,
+          "minimum": 0,
+          "maximum": 1,
           "description": "Property. The current percentage of battery left in case of an electric vehicle, or a device connected to the vehicle."
         },
         "bearing": {

@@ -3,7 +3,7 @@
   "type": "FleetVehicleStatus",
   "battery": {
     "type": "Number",
-    "value": 81.3
+    "value": 0.81
   },
   "source": {
     "type": "URL",
