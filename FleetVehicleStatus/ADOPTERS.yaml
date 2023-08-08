@@ -1,10 +1,10 @@
 description: This is a compilation list of the current adopters of the data model FleetVehicleStatus of the Subject Transportation.
 currentAdopters:
 -
- adopter:
- description:
+ adopter: SEDIMARK project
+ description: Urban bike mobility planning use case in Santander
  mail: 
- organization:
- project: 
+ organization: 
+ project: https://sedimark.eu/
  comments: 
- startDate: 
+ startDate:

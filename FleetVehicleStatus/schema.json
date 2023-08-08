@@ -91,6 +91,12 @@
           "type": "number",
           "description": "Property. The current speed of the fleet vehicle (km/h). The timestamp element of the attribute should indicate when the reading was obtained. Units:'km/h'"
         },
+        "battery": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Property. The current percentage of battery left in case of an electric vehicle, or a device connected to the vehicle."
+        },
         "bearing": {
           "type": "number",
           "description": "Property. The current bearing of the fleet vehicle in degrees relative to North. The timestamp element of the attribute should indicate when the reading was obtained."
