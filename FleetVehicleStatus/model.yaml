@@ -43,13 +43,20 @@ FleetVehicleStatus:
       x-ngsi:
         model: https://schema.org/Text
         type: Property
+    battery:
+      description: 'Property. The current percentage of battery left in case of an electric vehicle, or a device connected to the vehicle.'
+      maximum: 1
+      minimum: 0
+      type: number
+      x-ngsi:
+        type: Property
     bearing:
-      description: The current bearing of the fleet vehicle in degrees relative to North. The timestamp element of the attribute should indicate when the reading was obtained.
+      description: Property. The current bearing of the fleet vehicle in degrees relative to North. The timestamp element of the attribute should indicate when the reading was obtained.
       type: number
       x-ngsi:
         type: Property
     currentOperative:
-      description: The current operative (e.g. driver) of the vehicle described as a Schema.org  person
+      description: 'Property. The current operative (e.g. driver) of the vehicle described as a Schema.org  person. Model:''https://schema.org/Person'''
       properties:
         givenName:
           type: string
@@ -60,7 +67,7 @@ FleetVehicleStatus:
         model: https://schema.org/Person
         type: Property
     currentStatus:
-      description: 'A description of the current status of the vehicle e.g. Enum:''deployed, finished, terminated, servicing, starting'''
+      description: 'Property. A description of the current status of the vehicle e.g. Enum:''deployed, finished, terminated, servicing, starting'''
       enum:
         - deployed
         - finished
@@ -102,7 +109,7 @@ FleetVehicleStatus:
         - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: Reference to the FleetVehicle entity to which this status entity relates.
+      description: Relationship. Reference to the FleetVehicle entity to which this status entity relates.
       x-ngsi:
         type: Relationship
     fleetVehicleOperation:
@@ -115,7 +122,7 @@ FleetVehicleStatus:
         - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: Reference to the FleetVehicleOperation entity to which this status entity relates.
+      description: Relationship. Reference to the FleetVehicleOperation entity to which this status entity relates.
       x-ngsi:
         type: Relationship
     id:
@@ -132,12 +139,12 @@ FleetVehicleStatus:
       x-ngsi:
         type: Property
     inRestrictedArea:
-      description: Indicates if the vehicle is known to be in a restricted area at the time of the status update.
+      description: Property. Indicates if the vehicle is known to be in a restricted area at the time of the status update.
       type: boolean
       x-ngsi:
         type: Property
     lastFuellingAmount:
-      description: The level of fuel added to the vehicle at the last fuelling. The timestamp element of the attribute should indicate when the vehicle was fuelled. Data to be recorded in Litres
+      description: 'Property. The level of fuel added to the vehicle at the last fuelling. The timestamp element of the attribute should indicate when the vehicle was fuelled. Data to be recorded in Litres. Units:''litres'''
       type: number
       x-ngsi:
         type: Property
@@ -296,7 +303,7 @@ FleetVehicleStatus:
       x-ngsi:
         type: GeoProperty
     lastKnownPositionUpdatedAt:
-      description: The timestamp of the last known position update for the fleet vehicle.
+      description: Property. The timestamp of the last known position update for the fleet vehicle.
       format: date-time
       type: string
       x-ngsi:
@@ -307,7 +314,7 @@ FleetVehicleStatus:
       x-ngsi:
         type: GeoProperty
     mileageFromOdometer:
-      description: The total distance the fleet vehicle has travelled according to the on-board odometer in kilometres (unitCode KMT) or miles (unitCode SMI). See also Schema.org Vehicle/ mileageFromOdometer. The timestamp element records when the odometer reading was taken.
+      description: Property. The total distance the fleet vehicle has travelled according to the on-board odometer in kilometres (unitCode KMT) or miles (unitCode SMI). See also Schema.org Vehicle/ mileageFromOdometer. The timestamp element records when the odometer reading was taken.
       type: number
       x-ngsi:
         type: Property
@@ -325,7 +332,7 @@ FleetVehicleStatus:
       x-ngsi:
         type: Property
     restFuelAmount:
-      description: The level of fuel recorded when the vehicle was last at rest (i.e. stopped). The timestamp element of the attribute should indicate when the vehicle was last at rest. Data to be recorded in Litres.
+      description: Property. The level of fuel recorded when the vehicle was last at rest (i.e. stopped). The timestamp element of the attribute should indicate when the vehicle was last at rest. Data to be recorded in Litres.
       type: number
       x-ngsi:
         type: Property
@@ -347,13 +354,13 @@ FleetVehicleStatus:
       x-ngsi:
         type: Property
     speed:
-      description: The current speed of the fleet vehicle (km/h). The timestamp element of the attribute should indicate when the reading was obtained
+      description: 'Property. The current speed of the fleet vehicle (km/h). The timestamp element of the attribute should indicate when the reading was obtained. Units:''km/h'''
       type: number
       x-ngsi:
         type: Property
         units: km/h
     type:
-      description: NGSI Entity identifier. It has to be FleetVehicleStatus
+      description: Property. NGSI Entity identifier. It has to be FleetVehicleStatus
       enum:
         - FleetVehicleStatus
       type: string
