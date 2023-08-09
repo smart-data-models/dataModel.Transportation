@@ -15,7 +15,7 @@
 ## Liste der Eigenschaften  
 
 <sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
-- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `bearing[number]`: Die aktuelle Peilung des Flottenfahrzeugs in Grad relativ zu Nord. Das Zeitstempel-Element des Attributs sollte angeben, wann der Messwert ermittelt wurde.  - `currentOperative[object]`: Der aktuelle Betreiber (z. B. Fahrer) des Fahrzeugs, der als Schema.org-Person beschrieben wird  . Model: [https://schema.org/Person](https://schema.org/Person)- `currentStatus[string]`: Eine Beschreibung des aktuellen Status des Fahrzeugs, z. B. Enum:'eingesetzt, beendet, beendet, gewartet, gestartet'.  - `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `fleetVehicle[*]`: Verweis auf die FleetVehicle-Entität, auf die sich diese Statusentität bezieht.  - `fleetVehicleOperation[*]`: Verweis auf die Entität FleetVehicleOperation, auf die sich diese Statusentität bezieht.  - `id[*]`: Eindeutiger Bezeichner der Entität  - `inRestrictedArea[boolean]`: Gibt an, ob sich das Fahrzeug zum Zeitpunkt der Statusaktualisierung bekanntermaßen in einem Sperrgebiet befindet.  - `lastFuellingAmount[number]`: Die Kraftstoffmenge, die dem Fahrzeug bei der letzten Betankung zugeführt wurde. Der Zeitstempel des Attributs sollte angeben, wann das Fahrzeug betankt wurde. Zu erfassende Daten in Litern  - `lastKnownPosition[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `lastKnownPositionUpdatedAt[string]`: Der Zeitstempel der letzten bekannten Positionsaktualisierung für das Flottenfahrzeug.  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `mileageFromOdometer[number]`: Die Gesamtentfernung, die das Flottenfahrzeug gemäß dem eingebauten Kilometerzähler in Kilometern (unitCode KMT) oder Meilen (unitCode SMI) zurückgelegt hat. Siehe auch Schema.org Vehicle/ mileageFromOdometer. Das Element timestamp hält fest, wann der Kilometerstand gemessen wurde.  - `name[string]`: Der Name dieses Artikels.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `restFuelAmount[number]`: Der Kraftstoffstand, der aufgezeichnet wurde, als das Fahrzeug zuletzt stillstand (d. h. angehalten wurde). Das Element Zeitstempel des Attributs sollte angeben, wann das Fahrzeug zuletzt stillstand. Die Daten sind in Litern zu erfassen.  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `speed[number]`: Die aktuelle Geschwindigkeit des Fahrzeugs der Flotte (km/h). Das Element "Zeitstempel" des Attributs sollte angeben, wann der Messwert ermittelt wurde  - `type[string]`: NGSI-Kennung der Entität. Er muss FleetVehicleStatus lauten.  <!-- /30-PropertiesList -->  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `battery[number]`: Eigenschaft. Der aktuelle Prozentsatz der verbleibenden Batterie im Falle eines Elektrofahrzeugs oder eines mit dem Fahrzeug verbundenen Geräts.  - `bearing[number]`: Eigenschaft. Die aktuelle Peilung des Flottenfahrzeugs in Grad relativ zu Nord. Das Zeitstempel-Element des Attributs sollte angeben, wann der Messwert ermittelt wurde.  - `currentOperative[object]`: Eigenschaft. Der aktuelle Betreiber (z. B. Fahrer) des als Schema.org-Person beschriebenen Fahrzeugs. Modell:'https://schema.org/Person'  . Model: [https://schema.org/Person](https://schema.org/Person)- `currentStatus[string]`: Eigenschaft. Eine Beschreibung des aktuellen Status des Fahrzeugs, z. B. Enum:'eingesetzt, beendet, beendet, gewartet, gestartet'  - `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `fleetVehicle[*]`: Verknüpfung. Verweis auf die Entität FleetVehicle, auf die sich diese Statusentität bezieht.  - `fleetVehicleOperation[*]`: Verknüpfung. Verweis auf die Entität FleetVehicleOperation, auf die sich diese Statusentität bezieht.  - `id[*]`: Eindeutiger Bezeichner der Entität  - `inRestrictedArea[boolean]`: Eigentum. Gibt an, ob sich das Fahrzeug zum Zeitpunkt der Statusaktualisierung bekanntermaßen in einem Sperrgebiet befindet.  - `lastFuellingAmount[number]`: Eigenschaft. Die Kraftstoffmenge, die dem Fahrzeug bei der letzten Betankung zugeführt wurde. Das Zeitstempel-Element des Attributs sollte angeben, wann das Fahrzeug betankt wurde. Die Daten sind in Litern zu erfassen. Einheiten:'Liter'.  - `lastKnownPosition[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `lastKnownPositionUpdatedAt[string]`: Eigenschaft. Der Zeitstempel der letzten bekannten Positionsaktualisierung für das Flottenfahrzeug.  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `mileageFromOdometer[number]`: Eigenschaft. Die Gesamtentfernung, die das Flottenfahrzeug laut eingebautem Kilometerzähler in Kilometern (unitCode KMT) oder Meilen (unitCode SMI) zurückgelegt hat. Siehe auch Schema.org Vehicle/ mileageFromOdometer. Das Element timestamp hält fest, wann der Kilometerstand gemessen wurde.  - `name[string]`: Der Name dieses Artikels.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `restFuelAmount[number]`: Eigenschaft. Der Kraftstoffstand, der aufgezeichnet wurde, als das Fahrzeug zuletzt stillstand (d. h. angehalten wurde). Das Zeitstempel-Element des Attributs sollte angeben, wann das Fahrzeug zuletzt stillstand. Die Daten sind in Litern zu erfassen.  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `speed[number]`: Eigenschaft. Die aktuelle Geschwindigkeit des Flottenfahrzeugs (km/h). Das Zeitstempel-Element des Attributs sollte angeben, wann der Messwert ermittelt wurde. Einheiten:'km/h'  - `type[string]`: Eigenschaft. NGSI-Entitätskennzeichen. Es muss FleetVehicleStatus sein.  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
@@ -74,13 +74,20 @@ FleetVehicleStatus:
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
+    battery:    
+      description: 'Property. The current percentage of battery left in case of an electric vehicle, or a device connected to the vehicle.'    
+      maximum: 1    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        type: Property    
     bearing:    
-      description: The current bearing of the fleet vehicle in degrees relative to North. The timestamp element of the attribute should indicate when the reading was obtained.    
+      description: Property. The current bearing of the fleet vehicle in degrees relative to North. The timestamp element of the attribute should indicate when the reading was obtained.    
       type: number    
       x-ngsi:    
         type: Property    
     currentOperative:    
-      description: The current operative (e.g. driver) of the vehicle described as a Schema.org  person    
+      description: 'Property. The current operative (e.g. driver) of the vehicle described as a Schema.org  person. Model:''https://schema.org/Person'''    
       properties:    
         givenName:    
           type: string    
@@ -91,7 +98,7 @@ FleetVehicleStatus:
         model: https://schema.org/Person    
         type: Property    
     currentStatus:    
-      description: 'A description of the current status of the vehicle e.g. Enum:''deployed, finished, terminated, servicing, starting'''    
+      description: 'Property. A description of the current status of the vehicle e.g. Enum:''deployed, finished, terminated, servicing, starting'''    
       enum:    
         - deployed    
         - finished    
@@ -133,7 +140,7 @@ FleetVehicleStatus:
         - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: Reference to the FleetVehicle entity to which this status entity relates.    
+      description: Relationship. Reference to the FleetVehicle entity to which this status entity relates.    
       x-ngsi:    
         type: Relationship    
     fleetVehicleOperation:    
@@ -146,7 +153,7 @@ FleetVehicleStatus:
         - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: Reference to the FleetVehicleOperation entity to which this status entity relates.    
+      description: Relationship. Reference to the FleetVehicleOperation entity to which this status entity relates.    
       x-ngsi:    
         type: Relationship    
     id:    
@@ -163,12 +170,12 @@ FleetVehicleStatus:
       x-ngsi:    
         type: Property    
     inRestrictedArea:    
-      description: Indicates if the vehicle is known to be in a restricted area at the time of the status update.    
+      description: Property. Indicates if the vehicle is known to be in a restricted area at the time of the status update.    
       type: boolean    
       x-ngsi:    
         type: Property    
     lastFuellingAmount:    
-      description: The level of fuel added to the vehicle at the last fuelling. The timestamp element of the attribute should indicate when the vehicle was fuelled. Data to be recorded in Litres    
+      description: 'Property. The level of fuel added to the vehicle at the last fuelling. The timestamp element of the attribute should indicate when the vehicle was fuelled. Data to be recorded in Litres. Units:''litres'''    
       type: number    
       x-ngsi:    
         type: Property    
@@ -327,7 +334,7 @@ FleetVehicleStatus:
       x-ngsi:    
         type: GeoProperty    
     lastKnownPositionUpdatedAt:    
-      description: The timestamp of the last known position update for the fleet vehicle.    
+      description: Property. The timestamp of the last known position update for the fleet vehicle.    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -338,7 +345,7 @@ FleetVehicleStatus:
       x-ngsi:    
         type: GeoProperty    
     mileageFromOdometer:    
-      description: The total distance the fleet vehicle has travelled according to the on-board odometer in kilometres (unitCode KMT) or miles (unitCode SMI). See also Schema.org Vehicle/ mileageFromOdometer. The timestamp element records when the odometer reading was taken.    
+      description: Property. The total distance the fleet vehicle has travelled according to the on-board odometer in kilometres (unitCode KMT) or miles (unitCode SMI). See also Schema.org Vehicle/ mileageFromOdometer. The timestamp element records when the odometer reading was taken.    
       type: number    
       x-ngsi:    
         type: Property    
@@ -356,7 +363,7 @@ FleetVehicleStatus:
       x-ngsi:    
         type: Property    
     restFuelAmount:    
-      description: The level of fuel recorded when the vehicle was last at rest (i.e. stopped). The timestamp element of the attribute should indicate when the vehicle was last at rest. Data to be recorded in Litres.    
+      description: Property. The level of fuel recorded when the vehicle was last at rest (i.e. stopped). The timestamp element of the attribute should indicate when the vehicle was last at rest. Data to be recorded in Litres.    
       type: number    
       x-ngsi:    
         type: Property    
@@ -378,13 +385,13 @@ FleetVehicleStatus:
       x-ngsi:    
         type: Property    
     speed:    
-      description: The current speed of the fleet vehicle (km/h). The timestamp element of the attribute should indicate when the reading was obtained    
+      description: 'Property. The current speed of the fleet vehicle (km/h). The timestamp element of the attribute should indicate when the reading was obtained. Units:''km/h'''    
       type: number    
       x-ngsi:    
         type: Property    
         units: km/h    
     type:    
-      description: NGSI Entity identifier. It has to be FleetVehicleStatus    
+      description: Property. NGSI Entity identifier. It has to be FleetVehicleStatus    
       enum:    
         - FleetVehicleStatus    
       type: string    
@@ -414,6 +421,7 @@ FleetVehicleStatus:
 {  
   "id": "urn:ngsi-ld:FleetVehicleStatus:16ea1c5c-5aa6-11e8-8144-4b82063ca31c",  
   "type": "FleetVehicleStatus",  
+  "battery": 0.81,  
   "source": "https://source.example.com",  
   "dataProvider": "https://provider.example.com",  
   "fleetVehicle": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f",  
@@ -448,6 +456,10 @@ FleetVehicleStatus:
 {  
   "id": "urn:ngsi-ld:FleetVehicleStatus:16ea1c5c-5aa6-11e8-8144-4b82063ca31c",  
   "type": "FleetVehicleStatus",  
+  "battery": {  
+    "type": "Number",  
+    "value": 0.81  
+  },  
   "source": {  
     "type": "URL",  
     "value": "https://source.example.com"  
@@ -517,39 +529,40 @@ FleetVehicleStatus:
 ```  
 </details>  
 #### FleetVehicleStatus NGSI-LD Schlüsselwerte Beispiel  
-Hier ist ein Beispiel für einen FleetVehicleStatus im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen FleetVehicleStatus im JSON-LD-Format als Schlüsselwerte. Dies ist kompatibel mit NGSI-LD, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:FleetVehicleStatus:16ea1c5c-5aa6-11e8-8144-4b82063ca31c",  
-    "type": "FleetVehicleStatus",  
-    "bearing": 80,  
-    "currentOperative": {  
-        "givenName": "John Smith",  
-        "jobTitle": "Ambulance Operator"  
-    },  
-    "currentStatus": "finished",  
-    "dataProvider": "https://provider.example.com",  
-    "fleetVehicle": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f",  
-    "fleetVehicleOperation": "urn:ngsi-ld:FleetVehicleOperation:a4f0a07a-5aa6-11e8-b70f-4b9d36e53d7b",  
-    "inRestrictedArea": true,  
-    "lastFuellingAmount": 95,  
-    "lastKnownPosition": {  
-        "type": "Point",  
-        "coordinates": [  
-            -104.99404,  
-            39.75621  
-        ]  
-    },  
-    "lastKnownPositionUpdatedAt": "2016-08-28T10:18:16Z",  
-    "mileageFromOdometer": 18756,  
-    "restFuelAmount": 28,  
-    "source": "https://source.example.com",  
-    "speed": 60,  
-    "unitCode": "KMH",  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+  "id": "urn:ngsi-ld:FleetVehicleStatus:16ea1c5c-5aa6-11e8-8144-4b82063ca31c",  
+  "type": "FleetVehicleStatus",  
+  "battery": 0.81,  
+  "bearing": 80,  
+  "currentOperative": {  
+    "givenName": "John Smith",  
+    "jobTitle": "Ambulance Operator"  
+  },  
+  "currentStatus": "finished",  
+  "dataProvider": "https://provider.example.com",  
+  "fleetVehicle": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f",  
+  "fleetVehicleOperation": "urn:ngsi-ld:FleetVehicleOperation:a4f0a07a-5aa6-11e8-b70f-4b9d36e53d7b",  
+  "inRestrictedArea": true,  
+  "lastFuellingAmount": 95,  
+  "lastKnownPosition": {  
+    "type": "Point",  
+    "coordinates": [  
+      -104.99404,  
+      39.75621  
     ]  
+  },  
+  "lastKnownPositionUpdatedAt": "2016-08-28T10:18:16Z",  
+  "mileageFromOdometer": 18756,  
+  "restFuelAmount": 28,  
+  "source": "https://source.example.com",  
+  "speed": 60,  
+  "unitCode": "KMH",  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
@@ -558,87 +571,94 @@ FleetVehicleStatus:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:FleetVehicleStatus:16ea1c5c-5aa6-11e8-8144-4b82063ca31c",  
-    "type": "FleetVehicleStatus",  
-    "bearing": {  
-        "type": "Property",  
-        "value": 80,  
-        "unitCode": "DD",  
-        "observedAt": "2016-08-22T10:18:16Z"  
-    },  
-    "currentOperative": {  
-        "type": "Property",  
-        "value": {  
-            "givenName": "John Smith",  
-            "jobTitle": "Ambulance Operator",  
-            "@type": "https://schema.org/Person"  
-        }  
-    },  
-    "currentStatus": {  
-        "type": "Property",  
-        "value": "finished"  
-    },  
-    "dataProvider": {  
-        "type": "Property",  
-        "value": "https://provider.example.com"  
-    },  
-    "fleetVehicle": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f"  
-    },  
-    "fleetVehicleOperation": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:FleetVehicleOperation:a4f0a07a-5aa6-11e8-b70f-4b9d36e53d7b"  
-    },  
-    "inRestrictedArea": {  
-        "type": "Property",  
-        "value": true  
-    },  
-    "lastFuellingAmount": {  
-        "type": "Property",  
-        "value": 95,  
-        "unitCode": "LTR",  
-        "observedAt": "2016-08-22T10:18:16Z"  
-    },  
-    "lastKnownPosition": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                -104.99404,  
-                39.75621  
-            ]  
-        }  
-    },  
-    "lastKnownPositionUpdatedAt": {  
-        "type": "Property",  
-        "value": "2016-08-28T10:18:16Z"  
-    },  
-    "mileageFromOdometer": {  
-        "type": "Property",  
-        "value": 18756,  
-        "unitCode": "SMI",  
-        "observedAt": "2016-08-22T10:18:16Z"  
-    },  
-    "restFuelAmount": {  
-        "type": "Property",  
-        "value": 28,  
-        "unitCode": "LTR",  
-        "observedAt": "2016-08-22T10:18:16Z"  
-    },  
-    "source": {  
-        "type": "Property",  
-        "value": "https://source.example.com"  
-    },  
-    "speed": {  
-        "type": "Property",  
-        "value": 60,  
-        "unitCode": "KMH",  
-        "observedAt": "2016-08-22T10:18:16Z"  
-    },  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
-    ]  
+  "id": "urn:ngsi-ld:FleetVehicleStatus:16ea1c5c-5aa6-11e8-8144-4b82063ca31c",  
+  "type": "FleetVehicleStatus",  
+  "battery": {  
+    "type": "Property",  
+    "value": 0.81,  
+    "observedAt": "2016-08-22T10:18:16Z"  
+  },  
+  "bearing": {  
+    "type": "Property",  
+    "value": 80,  
+    "unitCode": "DD",  
+    "observedAt": "2016-08-22T10:18:16Z"  
+  },  
+  "currentOperative": {  
+    "type": "Property",  
+    "value": {  
+      "givenName": "John Smith",  
+      "jobTitle": "Ambulance Operator"  
+    }  
+  },  
+  "currentStatus": {  
+    "type": "Property",  
+    "value": "finished"  
+  },  
+  "dataProvider": {  
+    "type": "Property",  
+    "value": "https://provider.example.com"  
+  },  
+  "fleetVehicle": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f"  
+  },  
+  "fleetVehicleOperation": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:FleetVehicleOperation:a4f0a07a-5aa6-11e8-b70f-4b9d36e53d7b"  
+  },  
+  "inRestrictedArea": {  
+    "type": "Property",  
+    "value": true  
+  },  
+  "lastFuellingAmount": {  
+    "type": "Property",  
+    "value": 95,  
+    "unitCode": "LTR",  
+    "observedAt": "2016-08-22T10:18:16Z"  
+  },  
+  "lastKnownPosition": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -104.99404,  
+        39.75621  
+      ]  
+    }  
+  },  
+  "lastKnownPositionUpdatedAt": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2016-08-28T10:18:16Z"  
+    }  
+  },  
+  "mileageFromOdometer": {  
+    "type": "Property",  
+    "value": 18756,  
+    "unitCode": "SMI",  
+    "observedAt": "2016-08-22T10:18:16Z"  
+  },  
+  "restFuelAmount": {  
+    "type": "Property",  
+    "value": 28,  
+    "unitCode": "LTR",  
+    "observedAt": "2016-08-22T10:18:16Z"  
+  },  
+  "source": {  
+    "type": "Property",  
+    "value": "https://source.example.com"  
+  },  
+  "speed": {  
+    "type": "Property",  
+    "value": 60,  
+    "unitCode": "KMH",  
+    "observedAt": "2016-08-22T10:18:16Z"  
+  },  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details><!-- /80-Examples -->  
