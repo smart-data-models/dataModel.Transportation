@@ -52,6 +52,7 @@
         "averageSpeed": "https://smartdatamodels.org/dataModel.Transportation/averageSpeed",
         "averageVehicleLength": "https://smartdatamodels.org/dataModel.Transportation/averageVehicleLength",
         "averageVehicleSpeed": "https://smartdatamodels.org/dataModel.Transportation/averageVehicleSpeed",
+        "battery": "https://smartdatamodels.org/dataModel.Transportation/battery",
         "bearing": "https://smartdatamodels.org/dataModel.Transportation/bearing",
         "brandName": "https://smartdatamodels.org/dataModel.Transportation/brandName",
         "bridgeCount": "https://smartdatamodels.org/dataModel.Transportation/bridgeCount",
