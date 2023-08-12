@@ -126,7 +126,7 @@
       {
         "dayOfWeek": "Saturday",
         "opens": "08:30:00",
-        "closes": "17.00:00"
+        "closes": "17:00:00"
       }
     ]
   },
@@ -135,8 +135,13 @@
     "value": "MNCA - subwaypole Nice Cote d'Azur"
   },
   "contactPoint": {
-    "type": "string",
-    "value": "Service des AO"
+    "type": "StructuredValue",
+    "value": {
+      "name": {
+        "type": "string",
+        "value": "Service des AO"
+      }
+    }
   },
   "decrees": {
     "type": "array",
@@ -208,8 +213,8 @@
   "encroachment": {
     "type": "array",
     "value": [
-      "private",
-      "public"
+      "public",
+      "private"
     ]
   },
   "typeOfInterventionRequest": {
@@ -342,14 +347,14 @@
     "type": "array",
     "value": [
       {
-        "roadImpacted": "urn:ngsi-ld:Road:N202",
+        "roadId": "urn:ngsi-ld:Road:N202",
         "segmentImpacted": [
           "urn:ngsi-ld:RoadSegment:N202-12",
           "urn:ngsi-ld:RoadSegment:N202-13"
         ]
       },
       {
-        "roadImpacted": "Road:D021",
+        "roadId": "Road:D021",
         "segmentImpacted": [
           "12",
           "13",
@@ -358,7 +363,7 @@
         ]
       },
       {
-        "roadImpacted": "urn:ngsi-ld:Road:D032",
+        "roadId": "urn:ngsi-ld:Road:D032",
         "segmentArea": {
           "type": "LineString",
           "coordinates": [
@@ -386,10 +391,10 @@
   "allowedVehicle": {
     "type": "array",
     "value": [
-      "companiesTrucks",
-      "emergencyVehicle",
       "firefighters",
-      "police"
+      "police",
+      "emergencyVehicle",
+      "companiesTrucks"
     ]
   },
   "maxAuthorizedTonnage": {
