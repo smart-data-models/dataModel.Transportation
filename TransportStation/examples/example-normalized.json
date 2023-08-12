@@ -20,7 +20,7 @@
   "location": {
     "type": "GeoProperty",
     "value": {
-      "type": "point",
+      "type": "Point",
       "coordinates": [
         43.664810,
         7.196545
@@ -45,7 +45,7 @@
   },
   "stationType": {
     "type": "Property",
-    "value": "Tram"
+    "value": ["tram"]
   },
   "locationType": {
     "type": "Property",
@@ -68,27 +68,33 @@
     "value": [
       {
         "dayOfWeek": "Monday, Tuesday, Wednesday, Thursday, Friday",
-        "opens": "07.00",
-        "closes": "22.00"
+        "opens": "07:00:00",
+        "closes": "22:00:00",
+        "validFrom": "2021-01-01T00:00:00",
+        "validThrough": "2021-12-31T23:59:59"
       },
       {
         "dayOfWeek": "Saturday",
-        "opens": "08.00",
-        "closes": "23.00"
+        "opens": "08:00:00",
+        "closes": "23:00:00",
+        "validFrom": "2021-01-01T00:00:00",
+        "validThrough": "2021-12-31T23:59:59"
       },
       {
         "dayOfWeek": "Sunday",
-        "opens": "8.30",
-        "closes": "21.00"
+        "opens": "8:00:30",
+        "closes": "21:00:00",
+        "validFrom": "2021-01-01T00:00:00",
+        "validThrough": "2021-12-31T23:59:59"
       },
       {
         "dayOfWeek": "PublicHolidays",
-        "opens": "8.00",
-        "closes": "21.30"
+        "opens": "8:00:00",
+        "closes": "21:00:30",
+        "validFrom": "2021-01-01T00:00:00",
+        "validThrough": "2021-12-31T23:59:59"
       }
-    ],
-    "validFrom": "-01-01",
-    "validThrough": "-31-12"
+    ]
   },
   "owner": {
     "type": "Property",
@@ -106,7 +112,9 @@
   },
   "contactPoint": {
     "type": "Property",
-    "value": "www.lignesdazur.com"
+    "value": {
+      "url": "www.lignesdazur.com"
+    }
   },
   "webSite": {
     "type": "Property",
@@ -130,38 +138,47 @@
       "nbOfIOPoint": 2,
       "nbOfLane": 1,
       "nbOfPlatform": 1,
-      "PlatformType": "lateral"
+      "PlatformType": ["lateral"]
     }
   },
   "stationConnected": {
     "type": "Property",
-    "value": {
-      "tram": {
-        "type": "Property",
-        "value": [
-          "Tram 2 - CADAM / Nikaia",
-          "Tram 3 - Saint Isidore / Stade Allianz Riviera"
-        ]
+    "value": [
+      {
+        "stationType": "tram",
+        "linesConnected": {
+          "type": "Property",
+          "value": [
+            "Tram 2 - CADAM / Nikaia",
+            "Tram 3 - Saint Isidore / Stade Allianz Riviera"
+          ]
+        }
       },
-      "train": {
-        "type": "Property",
-        "value": [
-          "Gare SNCF Nice Saint Augustin (600m)"
-        ]
+      {
+        "stationType": "train",
+        "linesConnected": {
+          "type": "Property",
+          "value": [
+            "Gare SNCF Nice Saint Augustin (600m)"
+          ]
+        }
       },
-      "bus": {
-        "type": "Property",
-        "value": [
-          "L20 - Giono / Les Pugets",
-          "L20 - Centre Commercial St Isidore",
-          "L21 - Le Gué / Polygone Riviera",
-          "L54 - Centre Commercial Cap 3000 - St Jeannet",
-          "L90 - La Bolline",
-          "91 Auron",
-          "L92 - Isola 2000"
-        ]
+      {
+        "stationType": "bus",
+        "linesConnected": {
+          "type": "Property",
+          "value": [
+            "L20 - Giono / Les Pugets",
+            "L20 - Centre Commercial St Isidore",
+            "L21 - Le Gué / Polygone Riviera",
+            "L54 - Centre Commercial Cap 3000 - St Jeannet",
+            "L90 - La Bolline",
+            "91 Auron",
+            "L92 - Isola 2000"
+          ]
+        }
       }
-    }
+    ]
   },
   "services": {
     "type": "Property",
