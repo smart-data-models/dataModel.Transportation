@@ -1,17 +1,30 @@
 {
-    "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:SpecialRestriction:GeoJson:ds51-1",
-    "type": "SpecialRestriction",
-    "name": "Corso Concordia Area",
-    "notAllowedVehicleType": [
-        "dieselCarEuro0",
-        "petrolCarEuro0"
-    ],
-    "refRestrictedTrafficArea": "urn:ngsi-ld:SpecialRestriction:RestrictedTrafficArea:Milan:GeoJson:ds51-1",
-    "refVehicleModel": [
-        "vehicle:VehicleModel:modelName-1"
-    ],
-    "restrictionValidityHours": "Tu,Th 16:00-20:00",
-    "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
+  "id": "urn:ngsi-ld:RestrictedTrafficArea:Milan:SpecialRestriction:GeoJson:ds51-1",
+  "type": "SpecialRestriction",
+  "name": {
+    "type": "string",
+    "value": "Corso Concordia Area"
+  },
+  "notAllowedVehicleType": {
+    "type": "array",
+    "value": [
+      "dieselCarEuro0",
+      "petrolCarEuro0"
     ]
+  },
+  "refVehicleModel": {
+    "type": "array",
+    "value": ["vehicle:VehicleModel:modelName-1"]
+  },
+  "refRestrictedTrafficArea": {
+    "type": "string",
+    "value": "urn:ngsi-ld:SpecialRestriction:RestrictedTrafficArea:Milan:GeoJson:ds51-1"
+  },
+  "restrictionValidityHours": {
+    "type": "string",
+    "value": "Tu,Th 16:00-20:00"
+  },
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
+]
 }
