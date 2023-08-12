@@ -1,7 +1,7 @@
 {
   "id": "urn:ngsi-ld:CityWork:CityWork:MNCA-CW-2020Q2-006",
   "type": "CityWork",
-  "name": "Nce-Airport-CW2020Q2-006",
+  "name": "Nice-Airport-CW2020Q2-006",
   "alternateName": "AirPort global Observation",
   "description": "Widening work on access roads and installation of a new electrical and digital network for the connection of T1 & T2 terminals",
   "location": {
@@ -118,7 +118,7 @@
     "public",
     "private"
   ],
-  "typeOfInteventionRequest": "authorizationRequest",
+  "typeOfInterventionRequest": "authorizationRequest",
   "workReason": [
     "sagging",
     "powerCut"
@@ -190,7 +190,7 @@
   "countOfDerogation": 2,
   "derogation": [
     {
-      "derogationType": "Work Nigth during Workday",
+      "derogationType": "Work Night during Workday",
       "startDate": "2020-05-11T20:30:00Z",
       "endDate": "2020-05-15T23:30:00",
       "dayOfWeek": [
