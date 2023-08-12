@@ -18,10 +18,10 @@
   },
   "refVehicleModel": {
     "type": "string",
-    "Object": "vehicle:VehicleModel:modelName-1"
+    "object": "vehicle:VehicleModel:modelName-1"
   },
   "refRestrictedTrafficArea": {
     "type": "string",
-    "Object": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1"
+    "object": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1"
   }
 }
