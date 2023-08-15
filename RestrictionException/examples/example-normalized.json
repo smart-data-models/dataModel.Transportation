@@ -17,11 +17,13 @@
     "value": "Tu,Th 16:00-20:00"
   },
   "refVehicleModel": {
-    "type": "string",
-    "object": "vehicle:VehicleModel:modelName-1"
+    "type": "array",
+    "value": [
+      "vehicle:VehicleModel:modelName-1"
+    ]
   },
   "refRestrictedTrafficArea": {
     "type": "string",
-    "object": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1"
+    "value": "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1"
   }
 }
