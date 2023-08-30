@@ -55,25 +55,25 @@
                 },
                 "brandName": {
                     "type": "string",
-                    "description": "Property. Vehicle's brand name. Model:'https://schema.org/brand'."
+                    "description": "Property. Vehicle's brand name. Model:'https://schema.org/brand'"
                 },
                 "modelName": {
                     "type": "string",
-                    "description": "Property. Vehicle's model name. Model:'https://schema.org/model'."
+                    "description": "Property. Vehicle's model name. Model:'https://schema.org/model'"
                 },
                 "manufacturerName": {
                     "type": "string",
-                    "description": "Property. Vehicle's manufacturer name. Model:'https://schema.org/Text'."
+                    "description": "Property. Vehicle's manufacturer name. Model:'https://schema.org/Text'"
                 },
                 "vehicleModelDate": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. The release date of a vehicle model (often used to differentiate versions of the same make and model). Model:'https://schema.org/vehicleModelDate'."
+                    "description": "Property. The release date of a vehicle model (often used to differentiate versions of the same make and model). Model:'https://schema.org/vehicleModelDate'"
                 },
                 "cargoVolume": {
                     "type": "number",
                     "minimum": 0,
-                    "description": "Property. The available volume for cargo or luggage. For automobiles, this is usually the trunk volume. Model:'https://schema.org/cargoVolume'. Units:'Liters'. If only a single value is provided (type Number) it will refer to the maximum volume."
+                    "description": "Property. The available volume for cargo or luggage. For automobiles, this is usually the trunk volume. Model:'https://schema.org/cargoVolume'. Units:'Liters'. If only a single value is provided (type Number) it will refer to the maximum volume"
                 },
                 "fuelType": {
                     "type": "string",
@@ -104,31 +104,31 @@
                 "height": {
                     "type": "number",
                     "minimum": 0,
-                    "description": "Property. Vehicle's height. Model:'https://schema.org/height'."
+                    "description": "Property. Vehicle's height. Model:'https://schema.org/height'"
                 },
                 "width": {
                     "type": "number",
                     "minimum": 0,
-                    "description": "Property. Vehicle's width. Model:'https://schema.org/width'."
+                    "description": "Property. Vehicle's width. Model:'https://schema.org/width'"
                 },
                 "depth": {
                     "type": "number",
                     "minimum": 0,
-                    "description": "Property. Vehicle's depth. Model:'https://schema.org/depth'."
+                    "description": "Property. Vehicle's depth. Model:'https://schema.org/depth'"
                 },
                 "weight": {
                     "type": "number",
                     "minimum": 0,
-                    "description": "Property. Vehicle's weigth. Model:'https://schema.org/weigth'."
+                    "description": "Property. Vehicle's weigth. Model:'https://schema.org/weigth'"
                 },
                 "vehicleEngine": {
                     "type": "string",
-                    "description": "Property. Information about the engine or engines of the vehicle. Model:'https://schema.org/vehicleEngine'."
+                    "description": "Property. Information about the engine or engines of the vehicle. Model:'https://schema.org/vehicleEngine'"
                 },
                 "url": {
                     "type": "string",
                     "format": "uri",
-                    "description": "Property. URL which provides a description of this vehicle model. Model:'https://schema.org/URL'."
+                    "description": "Property. URL which provides a description of this vehicle model. Model:'https://schema.org/URL'"
                 }
             }
         }
