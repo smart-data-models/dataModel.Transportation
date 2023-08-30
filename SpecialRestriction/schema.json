@@ -23,7 +23,7 @@
                 },
                 "notAllowedVehicleType": {
                     "type": "array",
-                    "description": "Property. Vehicle type(s) not allowed to cross the restricted traffic area.",
+                    "description": "Property. Vehicle type(s) not allowed to cross the restricted traffic area",
                     "items": {
                         "type": "string",
                         "enum": [
@@ -67,7 +67,7 @@
                 },
                 "restrictionValidityHours": {
                     "type": "string",
-                    "description": "Property. Days of the week and hours in which the traffic restriction is active."
+                    "description": "Property. Days of the week and hours in which the traffic restriction is active"
                 },
                 "refVehicleModel": {
                     "type": "array",
@@ -91,7 +91,7 @@
                             "description": "Property. Identifier format of any NGSI entity"
                         }
                     ],
-                    "description": "Property. The Restricted Traffic Area this exception belongs."
+                    "description": "Property. The Restricted Traffic Area this exception belongs"
                 }
             }
         }
