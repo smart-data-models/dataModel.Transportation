@@ -27,7 +27,7 @@
                 },
                 "roadClass": {
                     "type": "string",
-                    "description": "Property. The classification of this road. Model:'https://schema.org/Text'. Enum:'motorway, primary, residential, secondary, service, tertiary, trunk, unclassified'.  Allowed values: Those described by [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Key:highway).",
+                    "description": "Property. The classification of this road. Model:'https://schema.org/Text'. Enum:'motorway, primary, residential, secondary, service, tertiary, trunk, unclassified'.  Allowed values: Those described by [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Key:highway)",
                     "enum": [
                         "motorway",
                         "primary",
@@ -53,7 +53,7 @@
                 },
                 "responsible": {
                     "type": "string",
-                    "description": "Property. Responsible for the road i.e. the organism or company in charge of its maintenance. Model:'https://schema.org/Text'."
+                    "description": "Property. Responsible for the road i.e. the organism or company in charge of its maintenance. Model:'https://schema.org/Text'"
                 }
             },
             "required": [
