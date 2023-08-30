@@ -24,7 +24,7 @@
                 },
                 "allowedVehicleType": {
                     "type": "array",
-                    "description": "Property. Vehicle type(s) allowed to cross the restricted traffic area.",
+                    "description": "Property. Vehicle type(s) allowed to cross the restricted traffic area",
                     "items": {
                         "type": "string",
                         "enum": [
@@ -92,7 +92,7 @@
                             "description": "Property. Identifier format of any NGSI entity"
                         }
                     ],
-                    "description": "Relationship. The Restricted Traffic Area this exception belongs."
+                    "description": "Relationship. The Restricted Traffic Area this exception belongs"
                 }
             }
         }
