@@ -37,26 +37,26 @@
                             "description": "Property. Identifier format of any NGSI entity"
                         }
                     ],
-                    "description": "Relationship. Concerned road segment on which the observation has been made. Model:'https://schema.org/URL'."
+                    "description": "Relationship. Concerned road segment on which the observation has been made. Model:'https://schema.org/URL'"
                 },
                 "dateObserved": {
                     "type": "string",
-                    "description": "Property. The date and time of this observation in ISO8601 UTC format. It can be represented by an specific time instant or by an ISO8601 interval. As a workaround for the lack of support of Orion Context Broker for datetime intervals, it can be used two separate attributes: `dateObservedFrom`, `dateObservedTo`. Model:'https://schema.org/URL'."
+                    "description": "Property. The date and time of this observation in ISO8601 UTC format. It can be represented by an specific time instant or by an ISO8601 interval. As a workaround for the lack of support of Orion Context Broker for datetime intervals, it can be used two separate attributes: `dateObservedFrom`, `dateObservedTo`. Model:'https://schema.org/URL'"
                 },
                 "dateObservedFrom": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. Model:'https://schema.org/DateTime'. Observation period start date and time. See `dateObserved`."
+                    "description": "Property. Model:'https://schema.org/DateTime'. Observation period start date and time. See `dateObserved`"
                 },
                 "dateObservedTo": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. Observation period end date and time. See `dateObserved`.. Model:'https://schema.org/DateTime'."
+                    "description": "Property. Observation period end date and time. See `dateObserved`.. Model:'https://schema.org/DateTime'"
                 },
                 "peopleCount": {
                     "type": "integer",
                     "minimum": 0,
-                    "description": "Property. Total number of people detected during this observation."
+                    "description": "Property. Total number of people detected during this observation"
                 },
                 "occupancy": {
                     "type": "number",
@@ -71,7 +71,7 @@
                 },
                 "congested": {
                     "type": "boolean",
-                    "description": "Property. Flags whether there was a crowd congestion during the observation period in the referred walkway. The absence of this attribute means no crowd congestion. Model:'https://schema.org/Boolean'."
+                    "description": "Property. Flags whether there was a crowd congestion during the observation period in the referred walkway. The absence of this attribute means no crowd congestion. Model:'https://schema.org/Boolean'"
                 },
                 "averageHeadwayTime": {
                     "type": "number",
