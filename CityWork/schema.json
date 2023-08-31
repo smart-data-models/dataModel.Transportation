@@ -489,11 +489,11 @@
                                 "items": {
                                     "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
                                 },
-                                "description": "Geoproperty. Segment Location of the road impacted."
+                                "description": "Geoproperty. Segment Location of the road impacted"
                             },
                             "segmentName": {
                                 "type": "array",
-                                "description": "Property. Segment Name.",
+                                "description": "Property. Segment Name",
                                 "items": {
                                     "type": "string"
                                 }
@@ -551,7 +551,7 @@
                             },
                             "maxTonnage": {
                                 "type": "number",
-                                "description": "Property. Maximum tonnage authorized for the road. The unit code (text) **TNE** which represents Tonne Metric."
+                                "description": "Property. Maximum tonnage authorized for the road. The unit code (text) **TNE** which represents Tonne Metric"
                             },
                             "roadId": {
                                 "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
@@ -600,7 +600,7 @@
                             },
                             "segmentName": {
                                 "type": "array",
-                                "description": "Property. Segment Name.",
+                                "description": "Property. Segment Name",
                                 "items": {
                                     "type": "string"
                                 }
@@ -645,7 +645,7 @@
                                 "items": {
                                     "type": "string"
                                 },
-                                "description": "Property. Segment Name."
+                                "description": "Property. Segment Name"
                             }
                         }
                     }
@@ -665,7 +665,7 @@
                             },
                             "lineName": {
                                 "type": "string",
-                                "description": "Property. Line Name."
+                                "description": "Property. Line Name"
                             },
                             "lineLocation": {
                                 "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
@@ -767,7 +767,7 @@
                             },
                             "segmentName": {
                                 "type": "array",
-                                "description": "Property. Segment Name.",
+                                "description": "Property. Segment Name",
                                 "items": {
                                     "type": "string"
                                 }
@@ -814,7 +814,7 @@
                             },
                             "stationId": {
                                 "type": "array",
-                                "description": "Property. List of free text or reference to the entity [TransportStation](https://github.com/smart-data-models/dataModel.Transportation/blob/master/TransportStation/doc/spec.md) if used.",
+                                "description": "Property. List of free text or reference to the entity [TransportStation](https://github.com/smart-data-models/dataModel.Transportation/blob/master/TransportStation/doc/spec.md) if used",
                                 "items": {
                                     "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
                                 }
@@ -824,14 +824,14 @@
                                 "items": {
                                     "type": "string"
                                 },
-                                "description": "Property. Station Name."
+                                "description": "Property. Station Name"
                             },
                             "stationLocation": {
                                 "type": "array",
                                 "items": {
                                     "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
                                 },
-                                "description": "Geoproperty. Station Location of the stationImpacted."
+                                "description": "Geoproperty. Station Location of the stationImpacted"
                             }
                         }
                     }
