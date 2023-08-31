@@ -67,7 +67,7 @@
                     "type": "object",
                     "properties": {
                         "direction": {
-                            "description": "Property. Detected direction of the observed vehicle.",
+                            "description": "Property. Detected direction of the observed vehicle",
                             "type": "string",
                             "enum": [
                                 "away",
@@ -75,12 +75,12 @@
                             ]
                         },
                         "speed": {
-                            "description": "Property. Detected speed of the observed vehicle.",
+                            "description": "Property. Detected speed of the observed vehicle",
                             "type": "number",
                             "minimum": 0
                         },
                         "brand": {
-                            "description": "Property. Detected brand of the observed vehicle.",
+                            "description": "Property. Detected brand of the observed vehicle",
                             "type": "object",
                             "properties": {
                                 "name": {
@@ -96,15 +96,15 @@
                             }
                         },
                         "model": {
-                            "description": "Property. Detected brand model of the observed vehicle.",
+                            "description": "Property. Detected brand model of the observed vehicle",
                             "type": "object",
                             "properties": {
                                 "name": {
-                                    "description": "Property. Model name.",
+                                    "description": "Property. Model name",
                                     "type": "string"
                                 },
                                 "confidence": {
-                                    "description": "Property. Confidence level of the detection.",
+                                    "description": "Property. Confidence level of the detection",
                                     "type": "number",
                                     "minimum": 0,
                                     "maximum": 1
@@ -112,15 +112,15 @@
                             }
                         },
                         "color": {
-                            "description": "Property. Detected color of the observed vehicle.",
+                            "description": "Property. Detected color of the observed vehicle",
                             "type": "object",
                             "properties": {
                                 "name": {
-                                    "description": "Property. Color name.",
+                                    "description": "Property. Color name",
                                     "type": "string"
                                 },
                                 "confidence": {
-                                    "description": "Property. Confidence level of the detection.",
+                                    "description": "Property. Confidence level of the detection",
                                     "type": "number",
                                     "minimum": 0,
                                     "maximum": 1
@@ -128,7 +128,7 @@
                             }
                         },
                         "country": {
-                            "description": "Property. Detected country of the observed vehicle.",
+                            "description": "Property. Detected country of the observed vehicle",
                             "type": "object",
                             "properties": {
                                 "code": {
@@ -136,7 +136,7 @@
                                     "type": "string"
                                 },
                                 "confidence": {
-                                    "description": "Property. Confidence level of the detection.",
+                                    "description": "Property. Confidence level of the detection",
                                     "type": "number",
                                     "minimum": 0,
                                     "maximum": 1
@@ -144,7 +144,7 @@
                             }
                         },
                         "licensePlate": {
-                            "description": "Property. Detected license plate of the observed vehicle.",
+                            "description": "Property. Detected license plate of the observed vehicle",
                             "type": "object",
                             "properties": {
                                 "identifier": {
@@ -152,7 +152,7 @@
                                     "type": "string"
                                 },
                                 "confidence": {
-                                    "description": "Property. Confidence level of the detection.",
+                                    "description": "Property. Confidence level of the detection",
                                     "type": "number",
                                     "minimum": 0,
                                     "maximum": 1
@@ -181,7 +181,7 @@
                                     "format": "uri"
                                 },
                                 "contentType": {
-                                    "description": "Property. Content type according to IANA Media Types.",
+                                    "description": "Property. Content type according to IANA Media Types",
                                     "type": "string"
                                 },
                                 "imageType": {
