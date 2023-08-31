@@ -128,7 +128,7 @@
                 },
                 "webSite": {
                     "type": "string",
-                    "description": "Property. Link to the official website for more information."
+                    "description": "Property. Link to the official website for more information"
                 },
                 "installationMode": {
                     "type": "string",
