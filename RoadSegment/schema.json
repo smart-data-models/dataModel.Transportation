@@ -310,7 +310,7 @@
                     "properties": {
                         "laneId": {
                             "type": "number",
-                            "description": "Property. Unique identification number of the lane corresponding to this observation."
+                            "description": "Property. Unique identification number of the lane corresponding to this observation"
                         },
                         "laneDirection": {
                             "type": "string",
@@ -325,11 +325,11 @@
                             ],
                             "laneLength": {
                                 "type": "number",
-                                "description": "Property. Length of the lane corresponding to this observation."
+                                "description": "Property. Length of the lane corresponding to this observation"
                             },
                             "laneWidth": {
                                 "type": "number",
-                                "description": "Property. Width of the lane corresponding to this observation."
+                                "description": "Property. Width of the lane corresponding to this observation"
                             }
                         }
                     }
@@ -366,23 +366,23 @@
                     "properties": {
                         "district": {
                             "type": "string",
-                            "description": "Property. Model:'https://schema.org/Text'. District name corresponding to this observation."
+                            "description": "Property. Model:'https://schema.org/Text'. District name corresponding to this observation"
                         },
                         "ulbName": {
                             "type": "string",
-                            "description": "Property. Model:'https://schema.org/Text'. Name of the Urban Local Body corresponding to this observation."
+                            "description": "Property. Model:'https://schema.org/Text'. Name of the Urban Local Body corresponding to this observation"
                         },
                         "cityId": {
                             "type": "string",
-                            "description": "Property. Model:'https://schema.org/Text'. City ID corresponding to this observation."
+                            "description": "Property. Model:'https://schema.org/Text'. City ID corresponding to this observation"
                         },
                         "wardId": {
                             "type": "string",
-                            "description": "Property. Model:'https://schema.org/Text'. Ward ID corresponding to this observation."
+                            "description": "Property. Model:'https://schema.org/Text'. Ward ID corresponding to this observation"
                         },
                         "stateName": {
                             "type": "string",
-                            "description": "Property. Model:'https://schema.org/Text'. Name of the state corresponding to this observation."
+                            "description": "Property. Model:'https://schema.org/Text'. Name of the state corresponding to this observation"
                         },
                         "cityName": {
                             "type": "string",
@@ -390,19 +390,19 @@
                         },
                         "zoneName": {
                             "type": "string",
-                            "description": "Property. Model:'https://schema.org/Text'. Zone name corresponding to this observation."
+                            "description": "Property. Model:'https://schema.org/Text'. Zone name corresponding to this observation"
                         },
                         "zoneId": {
                             "type": "string",
-                            "description": "Property. Model:'https://schema.org/Text'. Zone ID corresponding to this observation."
+                            "description": "Property. Model:'https://schema.org/Text'. Zone ID corresponding to this observation"
                         },
                         "wardName": {
                             "type": "string",
-                            "description": "Property. Model:'https://schema.org/Text'. Ward name corresponding to this observation."
+                            "description": "Property. Model:'https://schema.org/Text'. Ward name corresponding to this observation"
                         },
                         "wardNum": {
                             "type": "number",
-                            "description": "Property. Model:'https://schema.org/Number'. Ward number corresponding to this observation."
+                            "description": "Property. Model:'https://schema.org/Number'. Ward number corresponding to this observation"
                         }
                     }
                 }
