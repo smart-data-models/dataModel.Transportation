@@ -239,10 +239,10 @@ RoadSegment:
               minItems: 2
               type: array
             type:
-              enum: &properties_-_type_-_enum
+              enum:
                 - Point
               type: string
-          required: &required
+          required:
             - type
             - coordinates
           title: GeoJSON Point
@@ -265,10 +265,10 @@ RoadSegment:
               minItems: 2
               type: array
             type:
-              enum: &properties_-_type_-_enum
+              enum:
                 - LineString
               type: string
-          required: &required
+          required:
             - type
             - coordinates
           title: GeoJSON LineString
@@ -293,10 +293,10 @@ RoadSegment:
                 type: array
               type: array
             type:
-              enum: &properties_-_type_-_enum
+              enum:
                 - Polygon
               type: string
-          required: &required
+          required:
             - type
             - coordinates
           title: GeoJSON Polygon
@@ -318,10 +318,10 @@ RoadSegment:
                 type: array
               type: array
             type:
-              enum: &properties_-_type_-_enum
+              enum:
                 - MultiPoint
               type: string
-          required: &required
+          required:
             - type
             - coordinates
           title: GeoJSON MultiPoint
@@ -346,10 +346,10 @@ RoadSegment:
                 type: array
               type: array
             type:
-              enum: &properties_-_type_-_enum
+              enum:
                 - MultiLineString
               type: string
-          required: &required
+          required:
             - type
             - coordinates
           title: GeoJSON MultiLineString
@@ -376,10 +376,10 @@ RoadSegment:
                 type: array
               type: array
             type:
-              enum: &properties_-_type_-_enum
+              enum:
                 - MultiPolygon
               type: string
-          required: &required
+          required:
             - type
             - coordinates
           title: GeoJSON MultiPolygon
@@ -480,9 +480,12 @@ RoadSegment:
               minItems: 2
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - Point
               type: string
-          required: *required
+          required:
+            - type
+            - coordinates
           title: GeoJSON Point
           type: object
           x-ngsi:
@@ -503,9 +506,12 @@ RoadSegment:
               minItems: 2
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - LineString
               type: string
-          required: *required
+          required:
+            - type
+            - coordinates
           title: GeoJSON LineString
           type: object
           x-ngsi:
@@ -528,9 +534,12 @@ RoadSegment:
                 type: array
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - Polygon
               type: string
-          required: *required
+          required:
+            - type
+            - coordinates
           title: GeoJSON Polygon
           type: object
           x-ngsi:
@@ -550,9 +559,12 @@ RoadSegment:
                 type: array
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - MultiPoint
               type: string
-          required: *required
+          required:
+            - type
+            - coordinates
           title: GeoJSON MultiPoint
           type: object
           x-ngsi:
@@ -575,9 +587,12 @@ RoadSegment:
                 type: array
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - MultiLineString
               type: string
-          required: *required
+          required:
+            - type
+            - coordinates
           title: GeoJSON MultiLineString
           type: object
           x-ngsi:
@@ -602,9 +617,12 @@ RoadSegment:
                 type: array
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - MultiPolygon
               type: string
-          required: *required
+          required:
+            - type
+            - coordinates
           title: GeoJSON MultiPolygon
           type: object
           x-ngsi:
@@ -902,9 +920,12 @@ RoadSegment:
               minItems: 2
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - Point
               type: string
-          required: *required
+          required:
+            - type
+            - coordinates
           title: GeoJSON Point
           type: object
           x-ngsi:
@@ -925,9 +946,12 @@ RoadSegment:
               minItems: 2
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - LineString
               type: string
-          required: *required
+          required:
+            - type
+            - coordinates
           title: GeoJSON LineString
           type: object
           x-ngsi:
@@ -950,9 +974,12 @@ RoadSegment:
                 type: array
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - Polygon
               type: string
-          required: *required
+          required:
+            - type
+            - coordinates
           title: GeoJSON Polygon
           type: object
           x-ngsi:
@@ -972,9 +999,12 @@ RoadSegment:
                 type: array
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - MultiPoint
               type: string
-          required: *required
+          required:
+            - type
+            - coordinates
           title: GeoJSON MultiPoint
           type: object
           x-ngsi:
@@ -997,9 +1027,12 @@ RoadSegment:
                 type: array
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - MultiLineString
               type: string
-          required: *required
+          required:
+            - type
+            - coordinates
           title: GeoJSON MultiLineString
           type: object
           x-ngsi:
@@ -1024,9 +1057,12 @@ RoadSegment:
                 type: array
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - MultiPolygon
               type: string
-          required: *required
+          required:
+            - type
+            - coordinates
           title: GeoJSON MultiPolygon
           type: object
           x-ngsi:
