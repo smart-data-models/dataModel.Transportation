@@ -1,100 +1,78 @@
 TransportStation:
-
-  description: The data model is a general description of urban stations (Metro, Bus, Tram, Heliport, ...) according to the GFTS standard https://developers.google.com/transit/gtfs/reference/#stopstxt, as well the detailed description of these (means of access, platform, assistance, ...).
-
+  description: "The data model is a general description of urban stations (Metro, Bus, Tram, Heliport, ...) according to the GFTS standard https://developers.google.com/transit/gtfs/reference/#stopstxt, as well the detailed description of these (means of access, platform, assistance, ...)."
   properties:
-
     address:
-
       description: The mailing address
-
       properties:
-
         addressCountry:
-          description: The country. For example, Spain
+          description: 'The country. For example, Spain'
           type: string
           x-ngsi:
             model: https://schema.org/addressCountry
             type: Property
-
         addressLocality:
-          description: The locality in which the street address is, and which is in the region
+          description: 'The locality in which the street address is, and which is in the region'
           type: string
           x-ngsi:
             model: https://schema.org/addressLocality
             type: Property
-
         addressRegion:
-          description: The region in which the locality is, and which is in the country
+          description: 'The region in which the locality is, and which is in the country'
           type: string
           x-ngsi:
             model: https://schema.org/addressRegion
             type: Property
-
         district:
-          description: A district is a type of administrative division that, in some countries, is managed by the local government
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'
           type: string
           x-ngsi:
             type: Property
-
         postOfficeBoxNumber:
-          description: The post office box number for PO box addresses. For example, 03578
+          description: 'The post office box number for PO box addresses. For example, 03578'
           type: string
           x-ngsi:
             model: https://schema.org/postOfficeBoxNumber
             type: Property
-
         postalCode:
-          description: The postal code. For example, 24004
+          description: 'The postal code. For example, 24004'
           type: string
           x-ngsi:
             model: https://schema.org/https://schema.org/postalCode
             type: Property
-
         streetAddress:
           description: The street address
           type: string
           x-ngsi:
             model: https://schema.org/streetAddress
             type: Property
-
         streetNr:
           description: Number identifying a specific property on a public street
           type: string
           x-ngsi:
             type: Property
-
       type: object
-
       x-ngsi:
         model: https://schema.org/address
         type: Property
-
     alternateName:
       description: An alternative name for this item
       type: string
       x-ngsi:
         type: Property
-
     areaServed:
       description: The geographic area where a service or offered item is provided
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
-
     contactPoint:
-
       description: The details to contact with the item
-
       properties:
-
         areaServed:
           description: The geographic area where a service or offered item is provided. Supersedes serviceArea
           type: string
           x-ngsi:
             type: Property
-
         availabilityRestriction:
           anyOf:
             - description: Array of identifiers format of any NGSI entity
@@ -117,7 +95,6 @@ TransportStation:
           x-ngsi:
             model: http://schema.org/hoursAvailable
             type: Relationship
-
         availableLanguage:
           anyOf:
             - anyOf:
@@ -125,11 +102,10 @@ TransportStation:
                 - items:
                     type: string
                   type: array
-          description: A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language
+          description: 'A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language'
           x-ngsi:
             model: http://schema.org/availableLanguage
             type: Property
-
         contactOption:
           anyOf:
             - type: string
@@ -140,106 +116,89 @@ TransportStation:
           x-ngsi:
             model: http://schema.org/contactOption
             type: Property
-
         contactType:
           description: Contact type of this item
           type: string
           x-ngsi:
             type: Property
-
         email:
           description: Email address of owner
           format: idn-email
           type: string
           x-ngsi:
             type: Property
-
         faxNumber:
           description: The fax number
           type: string
           x-ngsi:
             model: http://schema.org/Text
             type: Property
-
         name:
           description: The name of this item
           type: string
           x-ngsi:
             type: Property
-
         productSupported:
           description: The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. 'iPhone') or a general category of products or services (e.g. 'smartphones')
           type: string
           x-ngsi:
             model: http://schema.org/Text
             type: Property
-
         telephone:
           description: Telephone of this contact
           type: string
           x-ngsi:
             type: Property
-
         url:
           description: URL which provides a description or further information about this item
           format: uri
           type: string
           x-ngsi:
             type: Property
-
       type: object
-
       x-ngsi:
         model: https://schema.org/ContactPoint
         type: Property
-
     contractingAuthority:
       description: Name of the contracting authority
       type: string
       x-ngsi:
         type: Property
-
     contractingCompany:
       description: Name of the contracting company responsible for the exploitation of the station
       type: string
       x-ngsi:
         type: Property
-
     dataProvider:
       description: A sequence of characters identifying the provider of the harmonised data entity
       type: string
       x-ngsi:
         type: Property
-
     dateCreated:
       description: Entity creation timestamp. This will usually be allocated by the storage platform
       format: date-time
       type: string
       x-ngsi:
         type: Property
-
     dateLastReported:
       description: A timestamp which denotes the last time when the device successfully reported data. Date and time in an ISO8601 UTCformat
       format: date-time
       type: string
       x-ngsi:
         type: Property
-
     dateModified:
       description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform
       format: date-time
       type: string
       x-ngsi:
         type: Property
-
     description:
       description: A description of this item
       type: string
       x-ngsi:
         type: Property
-
     dimension:
-      description: Global dimension. The format is structured by a sub-property of 3 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **MTR** represents Meters
+      description: 'Global dimension. The format is structured by a sub-property of 3 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **MTR** represents Meters'
       properties:
         depth:
           minimum: 0
@@ -254,7 +213,6 @@ TransportStation:
       x-ngsi:
         type: Property
         units: meters
-
     id:
       anyOf:
         - description: Identifier format of any NGSI entity
@@ -272,9 +230,8 @@ TransportStation:
       description: Unique identifier of the entity
       x-ngsi:
         type: Property
-
     installationMode:
-      description: Location  relative to the ground reference. Enum:'aerial, ground, underGround, underSea'
+      description: 'Location  relative to the ground reference. Enum:''aerial, ground, underGround, underSea'''
       enum:
         - aerial
         - ground
@@ -283,9 +240,8 @@ TransportStation:
       type: string
       x-ngsi:
         type: Property
-
     inventory:
-      description: General data mapping only for `locationType` = 0, 1, 3, 4. The format is structured by a sub-property of 4 items
+      description: 'General data mapping only for `locationType` = 0, 1, 3, 4. The format is structured by a sub-property of 4 items'
       properties:
         PlatformType:
           items:
@@ -306,19 +262,14 @@ TransportStation:
       type: object
       x-ngsi:
         type: Property
-
     levelId:
-      description: Floor on which the location is located. Numerical index associated with the floor. Indicates the relative position of this stage in relation to the others. The index 0 indicates the ground floor. The floors above ground level are indicated by positive indices, and the underground stages by negative indices
+      description: 'Floor on which the location is located. Numerical index associated with the floor. Indicates the relative position of this stage in relation to the others. The index 0 indicates the ground floor. The floors above ground level are indicated by positive indices, and the underground stages by negative indices'
       type: number
       x-ngsi:
         type: Property
-
     location:
-
-      description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
-
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
-
         - description: Geojson reference to the item. Point
           properties:
             bbox:
@@ -342,7 +293,6 @@ TransportStation:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. LineString
           properties:
             bbox:
@@ -369,7 +319,6 @@ TransportStation:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. Polygon
           properties:
             bbox:
@@ -398,7 +347,6 @@ TransportStation:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. MultiPoint
           properties:
             bbox:
@@ -424,7 +372,6 @@ TransportStation:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. MultiLineString
           properties:
             bbox:
@@ -453,7 +400,6 @@ TransportStation:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. MultiLineString
           properties:
             bbox:
@@ -484,12 +430,10 @@ TransportStation:
           type: object
           x-ngsi:
             type: GeoProperty
-
       x-ngsi:
         type: GeoProperty
-
     locationType:
-      description: Link to the GTFS standard repository describing the different location [Location Type]. 0 Stop or platform (place where users get on or off in a public transport vehicle). 1 Station (area or physical structure comprising one or more platforms). 2 Entrance or Exit (place where users can enter / exit a station from the street). 3 Generic intersection (location in a station that doesn't correspond to any other `location_type` value). 4 Boarding area of a specific location on a platform where users can get on / off in a vehicle
+      description: 'Link to the GTFS standard repository describing the different location [Location Type]. 0 Stop or platform (place where users get on or off in a public transport vehicle). 1 Station (area or physical structure comprising one or more platforms). 2 Entrance or Exit (place where users can enter / exit a station from the street). 3 Generic intersection (location in a station that doesn''t correspond to any other `location_type` value). 4 Boarding area of a specific location on a platform where users can get on / off in a vehicle'
       enum:
         - 0
         - 1
@@ -499,28 +443,21 @@ TransportStation:
       type: number
       x-ngsi:
         type: Property
-
     name:
       description: The name of this item
       type: string
       x-ngsi:
         type: Property
-
     openingHoursSpecification:
-
       description: A structured value providing information about the opening hours of a place or a certain service inside a place
-
       items:
-
         properties:
-
           closes:
-            description: " \tThe closing hour of the place or service on the given day(s) of the week"
+            description: ' 	The closing hour of the place or service on the given day(s) of the week'
             format: time
             type: string
             x-ngsi:
               type: Property
-
           dayOfWeek:
             anyOf:
               - description: Array of days of the week
@@ -549,66 +486,58 @@ TransportStation:
                 type: string
                 x-ngsi:
                   type: Property
-            description: The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays)
+            description: 'The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays)'
             type: string
             x-ngsi:
               model: http://schema.org/dayOfWeek
               type: Property
-
           opens:
             description: The opening hour of the place or service on the given day(s) of the week
             format: time
             type: string
             x-ngsi:
               type: Property
-
           validFrom:
             anyOf:
-              - description: ''
+              - description: ""
                 format: date
                 type: string
                 x-ngsi:
                   model: http://schema.org/Date
                   type: Property
-              - description: ''
+              - description: ""
                 format: date-time
                 type: string
                 x-ngsi:
                   model: http://schema.org/DateTime
                   type: Property
-            description: The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format
+            description: 'The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format'
             x-ngsi:
               type: Property
-
           validThrough:
             anyOf:
-              - description: ''
+              - description: ""
                 format: date
                 type: string
                 x-ngsi:
                   model: http://schema.org/Date
                   type: Property
-              - description: ''
+              - description: ""
                 format: date-time
                 type: string
                 x-ngsi:
                   model: http://schema.org/DateTime
                   type: Property
-            description: The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format
+            description: 'The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format'
             type: string
             x-ngsi:
               type: Property
-
         type: object
-
       minItems: 1
-
       type: array
-
       x-ngsi:
         model: https://schema.org/openingHoursSpecification
         type: Property
-
     owner:
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
@@ -631,7 +560,6 @@ TransportStation:
       type: array
       x-ngsi:
         type: Property
-
     parentStation:
       anyOf:
         - description: Identifier format of any NGSI entity
@@ -646,16 +574,14 @@ TransportStation:
           type: string
           x-ngsi:
             type: Property
-      description: Link to the GTFS standard repository describing the different link between Station and Platform [Parent STATION]. Case '1' location_type = 0 (Stop / platform ), the parent_station field contains the ID of a station. Case '2' location_type = 1  (Station), this field must be empty. Case '3' location_type = 2 (Input / output) or location_type = 3 (generic intersection), the parent_station field contains the ID of a station location_type = 1. Case '4' location_type = 4 (boarding area), the parent_station field contains the ID of a platform
+      description: 'Link to the GTFS standard repository describing the different link between Station and Platform [Parent STATION]. Case ''1'' location_type = 0 (Stop / platform ), the parent_station field contains the ID of a station. Case ''2'' location_type = 1  (Station), this field must be empty. Case ''3'' location_type = 2 (Input / output) or location_type = 3 (generic intersection), the parent_station field contains the ID of a station location_type = 1. Case ''4'' location_type = 4 (boarding area), the parent_station field contains the ID of a platform'
       x-ngsi:
         type: Relationship
-
     platformCode:
       description: Platform identifier for a platform type stop `location_type` = 0 when the stop is in a station
       type: number
       x-ngsi:
         type: Property
-
     refPointOfInterest:
       anyOf:
         - description: Identifier format of any NGSI entity
@@ -673,7 +599,6 @@ TransportStation:
       description: A reference to a point of interest associated to this observation
       x-ngsi:
         type: Relationship
-
     seeAlso:
       description: list of uri pointing to additional resources about the item
       oneOf:
@@ -686,26 +611,20 @@ TransportStation:
           type: string
       x-ngsi:
         type: Property
-
     source:
-      description: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'
       type: string
       x-ngsi:
         type: Property
-
     stationConnected:
-
       architect:
         type: string
-
       commissioningDate:
         format: date-time
         type: string
-
       constructionDate:
         format: date-time
         type: string
-
       currencyAccepted:
         items:
           enum:
@@ -713,9 +632,7 @@ TransportStation:
             - USD
           type: string
         type: array
-
       description: 'Connections possible from this station. A structured value from 0 to N occurrences where each items is a string in the format `stationType` : [List of Lines connected, separated by a comma]. Enum:''aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, train, tram, trolleybus'''
-
       featuredArtist:
         items:
           anyOf:
@@ -731,7 +648,6 @@ TransportStation:
               description: Property. Unique identifier of the entity
             - type: string
         type: array
-
       items:
         properties:
           linesConnected:
@@ -753,7 +669,6 @@ TransportStation:
               - trolleybus
             type: string
         type: object
-
       paymentAccepted:
         items:
           enum:
@@ -763,7 +678,6 @@ TransportStation:
             - other
           type: string
         type: array
-
       services:
         properties:
           defibrillator:
@@ -789,14 +703,11 @@ TransportStation:
           wheelChairAccessible:
             type: Boolean
         type: object
-
       type: array
-
       x-ngsi:
         type: Property
-
     stationType:
-      description: Type of transport station. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, trolleybus, tram'
+      description: 'Type of transport station. Enum:''aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, trolleybus, tram'''
       items:
         enum:
           - aerialLift
@@ -813,7 +724,6 @@ TransportStation:
       type: array
       x-ngsi:
         type: Property
-
     type:
       description: NGSI Entity type. It has to be TransportStation
       enum:
@@ -821,15 +731,13 @@ TransportStation:
       type: string
       x-ngsi:
         type: Property
-
     webSite:
       description: Link to the official website for more information
       type: string
       x-ngsi:
         type: Property
-
     wheelChairAccessible:
-      description: Access possible for Person with Reduced Mobility. For stops without parents 0 no information is available regarding the accessibility of the stop. 1 some vehicles at this stop can board a PMR user. 2 PRM user cannot board  at this stop. For a stop that is part of a station 0 the stop inherits the wheelchair_boarding behavior of the parent station, if it is filled in. 1 lanes provide wheelchair access to the stop / platform  from outside the station. 2 no lane provides wheelchair access to the stop / platform from outside the station. For station inputs / outputs 0 the station entry inherits the wheelchair_boarding behavior of the main station, if specified. 1 the station entrance is wheelchair accessible. 2 no wheelchair accessible route connects the station entrance to the stops / platforms
+      description: 'Access possible for Person with Reduced Mobility. For stops without parents 0 no information is available regarding the accessibility of the stop. 1 some vehicles at this stop can board a PMR user. 2 PRM user cannot board  at this stop. For a stop that is part of a station 0 the stop inherits the wheelchair_boarding behavior of the parent station, if it is filled in. 1 lanes provide wheelchair access to the stop / platform  from outside the station. 2 no lane provides wheelchair access to the stop / platform from outside the station. For station inputs / outputs 0 the station entry inherits the wheelchair_boarding behavior of the main station, if specified. 1 the station entrance is wheelchair accessible. 2 no wheelchair accessible route connects the station entrance to the stops / platforms'
       enum:
         - 0
         - 1
@@ -837,27 +745,18 @@ TransportStation:
       type: number
       x-ngsi:
         type: Property
-
     zoneId:
       description: Pricing zone of the station
       type: string
       x-ngsi:
         type: Property
-
   required:
     - id
     - type
-
   type: object
-
-  x-derived-from: ''
-
-  x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program
-
+  x-derived-from: ""
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/TransportStation/LICENSE.md
-
   x-model-schema: https://smart-data-models.github.io/data-models/Transportation/TransportStation/schema.json
-
-  x-model-tags: ''
-
+  x-model-tags: ""
   x-version: 0.1.3
