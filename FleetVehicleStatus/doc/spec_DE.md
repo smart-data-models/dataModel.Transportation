@@ -15,7 +15,15 @@
 ## Liste der Eigenschaften  
 
 <sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
-- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `battery[number]`: Eigenschaft. Der aktuelle Prozentsatz der verbleibenden Batterie im Falle eines Elektrofahrzeugs oder eines mit dem Fahrzeug verbundenen Geräts.  - `bearing[number]`: Eigenschaft. Die aktuelle Peilung des Flottenfahrzeugs in Grad relativ zu Nord. Das Zeitstempel-Element des Attributs sollte angeben, wann der Messwert ermittelt wurde.  - `currentOperative[object]`: Eigenschaft. Der aktuelle Betreiber (z. B. Fahrer) des als Schema.org-Person beschriebenen Fahrzeugs. Modell:'https://schema.org/Person'  . Model: [https://schema.org/Person](https://schema.org/Person)- `currentStatus[string]`: Eigenschaft. Eine Beschreibung des aktuellen Status des Fahrzeugs, z. B. Enum:'eingesetzt, beendet, beendet, gewartet, gestartet'  - `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `fleetVehicle[*]`: Verknüpfung. Verweis auf die Entität FleetVehicle, auf die sich diese Statusentität bezieht.  - `fleetVehicleOperation[*]`: Verknüpfung. Verweis auf die Entität FleetVehicleOperation, auf die sich diese Statusentität bezieht.  - `id[*]`: Eindeutiger Bezeichner der Entität  - `inRestrictedArea[boolean]`: Eigentum. Gibt an, ob sich das Fahrzeug zum Zeitpunkt der Statusaktualisierung bekanntermaßen in einem Sperrgebiet befindet.  - `lastFuellingAmount[number]`: Eigenschaft. Die Kraftstoffmenge, die dem Fahrzeug bei der letzten Betankung zugeführt wurde. Das Zeitstempel-Element des Attributs sollte angeben, wann das Fahrzeug betankt wurde. Die Daten sind in Litern zu erfassen. Einheiten:'Liter'.  - `lastKnownPosition[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `lastKnownPositionUpdatedAt[string]`: Eigenschaft. Der Zeitstempel der letzten bekannten Positionsaktualisierung für das Flottenfahrzeug.  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `mileageFromOdometer[number]`: Eigenschaft. Die Gesamtentfernung, die das Flottenfahrzeug laut eingebautem Kilometerzähler in Kilometern (unitCode KMT) oder Meilen (unitCode SMI) zurückgelegt hat. Siehe auch Schema.org Vehicle/ mileageFromOdometer. Das Element timestamp hält fest, wann der Kilometerstand gemessen wurde.  - `name[string]`: Der Name dieses Artikels.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `restFuelAmount[number]`: Eigenschaft. Der Kraftstoffstand, der aufgezeichnet wurde, als das Fahrzeug zuletzt stillstand (d. h. angehalten wurde). Das Zeitstempel-Element des Attributs sollte angeben, wann das Fahrzeug zuletzt stillstand. Die Daten sind in Litern zu erfassen.  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `speed[number]`: Eigenschaft. Die aktuelle Geschwindigkeit des Flottenfahrzeugs (km/h). Das Zeitstempel-Element des Attributs sollte angeben, wann der Messwert ermittelt wurde. Einheiten:'km/h'  - `type[string]`: Eigenschaft. NGSI-Entitätskennzeichen. Es muss FleetVehicleStatus sein.  <!-- /30-PropertiesList -->  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Das Land. Zum Beispiel, Spanien  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: Die Ortschaft, in der sich die Adresse befindet, und die in der Region liegt  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: Die Region, in der sich der Ort befindet, und die auf dem Land liegt  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Ein Bezirk ist eine Art von Verwaltungseinheit, die in einigen Ländern von der lokalen Regierung verwaltet wird.    
+	- `postOfficeBoxNumber[string]`: Die Postfachnummer für Postfachadressen. Zum Beispiel, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: Die Postleitzahl. Zum Beispiel, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: Die Straßenanschrift  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `battery[number]`: Der aktuelle Prozentsatz der verbleibenden Batterie im Falle eines Elektrofahrzeugs oder eines mit dem Fahrzeug verbundenen Geräts  - `bearing[number]`: Die aktuelle Peilung des Flottenfahrzeugs in Grad relativ zu Nord. Das Zeitstempel-Element des Attributs sollte angeben, wann der Messwert ermittelt wurde  - `currentOperative[object]`: Der aktuelle Betreiber (z. B. Fahrer) des Fahrzeugs, der als Schema.org-Person beschrieben wird  . Model: [https://schema.org/Person](https://schema.org/Person)	- `givenName`:     
+- `currentStatus[string]`: Eine Beschreibung des aktuellen Status des Fahrzeugs, z. B. Enum:'eingesetzt, beendet, beendet, gewartet, gestartet'.  - `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit  - `dateCreated[date-time]`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen  - `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben  - `description[string]`: Eine Beschreibung dieses Artikels  - `fleetVehicle[*]`: Verweis auf die FleetVehicle-Entität, auf die sich diese Statusentität bezieht  - `fleetVehicleOperation[*]`: Verweis auf die Entität FleetVehicleOperation, auf die sich diese Statusentität bezieht  - `id[*]`: Eindeutiger Bezeichner der Entität  - `inRestrictedArea[boolean]`: Gibt an, ob sich das Fahrzeug zum Zeitpunkt der Statusaktualisierung bekanntermaßen in einem Sperrgebiet befindet  - `lastFuellingAmount[number]`: Die Kraftstoffmenge, die dem Fahrzeug bei der letzten Betankung zugeführt wurde. Der Zeitstempel des Attributs sollte angeben, wann das Fahrzeug betankt wurde. Zu erfassende Daten in Litern  - `lastKnownPosition[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `lastKnownPositionUpdatedAt[date-time]`: Der Zeitstempel der letzten bekannten Positionsaktualisierung für das Flottenfahrzeug  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `mileageFromOdometer[number]`: Die Gesamtentfernung, die das Flottenfahrzeug gemäß dem eingebauten Kilometerzähler in Kilometern (unitCode KMT) oder Meilen (unitCode SMI) zurückgelegt hat. Siehe auch Schema.org Vehicle/ mileageFromOdometer. Das Element timestamp hält fest, wann der Kilometerstand gemessen wurde  - `name[string]`: Der Name dieses Artikels  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `restFuelAmount[number]`: Der Kraftstoffstand, der aufgezeichnet wurde, als das Fahrzeug zuletzt stillstand (d. h. angehalten wurde). Der Zeitstempel des Attributs sollte angeben, wann das Fahrzeug zuletzt stillstand. Zu erfassende Daten in Litern  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `speed[number]`: Die aktuelle Geschwindigkeit des Fahrzeugs der Flotte (km/h). Das Element "Zeitstempel" des Attributs sollte angeben, wann der Messwert ermittelt wurde  - `type[string]`: NGSI-Kennung der Entität. Er muss FleetVehicleStatus lauten.  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
@@ -36,29 +44,51 @@ FleetVehicleStatus:
       description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
         district:    
-          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
           type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
         streetNr:    
-          description: Number identifying a specific property on a public street.    
+          description: Number identifying a specific property on a public street    
           type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
@@ -75,19 +105,19 @@ FleetVehicleStatus:
         model: https://schema.org/Text    
         type: Property    
     battery:    
-      description: 'Property. The current percentage of battery left in case of an electric vehicle, or a device connected to the vehicle.'    
+      description: 'The current percentage of battery left in case of an electric vehicle, or a device connected to the vehicle'    
       maximum: 1    
       minimum: 0    
       type: number    
       x-ngsi:    
         type: Property    
     bearing:    
-      description: Property. The current bearing of the fleet vehicle in degrees relative to North. The timestamp element of the attribute should indicate when the reading was obtained.    
+      description: The current bearing of the fleet vehicle in degrees relative to North. The timestamp element of the attribute should indicate when the reading was obtained    
       type: number    
       x-ngsi:    
         type: Property    
     currentOperative:    
-      description: 'Property. The current operative (e.g. driver) of the vehicle described as a Schema.org  person. Model:''https://schema.org/Person'''    
+      description: The current operative (e.g. driver) of the vehicle described as a Schema.org  person    
       properties:    
         givenName:    
           type: string    
@@ -98,7 +128,7 @@ FleetVehicleStatus:
         model: https://schema.org/Person    
         type: Property    
     currentStatus:    
-      description: 'Property. A description of the current status of the vehicle e.g. Enum:''deployed, finished, terminated, servicing, starting'''    
+      description: 'A description of the current status of the vehicle e.g. Enum:''deployed, finished, terminated, servicing, starting'''    
       enum:    
         - deployed    
         - finished    
@@ -109,18 +139,18 @@ FleetVehicleStatus:
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: A sequence of characters identifying the provider of the harmonised data entity.    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -132,58 +162,70 @@ FleetVehicleStatus:
         type: Property    
     fleetVehicle:    
       anyOf:    
-        - description: Property. Identifier format of any NGSI entity    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: Relationship. Reference to the FleetVehicle entity to which this status entity relates.    
+          x-ngsi:    
+            type: Property    
+      description: Reference to the FleetVehicle entity to which this status entity relates    
       x-ngsi:    
         type: Relationship    
     fleetVehicleOperation:    
       anyOf:    
-        - description: Property. Identifier format of any NGSI entity    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: Relationship. Reference to the FleetVehicleOperation entity to which this status entity relates.    
+          x-ngsi:    
+            type: Property    
+      description: Reference to the FleetVehicleOperation entity to which this status entity relates    
       x-ngsi:    
         type: Relationship    
     id:    
-      anyOf: &fleetvehiclestatus_-_properties_-_owner_-_items_-_anyof    
-        - description: Property. Identifier format of any NGSI entity    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     inRestrictedArea:    
-      description: Property. Indicates if the vehicle is known to be in a restricted area at the time of the status update.    
+      description: Indicates if the vehicle is known to be in a restricted area at the time of the status update    
       type: boolean    
       x-ngsi:    
         type: Property    
     lastFuellingAmount:    
-      description: 'Property. The level of fuel added to the vehicle at the last fuelling. The timestamp element of the attribute should indicate when the vehicle was fuelled. Data to be recorded in Litres. Units:''litres'''    
+      description: The level of fuel added to the vehicle at the last fuelling. The timestamp element of the attribute should indicate when the vehicle was fuelled. Data to be recorded in Litres    
       type: number    
       x-ngsi:    
         type: Property    
         units: litres    
     lastKnownPosition:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
-      oneOf: &fleetvehiclestatus_-_properties_-_location_-_oneof    
-        - description: GeoProperty. Geojson reference to the item. Point    
+      oneOf:    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -204,7 +246,9 @@ FleetVehicleStatus:
             - coordinates    
           title: GeoJSON Point    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. LineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -228,7 +272,9 @@ FleetVehicleStatus:
             - coordinates    
           title: GeoJSON LineString    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. Polygon    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -254,7 +300,9 @@ FleetVehicleStatus:
             - coordinates    
           title: GeoJSON Polygon    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiPoint    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -277,7 +325,9 @@ FleetVehicleStatus:
             - coordinates    
           title: GeoJSON MultiPoint    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiLineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -303,7 +353,9 @@ FleetVehicleStatus:
             - coordinates    
           title: GeoJSON MultiLineString    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiLineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -331,39 +383,215 @@ FleetVehicleStatus:
             - coordinates    
           title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     lastKnownPositionUpdatedAt:    
-      description: Property. The timestamp of the last known position update for the fleet vehicle.    
+      description: The timestamp of the last known position update for the fleet vehicle    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
-      oneOf: *fleetvehiclestatus_-_properties_-_location_-_oneof    
+      oneOf:    
+        - description: Geojson reference to the item. Point    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                type: number    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - Point    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON Point    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - LineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON LineString    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 4    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - Polygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON Polygon    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPoint    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON MultiPoint    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiLineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON MultiLineString    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    items:    
+                      type: number    
+                    minItems: 2    
+                    type: array    
+                  minItems: 4    
+                  type: array    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPolygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON MultiPolygon    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     mileageFromOdometer:    
-      description: Property. The total distance the fleet vehicle has travelled according to the on-board odometer in kilometres (unitCode KMT) or miles (unitCode SMI). See also Schema.org Vehicle/ mileageFromOdometer. The timestamp element records when the odometer reading was taken.    
+      description: The total distance the fleet vehicle has travelled according to the on-board odometer in kilometres (unitCode KMT) or miles (unitCode SMI). See also Schema.org Vehicle/ mileageFromOdometer. The timestamp element records when the odometer reading was taken    
       type: number    
       x-ngsi:    
         type: Property    
     name:    
-      description: The name of this item.    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *fleetvehiclestatus_-_properties_-_owner_-_items_-_anyof    
-        description: Property. Unique identifier of the entity    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     restFuelAmount:    
-      description: Property. The level of fuel recorded when the vehicle was last at rest (i.e. stopped). The timestamp element of the attribute should indicate when the vehicle was last at rest. Data to be recorded in Litres.    
+      description: The level of fuel recorded when the vehicle was last at rest (i.e. stopped). The timestamp element of the attribute should indicate when the vehicle was last at rest. Data to be recorded in Litres    
       type: number    
       x-ngsi:    
         type: Property    
@@ -380,18 +608,18 @@ FleetVehicleStatus:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     speed:    
-      description: 'Property. The current speed of the fleet vehicle (km/h). The timestamp element of the attribute should indicate when the reading was obtained. Units:''km/h'''    
+      description: The current speed of the fleet vehicle (km/h). The timestamp element of the attribute should indicate when the reading was obtained    
       type: number    
       x-ngsi:    
         type: Property    
         units: km/h    
     type:    
-      description: Property. NGSI Entity identifier. It has to be FleetVehicleStatus    
+      description: NGSI Entity identifier. It has to be FleetVehicleStatus    
       enum:    
         - FleetVehicleStatus    
       type: string    
