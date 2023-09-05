@@ -3,24 +3,37 @@
 エンティティAnprFlowObserved  
 ======================<!-- /10-Header -->  
 <!-- 15-License -->  
-[オープンライセンス](https://github.com/smart-data-models//dataModel.Transportation/blob/master/AnprFlowObserved/LICENSE.md)  
-[文書が自動的に生成されます](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[オープン・ライセンス](https://github.com/smart-data-models//dataModel.Transportation/blob/master/AnprFlowObserved/LICENSE.md)  
+[文書は自動的に生成される](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-グローバルな記述です：**このデータモデルは、ある場所、ある時間における車両の通過に関連する観測を表す。このデータモデルは [dataModel.Transportation/ItemFlowObserved] に基づき、ANPR 固有のプロパティと観測画像へのリンクで拡張されている。  
-バージョン：0.0.1  
+グローバルな記述：**このデータモデルは、特定の場所と時間における車両の通過にリンクされた観測を表す。このデータモデルは[dataModel.Transportation/ItemFlowObserved]に基づいており、ANPR固有のプロパティと観測画像へのリンクで拡張されている**。  
+バージョン: 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-## プロパティ一覧  
+## プロパティのリスト  
 
-<sup><sub>[*] 属性に型がない場合は、複数の型や異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
-- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: このアイテムの別称  - `areaServed[string]`: サービスまたは提供されるアイテムが提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateObserved[string]`: ユーザが定義した観測対象の日付。  - `dateReceived[string]`: プロパティです。観測値がプラットフォームに受信された時のタイムスタンプ。  - `description[string]`: このアイテムの説明  - `id[*]`: エンティティの一意な識別子  - `laneId[string]`: プロパティです。Lane identifier（レーン識別子）。オブザーバーから提供されたレーン識別情報。  - `location[*]`: アイテムへの Geojson 参照。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon のいずれかである。  - `name[string]`: この項目の名称です。  - `observedBy[*]`: 関係がある。この観測を報告したエンティティまたはデバイス  - `observedVehicle[object]`: 財産です。観察された車両に関する情報。  - `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリストです。  - `refImages[array]`: 関係です。画像を参照する複数のオブジェクトの配列。  - `seeAlso[*]`: アイテムに関する追加リソースを指す URI のリスト。  - `source[string]`: エンティティデータの元のソースをURLとして与える一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: プロパティです。NGSI Entityタイプ。AnprFlowObservedでなければならない。  - `vehiclePlateNotRead[boolean]`: プロパティです。ライセンスが読み取れなかった場合に表示される  - `zonesServed[array]`: 観測値を受信または読み取ることができるゾーンの配列  <!-- /30-PropertiesList -->  
+<sup><sub>[*] 属性に型がない場合は、複数の型があるか、異なるフォーマット/パターンがある可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 国。例えば、スペイン  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: 番地がある地域と、その地域に含まれる地域  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: その地域がある地域、またその国がある地域  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 地区とは行政区画の一種で、国によっては地方自治体によって管理されている。    
+	- `postOfficeBoxNumber[string]`: 私書箱の住所のための私書箱番号。例：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: 郵便番号。例：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: 番地  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: この項目の別名  - `areaServed[string]`: サービスまたは提供品が提供される地理的地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: ハーモナイズされたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated[date-time]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified[date-time]`: エンティティの最終変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateObserved[date-time]`: ユーザーが定義した観測されたエンティティの日付  - `dateReceived[date-time]`: 観測がプラットフォームによって受信されたタイムスタンプ  - `description[string]`: この商品の説明  - `id[*]`: エンティティの一意識別子  - `laneId[string]`: レーン識別子。オブザーバーによるレーン識別  - `location[*]`: アイテムへの Geojson 参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygon のいずれか。  - `name[string]`: このアイテムの名前  - `observedBy[*]`: この観測を報告した団体または装置  - `observedVehicle[object]`: 観測車両に関する情報  	- `brand[object]`: 検出された車両のブランド    
+	- `color[object]`: 観測車両の検出色    
+	- `country[object]`: 検出された車両の国    
+	- `direction[string]`: 観測された車両の方向    
+	- `licensePlate[object]`: 検出された車両のナンバープレート    
+	- `model[object]`: 検出された車両のブランドモデル    
+- `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリスト。  - `refImages[array]`: 画像を参照する複数のオブジェクトの配列  - `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `source[string]`: エンティティ・データの元のソースを URL として示す一連の文字。ソース・プロバイダの完全修飾ドメイン名、またはソース・オブジェクトの URL を推奨する。  - `type[string]`: NGSIエンティティタイプ。AnprFlowObservedでなければならない。  - `vehiclePlateNotRead[boolean]`: ライセンスが読み取れなかった場合  - `zonesServed[array]`: 観測値を受信または読み取ることができるゾーンの配列  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 必須プロパティ  
 - `dateObserved`  - `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-このデータモデルは、警察問題を扱うスマートアプリケーションに関わる主なエンティティを記述する。このエンティティのセットは、主に自動車およびスマートシティの垂直セグメントと、関連する IoT アプリケーションに関連するものである。実行可能な場合は、既存の schema.org のエンティティタイプおよび属性への参照が含まれる。このモデルは、可能な限り汎用的であるように設計されているため、ANPR、軌道制御、警察車両など、さまざまな警察署やゾーンで使用することができる。  
+このデータ・モデルは、警察問題を扱うスマート・アプリケーションに関わる主なエンティティを記述している。このエンティティのセットは、主に自動車とスマートシティの垂直セグメント、および関連する IoT アプリケーションに関連している。実行可能な場合は、既存の schema.org エンティティタイプと属性への参照を含める。このモデルは可能な限り汎用的であるように設計されており、ANPR、軌跡制御、警察車両など、さまざまな警察部門やゾーンで使用できるようになっている。  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
@@ -36,29 +49,51 @@ AnprFlowObserved:
       description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
         district:    
-          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
           type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
         streetNr:    
-          description: Number identifying a specific property on a public street.    
+          description: Number identifying a specific property on a public street    
           type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
@@ -75,30 +110,30 @@ AnprFlowObserved:
         model: https://schema.org/Text    
         type: Property    
     dataProvider:    
-      description: A sequence of characters identifying the provider of the harmonised data entity.    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateObserved:    
-      description: Date of the observed entity defined by the user.    
+      description: Date of the observed entity defined by the user    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateReceived:    
-      description: Property. Timestamp when the observation has been received by the platform.    
+      description: Timestamp when the observation has been received by the platform    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -109,27 +144,31 @@ AnprFlowObserved:
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &anprflowobserved_-_properties_-_owner_-_items_-_anyof    
-        - description: Property. Identifier format of any NGSI entity    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     laneId:    
-      description: Property. Lane identifier. Lane identification provided by the observer.    
+      description: Lane identifier. Lane identification provided by the observer    
       type: string    
       x-ngsi:    
         type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
-      oneOf: &anprflowobserved_-_properties_-_observedvehicle_-_properties_-_licenseplate_-_properties_-_coordinates_-_oneof    
-        - description: GeoProperty. Geojson reference to the item. Point    
+      oneOf:    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -150,7 +189,9 @@ AnprFlowObserved:
             - coordinates    
           title: GeoJSON Point    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. LineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -174,7 +215,9 @@ AnprFlowObserved:
             - coordinates    
           title: GeoJSON LineString    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. Polygon    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -200,7 +243,9 @@ AnprFlowObserved:
             - coordinates    
           title: GeoJSON Polygon    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiPoint    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -223,7 +268,9 @@ AnprFlowObserved:
             - coordinates    
           title: GeoJSON MultiPoint    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiLineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -249,7 +296,9 @@ AnprFlowObserved:
             - coordinates    
           title: GeoJSON MultiLineString    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiLineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -277,138 +326,354 @@ AnprFlowObserved:
             - coordinates    
           title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     name:    
-      description: The name of this item.    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     observedBy:    
       anyOf:    
-        - description: Property. Identifier format of any NGSI entity    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: Relationship. The entity or device which has reported this observation    
+          x-ngsi:    
+            type: Property    
+      description: The entity or device which has reported this observation    
       x-ngsi:    
         type: Relationship    
     observedVehicle:    
-      description: Property. Information about the observed vehicle.    
+      description: Information about the observed vehicle    
       properties:    
         brand:    
-          description: Property. Detected brand of the observed vehicle.    
+          description: Detected brand of the observed vehicle    
           properties:    
             confidence:    
-              description: Property. Confidence level of the detection    
+              description: Confidence level of the detection    
               maximum: 1    
               minimum: 0    
               type: number    
+              x-ngsi:    
+                type: Property    
             name:    
-              description: Property. Brand name identified    
+              description: Brand name identified    
               type: string    
+              x-ngsi:    
+                type: Property    
           type: object    
+          x-ngsi:    
+            type: Property    
         color:    
-          description: Property. Detected color of the observed vehicle.    
+          description: Detected color of the observed vehicle    
           properties:    
             confidence:    
-              description: Property. Confidence level of the detection.    
+              description: Confidence level of the detection    
               maximum: 1    
               minimum: 0    
               type: number    
+              x-ngsi:    
+                type: Property    
             name:    
-              description: Property. Color name.    
+              description: Color name    
               type: string    
+              x-ngsi:    
+                type: Property    
           type: object    
+          x-ngsi:    
+            type: Property    
         country:    
-          description: Property. Detected country of the observed vehicle.    
+          description: Detected country of the observed vehicle    
           properties:    
             code:    
-              description: Property. Country code according to ISO 3166-1 alpha-2    
+              description: Country code according to ISO 3166-1 alpha-2    
               type: string    
+              x-ngsi:    
+                type: Property    
             confidence:    
-              description: Property. Confidence level of the detection.    
+              description: Confidence level of the detection    
               maximum: 1    
               minimum: 0    
               type: number    
+              x-ngsi:    
+                type: Property    
           type: object    
+          x-ngsi:    
+            type: Property    
         direction:    
-          description: Property. Detected direction of the observed vehicle.    
+          description: Detected direction of the observed vehicle    
           enum:    
             - away    
             - towards    
           type: string    
+          x-ngsi:    
+            type: Property    
         licensePlate:    
-          description: Property. Detected license plate of the observed vehicle.    
+          description: Detected license plate of the observed vehicle    
           properties:    
             confidence:    
-              description: Property. Confidence level of the detection.    
+              description: Confidence level of the detection    
               maximum: 1    
               minimum: 0    
               type: number    
+              x-ngsi:    
+                type: Property    
             coordinates:    
-              description: 'GeoProperty. Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
-              oneOf: *anprflowobserved_-_properties_-_observedvehicle_-_properties_-_licenseplate_-_properties_-_coordinates_-_oneof    
+              description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              oneOf:    
+                - description: Geojson reference to the item. Point    
+                  properties:    
+                    bbox:    
+                      items:    
+                        type: number    
+                      minItems: 4    
+                      type: array    
+                    coordinates:    
+                      items:    
+                        type: number    
+                      minItems: 2    
+                      type: array    
+                    type:    
+                      enum:    
+                        - Point    
+                      type: string    
+                  required:    
+                    - type    
+                    - coordinates    
+                  title: GeoJSON Point    
+                  type: object    
+                  x-ngsi:    
+                    type: GeoProperty    
+                - description: Geojson reference to the item. LineString    
+                  properties:    
+                    bbox:    
+                      items:    
+                        type: number    
+                      minItems: 4    
+                      type: array    
+                    coordinates:    
+                      items:    
+                        items:    
+                          type: number    
+                        minItems: 2    
+                        type: array    
+                      minItems: 2    
+                      type: array    
+                    type:    
+                      enum:    
+                        - LineString    
+                      type: string    
+                  required:    
+                    - type    
+                    - coordinates    
+                  title: GeoJSON LineString    
+                  type: object    
+                  x-ngsi:    
+                    type: GeoProperty    
+                - description: Geojson reference to the item. Polygon    
+                  properties:    
+                    bbox:    
+                      items:    
+                        type: number    
+                      minItems: 4    
+                      type: array    
+                    coordinates:    
+                      items:    
+                        items:    
+                          items:    
+                          minItems: 2    
+                          type: array    
+                        minItems: 4    
+                        type: array    
+                      type: array    
+                    type:    
+                      enum:    
+                        - Polygon    
+                      type: string    
+                  required:    
+                    - type    
+                    - coordinates    
+                  title: GeoJSON Polygon    
+                  type: object    
+                  x-ngsi:    
+                    type: GeoProperty    
+                - description: Geojson reference to the item. MultiPoint    
+                  properties:    
+                    bbox:    
+                      items:    
+                        type: number    
+                      minItems: 4    
+                      type: array    
+                    coordinates:    
+                      items:    
+                        items:    
+                          type: number    
+                        minItems: 2    
+                        type: array    
+                      type: array    
+                    type:    
+                      enum:    
+                        - MultiPoint    
+                      type: string    
+                  required:    
+                    - type    
+                    - coordinates    
+                  title: GeoJSON MultiPoint    
+                  type: object    
+                  x-ngsi:    
+                    type: GeoProperty    
+                - description: Geojson reference to the item. MultiLineString    
+                  properties:    
+                    bbox:    
+                      items:    
+                        type: number    
+                      minItems: 4    
+                      type: array    
+                    coordinates:    
+                      items:    
+                        items:    
+                          items:    
+                          minItems: 2    
+                          type: array    
+                        minItems: 2    
+                        type: array    
+                      type: array    
+                    type:    
+                      enum:    
+                        - MultiLineString    
+                      type: string    
+                  required:    
+                    - type    
+                    - coordinates    
+                  title: GeoJSON MultiLineString    
+                  type: object    
+                  x-ngsi:    
+                    type: GeoProperty    
+                - description: Geojson reference to the item. MultiLineString    
+                  properties:    
+                    bbox:    
+                      items:    
+                        type: number    
+                      minItems: 4    
+                      type: array    
+                    coordinates:    
+                      items:    
+                        items:    
+                          items:    
+                          minItems: 4    
+                          type: array    
+                        type: array    
+                      type: array    
+                    type:    
+                      enum:    
+                        - MultiPolygon    
+                      type: string    
+                  required:    
+                    - type    
+                    - coordinates    
+                  title: GeoJSON MultiPolygon    
+                  type: object    
+                  x-ngsi:    
+                    type: GeoProperty    
+              x-ngsi:    
+                type: GeoProperty    
             identifier:    
-              description: Property. License plate identifier    
+              description: License plate identifier    
               type: string    
+              x-ngsi:    
+                type: Property    
           required:    
             - identifier    
           type: object    
+          x-ngsi:    
+            type: Property    
         model:    
-          description: Property. Detected brand model of the observed vehicle.    
+          description: Detected brand model of the observed vehicle    
           properties:    
             confidence:    
-              description: Property. Confidence level of the detection.    
+              description: Confidence level of the detection    
               maximum: 1    
               minimum: 0    
               type: number    
+              x-ngsi:    
+                type: Property    
             name:    
-              description: Property. Model name.    
+              description: Model name    
               type: string    
+              x-ngsi:    
+                type: Property    
           type: object    
+          x-ngsi:    
+            type: Property    
         speed:    
-          description: Property. Detected speed of the observed vehicle.    
+          description: Detected speed of the observed vehicle    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
     owner:    
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *anprflowobserved_-_properties_-_owner_-_items_-_anyof    
-        description: Property. Unique identifier of the entity    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     refImages:    
-      description: Relationship. Array of multiple objects that refer to images.    
+      description: Array of multiple objects that refer to images    
       items:    
-        - properties:    
-            contentType:    
-              description: Property. Content type according to IANA Media Types.    
-              type: string    
-            imageType:    
-              description: Property. Type of image    
-              enum:    
-                - plate    
-                - overview    
-                - anpr    
-              type: string    
-            url:    
-              description: Property. URL referencing to the image    
-              format: uri    
-              type: string    
-          required:    
-            - url    
-            - contentType    
-            - imageType    
-          type: object    
+        properties:    
+          contentType:    
+            description: Content type according to IANA Media Types    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          imageType:    
+            description: Type of image    
+            enum:    
+              - plate    
+              - overview    
+              - anpr    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          url:    
+            description: URL referencing to the image    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        required:    
+          - url    
+          - contentType    
+          - imageType    
+        type: object    
       type: array    
       x-ngsi:    
         type: Relationship    
@@ -425,19 +690,19 @@ AnprFlowObserved:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: Property. NGSI Entity type. It has to be AnprFlowObserved    
+      description: NGSI Entity type. It has to be AnprFlowObserved    
       enum:    
         - AnprFlowObserved    
       type: string    
       x-ngsi:    
         type: Property    
     vehiclePlateNotRead:    
-      description: Property. Indicates if a license could not be read    
+      description: Indicates if a license could not be read    
       type: boolean    
       x-ngsi:    
         type: Property    
@@ -446,6 +711,8 @@ AnprFlowObserved:
       items:    
         type: string    
       type: array    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
@@ -465,8 +732,8 @@ AnprFlowObserved:
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
 ## ペイロードの例  
-#### AnprFlowObserved NGSI-v2 キー値例  
-AnprFlowObservedをJSON-LD形式でkey-valuesとした例を示します。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### AnprFlowObserved NGSI-v2 キー値の例  
+以下はAnprFlowObservedをJSON-LD形式でkey-valuesとした例である。これは NGSI-v2 と互換性があり、`options=keyValues` を使うと個々のエンティティのコンテキストデータを返す。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -528,7 +795,7 @@ AnprFlowObserved:
 ```  
 </details>  
 #### AnprFlowObserved NGSI-v2 正規化例  
-以下は、AnprFlowObservedを正規化したJSON-LD形式の例である。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、正規化されたJSON-LDフォーマットのAnprFlowObservedの例である。これはNGSI-v2と互換性があり、オプションを使用しない場合、個々のエンティティのコンテキスト・データを返す。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -555,13 +822,13 @@ AnprFlowObserved:
     "value": "Antwerp"  
   },  
   "zonesServed": {  
-    "type": "StructuredValue",  
-    "value": {  
+    "type": "array",  
+    "value": [  
+      {  
       "type": "string",  
-      "coordinates": [  
-        "Antwerp"  
-      ]  
+      "value": "Antwerp"  
     }  
+  ]  
   },  
   "vehiclePlateNotRead": {  
     "type": "Boolean",  
@@ -570,28 +837,99 @@ AnprFlowObserved:
   "observedVehicle": {  
     "type": "StructuredValue",  
     "value": {  
-      "direction": "towards",  
-      "speed": 50,  
-      "brand": "Audi",  
-      "model": "A3",  
-      "color": "black",  
-      "country": "BE",  
-      "licensePlate": "1-ABC-123"  
+      "direction": {  
+        "type": "Text",  
+        "value": "towards"  
+      },  
+      "speed": {  
+        "type": "Number",  
+        "value": 50  
+      },  
+      "brand": {  
+        "type": "StructuredValue",  
+        "value": {  
+          "name": {  
+            "type": "Text",  
+            "value": "Audi"  
+          },  
+          "confidence": {  
+            "type": "Number",  
+            "value": 0.97  
+          }  
+        }  
+      },  
+      "model": {  
+        "type": "StructuredValue",  
+        "value": {  
+          "name": {  
+            "type": "Text",  
+            "value": "A3"  
+          },  
+          "confidence": {  
+            "type": "Number",  
+            "value": 0.98  
+          }  
+        }  
+      },  
+      "color": {  
+        "type": "StructuredValue",  
+        "value": {  
+          "name": {  
+            "type": "Text",  
+            "value": "black"  
+          },  
+          "confidence": {  
+            "type": "Number",  
+            "value": 0.95  
+          }  
+        }  
+      },  
+      "country": {  
+        "type": "StructuredValue",  
+        "value": {  
+          "code": {  
+            "type": "Text",  
+            "value": "BE"  
+          },  
+          "confidence": {  
+            "type": "Number",  
+            "value": 0.95  
+          }  
+        }  
+      },  
+      "licensePlate": {  
+        "type": "StructuredValue",  
+        "value": {  
+          "identifier": {  
+            "type": "Text",  
+            "value": "1-ABC-123"  
+          },  
+          "confidence": {  
+            "type": "Number",  
+            "value": 0.96  
+          }  
+        }  
+      }  
     }  
   },  
   "refImages": {  
-    "type": "StructuredValue",  
-    "value": {  
-      "type": "s3://bucket/object-xxx-plate",  
-      "contentType": "image/jpg",  
-      "imageType": "anpr"  
-    }  
+    "type": "array",  
+    "value": [  
+      {  
+        "type": "StructuredValue",  
+        "value": {  
+          "url": "s3://bucket/object-xxx-plate",  
+          "contentType": "image/jpg",  
+          "imageType": "anpr"  
+        }  
+      }  
+    ]  
   }  
 }  
 ```  
 </details>  
-#### AnprFlowObserved NGSI-LD キー値例  
-AnprFlowObservedをJSON-LD形式でkey-valuesとした例を示します。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### AnprFlowObserved NGSI-LD キー値の例  
+以下はAnprFlowObservedをJSON-LD形式でkey-valuesとした例である。options=keyValues`を使うとNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -656,7 +994,7 @@ AnprFlowObserved:
 ```  
 </details>  
 #### AnprFlowObserved NGSI-LD 正規化例  
-AnprFlowObservedをJSON-LD形式で正規化した例を示します。これは、オプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、正規化されたJSON-LDフォーマットのAnprFlowObservedの例である。これは、オプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキスト・データを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -727,7 +1065,7 @@ AnprFlowObserved:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+マグニチュード単位の扱い方については、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照のこと。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
