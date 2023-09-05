@@ -14,9 +14,16 @@
 
 ## Liste der Eigenschaften  
 
-<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
-- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `averageCrowdSpeed[number]`: Durchschnittliche Geschwindigkeit der Menschenmenge, die sich während des Beobachtungszeitraums bewegt  . Model: [https://schema.org/Number](https://schema.org/Number)- `averageHeadwayTime[number]`: Durchschnittliche Fahrtzeit. Die Vorbeifahrtzeit ist die Zeit  
-    die zwischen zwei aufeinanderfolgenden Personen verstreicht  . Model: [https://schema.org/Number](https://schema.org/Number)- `congested[boolean]`: Zeigt an, ob während des Beobachtungszeitraums auf dem betreffenden Gehweg ein Menschenauflauf stattgefunden hat. Das Fehlen dieses Attributs bedeutet, dass keine Menschenansammlung vorlag.  . Model: [https://schema.org/Boolean.](https://schema.org/Boolean.)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateObserved[string]`: Das Datum und die Uhrzeit dieser Beobachtung im ISO8601 UTC-Format. Sie kann durch einen bestimmten Zeitpunkt oder durch ein ISO8601-Intervall dargestellt werden. Als Abhilfe für die fehlende Unterstützung des Orion Context Brokers für Datumsintervalle können zwei separate Attribute verwendet werden: `dateObservedFrom`, `dateObservedTo`  . Model: [https://schema.org/URL.](https://schema.org/URL.)- `dateObservedFrom[string]`: Datum und Uhrzeit des Beginns des Beobachtungszeitraums. Siehe `dateObserved`.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateObservedTo[string]`: Datum und Uhrzeit des Endes des Beobachtungszeitraums. Siehe `dateObserved`.  . Model: [https://schema.org/DateTime.](https://schema.org/DateTime.)- `description[string]`: Eine Beschreibung dieses Artikels  - `direction[string]`: Übliche Fahrtrichtung in dem von dieser Beobachtung betroffenen Gehweg in Bezug auf das Stadtzentrum. Enum:'einfahrend, ausfahrend'  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels.  - `occupancy[number]`: Anteil der Beobachtungszeit, in der sich eine Person auf dem beobachteten Gehweg aufgehalten hat  . Model: [https://schema.org/Number)](https://schema.org/Number))- `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `peopleCount[integer]`: Gesamtzahl der während dieser Beobachtung erfassten Personen.  - `refRoadSegment[*]`: Betroffener Straßenabschnitt, auf dem die Beobachtung gemacht wurde  . Model: [https://schema.org/URL.](https://schema.org/URL.)- `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `type[string]`: NGSI-Entitätstyp. Es muss CrowdFlowObserved sein  <!-- /30-PropertiesList -->  
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Das Land. Zum Beispiel, Spanien  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: Die Ortschaft, in der sich die Adresse befindet, und die in der Region liegt  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: Die Region, in der sich der Ort befindet, und die auf dem Land liegt  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Ein Bezirk ist eine Art von Verwaltungseinheit, die in einigen Ländern von der lokalen Regierung verwaltet wird.    
+	- `postOfficeBoxNumber[string]`: Die Postfachnummer für Postfachadressen. Zum Beispiel, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: Die Postleitzahl. Zum Beispiel, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: Die Straßenanschrift  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `averageCrowdSpeed[number]`: Durchschnittliche Geschwindigkeit der Menschenmenge, die sich während des Beobachtungszeitraums bewegt  . Model: [https://schema.org/Number](https://schema.org/Number)- `averageHeadwayTime[number]`: Durchschnittliche Fahrtzeit. Die Vorbeifahrtzeit ist die Zeit  
+    die zwischen zwei aufeinanderfolgenden Personen verstreicht  . Model: [https://schema.org/Number](https://schema.org/Number)- `congested[boolean]`: Zeigt an, ob während des Beobachtungszeitraums auf dem betreffenden Gehweg ein Menschenauflauf stattgefunden hat. Das Fehlen dieses Attributs bedeutet, dass keine Menschenansammlung vorlag.  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit  - `dateCreated[date-time]`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen  - `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben  - `dateObserved[string]`: Das Datum und die Uhrzeit dieser Beobachtung im ISO8601 UTC-Format. Sie können durch einen bestimmten Zeitpunkt oder durch ein ISO8601-Intervall dargestellt werden. Als Abhilfe für die fehlende Unterstützung des Orion Context Brokers für Datumsintervalle können zwei separate Attribute verwendet werden: `dateObservedFrom`, `dateObservedTo`  . Model: [https://schema.org/URL](https://schema.org/URL)- `dateObservedFrom[date-time]`: Datum und Uhrzeit des Beginns des Beobachtungszeitraums. Siehe `dateObserved`  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateObservedTo[date-time]`: Datum und Uhrzeit des Endes des Beobachtungszeitraums. Siehe `dateObserved`.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `description[string]`: Eine Beschreibung dieses Artikels  - `direction[string]`: Übliche Fahrtrichtung in dem von dieser Beobachtung betroffenen Gehweg in Bezug auf das Stadtzentrum. Enum:'einfahrend, ausfahrend'  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels  - `occupancy[number]`: Anteil der Beobachtungszeit, in der sich eine Person auf dem beobachteten Gehweg aufgehalten hat  . Model: [https://schema.org/Number)](https://schema.org/Number))- `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `peopleCount[number]`: Gesamtzahl der während dieser Beobachtung festgestellten Personen  - `refRoadSegment[*]`: Betroffener Straßenabschnitt, auf dem die Beobachtung gemacht wurde  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type[string]`: NGSI-Entitätstyp. Es muss CrowdFlowObserved sein  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
 - `dateObserved`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
@@ -34,49 +41,77 @@ CrowdFlowObserved:
   description: CrowdFlowObserved    
   properties:    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     averageCrowdSpeed:    
-      description: 'Average speed of the crowd transiting during the observation period'    
+      description: Average speed of the crowd transiting during the observation period    
       minimum: 0    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
-        units: 'Kilometer per hour (Km/h).'    
+        units: Kilometer per hour (Km/h).    
     averageHeadwayTime:    
       description: |-    
         Average headway time. Headway time is the time    
@@ -86,26 +121,26 @@ CrowdFlowObserved:
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
-        units: 'second (s)'    
+        units: second (s)    
     congested:    
-      description: 'Flags whether there was a crowd congestion during the observation period in the referred walkway. The absence of this attribute means no crowd congestion'    
+      description: Flags whether there was a crowd congestion during the observation period in the referred walkway. The absence of this attribute means no crowd congestion    
       type: boolean    
       x-ngsi:    
-        model: https://schema.org/Boolean.    
+        model: https://schema.org/Boolean    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -114,24 +149,24 @@ CrowdFlowObserved:
       description: 'The date and time of this observation in ISO8601 UTC format. It can be represented by an specific time instant or by an ISO8601 interval. As a workaround for the lack of support of Orion Context Broker for datetime intervals, it can be used two separate attributes: `dateObservedFrom`, `dateObservedTo`'    
       type: string    
       x-ngsi:    
-        model: https://schema.org/URL.    
+        model: https://schema.org/URL    
         type: Property    
     dateObservedFrom:    
-      description: 'Observation period start date and time. See `dateObserved`.'    
+      description: Observation period start date and time. See `dateObserved`    
       format: date-time    
       type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
         type: Property    
     dateObservedTo:    
-      description: 'Observation period end date and time. See `dateObserved`.'    
+      description: Observation period end date and time. See `dateObserved`.    
       format: date-time    
       type: string    
       x-ngsi:    
-        model: https://schema.org/DateTime.    
+        model: https://schema.org/DateTime    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
@@ -145,22 +180,26 @@ CrowdFlowObserved:
         model: https://schema.org/Text    
         type: Property    
     id:    
-      anyOf: &crowdflowobserved_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -179,9 +218,11 @@ CrowdFlowObserved:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -203,9 +244,11 @@ CrowdFlowObserved:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -229,9 +272,11 @@ CrowdFlowObserved:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -252,9 +297,11 @@ CrowdFlowObserved:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -278,9 +325,11 @@ CrowdFlowObserved:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -306,17 +355,19 @@ CrowdFlowObserved:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     occupancy:    
-      description: 'Fraction of the observation time where a person has been occupying the observed walkway'    
+      description: Fraction of the observation time where a person has been occupying the observed walkway    
       maximum: 1    
       minimum: 0    
       type: number    
@@ -324,35 +375,53 @@ CrowdFlowObserved:
         model: https://schema.org/Number)    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *crowdflowobserved_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     peopleCount:    
-      description: 'Total number of people detected during this observation.'    
+      description: Total number of people detected during this observation    
       minimum: 0    
-      type: integer    
+      type: number    
       x-ngsi:    
         type: Property    
     refRoadSegment:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Concerned road segment on which the observation has been made'    
+          x-ngsi:    
+            type: Property    
+      description: Concerned road segment on which the observation has been made    
       x-ngsi:    
-        model: https://schema.org/URL.    
+        model: https://schema.org/URL    
         type: Relationship    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -364,12 +433,12 @@ CrowdFlowObserved:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be CrowdFlowObserved'    
+      description: NGSI Entity type. It has to be CrowdFlowObserved    
       enum:    
         - CrowdFlowObserved    
       type: string    
@@ -381,7 +450,7 @@ CrowdFlowObserved:
     - dateObserved    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/CrowdFlowObserved/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/CrowdFlowObserved/schema.json    
   x-model-tags: ""    
@@ -467,66 +536,34 @@ CrowdFlowObserved:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
-    "type": "CrowdFlowObserved",  
-    "averageHeadwayTime": {  
-        "type": "Property",  
-        "value": 5  
-    },  
-    "congested": {  
-        "type": "Property",  
-        "value": false  
-    },  
-    "dateObserved": {  
-        "type": "Property",  
-        "value": "2018-08-07T11:10:00/2018-08-07T11:15:00"  
-    },  
-    "dateObservedFrom": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2018-08-07T11:10:00Z"  
-        }  
-    },  
-    "dateObservedTo": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2018-08-07T11:15:00Z"  
-        }  
-    },  
-    "direction": {  
-        "type": "Property",  
-        "value": "inbound"  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "LineString",  
-            "coordinates": [  
-                [  
-                    -4.73735395519672,  
-                    41.6538181849672  
-                ],  
-                [  
-                    -4.73414858659993,  
-                    41.6600594193478  
-                ],  
-                [  
-                    -4.73447575302641,  
-                    41.659585195093  
-                ]  
-            ]  
-        }  
-    },  
-    "peopleCount": {  
-        "type": "Property",  
-        "value": 100  
-    },  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
-    ]  
+  "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
+  "type": "CrowdFlowObserved",  
+  "averageHeadwayTime": 5,  
+  "congested": false,  
+  "dateObservedFrom": "2018-08-07T11:10:00Z",  
+  "dateObservedTo": "2018-08-07T11:15:00Z",  
+  "direction": "inbound",  
+  "location": {  
+    "coordinates": [  
+      [  
+        -4.73735395519672,  
+        41.6538181849672  
+      ],  
+      [  
+        -4.73414858659993,  
+        41.6600594193478  
+      ],  
+      [  
+        -4.73447575302641,  
+        41.659585195093  
+      ]  
+    ],  
+    "type": "LineString"  
+  },  
+  "peopleCount": 100,  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
@@ -535,42 +572,68 @@ CrowdFlowObserved:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
-    "type": "CrowdFlowObserved",  
-    "averageHeadwayTime": 5,  
-    "congested": false,  
-    "dateObserved": "2018-08-07T11:10:00/2018-08-07T11:15:00",  
-    "dateObservedFrom": {  
-        "@type": "DateTime",  
-        "@value": "2018-08-07T11:10:00Z"  
-    },  
-    "dateObservedTo": {  
-        "@type": "DateTime",  
-        "@value": "2018-08-07T11:15:00Z"  
-    },  
-    "direction": "inbound",  
-    "location": {  
-        "coordinates": [  
-            [  
-                -4.73735395519672,  
-                41.6538181849672  
-            ],  
-            [  
-                -4.73414858659993,  
-                41.6600594193478  
-            ],  
-            [  
-                -4.73447575302641,  
-                41.659585195093  
-            ]  
+  "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",  
+  "type": "CrowdFlowObserved",  
+  "averageHeadwayTime": {  
+    "type": "Property",  
+    "value": 5  
+  },  
+  "congested": {  
+    "type": "Property",  
+    "value": false  
+  },  
+  "dateObserved": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2018-08-07T11:10:00"  
+    }  
+  },  
+  "dateObservedFrom": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2018-08-07T11:10:00Z"  
+    }  
+  },  
+  "dateObservedTo": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2018-08-07T11:15:00Z"  
+    }  
+  },  
+  "direction": {  
+    "type": "Property",  
+    "value": "inbound"  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "LineString",  
+      "coordinates": [  
+        [  
+          -4.73735395519672,  
+          41.6538181849672  
         ],  
-        "type": "LineString"  
-    },  
-    "peopleCount": 100,  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
-    ]  
+        [  
+          -4.73414858659993,  
+          41.6600594193478  
+        ],  
+        [  
+          -4.73447575302641,  
+          41.659585195093  
+        ]  
+      ]  
+    }  
+  },  
+  "peopleCount": {  
+    "type": "Property",  
+    "value": 100  
+  },  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details><!-- /80-Examples -->  
