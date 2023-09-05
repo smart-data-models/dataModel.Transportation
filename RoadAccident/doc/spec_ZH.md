@@ -1,21 +1,31 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-实体。道路事故  
+实体：道路事故  
 =======<!-- /10-Header -->  
 <!-- 15-License -->  
 [开放许可](https://github.com/smart-data-models//dataModel.Transportation/blob/master/RoadAccident/LICENSE.md)  
 [文件自动生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-全球描述。**一个带有原因和后果的道路事故描述。在同步性项目中开发的第一个版本**。  
-版本：0.0.1  
+全球描述：** 包含原因和后果的交通事故描述。同步项目开发的第一个版本**  
+版本： 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-##属性列表  
+## 属性列表  
 
-<sup><sub>[*] 如果一个属性中没有一个类型，是因为它可能有几种类型或不同的格式/模式</sub></sup>。  
-- `accidentDate[string]`: 事故发生的日期  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `accidentDescription[array]`: 关于这次道路事故的描述是由所列举的编码情况组合而成的。0：不明情况；1：驾驶人正常行驶而不转弯；2：驾驶人分心驾驶或未确定路线；3：驾驶人未保持安全距离；4：驾驶人未优先考虑来自右侧的车辆；5：驾驶人未遵守停车规定；6：驾驶人未遵守优先通行的信号；7。司机逆行；8：司机不遵守交通信号灯或代理信号；10：司机不遵守禁止通行或进入的标志；11：司机超速行驶；12：司机不遵守速度限制；13：司机以耀眼的灯光越过其他车辆；14：司机经常右转；15：司机不遵守交通规则。14：驾驶人正常右转；15：不正常右转；16：驾驶人正常左转；17：不正常左转；18：驾驶人在路口通过；20：驾驶人正常行驶；21：驾驶人分心驾驶或未确定路线；22：驾驶人未保持安全距离；23：驾驶人超速行驶；24。司机不遵守限速规定行驶；25：不靠近道路右侧边缘行驶；26：司机逆行；27：司机不遵守禁止通行或进入的标志；28：司机以耀眼的灯光穿越其他车辆；29：司机正常通行；30：不定期向右通行；31。司机在弯道上、山坡上或能见度不足的情况下超车；32：超过了正在超车的车辆；33：司机未遵守相应的禁止标志而超车；34：机动降级或转换；35：司机机动进入流通领域；36：机动左转（私人通道、经销商）；37。司机操纵有规律地停车或停车；38：司机操纵无规律地停车或停车；39：与其他无规律的两轮车一起；40：司机有规律地进行；41：司机超速进行；42：司机不遵守限速进行；43：司机逆行进行；44：司机挂档通过；45：操纵；46。不尊重交通信号灯或代理信号的情况下操纵；47：司机从车道出来，没有采取预防措施；48：司机走出车道，撞到了小兵；49：没有在适当的交叉路口优先考虑行人；50：超过了停下来让过的车辆；51：司机用货物撞到了行人；52：司机在停车时不均匀地通过电车；60。司机正常行驶；61：司机分心驾驶或未确定路线；62：司机未保持安全距离；63：司机逆行；64：司机超速行驶；65：司机不遵守限速规定；66：司机不遵守禁止通行或进入的标志；67。司机挂挡超车；68: 司机不谨慎地越过平交道口；70: 用溢出物避免撞击；71:因分心驾驶而带溢出物的听证会；72:带有超速溢出的清单；73:司机突然刹车，对被运输者造成后果；74:74：因车门打开导致人员坠落；75：因运动中的车辆坠落导致人员坠落；76:坠落的原因是：依附或放置不当；80：刹车故障或失效；81:破损或转向失败；82：轮胎爆裂或过度磨损；83。头灯或位置灯缺乏或不足；84：闪光灯或停车灯信号缺乏或不足；85：拖车连接部件断裂；86：危险货物运输设备不足；87。87：身体残疾者的车辆缺乏规定的适应性；88：车轮脱落；89：自行车的视觉装置缺乏或不足  . Model: [https://schema.org/Text](https://schema.org/Text)- `accidentLocation[string]`: 如果事故发生在城市或城外地区，请简要说明。0：市区内的区域 1：镇内的城市道路 2：镇内的省道 3：村内的国道 4：城外道路 5：省道 6：国道 7：公路 8：其他方式 9：区域道路  - `accidentStatisticalDate[object]`: 事故发生的大概时间（通常原始事故数据源只报告统计属性，如季节、工作日和大概的小时数  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `accidentType[array]`: 这个道路事故的快速分类。1：正面碰撞；2：正面-侧面碰撞；3：侧面碰撞；4：碰撞；5：行人投资；6：与停靠的车辆撞击；7：与停放的车辆撞击；8：与障碍物撞击；9：与火车撞击；10：泄漏、滑倒；11：因突然刹车而发生的事故；12：因从车上摔下而发生的事故；。  - `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: 这个项目的一个替代名称  - `areaServed[string]`: 提供服务或提供项目的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 一串识别统一数据实体提供者的字符。  - `dateCreated[string]`: 实体创建时间戳。这通常会由存储平台分配。  - `dateModified[string]`: 实体最后一次修改的时间戳。这通常会由存储平台分配。  - `description[string]`: 对这个项目的描述  - `id[*]`: 实体的唯一标识符  - `localId[string]`: 源数据集的唯一标识符  . Model: [https://schema.org/Text](https://schema.org/Text)- `location[*]`: 对该项目的Geojson引用。它可以是点、线字符串、多边形、多点、多线字符串或多多边形。  - `name[string]`: 这个项目的名称。  - `numPassengersDead[integer]`: 因事故死亡的车辆乘客人数  . Model: [https://schema.org/Number](https://schema.org/Number)- `numPassengersInjured[integer]`: 因事故受伤的车辆乘客人数  . Model: [https://schema.org/Number](https://schema.org/Number)- `numPedestrianDead[integer]`: 因事故死亡的行人数量  . Model: [https://schema.org/Number](https://schema.org/Number)- `numPedestrianInjured[integer]`: 因事故受伤的行人数量  . Model: [https://schema.org/Number](https://schema.org/Number)- `owner[array]`: 一个包含JSON编码的字符序列的列表，引用所有者的唯一Ids。  - `pedestriansInvolved[boolean]`: 布尔型，用于确定事故中是否有行人参与。  - `roadClass[string]`: 发生该事故的道路分类  . Model: [https://wiki.openstreetmap.org/wiki/Key:highway](https://wiki.openstreetmap.org/wiki/Key:highway)- `roadIntersection[string]`: 简要描述发生事故的那段路。   1：十字路口；2：环岛；3：已报告的十字路口；4：有红绿灯的十字路口；5：未报告的十字路口；6：铁道口；7：直道；8：弯道；9：颠簸、瓶颈；10：坡道；11：有照明的廊道；12：无照明的廊道。  - `roadPaving[string]`: 道路的铺设。1: 铺设的道路；2: 粗略铺设的道路；3: 未铺设的道路。  - `roadSign[string]`: 简要描述发生事故的路标。1：不存在；2：垂直；3：水平；4：垂直和水平；5：由施工现场临时设置。  - `roadSurface[string]`: 简要描述事故发生时的路况。1：干燥；2：潮湿；3：湿滑；4：冰冻；5：白雪皑皑。  - `roadTrunk[string]`: 简要描述发生事故的道路干线类型。1：公路支线；2：二级支线；3：小支线；4：路口支线；5：公路路口；6：高速公路左车道；7：高速公路右车道；8：高速公路路口入口；9：高速公路出口路口；10：高速公路路口干线；11：高速公路车站；12：其他情况；15：城市外道路。  - `seeAlso[*]`: 指向有关该项目的其他资源的URI列表  - `source[string]`: 一系列的字符，以URL的形式给出实体数据的原始来源。建议为源提供者的完全合格域名，或源对象的URL。  - `status[string]`: 道路交通事故的状态。Enum:'存档, 进行中, 已解决' 。  . Model: [https://schema.org/Text](https://schema.org/Text)- `totalDeadPeopleWithin24Hours[integer]`: 直接因事故死亡的人数  . Model: [https://schema.org/Number](https://schema.org/Number)- `totalDeadPeopleWithin30Days[integer]`: 因事故发生后死亡的人数  . Model: [https://schema.org/Number](https://schema.org/Number)- `totalInjured[integer]`: 因事故受伤（非死亡）的总人数  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: NGSI实体类型。它必须是RoadAccident。  - `vehiclesInvolved[array]`: 事故涉及的车辆（和行人）列表 0 : 行人 1 : 自行车 2 : 农用车 3 : 公共汽车 4 : 小型客车 5 : 汽车 6 : 大篷车 7 : 电车 8 : 油罐车 9 : 有车的汽车 10 : 有拖车的汽车 11 :货车 12：轻便摩托车 13：油罐车 14：摩托车 15：带拖车的摩托车 16：摩托车 17：拖车 18：货车 19：房车 20：建筑或维修车 21：手推车 22：垃圾车 23：扫地机 24：清洁车  - `weakestSubject[string]`: 代表事故中最弱的主体的车辆（通常是行人）。0：行人 1：自行车 2：农用车 3：公共汽车 4：小巴 5：轿车 6：大篷车 7：电车 8：油罐车 9：带大篷车的汽车 10：带拖车的汽车 11：货车 12：轻便摩托车 13：油罐车 14：摩托车 15：带边车的摩托车 16：摩托车 17：拖车 18：货车 19：大篷车 20：建筑或维修车辆 21：手推车 22：垃圾车 23：扫地机 24：清洁车  - `weatherConditions[array]`: 简要描述这次道路事故中的天气状况。0 : 晴朗的夜晚 1 : 晴朗的白天 2 : 轻度多云 3 : 部分多云 4 : 雾 5 : 雾 6 : 高云 7 : 多云 8 : 非常多云 9 : 阴天 10 : 小雨阵雨 11 : 细雨 12 : 小雨 13 :大雨 14 : 大雨 15 : 雨夹雪 16 : 雨夹雪 17 : 冰雹 18 : 冰雹 19 : 阵雨 20 : 小雪 21 : 大雪 22 : 大雪 23 : 大雪 24 : 雷阵雨 25 : 雷声  <!-- /30-PropertiesList -->  
+<sup><sub>[*] 如果属性中没有类型，是因为它可能有多个类型或不同的格式/模式</sub></sup>。  
+- `accidentDate[date-time]`: 事故发生时间  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `accidentDescription[array]`: 根据所列出的编码情况组合对该道路交通事故进行描述。0：未说明情况；1：驾驶员正常行驶而未转向；2：驾驶员行驶时分心或未确定路线；3：驾驶员行驶时未保持安全距离；4：驾驶员行驶时未优先考虑右侧驶来的车辆；5：驾驶员行驶时未遵守停车规定；6：驾驶员行驶时未遵守优先信号；7：驾驶员逆行；8：驾驶员行驶时未遵守交通信号灯或代理信号；10：驾驶员行驶时未遵守交通信号灯或代理信号；11：驾驶员行驶时未遵守交通信号灯或代理信号；12：驾驶员行驶时未遵守交通信号灯或代理信号；13：驾驶员行驶时未遵守交通信号灯或代理信号：7：驾驶人逆行； 8：驾驶人不遵守交通信号灯或代理信号； 10：驾驶人不遵守禁止过境或通行标志； 11：驾驶人超速行驶； 12：驾驶人不遵守限速规定； 13：驾驶人耀眼的灯光越过其他车辆； 14：驾驶人不遵守交通规则； 15：驾驶人不遵守交通规则； 16：驾驶人不遵守交通规则； 17：驾驶人不遵守交通规则； 18：驾驶人不遵守交通规则； 19：驾驶人不遵守交通规则； 20：驾驶人不遵守交通规则； 21：驾驶人不遵守交通规则：14：驾驶人正常右转；15：不规则右转；16：驾驶人正常左转；17：不规则左转；18：驾驶人在交叉路口通过；20：驾驶人正常行驶；21：驾驶人分心驾驶或行驶路线未确定；22：驾驶人未保持安全距离行驶；23：驾驶人超速行驶；24：驾驶人未遵守交通规则行驶；25：驾驶人未遵守交通规则行驶；26：驾驶人未遵守交通规则行驶；27：驾驶人未遵守交通规则行驶；28：驾驶人未遵守交通规则行驶；29：驾驶人未遵守交通规则行驶；30：驾驶人未遵守交通规则行驶；31：驾驶人未遵守交通规则行驶：驾驶人未遵守限速规定；25：未靠近道路右侧边缘行驶；26：驾驶人逆行；27：驾驶人未遵守禁止通行或进入标志行驶；28：驾驶人打着炫目的灯光超越其他车辆；29：驾驶人正常超车；30：不规则向右超车；31：驾驶人在弯道上、坡道上或视线不佳的情况下超车；32：超越了正在超越其他车辆的车辆；33：驾驶人未遵守相应的禁止标志而超车；34：在降级或转换中操纵；35：驾驶人操纵进入通行流；36：操纵向左转弯（私人通道、分销商）；37：驾驶员有规律地停车或停止； 38：驾驶员无规律地停车或停止； 39：与其他无规律的两轮车辆会合； 40：驾驶员有规律地行驶； 41：驾驶员超速行驶； 42：驾驶员不遵守限速规定行驶； 43：驾驶员逆行； 44：驾驶员挂挡通过车辆； 45：操纵； 46：不遵守交通信号灯或代理信号灯的操作； 47：驾驶员从车道驶出时没有采取预防措施； 48：驾驶员驶出车道并撞到行人； 49：在适当的路口没有优先照顾行人； 50：超越了为让行人通过路口而停靠的车辆； 51：驾驶员用货物撞到行人； 52：驾驶员在停车时不均衡地通过电车； 60：驾驶员不遵守交通信号灯或代理信号灯的操作； 61：驾驶员不遵守交通信号灯或代理信号灯的操作； 62：驾驶员不遵守交通信号灯或代理信号灯的操作； 63：驾驶员不遵守交通信号灯或代理信号灯的操作：60：驾驶人正常行驶； 61：驾驶人分心驾驶或行驶路线未确定； 62：驾驶人未保持安全车距行驶； 63：驾驶人逆行； 64：驾驶人超速行驶； 65：驾驶人未遵守限速规定； 66：驾驶人未遵守禁止过境或通行标志； 67：驾驶人超速行驶； 68：驾驶人超速行驶； 79：驾驶人超速行驶； 80：驾驶人超速行驶； 81：驾驶人超速行驶； 82：驾驶人超速行驶； 83：驾驶人超速行驶； 84：驾驶人超速行驶； 85：驾驶人超速行驶：67：驾驶员挂挡超越另一车辆；68：驾驶员轻率穿越平交道口；70：为避免撞击而洒水；71：因分心驾驶而泄漏； 72：清单上有超速泄漏； 73：驾驶员突然制动，造成运输工具损坏； 74：因车门打开导致人员从车内坠落； 75：因从行驶中的车辆下降导致人员从车内坠落； 76：76: 因紧贴或放置不当导致人员坠车； 80: 制动失灵或失效； 81：断裂或转向失灵； 82: 轮胎爆裂或过度磨损； 83：83: 前照灯或位置灯缺失或不足； 84: 闪烁灯或停车灯信号缺失或不足； 85: 拖车连接部件断裂； 86: 危险货物运输设备缺陷； 87：87: 身体残疾者车辆规定的改装不足； 88: 车轮脱落； 89: 自行车视觉装置缺乏或不足。  . Model: [https://schema.org/Text](https://schema.org/Text)- `accidentLocation[string]`: 简要说明事故是否发生在城区或城外。0：市区内的区域 1：城镇内的城市道路 2：城镇内的省道 3：村庄内的国道 4：城外道路 5：省道 6：国道 7：高速公路 8：其他道路 9：区域道路  - `accidentStatisticalDate[object]`: 事故发生的大致日期（原始事故数据源通常只报告统计属性，如季节、工作日和大致时间  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)	- `hour`:     
+	- `quarter`:     
+	- `weekday[string]`: 周日    
+- `accidentType[array]`: 道路事故快速分类。1: 正面碰撞；2: 正面-侧面碰撞；3: 侧面碰撞；4: 碰撞；5: 行人投资；6: 与停止或停止的车辆相撞；7: 与停放的车辆相撞；8: 与障碍物相撞；9: 与火车相撞；10: 溢出、滑倒；11: 因突然制动而发生的事故；12: 因从车辆上坠落而发生的事故；13: 与其他车辆相撞；14: 与其他车辆相撞；15: 与其他车辆相撞；16: 与其他车辆相撞；17: 与其他车辆相撞；18: 与其他车辆相撞；19: 与其他车辆相撞。  - `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 国家。例如，西班牙  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: 街道地址所在的地点，以及该地点所在的区域  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: 地点所在的地区，以及该地区位于哪个国家  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 地区是一种行政区划，在一些国家由地方政府管理    
+	- `postOfficeBoxNumber[string]`: 用于邮政信箱地址的邮政信箱号码。例如：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: 邮政编码。例如：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: 街道地址  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: 该项目的替代名称  - `areaServed[string]`: 提供服务或提供物品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配  - `dateModified[date-time]`: 实体最后一次修改的时间戳。通常由存储平台分配  - `description[string]`: 项目描述  - `id[*]`: 实体的唯一标识符  - `localId[string]`: 源数据集中的唯一标识符  . Model: [https://schema.org/Text](https://schema.org/Text)- `location[*]`: 项目的 Geojson 引用。它可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `name[string]`: 该项目的名称  - `numPassengersDead[number]`: 因事故死亡的车辆乘客人数  . Model: [https://schema.org/Number](https://schema.org/Number)- `numPassengersInjured[number]`: 因事故受伤的乘客人数  . Model: [https://schema.org/Number](https://schema.org/Number)- `numPedestrianDead[number]`: 因事故死亡的行人数量  . Model: [https://schema.org/Number](https://schema.org/Number)- `numPedestrianInjured[number]`: 因事故受伤的行人数量  . Model: [https://schema.org/Number](https://schema.org/Number)- `owner[array]`: 包含一个 JSON 编码字符序列的列表，其中引用了所有者的唯一 Ids  - `pedestriansInvolved[boolean]`: 布尔值，用于确定事故中是否涉及行人  - `roadClass[string]`: 发生事故的道路等级  . Model: [https://wiki.openstreetmap.org/wiki/Key:highway](https://wiki.openstreetmap.org/wiki/Key:highway)- `roadIntersection[string]`: 事故发生路段的简要说明。   1: 十字路口；2: 环形路；3: 已报告的交叉路口；4: 有红绿灯的交叉路口；5: 未报告的交叉路口；6: 铁路交叉口；7: 直线；8: 曲线；9: 凸起、瓶颈；10: 斜坡；11: 有照明的长廊；12: 无照明的长廊；  - `roadPaving[string]`: 道路铺设。1: 铺面路；2: 粗铺路；3: 未铺路面；  - `roadSign[string]`: 事故发生地路标的简要说明。1: 无；2: 垂直；3: 水平；4: 垂直和水平；5: 施工现场临时；  - `roadSurface[string]`: 简要描述事故发生时的路况。1：干燥；2：潮湿；3：湿滑；4：结冰；5：积雪；  - `roadTrunk[string]`: 简要说明发生事故的道路干线类型。1：道路支线；2：二级支线；3：小支线；4：路口支线；5：路口；6：高速公路左侧车道；7：高速公路右侧车道；8：高速公路路口入口；9：高速公路出口路口；10：高速公路路口主干线；11：高速公路车站；12：其他情况；15：城市支路。  - `seeAlso[*]`: 指向有关该项目的其他资源的 uri 列表  - `source[string]`: 以 URL 形式给出实体数据原始来源的字符串。建议使用源提供者的完全合格域名或源对象的 URL  - `status[string]`: 道路事故的状态。枚举："存档、进行中、已解决"。  . Model: [https://schema.org/Text](https://schema.org/Text)- `totalDeadPeopleWithin24Hours[number]`: 直接因事故死亡的人数  . Model: [https://schema.org/Number](https://schema.org/Number)- `totalDeadPeopleWithin30Days[number]`: 事故后死亡人数  . Model: [https://schema.org/Number](https://schema.org/Number)- `totalInjured[number]`: 因事故受伤（未死亡）的总人数  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: NGSI 实体类型，必须是 RoadAccident  - `vehiclesInvolved[array]`: 0 : 行人 1 : 自行车 2 : 农用车 3 : 公共汽车 4 : 小客车 5 : 汽车 6 : 大篷车 7 : 电车 8 : 油罐车 9 : 带大篷车的汽车 10 : 带拖车的汽车 11 : 货车 12 : 轻便摩托车 13 : 油罐车 14 : 摩托车 15 : 带侧车的摩托车 16 : 摩托车 17 : 拖车 18 : 面包车 19 : 大篷车 20 : 建筑工地车辆12：轻便摩托车 13：油罐车 14：摩托车 15：带侧车的摩托车 16：摩托车 17：拖车 18：面包车 19：大篷车 20：建筑或维修车辆 21：手推车 22：垃圾车 23：扫地机 24：清洁车  - `weakestSubject[string]`: 代表事故中最弱主体（通常是行人）的车辆。0：行人 1：自行车 2：农用车 3：公共汽车 4：小巴 5：轿车 6：房车 7：电车 8：油罐车 9：带房车的轿车 10：带拖车的轿车 11：货车 12：轻便摩托车 13：油罐车 14：摩托车 15：带侧车的摩托车 16：摩托车 17：拖车 18：面包车 19：房车 20：建筑或维修车辆 21：手推车 22：垃圾车 23：扫地机 24：清洁车  - `weatherConditions[array]`: 简要描述此次道路交通事故期间的天气状况。0：晴天夜间 1：晴天白天 2：稍有阴天 3：部分阴天 4：薄雾 5：雾 6：多云 7：阴天 8：多云 9：阴天 10：小雨阵雨 11：毛毛细雨 12：小雨 13：大雨阵雨 14：大雨 15：雨夹雪 16：雨夹雪 17：冰雹阵雨 18：冰雹 19：阵雨 20：小雪大雨 14 : 大雨 15 : 雨夹雪 16 : 雨夹雪 17 : 雹雨 18 : 雹 19 : 阵雨 20 : 小雪 21 : 下雪 22 : 大雪阵雨 23 : 大雪 24 : 雷阵雨 25 : 打雷  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 所需属性  
 - `id`  - `status`  - `type`  <!-- /35-RequiredProperties -->  
@@ -23,17 +33,17 @@
 来自同步性项目的数据模型  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## 数据模型的属性描述  
-按字母顺序排列（点击查看详情）。  
+## 属性的数据模型描述  
+按字母顺序排列（点击查看详情）  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 RoadAccident:    
-  description: 'A road accident description with causes and aftermath. First version developed in Synchronicity project'    
+  description: A road accident description with causes and aftermath. First version developed in Synchronicity project    
   properties:    
     accidentDate:    
-      description: 'Datetime of the accident'    
+      description: Datetime of the accident    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -163,7 +173,7 @@ RoadAccident:
         quarter:    
           type: integer    
         weekday:    
-          description: 'Week days'    
+          description: Week days    
           enum:    
             - Monday    
             - Tuesday    
@@ -200,78 +210,110 @@ RoadAccident:
       x-ngsi:    
         type: Property    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &roadaccident_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     localId:    
-      description: 'Unique identifier from the source data set'    
+      description: Unique identifier from the source data set    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -279,7 +321,7 @@ RoadAccident:
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -298,9 +340,11 @@ RoadAccident:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -322,9 +366,11 @@ RoadAccident:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -348,9 +394,11 @@ RoadAccident:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -371,9 +419,11 @@ RoadAccident:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -397,9 +447,11 @@ RoadAccident:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -425,53 +477,69 @@ RoadAccident:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     numPassengersDead:    
-      description: 'Number of vehicle''s passengers dead because the accident'    
+      description: Number of vehicle's passengers dead because the accident    
       minimum: 0    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     numPassengersInjured:    
-      description: 'Number of vehicle''s passengers injured because the accident'    
+      description: Number of vehicle's passengers injured because the accident    
       minimum: 0    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     numPedestrianDead:    
-      description: 'Number of pedestrians dead because the accident'    
+      description: Number of pedestrians dead because the accident    
       minimum: 0    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     numPedestrianInjured:    
-      description: 'Number of pedestrians injured because the accident'    
+      description: Number of pedestrians injured because the accident    
       minimum: 0    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *roadaccident_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     pedestriansInvolved:    
-      description: 'Boolean to determine if pedestrians were involved in the accidents'    
+      description: Boolean to determine if pedestrians were involved in the accidents    
       type: boolean    
       x-ngsi:    
         type: Property    
@@ -531,7 +599,7 @@ RoadAccident:
       x-ngsi:    
         type: Property    
     roadTrunk:    
-      description: 'Brief description of type of trunk of the road where the accident took place. 1: Road branch; 2: Secondary branch; 3: Minor branch; 4: Junction branch; 5: Road junction; 6: Motorway left lane; 7: Highway carriageway right; 8: Motorway junction entrance; 9: Highway exit junction; 10: Highway junction trunk; 11: Highway station; 12: Other cases; 15: Extra urban road.'    
+      description: 'Brief description of type of trunk of the road where the accident took place. 1: Road branch; 2: Secondary branch; 3: Minor branch; 4: Junction branch; 5: Road junction; 6: Motorway left lane; 7: Highway carriageway right; 8: Motorway junction entrance; 9: Highway exit junction; 10: Highway junction trunk; 11: Highway station; 12: Other cases; 15: Extra urban road'    
       enum:    
         - 1    
         - 2    
@@ -550,7 +618,7 @@ RoadAccident:
       x-ngsi:    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -562,7 +630,7 @@ RoadAccident:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
@@ -577,28 +645,28 @@ RoadAccident:
         model: https://schema.org/Text    
         type: Property    
     totalDeadPeopleWithin24Hours:    
-      description: 'Number of people dead directly because the accident'    
+      description: Number of people dead directly because the accident    
       minimum: 0    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     totalDeadPeopleWithin30Days:    
-      description: 'Number of people dead because the aftermath of the accident'    
+      description: Number of people dead because the aftermath of the accident    
       minimum: 0    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     totalInjured:    
-      description: 'total number of people injured (not dead) because the accident'    
+      description: total number of people injured (not dead) because the accident    
       minimum: 0    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     type:    
-      description: 'NGSI Entity type. it has to be RoadAccident'    
+      description: NGSI Entity type. it has to be RoadAccident    
       enum:    
         - RoadAccident    
       type: string    
@@ -708,7 +776,7 @@ RoadAccident:
     - status    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/RoadAccident/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/RoadAccident/schema.json    
   x-model-tags: ""    
@@ -719,9 +787,9 @@ RoadAccident:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## ＃＃＃＃有效载荷的例子  
-#### RoadAccident NGSI-v2 关键值示例  
-下面是一个以JSON-LD格式作为key-values的RoadAccident的例子。当使用`options=keyValues`时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
+## 有效载荷示例  
+#### RoadAccident NGSI-v2 键值示例  
+下面是一个以 JSON-LD 格式作为键值的 "RoadAccident "示例。当使用 `options=keyValues` 时，这与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -805,8 +873,8 @@ RoadAccident:
 }  
 ```  
 </details>  
-#### RoadAccident NGSI-v2规范化示例  
-下面是一个规范化的JSON-LD格式的RoadAccident的例子。当不使用选项时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
+#### 道路事故 NGSI-v2 标准化示例  
+下面是一个规范化 JSON-LD 格式的 "RoadAccident "示例。在不使用选项的情况下，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -961,9 +1029,7 @@ RoadAccident:
   },  
   "pedestriansInvolved": {  
     "type": "Property",  
-    "value": [  
-      "true"  
-    ]  
+    "value": true  
   },  
   "vehiclesInvolved": {  
     "type": "Property",  
@@ -1007,303 +1073,299 @@ RoadAccident:
 }  
 ```  
 </details>  
-#### RoadAccident NGSI-LD关键值示例  
-下面是一个以JSON-LD格式作为key-values的RoadAccident的例子。当使用`options=keyValues`时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
+#### 道路事故 NGSI-LD 关键值 示例  
+下面是一个以 JSON-LD 格式作为键值的 "RoadAccident "示例。当使用 `options=keyValues` 时，这与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:RoadAccident:id:ORHW:45620815",  
-    "type": "RoadAccident",  
-    "accidentDate": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2021-03-12T13:59:36Z"  
-        }  
-    },  
-    "accidentDescription": {  
-        "type": "Property",  
-        "value": [  
-            "23",  
-            "46"  
-        ]  
-    },  
-    "accidentLocation": {  
-        "type": "Property",  
-        "value": "5"  
-    },  
-    "accidentStatisticalDate": {  
-        "type": "Property",  
-        "value": {  
-            "year": 2021,  
-            "quarter": 1,  
-            "weekday": "Friday",  
-            "hour": 4  
-        }  
-    },  
-    "accidentType": {  
-        "type": "Property",  
-        "value": [  
-            "10",  
-            "6"  
-        ]  
-    },  
-    "address": {  
-        "type": "Property",  
-        "value": {  
-            "streetAddress": "FranklinStrasse",  
-            "addressLocality": "Berlin",  
-            "addressRegion": "Berlin",  
-            "addressCountry": "Germany",  
-            "postalCode": "10387",  
-            "postOfficeBoxNumber": "",  
-            "areaServed": "worldwide."  
-        }  
-    },  
-    "alternateName": {  
-        "type": "Property",  
-        "value": "Other name."  
-    },  
-    "areaServed": {  
-        "type": "Property",  
-        "value": "worldwide"  
-    },  
-    "dataProvider": {  
-        "type": "Property",  
-        "value": "Municipality."  
-    },  
-    "dateCreated": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2018-06-23T04:19:24Z"  
-        }  
-    },  
-    "dateModified": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2020-10-29T08:36:40Z"  
-        }  
-    },  
-    "description": {  
-        "type": "Property",  
-        "value": "Clash in the middle of a traffic light"  
-    },  
-    "localId": {  
-        "type": "Property",  
-        "value": "20210312-A1."  
-    },  
-    "location": {  
-        "type": "Property",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                -56.6404505,  
-                168.370658  
-            ]  
-        }  
-    },  
-    "name": {  
-        "type": "Property",  
-        "value": "Name of the element of the accident."  
-    },  
-    "numPassengersDead": {  
-        "type": "Property",  
-        "value": 1  
-    },  
-    "numPassengersInjured": {  
-        "type": "Property",  
-        "value": 1  
-    },  
-    "numPedestrianDead": {  
-        "type": "Property",  
-        "value": 0  
-    },  
-    "numPedestrianInjured": {  
-        "type": "Property",  
-        "value": 1  
-    },  
-    "owner": {  
-        "type": "Property",  
-        "value": [  
-            "urn:ngsi-ld:RoadAccident:items:SUUU:18395806",  
-            "urn:ngsi-ld:RoadAccident:items:GVOF:30958855"  
-        ]  
-    },  
-    "pedestriansInvolved": {  
-        "type": "Property",  
-        "value": [  
-            "true"  
-        ]  
-    },  
-    "roadClass": {  
-        "type": "Property",  
-        "value": "Motorway."  
-    },  
-    "roadIntersection": {  
-        "type": "Property",  
-        "value": "8"  
-    },  
-    "roadPaving": {  
-        "type": "Property",  
-        "value": "2"  
-    },  
-    "roadSign": {  
-        "type": "Property",  
-        "value": "5"  
-    },  
-    "roadSurface": {  
-        "type": "Property",  
-        "value": "2"  
-    },  
-    "roadTrunk": {  
-        "type": "Property",  
-        "value": "12"  
-    },  
-    "seeAlso": {  
-        "type": "Property",  
-        "value": [  
-            "urn:ngsi-ld:RoadAccident:items:ESLS:37894243",  
-            "urn:ngsi-ld:RoadAccident:items:ZNUH:87936284"  
-        ]  
-    },  
-    "source": {  
-        "type": "Property",  
-        "value": "To be defined"  
-    },  
-    "status": {  
-        "type": "Property",  
-        "value": "onGoing"  
-    },  
-    "totalDeadPeopleWithin24Hours": {  
-        "type": "Property",  
-        "value": 0  
-    },  
-    "totalDeadPeopleWithin30Days": {  
-        "type": "Property",  
-        "value": 0  
-    },  
-    "totalInjured": {  
-        "type": "Property",  
-        "value": 2  
-    },  
-    "vehiclesInvolved": {  
-        "type": "Property",  
-        "value": [  
-            "21",  
-            "6"  
-        ]  
-    },  
-    "weakestSubject": {  
-        "type": "Property",  
-        "value": "20"  
-    },  
-    "weatherConditions": {  
-        "type": "Property",  
-        "value": [  
-            "10",  
-            "20"  
-        ]  
-    },  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+  "id": "urn:ngsi-ld:RoadAccident:id:ORHW:45620815",  
+  "type": "RoadAccident",  
+  "accidentDate": "2021-03-12T13:59:36Z",  
+  "accidentDescription": [  
+    "23",  
+    "46"  
+  ],  
+  "accidentLocation": "5",  
+  "accidentStatisticalDate": {  
+    "year": 2021,  
+    "quarter": 1,  
+    "weekday": "Friday",  
+    "hour": 4  
+  },  
+  "accidentType": [  
+    "10",  
+    "6"  
+  ],  
+  "address": {  
+    "streetAddress": "FranklinStrasse",  
+    "addressLocality": "Berlin",  
+    "addressRegion": "Berlin",  
+    "addressCountry": "Germany",  
+    "postalCode": "10387",  
+    "postOfficeBoxNumber": "",  
+    "areaServed": "worldwide."  
+  },  
+  "alternateName": "Other name.",  
+  "areaServed": "worldwide",  
+  "dataProvider": "Municipality.",  
+  "dateCreated": "2018-06-23T04:19:24Z",  
+  "dateModified": "2020-10-29T08:36:40Z",  
+  "description": "Clash in the middle of a traffic light",  
+  "localId": "20210312-A1.",  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      -56.6404505,  
+      168.370658  
     ]  
+  },  
+  "name": "Name of the element of the accident.",  
+  "numPassengersDead": 1,  
+  "numPassengersInjured": 1,  
+  "numPedestrianDead": 0,  
+  "numPedestrianInjured": 1,  
+  "owner": [  
+    "urn:ngsi-ld:RoadAccident:items:SUUU:18395806",  
+    "urn:ngsi-ld:RoadAccident:items:GVOF:30958855"  
+  ],  
+  "pedestriansInvolved": true,  
+  "roadClass": "Motorway.",  
+  "roadIntersection": "8",  
+  "roadPaving": "2",  
+  "roadSign": "5",  
+  "roadSurface": "2",  
+  "roadTrunk": "12",  
+  "seeAlso": [  
+    "urn:ngsi-ld:RoadAccident:items:ESLS:37894243",  
+    "urn:ngsi-ld:RoadAccident:items:ZNUH:87936284"  
+  ],  
+  "source": "To be defined",  
+  "status": "onGoing",  
+  "totalDeadPeopleWithin24Hours": 0,  
+  "totalDeadPeopleWithin30Days": 0,  
+  "totalInjured": 2,  
+  "vehiclesInvolved": [  
+    "21",  
+    "6"  
+  ],  
+  "weakestSubject": "20",  
+  "weatherConditions": [  
+    "10",  
+    "20"  
+  ],  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
-#### RoadAccident NGSI-LD归一化实例  
-下面是一个规范化的JSON-LD格式的RoadAccident的例子。当不使用选项时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
+#### 道路事故 NGSI-LD 归一化示例  
+下面是一个以 JSON-LD 格式规范化的 "RoadAccident "示例。在不使用选项时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:RoadAccident:id:ORHW:45620815",  
-    "type": "RoadAccident",  
-    "accidentDate": "2021-03-12T13:59:36Z",  
-    "accidentDescription": [  
-        "23",  
-        "46"  
-    ],  
-    "accidentLocation": "5",  
-    "accidentStatisticalDate": {  
-        "year": 2021,  
-        "quarter": 1,  
-        "weekday": "Friday",  
-        "hour": 4  
-    },  
-    "accidentType": [  
-        "10",  
-        "6"  
-    ],  
-    "address": {  
-        "streetAddress": "FranklinStrasse",  
-        "addressLocality": "Berlin",  
-        "addressRegion": "Berlin",  
-        "addressCountry": "Germany",  
-        "postalCode": "10387",  
-        "postOfficeBoxNumber": "",  
-        "areaServed": "worldwide."  
-    },  
-    "alternateName": "Other name.",  
-    "areaServed": "worldwide",  
-    "dataProvider": "Municipality.",  
-    "dateCreated": "2018-06-23T04:19:24Z",  
-    "dateModified": "2020-10-29T08:36:40Z",  
-    "description": "Clash in the middle of a traffic light",  
-    "localId": "20210312-A1.",  
-    "location": {  
-        "type": "Point",  
-        "coordinates": [  
-            -56.6404505,  
-            168.370658  
-        ]  
-    },  
-    "name": "Name of the element of the accident.",  
-    "numPassengersDead": 1,  
-    "numPassengersInjured": 1,  
-    "numPedestrianDead": 0,  
-    "numPedestrianInjured": 1,  
-    "owner": [  
-        "urn:ngsi-ld:RoadAccident:items:SUUU:18395806",  
-        "urn:ngsi-ld:RoadAccident:items:GVOF:30958855"  
-    ],  
-    "pedestriansInvolved": [  
-        "true"  
-    ],  
-    "roadClass": "Motorway.",  
-    "roadIntersection": "8",  
-    "roadPaving": "2",  
-    "roadSign": "5",  
-    "roadSurface": "2",  
-    "roadTrunk": "12",  
-    "seeAlso": [  
-        "urn:ngsi-ld:RoadAccident:items:ESLS:37894243",  
-        "urn:ngsi-ld:RoadAccident:items:ZNUH:87936284"  
-    ],  
-    "source": "To be defined",  
-    "status": "onGoing",  
-    "totalDeadPeopleWithin24Hours": 0,  
-    "totalDeadPeopleWithin30Days": 0,  
-    "totalInjured": 2,  
-    "vehiclesInvolved": [  
-        "21",  
-        "6"  
-    ],  
-    "weakestSubject": "20",  
-    "weatherConditions": [  
-        "10",  
-        "20"  
-    ],  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+  "id": "urn:ngsi-ld:RoadAccident:id:ORHW:45620815",  
+  "type": "RoadAccident",  
+  "accidentDate": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2021-03-12T13:59:36Z"  
+    }  
+  },  
+  "accidentDescription": {  
+    "type": "Property",  
+    "value": [  
+      "23",  
+      "46"  
     ]  
+  },  
+  "accidentLocation": {  
+    "type": "Property",  
+    "value": "5"  
+  },  
+  "accidentStatisticalDate": {  
+    "type": "Property",  
+    "value": {  
+      "year": 2021,  
+      "quarter": 1,  
+      "weekday": "Friday",  
+      "hour": 4  
+    }  
+  },  
+  "accidentType": {  
+    "type": "Property",  
+    "value": [  
+      "10",  
+      "6"  
+    ]  
+  },  
+  "address": {  
+    "type": "Property",  
+    "value": {  
+      "streetAddress": "FranklinStrasse",  
+      "addressLocality": "Berlin",  
+      "addressRegion": "Berlin",  
+      "addressCountry": "Germany",  
+      "postalCode": "10387",  
+      "postOfficeBoxNumber": "",  
+      "areaServed": "worldwide."  
+    }  
+  },  
+  "alternateName": {  
+    "type": "Property",  
+    "value": "Other name."  
+  },  
+  "areaServed": {  
+    "type": "Property",  
+    "value": "worldwide"  
+  },  
+  "dataProvider": {  
+    "type": "Property",  
+    "value": "Municipality."  
+  },  
+  "dateCreated": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2018-06-23T04:19:24Z"  
+    }  
+  },  
+  "dateModified": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2020-10-29T08:36:40Z"  
+    }  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "Clash in the middle of a traffic light"  
+  },  
+  "localId": {  
+    "type": "Property",  
+    "value": "20210312-A1."  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -56.6404505,  
+        88.370658  
+      ]  
+    }  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Name of the element of the accident."  
+  },  
+  "numPassengersDead": {  
+    "type": "Property",  
+    "value": 1  
+  },  
+  "numPassengersInjured": {  
+    "type": "Property",  
+    "value": 1  
+  },  
+  "numPedestrianDead": {  
+    "type": "Property",  
+    "value": 0  
+  },  
+  "numPedestrianInjured": {  
+    "type": "Property",  
+    "value": 1  
+  },  
+  "owner": {  
+    "type": "Property",  
+    "value": [  
+      "urn:ngsi-ld:RoadAccident:items:SUUU:18395806",  
+      "urn:ngsi-ld:RoadAccident:items:GVOF:30958855"  
+    ]  
+  },  
+  "pedestriansInvolved": {  
+    "type": "Property",  
+    "value": true  
+  },  
+  "roadClass": {  
+    "type": "Property",  
+    "value": "Motorway."  
+  },  
+  "roadIntersection": {  
+    "type": "Property",  
+    "value": "8"  
+  },  
+  "roadPaving": {  
+    "type": "Property",  
+    "value": "2"  
+  },  
+  "roadSign": {  
+    "type": "Property",  
+    "value": "5"  
+  },  
+  "roadSurface": {  
+    "type": "Property",  
+    "value": "2"  
+  },  
+  "roadTrunk": {  
+    "type": "Property",  
+    "value": "12"  
+  },  
+  "seeAlso": {  
+    "type": "Property",  
+    "value": [  
+      "urn:ngsi-ld:RoadAccident:items:ESLS:37894243",  
+      "urn:ngsi-ld:RoadAccident:items:ZNUH:87936284"  
+    ]  
+  },  
+  "source": {  
+    "type": "Property",  
+    "value": "To be defined"  
+  },  
+  "status": {  
+    "type": "Property",  
+    "value": "onGoing"  
+  },  
+  "totalDeadPeopleWithin24Hours": {  
+    "type": "Property",  
+    "value": 0  
+  },  
+  "totalDeadPeopleWithin30Days": {  
+    "type": "Property",  
+    "value": 0  
+  },  
+  "totalInjured": {  
+    "type": "Property",  
+    "value": 2  
+  },  
+  "vehiclesInvolved": {  
+    "type": "Property",  
+    "value": [  
+      "21",  
+      "6"  
+    ]  
+  },  
+  "weakestSubject": {  
+    "type": "Property",  
+    "value": "20"  
+  },  
+  "weatherConditions": {  
+    "type": "Property",  
+    "value": [  
+      "10",  
+      "20"  
+    ]  
+  },  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details><!-- /80-Examples -->  
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-参见[常见问题10](https://smartdatamodels.org/index.php/faqs/)，以获得关于如何处理量级单位的答案。  
+请参阅 [FAQ 10](https://smartdatamodels.org/index.php/faqs/)，获取如何处理幅度单位的答案。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
