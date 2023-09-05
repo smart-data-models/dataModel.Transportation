@@ -14,23 +14,40 @@
 
 ## Lista de propiedades  
 
-<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
-- `acceptedPaymentMethod[array]`: Tipo(s) de cargo al utilizar esta estación. Enum:'Por transferencia bancaria por adelantado, Por factura, En efectivo, Por cheque por adelantado, Contra reembolso, Débito directo, GoogleCheckout, PayPal, PaySwarm'  . Model: [https://schema.org/Text](https://schema.org/Text)- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)- `allowedVehicleType[array]`: Tipo(s) de vehículo que se puede(n) cargar. Enum:'bicicleta, autobús, coche, caravana, motocicleta, moto, camión'  . Model: [http://schema.org/Text](http://schema.org/Text)- `alternateName[string]`: Un nombre alternativo para este artículo  - `amountCollected[number]`: Importe recaudado por el servicio correspondiente a esta observación.  - `amperage[number]`: El amperaje total ofrecido por la estación de carga.  . Model: [http://schema.org/Number](http://schema.org/Number)- `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `availableCapacity[integer]`: El número de vehículos que se pueden cargar actualmente. Debe ser menor o igual que la `capacidad`.  . Model: [http://schema.org/Number](http://schema.org/Number)- `capacity[integer]`: El número total de vehículos que pueden cargarse al mismo tiempo. El número total de enchufes puede ser mayor.  . Model: [http://schema.org/Number](http://schema.org/Number)- `chargeType[array]`: Tipo(s) de cargo al utilizar esta estación. Enum:'pago anual, plano, gratuito, pago mensual, otro'  . Model: [https://schema.org/Text](https://schema.org/Text)- `chargingUnitId[string]`: El Id del punto de carga en la estación de carga de vehículos eléctricos correspondiente a esta observación.  - `contactPoint[object]`: Los datos para contactar con el artículo.  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)- `dataDescriptor[string]`: URI que apunta a la entidad descriptora de datos  - `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description[string]`: Una descripción de este artículo  - `endDateTime[string]`: Hora de finalización comunicada correspondiente a esta observación.  - `id[*]`: Identificador único de la entidad  - `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name[string]`: El nombre de este artículo.  - `network[string]`: El nombre de la Red con la que coopera el operador.  . Model: [https://schema.org/Text](https://schema.org/Text)- `observationDateTime[string]`: Última hora de observación comunicada.  - `openingHours[string]`: Horario de apertura de la estación de carga.  . Model: [http://schema.org/openingHours](http://schema.org/openingHours)- `operator[string]`: Operador de la estación de carga.  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `powerConsumption[number]`: Potencia consumida por la entidad correspondiente a esta observación.  - `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `socketNumber[integer]`: El número total de enchufes que ofrece esta estación de carga  . Model: [http://schema.org/Number.](http://schema.org/Number.)- `socketType[array]`: El tipo de enchufes que ofrece esta estación. Enum:'Enchufe_de_caravana, CHAdeMO, CCS/SAE, Dual_CHAdeMO, Dual_J-1772, Dual_Mennekes, J-1772, Mennekes, Otros, Tesla, Tipo2, Tipo3, Wall_Euro'.  . Model: [http://schema.org/Text](http://schema.org/Text)- `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `startDateTime[string]`: Hora de inicio informada correspondiente a esta observación.  - `stationName[string]`: El nombre de la estación correspondiente a esta observación. Puede ser el nombre de la estación de acoplamiento de bicicletas, la estación de carga, etc.  - `status[string]`: Estado de la estación de carga. Enum:'almostEmpty, almostFull, empty, full, outOfService, withIncidence, working'. O cualquier otro específico de la aplicación.  . Model: [http://schema.org/Text](http://schema.org/Text)- `taxAmountCollected[number]`: El importe de los impuestos que gravan los productos, las cosas y los servicios, que incluye el impuesto sobre las ventas, el impuesto sobre el valor añadido, el impuesto sobre los servicios, el impuesto sobre bienes y servicios, los derechos de aduana, etc.  - `transactionId[string]`: Id. de transacción único de la entidad correspondiente a esta observación.  - `transactionType[string]`: Tipo de transacción basada en el modo de pago (por ejemplo, móvil/UPI, tarjeta, etc.) o modo de servicio (por ejemplo, emisión, reemisión, entrada, salida, etc.) correspondiente a esta observación.  - `type[string]`: Tipo de entidad NGSI. Tiene que ser EVChargingStation  - `vehicleType[string]`: Tipo de vehículo desde el punto de vista de sus características estructurales. Es diferente de la categoría del vehículo. Enum:"Vehículo agrícola, ambulancia, cualquier vehículo, vehículo articulado, calesa, bicicleta, carro de basura, autobús BRT, minibús BRT, autobús, coche, caravana, coche o vehículo ligero, coche con caravana, coche con remolque, carro de limpieza, compactador, vehículo de construcción o mantenimiento, volquete, ciclomotor eléctrico, moto eléctrica, camión de bomberos, tracción a las cuatro ruedas, vehículo de gran altura, tolva, camión, minibús, ciclomotor, motocicleta, motocicleta con coche lateral, motocarro, furgón policial, máquina barredora, cisterna, vehículo temporal, vehículo de tres ruedas, volquete, remolque, tranvía, vehículo de dos ruedas, carro, furgoneta, vehículo sin convertidor catalítico, vehículo con caravana, vehículo con remolque, con placas de matrícula pares, con placas de matrícula impares, otros". Los siguientes valores definidos por _VehicleTypeEnum_ y _VehicleTypeEnum2_, [DATEX 2 versión 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)  . Model: [https://schema.org/Text](https://schema.org/Text)- `voltage[number]`: La tensión total ofrecida por la estación de carga  . Model: [http://schema.org/Number](http://schema.org/Number)<!-- /30-PropertiesList -->  
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>.  
+- `acceptedPaymentMethod[array]`: Tipo(s) de cargo al utilizar esta estación. Enum:'Por transferencia bancaria por adelantado, Por factura, Efectivo, Cheque por adelantado, Contra reembolso, Débito directo, GoogleCheckout, PayPal, PaySwarm'.  . Model: [https://schema.org/Text](https://schema.org/Text)- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: El país. Por ejemplo, España  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: La localidad en la que se encuentra la dirección postal, y que está en la región  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: La región en la que se encuentra la localidad, y que está en el país  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Un distrito es un tipo de división administrativa que, en algunos países, gestiona el gobierno local    
+	- `postOfficeBoxNumber[string]`: El número del apartado de correos para las direcciones de apartados postales. Por ejemplo, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: El código postal. Por ejemplo, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: La dirección  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `allowedVehicleType[array]`: Tipo(s) de vehículo que se puede(n) facturar. Enum:'bicicleta, autobús, coche, caravana, motocicleta, motoneta, camión'  . Model: [http://schema.org/Text](http://schema.org/Text)- `alternateName[string]`: Un nombre alternativo para este artículo  - `amountCollected[number]`: Importe recaudado por el servicio correspondiente a esta observación  - `amperage[number]`: El amperaje total ofrecido por la estación de carga.  . Model: [http://schema.org/Number](http://schema.org/Number)- `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `availableCapacity[number]`: El número de vehículos que se pueden cargar actualmente. Debe ser menor o igual que `capacidad`.  . Model: [http://schema.org/Number](http://schema.org/Number)- `capacity[number]`: El número total de vehículos que pueden cargarse al mismo tiempo. El número total de enchufes puede ser mayor.  . Model: [http://schema.org/Number](http://schema.org/Number)- `chargeType[array]`: Tipo(s) de cargo al utilizar esta estación. Enum:'pago anual, fijo, gratuito, pago mensual, otro'  . Model: [https://schema.org/Text](https://schema.org/Text)- `chargingUnitId[string]`: Id del punto de recarga de la estación de recarga de VE correspondiente a esta observación  - `contactPoint[object]`: Los datos de contacto del artículo  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)	- `areaServed[string]`: Área geográfica en la que se presta un servicio o se ofrece un artículo. Sustituye a serviceArea    
+	- `availabilityRestriction[*]`: Esta propiedad vincula un punto de contacto con información sobre cuándo el punto de contacto no está disponible. Los detalles se proporcionan utilizando la clase Especificación de horarios de apertura  . Model: [http://schema.org/hoursAvailable](http://schema.org/hoursAvailable)  
+	- `availableLanguage[*]`: Idioma que alguien puede utilizar con o en el artículo, servicio o lugar. Utilice uno de los códigos de idioma del estándar IETF BCP 47. Está implementada la opción Texto pero también podría ser Idioma  . Model: [http://schema.org/availableLanguage](http://schema.org/availableLanguage)  
+	- `contactOption[*]`: Una opción disponible en este punto de contacto (por ejemplo, un número gratuito o asistencia para personas con problemas de audición)  . Model: [http://schema.org/contactOption](http://schema.org/contactOption)  
+	- `contactType[string]`: Tipo de contacto de este artículo    
+	- `email[idn-email]`: Dirección de correo electrónico del propietario    
+	- `faxNumber[string]`: El número de fax  . Model: [http://schema.org/Text](http://schema.org/Text)  
+	- `name[string]`: El nombre de este artículo    
+	- `productSupported[string]`: El producto o servicio con el que está relacionado este punto de contacto de asistencia (por ejemplo, asistencia para una línea de productos concreta). Puede tratarse de un producto o línea de productos específicos (por ejemplo, "iPhone") o de una categoría general de productos o servicios (por ejemplo, "smartphones").  . Model: [http://schema.org/Text](http://schema.org/Text)  
+	- `telephone[string]`: Teléfono de este contacto    
+- `dataDescriptor[uri]`: URI que apunta a la entidad descriptora de datos  - `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada  - `dateCreated[date-time]`: Fecha de creación de la entidad. Normalmente será asignada por la plataforma de almacenamiento  - `dateModified[date-time]`: Marca de tiempo de la última modificación de la entidad. Suele ser asignada por la plataforma de almacenamiento  - `description[string]`: Descripción de este artículo  - `endDateTime[date-time]`: Hora final notificada correspondiente a esta observación  - `id[*]`: Identificador único de la entidad  - `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon.  - `name[string]`: El nombre de este artículo  - `network[string]`: El nombre de la Red con la que colabora el operador.  . Model: [https://schema.org/Text](https://schema.org/Text)- `observationDateTime[date-time]`: Última hora de observación comunicada  - `openingHours[string]`: Horario de apertura de la estación de carga.  . Model: [http://schema.org/openingHours](http://schema.org/openingHours)- `operator[string]`: Operador de la estación de carga.  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios.  - `powerConsumption[number]`: Potencia consumida por la entidad correspondiente a esta observación  - `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `socketNumber[number]`: Número total de tomas que ofrece esta estación de recarga  . Model: [http://schema.org/Number](http://schema.org/Number)- `socketType[array]`: Tipo de enchufes que ofrece esta estación. Enum:'Caravan_Mains_Socket, CHAdeMO, CCS/SAE, Dual_CHAdeMO, Dual_J-1772, Dual_Mennekes, J-1772, Mennekes, Other, Tesla, Type2, Type3, Wall_Euro'.  . Model: [http://schema.org/Text](http://schema.org/Text)- `source[string]`: Secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `startDateTime[date-time]`: Hora de inicio comunicada correspondiente a esta observación  - `stationName[string]`: El nombre de la estación correspondiente a esta observación. Puede ser el nombre de estación de estacionamiento de bicicletas, estación de carga, etc.  - `status[string]`: Estado de la estación de carga. Enum:'almostEmpty, almostFull, empty, full, outOfService, withIncidence, working'. O cualquier otro específico de la aplicación  . Model: [http://schema.org/Text](http://schema.org/Text)- `taxAmountCollected[number]`: El importe de los impuestos que gravan los productos, las cosas y los servicios, que incluye el impuesto sobre las ventas, el impuesto sobre el valor añadido, el impuesto sobre los servicios, el impuesto sobre bienes y servicios, los derechos de aduana, etc.  - `transactionId[string]`: Id. único de transacción de la entidad correspondiente a esta observación  - `transactionType[string]`: Tipo de transacción basada en el modo de pago (por ejemplo, móvil/UPI, tarjeta, etc.) o el modo de servicio (por ejemplo, emisión, reemisión, entrada, salida, etc.) correspondiente a esta observación.  - `type[string]`: Tipo de entidad NGSI. Tiene que ser EVChargingStation  - `vehicleType[string]`: Tipo de vehículo desde el punto de vista de sus características estructurales. Es diferente de la categoría de vehículo . Enum:vehículo agrícola, ambulancia, cualquier vehículo, vehículo articulado, autorickshaw, bicicleta, binTrolley, autobús BRT, minibús BRT, autobús, coche, caravana, coche o vehículo ligero, coche con caravana, coche con remolque, carro de limpieza, compactador, vehículo de construcción o mantenimiento, volquete, ciclomotor eléctrico, scooter eléctrico, motocicleta eléctrica, camión de bomberos, tracción a las cuatro ruedas, vehículo de gran altura, tolva, camión, minibús, ciclomotor, motocicleta, motocicleta con sidecar, motocarro, furgón policial, barredora, cisterna, tempo, vehículo de tres ruedas, volquete, remolque, tranvía, vehículo de dos ruedas, trolebús, furgoneta, vehículo sin convertidor catalítico, vehículo con caravana, vehículo con remolque, con matrícula par, con matrícula añadida, otros". Los siguientes valores definidos por _VehicleTypeEnum_ y _VehicleTypeEnum2_, [DATEX 2 versión 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)  . Model: [https://schema.org/Text](https://schema.org/Text)- `voltage[number]`: La tensión total ofrecida por la estación de carga  . Model: [http://schema.org/Number](http://schema.org/Number)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propiedades requeridas  
 - `allowedVehicleType`  - `capacity`  - `id`  - `socketType`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-Una estación de carga pública que suministra energía a los vehículos eléctricos. El tiempo de carga depende de la potencia máxima de la estación, del número de vehículos que se estén cargando y del nivel actual de la batería.  
+Estación pública de recarga que suministra energía a los vehículos eléctricos. El tiempo de carga depende de la potencia máxima de la estación, del número de vehículos que se estén cargando y del nivel actual de la batería.  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Descripción del modelo de datos de las propiedades  
-Ordenados alfabéticamente (haga clic para ver los detalles)  
+## Descripción de las propiedades del modelo de datos  
+Ordenados alfabéticamente (pulse para más detalles)  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 EVChargingStation:    
-  description: 'EV Charging Station'    
+  description: EV Charging Station    
   properties:    
     acceptedPaymentMethod:    
       description: 'Type(s) of charge when using this station. Enum:''ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'''    
@@ -53,26 +70,54 @@ EVChargingStation:
         model: https://schema.org/Text    
         type: Property    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
@@ -96,40 +141,40 @@ EVChargingStation:
         model: http://schema.org/Text    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     amountCollected:    
-      description: 'Amount collected towards the service corresponding to this observation.'    
+      description: Amount collected towards the service corresponding to this observation    
       type: number    
       x-ngsi:    
         type: Property    
     amperage:    
-      description: 'The total amperage offered by the charging station.'    
+      description: The total amperage offered by the charging station.    
       minimum: 0    
       type: number    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
-        units: 'Ampers (A)'    
+        units: Ampers (A)    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     availableCapacity:    
-      description: 'The number of vehicles which currently can be charged. It must lower or equal than `capacity`.'    
+      description: The number of vehicles which currently can be charged. It must lower or equal than `capacity`    
       minimum: 0    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
     capacity:    
       description: 'The total number of vehicles which can be charged at the same time. The total number of sockets can be higher. '    
       minimum: 1    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
@@ -150,31 +195,40 @@ EVChargingStation:
         model: https://schema.org/Text    
         type: Property    
     chargingUnitId:    
-      description: 'The Id of the charging point in the EV charging station corresponding to this observation.'    
+      description: The Id of the charging point in the EV charging station corresponding to this observation    
       type: string    
       x-ngsi:    
         type: Property    
     contactPoint:    
-      description: 'The details to contact with the item.'    
+      description: The details to contact with the item    
       properties:    
         areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Supersedes serviceArea.'    
+          description: The geographic area where a service or offered item is provided. Supersedes serviceArea    
           type: string    
+          x-ngsi:    
+            type: Property    
         availabilityRestriction:    
           anyOf:    
-            - description: 'Property. Array of identifiers format of any NGSI entity.'    
+            - description: Array of identifiers format of any NGSI entity    
               items:    
                 maxLength: 256    
                 minLength: 1    
                 pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
                 type: string    
               type: array    
-            - description: 'Property. Array of identifiers format of any NGSI entity.'    
+              x-ngsi:    
+                type: Property    
+            - description: Array of identifiers format of any NGSI entity    
               items:    
                 format: uri    
                 type: string    
               type: array    
-          description: 'Relationship. Model:''http://schema.org/hoursAvailable''. This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class.'    
+              x-ngsi:    
+                type: Property    
+          description: This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class    
+          x-ngsi:    
+            model: http://schema.org/hoursAvailable    
+            type: Relationship    
         availableLanguage:    
           anyOf:    
             - anyOf:    
@@ -182,92 +236,118 @@ EVChargingStation:
                 - items:    
                     type: string    
                   type: array    
-          description: 'Property. Model:''http://schema.org/availableLanguage''. A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language'    
+          description: 'A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language'    
+          x-ngsi:    
+            model: http://schema.org/availableLanguage    
+            type: Property    
         contactOption:    
           anyOf:    
             - type: string    
             - items:    
                 type: string    
               type: array    
-          description: 'Property. Model:''http://schema.org/contactOption''. An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).'    
+          description: An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers)    
+          x-ngsi:    
+            model: http://schema.org/contactOption    
+            type: Property    
         contactType:    
-          description: 'Property. Contact type of this item.'    
+          description: Contact type of this item    
           type: string    
+          x-ngsi:    
+            type: Property    
         email:    
-          description: 'Property. Email address of owner.'    
+          description: Email address of owner    
           format: idn-email    
           type: string    
+          x-ngsi:    
+            type: Property    
         faxNumber:    
-          description: 'Property. Model:''http://schema.org/Text''. The fax number.'    
+          description: The fax number    
           type: string    
+          x-ngsi:    
+            model: http://schema.org/Text    
+            type: Property    
         name:    
-          description: 'Property. The name of this item.'    
+          description: The name of this item    
           type: string    
+          x-ngsi:    
+            type: Property    
         productSupported:    
-          description: 'Property. Model:''http://schema.org/Text''. The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").'    
+          description: The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. 'iPhone') or a general category of products or services (e.g. 'smartphones')    
           type: string    
+          x-ngsi:    
+            model: http://schema.org/Text    
+            type: Property    
         telephone:    
-          description: 'Property. Telephone of this contact.'    
+          description: Telephone of this contact    
           type: string    
+          x-ngsi:    
+            type: Property    
         url:    
-          description: 'Property. URL which provides a description or further information about this item.'    
+          description: URL which provides a description or further information about this item    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/ContactPoint    
         type: Property    
     dataDescriptor:    
-      description: 'URI pointing to the data-descriptor entity'    
+      description: URI pointing to the data-descriptor entity    
       format: uri    
       type: string    
       x-ngsi:    
         type: Relationship    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     endDateTime:    
-      description: 'Reported end time corresponding to this observation.'    
+      description: Reported end time corresponding to this observation    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &evchargingstation_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -286,9 +366,11 @@ EVChargingStation:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -310,9 +392,11 @@ EVChargingStation:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -336,9 +420,11 @@ EVChargingStation:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -359,9 +445,11 @@ EVChargingStation:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -385,9 +473,11 @@ EVChargingStation:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -413,12 +503,14 @@ EVChargingStation:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
@@ -429,7 +521,7 @@ EVChargingStation:
         model: https://schema.org/Text    
         type: Property    
     observationDateTime:    
-      description: 'Last reported time of observation.'    
+      description: Last reported time of observation    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -447,20 +539,34 @@ EVChargingStation:
         model: https://schema.org/Text    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *evchargingstation_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     powerConsumption:    
-      description: 'Power consumed by the entity corresponding to this observation.'    
+      description: Power consumed by the entity corresponding to this observation    
       type: number    
       x-ngsi:    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -472,11 +578,11 @@ EVChargingStation:
       x-ngsi:    
         type: Property    
     socketNumber:    
-      description: 'The total number of sockets offered by this charging station'    
+      description: The total number of sockets offered by this charging station    
       minimum: 1    
-      type: integer    
+      type: number    
       x-ngsi:    
-        model: http://schema.org/Number.    
+        model: http://schema.org/Number    
         type: Property    
     socketType:    
       description: 'The type of sockets offered by this station. Enum:''Caravan_Mains_Socket, CHAdeMO, CCS/SAE, Dual_CHAdeMO, Dual_J-1772, Dual_Mennekes, J-1772, Mennekes, Other, Tesla, Type2, Type3, Wall_Euro'''    
@@ -503,23 +609,23 @@ EVChargingStation:
         model: http://schema.org/Text    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     startDateTime:    
-      description: 'Reported start time corresponding to this observation.'    
+      description: Reported start time corresponding to this observation    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     stationName:    
-      description: 'The name station corresponding to this observation. It can be the name of bike docking station, charging station, etc.'    
+      description: 'The name station corresponding to this observation. It can be the name of bike docking station, charging station, etc'    
       type: string    
       x-ngsi:    
         type: Property    
     status:    
-      description: 'Status of the charging station. Enum:''almostEmpty, almostFull, empty, full, outOfService, withIncidence, working''. Or any other application-specific.'    
+      description: 'Status of the charging station. Enum:''almostEmpty, almostFull, empty, full, outOfService, withIncidence, working''. Or any other application-specific'    
       enum:    
         - almostEmpty    
         - almostFull    
@@ -533,22 +639,22 @@ EVChargingStation:
         model: http://schema.org/Text    
         type: Property    
     taxAmountCollected:    
-      description: 'The amount of tax levied on the products, things and services which includes sales tax, value-added tax, service tax, Good and Service tax, customs duty, etc.'    
+      description: 'The amount of tax levied on the products, things and services which includes sales tax, value-added tax, service tax, Good and Service tax, customs duty, etc'    
       type: number    
       x-ngsi:    
         type: Property    
     transactionId:    
-      description: 'Unique transaction Id of the entity corresponding to this observation.'    
+      description: Unique transaction Id of the entity corresponding to this observation    
       type: string    
       x-ngsi:    
         type: Property    
     transactionType:    
-      description: 'Type of the transaction based on the mode of payment (For eg. mobile/UPI, card, etc) or mode of service (For eg. Issue, ReIssue, Entry, Exit etc.) corresponding to this observation.'    
+      description: 'Type of the transaction based on the mode of payment (For eg. mobile/UPI, card, etc) or mode of service (For eg. Issue, ReIssue, Entry, Exit etc.) corresponding to this observation'    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be EVChargingStation'    
+      description: NGSI Entity type. It has to be EVChargingStation    
       enum:    
         - EVChargingStation    
       type: string    
@@ -563,8 +669,8 @@ EVChargingStation:
         - autorickshaw    
         - bicycle    
         - binTrolley    
-        - 'BRT bus'    
-        - 'BRT minibus'    
+        - BRT bus    
+        - BRT minibus    
         - bus    
         - car    
         - caravan    
@@ -578,7 +684,7 @@ EVChargingStation:
         - e-moped    
         - e-scooter    
         - e-motorcycle    
-        - 'fire tender'    
+        - fire tender    
         - fourWheelDrive    
         - highSidedVehicle    
         - hopper    
@@ -588,7 +694,7 @@ EVChargingStation:
         - motorcycle    
         - motorcycleWithSideCar    
         - motorscooter    
-        - 'police van'    
+        - police van    
         - sweepingMachine    
         - tanker    
         - tempo    
@@ -604,13 +710,13 @@ EVChargingStation:
         model: https://schema.org/Text    
         type: Property    
     voltage:    
-      description: 'The total voltage offered by the charging station'    
+      description: The total voltage offered by the charging station    
       minimum: 0    
       type: number    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
-        units: 'Volts (V)'    
+        units: Volts (V)    
   required:    
     - id    
     - type    
@@ -632,7 +738,7 @@ EVChargingStation:
 <!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### EVChargingStation NGSI-v2 key-values Ejemplo  
-Aquí hay un ejemplo de una EVChargingStation en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+Aquí hay un ejemplo de una EVChargingStation en formato JSON-LD como key-values. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -672,7 +778,7 @@ EVChargingStation:
 ```  
 </details>  
 #### EVChargingStation NGSI-v2 normalizada Ejemplo  
-Aquí hay un ejemplo de una EVChargingStation en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de EVChargingStation en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -787,7 +893,7 @@ EVChargingStation:
 ```  
 </details>  
 #### EVChargingStation NGSI-LD key-values Ejemplo  
-Aquí hay un ejemplo de una EVChargingStation en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+Aquí hay un ejemplo de una EVChargingStation en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -834,141 +940,139 @@ EVChargingStation:
     "observationDateTime": "2022-06-28T20:27:29+05:30",  
     "@context": [  
         "https://smart-data-models.github.io/dataModel.Transportation/context.jsonld",  
-        "iudx:EVChargingStation",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+        "iudx:EVChargingStation"  
     ]  
 }  
 ```  
 </details>  
-#### EVChargingStation NGSI-LD normalizada Ejemplo  
-Aquí hay un ejemplo de una EVChargingStation en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### EVChargingStation NGSI-LD normalizado Ejemplo  
+He aquí un ejemplo de EVChargingStation en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
-    "type": "EVChargingStation",  
-    "address": {  
-        "type": "Property",  
-        "value": {  
-            "addressCountry": "Espa\u00f1a",  
-            "addressLocality": "Valladolid",  
-            "streetAddress": "Paseo de Zorrilla, 191"  
-        }  
-    },  
-    "allowedVehicleType": {  
-        "type": "Property",  
-        "value": [  
-            "car"  
-        ]  
-    },  
-    "capacity": {  
-        "type": "Property",  
-        "value": 2  
-    },  
-    "chargeType": {  
-        "type": "Property",  
-        "value": [  
-            "free"  
-        ]  
-    },  
-    "contactPoint": {  
-        "type": "Property",  
-        "value": {  
-            "email": "vehiculoelectrico@ava.es"  
-        }  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "coordinates": [  
-                -4.747901,  
-                41.618265  
-            ],  
-            "type": "Point"  
-        }  
-    },  
-    "name": {  
-        "type": "Property",  
-        "value": "Agencia de Innovaci\u00f3n"  
-    },  
-    "operator": {  
-        "type": "Property",  
-        "value": "Iberdrola"  
-    },  
-    "socketType": {  
-        "type": "Property",  
-        "value": [  
-            "Wall_Euro"  
-        ]  
-    },  
-    "source": {  
-        "type": "Property",  
-        "value": "https://openchargemap.org/"  
-    },  
-    "powerConsumption": {  
-        "type": "Property",  
-        "value": 10.0  
-    },  
-    "chargingUnitId": {  
-        "type": "string",  
-        "value": "PZEV01-DeltaBharatAC001-SCTLGandhiPark001"  
-    },  
-    "transactionId": {  
-        "type": "Property",  
-        "value": "84068784"  
-    },  
-    "transactionType": {  
-        "type": "Property",  
-        "value": "RFID"  
-    },  
-    "stationName": {  
-        "type": "Property",  
-        "value": "SmartCityTvmGandhiParkOne"  
-    },  
-    "amountCollected": {  
-        "type": "Property",  
-        "value": 0.08  
-    },  
-    "taxAmountCollected": {  
-        "type": "Property",  
-        "value": 0.0  
-    },  
-    "endDateTime": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "date-time",  
-            "@value": "2022-06-28T20:28:41+05:30"  
-        }  
-    },  
-    "startDateTime": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "date-time",  
-            "@value": "2022-06-28T20:27:27+05:30"  
-        }  
-    },  
-    "vehicleType": {  
-        "type": "Property",  
-        "value": "e-motorcycle"  
-    },  
-    "observationDateTime": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "date-time",  
-            "@value": "2022-06-28T20:27:29+05:30"  
-        }  
-    },  
-    "@context": [  
-        "https://smart-data-models.github.io/dataModel.Transportation/context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+  "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",  
+  "type": "EVChargingStation",  
+  "address": {  
+    "type": "Property",  
+    "value": {  
+      "addressCountry": "Espa\u00f1a",  
+      "addressLocality": "Valladolid",  
+      "streetAddress": "Paseo de Zorrilla, 191"  
+    }  
+  },  
+  "allowedVehicleType": {  
+    "type": "Property",  
+    "value": [  
+      "car"  
     ]  
+  },  
+  "capacity": {  
+    "type": "Property",  
+    "value": 2  
+  },  
+  "chargeType": {  
+    "type": "Property",  
+    "value": [  
+      "free"  
+    ]  
+  },  
+  "contactPoint": {  
+    "type": "Property",  
+    "value": {  
+      "email": "vehiculoelectrico@ava.es"  
+    }  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "coordinates": [  
+        -4.747901,  
+        41.618265  
+      ],  
+      "type": "Point"  
+    }  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Agencia de Innovaci\u00f3n"  
+  },  
+  "operator": {  
+    "type": "Property",  
+    "value": "Iberdrola"  
+  },  
+  "socketType": {  
+    "type": "Property",  
+    "value": [  
+      "Wall_Euro"  
+    ]  
+  },  
+  "source": {  
+    "type": "Property",  
+    "value": "https://openchargemap.org/"  
+  },  
+  "powerConsumption": {  
+    "type": "Property",  
+    "value": 10.0  
+  },  
+  "chargingUnitId": {  
+    "type": "Property",  
+    "value": "PZEV01-DeltaBharatAC001-SCTLGandhiPark001"  
+  },  
+  "transactionId": {  
+    "type": "Property",  
+    "value": "84068784"  
+  },  
+  "transactionType": {  
+    "type": "Property",  
+    "value": "RFID"  
+  },  
+  "stationName": {  
+    "type": "Property",  
+    "value": "SmartCityTvmGandhiParkOne"  
+  },  
+  "amountCollected": {  
+    "type": "Property",  
+    "value": 0.08  
+  },  
+  "taxAmountCollected": {  
+    "type": "Property",  
+    "value": 0.0  
+  },  
+  "endDateTime": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2022-06-28T20:28:41+05:30"  
+    }  
+  },  
+  "startDateTime": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2022-06-28T20:27:27+05:30"  
+    }  
+  },  
+  "vehicleType": {  
+    "type": "Property",  
+    "value": "e-motorcycle"  
+  },  
+  "observationDateTime": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2022-06-28T20:27:29+05:30"  
+    }  
+  },  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.Transportation/context.jsonld"  
+  ]  
 }  
 ```  
 </details><!-- /80-Examples -->  
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
