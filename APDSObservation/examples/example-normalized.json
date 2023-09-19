@@ -1,0 +1,175 @@
+{
+	"id": "uri:ngsi-ld:APDSObservation:Arvoo:ArvooSGIDxxxx",
+	"type": "APDSObservation",
+	"observedMethod": {
+		"type": "Text",
+		"value": "anpr"
+	},
+	"observedCredentialType": {
+		"type": "Text",
+		"value": "license plate"
+	},
+	"observedCredentialId": {
+		"type": "Text",
+		"value": "1ENC003"
+	},
+	"observedCredentialCountry": {
+		"type": "Text",
+		"value": "BE"
+	},
+	"observedCredentialConfidence": {
+		"type": "Number",
+		"value": 0.851,
+		"metadata": {
+			"confidenceMethod": {
+				"type": "Text",
+				"value": "Arvoo. Higher is better."
+			}
+		}
+	},
+	"observedCredentialCharacterConfidence": {
+		"type": "array",
+		"value": [
+			0.944,
+			0.851,
+			0.876,
+			0.950,
+			0.932,
+			0.936,
+			0.901
+		],
+		"metadata": {
+			"confidenceMethod": {
+				"type": "Text",
+				"value": "Arvoo"
+			}
+		}
+	},
+	"observer": {
+		"type": "Text",
+		"value": "Arvoo",
+		"metadata": {}
+	},
+	"observerDescription": {
+		"type": "Text",
+		"value": "Scangenius Auto-26"
+	},
+	"creator": {
+		"type": "Text",
+		"value": "25399"
+	},
+	"observerCameras": {
+		"type": "Array",
+		"value": [
+			"LF,LB"
+		]
+	},
+	"observationDateTime": {
+		"type": "DateTime",
+		"value": "2020-09-11T10:45:00.00Z"
+	},
+	"observerLocation": {
+		"type": "geo:json",
+		"value": {
+			"type": "Point",
+			"coordinates": [
+				4.412077,
+				51.216632
+			]
+		},
+		"metadata": {
+			"timestamp": {
+				"type": "DateTime",
+				"value": "2020-09-11T10:45:00.00Z"
+			}
+		}
+	},
+	"observerLocationPDOP": {
+		"type": "Number",
+		"value": 0.2959945752,
+		"metadata": {
+			"UnitCode": {
+				"type": "Text",
+				"value": "MTR"
+			}
+		}
+	},
+	"observerHeading": {
+		"type": "Number",
+		"value": 175
+	},
+	"observerSpeed": {
+		"type": "Number",
+		"value": 26,
+		"metadata": {
+			"UnitCode": {
+				"type": "Text",
+				"value": "KMH"
+			}
+		}
+	},
+	"observedLocation": {
+		"type": "geo:json",
+		"value": {
+			"type": "Point",
+			"coordinates": [
+				4.00412077,
+				51.00216632
+			]
+		},
+		"metadata": {
+			"timestamp": {
+				"type": "DateTime",
+				"value": "2020-09-11T10:45:00.00Z"
+			}
+		}
+	},
+	"observedLocationPDOP": {
+		"type": "Number",
+		"value": 0.2959945752,
+		"metadata": {
+			"UnitCode": {
+				"type": "Text",
+				"value": "MTR"
+			}
+		}
+	},
+	"observedHeading": {
+		"type": "Number",
+		"value": 175
+	},
+	"observedSpeed": {
+		"type": "Number",
+		"value": -1
+	},
+	"images": {
+		"type": "array",
+		"value": [
+			{
+			  "URL": "http://localhost:4000/getimage?sgid=984133&camid=lf&imgreqtype=anpr",
+			  "expiryDateTime": "2023-11-25T11:13:42.133Z",
+			  "camId": "LF",
+			  "imageContent": "ANPR"
+			},
+			{
+			  "URL": "http://localhost:4000/getimage?sgid=984133&camid=lf&imgreqtype=overview",
+			  "expiryDateTime": "2023-11-25T11:13:42.133Z",
+			  "camId": "LF",
+			  "imageContent": "Overview"
+			},
+			{
+			  "URL": "http://localhost:4000/getimage?sgid=984133&camid=lf&imgreqtype=plate",
+			  "expiryDateTime": "2023-11-25T11:13:42.133Z",
+			  "camId": "LF",
+			  "imageContent": "Plate"
+			},
+			{
+			  "URL": "http://localhost:4000/getimage?sgid=984133&camid=plf&distance=-3.23",
+			  "expiryDateTime": "2023-11-25T11:13:42.133Z",
+			  "camId": "LF",
+			  "imageContent": "Panorama",
+			  "distance": -3.232
+			}
+		]
+	}
+}

@@ -1,0 +1,5 @@
+notesHeader:
+ This model captures the dataset of an observation of a Vehicle on a specific time at a particular location. It is derived from the APDS (Alliance for Parking DataStandard) specification. The observation method includes the usage of ALPR cameras, visual observation, scanner, or any other meansof observation.
+notesMiddle:
+
+notesFooter:

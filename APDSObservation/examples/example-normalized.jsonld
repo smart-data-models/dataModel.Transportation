@@ -1,0 +1,140 @@
+{
+	"id": "uri:ngsi-ld:APDSObservation:Arvoo:ArvooSGIDxxxx",
+	"type": "APDSObservation",
+	"observedMethod": {
+		"type": "Property",
+		"value": "anpr"
+	},
+	"observedCredentialType": {
+		"type": "Property",
+		"value": "license plate"
+	},
+	"observedCredentialId": {
+		"type": "Property",
+		"value": "1ENC003"
+	},
+	"observedCredentialCountry": {
+		"type": "Property",
+		"value": "BE"
+	},
+	"observedCredentialConfidence": {
+		"type": "Property",
+		"value": 0.851
+		
+	},
+	"observedCredentialCharacterConfidence": {
+		"type": "Property",
+		"value": [
+			0.944,
+			0.851,
+			0.876,
+			0.950,
+			0.932,
+			0.936,
+			0.901
+		]
+	},
+	"observer": {
+		"type": "Property",
+		"value": "Arvoo"
+		
+	},
+	"observerDescription": {
+		"type": "Property",
+		"value": "Scangenius Auto-26"
+	},
+	"creator": {
+		"type": "Property",
+		"value": "25399"
+	},
+	"observerCameras": {
+		"type": "Property",
+		"value": [
+			"LF,LB"
+		]
+	},
+	"observationDateTime": {
+		"type": "Property",
+		"value": {
+			"@type": "DateTime",
+			"@value": "2020-09-11T10:45:00.00Z"
+		}
+	},
+	"observerLocation": {
+		"type": "GeoProperty",
+		"value": {
+			"type": "Point",
+			"coordinates": [
+				4.412077,
+				51.216632
+			]
+		}
+	},
+	"observerLocationPDOP": {
+		"type": "Property",
+		"value": 0.2959945752
+	},
+	"observerHeading": {
+		"type": "Property",
+		"value": 175
+	},
+	"observerSpeed": {
+		"type": "Property",
+		"value": 26
+	},
+	"observedLocation": {
+		"type": "GeoProperty",
+		"value": {
+			"type": "Point",
+			"coordinates": [
+				4.00412077,
+				51.00216632
+			]
+		}
+	},
+	"observedLocationPDOP": {
+		"type": "Property",
+		"value": 0.2959945752
+	},
+	"observedHeading": {
+		"type": "Property",
+		"value": 175
+	},
+	"observedSpeed": {
+		"type": "Property",
+		"value": -1
+	},
+	"images": {
+		"type": "Property",
+		"value": [
+			{
+			  "URL": "http://localhost:4000/getimage?sgid=984133&camid=lf&imgreqtype=anpr",
+			  "expiryDateTime": "2023-11-25T11:13:42.133Z",
+			  "camId": "LF",
+			  "imageContent": "ANPR"
+			},
+			{
+			  "URL": "http://localhost:4000/getimage?sgid=984133&camid=lf&imgreqtype=overview",
+			  "expiryDateTime": "2023-11-25T11:13:42.133Z",
+			  "camId": "LF",
+			  "imageContent": "Overview"
+			},
+			{
+			  "URL": "http://localhost:4000/getimage?sgid=984133&camid=lf&imgreqtype=plate",
+			  "expiryDateTime": "2023-11-25T11:13:42.133Z",
+			  "camId": "LF",
+			  "imageContent": "Plate"
+			},
+			{
+			  "URL": "http://localhost:4000/getimage?sgid=984133&camid=plf&distance=-3.23",
+			  "expiryDateTime": "2023-11-25T11:13:42.133Z",
+			  "camId": "LF",
+			  "imageContent": "Panorama",
+			  "distance": -3.232
+			}
+		]
+	},
+	 "@context": [
+        ""
+    ]
+}

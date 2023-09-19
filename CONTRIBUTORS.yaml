@@ -1,5 +1,12 @@
 description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
 contributors:
+  - name: Piet
+    surname: Bikker
+    mail: piet@arvoo.com
+    organization: Arvoo
+    project: ALPR scancar
+    comments:
+    year: 2023
   - name: Jose M.
     surname: Cantera
     mail: jmcanterafonseca4github@gmail.com
@@ -105,6 +112,13 @@ contributors:
     project:
     comments:
     year: 2022
+  - name: Gert
+    surname: Van de Wouwer
+    mail: gert.vandewouwer@digipolis.be
+    organization: Digipolis Antwerpen
+    project: ALPR scancar
+    comments:
+    year: 2023
   - name: Srikrishnan
     surname:
     mail: shyam28598@gmail.com
