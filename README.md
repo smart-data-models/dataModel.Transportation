@@ -58,7 +58,7 @@ The following entity types are available:
 
 
 ### Contributors
-[Link](https://github.com/smart-data-models/dataModel.Transportation/blob/master/CONTRIBUTORS.yaml) to the 17 current contributors of the data models of this Subject.
+[Link](https://github.com/smart-data-models/dataModel.Transportation/blob/master/CONTRIBUTORS.yaml) to the 18 current contributors of the data models of this Subject.
 
 
 ### Contribution

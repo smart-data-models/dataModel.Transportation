@@ -64,7 +64,7 @@
   "serviceProvided": {
     "type": "array",
     "value": [
-      "gargabeCollection",
+      "garbageCollection",
       "wasteContainerCleaning"
     ]
   },

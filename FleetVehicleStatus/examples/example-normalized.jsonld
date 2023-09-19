@@ -1,6 +1,11 @@
 {
   "id": "urn:ngsi-ld:FleetVehicleStatus:16ea1c5c-5aa6-11e8-8144-4b82063ca31c",
   "type": "FleetVehicleStatus",
+  "battery": {
+    "type": "Property",
+    "value": 0.81,
+    "observedAt": "2016-08-22T10:18:16Z"
+  },
   "bearing": {
     "type": "Property",
     "value": 80,

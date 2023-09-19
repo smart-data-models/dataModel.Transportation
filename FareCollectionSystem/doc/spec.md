@@ -15,7 +15,14 @@
 ## List of properties  
 
 <sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
-- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `cardId[string]`: Unique ticket Id of the transaction or Id of the smart card used in the transaction.  . Model: [https://schema.org/Text](https://schema.org/Text)- `currentTripCount[number]`: The current count of trips made by the vehicle corresponding to this observation on the given day of operation.  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description[string]`: A description of this item  - `destinationStopCategory[string]`: Type of the destination bus stop corresponding to this observation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `destinationStopId[string]`: Unique Id of the bus stop at which the passenger deboards from the bus corresponding to this observation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `destinationStopName[string]`: The name of the destination bus stop corresponding to this observation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `direction_id[number]`: Indicates the direction of travel of the vehicle corresponding to this observation, can be referenced from the GTFS static feed trips.txt. SameAs: 'direction_id' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)  . Model: [https://schema.org/Number](https://schema.org/Number)- `entryAreaCode[string]`: Area code of the passenger boarding stop (used by the fare collection agency). For example, whether the stop is city-bus-service stop or brts stop or other service type stop etc.  . Model: [https://schema.org/Text](https://schema.org/Text)- `equipmentCompanyCode[string]`: Company/Agency code for the transaction equipment (used by fare collection agency). For example, 103 - CBS (city bus service),102 - BRTS etc.  . Model: [https://schema.org/Text](https://schema.org/Text)- `equipmentId[string]`: Unique Id of the equipment corresponding to this observation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `equipmentSequenceNumber[number]`: Sequence number for the given equipment.  . Model: [https://schema.org/Number](https://schema.org/Number)- `equipmentStopId[string]`: Stop Id (BRTS) at which the equipment corresponding to this transaction is installed.  . Model: [https://schema.org/Text](https://schema.org/Text)- `equipmentType[string]`: Type of equipment or the name of the equipment corresponding to this observation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `equipmentTypeCode[string]`: Unique code indicating the type of equipment used in the transaction (used by fare collection agency).ENUM [1B, 42, 02, 08, 41] 1B - POS, 42 - HTT, 02- Mobile, 08- Fare Gate, 41- Pole Validator  . Model: [https://schema.org/Text](https://schema.org/Text)- `exitAreaCode[string]`: Area code of the passenger alighting stop (used by the fare collection agency). For example, whether the stop is city-bus-service stop or BRTS stop or other service type stop etc.  . Model: [https://schema.org/Text](https://schema.org/Text)- `fareForAdult[number]`: The fare for an adult in the journey corresponding to this observation.  . Model: [https://schema.org/Number](https://schema.org/Number)- `fareForChild[number]`: The fare for a child in the journey corresponding to this observation.  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: Unique identifier of the entity  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item.  - `observationDateTime[string]`: Last reported time of observation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `occupancyLevel[string]`: Occupancy level in the public transit bus corresponding to this observation. 'Red' indicates the congestion level in the bus is HIGH, 'Yellow' indicates the congestion level in the bus is MODERATE and 'Green' indicates the congestion level in the bus is LOW.  . Model: [https://schema.org/Text](https://schema.org/Text)- `originDestinationCode[string]`: The code for the origin and destination stops corresponding to this observation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `originStopCategory[string]`: Type of the origin bus stop corresponding to this observation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `originStopId[string]`: Unique Id of the bus stop at which the passenger boards into the bus corresponding to this observation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `originStopName[string]`: The name of the origin bus stop corresponding to this observation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `passengerCount[number]`: Number of passengers travelling in the public transit bus corresponding to this observation. This count is computed based on the realtime ticketing transactions in the public transit bus.  . Model: [https://schema.org/Number](https://schema.org/Number)- `route_id[string]`: Route Id assigned to the route on which the bus/vehicle corresponding to the bus in this observation is currently plying on. SameAs: 'route_id' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `shiftOfOperation[string]`: Shift of operation of the public transit vehicle operated by the fare collection agency/ public transit agency or the employee corresponding to this observation. Indicated as '1' when the vehicle operates in the first shift, '2' when the vehicle operates in the second shift and '3' when the vehicle operates in the third shift.  . Model: [https://schema.org/Text](https://schema.org/Text)- `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `stage[number]`: Total number of stages from the origin bus stop to the destination bus stop.  . Model: [https://schema.org/Number](https://schema.org/Number)- `ticketTypeCode[string]`: Unique ticket type code of the corresponding trip.  . Model: [https://schema.org/Text](https://schema.org/Text)- `transactionDateTime[string]`: Date-time of the transaction corresponding to this observation.  . Model: [https://schema.org/Text](https://schema.org/Text)- `transactionType[string]`: Type of the transaction corresponding to this observation. For Eg - Issue, ReIssue, Entry, Exit etc.  . Model: [https://schema.org/Text](https://schema.org/Text)- `transactionTypeDescription[string]`: Description of the transaction type. Explanation of various transactionTypeId codes used in the data.  . Model: [https://schema.org/Text](https://schema.org/Text)- `transactionVehicleNum[number]`: Code used by fare collection agency for the vehicle number corresponding to the transaction.  . Model: [https://schema.org/Number](https://schema.org/Number)- `travelDistance[number]`: The distance between the origin bus stop and the destination bus stop corresponding to this observation.  . Model: [https://schema.org/Number](https://schema.org/Number)- `trip_id[string]`: Trip Id/Trip name alloted to the bus corresponding to this observation, in consideration to the time of the day and the direction of the trip on the given routeId. SameAs: 'trip_id' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI entity type. It has to be FareCollectionSystem  - `vehicle_label[string]`: User visible label, i.e., something that must be shown to the passenger to help identify the correct vehicle. SameAs: 'label' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
+- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: The country. For example, Spain  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: The locality in which the street address is, and which is in the region  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: The region in which the locality is, and which is in the country  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: A district is a type of administrative division that, in some countries, is managed by the local government    
+	- `postOfficeBoxNumber[string]`: The post office box number for PO box addresses. For example, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: The postal code. For example, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: The street address  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `cardId[string]`: Unique ticket Id of the transaction or Id of the smart card used in the transaction  . Model: [https://schema.org/Text](https://schema.org/Text)- `currentTripCount[number]`: The current count of trips made by the vehicle corresponding to this observation on the given day of operation  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `description[string]`: A description of this item  - `destinationStopCategory[string]`: Type of the destination bus stop corresponding to this observation  . Model: [https://schema.org/Text](https://schema.org/Text)- `destinationStopId[string]`: Unique Id of the bus stop at which the passenger deboards from the bus corresponding to this observation  . Model: [https://schema.org/Text](https://schema.org/Text)- `destinationStopName[string]`: The name of the destination bus stop corresponding to this observation  . Model: [https://schema.org/Text](https://schema.org/Text)- `direction_id[number]`: Indicates the direction of travel of the vehicle corresponding to this observation, can be referenced from the GTFS static feed trips.txt. SameAs: 'direction_id' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)  . Model: [https://schema.org/Number](https://schema.org/Number)- `entryAreaCode[string]`: Area code of the passenger boarding stop (used by the fare collection agency). For example, whether the stop is city-bus-service stop or brts stop or other service type stop etc  . Model: [https://schema.org/Text](https://schema.org/Text)- `equipmentCompanyCode[string]`: Company/Agency code for the transaction equipment (used by fare collection agency). For example, 103 - CBS (city bus service),102 - BRTS etc  . Model: [https://schema.org/Text](https://schema.org/Text)- `equipmentId[string]`: Unique Id of the equipment corresponding to this observation  . Model: [https://schema.org/Text](https://schema.org/Text)- `equipmentSequenceNumber[number]`: Sequence number for the given equipment  . Model: [https://schema.org/Number](https://schema.org/Number)- `equipmentStopId[string]`: Stop Id (BRTS) at which the equipment corresponding to this transaction is installed  . Model: [https://schema.org/Text](https://schema.org/Text)- `equipmentType[string]`: Type of equipment or the name of the equipment corresponding to this observation  . Model: [https://schema.org/Text](https://schema.org/Text)- `equipmentTypeCode[string]`: Unique code indicating the type of equipment used in the transaction (used by fare collection agency).ENUM [1B, 42, 02, 08, 41] 1B - POS, 42 - HTT, 02- Mobile, 08- Fare Gate, 41- Pole Validator  . Model: [https://schema.org/Text](https://schema.org/Text)- `exitAreaCode[string]`: Area code of the passenger alighting stop (used by the fare collection agency). For example, whether the stop is city-bus-service stop or BRTS stop or other service type stop etc  . Model: [https://schema.org/Text](https://schema.org/Text)- `fareForAdult[number]`: The fare for an adult in the journey corresponding to this observation  . Model: [https://schema.org/Number](https://schema.org/Number)- `fareForChild[number]`: The fare for a child in the journey corresponding to this observation  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: Unique identifier of the entity  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item  - `observationDateTime[date-time]`: Last reported time of observation  . Model: [https://schema.org/Text](https://schema.org/Text)- `occupancyLevel[string]`: Occupancy level in the public transit bus corresponding to this observation. 'Red' indicates the congestion level in the bus is HIGH, 'Yellow' indicates the congestion level in the bus is MODERATE and 'Green' indicates the congestion level in the bus is LOW  . Model: [https://schema.org/Text](https://schema.org/Text)- `originDestinationCode[string]`: The code for the origin and destination stops corresponding to this observation  . Model: [https://schema.org/Text](https://schema.org/Text)- `originStopCategory[string]`: Type of the origin bus stop corresponding to this observation  . Model: [https://schema.org/Text](https://schema.org/Text)- `originStopId[string]`: Unique Id of the bus stop at which the passenger boards into the bus corresponding to this observation  . Model: [https://schema.org/Text](https://schema.org/Text)- `originStopName[string]`: The name of the origin bus stop corresponding to this observation  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `passengerCount[number]`: Number of passengers travelling in the public transit bus corresponding to this observation. This count is computed based on the realtime ticketing transactions in the public transit bus  . Model: [https://schema.org/Number](https://schema.org/Number)- `route_id[string]`: Route Id assigned to the route on which the bus/vehicle corresponding to the bus in this observation is currently plying on. SameAs: 'route_id' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `shiftOfOperation[string]`: Shift of operation of the public transit vehicle operated by the fare collection agency/ public transit agency or the employee corresponding to this observation. Indicated as '1' when the vehicle operates in the first shift, '2' when the vehicle operates in the second shift and '3' when the vehicle operates in the third shift  . Model: [https://schema.org/Text](https://schema.org/Text)- `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `stage[number]`: Total number of stages from the origin bus stop to the destination bus stop  . Model: [https://schema.org/Number](https://schema.org/Number)- `ticketTypeCode[string]`: Unique ticket type code of the corresponding trip  . Model: [https://schema.org/Text](https://schema.org/Text)- `transactionDateTime[date-time]`: Date-time of the transaction corresponding to this observation  . Model: [https://schema.org/Text](https://schema.org/Text)- `transactionType[string]`: Type of the transaction corresponding to this observation. For Eg - Issue, ReIssue, Entry, Exit etc  . Model: [https://schema.org/Text](https://schema.org/Text)- `transactionTypeDescription[string]`: Description of the transaction type. Explanation of various transactionTypeId codes used in the data  . Model: [https://schema.org/Text](https://schema.org/Text)- `transactionVehicleNum[number]`: Code used by fare collection agency for the vehicle number corresponding to the transaction  . Model: [https://schema.org/Number](https://schema.org/Number)- `travelDistance[number]`: The distance between the origin bus stop and the destination bus stop corresponding to this observation  . Model: [https://schema.org/Number](https://schema.org/Number)- `trip_id[string]`: Trip Id/Trip name alloted to the bus corresponding to this observation, in consideration to the time of the day and the direction of the trip on the given routeId. SameAs: 'trip_id' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI entity type. It has to be FareCollectionSystem  - `vehicle_label[string]`: User visible label, i.e., something that must be shown to the passenger to help identify the correct vehicle. SameAs: 'label' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Required properties  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
@@ -29,92 +36,120 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 FareCollectionSystem:    
-  description: 'A public transit fare collection system Data Model'    
+  description: A public transit fare collection system Data Model    
   properties:    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     cardId:    
-      description: 'Unique ticket Id of the transaction or Id of the smart card used in the transaction.'    
+      description: Unique ticket Id of the transaction or Id of the smart card used in the transaction    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     currentTripCount:    
-      description: 'The current count of trips made by the vehicle corresponding to this observation on the given day of operation.'    
+      description: The current count of trips made by the vehicle corresponding to this observation on the given day of operation    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     destinationStopCategory:    
-      description: 'Type of the destination bus stop corresponding to this observation.'    
+      description: Type of the destination bus stop corresponding to this observation    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     destinationStopId:    
-      description: 'Unique Id of the bus stop at which the passenger deboards from the bus corresponding to this observation.'    
+      description: Unique Id of the bus stop at which the passenger deboards from the bus corresponding to this observation    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     destinationStopName:    
-      description: 'The name of the destination bus stop corresponding to this observation.'    
+      description: The name of the destination bus stop corresponding to this observation    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -126,37 +161,37 @@ FareCollectionSystem:
         model: https://schema.org/Number    
         type: Property    
     entryAreaCode:    
-      description: 'Area code of the passenger boarding stop (used by the fare collection agency). For example, whether the stop is city-bus-service stop or brts stop or other service type stop etc.'    
+      description: 'Area code of the passenger boarding stop (used by the fare collection agency). For example, whether the stop is city-bus-service stop or brts stop or other service type stop etc'    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     equipmentCompanyCode:    
-      description: 'Company/Agency code for the transaction equipment (used by fare collection agency). For example, 103 - CBS (city bus service),102 - BRTS etc.'    
+      description: 'Company/Agency code for the transaction equipment (used by fare collection agency). For example, 103 - CBS (city bus service),102 - BRTS etc'    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     equipmentId:    
-      description: 'Unique Id of the equipment corresponding to this observation.'    
+      description: Unique Id of the equipment corresponding to this observation    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     equipmentSequenceNumber:    
-      description: 'Sequence number for the given equipment.'    
+      description: Sequence number for the given equipment    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     equipmentStopId:    
-      description: 'Stop Id (BRTS) at which the equipment corresponding to this transaction is installed.'    
+      description: Stop Id (BRTS) at which the equipment corresponding to this transaction is installed    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     equipmentType:    
-      description: 'Type of equipment or the name of the equipment corresponding to this observation.'    
+      description: Type of equipment or the name of the equipment corresponding to this observation    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -174,40 +209,44 @@ FareCollectionSystem:
         model: https://schema.org/Text    
         type: Property    
     exitAreaCode:    
-      description: 'Area code of the passenger alighting stop (used by the fare collection agency). For example, whether the stop is city-bus-service stop or BRTS stop or other service type stop etc.'    
+      description: 'Area code of the passenger alighting stop (used by the fare collection agency). For example, whether the stop is city-bus-service stop or BRTS stop or other service type stop etc'    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     fareForAdult:    
-      description: 'The fare for an adult in the journey corresponding to this observation.'    
+      description: The fare for an adult in the journey corresponding to this observation    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     fareForChild:    
-      description: 'The fare for a child in the journey corresponding to this observation.'    
+      description: The fare for a child in the journey corresponding to this observation    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     id:    
-      anyOf: &farecollectionsystem_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -226,9 +265,11 @@ FareCollectionSystem:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -250,9 +291,11 @@ FareCollectionSystem:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -276,9 +319,11 @@ FareCollectionSystem:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -299,9 +344,11 @@ FareCollectionSystem:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -325,9 +372,11 @@ FareCollectionSystem:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -353,24 +402,26 @@ FareCollectionSystem:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     observationDateTime:    
-      description: 'Last reported time of observation.'    
+      description: Last reported time of observation    
       format: date-time    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     occupancyLevel:    
-      description: 'Occupancy level in the public transit bus corresponding to this observation. ''Red'' indicates the congestion level in the bus is HIGH, ''Yellow'' indicates the congestion level in the bus is MODERATE and ''Green'' indicates the congestion level in the bus is LOW.'    
+      description: 'Occupancy level in the public transit bus corresponding to this observation. ''Red'' indicates the congestion level in the bus is HIGH, ''Yellow'' indicates the congestion level in the bus is MODERATE and ''Green'' indicates the congestion level in the bus is LOW'    
       enum:    
         - Red    
         - Yellow    
@@ -380,39 +431,53 @@ FareCollectionSystem:
         model: https://schema.org/Text    
         type: Property    
     originDestinationCode:    
-      description: 'The code for the origin and destination stops corresponding to this observation.'    
+      description: The code for the origin and destination stops corresponding to this observation    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     originStopCategory:    
-      description: 'Type of the origin bus stop corresponding to this observation.'    
+      description: Type of the origin bus stop corresponding to this observation    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     originStopId:    
-      description: 'Unique Id of the bus stop at which the passenger boards into the bus corresponding to this observation.'    
+      description: Unique Id of the bus stop at which the passenger boards into the bus corresponding to this observation    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     originStopName:    
-      description: 'The name of the origin bus stop corresponding to this observation.'    
+      description: The name of the origin bus stop corresponding to this observation    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *farecollectionsystem_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     passengerCount:    
-      description: 'Number of passengers travelling in the public transit bus corresponding to this observation. This count is computed based on the realtime ticketing transactions in the public transit bus.'    
+      description: Number of passengers travelling in the public transit bus corresponding to this observation. This count is computed based on the realtime ticketing transactions in the public transit bus    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
@@ -424,7 +489,7 @@ FareCollectionSystem:
         model: https://schema.org/Text    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -436,55 +501,55 @@ FareCollectionSystem:
       x-ngsi:    
         type: Property    
     shiftOfOperation:    
-      description: 'Shift of operation of the public transit vehicle operated by the fare collection agency/ public transit agency or the employee corresponding to this observation. Indicated as ''1'' when the vehicle operates in the first shift, ''2'' when the vehicle operates in the second shift and ''3'' when the vehicle operates in the third shift.'    
+      description: 'Shift of operation of the public transit vehicle operated by the fare collection agency/ public transit agency or the employee corresponding to this observation. Indicated as ''1'' when the vehicle operates in the first shift, ''2'' when the vehicle operates in the second shift and ''3'' when the vehicle operates in the third shift'    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     stage:    
-      description: 'Total number of stages from the origin bus stop to the destination bus stop.'    
+      description: Total number of stages from the origin bus stop to the destination bus stop    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     ticketTypeCode:    
-      description: 'Unique ticket type code of the corresponding trip.'    
+      description: Unique ticket type code of the corresponding trip    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     transactionDateTime:    
-      description: 'Date-time of the transaction corresponding to this observation.'    
+      description: Date-time of the transaction corresponding to this observation    
       format: date-time    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     transactionType:    
-      description: 'Type of the transaction corresponding to this observation. For Eg - Issue, ReIssue, Entry, Exit etc.'    
+      description: 'Type of the transaction corresponding to this observation. For Eg - Issue, ReIssue, Entry, Exit etc'    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     transactionTypeDescription:    
-      description: 'Description of the transaction type. Explanation of various transactionTypeId codes used in the data.'    
+      description: Description of the transaction type. Explanation of various transactionTypeId codes used in the data    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     transactionVehicleNum:    
-      description: 'Code used by fare collection agency for the vehicle number corresponding to the transaction.'    
+      description: Code used by fare collection agency for the vehicle number corresponding to the transaction    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     travelDistance:    
-      description: 'The distance between the origin bus stop and the destination bus stop corresponding to this observation.'    
+      description: The distance between the origin bus stop and the destination bus stop corresponding to this observation    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
@@ -496,7 +561,7 @@ FareCollectionSystem:
         model: https://schema.org/Text    
         type: Property    
     type:    
-      description: 'NGSI entity type. It has to be FareCollectionSystem'    
+      description: NGSI entity type. It has to be FareCollectionSystem    
       enum:    
         - FareCollectionSystem    
       type: string    
@@ -513,7 +578,7 @@ FareCollectionSystem:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/FareCollectionSystem/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/FareCollectionSystem/schema.json    
   x-model-tags: ""    

@@ -14,8 +14,25 @@
 
 ## Liste der Eigenschaften  
 
-<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
-- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `agency_name[string]`: Das Feld agency_name enthält den vollständigen Namen der Behörde oder Organisation, die für die Instandhaltung der betreffenden Stelle zuständig ist. SameAs: Feld "agency_name" aus GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)  - `allowedVehicleType[array]`: Fahrzeugtyp(en), der/die für die Durchfahrt durch diesen Straßenabschnitt zugelassen ist/sind. Enum:'agriculturalVehicle, bicycle, bus, car, caravan, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, trailer, van, anyVehicle'. Erlaubte Werte: Die folgenden Werte, definiert durch _VehicleTypeEnum_, [DATEX 2 Version 2.3](http://d2docs.ndwcloud.nu/):  . Model: [https://schema.org/Text](https://schema.org/Text)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `annotations[array]`: Anmerkungen zum Artikel  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `bridgeCount[number]`: Anzahl der Brücken in dem Straßenabschnitt, der dieser Beobachtung entspricht. Nimmt den Wert 0 (Null) an, wenn der Straßenabschnitt keine Brücken hat.  - `carriagewayLength[number]`: Gesamtlänge der Fahrbahn des Straßenabschnitts, der dieser Beobachtung entspricht.  - `carriagewayWidth[number]`: Gesamtbreite der Fahrbahn des Straßenabschnitts, der dieser Beobachtung entspricht.  - `category[array]`: Ermöglicht die Übermittlung zusätzlicher Merkmale eines Straßenabschnitts. Enum:'Einbahnstraße, Mautstraße, Verbindungsstraße'.  Einbahnstraße": Gibt an, ob der Straßenabschnitt nur in eine Richtung befahren werden kann. Wenn nicht vorhanden, bedeutet dies, dass das Straßensegment in beide Richtungen (vorwärts und rückwärts) genutzt werden kann. Siehe auch [http://wiki.openstreetmap.org/wiki/Key:oneway](http://wiki.openstreetmap.org/wiki/Key:oneway). `toll` : Gibt an, ob für den Straßenabschnitt Mautgebühren erhoben werden. Link": Gibt an, ob es sich bei diesem Straßenabschnitt um einen Hilfsabschnitt für die Ausfahrt oder Einfahrt auf eine Straße handelt. Siehe [https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link). Jeder andere Wert, der für eine Anwendung von Bedeutung ist.  . Model: [https://schema.org/Text](https://schema.org/Text)- `color[string]`: Die Farbe des Produkts  . Model: [https://schema.org/color](https://schema.org/color)- `culvertCount[number]`: Anzahl der Durchlässe, die im Verlauf der Straße, die dieser Beobachtung entspricht, vorhanden sind.  - `cyclePathLeftHeight[number]`: Höhe des Radwegs am linken Fahrbahnrand entsprechend dieser Beobachtung.  - `cyclePathLeftWidth[number]`: Breite des Radwegs am linken Fahrbahnrand entsprechend dieser Beobachtung.  - `cyclePathMaterial[string]`: Baumaterial, das für die Verlegung des Radwegs an den Seiten der Straße verwendet wurde, entsprechend dieser Beobachtung.  - `cyclePathPlacement[string]`: Beschreibt die Lage des Radwegs entlang des Straßenabschnitts, der dieser Beobachtung entspricht. Enum:' ['RECHTS, LINKS, BEIDE, NICHT_VERFÜGBAR'  - `cyclePathRightHeight[number]`: Höhe des Radwegs am rechten Fahrbahnrand entsprechend dieser Beobachtung.  - `cyclePathRightWidth[number]`: Breite des Radwegs am rechten Fahrbahnrand entsprechend dieser Beobachtung.  - `dataDescriptor[*]`: URI, die auf die Daten-Deskriptor-Entität verweist  - `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `endKilometer[number]`: Die Kilometernummer (gemessen vom Anfangspunkt der Straße), an der dieser Straßenabschnitt endet.  . Model: [https://schema.org/Number](https://schema.org/Number)- `endPoint[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `id[*]`: Eindeutiger Bezeichner der Entität  - `image[string]`: Ein Bild des Artikels  . Model: [https://schema.org/URL](https://schema.org/URL)- `laneInfo[object]`: Beschreibt die Aspekte der Fahrspuren der Straße, die dieser Beobachtung entsprechen.  - `laneUsage[array]`: Dieses Attribut kann zur Übermittlung spezifischer Parameter verwendet werden, die jeden Fahrstreifen beschreiben. Es muss eine Zeichenkette pro Fahrspur des Straßenabschnitts enthalten. Das Element 0 des Arrays muss die Informationen für Fahrspur 1 enthalten usw. Das Format der angegebenen Zeichenfolge muss sein: <Spur_Richtung>, <Spur_minimale_erlaubteGeschwindigkeit>, <Spur_maximale_erlaubteGeschwindigkeit>, <Spur_maximale_erlaubteHöhe>, <Spur_maximales_erlaubtesGewicht>. <lane_direction> ist eine Zeichenkette mit den folgenden zulässigen Werten: `forward`. Die Fahrspur wird derzeit in der Richtung "vorwärts" verwendet. Rückwärts". Die Fahrspur wird gegenwärtig in der Richtung "rückwärts" benutzt. Der einzige obligatorische Parameter ist `lane_direction`. Wird er nicht angegeben, kann davon ausgegangen werden, dass die übrigen Parameter den auf Entitätsebene angegebenen entsprechen.  . Model: [https://schema.org/Text](https://schema.org/Text)- `length[number]`: Gesamtlänge dieses Straßenabschnitts in Kilometern  . Model: [https://schema.org/length](https://schema.org/length)- `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `maximumAllowedHeight[number]`: Maximal zulässige Höhe für Fahrzeuge, die diesen Straßenabschnitt passieren  . Model: [https://schema.org/height](https://schema.org/height)- `maximumAllowedSpeed[number]`: Zulässige Höchstgeschwindigkeit auf dem betreffenden Straßenabschnitt. Für bestimmte Fahrzeugtypen (Lkw, Wohnwagen usw.) können strengere Grenzwerte gelten.  . Model: [https://schema.org/Number](https://schema.org/Number)- `maximumAllowedWeight[number]`: Zulässiges Höchstgewicht für Fahrzeuge, die diesen Straßenabschnitt passieren  . Model: [https://schema.org/weight](https://schema.org/weight)- `maximumAllowedWidth[number]`: Maximal zulässige Breite für Fahrzeuge, die die dieser Beobachtung entsprechende Einheit benutzen.  - `medianHeight[number]`: Höhe des Mittelstreifens oder Mittelstreifens auf der Straße, die dieser Beobachtung entspricht.  - `medianLength[number]`: Länge des Mittelstreifens oder Mittelstreifens auf der Straße, die dieser Beobachtung entspricht.  - `medianWidth[number]`: Breite des Mittelstreifens oder Mittelstreifens auf der Straße, die dieser Beobachtung entspricht.  - `minimumAllowedSpeed[number]`: Zulässige Mindestgeschwindigkeit beim Befahren dieses Straßenabschnitts  . Model: [https://schema.org/Number](https://schema.org/Number)- `municipalityInfo[object]`: Informationen der Gemeinde zu dieser Beobachtung.  . Model: [https://schema.org/Text](https://schema.org/Text)- `name[string]`: Der Name dieses Artikels.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `pedestrianPathLeftHeight[number]`: Höhe des Gehwegs am linken Fahrbahnrand, der dieser Beobachtung entspricht.  - `pedestrianPathLeftWidth[number]`: Breite des Gehweges am linken Fahrbahnrand entsprechend dieser Beobachtung.  - `pedestrianPathMaterial[string]`: Das Baumaterial, das für die Verlegung des Gehwegs an den Seiten der Straße verwendet wurde, entspricht dieser Beobachtung.  - `pedestrianPathPlacement[string]`: Beschreibt das Vorhandensein und die Position von Fußgängern entlang des Straßenabschnitts, der dieser Beobachtung entspricht. Enum:'RIGHT, LEFT, BOTH, NOT_AVAILABLE'  - `pedestrianPathRightHeight[number]`: Höhe des Gehwegs am rechten Fahrbahnrand, der dieser Beobachtung entspricht.  - `pedestrianPathRightWidth[number]`: Breite des Gehweges am rechten Fahrbahnrand entsprechend dieser Beobachtung.  - `refRoad[*]`: Straße, zu der dieser Straßenabschnitt gehört.  - `rightOfWayWidth[number]`: Das Wegerecht (RoW) ist die gesamte für die Straße verfügbare Fläche. Seine Breite bietet Platz für den Fahrweg + andere Notwendigkeiten + zukünftige Erweiterungen entlang der Straßenführung.  - `roadClass[string]`: Die Art der Straße, die dieser Beobachtung entspricht. Enum: [OTHER_PUBLIC_ROAD, PRIVATE_ROAD, MINOR_CITY_ROAD, MAJOR_DISTRICT_ROAD, MAJOR_CITY_ROAD, NATIONAL_HIGHWAY, SERVICE_ROAD, STATE_HIGHWAY, OTHER_DISTRICT_ROAD, PORT_ROAD].  - `roadDirection[string]`: Stellt die Richtung dar, in die die Straße führt. Enum:' ['N, S, E, W'. Die Werte N,S,E,W stehen jeweils für Nord,Süd,Ost,West.  - `roadId[string]`: Einzigartige interne Darstellung der Straße, die dieser Beobachtung entspricht.  - `roadMaterial[string]`: Das für den Einbau der Fahrbahn verwendete Baumaterial, das dieser Bemerkung entspricht. Z. B. Beton, Lehm, Teer usw.  - `roadName[string]`: Der Name der Straße, die dieser Beobachtung entspricht.  - `roadWork[string]`: Gründe für die Straßenarbeiten im Falle eines dringenden Eingriffs. Eine Kombination aus diesen Werten. Enum:'COLLAPSE, DERAILMENT, FIRE, FLOOD, GASLEAK, LANDSLIDE, OTHER, POWERCUT, ROCKFALL, SAGGING, WATERLEAK'.  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `startKilometer[number]`: Die Kilometernummer (gemessen vom Anfangspunkt der Straße), an der dieser Straßenabschnitt beginnt.  . Model: [https://schema.org/Number](https://schema.org/Number)- `startPoint[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `status[string]`: Spezifische Fahrbedingungen auf dem Straßenabschnitt. Verwenden Sie statusDescription für zusätzliche Informationen. Enum: "offen, geschlossen, eingeschränkt".  open": Das Straßensegment kann in vollem Umfang genutzt werden, "closed": Es ist kein Verkehr möglich, z. B. aufgrund von Baustellen, einer offenen Brücke oder Schleuse oder eines anderen Ereignisses, das den Verkehr verhindert. eingeschränkt": Verkehr ist möglich, aber nicht in der vollen Kapazität.  - `statusDescription[string]`: Zusätzliche Informationen zum Attribut "Status".  - `totalCyclePathWidth[number]`: Gesamtbreite des Radwegs auf der Straße, die dieser Beobachtung entspricht.  - `totalLaneNumber[number]`: Gesamtzahl der Fahrspuren in diesem Straßenabschnitt  . Model: [https://schema.org/Number.](https://schema.org/Number.)- `totalPedestrianPathLength[number]`: Gesamtlänge des Gehweges auf der Straße, die dieser Beobachtung entspricht.  - `totalPedestrianPathWidth[number]`: Gesamtbreite des Gehweges auf der Straße, die dieser Beobachtung entspricht.  - `type[string]`: NGSI-Entitätstyp. Es muss RoadSegment sein  - `width[number]`: Die Breite des Straßenabschnitts.  . Model: [https://schema.org/Number](https://schema.org/Number)<!-- /30-PropertiesList -->  
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Das Land. Zum Beispiel, Spanien  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: Die Ortschaft, in der sich die Adresse befindet, und die in der Region liegt  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: Die Region, in der sich der Ort befindet, und die auf dem Land liegt  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Ein Bezirk ist eine Art von Verwaltungseinheit, die in einigen Ländern von der lokalen Regierung verwaltet wird.    
+	- `postOfficeBoxNumber[string]`: Die Postfachnummer für Postfachadressen. Zum Beispiel, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: Die Postleitzahl. Zum Beispiel, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: Die Straßenanschrift  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `agency_name[string]`: Das Feld agency_name enthält den vollständigen Namen der Behörde oder Organisation, die für die Instandhaltung der betreffenden Stelle zuständig ist. SameAs: Feld "agency_name" aus GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)  - `allowedVehicleType[array]`: Fahrzeugtyp(en), der/die für die Durchfahrt durch diesen Straßenabschnitt zugelassen ist/sind. Enum:'agriculturalVehicle, bicycle, bus, car, caravan, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, trailer, van, anyVehicle'. Erlaubte Werte: Die folgenden Werte, definiert durch _VehicleTypeEnum_, [DATEX 2 Version 2.3](http://d2docs.ndwcloud.nu/):  . Model: [https://schema.org/Text](https://schema.org/Text)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `annotations[array]`: Anmerkungen zum Artikel  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `bridgeCount[number]`: Anzahl der Brücken in dem Straßenabschnitt, der dieser Beobachtung entspricht. Nimmt 0 (Null) als Wert an, wenn der Straßenabschnitt keine Brücken hat.  - `carriagewayLength[number]`: Gesamtlänge der Fahrbahn des dieser Beobachtung entsprechenden Straßenabschnitts  - `carriagewayWidth[number]`: Gesamtbreite der Fahrbahn des dieser Beobachtung entsprechenden Straßenabschnitts  - `category[array]`: Ermöglicht die Übermittlung zusätzlicher Merkmale eines Straßenabschnitts. Enum:'Einbahnstraße, Mautstraße, Verbindungsstraße'.  Einbahnstraße": Gibt an, ob der Straßenabschnitt nur in eine Richtung befahren werden kann. Wenn nicht vorhanden, bedeutet dies, dass das Straßensegment in beide Richtungen (vorwärts und rückwärts) genutzt werden kann. Siehe auch [http://wiki.openstreetmap.org/wiki/Key:oneway](http://wiki.openstreetmap.org/wiki/Key:oneway). `toll` : Gibt an, ob für den Straßenabschnitt Mautgebühren erhoben werden. Link": Gibt an, ob es sich bei diesem Straßenabschnitt um einen Hilfsabschnitt für die Ausfahrt oder Einfahrt auf eine Straße handelt. Siehe [https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link). Jeder andere für eine Anwendung sinnvolle Wert  . Model: [https://schema.org/Text](https://schema.org/Text)- `color[string]`: Die Farbe des Produkts  . Model: [https://schema.org/color](https://schema.org/color)- `culvertCount[number]`: Anzahl der Durchlässe, die im Verlauf der Straße, die dieser Beobachtung entspricht, vorhanden sind  - `cyclePathLeftHeight[number]`: Höhe des Radwegs am linken Fahrbahnrand entsprechend dieser Beobachtung  - `cyclePathLeftWidth[number]`: Breite des Radwegs am linken Fahrbahnrand entsprechend dieser Beobachtung  - `cyclePathMaterial[string]`: Baumaterial, das für die Verlegung des Radwegs auf den Seiten der Straße verwendet wurde, die dieser Beobachtung entspricht  - `cyclePathPlacement[string]`: Beschreibt die Lage des Radwegs entlang des Straßenabschnitts, der dieser Beobachtung entspricht. Enum:' ['RECHTS, LINKS, BEIDES, NICHT_VERFÜGBAR'  - `cyclePathRightHeight[number]`: Höhe des Radwegs am rechten Fahrbahnrand entsprechend dieser Beobachtung  - `cyclePathRightWidth[number]`: Breite des Radwegs am rechten Fahrbahnrand entsprechend dieser Beobachtung  - `dataDescriptor[*]`: URI, die auf die Daten-Deskriptor-Entität verweist  - `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit  - `dateCreated[date-time]`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen  - `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben  - `description[string]`: Eine Beschreibung dieses Artikels  - `endKilometer[number]`: Die Kilometernummer (gemessen vom Anfangspunkt der Straße), an der dieser Straßenabschnitt endet.  . Model: [https://schema.org/Number](https://schema.org/Number)- `endPoint[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `id[*]`: Eindeutiger Bezeichner der Entität  - `image[uri]`: Ein Bild des Artikels  . Model: [https://schema.org/URL](https://schema.org/URL)- `laneInfo[object]`: Beschreibt die Aspekte der Fahrspuren der Straße, die dieser Beobachtung entsprechen  	- `laneDirection[string]`: Beschreibt die Richtung, in der die Fahrzeuge auf dem dieser Beobachtung entsprechenden Fahrstreifen unterwegs sind. Enum:'VORWÄRTS, RÜCKWÄRTS, INBOUND, OUTBOUND, RECHTS, LINKS'    
+- `laneUsage[array]`: Dieses Attribut kann zur Übermittlung spezifischer Parameter verwendet werden, die jeden Fahrstreifen beschreiben. Es muss eine Zeichenkette pro Fahrspur des Straßenabschnitts enthalten. Das Element 0 des Arrays muss die Informationen für Fahrspur 1 enthalten usw. Das Format der angegebenen Zeichenfolge muss sein: <Spur_Richtung>, <Spur_minimale_erlaubteGeschwindigkeit>, <Spur_maximale_erlaubteGeschwindigkeit>, <Spur_maximale_erlaubteHöhe>, <Spur_maximales_erlaubtesGewicht>. <lane_direction> ist eine Textzeichenfolge mit den folgenden zulässigen Werten: `forward`. Die Fahrspur wird derzeit in der Richtung "vorwärts" verwendet. Rückwärts". Die Fahrspur wird gegenwärtig in der Richtung "rückwärts" benutzt. Der einzige obligatorische Parameter ist `lane_direction`. Wird er nicht angegeben, kann davon ausgegangen werden, dass die übrigen Parameter den auf Entitätsebene angegebenen entsprechen.  . Model: [https://schema.org/Text](https://schema.org/Text)- `length[number]`: Gesamtlänge dieses Straßenabschnitts in Kilometern  . Model: [https://schema.org/length](https://schema.org/length)- `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `maximumAllowedHeight[number]`: Maximal zulässige Höhe für Fahrzeuge, die diesen Straßenabschnitt passieren  . Model: [https://schema.org/height](https://schema.org/height)- `maximumAllowedSpeed[number]`: Zulässige Höchstgeschwindigkeit auf dem betreffenden Straßenabschnitt. Für bestimmte Fahrzeugtypen (Lkw, Wohnwagen usw.) können strengere Grenzwerte gelten.  . Model: [https://schema.org/Number](https://schema.org/Number)- `maximumAllowedWeight[number]`: Zulässiges Höchstgewicht für Fahrzeuge, die diesen Straßenabschnitt passieren  . Model: [https://schema.org/weight](https://schema.org/weight)- `maximumAllowedWidth[number]`: Maximal zulässige Breite für Fahrzeuge, die die dieser Beobachtung entsprechende Einheit benutzen  - `medianHeight[number]`: Höhe des Mittelstreifens oder Mittelstreifens auf der Straße, die dieser Beobachtung entspricht  - `medianLength[number]`: Länge des Mittelstreifens oder Mittelstreifens auf der Straße, die dieser Beobachtung entspricht  - `medianWidth[number]`: Breite des Mittelstreifens oder Mittelstreifens auf der Straße, die dieser Beobachtung entspricht  - `minimumAllowedSpeed[number]`: Zulässige Mindestgeschwindigkeit beim Befahren dieses Straßenabschnitts  . Model: [https://schema.org/Number](https://schema.org/Number)- `municipalityInfo[object]`: Informationen der Gemeinde zu dieser Beobachtung  . Model: [https://schema.org/Text](https://schema.org/Text)	- `cityId[string]`: ID der Stadt, die dieser Beobachtung entspricht  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `cityName[string]`: Name der Stadt, die dieser Beobachtung entspricht  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `district[string]`: Name des Bezirks, der dieser Beobachtung entspricht  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `stateName[string]`: Name des Staates, der dieser Beobachtung entspricht  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `ulbName[string]`: Name der lokalen Gebietskörperschaft, die dieser Beobachtung entspricht  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `wardId[string]`: Stations-ID, die dieser Beobachtung entspricht  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `wardName[string]`: Name der Station, die dieser Beobachtung entspricht  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `wardNum[number]`: Stationsnummer, die dieser Beobachtung entspricht  . Model: [https://schema.org/Number](https://schema.org/Number)  
+	- `zoneId[string]`: ID der Zone, die dieser Beobachtung entspricht  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `name[string]`: Der Name dieses Artikels  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `pedestrianPathLeftHeight[number]`: Höhe des Gehwegs am linken Fahrbahnrand, der dieser Beobachtung entspricht  - `pedestrianPathLeftWidth[number]`: Breite des Gehwegs am linken Fahrbahnrand, der dieser Beobachtung entspricht  - `pedestrianPathMaterial[string]`: Baumaterial, das für die Verlegung des Gehwegs an den Seiten der Straße verwendet wurde, die dieser Beobachtung entspricht  - `pedestrianPathPlacement[string]`: Beschreibt das Vorhandensein und die Position von Fußgängern entlang des Straßenabschnitts, der dieser Beobachtung entspricht. Enum:'RIGHT, LEFT, BOTH, NOT_AVAILABLE'  - `pedestrianPathRightHeight[number]`: Höhe des Gehwegs am rechten Fahrbahnrand, der dieser Beobachtung entspricht  - `pedestrianPathRightWidth[number]`: Breite des Gehwegs am rechten Fahrbahnrand, der dieser Beobachtung entspricht  - `refRoad[*]`: Straße, zu der dieser Straßenabschnitt gehört  - `rightOfWayWidth[number]`: Das Wegerecht (RoW) ist die gesamte für die Straße verfügbare Fläche. Seine Breite bietet Platz für den Fahrweg + andere Notwendigkeiten + zukünftige Erweiterungen entlang der Straßenführung.  - `roadClass[string]`: Die Art der Straße, die dieser Beobachtung entspricht. Enum: [OTHER_PUBLIC_ROAD, PRIVATE_ROAD, MINOR_CITY_ROAD, MAJOR_DISTRICT_ROAD, MAJOR_CITY_ROAD, NATIONAL_HIGHWAY, SERVICE_ROAD, STATE_HIGHWAY, OTHER_DISTRICT_ROAD, PORT_ROAD]  - `roadDirection[string]`: Stellt die Richtung dar, in die die Straße führt. Enum:' ['N, S, E, W'. Die Werte N,S,E,W stehen jeweils für Nord,Süd,Ost,West  - `roadId[string]`: Einzigartige interne Darstellung der Straße, die dieser Beobachtung entspricht  - `roadMaterial[string]`: Das für den Einbau der Fahrbahn verwendete Baumaterial, das dieser Bemerkung entspricht. Z. B. Beton, Lehm, Teer usw.  - `roadName[string]`: Der Name der Straße, die dieser Beobachtung entspricht  - `roadWork[string]`: Gründe für die Straßenarbeiten im Falle eines dringenden Eingriffs. Eine Kombination aus diesen Werten. Enum:'COLLAPSE, DERAILMENT, FIRE, FLOOD, GASLEAK, LANDSLIDE, OTHER, POWERCUT, ROCKFALL, SAGGING, WATERLEAK'  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `startKilometer[number]`: Die Kilometernummer (gemessen vom Anfangspunkt der Straße), an der dieser Straßenabschnitt beginnt.  . Model: [https://schema.org/Number](https://schema.org/Number)- `startPoint[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `status[string]`: Spezifische Fahrbedingungen auf dem Straßenabschnitt. Verwenden Sie statusDescription für zusätzliche Informationen. Enum: "offen, geschlossen, eingeschränkt".  open": Das Straßensegment kann in vollem Umfang genutzt werden, "closed": Es ist kein Verkehr möglich, z. B. aufgrund von Baustellen, einer offenen Brücke oder Schleuse oder eines anderen Ereignisses, das den Verkehr verhindert. eingeschränkt": Verkehr ist möglich, aber nicht in der vollen Kapazität  - `statusDescription[string]`: Zusätzliche Informationen zum Attribut "Status  - `totalCyclePathWidth[number]`: Gesamtbreite des Radwegs auf der Straße, die dieser Beobachtung entspricht  - `totalLaneNumber[number]`: Gesamtzahl der Fahrspuren in diesem Straßenabschnitt  . Model: [https://schema.org/Number](https://schema.org/Number)- `totalPedestrianPathLength[number]`: Gesamtlänge des Gehwegs auf der Straße, die dieser Beobachtung entspricht  - `totalPedestrianPathWidth[number]`: Gesamtbreite des Gehweges auf der Straße, die dieser Beobachtung entspricht  - `type[string]`: NGSI-Entitätstyp. Es muss RoadSegment sein  - `width[number]`: Die Breite des Straßenabschnitts.  . Model: [https://schema.org/Number](https://schema.org/Number)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
 - `allowedVehicleType`  - `endPoint`  - `id`  - `name`  - `refRoad`  - `startPoint`  - `type`  <!-- /35-RequiredProperties -->  
@@ -30,29 +47,57 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 RoadSegment:    
-  description: 'This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road.'    
+  description: This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road.    
   properties:    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
@@ -89,12 +134,12 @@ RoadSegment:
         model: https://schema.org/Text    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     annotations:    
-      description: 'Annotations about the item'    
+      description: Annotations about the item    
       items:    
         type: string    
       type: array    
@@ -102,28 +147,28 @@ RoadSegment:
         model: https://schema.org/Text    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     bridgeCount:    
-      description: 'Number of bridges in the road segment corresponding to this observation. Takes 0 (zero) as the value when the road segment has no bridges.'    
+      description: Number of bridges in the road segment corresponding to this observation. Takes 0 (zero) as the value when the road segment has no bridges    
       type: number    
       x-ngsi:    
         type: Property    
     carriagewayLength:    
-      description: 'Total length of the carriage way of the road segment corresponding to this observation.'    
+      description: Total length of the carriage way of the road segment corresponding to this observation    
       type: number    
       x-ngsi:    
         type: Property    
     carriagewayWidth:    
-      description: 'Total width of the carriage way of the road segment corresponding to this observation.'    
+      description: Total width of the carriage way of the road segment corresponding to this observation    
       type: number    
       x-ngsi:    
         type: Property    
     category:    
-      description: 'Allows to convey extra characteristics of a road segment. Enum:''oneway, toll, link''.  `oneway`: Flags whether the road segment can only be used in one direction. If not present it means road segment can be used in both directions (forwards and backwards). See also [http://wiki.openstreetmap.org/wiki/Key:oneway](http://wiki.openstreetmap.org/wiki/Key:oneway). `toll` : Flags whether the road segment is under toll fees. `link` : Flags whether this road segment is an auxiliary link segment for exiting or entering a road. See [https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link). Any other value meaningful to an application.'    
+      description: 'Allows to convey extra characteristics of a road segment. Enum:''oneway, toll, link''.  `oneway`: Flags whether the road segment can only be used in one direction. If not present it means road segment can be used in both directions (forwards and backwards). See also [http://wiki.openstreetmap.org/wiki/Key:oneway](http://wiki.openstreetmap.org/wiki/Key:oneway). `toll` : Flags whether the road segment is under toll fees. `link` : Flags whether this road segment is an auxiliary link segment for exiting or entering a road. See [https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link). Any other value meaningful to an application'    
       items:    
         enum:    
           - oneway    
@@ -135,28 +180,28 @@ RoadSegment:
         model: https://schema.org/Text    
         type: Property    
     color:    
-      description: 'The color of the product'    
+      description: The color of the product    
       type: string    
       x-ngsi:    
         model: https://schema.org/color    
         type: Property    
     culvertCount:    
-      description: 'Number of culverts prevalent in the trace of the road corresponding to this observation.'    
+      description: Number of culverts prevalent in the trace of the road corresponding to this observation    
       type: number    
       x-ngsi:    
         type: Property    
     cyclePathLeftHeight:    
-      description: 'Height of the cycle track on the left edge of the road corresponding to this observation.'    
+      description: Height of the cycle track on the left edge of the road corresponding to this observation    
       type: number    
       x-ngsi:    
         type: Property    
     cyclePathLeftWidth:    
-      description: 'Width of the cycle track on the left edge of the road corresponding to this observation.'    
+      description: Width of the cycle track on the left edge of the road corresponding to this observation    
       type: number    
       x-ngsi:    
         type: Property    
     cyclePathMaterial:    
-      description: 'Construction material used for laying the cycle path on the sides of the road corresponding to this observation.'    
+      description: Construction material used for laying the cycle path on the sides of the road corresponding to this observation    
       type: string    
       x-ngsi:    
         type: Property    
@@ -171,47 +216,51 @@ RoadSegment:
       x-ngsi:    
         type: Property    
     cyclePathRightHeight:    
-      description: 'Height of the cycle track on the right edge of the road corresponding to this observation.'    
+      description: Height of the cycle track on the right edge of the road corresponding to this observation    
       type: number    
       x-ngsi:    
         type: Property    
     cyclePathRightWidth:    
-      description: 'Width of the cycle track on the right edge of the road corresponding to this observation.'    
+      description: Width of the cycle track on the right edge of the road corresponding to this observation    
       type: number    
       x-ngsi:    
         type: Property    
     dataDescriptor:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'URI pointing to the data-descriptor entity'    
+          x-ngsi:    
+            type: Property    
+      description: URI pointing to the data-descriptor entity    
       x-ngsi:    
         type: Relationship    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
@@ -224,8 +273,8 @@ RoadSegment:
         type: Property    
     endPoint:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
-      oneOf: &roadsegment_-_properties_-_location_-_oneof    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+      oneOf:    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -244,9 +293,11 @@ RoadSegment:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -268,9 +319,11 @@ RoadSegment:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -294,9 +347,11 @@ RoadSegment:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -317,9 +372,11 @@ RoadSegment:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -343,9 +400,11 @@ RoadSegment:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -371,35 +430,41 @@ RoadSegment:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     id:    
-      anyOf: &roadsegment_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     image:    
-      description: 'An image of the item'    
+      description: An image of the item    
       format: uri    
       type: string    
       x-ngsi:    
         model: https://schema.org/URL    
         type: Property    
     laneInfo:    
-      description: 'Describes the aspects of lanes of the road corresponding to this observation.'    
+      description: Describes the aspects of lanes of the road corresponding to this observation    
       properties:    
         laneDirection:    
-          description: 'Property. Describes the direction in which vehicles are plying on the lane corresponding to this observation. Enum:''FORWARD, BACKWARD, INBOUND, OUTBOUND, RIGHT, LEFT'''    
+          description: 'Describes the direction in which vehicles are plying on the lane corresponding to this observation. Enum:''FORWARD, BACKWARD, INBOUND, OUTBOUND, RIGHT, LEFT'''    
           enum:    
             - BACKWARD    
             - FORWARD    
@@ -408,20 +473,28 @@ RoadSegment:
             - OUTBOUND    
             - RIGHT    
           laneLength:    
-            description: 'Property. Length of the lane corresponding to this observation.'    
+            description: Length of the lane corresponding to this observation    
             type: number    
+            x-ngsi:    
+              type: Property    
           laneWidth:    
-            description: 'Property. Width of the lane corresponding to this observation.'    
+            description: Width of the lane corresponding to this observation    
             type: number    
+            x-ngsi:    
+              type: Property    
           type: string    
+          x-ngsi:    
+            type: Property    
         laneId:    
-          description: 'Property. Unique identification number of the lane corresponding to this observation.'    
+          description: Unique identification number of the lane corresponding to this observation    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
     laneUsage:    
-      description: 'This attribute can be used to convey specific parameters describing each lane. It must contain a string per road segment lane. The element 0 of the array must contain the information of lane 1, and so on. Format of the referred string must be: <lane_direction>, <lane_minimumAllowedSpeed>, <lane_maximumAllowedSpeed>, <lane_maximumAllowedHeight>, <lane_maximumAllowedWeight>. <lane_direction> is a text string with the following allowed values: `forward`. The lane is currently used in the `forwards` direction. `backward`. The lane is currently used in the `backwards` direction. The only mandatory parameter is `lane_direction`. If not specified, the rest of parameters can be assumed to be equal to those specified at entity level.'    
+      description: 'This attribute can be used to convey specific parameters describing each lane. It must contain a string per road segment lane. The element 0 of the array must contain the information of lane 1, and so on. Format of the referred string must be: <lane_direction>, <lane_minimumAllowedSpeed>, <lane_maximumAllowedSpeed>, <lane_maximumAllowedHeight>, <lane_maximumAllowedWeight>. <lane_direction> is a text string with the following allowed values: `forward`. The lane is currently used in the `forwards` direction. `backward`. The lane is currently used in the `backwards` direction. The only mandatory parameter is `lane_direction`. If not specified, the rest of parameters can be assumed to be equal to those specified at entity level'    
       items:    
         enum:    
           - forward    
@@ -432,26 +505,186 @@ RoadSegment:
         model: https://schema.org/Text    
         type: Property    
     length:    
-      description: 'Total length of this road segment in kilometers'    
+      description: Total length of this road segment in kilometers    
       minimum: 0    
       type: number    
       x-ngsi:    
         model: https://schema.org/length    
         type: Property    
-        units: 'Kilometer (Km)'    
+        units: Kilometer (Km)    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
-      oneOf: *roadsegment_-_properties_-_location_-_oneof    
+      oneOf:    
+        - description: Geojson reference to the item. Point    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                type: number    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - Point    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON Point    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - LineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON LineString    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 4    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - Polygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON Polygon    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPoint    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON MultiPoint    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiLineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON MultiLineString    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    items:    
+                      type: number    
+                    minItems: 2    
+                    type: array    
+                  minItems: 4    
+                  type: array    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPolygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON MultiPolygon    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     maximumAllowedHeight:    
-      description: 'Maximum allowed height for vehicles transiting this road segment'    
+      description: Maximum allowed height for vehicles transiting this road segment    
       minimum: 0    
       type: number    
       x-ngsi:    
         model: https://schema.org/height    
         type: Property    
-        units: 'Meter (m)'    
+        units: Meter (m)    
     maximumAllowedSpeed:    
       description: 'Maximum allowed speed plying the road segment. More restrictive limits might be applied to specific vehicle types (trucks, caravans, etc.)'    
       minimum: 0    
@@ -459,105 +692,149 @@ RoadSegment:
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
-        units: 'Kilometer per hour (Km/h)'    
+        units: Kilometer per hour (Km/h)    
     maximumAllowedWeight:    
-      description: 'Maximum allowed weight for vehicles transiting this road segment'    
+      description: Maximum allowed weight for vehicles transiting this road segment    
       minimum: 0    
       type: number    
       x-ngsi:    
         model: https://schema.org/weight    
         type: Property    
-        units: 'Kilogram (Kg)'    
+        units: Kilogram (Kg)    
     maximumAllowedWidth:    
-      description: 'Maximum allowed width for vehicles using the entity corresponding to this observation.'    
+      description: Maximum allowed width for vehicles using the entity corresponding to this observation    
       type: number    
       x-ngsi:    
         type: Property    
     medianHeight:    
-      description: 'Height of the median or central reservation in the road corresponding to this observation.'    
+      description: Height of the median or central reservation in the road corresponding to this observation    
       type: number    
       x-ngsi:    
         type: Property    
     medianLength:    
-      description: 'Length of the median or central reservation in the road corresponding to this observation.'    
+      description: Length of the median or central reservation in the road corresponding to this observation    
       type: number    
       x-ngsi:    
         type: Property    
     medianWidth:    
-      description: 'Width of the median or central reservation in the road corresponding to this observation.'    
+      description: Width of the median or central reservation in the road corresponding to this observation    
       type: number    
       x-ngsi:    
         type: Property    
     minimumAllowedSpeed:    
-      description: 'Minimum allowed speed while transiting this road segment'    
+      description: Minimum allowed speed while transiting this road segment    
       minimum: 0    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
-        units: 'Kilometer per hour (Km/h)'    
+        units: Kilometer per hour (Km/h)    
     municipalityInfo:    
-      description: 'Municipality information corresponding to this observation.'    
+      description: Municipality information corresponding to this observation    
       properties:    
         cityId:    
-          description: 'Property. Model:''https://schema.org/Text''. City ID corresponding to this observation.'    
+          description: City ID corresponding to this observation    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         cityName:    
-          description: 'Property. Model:''https://schema.org/Text''. City name corresponding to this observation'    
+          description: City name corresponding to this observation    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         district:    
-          description: 'Property. Model:''https://schema.org/Text''. District name corresponding to this observation.'    
+          description: District name corresponding to this observation    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         stateName:    
-          description: 'Property. Model:''https://schema.org/Text''. Name of the state corresponding to this observation.'    
+          description: Name of the state corresponding to this observation    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         ulbName:    
-          description: 'Property. Model:''https://schema.org/Text''. Name of the Urban Local Body corresponding to this observation.'    
+          description: Name of the Urban Local Body corresponding to this observation    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         wardId:    
-          description: 'Property. Model:''https://schema.org/Text''. Ward ID corresponding to this observation.'    
+          description: Ward ID corresponding to this observation    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         wardName:    
-          description: 'Property. Model:''https://schema.org/Text''. Ward name corresponding to this observation.'    
+          description: Ward name corresponding to this observation    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         wardNum:    
-          description: 'Property. Model:''https://schema.org/Number''. Ward number corresponding to this observation.'    
+          description: Ward number corresponding to this observation    
           type: number    
+          x-ngsi:    
+            model: https://schema.org/Number    
+            type: Property    
         zoneId:    
-          description: 'Property. Model:''https://schema.org/Text''. Zone ID corresponding to this observation.'    
+          description: Zone ID corresponding to this observation    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         zoneName:    
-          description: 'Property. Model:''https://schema.org/Text''. Zone name corresponding to this observation.'    
+          description: Zone name corresponding to this observation    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *roadsegment_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     pedestrianPathLeftHeight:    
-      description: 'Height of the walkway placed on the left edge of the road corresponding to this observation.'    
+      description: Height of the walkway placed on the left edge of the road corresponding to this observation    
       type: number    
       x-ngsi:    
         type: Property    
     pedestrianPathLeftWidth:    
-      description: 'Width of the walkway placed on the left edge of the road corresponding to this observation.'    
+      description: Width of the walkway placed on the left edge of the road corresponding to this observation    
       type: number    
       x-ngsi:    
         type: Property    
     pedestrianPathMaterial:    
-      description: 'Construction material used for laying the walkway / footpath on the sides of the road corresponding to this observation.'    
+      description: Construction material used for laying the walkway / footpath on the sides of the road corresponding to this observation    
       type: string    
       x-ngsi:    
         type: Property    
@@ -567,35 +844,39 @@ RoadSegment:
       x-ngsi:    
         type: Property    
     pedestrianPathRightHeight:    
-      description: 'Height of the walkway placed on the right edge of the road corresponding to this observation.'    
+      description: Height of the walkway placed on the right edge of the road corresponding to this observation    
       type: number    
       x-ngsi:    
         type: Property    
     pedestrianPathRightWidth:    
-      description: 'Width of the walkway placed on the right edge of the road corresponding to this observation.'    
+      description: Width of the walkway placed on the right edge of the road corresponding to this observation    
       type: number    
       x-ngsi:    
         type: Property    
     refRoad:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Road to which this road segment belongs to.'    
+          x-ngsi:    
+            type: Property    
+      description: Road to which this road segment belongs to    
       x-ngsi:    
         type: Relationship    
     rightOfWayWidth:    
-      description: 'Right of Way (RoW) is the total land area available for the roadway. Its width accommodates for carriages way + other necessities + future extension, along the road''s alignment.'    
+      description: 'Right of Way (RoW) is the total land area available for the roadway. Its width accommodates for carriages way + other necessities + future extension, along the road''s alignment'    
       type: number    
       x-ngsi:    
         type: Property    
     roadClass:    
-      description: 'The type of road corresponding to this observation. Enum: [OTHER_PUBLIC_ROAD, PRIVATE_ROAD, MINOR_CITY_ROAD, MAJOR_DISTRICT_ROAD, MAJOR_CITY_ROAD, NATIONAL_HIGHWAY, SERVICE_ROAD, STATE_HIGHWAY, OTHER_DISTRICT_ROAD, PORT_ROAD].'    
+      description: 'The type of road corresponding to this observation. Enum: [OTHER_PUBLIC_ROAD, PRIVATE_ROAD, MINOR_CITY_ROAD, MAJOR_DISTRICT_ROAD, MAJOR_CITY_ROAD, NATIONAL_HIGHWAY, SERVICE_ROAD, STATE_HIGHWAY, OTHER_DISTRICT_ROAD, PORT_ROAD]'    
       enum:    
         - MAJOR_DISTRICT_ROAD    
         - MAJOR_CITY_ROAD    
@@ -611,27 +892,27 @@ RoadSegment:
       x-ngsi:    
         type: Property    
     roadDirection:    
-      description: 'Represents the direction the road is heading to. Enum:'' [''N, S, E, W''. The values N,S,E,W represent North,South,East,West respectively.'    
+      description: 'Represents the direction the road is heading to. Enum:'' [''N, S, E, W''. The values N,S,E,W represent North,South,East,West respectively'    
       type: string    
       x-ngsi:    
         type: Property    
     roadId:    
-      description: 'Unique internal representation of the road corresponding to this observation.'    
+      description: Unique internal representation of the road corresponding to this observation    
       type: string    
       x-ngsi:    
         type: Property    
     roadMaterial:    
-      description: 'The construction material used for laying the carriageway corresponding to this observation. For eg. concrete, earthen, tar etc.'    
+      description: 'The construction material used for laying the carriageway corresponding to this observation. For eg. concrete, earthen, tar etc'    
       type: string    
       x-ngsi:    
         type: Property    
     roadName:    
-      description: 'The name of the road corresponding to this observation.'    
+      description: The name of the road corresponding to this observation    
       type: string    
       x-ngsi:    
         type: Property    
     roadWork:    
-      description: 'Reasons for the road work in case of urgent intervention. A combination of these values. Enum:''COLLAPSE, DERAILMENT, FIRE, FLOOD, GASLEAK, LANDSLIDE, OTHER, POWERCUT, ROCKFALL, SAGGING, WATERLEAK''.'    
+      description: 'Reasons for the road work in case of urgent intervention. A combination of these values. Enum:''COLLAPSE, DERAILMENT, FIRE, FLOOD, GASLEAK, LANDSLIDE, OTHER, POWERCUT, ROCKFALL, SAGGING, WATERLEAK'''    
       enum:    
         - COLLAPSE    
         - DERAILMENT    
@@ -648,7 +929,7 @@ RoadSegment:
       x-ngsi:    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -660,7 +941,7 @@ RoadSegment:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
@@ -673,11 +954,171 @@ RoadSegment:
         type: Property    
     startPoint:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
-      oneOf: *roadsegment_-_properties_-_location_-_oneof    
+      oneOf:    
+        - description: Geojson reference to the item. Point    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                type: number    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - Point    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON Point    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - LineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON LineString    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 4    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - Polygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON Polygon    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPoint    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON MultiPoint    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiLineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON MultiLineString    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    items:    
+                      type: number    
+                    minItems: 2    
+                    type: array    
+                  minItems: 4    
+                  type: array    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPolygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: GeoJSON MultiPolygon    
+          type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     status:    
-      description: 'Specific driving conditions on the roadsegment. Use statusDescription for additional information. Enum: ‘open, closed, limited’.  `open`: the roadsegment can be used in full intended capacity, `closed`: no traffic is possible, e.g. due to roadworks, an open bridge or lock, or any other event preventing traffic. `limited`: traffic is possible, but not in the full capacity.'    
+      description: 'Specific driving conditions on the roadsegment. Use statusDescription for additional information. Enum: ‘open, closed, limited’.  `open`: the roadsegment can be used in full intended capacity, `closed`: no traffic is possible, e.g. due to roadworks, an open bridge or lock, or any other event preventing traffic. `limited`: traffic is possible, but not in the full capacity'    
       items:    
         enum:    
           - open    
@@ -688,47 +1129,47 @@ RoadSegment:
       x-ngsi:    
         type: Property    
     statusDescription:    
-      description: 'Additional information to the status attribute.'    
+      description: Additional information to the status attribute    
       type: string    
       x-ngsi:    
         type: Property    
     totalCyclePathWidth:    
-      description: 'Total width of the cycle track present in the road corresponding to this observation.'    
+      description: Total width of the cycle track present in the road corresponding to this observation    
       type: number    
       x-ngsi:    
         type: Property    
     totalLaneNumber:    
-      description: 'Total number of lanes offered by this road segment'    
+      description: Total number of lanes offered by this road segment    
       minimum: 1    
       type: number    
       x-ngsi:    
-        model: https://schema.org/Number.    
+        model: https://schema.org/Number    
         type: Property    
     totalPedestrianPathLength:    
-      description: 'Total length of the walkway present in the road corresponding to this observation.'    
+      description: Total length of the walkway present in the road corresponding to this observation    
       type: number    
       x-ngsi:    
         type: Property    
     totalPedestrianPathWidth:    
-      description: 'Total width of the walkway present in the road corresponding to this observation.'    
+      description: Total width of the walkway present in the road corresponding to this observation    
       type: number    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be RoadSegment'    
+      description: NGSI Entity type. It has to be RoadSegment    
       enum:    
         - RoadSegment    
       type: string    
       x-ngsi:    
         type: Property    
     width:    
-      description: 'Road''s segment width.'    
+      description: Road's segment width.    
       minimum: 0    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
-        units: 'Meter (m)'    
+        units: Meter (m)    
   required:    
     - id    
     - name    
@@ -739,7 +1180,7 @@ RoadSegment:
     - allowedVehicleType    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/RoadSegment/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/RoadSegment/schema.json    
   x-model-tags: IUDX    

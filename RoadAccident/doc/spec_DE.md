@@ -7,15 +7,25 @@
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Globale Beschreibung: **Eine Beschreibung eines Verkehrsunfalls mit Ursachen und Folgen. Die erste Version wurde im Rahmen des Synchronicity-Projekts entwickelt**.  
+Globale Beschreibung: **Eine Beschreibung eines Verkehrsunfalls mit Ursachen und Folgen. Die erste Version wurde im Rahmen des Projekts Synchronicity entwickelt**.  
 Version: 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## Liste der Eigenschaften  
 
-<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
-- `accidentDate[string]`: Zeitpunkt des Unfalls  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `accidentDescription[array]`: Beschreibung dieses Verkehrsunfalls als Kombination von kodifizierten Situationen aufgelistet. 0: Nicht spezifizierter Umstand; 1: Der Fahrer ist regelmäßig gefahren, ohne zu wenden; 2: Der Fahrer ist abgelenkt oder unentschlossen gefahren; 3: Der Fahrer ist gefahren, ohne einen Sicherheitsabstand einzuhalten; 4: Der Fahrer ist gefahren, ohne dem von rechts kommenden Fahrzeug Vorrang zu geben; 5: Der Fahrer ist gefahren, ohne die Haltelinie zu beachten; 6: Der Fahrer ist gefahren, ohne das Vorfahrtsignal zu beachten; 7: Der Fahrer ist gegen den Verkehr gefahren; 8: Der Fahrer ist gefahren, ohne die Ampel- oder Agentensignale zu respektieren; 10: Der Fahrer ist gefahren, ohne die Zeichen des Verbots der Durchfahrt oder der Zufahrt zu respektieren; 11: Der Fahrer ist mit überhöhter Geschwindigkeit gefahren; 12: Der Fahrer ist gefahren, ohne die Geschwindigkeitsbegrenzungen zu respektieren; 13: Der Fahrer ist mit den blendenden Lichtern gefahren, die andere Fahrzeuge kreuzen; 14: Der Fahrer ist regelmäßig nach rechts abgebogen; 15: Er ist unregelmäßig nach rechts abgebogen; 16: Der Fahrer ist regelmäßig nach links abgebogen; 17: Er ist unregelmäßig nach links abgebogen; 18: Der Fahrer ist an der Kreuzung vorbeigefahren; 20: Der Fahrer ist regelmäßig gefahren; 21: Der Fahrer ist abgelenkt oder unentschlossen gefahren; 22: Der Fahrer ist ohne Einhaltung eines Sicherheitsabstands gefahren; 23: Der Fahrer ist mit überhöhter Geschwindigkeit gefahren; 24: Der Fahrer fuhr, ohne die Geschwindigkeitsbegrenzungen zu beachten; 25: Er fuhr nicht in der Nähe des rechten Fahrbahnrandes; 26: Der Fahrer fuhr gegen den Verkehr; 27: Der Fahrer fuhr, ohne die Zeichen des Durchfahrts- oder Zufahrtsverbots zu beachten; 28: Der Fahrer fuhr mit den blendenden Lichtern, die andere Fahrzeuge kreuzen; 29: Der Fahrer überholte regelmäßig; 30: Er überholte unregelmäßig nach rechts; 31: Der Fahrer überholte in einer Kurve, auf einer Anhöhe oder bei unzureichender Sicht; 32: Er überholte ein Fahrzeug, das ein anderes überholte; 33: Der Fahrer überholte, ohne das entsprechende Verbotsschild zu beachten; 34: Er manövrierte im Abstieg oder in der Umkehr; 35: Der Fahrer manövrierte, um in den Verkehrsfluss zu gelangen; 36: Er manövrierte, um nach links abzubiegen (Privatdurchfahrt, Verteiler); 37: Fahrer manövrierte regelmäßig, um anzuhalten oder zu stoppen; 38: Fahrer manövrierte unregelmäßig, um anzuhalten oder zu stoppen; 39: Es gesellten sich andere unregelmäßige Zweiräder hinzu; 40: Fahrer fuhr regelmäßig; 41: Fahrer fuhr mit überhöhter Geschwindigkeit; 42: Fahrer fuhr ohne Beachtung der Geschwindigkeitsbegrenzungen; 43: Fahrer fuhr gegen den Verkehr; 44: Fahrer überholte das Fahrzeug im Gang; 45: Manövrierte; 46: Manövriert, ohne die Ampel- oder Agentensignale zu beachten; 47: Fahrer kam aus der Einfahrt, ohne Vorsicht walten zu lassen; 48: Fahrer kam von der Fahrbahn ab und stieß mit dem Bauern zusammen; 49: Er räumte dem Fußgänger an den entsprechenden Übergängen keinen Vorrang ein; 50: Er überholte ein Fahrzeug, das angehalten hatte, um den Übergang zu ermöglichen; 51: Fahrer stieß mit der Ladung gegen den Fußgänger; 52: Fahrer überholte eine Straßenbahn ungleichmäßig an der Haltestelle; 60: Der Fahrer fuhr regelmäßig; 61: Der Fahrer fuhr abgelenkt oder unentschlossen; 62: Der Fahrer fuhr, ohne einen Sicherheitsabstand einzuhalten; 63: Der Fahrer fuhr gegen den Verkehr; 64: Der Fahrer fuhr mit überhöhter Geschwindigkeit; 65: Der Fahrer fuhr, ohne die Geschwindigkeitsbegrenzungen zu beachten; 66: Der Fahrer fuhr, ohne die Zeichen des Durchfahrts- oder Zufahrtsverbots zu beachten; 67: Fahrer überholte ein anderes Fahrzeug im Gang; 68: Fahrer überquerte unvorsichtig den Bahnübergang; 70: Verschütten mit Verschütten, um einen Aufprall zu vermeiden; 71: List mit Verschütten wegen abgelenkten Fahrens; 72: Listen mit Überschreitung der zulässigen Höchstgeschwindigkeit; 73: Fahrer bremste plötzlich mit Folge für den Transport; 74: Sturz einer Person aus dem Fahrzeug wegen: Öffnen der Tür; 75: Sturz einer Person aus dem Fahrzeug wegen: Absteigen aus dem fahrenden Fahrzeug; 76: Sturz von Personen aus dem Fahrzeug durch: Festhalten oder unsachgemäße Platzierung; 80: Versagen oder Ausfall der Bremse; 81: Bruch oder Ausfall der Lenkung; 82: Reifenplatzer oder übermäßige Abnutzung; 83: Fehlende oder unzureichende Scheinwerfer oder Positionslichter; 84: Fehlende oder unzureichende Blink- oder Bremslichtsignale; 85: Bruch von Teilen der Anhängerkupplung; 86: Mangelhafte Ausrüstung für den Gefahrguttransport; 87: Mangel an den für Fahrzeuge von körperlich Behinderten vorgeschriebenen Anpassungen; 88: Ablösen der Räder; 89: Fehlen oder Mangel an Sichtvorrichtungen für Fahrräder  . Model: [https://schema.org/Text](https://schema.org/Text)- `accidentLocation[string]`: Kurze Beschreibung, ob sich der Unfall in einem städtischen oder außerstädtischen Gebiet ereignet hat. 0: Regional innerhalb des Stadtgebiets 1: Städtische Straße in der Stadt 2: Provinzstraße innerhalb der Stadt 3: Staatsstraße innerhalb des Dorfes 4: Außerstädtische Straße 5: Provinzstraße 6: Staatsstraße 7: Autobahn 8: Anderer Weg 9: Regionalstraße  - `accidentStatisticalDate[object]`: Ungefährer Zeitpunkt des Unfalls (häufig werden aus der ursprünglichen Unfalldatenquelle nur statistische Attribute wie Jahreszeit, Wochentag und ungefähre Uhrzeit gemeldet)  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `accidentType[array]`: Schnelle Klassifizierung dieses Verkehrsunfalls. 1: Frontalaufprall; 2: Frontal-Seitenaufprall; 3: Seitenaufprall; 4: Kollision; 5: Fußgängeraufprall; 6: Aufprall auf ein stehendes oder angehaltenes Fahrzeug; 7: Aufprall auf ein geparktes Fahrzeug; 8: Aufprall auf ein Hindernis; 9: Aufprall auf einen Zug; 10: Auslaufen, Ausrutschen; 11: Unfall durch plötzliches Bremsen; 12: Unfall durch Sturz aus einem Fahrzeug;.  - `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `localId[string]`: Eindeutiger Bezeichner aus dem Quelldatensatz  . Model: [https://schema.org/Text](https://schema.org/Text)- `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels.  - `numPassengersDead[integer]`: Anzahl der Fahrzeuginsassen, die bei dem Unfall ums Leben kamen  . Model: [https://schema.org/Number](https://schema.org/Number)- `numPassengersInjured[integer]`: Anzahl der durch den Unfall verletzten Fahrzeuginsassen  . Model: [https://schema.org/Number](https://schema.org/Number)- `numPedestrianDead[integer]`: Anzahl der durch den Unfall getöteten Fußgänger  . Model: [https://schema.org/Number](https://schema.org/Number)- `numPedestrianInjured[integer]`: Anzahl der durch den Unfall verletzten Fußgänger  . Model: [https://schema.org/Number](https://schema.org/Number)- `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `pedestriansInvolved[boolean]`: Boolescher Wert zur Bestimmung, ob Fußgänger an den Unfällen beteiligt waren  - `roadClass[string]`:  Die Klassifizierung der Straße, auf der sich der Unfall ereignete  . Model: [https://wiki.openstreetmap.org/wiki/Key:highway](https://wiki.openstreetmap.org/wiki/Key:highway)- `roadIntersection[string]`: Kurze Beschreibung des Straßenabschnitts, auf dem sich der Unfall ereignet hat.   1: Kreuzung; 2: Kreisverkehr; 3: Gemeldete Kreuzung; 4: Kreuzung mit Ampel; 5: Nicht gemeldete Kreuzung; 6: Bahnübergang; 7: Gerade; 8: Kurve; 9: Bodenwelle, Engstelle; 10: Steigung; 11: Beleuchtete Galerie; 12: Unbeleuchtete Galerie;  - `roadPaving[string]`: Straßenbelag. 1: Gepflasterte Straße; 2: Grob gepflasterte Straße; 3: Ungepflasterte Straße;  - `roadSign[string]`: Kurze Beschreibung des Verkehrszeichens, an dem sich der Unfall ereignet hat. 1: Abwesend; 2: Senkrecht; 3: Waagerecht; 4: Senkrecht und waagerecht; 5: Vorübergehend durch Baustelle;  - `roadSurface[string]`: Kurze Beschreibung des Zustands der Straße zum Zeitpunkt des Unfalls. 1: Trocken; 2: Nass; 3: Glatt; 4: Gefroren; 5: Schneebedeckt;  - `roadTrunk[string]`: Kurze Beschreibung der Art des Straßenabschnitts, auf dem sich der Unfall ereignet hat. 1: Straßenabzweig; 2: Nebenabzweig; 3: Nebenabzweig; 4: Kreuzungsabzweig; 5: Straßenkreuzung; 6: Autobahneinfahrt links; 7: Autobahnfahrbahn rechts; 8: Autobahneinfahrt; 9: Autobahnausfahrt; 10: Autobahnknotenpunkt; 11: Autobahnstation; 12: Sonstige Fälle; 15: Außerortsstraße.  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `status[string]`: Status des Verkehrsunfalls. Enum:'archived, onGoing, solved'  . Model: [https://schema.org/Text](https://schema.org/Text)- `totalDeadPeopleWithin24Hours[integer]`: Anzahl der unmittelbar durch den Unfall verstorbenen Personen  . Model: [https://schema.org/Number](https://schema.org/Number)- `totalDeadPeopleWithin30Days[integer]`: Anzahl der Menschen, die an den Folgen des Unfalls gestorben sind  . Model: [https://schema.org/Number](https://schema.org/Number)- `totalInjured[integer]`: Gesamtzahl der durch den Unfall verletzten (nicht toten) Personen  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: NGSI-Entitätstyp. es muss RoadAccident sein  - `vehiclesInvolved[array]`: Liste der am Unfall beteiligten Fahrzeuge (und Fußgänger) 0 : Fußgänger 1 : Fahrrad 2 : landwirtschaftliches Fahrzeug 3 : Bus 4 : Kleinbus 5 : Auto 6 : Wohnwagen 7 : Straßenbahn 8 : Tankwagen 9 : AutoMitWohnwagen 10 : AutoMitAnhänger 11 : Lastkraftwagen 12 : Moped 13 : Tankwagen 14 : Motorrad 15 : MotorradMitAuto 16 : Motorroller 17 : Anhänger 18 : Lieferwagen 19 : Wohnwagen 20 : Bau- oder Wartungsfahrzeug 21 : Wagen 22 : Müllwagen 23 : Kehrmaschine 24 : Reinigungswagen  - `weakestSubject[string]`: Fahrzeug, das das schwächste am Unfall beteiligte Subjekt darstellt (normalerweise Fußgänger). 0 : Fußgänger 1 : Fahrrad 2 : Landwirtschaftsfahrzeug 3 : Bus 4 : Kleinbus 5 : Auto 6 : Wohnwagen 7 : Straßenbahn 8 : Tankwagen 9 : AutoMitWohnwagen 10 : AutoMitAnhänger 11 : Lastwagen 12 : Moped 13 : Tankwagen 14 : Motorrad 15 : MotorradMitWohnwagen 16 : Motorroller 17 : Anhänger 18 : Lieferwagen 19 : Wohnwagen 20 : Bau-oderWartungsfahrzeug 21 : Wagen 22 : Müllwagen 23 : Kehrmaschine 24 : Reinigungswagen  - `weatherConditions[array]`: Kurze Beschreibung der Wetterbedingungen während dieses Verkehrsunfalls. 0 : klarNacht 1 : sonnigTag 2 : leichtbewölkt 3 : teilweisebewölkt 4 : Nebel 5 : Hochnebel 6 : hoheWolken 7 : bewölkt 8 : starkbewölkt 9 : bedeckt 10 : leichterRegenSchauer 11 : Nieselregen 12 : leichterRegen 13 : starkerRegenSchauer 14 : starkerRegen 15 : GraupelSchauer 16 : Graupel 17 : HagelSchauer 18 : Hagel 19 : Schauer 20 : leichterSchnee 21 : Schnee 22 : starkerSchneeSchauer 23 : starkerSchnee 24 : GewitterSchauer 25 : Gewitter  <!-- /30-PropertiesList -->  
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
+- `accidentDate[date-time]`: Zeitpunkt des Unfalls  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `accidentDescription[array]`: Beschreibung dieses Verkehrsunfalls als eine Kombination von kodifizierten Situationen aufgelistet. 0: Nicht spezifizierter Umstand; 1: Der Fahrer ist regelmäßig gefahren, ohne zu wenden; 2: Der Fahrer ist abgelenkt oder unentschlossen gefahren; 3: Der Fahrer ist gefahren, ohne einen Sicherheitsabstand einzuhalten; 4: Der Fahrer ist gefahren, ohne dem von rechts kommenden Fahrzeug Vorrang einzuräumen; 5: Der Fahrer ist gefahren, ohne die Haltelinie zu beachten; 6: Der Fahrer ist gefahren, ohne das Vorfahrtsignal zu beachten; 7: Der Fahrer ist gegen den Verkehr gefahren; 8: Der Fahrer ist gefahren, ohne die Ampel- oder Agentensignale zu respektieren; 10: Der Fahrer ist gefahren, ohne die Zeichen des Durchfahrts- oder Zufahrtsverbots zu respektieren; 11: Der Fahrer ist mit überhöhter Geschwindigkeit gefahren; 12: Der Fahrer ist gefahren, ohne die Geschwindigkeitsbegrenzungen zu respektieren; 13: Der Fahrer ist mit den blendenden Lichtern gefahren, die andere Fahrzeuge kreuzen; 14: Der Fahrer ist regelmäßig nach rechts abgebogen; 15: Er ist unregelmäßig nach rechts abgebogen; 16: Der Fahrer ist regelmäßig nach links abgebogen; 17: Er ist unregelmäßig nach links abgebogen; 18: Der Fahrer ist an der Kreuzung vorbeigefahren; 20: Der Fahrer ist regelmäßig gefahren; 21: Der Fahrer ist abgelenkt oder unentschlossen gefahren; 22: Der Fahrer ist ohne Einhaltung eines Sicherheitsabstandes gefahren; 23: Der Fahrer ist mit überhöhter Geschwindigkeit gefahren; 24: Der Fahrer fuhr, ohne die Geschwindigkeitsbegrenzungen zu beachten; 25: Er fuhr nicht in der Nähe des rechten Fahrbahnrandes; 26: Der Fahrer fuhr gegen den Verkehr; 27: Der Fahrer fuhr, ohne die Zeichen des Durchfahrts- oder Zufahrtsverbots zu beachten; 28: Der Fahrer fuhr mit den blendenden Lichtern, die andere Fahrzeuge kreuzen; 29: Der Fahrer überholte regelmäßig; 30: Er überholte unregelmäßig nach rechts; 31: Der Fahrer überholte in einer Kurve, auf einer Anhöhe oder bei unzureichender Sicht; 32: Er überholte ein Fahrzeug, das ein anderes überholte; 33: Der Fahrer überholte, ohne das entsprechende Verbotsschild zu beachten; 34: Er manövrierte im Abstieg oder in der Umkehr; 35: Der Fahrer manövrierte, um in den Verkehrsfluss zu gelangen; 36: Er manövrierte, um nach links abzubiegen (Privatdurchfahrt, Verteiler); 37: Fahrer manövrierte regelmäßig, um anzuhalten oder umzukehren; 38: Fahrer manövrierte unregelmäßig, um anzuhalten oder umzukehren; 39: Es gesellten sich andere unregelmäßige Zweiräder dazu; 40: Fahrer fuhr regelmäßig; 41: Fahrer fuhr mit überhöhter Geschwindigkeit; 42: Fahrer fuhr, ohne die Geschwindigkeitsbegrenzungen zu beachten; 43: Fahrer fuhr gegen den Verkehr; 44: Fahrer überholte das Fahrzeug im Gang; 45: Manövrierte; 46: Manövriert, ohne die Ampel- oder Agentensignale zu beachten; 47: Fahrer kam aus der Einfahrt, ohne Vorsicht walten zu lassen; 48: Fahrer kam von der Fahrbahn ab und stieß mit dem Bauern zusammen; 49: Er räumte dem Fußgänger an den entsprechenden Übergängen keinen Vorrang ein; 50: Er überholte ein Fahrzeug, das angehalten hatte, um den Übergang zu ermöglichen; 51: Fahrer stieß mit der Ladung gegen den Fußgänger; 52: Fahrer überholte eine Straßenbahn ungleichmäßig an der Haltestelle; 60: Der Fahrer fuhr regelmäßig; 61: Der Fahrer fuhr abgelenkt oder unentschlossen; 62: Der Fahrer fuhr, ohne einen Sicherheitsabstand einzuhalten; 63: Der Fahrer fuhr gegen den Verkehr; 64: Der Fahrer fuhr mit überhöhter Geschwindigkeit; 65: Der Fahrer fuhr, ohne die Geschwindigkeitsbegrenzungen zu beachten; 66: Der Fahrer fuhr, ohne die Verbotsschilder für die Durchfahrt oder den Zugang zu beachten; 67: Fahrer überholte ein anderes Fahrzeug im Gang; 68: Fahrer überquerte unvorsichtig den Bahnübergang; 70: Verschütten mit Verschütten, um Aufprall zu vermeiden; 71: List mit Verschütten wegen abgelenkten Fahrens; 72: Listen mit Überschreitung der zulässigen Höchstgeschwindigkeit; 73: Fahrer bremste plötzlich mit Folge für den Transport; 74: Sturz einer Person aus dem Fahrzeug wegen: Öffnen der Tür; 75: Sturz einer Person aus dem Fahrzeug wegen: Absteigen aus dem fahrenden Fahrzeug; 76: Sturz von Personen aus dem Fahrzeug durch: Festhalten oder unsachgemäße Platzierung; 80: Versagen oder Ausfall der Bremse; 81: Bruch oder Ausfall der Lenkung; 82: Reifenplatzer oder übermäßige Abnutzung; 83: Fehlende oder unzureichende Scheinwerfer oder Positionslichter; 84: Fehlende oder unzureichende Blink- oder Bremslichtsignale; 85: Bruch von Teilen der Anhängerkupplung; 86: Mangelhafte Ausrüstung für die Beförderung gefährlicher Güter; 87: Mangel an den für Fahrzeuge von körperlich Behinderten vorgeschriebenen Anpassungen; 88: Ablösen der Räder; 89: Fehlen oder Mangel an Sichtvorrichtungen für Fahrräder  . Model: [https://schema.org/Text](https://schema.org/Text)- `accidentLocation[string]`: Kurze Beschreibung, ob sich der Unfall in einem städtischen oder außerstädtischen Gebiet ereignet hat. 0: Regional innerhalb des Stadtgebiets 1: Städtische Straße in der Stadt 2: Provinzstraße innerhalb der Stadt 3: Staatsstraße innerhalb des Dorfes 4: Außerstädtische Straße 5: Provinzstraße 6: Staatsstraße 7: Autobahn 8: Anderer Weg 9: Regionalstraße  - `accidentStatisticalDate[object]`: Ungefährer Zeitpunkt des Unfalls (häufig werden aus der ursprünglichen Unfalldatenquelle nur statistische Attribute wie Jahreszeit, Wochentag und ungefähre Uhrzeit gemeldet)  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)	- `hour`:     
+	- `quarter`:     
+	- `weekday[string]`: Wochentage    
+- `accidentType[array]`: Schnelle Klassifizierung dieses Verkehrsunfalls. 1: Frontalaufprall; 2: Frontal-Seitenaufprall; 3: Seitenaufprall; 4: Kollision; 5: Fußgängeraufprall; 6: Aufprall auf ein stehendes oder angehaltenes Fahrzeug; 7: Aufprall auf ein geparktes Fahrzeug; 8: Aufprall auf ein Hindernis; 9: Aufprall auf einen Zug; 10: Auslaufen, Ausrutschen; 11: Unfall durch plötzliches Bremsen; 12: Unfall durch Sturz aus einem Fahrzeug;.  - `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Das Land. Zum Beispiel, Spanien  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: Die Ortschaft, in der sich die Adresse befindet, und die in der Region liegt  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: Die Region, in der sich der Ort befindet, und die auf dem Land liegt  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Ein Bezirk ist eine Art von Verwaltungseinheit, die in einigen Ländern von der lokalen Regierung verwaltet wird.    
+	- `postOfficeBoxNumber[string]`: Die Postfachnummer für Postfachadressen. Zum Beispiel, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: Die Postleitzahl. Zum Beispiel, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: Die Straßenanschrift  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit  - `dateCreated[date-time]`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen  - `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben  - `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `localId[string]`: Eindeutiger Bezeichner aus dem Quelldatensatz  . Model: [https://schema.org/Text](https://schema.org/Text)- `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels  - `numPassengersDead[number]`: Anzahl der Fahrzeuginsassen, die bei dem Unfall ums Leben gekommen sind  . Model: [https://schema.org/Number](https://schema.org/Number)- `numPassengersInjured[number]`: Anzahl der durch den Unfall verletzten Fahrzeuginsassen  . Model: [https://schema.org/Number](https://schema.org/Number)- `numPedestrianDead[number]`: Anzahl der durch den Unfall getöteten Fußgänger  . Model: [https://schema.org/Number](https://schema.org/Number)- `numPedestrianInjured[number]`: Anzahl der durch den Unfall verletzten Fußgänger  . Model: [https://schema.org/Number](https://schema.org/Number)- `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `pedestriansInvolved[boolean]`: Boolescher Wert zur Bestimmung, ob Fußgänger an den Unfällen beteiligt waren  - `roadClass[string]`:  Die Klassifizierung der Straße, auf der sich der Unfall ereignete  . Model: [https://wiki.openstreetmap.org/wiki/Key:highway](https://wiki.openstreetmap.org/wiki/Key:highway)- `roadIntersection[string]`: Kurze Beschreibung des Straßenabschnitts, auf dem sich der Unfall ereignet hat.   1: Kreuzung; 2: Kreisverkehr; 3: Gemeldete Kreuzung; 4: Kreuzung mit Ampel; 5: Nicht gemeldete Kreuzung; 6: Bahnübergang; 7: Gerade; 8: Kurve; 9: Bodenwelle, Engstelle; 10: Steigung; 11: Beleuchtete Galerie; 12: Unbeleuchtete Galerie;  - `roadPaving[string]`: Straßenbelag. 1: Gepflasterte Straße; 2: Grob gepflasterte Straße; 3: Ungepflasterte Straße;  - `roadSign[string]`: Kurze Beschreibung des Verkehrszeichens, an dem sich der Unfall ereignet hat. 1: Abwesend; 2: Senkrecht; 3: Waagerecht; 4: Senkrecht und waagerecht; 5: Vorübergehend durch Baustelle;  - `roadSurface[string]`: Kurze Beschreibung des Zustands der Straße zum Zeitpunkt des Unfalls. 1: Trocken; 2: Nass; 3: Glatt; 4: Gefroren; 5: Schneebedeckt;  - `roadTrunk[string]`: Kurze Beschreibung der Art des Straßenabschnitts, auf dem sich der Unfall ereignet hat. 1: Straßenabzweig; 2: Nebenabzweig; 3: Nebenabzweig; 4: Kreuzungsabzweig; 5: Straßenkreuzung; 6: Autobahneinfahrt links; 7: Autobahnfahrbahn rechts; 8: Autobahneinfahrt; 9: Autobahnausfahrt; 10: Autobahnknotenpunkt; 11: Autobahnstation; 12: Sonstige Fälle; 15: Außerortsstraße  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `status[string]`: Status des Verkehrsunfalls. Enum:'archived, onGoing, solved'  . Model: [https://schema.org/Text](https://schema.org/Text)- `totalDeadPeopleWithin24Hours[number]`: Anzahl der unmittelbar durch den Unfall verstorbenen Personen  . Model: [https://schema.org/Number](https://schema.org/Number)- `totalDeadPeopleWithin30Days[number]`: Anzahl der Menschen, die an den Folgen des Unfalls gestorben sind  . Model: [https://schema.org/Number](https://schema.org/Number)- `totalInjured[number]`: Gesamtzahl der durch den Unfall verletzten (nicht toten) Personen  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: NGSI-Entitätstyp. es muss RoadAccident sein  - `vehiclesInvolved[array]`: Liste der am Unfall beteiligten Fahrzeuge (und Fußgänger) 0 : Fußgänger 1 : Fahrrad 2 : landwirtschaftliches Fahrzeug 3 : Bus 4 : Kleinbus 5 : Auto 6 : Wohnwagen 7 : Straßenbahn 8 : Tankwagen 9 : AutoMitWohnwagen 10 : AutoMitAnhänger 11 : Lastkraftwagen 12 : Moped 13 : Tankwagen 14 : Motorrad 15 : MotorradMitAuto 16 : Motorroller 17 : Anhänger 18 : Lieferwagen 19 : Wohnwagen 20 : Bau- oder Wartungsfahrzeug 21 : Wagen 22 : Müllwagen 23 : Kehrmaschine 24 : Reinigungswagen  - `weakestSubject[string]`: Fahrzeug, das das schwächste am Unfall beteiligte Subjekt darstellt (normalerweise Fußgänger). 0 : Fußgänger 1 : Fahrrad 2 : Landwirtschaftsfahrzeug 3 : Bus 4 : Kleinbus 5 : Auto 6 : Wohnwagen 7 : Straßenbahn 8 : Tankwagen 9 : AutoMitWohnwagen 10 : AutoMitAnhänger 11 : Lastwagen 12 : Moped 13 : Tankwagen 14 : Motorrad 15 : MotorradMitWohnwagen 16 : Motorroller 17 : Anhänger 18 : Lieferwagen 19 : Wohnwagen 20 : Bau-oderWartungsfahrzeug 21 : Wagen 22 : Müllwagen 23 : Kehrmaschine 24 : Reinigungswagen  - `weatherConditions[array]`: Kurze Beschreibung der Wetterbedingungen während dieses Verkehrsunfalls. 0 : klarNacht 1 : sonnigTag 2 : leichtbewölkt 3 : teilweisebewölkt 4 : Nebel 5 : Hochnebel 6 : hoheWolken 7 : bewölkt 8 : starkbewölkt 9 : bedeckt 10 : leichterRegenSchauer 11 : Nieselregen 12 : leichterRegen 13 : starkerRegenSchauer 14 : starkerRegen 15 : GraupelSchauer 16 : Graupel 17 : HagelSchauer 18 : Hagel 19 : Schauer 20 : leichterSchnee 21 : Schnee 22 : starkerSchneeSchauer 23 : starkerSchnee 24 : GewitterSchauer 25 : Gewitter  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
 - `id`  - `status`  - `type`  <!-- /35-RequiredProperties -->  
@@ -30,10 +40,10 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 RoadAccident:    
-  description: 'A road accident description with causes and aftermath. First version developed in Synchronicity project'    
+  description: A road accident description with causes and aftermath. First version developed in Synchronicity project    
   properties:    
     accidentDate:    
-      description: 'Datetime of the accident'    
+      description: Datetime of the accident    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -163,7 +173,7 @@ RoadAccident:
         quarter:    
           type: integer    
         weekday:    
-          description: 'Week days'    
+          description: Week days    
           enum:    
             - Monday    
             - Tuesday    
@@ -200,78 +210,110 @@ RoadAccident:
       x-ngsi:    
         type: Property    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &roadaccident_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     localId:    
-      description: 'Unique identifier from the source data set'    
+      description: Unique identifier from the source data set    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -279,7 +321,7 @@ RoadAccident:
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -298,9 +340,11 @@ RoadAccident:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -322,9 +366,11 @@ RoadAccident:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -348,9 +394,11 @@ RoadAccident:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -371,9 +419,11 @@ RoadAccident:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -397,9 +447,11 @@ RoadAccident:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -425,53 +477,69 @@ RoadAccident:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     numPassengersDead:    
-      description: 'Number of vehicle''s passengers dead because the accident'    
+      description: Number of vehicle's passengers dead because the accident    
       minimum: 0    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     numPassengersInjured:    
-      description: 'Number of vehicle''s passengers injured because the accident'    
+      description: Number of vehicle's passengers injured because the accident    
       minimum: 0    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     numPedestrianDead:    
-      description: 'Number of pedestrians dead because the accident'    
+      description: Number of pedestrians dead because the accident    
       minimum: 0    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     numPedestrianInjured:    
-      description: 'Number of pedestrians injured because the accident'    
+      description: Number of pedestrians injured because the accident    
       minimum: 0    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *roadaccident_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     pedestriansInvolved:    
-      description: 'Boolean to determine if pedestrians were involved in the accidents'    
+      description: Boolean to determine if pedestrians were involved in the accidents    
       type: boolean    
       x-ngsi:    
         type: Property    
@@ -531,7 +599,7 @@ RoadAccident:
       x-ngsi:    
         type: Property    
     roadTrunk:    
-      description: 'Brief description of type of trunk of the road where the accident took place. 1: Road branch; 2: Secondary branch; 3: Minor branch; 4: Junction branch; 5: Road junction; 6: Motorway left lane; 7: Highway carriageway right; 8: Motorway junction entrance; 9: Highway exit junction; 10: Highway junction trunk; 11: Highway station; 12: Other cases; 15: Extra urban road.'    
+      description: 'Brief description of type of trunk of the road where the accident took place. 1: Road branch; 2: Secondary branch; 3: Minor branch; 4: Junction branch; 5: Road junction; 6: Motorway left lane; 7: Highway carriageway right; 8: Motorway junction entrance; 9: Highway exit junction; 10: Highway junction trunk; 11: Highway station; 12: Other cases; 15: Extra urban road'    
       enum:    
         - 1    
         - 2    
@@ -550,7 +618,7 @@ RoadAccident:
       x-ngsi:    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -562,7 +630,7 @@ RoadAccident:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
@@ -577,28 +645,28 @@ RoadAccident:
         model: https://schema.org/Text    
         type: Property    
     totalDeadPeopleWithin24Hours:    
-      description: 'Number of people dead directly because the accident'    
+      description: Number of people dead directly because the accident    
       minimum: 0    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     totalDeadPeopleWithin30Days:    
-      description: 'Number of people dead because the aftermath of the accident'    
+      description: Number of people dead because the aftermath of the accident    
       minimum: 0    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     totalInjured:    
-      description: 'total number of people injured (not dead) because the accident'    
+      description: total number of people injured (not dead) because the accident    
       minimum: 0    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     type:    
-      description: 'NGSI Entity type. it has to be RoadAccident'    
+      description: NGSI Entity type. it has to be RoadAccident    
       enum:    
         - RoadAccident    
       type: string    
@@ -708,7 +776,7 @@ RoadAccident:
     - status    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/RoadAccident/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/RoadAccident/schema.json    
   x-model-tags: ""    
@@ -961,9 +1029,7 @@ RoadAccident:
   },  
   "pedestriansInvolved": {  
     "type": "Property",  
-    "value": [  
-      "true"  
-    ]  
+    "value": true  
   },  
   "vehiclesInvolved": {  
     "type": "Property",  
@@ -1012,203 +1078,84 @@ RoadAccident:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:RoadAccident:id:ORHW:45620815",  
-    "type": "RoadAccident",  
-    "accidentDate": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2021-03-12T13:59:36Z"  
-        }  
-    },  
-    "accidentDescription": {  
-        "type": "Property",  
-        "value": [  
-            "23",  
-            "46"  
-        ]  
-    },  
-    "accidentLocation": {  
-        "type": "Property",  
-        "value": "5"  
-    },  
-    "accidentStatisticalDate": {  
-        "type": "Property",  
-        "value": {  
-            "year": 2021,  
-            "quarter": 1,  
-            "weekday": "Friday",  
-            "hour": 4  
-        }  
-    },  
-    "accidentType": {  
-        "type": "Property",  
-        "value": [  
-            "10",  
-            "6"  
-        ]  
-    },  
-    "address": {  
-        "type": "Property",  
-        "value": {  
-            "streetAddress": "FranklinStrasse",  
-            "addressLocality": "Berlin",  
-            "addressRegion": "Berlin",  
-            "addressCountry": "Germany",  
-            "postalCode": "10387",  
-            "postOfficeBoxNumber": "",  
-            "areaServed": "worldwide."  
-        }  
-    },  
-    "alternateName": {  
-        "type": "Property",  
-        "value": "Other name."  
-    },  
-    "areaServed": {  
-        "type": "Property",  
-        "value": "worldwide"  
-    },  
-    "dataProvider": {  
-        "type": "Property",  
-        "value": "Municipality."  
-    },  
-    "dateCreated": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2018-06-23T04:19:24Z"  
-        }  
-    },  
-    "dateModified": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2020-10-29T08:36:40Z"  
-        }  
-    },  
-    "description": {  
-        "type": "Property",  
-        "value": "Clash in the middle of a traffic light"  
-    },  
-    "localId": {  
-        "type": "Property",  
-        "value": "20210312-A1."  
-    },  
-    "location": {  
-        "type": "Property",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                -56.6404505,  
-                168.370658  
-            ]  
-        }  
-    },  
-    "name": {  
-        "type": "Property",  
-        "value": "Name of the element of the accident."  
-    },  
-    "numPassengersDead": {  
-        "type": "Property",  
-        "value": 1  
-    },  
-    "numPassengersInjured": {  
-        "type": "Property",  
-        "value": 1  
-    },  
-    "numPedestrianDead": {  
-        "type": "Property",  
-        "value": 0  
-    },  
-    "numPedestrianInjured": {  
-        "type": "Property",  
-        "value": 1  
-    },  
-    "owner": {  
-        "type": "Property",  
-        "value": [  
-            "urn:ngsi-ld:RoadAccident:items:SUUU:18395806",  
-            "urn:ngsi-ld:RoadAccident:items:GVOF:30958855"  
-        ]  
-    },  
-    "pedestriansInvolved": {  
-        "type": "Property",  
-        "value": [  
-            "true"  
-        ]  
-    },  
-    "roadClass": {  
-        "type": "Property",  
-        "value": "Motorway."  
-    },  
-    "roadIntersection": {  
-        "type": "Property",  
-        "value": "8"  
-    },  
-    "roadPaving": {  
-        "type": "Property",  
-        "value": "2"  
-    },  
-    "roadSign": {  
-        "type": "Property",  
-        "value": "5"  
-    },  
-    "roadSurface": {  
-        "type": "Property",  
-        "value": "2"  
-    },  
-    "roadTrunk": {  
-        "type": "Property",  
-        "value": "12"  
-    },  
-    "seeAlso": {  
-        "type": "Property",  
-        "value": [  
-            "urn:ngsi-ld:RoadAccident:items:ESLS:37894243",  
-            "urn:ngsi-ld:RoadAccident:items:ZNUH:87936284"  
-        ]  
-    },  
-    "source": {  
-        "type": "Property",  
-        "value": "To be defined"  
-    },  
-    "status": {  
-        "type": "Property",  
-        "value": "onGoing"  
-    },  
-    "totalDeadPeopleWithin24Hours": {  
-        "type": "Property",  
-        "value": 0  
-    },  
-    "totalDeadPeopleWithin30Days": {  
-        "type": "Property",  
-        "value": 0  
-    },  
-    "totalInjured": {  
-        "type": "Property",  
-        "value": 2  
-    },  
-    "vehiclesInvolved": {  
-        "type": "Property",  
-        "value": [  
-            "21",  
-            "6"  
-        ]  
-    },  
-    "weakestSubject": {  
-        "type": "Property",  
-        "value": "20"  
-    },  
-    "weatherConditions": {  
-        "type": "Property",  
-        "value": [  
-            "10",  
-            "20"  
-        ]  
-    },  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+  "id": "urn:ngsi-ld:RoadAccident:id:ORHW:45620815",  
+  "type": "RoadAccident",  
+  "accidentDate": "2021-03-12T13:59:36Z",  
+  "accidentDescription": [  
+    "23",  
+    "46"  
+  ],  
+  "accidentLocation": "5",  
+  "accidentStatisticalDate": {  
+    "year": 2021,  
+    "quarter": 1,  
+    "weekday": "Friday",  
+    "hour": 4  
+  },  
+  "accidentType": [  
+    "10",  
+    "6"  
+  ],  
+  "address": {  
+    "streetAddress": "FranklinStrasse",  
+    "addressLocality": "Berlin",  
+    "addressRegion": "Berlin",  
+    "addressCountry": "Germany",  
+    "postalCode": "10387",  
+    "postOfficeBoxNumber": "",  
+    "areaServed": "worldwide."  
+  },  
+  "alternateName": "Other name.",  
+  "areaServed": "worldwide",  
+  "dataProvider": "Municipality.",  
+  "dateCreated": "2018-06-23T04:19:24Z",  
+  "dateModified": "2020-10-29T08:36:40Z",  
+  "description": "Clash in the middle of a traffic light",  
+  "localId": "20210312-A1.",  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      -56.6404505,  
+      168.370658  
     ]  
+  },  
+  "name": "Name of the element of the accident.",  
+  "numPassengersDead": 1,  
+  "numPassengersInjured": 1,  
+  "numPedestrianDead": 0,  
+  "numPedestrianInjured": 1,  
+  "owner": [  
+    "urn:ngsi-ld:RoadAccident:items:SUUU:18395806",  
+    "urn:ngsi-ld:RoadAccident:items:GVOF:30958855"  
+  ],  
+  "pedestriansInvolved": true,  
+  "roadClass": "Motorway.",  
+  "roadIntersection": "8",  
+  "roadPaving": "2",  
+  "roadSign": "5",  
+  "roadSurface": "2",  
+  "roadTrunk": "12",  
+  "seeAlso": [  
+    "urn:ngsi-ld:RoadAccident:items:ESLS:37894243",  
+    "urn:ngsi-ld:RoadAccident:items:ZNUH:87936284"  
+  ],  
+  "source": "To be defined",  
+  "status": "onGoing",  
+  "totalDeadPeopleWithin24Hours": 0,  
+  "totalDeadPeopleWithin30Days": 0,  
+  "totalInjured": 2,  
+  "vehiclesInvolved": [  
+    "21",  
+    "6"  
+  ],  
+  "weakestSubject": "20",  
+  "weatherConditions": [  
+    "10",  
+    "20"  
+  ],  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
@@ -1217,86 +1164,201 @@ RoadAccident:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:RoadAccident:id:ORHW:45620815",  
-    "type": "RoadAccident",  
-    "accidentDate": "2021-03-12T13:59:36Z",  
-    "accidentDescription": [  
-        "23",  
-        "46"  
-    ],  
-    "accidentLocation": "5",  
-    "accidentStatisticalDate": {  
-        "year": 2021,  
-        "quarter": 1,  
-        "weekday": "Friday",  
-        "hour": 4  
-    },  
-    "accidentType": [  
-        "10",  
-        "6"  
-    ],  
-    "address": {  
-        "streetAddress": "FranklinStrasse",  
-        "addressLocality": "Berlin",  
-        "addressRegion": "Berlin",  
-        "addressCountry": "Germany",  
-        "postalCode": "10387",  
-        "postOfficeBoxNumber": "",  
-        "areaServed": "worldwide."  
-    },  
-    "alternateName": "Other name.",  
-    "areaServed": "worldwide",  
-    "dataProvider": "Municipality.",  
-    "dateCreated": "2018-06-23T04:19:24Z",  
-    "dateModified": "2020-10-29T08:36:40Z",  
-    "description": "Clash in the middle of a traffic light",  
-    "localId": "20210312-A1.",  
-    "location": {  
-        "type": "Point",  
-        "coordinates": [  
-            -56.6404505,  
-            168.370658  
-        ]  
-    },  
-    "name": "Name of the element of the accident.",  
-    "numPassengersDead": 1,  
-    "numPassengersInjured": 1,  
-    "numPedestrianDead": 0,  
-    "numPedestrianInjured": 1,  
-    "owner": [  
-        "urn:ngsi-ld:RoadAccident:items:SUUU:18395806",  
-        "urn:ngsi-ld:RoadAccident:items:GVOF:30958855"  
-    ],  
-    "pedestriansInvolved": [  
-        "true"  
-    ],  
-    "roadClass": "Motorway.",  
-    "roadIntersection": "8",  
-    "roadPaving": "2",  
-    "roadSign": "5",  
-    "roadSurface": "2",  
-    "roadTrunk": "12",  
-    "seeAlso": [  
-        "urn:ngsi-ld:RoadAccident:items:ESLS:37894243",  
-        "urn:ngsi-ld:RoadAccident:items:ZNUH:87936284"  
-    ],  
-    "source": "To be defined",  
-    "status": "onGoing",  
-    "totalDeadPeopleWithin24Hours": 0,  
-    "totalDeadPeopleWithin30Days": 0,  
-    "totalInjured": 2,  
-    "vehiclesInvolved": [  
-        "21",  
-        "6"  
-    ],  
-    "weakestSubject": "20",  
-    "weatherConditions": [  
-        "10",  
-        "20"  
-    ],  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+  "id": "urn:ngsi-ld:RoadAccident:id:ORHW:45620815",  
+  "type": "RoadAccident",  
+  "accidentDate": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2021-03-12T13:59:36Z"  
+    }  
+  },  
+  "accidentDescription": {  
+    "type": "Property",  
+    "value": [  
+      "23",  
+      "46"  
     ]  
+  },  
+  "accidentLocation": {  
+    "type": "Property",  
+    "value": "5"  
+  },  
+  "accidentStatisticalDate": {  
+    "type": "Property",  
+    "value": {  
+      "year": 2021,  
+      "quarter": 1,  
+      "weekday": "Friday",  
+      "hour": 4  
+    }  
+  },  
+  "accidentType": {  
+    "type": "Property",  
+    "value": [  
+      "10",  
+      "6"  
+    ]  
+  },  
+  "address": {  
+    "type": "Property",  
+    "value": {  
+      "streetAddress": "FranklinStrasse",  
+      "addressLocality": "Berlin",  
+      "addressRegion": "Berlin",  
+      "addressCountry": "Germany",  
+      "postalCode": "10387",  
+      "postOfficeBoxNumber": "",  
+      "areaServed": "worldwide."  
+    }  
+  },  
+  "alternateName": {  
+    "type": "Property",  
+    "value": "Other name."  
+  },  
+  "areaServed": {  
+    "type": "Property",  
+    "value": "worldwide"  
+  },  
+  "dataProvider": {  
+    "type": "Property",  
+    "value": "Municipality."  
+  },  
+  "dateCreated": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2018-06-23T04:19:24Z"  
+    }  
+  },  
+  "dateModified": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2020-10-29T08:36:40Z"  
+    }  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "Clash in the middle of a traffic light"  
+  },  
+  "localId": {  
+    "type": "Property",  
+    "value": "20210312-A1."  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -56.6404505,  
+        88.370658  
+      ]  
+    }  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Name of the element of the accident."  
+  },  
+  "numPassengersDead": {  
+    "type": "Property",  
+    "value": 1  
+  },  
+  "numPassengersInjured": {  
+    "type": "Property",  
+    "value": 1  
+  },  
+  "numPedestrianDead": {  
+    "type": "Property",  
+    "value": 0  
+  },  
+  "numPedestrianInjured": {  
+    "type": "Property",  
+    "value": 1  
+  },  
+  "owner": {  
+    "type": "Property",  
+    "value": [  
+      "urn:ngsi-ld:RoadAccident:items:SUUU:18395806",  
+      "urn:ngsi-ld:RoadAccident:items:GVOF:30958855"  
+    ]  
+  },  
+  "pedestriansInvolved": {  
+    "type": "Property",  
+    "value": true  
+  },  
+  "roadClass": {  
+    "type": "Property",  
+    "value": "Motorway."  
+  },  
+  "roadIntersection": {  
+    "type": "Property",  
+    "value": "8"  
+  },  
+  "roadPaving": {  
+    "type": "Property",  
+    "value": "2"  
+  },  
+  "roadSign": {  
+    "type": "Property",  
+    "value": "5"  
+  },  
+  "roadSurface": {  
+    "type": "Property",  
+    "value": "2"  
+  },  
+  "roadTrunk": {  
+    "type": "Property",  
+    "value": "12"  
+  },  
+  "seeAlso": {  
+    "type": "Property",  
+    "value": [  
+      "urn:ngsi-ld:RoadAccident:items:ESLS:37894243",  
+      "urn:ngsi-ld:RoadAccident:items:ZNUH:87936284"  
+    ]  
+  },  
+  "source": {  
+    "type": "Property",  
+    "value": "To be defined"  
+  },  
+  "status": {  
+    "type": "Property",  
+    "value": "onGoing"  
+  },  
+  "totalDeadPeopleWithin24Hours": {  
+    "type": "Property",  
+    "value": 0  
+  },  
+  "totalDeadPeopleWithin30Days": {  
+    "type": "Property",  
+    "value": 0  
+  },  
+  "totalInjured": {  
+    "type": "Property",  
+    "value": 2  
+  },  
+  "vehiclesInvolved": {  
+    "type": "Property",  
+    "value": [  
+      "21",  
+      "6"  
+    ]  
+  },  
+  "weakestSubject": {  
+    "type": "Property",  
+    "value": "20"  
+  },  
+  "weatherConditions": {  
+    "type": "Property",  
+    "value": [  
+      "10",  
+      "20"  
+    ]  
+  },  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details><!-- /80-Examples -->  

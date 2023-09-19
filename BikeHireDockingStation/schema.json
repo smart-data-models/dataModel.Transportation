@@ -57,23 +57,23 @@
                         "withIncidence",
                         "working"
                     ],
-                    "description": "Property. Status of the bike hire docking station. Enum:'working, outOfService, withIncidence, full, almostFull, empty, almostEmpty'. Model:'https://schema.org/Number'. Or any other application specific."
+                    "description": "Property. Status of the bike hire docking station. Enum:'working, outOfService, withIncidence, full, almostFull, empty, almostEmpty'. Model:'https://schema.org/Number'. Or any other application specific"
                 },
                 "provider": {
                     "type": "string",
-                    "description": "Property. Bike hire service provider. Model:'https://schema.org/provider'."
+                    "description": "Property. Bike hire service provider. Model:'https://schema.org/provider'"
                 },
                 "contactPoint": {
                     "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons/properties/contactPoint"
                 },
                 "stationName": {
                     "type": "string",
-                    "description": "Property. Model:'https://schema.org/Text'. The name of the bike hire docking station corresponding to this observation."
+                    "description": "Property. Model:'https://schema.org/Text'. The name of the bike hire docking station corresponding to this observation"
                 },
                 "mediaURL": {
                     "type": "string",
                     "format": "uri",
-                    "description": "Property. Model:'https://schema.org/Text'. URL providing further information of any image(s) or media of the complaint or place."
+                    "description": "Property. Model:'https://schema.org/Text'. URL providing further information of any image(s) or media of the complaint or place"
                 },
                 "agency_url": {
                     "type": "string",
@@ -86,12 +86,12 @@
                 },
                 "stationCode": {
                     "type": "string",
-                    "description": "Property. Model:'https://schema.org/Text'. The station number or station code of the bike hire docking station corresponding to the observation."
+                    "description": "Property. Model:'https://schema.org/Text'. The station number or station code of the bike hire docking station corresponding to the observation"
                 },
                 "observationDateTime": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. Model:'https://schema.org/Text'. Last reported time of observation."
+                    "description": "Property. Model:'https://schema.org/Text'. Last reported time of observation"
                 },
                 "agency_fare_url": {
                     "type": "string",

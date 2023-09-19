@@ -23,12 +23,20 @@
             "comment": "The geographic area where a service or offered item is provided"
         },
         {
+            "name": "battery",
+            "writable": true,
+            "displayName": "battery",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Property. The current percentage of battery left in case of an electric vehicle, or a device connected to the vehicle."
+        },
+        {
             "name": "bearing",
             "writable": true,
             "displayName": "bearing",
             "@type": "Property",
             "schema": "long",
-            "comment": "The current bearing of the fleet vehicle in degrees relative to North. The timestamp element of the attribute should indicate when the reading was obtained."
+            "comment": "Property. The current bearing of the fleet vehicle in degrees relative to North. The timestamp element of the attribute should indicate when the reading was obtained."
         },
         {
             "name": "dataProvider",
@@ -78,7 +86,7 @@
             "displayName": "inRestrictedArea",
             "@type": "Property",
             "schema": "boolean",
-            "comment": "Indicates if the vehicle is known to be in a restricted area at the time of the status update."
+            "comment": "Property. Indicates if the vehicle is known to be in a restricted area at the time of the status update."
         },
         {
             "name": "lastFuellingAmount",
@@ -86,7 +94,12 @@
             "displayName": "lastFuellingAmount",
             "@type": "Property",
             "schema": "long",
-            "comment": "The level of fuel added to the vehicle at the last fuelling. The timestamp element of the attribute should indicate when the vehicle was fuelled. Data to be recorded in Litres"
+            "comment": "Property. The level of fuel added to the vehicle at the last fuelling. The timestamp element of the attribute should indicate when the vehicle was fuelled. Data to be recorded in Litres. Units:'litres'"
+        },
+        {
+            "name": "lastKnownPosition",
+            "writable": true,
+            "displayName": "lastKnownPosition"
         },
         {
             "name": "lastKnownPositionUpdatedAt",
@@ -94,7 +107,12 @@
             "displayName": "lastKnownPositionUpdatedAt",
             "@type": "Property",
             "schema": "dateTime",
-            "comment": "The timestamp of the last known position update for the fleet vehicle."
+            "comment": "Property. The timestamp of the last known position update for the fleet vehicle."
+        },
+        {
+            "name": "location",
+            "writable": true,
+            "displayName": "location"
         },
         {
             "name": "mileageFromOdometer",
@@ -102,7 +120,7 @@
             "displayName": "mileageFromOdometer",
             "@type": "Property",
             "schema": "long",
-            "comment": "The total distance the fleet vehicle has travelled according to the on-board odometer in kilometres (unitCode KMT) or miles (unitCode SMI). See also Schema.org Vehicle/ mileageFromOdometer. The timestamp element records when the odometer reading was taken."
+            "comment": "Property. The total distance the fleet vehicle has travelled according to the on-board odometer in kilometres (unitCode KMT) or miles (unitCode SMI). See also Schema.org Vehicle/ mileageFromOdometer. The timestamp element records when the odometer reading was taken."
         },
         {
             "name": "name",
@@ -118,7 +136,7 @@
             "displayName": "restFuelAmount",
             "@type": "Property",
             "schema": "long",
-            "comment": "The level of fuel recorded when the vehicle was last at rest (i.e. stopped). The timestamp element of the attribute should indicate when the vehicle was last at rest. Data to be recorded in Litres."
+            "comment": "Property. The level of fuel recorded when the vehicle was last at rest (i.e. stopped). The timestamp element of the attribute should indicate when the vehicle was last at rest. Data to be recorded in Litres."
         },
         {
             "name": "seeAlso",
@@ -139,7 +157,7 @@
             "displayName": "speed",
             "@type": "Property",
             "schema": "long",
-            "comment": "The current speed of the fleet vehicle (km/h). The timestamp element of the attribute should indicate when the reading was obtained"
+            "comment": "Property. The current speed of the fleet vehicle (km/h). The timestamp element of the attribute should indicate when the reading was obtained. Units:'km/h'"
         },
         {
             "@type": "Telemetry",
@@ -170,6 +188,10 @@
                     "schema": "string"
                 },
                 {
+                    "name": "district",
+                    "schema": "string"
+                },
+                {
                     "name": "postOfficeBoxNumber",
                     "schema": "string"
                 },
@@ -180,13 +202,17 @@
                 {
                     "name": "streetAddress",
                     "schema": "string"
+                },
+                {
+                    "name": "streetNr",
+                    "schema": "string"
                 }
             ]
         },
         {
             "@type": "object",
             "name": "currentOperative",
-            "comment": "The current operative (e.g. driver) of the vehicle described as a Schema.org  person",
+            "comment": "Property. The current operative (e.g. driver) of the vehicle described as a Schema.org  person. Model:'https://schema.org/Person'",
             "displayName": "currentOperative",
             "fields": [
                 {
@@ -198,66 +224,6 @@
                     "schema": "string"
                 }
             ]
-        },
-        {
-            "@type": "Telemetry",
-            "name": "lastKnownPosition_Point",
-            "schema": "point"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "lastKnownPosition_LineString",
-            "schema": "lineString"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "lastKnownPosition_Polygon",
-            "schema": "polygon"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "lastKnownPosition_MultiPoint",
-            "schema": "multiPoint"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "lastKnownPosition_MultiLineString",
-            "schema": "multiLineString"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "lastKnownPosition_MultiPolygon",
-            "schema": "multiPolygon"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_Point",
-            "schema": "point"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_LineString",
-            "schema": "lineString"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_Polygon",
-            "schema": "polygon"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiPoint",
-            "schema": "multiPoint"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiLineString",
-            "schema": "multiLineString"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiPolygon",
-            "schema": "multiPolygon"
         },
         {
             "@type": "Telemetry",

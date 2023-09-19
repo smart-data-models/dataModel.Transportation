@@ -150,9 +150,7 @@
   },
   "pedestriansInvolved": {
     "type": "Property",
-    "value": [
-      "true"
-    ]
+    "value": true
   },
   "vehiclesInvolved": {
     "type": "Property",

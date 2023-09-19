@@ -22,13 +22,13 @@
     "value": "Antwerp"
   },
   "zonesServed": {
-    "type": "StructuredValue",
-    "value": {
+    "type": "array",
+    "value": [
+      {
       "type": "string",
-      "coordinates": [
-        "Antwerp"
-      ]
+      "value": "Antwerp"
     }
+  ]
   },
   "vehiclePlateNotRead": {
     "type": "Boolean",
@@ -37,21 +37,92 @@
   "observedVehicle": {
     "type": "StructuredValue",
     "value": {
-      "direction": "towards",
-      "speed": 50,
-      "brand": "Audi",
-      "model": "A3",
-      "color": "black",
-      "country": "BE",
-      "licensePlate": "1-ABC-123"
+      "direction": {
+        "type": "Text",
+        "value": "towards"
+      },
+      "speed": {
+        "type": "Number",
+        "value": 50
+      },
+      "brand": {
+        "type": "StructuredValue",
+        "value": {
+          "name": {
+            "type": "Text",
+            "value": "Audi"
+          },
+          "confidence": {
+            "type": "Number",
+            "value": 0.97
+          }
+        }
+      },
+      "model": {
+        "type": "StructuredValue",
+        "value": {
+          "name": {
+            "type": "Text",
+            "value": "A3"
+          },
+          "confidence": {
+            "type": "Number",
+            "value": 0.98
+          }
+        }
+      },
+      "color": {
+        "type": "StructuredValue",
+        "value": {
+          "name": {
+            "type": "Text",
+            "value": "black"
+          },
+          "confidence": {
+            "type": "Number",
+            "value": 0.95
+          }
+        }
+      },
+      "country": {
+        "type": "StructuredValue",
+        "value": {
+          "code": {
+            "type": "Text",
+            "value": "BE"
+          },
+          "confidence": {
+            "type": "Number",
+            "value": 0.95
+          }
+        }
+      },
+      "licensePlate": {
+        "type": "StructuredValue",
+        "value": {
+          "identifier": {
+            "type": "Text",
+            "value": "1-ABC-123"
+          },
+          "confidence": {
+            "type": "Number",
+            "value": 0.96
+          }
+        }
+      }
     }
   },
   "refImages": {
-    "type": "StructuredValue",
-    "value": {
-      "type": "s3://bucket/object-xxx-plate",
-      "contentType": "image/jpg",
-      "imageType": "anpr"
-    }
+    "type": "array",
+    "value": [
+      {
+        "type": "StructuredValue",
+        "value": {
+          "url": "s3://bucket/object-xxx-plate",
+          "contentType": "image/jpg",
+          "imageType": "anpr"
+        }
+      }
+    ]
   }
 }

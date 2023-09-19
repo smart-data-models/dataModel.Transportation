@@ -107,7 +107,7 @@
   "serviceProvided": {
     "type": "Property",
     "value": [
-      "gargabeCollection",
+      "garbageCollection",
       "wasteContainerCleaning"
     ]
   },

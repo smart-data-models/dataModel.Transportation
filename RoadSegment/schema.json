@@ -1,421 +1,421 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.4.1",
-  "modelTags": "IUDX",
-  "$id": "https://smart-data-models.github.io/dataModel.Transportation/RoadSegment/schema.json",
-  "title": "Smart Data Models - Transportation / Road Segment",
-  "description": "This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road.",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-    },
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-    },
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/PhysicalObject-Commons"
-    },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "RoadSegment"
-          ],
-          "description": "Property. NGSI Entity type. It has to be RoadSegment"
+    "$schema": "http://json-schema.org/schema#",
+    "$schemaVersion": "0.4.1",
+    "modelTags": "IUDX",
+    "$id": "https://smart-data-models.github.io/dataModel.Transportation/RoadSegment/schema.json",
+    "title": "Smart Data Models - Transportation / Road Segment",
+    "description": "This entity contains a harmonised geographic and contextual description of a road segment. A collection of road segments are used to describe a Road.",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
         },
-        "refRoad": {
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-              "description": "Property. Identifier format of any NGSI entity"
-            },
-            {
-              "type": "string",
-              "format": "uri",
-              "description": "Property. Identifier format of any NGSI entity"
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+        },
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/PhysicalObject-Commons"
+        },
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "RoadSegment"
+                    ],
+                    "description": "Property. NGSI Entity type. It has to be RoadSegment"
+                },
+                "refRoad": {
+                    "anyOf": [
+                        {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256,
+                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        }
+                    ],
+                    "description": "Relationship. Road to which this road segment belongs to"
+                },
+                "startPoint": {
+                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+                },
+                "endPoint": {
+                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+                },
+                "startKilometer": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. The kilometer number (measured from the road's start point) where this road segment starts. Model:'https://schema.org/Number'. "
+                },
+                "endKilometer": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. The kilometer number (measured from the road's start point) where this road segment ends. Model:'https://schema.org/Number'. "
+                },
+                "allowedVehicleType": {
+                    "type": "array",
+                    "description": "Property. Vehicle type(s) allowed to transit through this road segment. Model:'https://schema.org/Text'. Enum:'agriculturalVehicle, bicycle, bus, car, caravan, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, trailer, van, anyVehicle'. Allowed values: The following values defined by _VehicleTypeEnum_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/):",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "agriculturalVehicle",
+                            "bicycle",
+                            "bus",
+                            "car",
+                            "caravan",
+                            "carWithCaravan",
+                            "carWithTrailer",
+                            "constructionOrMaintenanceVehicle",
+                            "lorry",
+                            "moped",
+                            "motorcycle",
+                            "motorcycleWithSideCar",
+                            "motorscooter",
+                            "tanker",
+                            "trailer",
+                            "van",
+                            "anyVehicle"
+                        ]
+                    }
+                },
+                "totalLaneNumber": {
+                    "type": "number",
+                    "minimum": 1,
+                    "description": "Property. Total number of lanes offered by this road segment. Model:'https://schema.org/Number'"
+                },
+                "length": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Total length of this road segment in kilometers. Model:'https://schema.org/length'. Units:'Kilometer (Km)'"
+                },
+                "maximumAllowedSpeed": {
+                    "type": "number",
+                    "description": "Property. Maximum allowed speed plying the road segment. More restrictive limits might be applied to specific vehicle types (trucks, caravans, etc.). Model:'https://schema.org/Number'. Units:'Kilometer per hour (Km/h)'",
+                    "minimum": 0
+                },
+                "minimumAllowedSpeed": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Minimum allowed speed while transiting this road segment. Model:'https://schema.org/Number'. Units:'Kilometer per hour (Km/h)'"
+                },
+                "maximumAllowedHeight": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Maximum allowed height for vehicles transiting this road segment. Model:'https://schema.org/Number'. Units:'Meter (m)'. Model:'https://schema.org/height'"
+                },
+                "maximumAllowedWeight": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Maximum allowed weight for vehicles transiting this road segment. Model:'https://schema.org/Number'. Units:'Kilogram (Kg)'. Model:'https://schema.org/weight'"
+                },
+                "width": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Property. Road's segment width.. Model:'https://schema.org/Number'. Units:'Meter (m)'"
+                },
+                "laneUsage": {
+                    "type": "array",
+                    "description": "Property. This attribute can be used to convey specific parameters describing each lane. Model:'https://schema.org/Text'. It must contain a string per road segment lane. The element 0 of the array must contain the information of lane 1, and so on. Format of the referred string must be: <lane_direction>, <lane_minimumAllowedSpeed>, <lane_maximumAllowedSpeed>, <lane_maximumAllowedHeight>, <lane_maximumAllowedWeight>. <lane_direction> is a text string with the following allowed values: `forward`. The lane is currently used in the `forwards` direction. `backward`. The lane is currently used in the `backwards` direction. The only mandatory parameter is `lane_direction`. If not specified, the rest of parameters can be assumed to be equal to those specified at entity level",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "forward",
+                            "backward"
+                        ]
+                    }
+                },
+                "category": {
+                    "type": "array",
+                    "description": "Property. Allows to convey extra characteristics of a road segment. Model:'https://schema.org/Text'. Enum:'oneway, toll, link'.  `oneway`: Flags whether the road segment can only be used in one direction. If not present it means road segment can be used in both directions (forwards and backwards). See also [http://wiki.openstreetmap.org/wiki/Key:oneway](http://wiki.openstreetmap.org/wiki/Key:oneway). `toll` : Flags whether the road segment is under toll fees. `link` : Flags whether this road segment is an auxiliary link segment for exiting or entering a road. See [https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link). Any other value meaningful to an application",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "oneway",
+                            "toll",
+                            "link"
+                        ]
+                    }
+                },
+                "status": {
+                    "type": "string",
+                    "description": "Property. Specific driving conditions on the roadsegment. Use statusDescription for additional information. Enum: \u2018open, closed, limited\u2019.  `open`: the roadsegment can be used in full intended capacity, `closed`: no traffic is possible, e.g. due to roadworks, an open bridge or lock, or any other event preventing traffic. `limited`: traffic is possible, but not in the full capacity",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "open",
+                            "closed",
+                            "limited"
+                        ]
+                    }
+                },
+                "statusDescription": {
+                    "type": "string",
+                    "description": "Property. Additional information to the status attribute"
+                },
+                "dataDescriptor": {
+                    "anyOf": [
+                        {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256,
+                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        }
+                    ],
+                    "description": "Relationship. URI pointing to the data-descriptor entity"
+                },
+                "cyclePathMaterial": {
+                    "type": "string",
+                    "description": "Property. Construction material used for laying the cycle path on the sides of the road corresponding to this observation"
+                },
+                "carriagewayLength": {
+                    "type": "number",
+                    "description": "Property. Total length of the carriage way of the road segment corresponding to this observation"
+                },
+                "bridgeCount": {
+                    "type": "number",
+                    "description": "Property. Number of bridges in the road segment corresponding to this observation. Takes 0 (zero) as the value when the road segment has no bridges"
+                },
+                "pedestrianPathLeftHeight": {
+                    "type": "number",
+                    "description": "Property. Height of the walkway placed on the left edge of the road corresponding to this observation"
+                },
+                "totalPedestrianPathLength": {
+                    "type": "number",
+                    "description": "Property. Total length of the walkway present in the road corresponding to this observation"
+                },
+                "totalPedestrianPathWidth": {
+                    "type": "number",
+                    "description": "Property. Total width of the walkway present in the road corresponding to this observation"
+                },
+                "culvertCount": {
+                    "type": "number",
+                    "description": "Property. Number of culverts prevalent in the trace of the road corresponding to this observation"
+                },
+                "roadName": {
+                    "type": "string",
+                    "description": "Property. The name of the road corresponding to this observation"
+                },
+                "roadClass": {
+                    "type": "string",
+                    "description": "Property. The type of road corresponding to this observation. Enum: [OTHER_PUBLIC_ROAD, PRIVATE_ROAD, MINOR_CITY_ROAD, MAJOR_DISTRICT_ROAD, MAJOR_CITY_ROAD, NATIONAL_HIGHWAY, SERVICE_ROAD, STATE_HIGHWAY, OTHER_DISTRICT_ROAD, PORT_ROAD]",
+                    "enum": [
+                        "MAJOR_DISTRICT_ROAD",
+                        "MAJOR_CITY_ROAD",
+                        "MINOR_CITY_ROAD",
+                        "NATIONAL_HIGHWAY",
+                        "OTHER_DISTRICT_ROAD",
+                        "OTHER_PUBLIC_ROAD",
+                        "PORT_ROAD",
+                        "PRIVATE_ROAD",
+                        "SERVICE_ROAD",
+                        "STATE_HIGHWAY"
+                    ]
+                },
+                "medianHeight": {
+                    "type": "number",
+                    "description": "Property. Height of the median or central reservation in the road corresponding to this observation"
+                },
+                "roadWork": {
+                    "type": "string",
+                    "description": "Property. Reasons for the road work in case of urgent intervention. A combination of these values. Enum:'COLLAPSE, DERAILMENT, FIRE, FLOOD, GASLEAK, LANDSLIDE, OTHER, POWERCUT, ROCKFALL, SAGGING, WATERLEAK'",
+                    "enum": [
+                        "COLLAPSE",
+                        "DERAILMENT",
+                        "FIRE",
+                        "FLOOD",
+                        "GASLEAK",
+                        "LANDSLIDE",
+                        "OTHER",
+                        "POWERCUT",
+                        "ROCKFALL",
+                        "SAGGING",
+                        "WATERLEAK"
+                    ]
+                },
+                "roadId": {
+                    "type": "string",
+                    "description": "Property. Unique internal representation of the road corresponding to this observation"
+                },
+                "cyclePathRightWidth": {
+                    "type": "number",
+                    "description": "Property. Width of the cycle track on the right edge of the road corresponding to this observation"
+                },
+                "roadMaterial": {
+                    "type": "string",
+                    "description": "Property. The construction material used for laying the carriageway corresponding to this observation. For eg. concrete, earthen, tar etc"
+                },
+                "medianWidth": {
+                    "type": "number",
+                    "description": "Property. Width of the median or central reservation in the road corresponding to this observation"
+                },
+                "carriagewayWidth": {
+                    "type": "number",
+                    "description": "Property. Total width of the carriage way of the road segment corresponding to this observation"
+                },
+                "cyclePathRightHeight": {
+                    "type": "number",
+                    "description": "Property. Height of the cycle track on the right edge of the road corresponding to this observation"
+                },
+                "roadDirection": {
+                    "type": "string",
+                    "description": "Property. Represents the direction the road is heading to. Enum:' ['N, S, E, W'. The values N,S,E,W represent North,South,East,West respectively"
+                },
+                "medianLength": {
+                    "type": "number",
+                    "description": "Property. Length of the median or central reservation in the road corresponding to this observation"
+                },
+                "pedestrianPathMaterial": {
+                    "type": "string",
+                    "description": "Property. Construction material used for laying the walkway / footpath on the sides of the road corresponding to this observation"
+                },
+                "cyclePathLeftWidth": {
+                    "type": "number",
+                    "description": "Property. Width of the cycle track on the left edge of the road corresponding to this observation"
+                },
+                "maximumAllowedWidth": {
+                    "type": "number",
+                    "description": "Property. Maximum allowed width for vehicles using the entity corresponding to this observation"
+                },
+                "rightOfWayWidth": {
+                    "type": "number",
+                    "description": "Property. Right of Way (RoW) is the total land area available for the roadway. Its width accommodates for carriages way + other necessities + future extension, along the road's alignment"
+                },
+                "cyclePathLeftHeight": {
+                    "type": "number",
+                    "description": "Property. Height of the cycle track on the left edge of the road corresponding to this observation"
+                },
+                "pedestrianPathRightWidth": {
+                    "type": "number",
+                    "description": "Property. Width of the walkway placed on the right edge of the road corresponding to this observation"
+                },
+                "pedestrianPathLeftWidth": {
+                    "type": "number",
+                    "description": "Property. Width of the walkway placed on the left edge of the road corresponding to this observation"
+                },
+                "laneInfo": {
+                    "type": "object",
+                    "description": "Property. Describes the aspects of lanes of the road corresponding to this observation",
+                    "properties": {
+                        "laneId": {
+                            "type": "number",
+                            "description": "Property. Unique identification number of the lane corresponding to this observation"
+                        },
+                        "laneDirection": {
+                            "type": "string",
+                            "description": "Property. Describes the direction in which vehicles are plying on the lane corresponding to this observation. Enum:'FORWARD, BACKWARD, INBOUND, OUTBOUND, RIGHT, LEFT'",
+                            "enum": [
+                                "BACKWARD",
+                                "FORWARD",
+                                "INBOUND",
+                                "LEFT",
+                                "OUTBOUND",
+                                "RIGHT"
+                            ],
+                            "laneLength": {
+                                "type": "number",
+                                "description": "Property. Length of the lane corresponding to this observation"
+                            },
+                            "laneWidth": {
+                                "type": "number",
+                                "description": "Property. Width of the lane corresponding to this observation"
+                            }
+                        }
+                    }
+                },
+                "pedestrianPathPlacement": {
+                    "type": "string",
+                    "description": "Property. Describes the presence and placement of pedestrian along the road segment corresponding to this observation. Enum:'RIGHT, LEFT, BOTH, NOT_AVAILABLE'"
+                },
+                "pedestrianPathRightHeight": {
+                    "type": "number",
+                    "description": "Property. Height of the walkway placed on the right edge of the road corresponding to this observation"
+                },
+                "cyclePathPlacement": {
+                    "type": "string",
+                    "description": "Property. Describes the placement of cycle track along the road segment corresponding to this observation. Enum:' ['RIGHT, LEFT, BOTH, NOT_AVAILABLE'",
+                    "enum": [
+                        "BOTH",
+                        "LEFT",
+                        "NOT_AVAILABLE",
+                        "RIGHT"
+                    ]
+                },
+                "totalCyclePathWidth": {
+                    "type": "number",
+                    "description": "Property. Total width of the cycle track present in the road corresponding to this observation"
+                },
+                "agency_name": {
+                    "type": "string",
+                    "description": "Property. The agency_name field contains the full name of the agency or organisation responsible for maintenance of the entity under consideration. SameAs: 'agency_name' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)"
+                },
+                "municipalityInfo": {
+                    "type": "object",
+                    "description": "Property. Model:'https://schema.org/Text. Municipality information corresponding to this observation",
+                    "properties": {
+                        "district": {
+                            "type": "string",
+                            "description": "Property. Model:'https://schema.org/Text'. District name corresponding to this observation"
+                        },
+                        "ulbName": {
+                            "type": "string",
+                            "description": "Property. Model:'https://schema.org/Text'. Name of the Urban Local Body corresponding to this observation"
+                        },
+                        "cityId": {
+                            "type": "string",
+                            "description": "Property. Model:'https://schema.org/Text'. City ID corresponding to this observation"
+                        },
+                        "wardId": {
+                            "type": "string",
+                            "description": "Property. Model:'https://schema.org/Text'. Ward ID corresponding to this observation"
+                        },
+                        "stateName": {
+                            "type": "string",
+                            "description": "Property. Model:'https://schema.org/Text'. Name of the state corresponding to this observation"
+                        },
+                        "cityName": {
+                            "type": "string",
+                            "description": "Property. Model:'https://schema.org/Text'. City name corresponding to this observation"
+                        },
+                        "zoneName": {
+                            "type": "string",
+                            "description": "Property. Model:'https://schema.org/Text'. Zone name corresponding to this observation"
+                        },
+                        "zoneId": {
+                            "type": "string",
+                            "description": "Property. Model:'https://schema.org/Text'. Zone ID corresponding to this observation"
+                        },
+                        "wardName": {
+                            "type": "string",
+                            "description": "Property. Model:'https://schema.org/Text'. Ward name corresponding to this observation"
+                        },
+                        "wardNum": {
+                            "type": "number",
+                            "description": "Property. Model:'https://schema.org/Number'. Ward number corresponding to this observation"
+                        }
+                    }
+                }
             }
-          ],
-          "description": "Relationship. Road to which this road segment belongs to."
-        },
-        "startPoint": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
-        },
-        "endPoint": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
-        },
-        "startKilometer": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. The kilometer number (measured from the road's start point) where this road segment starts. Model:'https://schema.org/Number'. "
-        },
-        "endKilometer": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. The kilometer number (measured from the road's start point) where this road segment ends. Model:'https://schema.org/Number'. "
-        },
-        "allowedVehicleType": {
-          "type": "array",
-          "description": "Property. Vehicle type(s) allowed to transit through this road segment. Model:'https://schema.org/Text'. Enum:'agriculturalVehicle, bicycle, bus, car, caravan, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, trailer, van, anyVehicle'. Allowed values: The following values defined by _VehicleTypeEnum_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/):",
-          "items": {
-            "type": "string",
-            "enum": [
-              "agriculturalVehicle",
-              "bicycle",
-              "bus",
-              "car",
-              "caravan",
-              "carWithCaravan",
-              "carWithTrailer",
-              "constructionOrMaintenanceVehicle",
-              "lorry",
-              "moped",
-              "motorcycle",
-              "motorcycleWithSideCar",
-              "motorscooter",
-              "tanker",
-              "trailer",
-              "van",
-              "anyVehicle"
-            ]
-          }
-        },
-        "totalLaneNumber": {
-          "type": "number",
-          "minimum": 1,
-          "description": "Property. Total number of lanes offered by this road segment. Model:'https://schema.org/Number'."
-        },
-        "length": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Total length of this road segment in kilometers. Model:'https://schema.org/length'. Units:'Kilometer (Km)'"
-        },
-        "maximumAllowedSpeed": {
-          "type": "number",
-          "description": "Property. Maximum allowed speed plying the road segment. More restrictive limits might be applied to specific vehicle types (trucks, caravans, etc.). Model:'https://schema.org/Number'. Units:'Kilometer per hour (Km/h)'",
-          "minimum": 0
-        },
-        "minimumAllowedSpeed": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Minimum allowed speed while transiting this road segment. Model:'https://schema.org/Number'. Units:'Kilometer per hour (Km/h)'"
-        },
-        "maximumAllowedHeight": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Maximum allowed height for vehicles transiting this road segment. Model:'https://schema.org/Number'. Units:'Meter (m)'. Model:'https://schema.org/height'"
-        },
-        "maximumAllowedWeight": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Maximum allowed weight for vehicles transiting this road segment. Model:'https://schema.org/Number'. Units:'Kilogram (Kg)'. Model:'https://schema.org/weight'"
-        },
-        "width": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Road's segment width.. Model:'https://schema.org/Number'. Units:'Meter (m)'"
-        },
-        "laneUsage": {
-          "type": "array",
-          "description": "Property. This attribute can be used to convey specific parameters describing each lane. Model:'https://schema.org/Text'. It must contain a string per road segment lane. The element 0 of the array must contain the information of lane 1, and so on. Format of the referred string must be: <lane_direction>, <lane_minimumAllowedSpeed>, <lane_maximumAllowedSpeed>, <lane_maximumAllowedHeight>, <lane_maximumAllowedWeight>. <lane_direction> is a text string with the following allowed values: `forward`. The lane is currently used in the `forwards` direction. `backward`. The lane is currently used in the `backwards` direction. The only mandatory parameter is `lane_direction`. If not specified, the rest of parameters can be assumed to be equal to those specified at entity level.",
-          "items": {
-            "type": "string",
-            "enum": [
-              "forward",
-              "backward"
-            ]
-          }
-        },
-        "category": {
-          "type": "array",
-          "description": "Property. Allows to convey extra characteristics of a road segment. Model:'https://schema.org/Text'. Enum:'oneway, toll, link'.  `oneway`: Flags whether the road segment can only be used in one direction. If not present it means road segment can be used in both directions (forwards and backwards). See also [http://wiki.openstreetmap.org/wiki/Key:oneway](http://wiki.openstreetmap.org/wiki/Key:oneway). `toll` : Flags whether the road segment is under toll fees. `link` : Flags whether this road segment is an auxiliary link segment for exiting or entering a road. See [https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link). Any other value meaningful to an application.",
-          "items": {
-            "type": "string",
-            "enum": [
-              "oneway",
-              "toll",
-              "link"
-            ]
-          }
-        },
-        "status": {
-          "type": "string",
-          "description": "Property. Specific driving conditions on the roadsegment. Use statusDescription for additional information. Enum: ‘open, closed, limited’.  `open`: the roadsegment can be used in full intended capacity, `closed`: no traffic is possible, e.g. due to roadworks, an open bridge or lock, or any other event preventing traffic. `limited`: traffic is possible, but not in the full capacity.",
-          "items": {
-            "type": "string",
-            "enum": [
-              "open",
-              "closed",
-              "limited"
-            ]
-          }
-        },
-        "statusDescription": {
-          "type": "string",
-          "description": "Property. Additional information to the status attribute."
-        },
-        "dataDescriptor": {
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-              "description": "Property. Identifier format of any NGSI entity"
-            },
-            {
-              "type": "string",
-              "format": "uri",
-              "description": "Property. Identifier format of any NGSI entity"
-            }
-          ],
-          "description": "Relationship. URI pointing to the data-descriptor entity"
-        },
-        "cyclePathMaterial": {
-          "type": "string",
-          "description": "Property. Construction material used for laying the cycle path on the sides of the road corresponding to this observation."
-        },
-        "carriagewayLength": {
-          "type": "number",
-          "description": "Property. Total length of the carriage way of the road segment corresponding to this observation."
-        },
-        "bridgeCount": {
-          "type": "number",
-          "description": "Property. Number of bridges in the road segment corresponding to this observation. Takes 0 (zero) as the value when the road segment has no bridges."
-        },
-        "pedestrianPathLeftHeight": {
-          "type": "number",
-          "description": "Property. Height of the walkway placed on the left edge of the road corresponding to this observation."
-        },
-        "totalPedestrianPathLength": {
-          "type": "number",
-          "description": "Property. Total length of the walkway present in the road corresponding to this observation."
-        },
-        "totalPedestrianPathWidth": {
-          "type": "number",
-          "description": "Property. Total width of the walkway present in the road corresponding to this observation."
-        },
-        "culvertCount": {
-          "type": "number",
-          "description": "Property. Number of culverts prevalent in the trace of the road corresponding to this observation."
-        },
-        "roadName": {
-          "type": "string",
-          "description": "Property. The name of the road corresponding to this observation."
-        },
-        "roadClass": {
-          "type": "string",
-          "description": "Property. The type of road corresponding to this observation. Enum: [OTHER_PUBLIC_ROAD, PRIVATE_ROAD, MINOR_CITY_ROAD, MAJOR_DISTRICT_ROAD, MAJOR_CITY_ROAD, NATIONAL_HIGHWAY, SERVICE_ROAD, STATE_HIGHWAY, OTHER_DISTRICT_ROAD, PORT_ROAD].",
-          "enum": [
-            "MAJOR_DISTRICT_ROAD",
-            "MAJOR_CITY_ROAD",
-            "MINOR_CITY_ROAD",
-            "NATIONAL_HIGHWAY",
-            "OTHER_DISTRICT_ROAD",
-            "OTHER_PUBLIC_ROAD",
-            "PORT_ROAD",
-            "PRIVATE_ROAD",
-            "SERVICE_ROAD",
-            "STATE_HIGHWAY"
-          ]
-        },
-        "medianHeight": {
-          "type": "number",
-          "description": "Property. Height of the median or central reservation in the road corresponding to this observation."
-        },
-        "roadWork": {
-          "type": "string",
-          "description": "Property. Reasons for the road work in case of urgent intervention. A combination of these values. Enum:'COLLAPSE, DERAILMENT, FIRE, FLOOD, GASLEAK, LANDSLIDE, OTHER, POWERCUT, ROCKFALL, SAGGING, WATERLEAK'.",
-          "enum": [
-            "COLLAPSE",
-            "DERAILMENT",
-            "FIRE",
-            "FLOOD",
-            "GASLEAK",
-            "LANDSLIDE",
-            "OTHER",
-            "POWERCUT",
-            "ROCKFALL",
-            "SAGGING",
-            "WATERLEAK"
-          ]
-        },
-        "roadId": {
-          "type": "string",
-          "description": "Property. Unique internal representation of the road corresponding to this observation."
-        },
-        "cyclePathRightWidth": {
-          "type": "number",
-          "description": "Property. Width of the cycle track on the right edge of the road corresponding to this observation."
-        },
-        "roadMaterial": {
-          "type": "string",
-          "description": "Property. The construction material used for laying the carriageway corresponding to this observation. For eg. concrete, earthen, tar etc."
-        },
-        "medianWidth": {
-          "type": "number",
-          "description": "Property. Width of the median or central reservation in the road corresponding to this observation."
-        },
-        "carriagewayWidth": {
-          "type": "number",
-          "description": "Property. Total width of the carriage way of the road segment corresponding to this observation."
-        },
-        "cyclePathRightHeight": {
-          "type": "number",
-          "description": "Property. Height of the cycle track on the right edge of the road corresponding to this observation."
-        },
-        "roadDirection": {
-          "type": "string",
-          "description": "Property. Represents the direction the road is heading to. Enum:' ['N, S, E, W'. The values N,S,E,W represent North,South,East,West respectively."
-        },
-        "medianLength": {
-          "type": "number",
-          "description": "Property. Length of the median or central reservation in the road corresponding to this observation."
-        },
-        "pedestrianPathMaterial": {
-          "type": "string",
-          "description": "Property. Construction material used for laying the walkway / footpath on the sides of the road corresponding to this observation."
-        },
-        "cyclePathLeftWidth": {
-          "type": "number",
-          "description": "Property. Width of the cycle track on the left edge of the road corresponding to this observation."
-        },
-        "maximumAllowedWidth": {
-          "type": "number",
-          "description": "Property. Maximum allowed width for vehicles using the entity corresponding to this observation."
-        },
-        "rightOfWayWidth": {
-          "type": "number",
-          "description": "Property. Right of Way (RoW) is the total land area available for the roadway. Its width accommodates for carriages way + other necessities + future extension, along the road's alignment."
-        },
-        "cyclePathLeftHeight": {
-          "type": "number",
-          "description": "Property. Height of the cycle track on the left edge of the road corresponding to this observation."
-        },
-        "pedestrianPathRightWidth": {
-          "type": "number",
-          "description": "Property. Width of the walkway placed on the right edge of the road corresponding to this observation."
-        },
-        "pedestrianPathLeftWidth": {
-          "type": "number",
-          "description": "Property. Width of the walkway placed on the left edge of the road corresponding to this observation."
-        },
-        "laneInfo": {
-          "type": "object",
-          "description": "Property. Describes the aspects of lanes of the road corresponding to this observation.",
-          "properties": {
-            "laneId": {
-              "type": "number",
-              "description": "Property. Unique identification number of the lane corresponding to this observation."
-            },
-            "laneDirection": {
-              "type": "string",
-              "description": "Property. Describes the direction in which vehicles are plying on the lane corresponding to this observation. Enum:'FORWARD, BACKWARD, INBOUND, OUTBOUND, RIGHT, LEFT'",
-              "enum": [
-                "BACKWARD",
-                "FORWARD",
-                "INBOUND",
-                "LEFT",
-                "OUTBOUND",
-                "RIGHT"
-              ],
-              "laneLength": {
-                "type": "number",
-                "description": "Property. Length of the lane corresponding to this observation."
-              },
-              "laneWidth": {
-                "type": "number",
-                "description": "Property. Width of the lane corresponding to this observation."
-              }
-            }
-          }
-        },
-        "pedestrianPathPlacement": {
-          "type": "string",
-          "description": "Property. Describes the presence and placement of pedestrian along the road segment corresponding to this observation. Enum:'RIGHT, LEFT, BOTH, NOT_AVAILABLE'"
-        },
-        "pedestrianPathRightHeight": {
-          "type": "number",
-          "description": "Property. Height of the walkway placed on the right edge of the road corresponding to this observation."
-        },
-        "cyclePathPlacement": {
-          "type": "string",
-          "description": "Property. Describes the placement of cycle track along the road segment corresponding to this observation. Enum:' ['RIGHT, LEFT, BOTH, NOT_AVAILABLE'",
-          "enum": [
-            "BOTH",
-            "LEFT",
-            "NOT_AVAILABLE",
-            "RIGHT"
-          ]
-        },
-        "totalCyclePathWidth": {
-          "type": "number",
-          "description": "Property. Total width of the cycle track present in the road corresponding to this observation."
-        },
-        "agency_name": {
-          "type": "string",
-          "description": "Property. The agency_name field contains the full name of the agency or organisation responsible for maintenance of the entity under consideration. SameAs: 'agency_name' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)"
-        },
-        "municipalityInfo": {
-          "type": "object",
-          "description": "Property. Model:'https://schema.org/Text. Municipality information corresponding to this observation.",
-          "properties": {
-            "district": {
-              "type": "string",
-              "description": "Property. Model:'https://schema.org/Text'. District name corresponding to this observation."
-            },
-            "ulbName": {
-              "type": "string",
-              "description": "Property. Model:'https://schema.org/Text'. Name of the Urban Local Body corresponding to this observation."
-            },
-            "cityId": {
-              "type": "string",
-              "description": "Property. Model:'https://schema.org/Text'. City ID corresponding to this observation."
-            },
-            "wardId": {
-              "type": "string",
-              "description": "Property. Model:'https://schema.org/Text'. Ward ID corresponding to this observation."
-            },
-            "stateName": {
-              "type": "string",
-              "description": "Property. Model:'https://schema.org/Text'. Name of the state corresponding to this observation."
-            },
-            "cityName": {
-              "type": "string",
-              "description": "Property. Model:'https://schema.org/Text'. City name corresponding to this observation"
-            },
-            "zoneName": {
-              "type": "string",
-              "description": "Property. Model:'https://schema.org/Text'. Zone name corresponding to this observation."
-            },
-            "zoneId": {
-              "type": "string",
-              "description": "Property. Model:'https://schema.org/Text'. Zone ID corresponding to this observation."
-            },
-            "wardName": {
-              "type": "string",
-              "description": "Property. Model:'https://schema.org/Text'. Ward name corresponding to this observation."
-            },
-            "wardNum": {
-              "type": "number",
-              "description": "Property. Model:'https://schema.org/Number'. Ward number corresponding to this observation."
-            }
-          }
         }
-      }
-    }
-  ],
-  "required": [
-    "id",
-    "name",
-    "type",
-    "refRoad",
-    "startPoint",
-    "endPoint",
-    "allowedVehicleType"
-  ]
+    ],
+    "required": [
+        "id",
+        "name",
+        "type",
+        "refRoad",
+        "startPoint",
+        "endPoint",
+        "allowedVehicleType"
+    ]
 }
