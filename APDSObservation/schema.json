@@ -208,11 +208,13 @@
               "properties": {
                 "URL": {
                   "type": "string",
-                  "format": "uri"
+                  "format": "uri",
+                  "description": "Property. Uri of the image"
                 },
                 "binaryContent": {
                   "type": "string",
-                  "format": "uuencoded"
+                  "format": "uuencoded",
+                  "description": "Property. Binary format of the image content"
                 },
                 "expiryDateTime": {
                   "type": "string",
