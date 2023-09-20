@@ -11,6 +11,8 @@ The following entity types are available:
 
 - [AnprFlowObserved](https://github.com/smart-data-models/dataModel.Transportation/blob/master/AnprFlowObserved/README.md). The data model represents an observation linked to the passing of a vehicle at a certain location and at a given time. This Data Model is based on the [dataModel.Transportation/ItemFlowObserved], extended with ANPR specific properties and links to the observation images.
 
+- [APDSObservation](https://github.com/smart-data-models/dataModel.Transportation/blob/master/APDSObservation/README.md). This entity models a particular observation of a set of ANPR camera. The Observation might be done with several ANPR cameras, but is limited to the observation of ONE vehicle. It implements the APDS data model https://www.allianceforparkingdatastandards.org/
+
 - [BikeHireDockingStation](https://github.com/smart-data-models/dataModel.Transportation/blob/master/BikeHireDockingStation/README.md). Bike Hire Docking Station
 
 - [BikeLane](https://github.com/smart-data-models/dataModel.Transportation/blob/master/BikeLane/README.md). A generic bike lane schema
@@ -58,7 +60,7 @@ The following entity types are available:
 
 
 ### Contributors
-[Link](https://github.com/smart-data-models/dataModel.Transportation/blob/master/CONTRIBUTORS.yaml) to the 18 current contributors of the data models of this Subject.
+[Link](https://github.com/smart-data-models/dataModel.Transportation/blob/master/CONTRIBUTORS.yaml) to the 20 current contributors of the data models of this Subject.
 
 
 ### Contribution
