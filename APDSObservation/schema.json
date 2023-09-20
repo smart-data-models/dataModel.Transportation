@@ -196,7 +196,7 @@
               "maximum": -1
             }
           ],
-          "description": "Property. Denotes the magnitude of the horizontal component of the observed vehicles current velocity and is specified in kilometers per hour. If provided, the value of the speed attribute must be a non - negative real number.'-1' MAY be used if speed is transiently unknown for some reason. Model:'https://schema.org/Number'.Units:'km/h'. (UN Code KMH)."
+          "description": "Property. Denotes the magnitude of the horizontal component of the observed vehicles current velocity and is specified in kilometers per hour. If provided, the value of the speed attribute must be a non - negative real number.'-1' MAY be used if speed is transiently unknown for some reason. Model:'https://schema.org/Number'. Units:'km/h'. (UN Code KMH)."
         },
         "images": {
           "type": "array",
