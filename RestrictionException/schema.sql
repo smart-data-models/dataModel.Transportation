@@ -1,3 +1,3 @@
-/* (Beta) Export of data model RestrictionException of the subject dataModel.Transportation for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+/* (Beta) Export of data model RestrictionException of the subject dataModel.Transportation for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE RestrictionException_type AS ENUM ('RestrictionException');
-CREATE TABLE RestrictionException (address json, allowedVehicleType json, alternateName text, areaServed text, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, exceptionValidityHours text, id text, location json, name text, owner json, refRestrictedTrafficArea text, refVehicleModel json, seeAlso json, source text, type RestrictionException_type);
+CREATE TABLE RestrictionException (address JSON, allowedVehicleType JSON, alternateName TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, exceptionValidityHours TEXT, name TEXT, owner JSON, refVehicleModel JSON, source TEXT, type RestrictionException_type);
