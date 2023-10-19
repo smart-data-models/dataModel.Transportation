@@ -40,7 +40,7 @@ Link to the [Generator](https://smartdatamodels.org/extra/ngsi-ld_generator_keyv
 Link to the [Generator](https://smartdatamodels.org/extra/geojson_features_generator.php?schemaUrl=https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/VehicleFault/schema.json&email=info@smartdatamodels.org) of geojson feature format payloads compliant with this data model. Refresh for new values
 ### PostgreSQL schema
 
-Link to the [PostgreSQL schema](https://smart-data-models.github.io/dataModel.Transportation/VehicleFault/schema.sql) of this data model
+Link to the [PostgreSQL schema](https://github.com/smart-data-models/dataModel.Transportation/blob/master/VehicleFault/schema.sql) of this data model
 ### Contribution
 
  If you have any issue on this data model you can raise an [issue](https://github.com/smart-data-models/dataModel.Transportation/issues)  or contribute with a [PR](https://github.com/smart-data-models/dataModel.Transportation/pulls)
