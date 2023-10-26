@@ -1,3 +1,3 @@
 /* (Beta) Export of data model AnonymousCommuterId of the subject dataModel.Transportation for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE AnonymousCommuterId_type AS ENUM ('AnonymousCommuterId');
-CREATE TABLE AnonymousCommuterId (address JSON, algorithm TEXT, alternateName TEXT, anonymizedId TEXT, areaServed TEXT, dataProvider TEXT, date TIMESTAMP, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, dest TEXT, name TEXT, orig TEXT, owner JSON, source TEXT, type AnonymousCommuterId_type);
+CREATE TABLE AnonymousCommuterId (address JSON, algorithm TEXT, alternateName TEXT, anonymizedId TEXT, areaServed TEXT, dataProvider TEXT, date TIMESTAMP, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, dest TEXT, id TEXT PRIMARY KEY, location JSON, name TEXT, orig TEXT, owner JSON, seeAlso JSON, source TEXT, type AnonymousCommuterId_type);
