@@ -1,3 +1,3 @@
 /* (Beta) Export of data model SpecialRestriction of the subject dataModel.Transportation for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE SpecialRestriction_type AS ENUM ('SpecialRestriction');
-CREATE TABLE SpecialRestriction (address JSON, alternateName TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, name TEXT, notAllowedVehicleType JSON, owner JSON, refVehicleModel JSON, restrictionValidityHours TEXT, source TEXT, type SpecialRestriction_type);
+CREATE TABLE SpecialRestriction (address JSON, alternateName TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, id TEXT PRIMARY KEY, location JSON, name TEXT, notAllowedVehicleType JSON, owner JSON, refVehicleModel JSON, restrictionValidityHours TEXT, seeAlso JSON, source TEXT, type SpecialRestriction_type);
