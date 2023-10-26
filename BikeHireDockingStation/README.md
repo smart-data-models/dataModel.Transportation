@@ -22,6 +22,8 @@ Link alla [specifica](https://github.com/smart-data-models/dataModel.Transportat
 [仕様へのリンク](https://github.com/smart-data-models/dataModel.Transportation/blob/master/BikeHireDockingStation/doc/spec_JA.md)
 
 [链接到规范](https://github.com/smart-data-models/dataModel.Transportation/blob/master/BikeHireDockingStation/doc/spec_ZH.md)
+
+[사양 링크](https://github.com/smart-data-models/dataModel.Transportation/blob/master/BikeHireDockingStation/doc/spec_KO.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.Transportation/BikeHireDockingStation/examples/example.json) (keyvalues) for NGSI v2
