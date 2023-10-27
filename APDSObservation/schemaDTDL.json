@@ -1,0 +1,696 @@
+{
+    "@id": "dtmi:com:ngsi-ld:APDSObservation;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "Smart Data Models - APDSObservation. adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/APDSObservation/schema.json",
+    "description": "This entity models a particular observation of a set of ANPR camera. The Observation might be done with several ANPR cameras, but is limited to the observation of ONE vehicle. It implements the APDS data model https://www.allianceforparkingdatastandards.org/",
+    "displayName": "APDSObservation",
+    "contents": [
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The geographic area where a service or offered item is provided"
+        },
+        {
+            "name": "creator",
+            "writable": true,
+            "displayName": "creator",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Id of current driver."
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity"
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform"
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform"
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "location",
+            "writable": true,
+            "displayName": "location"
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item"
+        },
+        {
+            "name": "observationDateTime",
+            "writable": true,
+            "displayName": "observationDateTime",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "The timestamp the Observation was made (UTC). Mandatory if observationStartDateTime and observationEndDateTime are not used."
+        },
+        {
+            "name": "observationEndDateTime",
+            "writable": true,
+            "displayName": "observationEndDateTime",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "The date and time of the observation event ended(in UTC).(e.g.a car was observed to exit a delivery zone at 9: 33am). Mandatory if creationDateTime is not used."
+        },
+        {
+            "name": "observationStartDateTime",
+            "writable": true,
+            "displayName": "observationStartDateTime",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "The date and time of the observation(in UTC)event started.(e.g.a car was observed to enter a delivery zone at 8: 01am). Mandatory if creationDateTime is not used."
+        },
+        {
+            "name": "observedCredentialConfidence",
+            "writable": true,
+            "displayName": "observedCredentialConfidence",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The overall confidence of the measurement. This can be vendor specific, but should always be rescaled to value between 0 en 1. Use the metadata to indicate how this number should be interpreted. Arvoo: range[0.0, 1.0](higher is better)."
+        },
+        {
+            "name": "observedCredentialCountry",
+            "writable": true,
+            "displayName": "observedCredentialCountry",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Country Code following the 2 character ISO3166 standard (https://www.iban.com/country-codes). Note that the International vehicle registration code should not be used to avoid ambiguity (https://en.wikipedia.org/wiki/International_vehicle_registration_code). If the country-code could not be determined, set 'XX' as for this attribute."
+        },
+        {
+            "name": "observedCredentialId",
+            "writable": true,
+            "displayName": "observedCredentialId",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Specific identifier to the referenced observed credential. The credential is specified by observedCredentialType and may be an RFID tag, ticket number from a paystation, license plate number, etc. In case of a licensePlate only alpha numerical values (no spaces or hyphens) are allowed. Optionally an ':' can be used to indicate the position of e.g. the German City Seal (https://www.europeanplates.com/information/german-city-codes.html)."
+        },
+        {
+            "name": "observedHeading",
+            "writable": true,
+            "displayName": "observedHeading"
+        },
+        {
+            "name": "observedLocationPDOP",
+            "writable": true,
+            "displayName": "observedLocationPDOP",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Accuracy of GPS position of the observed vehicle. This is expressed as 'Position Dilution Of Precision'(https: //en.wikipedia.org/wiki/Dilution_of_precision_(navigation)). (UN code 'MTR'). "
+        },
+        {
+            "name": "observedSpeed",
+            "writable": true,
+            "displayName": "observedSpeed"
+        },
+        {
+            "name": "observedVehicleColour",
+            "writable": true,
+            "displayName": "observedVehicleColour",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The colour of the observed vehicle"
+        },
+        {
+            "name": "observedVehicleMake",
+            "writable": true,
+            "displayName": "observedVehicleMake",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The make of the observed vehicle"
+        },
+        {
+            "name": "observer",
+            "writable": true,
+            "displayName": "observer",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name or identification of the scanning system making the observation recorded in this observation element."
+        },
+        {
+            "name": "observerDescription",
+            "writable": true,
+            "displayName": "observerDescription",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Free-text description for details of the observation or observer. Can e.g.be used as a friendly name of a specific ANPR scan car."
+        },
+        {
+            "name": "observerHeading",
+            "writable": true,
+            "displayName": "observerHeading"
+        },
+        {
+            "name": "observerLocationPDOP",
+            "writable": true,
+            "displayName": "observerLocationPDOP",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Accuracy of the GPS position of the observer, expressed as 'Position Dilution Of Precision'(https: //en.wikipedia.org/wiki/Dilution_of_precision_(navigation))"
+        },
+        {
+            "name": "observerSpeed",
+            "writable": true,
+            "displayName": "observerSpeed"
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object"
+        },
+        {
+            "name": "towardsObserver",
+            "writable": true,
+            "displayName": "towardsObserver",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "1: Observed vehicle moves in direction of camera, 0: Observed vehicle moves away direction of camera, -1: Observed vehicle direction not detected."
+        },
+        {
+            "@type": "Telemetry",
+            "name": "images",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "array"
+            },
+            "comment": "Array of links to images. The array element contain the URLs of the images and additional info. As an alternative to the images URL, the image itself can be included in the binaryContent attribute.",
+            "displayName": "images"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "observedCredentialCharacterConfidence",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "number"
+            },
+            "comment": "The confidence of individual character recognition. As with observedCredentialConfidence this is vendor specific. Use the metadata to indicate how the confidences can be interpreted.",
+            "displayName": "observedCredentialCharacterConfidence"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "observerCameras",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Array of camera positions that detected the vehicle.The first camera in the list has the best recognition.Use the following abbreviations to indicate the camera positioning on a car: RF(Right Front), RM(Right Middle), RB(Right Back), LF(Left Front), LM(Left Middle), LB(Left Back).",
+            "displayName": "observerCameras"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "district",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetNr",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "observedLocation",
+            "comment": "GPS position of the middle position of the scanned vehicle.",
+            "displayName": "observedLocation",
+            "fields": [
+                {
+                    "name": "address",
+                    "schema": "object"
+                },
+                {
+                    "name": "areaServed",
+                    "schema": "string"
+                },
+                {
+                    "name": "location",
+                    "schema": null
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "observerLocation",
+            "comment": "GPS position of the person or car equipped with the Camera/s that produce the observation.",
+            "displayName": "observerLocation",
+            "fields": [
+                {
+                    "name": "address",
+                    "schema": "object"
+                },
+                {
+                    "name": "areaServed",
+                    "schema": "string"
+                },
+                {
+                    "name": "location",
+                    "schema": null
+                }
+            ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "observedCredentialType",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "barcode",
+                        "displayName": "barcode",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "bluetooth",
+                        "displayName": "bluetooth",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "eticket",
+                        "displayName": "eticket",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "hangtag",
+                        "displayName": "hangtag",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "licensePlate",
+                        "displayName": "licensePlate",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "permit",
+                        "displayName": "permit",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "qrCode",
+                        "displayName": "qrCode",
+                        "enumValue": 7
+                    },
+                    {
+                        "name": "rfid",
+                        "displayName": "rfid",
+                        "enumValue": 8
+                    },
+                    {
+                        "name": "ticket",
+                        "displayName": "ticket",
+                        "enumValue": 9
+                    },
+                    {
+                        "name": "other",
+                        "displayName": "other",
+                        "enumValue": 10
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "observedMethod",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "anpr",
+                        "displayName": "anpr",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "chalk",
+                        "displayName": "chalk",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "other",
+                        "displayName": "other",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "rfTranspoder",
+                        "displayName": "rfTranspoder",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "scanner",
+                        "displayName": "scanner",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "visual",
+                        "displayName": "visual",
+                        "enumValue": 6
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "observedVehicleType",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "agriculturalVehicle",
+                        "displayName": "agriculturalVehicle",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "ambulance",
+                        "displayName": "ambulance",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "anyVehicle",
+                        "displayName": "anyVehicle",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "articulatedVehicle",
+                        "displayName": "articulatedVehicle",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "autorickshaw",
+                        "displayName": "autorickshaw",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "bicycle",
+                        "displayName": "bicycle",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "binTrolley",
+                        "displayName": "binTrolley",
+                        "enumValue": 7
+                    },
+                    {
+                        "name": "BRT mini bus\u00c2\u00b7",
+                        "displayName": "BRT mini bus\u00c2\u00b7",
+                        "enumValue": 8
+                    },
+                    {
+                        "name": "BRT bus",
+                        "displayName": "BRT bus",
+                        "enumValue": 9
+                    },
+                    {
+                        "name": "bus",
+                        "displayName": "bus",
+                        "enumValue": 10
+                    },
+                    {
+                        "name": "car",
+                        "displayName": "car",
+                        "enumValue": 11
+                    },
+                    {
+                        "name": "caravan",
+                        "displayName": "caravan",
+                        "enumValue": 12
+                    },
+                    {
+                        "name": "carOrLightVehicle",
+                        "displayName": "carOrLightVehicle",
+                        "enumValue": 13
+                    },
+                    {
+                        "name": "carWithCaravan",
+                        "displayName": "carWithCaravan",
+                        "enumValue": 14
+                    },
+                    {
+                        "name": "carWithTrailer",
+                        "displayName": "carWithTrailer",
+                        "enumValue": 15
+                    },
+                    {
+                        "name": "cleaningTrolley",
+                        "displayName": "cleaningTrolley",
+                        "enumValue": 16
+                    },
+                    {
+                        "name": "compactor",
+                        "displayName": "compactor",
+                        "enumValue": 17
+                    },
+                    {
+                        "name": "constructionOrMaintenanceVehicle",
+                        "displayName": "constructionOrMaintenanceVehicle",
+                        "enumValue": 18
+                    },
+                    {
+                        "name": "dumper",
+                        "displayName": "dumper",
+                        "enumValue": 19
+                    },
+                    {
+                        "name": "e-moped",
+                        "displayName": "e-moped",
+                        "enumValue": 20
+                    },
+                    {
+                        "name": "e-scooter",
+                        "displayName": "e-scooter",
+                        "enumValue": 21
+                    },
+                    {
+                        "name": "e-motorcycle",
+                        "displayName": "e-motorcycle",
+                        "enumValue": 22
+                    },
+                    {
+                        "name": "fireTender",
+                        "displayName": "fireTender",
+                        "enumValue": 23
+                    },
+                    {
+                        "name": "fourWheelDrive",
+                        "displayName": "fourWheelDrive",
+                        "enumValue": 24
+                    },
+                    {
+                        "name": "highSidedVehicle",
+                        "displayName": "highSidedVehicle",
+                        "enumValue": 25
+                    },
+                    {
+                        "name": "hopper",
+                        "displayName": "hopper",
+                        "enumValue": 26
+                    },
+                    {
+                        "name": "lorry",
+                        "displayName": "lorry",
+                        "enumValue": 27
+                    },
+                    {
+                        "name": "minibus",
+                        "displayName": "minibus",
+                        "enumValue": 28
+                    },
+                    {
+                        "name": "moped",
+                        "displayName": "moped",
+                        "enumValue": 29
+                    },
+                    {
+                        "name": "motorcycle",
+                        "displayName": "motorcycle",
+                        "enumValue": 30
+                    },
+                    {
+                        "name": "motorcycleWithSideCar",
+                        "displayName": "motorcycleWithSideCar",
+                        "enumValue": 31
+                    },
+                    {
+                        "name": "motorscooter",
+                        "displayName": "motorscooter",
+                        "enumValue": 32
+                    },
+                    {
+                        "name": "policeVan",
+                        "displayName": "policeVan",
+                        "enumValue": 33
+                    },
+                    {
+                        "name": "publicMotor",
+                        "displayName": "publicMotor",
+                        "enumValue": 34
+                    },
+                    {
+                        "name": "sweepingMachine",
+                        "displayName": "sweepingMachine",
+                        "enumValue": 35
+                    },
+                    {
+                        "name": "tanker",
+                        "displayName": "tanker",
+                        "enumValue": 36
+                    },
+                    {
+                        "name": "tempo",
+                        "displayName": "tempo",
+                        "enumValue": 37
+                    },
+                    {
+                        "name": "threeWheeledVehicle",
+                        "displayName": "threeWheeledVehicle",
+                        "enumValue": 38
+                    },
+                    {
+                        "name": "tipper",
+                        "displayName": "tipper",
+                        "enumValue": 39
+                    },
+                    {
+                        "name": "trailer",
+                        "displayName": "trailer",
+                        "enumValue": 40
+                    },
+                    {
+                        "name": "tram",
+                        "displayName": "tram",
+                        "enumValue": 41
+                    },
+                    {
+                        "name": "trolley",
+                        "displayName": "trolley",
+                        "enumValue": 42
+                    },
+                    {
+                        "name": "twoWheeledVehicle",
+                        "displayName": "twoWheeledVehicle",
+                        "enumValue": 43
+                    },
+                    {
+                        "name": "van",
+                        "displayName": "van",
+                        "enumValue": 44
+                    },
+                    {
+                        "name": "vehicleWithoutCatalyticConverter",
+                        "displayName": "vehicleWithoutCatalyticConverter",
+                        "enumValue": 45
+                    },
+                    {
+                        "name": "vehicleWithCaravan",
+                        "displayName": "vehicleWithCaravan",
+                        "enumValue": 46
+                    },
+                    {
+                        "name": "vehicleWithTrailer",
+                        "displayName": "vehicleWithTrailer",
+                        "enumValue": 47
+                    },
+                    {
+                        "name": "withEvenNumberedRegistrationPlates",
+                        "displayName": "withEvenNumberedRegistrationPlates",
+                        "enumValue": 48
+                    },
+                    {
+                        "name": "withOddNumberedRegistrationPlates",
+                        "displayName": "withOddNumberedRegistrationPlates",
+                        "enumValue": 49
+                    },
+                    {
+                        "name": "other",
+                        "displayName": "other",
+                        "enumValue": 50
+                    }
+                ]
+            }
+        }
+    ]
+}
