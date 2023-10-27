@@ -22,8 +22,8 @@
 	- `postOfficeBoxNumber[string]`: 用于邮政信箱地址的邮政信箱号码。例如：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: 邮政编码。例如：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 街道地址  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-	- `streetNr[string]`: 标识公共街道上特定房产的编号    
-- `alternateName[string]`: 该项目的替代名称  - `areaServed[string]`: 提供服务或提供物品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `creator[string]`: 当前驱动程序的 ID。  - `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配  - `dateModified[date-time]`: 实体最后一次修改的时间戳。通常由存储平台分配  - `description[string]`: 项目描述  - `id[*]`: 实体的唯一标识符  - `images[array]`: 图片链接数组。数组元素包含图片的 URL 和其他信息。作为图像 URL 的替代，图像本身也可以包含在二进制内容属性中。  - `location[*]`: 项目的 Geojson 引用。它可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `name[string]`: 该项目的名称  - `observationDateTime[date-time]`: 观测的时间戳（UTC）。如果未使用 observationStartDateTime 和 observationEndDateTime，则必须使用。  - `observationEndDateTime[date-time]`: 观察事件结束的日期和时间（UTC 时）（例如，观察到一辆汽车在上午 9:33 离开交货区）。如果未使用创建日期时间，则为必填项。  - `observationStartDateTime[date-time]`: 观察事件开始的日期和时间（UTC 内）（例如，观察到一辆汽车在上午 8:01 进入交货区）。如果未使用创建日期时间，则为必填项。  - `observedCredentialCharacterConfidence[array]`: 单个字符识别的可信度。与 observedCredentialConfidence 一样，这是针对特定供应商的。请使用元数据说明如何解释置信度。  - `observedCredentialConfidence[number]`: 测量的总体置信度。可以根据供应商的具体情况而定，但应始终在 0 至 1 之间进行调整。Arvoo：范围[0.0, 1.0]（越高越好）。  - `observedCredentialCountry[string]`: 国家代码采用 2 个字符的 ISO3166 标准 (https://www.iban.com/country-codes)。请注意，为避免歧义，不应使用国际车辆登记代码 (https://en.wikipedia.org/wiki/International_vehicle_registration_code)。如果无法确定国家代码，则将该属性设置为 "XX"。  - `observedCredentialId[string]`: 参考观察凭证的特定标识符。凭证由 observedCredentialType 指定，可以是 RFID 标签、支付站的票号、车牌号等。如果是车牌号，则只允许使用字母数值（不得使用空格或连字符）。可选择使用": "来表示德国城市印章 (https://www.europeanplates.com/information/german-city-codes.html) 等的位置。  - `observedCredentialType[string]`: 观察结果中引用的凭证类型。允许的值在 APDS CredentialType 中指定。枚举:'条形码, 蓝牙, 电子票证, 吊牌, 牌照, 许可证, qrCode, rfid, 门票, 其他'  - `observedHeading[*]`: 表示观察者的行进方向，以十进制度表示，其中 0 <= 'heading' < 360，相对于真正的北方顺时针计数。(联合国代码 DD）  . Model: [https://schema.org/Number](https://schema.org/Number)- `observedLocation`:   	- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)  
+	- `streetNr[string]`: 在公共街道上标识特定房产的编号    
+- `alternateName[string]`: 该项目的替代名称  - `areaServed[string]`: 提供服务或提供物品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `creator[string]`: 当前驱动程序的 ID。  - `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配  - `dateModified[date-time]`: 实体最后一次修改的时间戳。通常由存储平台分配  - `description[string]`: 项目描述  - `id[*]`: 实体的唯一标识符  - `images[array]`: 图片链接数组。数组元素包含图片的 URL 和其他信息。作为图像 URL 的替代，图像本身也可以包含在二进制内容属性中。  - `location[*]`: 项目的 Geojson 引用。它可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `name[string]`: 该项目的名称  - `observationDateTime[date-time]`: 观测的时间戳（UTC）。如果未使用 observationStartDateTime 和 observationEndDateTime，则必须使用。  - `observationEndDateTime[date-time]`: 观察事件结束的日期和时间（UTC 时）（例如，观察到一辆汽车于上午 9:33 离开交货区）。如果未使用创建日期时间，则必须填写。  - `observationStartDateTime[date-time]`: 观察事件开始的日期和时间（UTC 内）（例如，观察到一辆汽车在上午 8:01 进入交货区）。如果未使用创建日期时间，则为必填项。  - `observedCredentialCharacterConfidence[array]`: 单个字符识别的可信度。与 observedCredentialConfidence 一样，这是针对特定供应商的。请使用元数据说明如何解释置信度。  - `observedCredentialConfidence[number]`: 测量的总体置信度。可以根据供应商的具体情况而定，但应始终在 0 至 1 之间进行调整。Arvoo：范围[0.0, 1.0]（越高越好）。  - `observedCredentialCountry[string]`: 国家代码采用 2 个字符的 ISO3166 标准 (https://www.iban.com/country-codes)。请注意，为避免歧义，不应使用国际车辆登记代码 (https://en.wikipedia.org/wiki/International_vehicle_registration_code)。如果无法确定国家代码，则将该属性设置为 "XX"。  - `observedCredentialId[string]`: 参考观察凭证的特定标识符。凭证由 observedCredentialType 指定，可以是 RFID 标签、支付站的票号、车牌号等。如果是车牌号，则只允许使用字母数值（不得使用空格或连字符）。可选择使用": "来表示德国城市印章 (https://www.europeanplates.com/information/german-city-codes.html) 等的位置。  - `observedCredentialType[string]`: 观察结果中引用的凭证类型。允许的值在 APDS CredentialType 中指定。枚举:'条形码, 蓝牙, 电子票证, 吊牌, 牌照, 许可证, qrCode, rfid, 门票, 其他'  - `observedHeading[*]`: 表示观察者的行进方向，以十进制度表示，其中 0 <= 'heading' < 360，相对于真正的北方顺时针计数。(联合国代码 DD）  . Model: [https://schema.org/Number](https://schema.org/Number)- `observedLocation`:   	- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)  
 	- `areaServed[string]`: 提供服务或提供物品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)  
 	- `location[*]`: 项目的 Geojson 引用。可以是点、线条字符串、多边形、多点、多线条字符串或多多边形    
 - `observedLocationPDOP[number]`: 观测车辆 GPS 位置的精度。用 "Position Dilution Of Precision "表示（https：//en.wikipedia.org/wiki/Dilution_of_precision_(navigation)）。(联合国代码'MTR'）。  - `observedMethod[string]`: 由 APDS（ObservationType）定义的该观测要素的观测方法。枚举：'anpr、粉笔、视觉、扫描仪、rfTranspoder、其他  - `observedSpeed[*]`: 表示观测到的车辆当前速度水平分量的大小，单位为公里/小时。如果提供，速度属性值必须是非负实数。如果由于某种原因速度暂时未知，可以使用'-1'。(联合国代码 KMH）。  . Model: [https://schema.org/Number](https://schema.org/Number)- `observedVehicleColour[string]`: 被观测车辆的颜色  - `observedVehicleMake[string]`: 被观察车辆的品牌  - `observedVehicleType[string]`: 从结构特征的角度来看的车辆类型。这与车辆类别不同。枚举'农用车、任何车辆、铰接式车辆、自行车、垃圾车、公共汽车、轿车、大篷车、轻型车、带大篷车的车、带拖车的车、清洁车、建筑或维护车辆、四轮驱动、高边车、货车、小客车、轻便摩托车、摩托车、摩托车、带侧车的摩托车、摩托艇、扫地机、油罐车、三轮汽车、拖车、电车、两轮汽车、手推车、面包车、无催化转换器的车辆、带大篷车的车辆、带拖车的车辆、带偶数登记牌照的车辆、带奇数登记牌照的车辆、其他"。下列由 _VehicleTypeEnum_ 和 _VehicleTypeEnum2_, [DATEX 2 版本 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm) 定义并扩展用于其他用途的值  . Model: [https://schema.org/Text](https://schema.org/Text)- `observer[string]`: 在此观察要素中记录的进行观察的扫描系统的名称或标识。  - `observerCameras[array]`: 检测到车辆的摄像头位置阵列。列表中第一个摄像头的识别率最高。使用以下缩写表示汽车上的摄像头位置：RF（右前）、RM（右中）、RB（右后）、LF（左前）、LM（左中）、LB（左后）。  - `observerDescription[string]`: 自由文本描述，用于描述观察点或观察者的详细信息。例如，可用作特定 ANPR 扫描车的友好名称。  - `observerHeading[*]`: 表示观察者的行进方向，以十进制度表示，其中 0 <= 'heading' < 360，相对于真正的北方顺时针计数。如果车辆静止不动（即 "速度 "属性值为 "0"），则航向属性值必须等于"-1"。  . Model: [https://schema.org/Number](https://schema.org/Number)- `observerLocation`:   	- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)  
@@ -437,7 +437,7 @@ APDSObservation:
     observedHeading:    
       description: 'Denotes the direction of travel of the observer and is specified in decimal degrees, where 0 <= ''heading'' < 360, counting clockwise relative to the true north.If the vehicle is stationary(i.e. the value of the ''speed'' attribute is ''0''), then the value of the heading attribute must be equal to ''-1''. (UN code DD)'    
       oneOf:    
-        - exclusiveMaximum: true    
+        - exclusiveMaximum: 360    
           maximum: 360    
           minimum: 0    
           type: number    
@@ -449,6 +449,7 @@ APDSObservation:
         type: Property    
         units: Degrees    
     observedLocation:    
+      description: GPS position of the middle position of the scanned vehicle.    
       properties:    
         address:    
           description: The mailing address    
@@ -615,6 +616,8 @@ APDSObservation:
           x-ngsi:    
             type: GeoProperty    
       type: object    
+      x-ngsi:    
+        type: GeoProperty    
     observedLocationPDOP:    
       description: 'Accuracy of GPS position of the observed vehicle. This is expressed as ''Position Dilution Of Precision''(https: //en.wikipedia.org/wiki/Dilution_of_precision_(navigation)). (UN code ''MTR''). '    
       type: number    
@@ -735,7 +738,7 @@ APDSObservation:
     observerHeading:    
       description: 'Denotes the direction of travel of the observer and is specified in decimal degrees, where 0 <= ''heading'' < 360, counting clockwise relative to the true north. If the vehicle is stationary(i.e. the value of the ''speed'' attribute is ''0''), then the value of the heading attribute must be equal to ''-1'''    
       oneOf:    
-        - exclusiveMaximum: true    
+        - exclusiveMaximum: 360    
           maximum: 360    
           minimum: 0    
           type: number    
@@ -747,6 +750,7 @@ APDSObservation:
         type: Property    
         units: Degree.    
     observerLocation:    
+      description: GPS position of the person or car equipped with the Camera/s that produce the observation.    
       properties:    
         address:    
           description: The mailing address    
@@ -913,6 +917,8 @@ APDSObservation:
           x-ngsi:    
             type: GeoProperty    
       type: object    
+      x-ngsi:    
+        type: GeoProperty    
     observerLocationPDOP:    
       description: 'Accuracy of the GPS position of the observer, expressed as ''Position Dilution Of Precision''(https: //en.wikipedia.org/wiki/Dilution_of_precision_(navigation))'    
       type: number    
