@@ -129,7 +129,7 @@ Vehicle:
         type: Property    
     cargoWeight:    
       description: Current weight of the vehicle's cargo    
-      exclusiveMinimum: true    
+      exclusiveMinimum: 0    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -279,7 +279,7 @@ Vehicle:
     heading:    
       description: 'Denotes the direction of travel of the vehicle and is specified in decimal degrees, where 0 <= `heading` < 360, counting clockwise relative to the true north. If the vehicle is stationary (i.e. the value of the `speed` attribute is `0`), then the value of the heading attribute must be equal to `-1`'    
       oneOf:    
-        - exclusiveMaximum: true    
+        - exclusiveMaximum: 360    
           maximum: 360    
           minimum: 0    
           type: number    
@@ -1506,7 +1506,7 @@ Vehicle:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-[FAQ 10](https://smartdatamodels.org/index.php/faqs/)을 참조하여 규모 단위를 다루는 방법에 대한 답변을 확인하세요.  
+10](https://smartdatamodels.org/index.php/faqs/)를 참조하여 규모 단위를 다루는 방법에 대한 답변을 확인하세요.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
