@@ -437,7 +437,7 @@ APDSObservation:
     observedHeading:    
       description: 'Denotes the direction of travel of the observer and is specified in decimal degrees, where 0 <= ''heading'' < 360, counting clockwise relative to the true north.If the vehicle is stationary(i.e. the value of the ''speed'' attribute is ''0''), then the value of the heading attribute must be equal to ''-1''. (UN code DD)'    
       oneOf:    
-        - exclusiveMaximum: true    
+        - exclusiveMaximum: 360    
           maximum: 360    
           minimum: 0    
           type: number    
@@ -449,6 +449,7 @@ APDSObservation:
         type: Property    
         units: Degrees    
     observedLocation:    
+      description: GPS position of the middle position of the scanned vehicle.    
       properties:    
         address:    
           description: The mailing address    
@@ -615,6 +616,8 @@ APDSObservation:
           x-ngsi:    
             type: GeoProperty    
       type: object    
+      x-ngsi:    
+        type: GeoProperty    
     observedLocationPDOP:    
       description: 'Accuracy of GPS position of the observed vehicle. This is expressed as ''Position Dilution Of Precision''(https: //en.wikipedia.org/wiki/Dilution_of_precision_(navigation)). (UN code ''MTR''). '    
       type: number    
@@ -735,7 +738,7 @@ APDSObservation:
     observerHeading:    
       description: 'Denotes the direction of travel of the observer and is specified in decimal degrees, where 0 <= ''heading'' < 360, counting clockwise relative to the true north. If the vehicle is stationary(i.e. the value of the ''speed'' attribute is ''0''), then the value of the heading attribute must be equal to ''-1'''    
       oneOf:    
-        - exclusiveMaximum: true    
+        - exclusiveMaximum: 360    
           maximum: 360    
           minimum: 0    
           type: number    
@@ -747,6 +750,7 @@ APDSObservation:
         type: Property    
         units: Degree.    
     observerLocation:    
+      description: GPS position of the person or car equipped with the Camera/s that produce the observation.    
       properties:    
         address:    
           description: The mailing address    
@@ -913,6 +917,8 @@ APDSObservation:
           x-ngsi:    
             type: GeoProperty    
       type: object    
+      x-ngsi:    
+        type: GeoProperty    
     observerLocationPDOP:    
       description: 'Accuracy of the GPS position of the observer, expressed as ''Position Dilution Of Precision''(https: //en.wikipedia.org/wiki/Dilution_of_precision_(navigation))'    
       type: number    
@@ -1534,7 +1540,7 @@ APDSObservation:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-[FAQ 10](https://smartdatamodels.org/index.php/faqs/)을 참조하여 규모 단위를 다루는 방법에 대한 답변을 확인하세요.  
+10](https://smartdatamodels.org/index.php/faqs/)를 참조하여 규모 단위를 다루는 방법에 대한 답변을 확인하세요.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
