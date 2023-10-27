@@ -134,7 +134,7 @@
               "type": "number",
               "minimum": 0,
               "maximum": 360,
-              "exclusiveMaximum": true
+              "exclusiveMaximum": 360
             },
             {
               "type": "number",
@@ -159,7 +159,7 @@
               "type": "number",
               "minimum": 0,
               "maximum": 360,
-              "exclusiveMaximum": true
+              "exclusiveMaximum": 360
             },
             {
               "type": "number",
