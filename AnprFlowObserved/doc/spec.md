@@ -22,12 +22,14 @@
 	- `postOfficeBoxNumber[string]`: The post office box number for PO box addresses. For example, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: The postal code. For example, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: The street address  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Number identifying a specific property on a public street    
 - `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `dateObserved[date-time]`: Date of the observed entity defined by the user  - `dateReceived[date-time]`: Timestamp when the observation has been received by the platform  - `description[string]`: A description of this item  - `id[*]`: Unique identifier of the entity  - `laneId[string]`: Lane identifier. Lane identification provided by the observer  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item  - `observedBy[*]`: The entity or device which has reported this observation  - `observedVehicle[object]`: Information about the observed vehicle  	- `brand[object]`: Detected brand of the observed vehicle    
 	- `color[object]`: Detected color of the observed vehicle    
 	- `country[object]`: Detected country of the observed vehicle    
 	- `direction[string]`: Detected direction of the observed vehicle    
 	- `licensePlate[object]`: Detected license plate of the observed vehicle    
 	- `model[object]`: Detected brand model of the observed vehicle    
+	- `speed[number]`: Detected speed of the observed vehicle    
 - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refImages[array]`: Array of multiple objects that refer to images  - `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `type[string]`: NGSI Entity type. It has to be AnprFlowObserved  - `vehiclePlateNotRead[boolean]`: Indicates if a license could not be read  - `zonesServed[array]`: Array of zones that are able to receive or read the observations  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Required properties  
@@ -428,7 +430,7 @@ AnprFlowObserved:
               x-ngsi:    
                 type: Property    
             coordinates:    
-              description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              description: 'Sequence of position points describing this location, expressed in coordinate system'    
               oneOf:    
                 - description: Geojson reference to the item. Point    
                   properties:    
@@ -585,7 +587,7 @@ AnprFlowObserved:
                   x-ngsi:    
                     type: GeoProperty    
               x-ngsi:    
-                type: GeoProperty    
+                type: Property    
             identifier:    
               description: License plate identifier    
               type: string    
