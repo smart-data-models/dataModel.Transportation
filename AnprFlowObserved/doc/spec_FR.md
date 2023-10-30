@@ -22,12 +22,14 @@
 	- `postOfficeBoxNumber[string]`: Le numéro de la boîte postale pour les adresses de boîtes postales. Par exemple, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: Le code postal. Par exemple, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: L'adresse de la rue  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Numéro identifiant une propriété spécifique sur une voie publique    
 - `alternateName[string]`: Un nom alternatif pour ce poste  - `areaServed[string]`: La zone géographique où un service ou un article est offert  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées  - `dateCreated[date-time]`: Horodatage de la création de l'entité. Celle-ci est généralement attribuée par la plate-forme de stockage  - `dateModified[date-time]`: Date de la dernière modification de l'entité. Cette date est généralement attribuée par la plate-forme de stockage  - `dateObserved[date-time]`: Date de l'entité observée définie par l'utilisateur  - `dateReceived[date-time]`: Date à laquelle l'observation a été reçue par la plate-forme  - `description[string]`: Une description de l'article  - `id[*]`: Identifiant unique de l'entité  - `laneId[string]`: Identifiant de couloir. Identification de la voie fournie par l'observateur  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une chaîne de ligne, d'un polygone, d'un point multiple, d'une chaîne de ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément  - `observedBy[*]`: L'entité ou le dispositif qui a signalé cette observation  - `observedVehicle[object]`: Informations sur le véhicule observé  	- `brand[object]`: Marque détectée du véhicule observé    
 	- `color[object]`: Couleur détectée du véhicule observé    
 	- `country[object]`: Pays détecté du véhicule observé    
 	- `direction[string]`: Direction détectée du véhicule observé    
 	- `licensePlate[object]`: Plaque d'immatriculation détectée du véhicule observé    
 	- `model[object]`: Modèle de marque détecté du véhicule observé    
+	- `speed[number]`: Vitesse détectée du véhicule observé    
 - `owner[array]`: Une liste contenant une séquence de caractères encodés JSON référençant les identifiants uniques du ou des propriétaires.  - `refImages[array]`: Tableau de plusieurs objets faisant référence à des images  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires concernant l'élément  - `source[string]`: Séquence de caractères indiquant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source ou l'URL de l'objet source.  - `type[string]`: Type d'entité NGSI. Il doit s'agir de AnprFlowObserved  - `vehiclePlateNotRead[boolean]`: Indique si une licence n'a pas pu être lue  - `zonesServed[array]`: Réseau de zones capables de recevoir ou de lire les observations  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propriétés requises  
@@ -428,7 +430,7 @@ AnprFlowObserved:
               x-ngsi:    
                 type: Property    
             coordinates:    
-              description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              description: 'Sequence of position points describing this location, expressed in coordinate system'    
               oneOf:    
                 - description: Geojson reference to the item. Point    
                   properties:    
@@ -585,7 +587,7 @@ AnprFlowObserved:
                   x-ngsi:    
                     type: GeoProperty    
               x-ngsi:    
-                type: GeoProperty    
+                type: Property    
             identifier:    
               description: License plate identifier    
               type: string    
