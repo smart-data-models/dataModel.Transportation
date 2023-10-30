@@ -171,36 +171,34 @@
                 "refImages": {
                     "description": "Relationship. Array of multiple objects that refer to images",
                     "type": "array",
-                    "items": [
-                        {
-                            "type": "object",
-                            "properties": {
-                                "url": {
-                                    "description": "Property. URL referencing to the image",
-                                    "type": "string",
-                                    "format": "uri"
-                                },
-                                "contentType": {
-                                    "description": "Property. Content type according to IANA Media Types",
-                                    "type": "string"
-                                },
-                                "imageType": {
-                                    "description": "Property. Type of image",
-                                    "type": "string",
-                                    "enum": [
-                                        "plate",
-                                        "overview",
-                                        "anpr"
-                                    ]
-                                }
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "description": "Property. URL referencing to the image",
+                                "type": "string",
+                                "format": "uri"
                             },
-                            "required": [
-                                "url",
-                                "contentType",
-                                "imageType"
-                            ]
-                        }
-                    ]
+                            "contentType": {
+                                "description": "Property. Content type according to IANA Media Types",
+                                "type": "string"
+                            },
+                            "imageType": {
+                                "description": "Property. Type of image",
+                                "type": "string",
+                                "enum": [
+                                    "plate",
+                                    "overview",
+                                    "anpr"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "url",
+                            "contentType",
+                            "imageType"
+                        ]
+                    }
                 }
             }
         }
