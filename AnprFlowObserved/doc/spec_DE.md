@@ -22,12 +22,14 @@
 	- `postOfficeBoxNumber[string]`: Die Postfachnummer für Postfachadressen. Zum Beispiel, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: Die Postleitzahl. Zum Beispiel, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: Die Straßenanschrift  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit  - `dateCreated[date-time]`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen  - `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben  - `dateObserved[date-time]`: Datum der vom Benutzer definierten beobachteten Einheit  - `dateReceived[date-time]`: Zeitstempel, zu dem die Beobachtung von der Plattform empfangen wurde  - `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `laneId[string]`: Fahrspur-Kennung. Vom Beobachter bereitgestellte Fahrspurkennung  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels  - `observedBy[*]`: Die Einrichtung oder das Gerät, das diese Beobachtung gemeldet hat  - `observedVehicle[object]`: Informationen über das beobachtete Fahrzeug  	- `brand[object]`: Ermittelte Marke des beobachteten Fahrzeugs    
+	- `streetNr[string]`: Nummer zur Identifizierung eines bestimmten Grundstücks an einer öffentlichen Straße    
+- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit  - `dateCreated[date-time]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen  - `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben  - `dateObserved[date-time]`: Datum der vom Benutzer definierten beobachteten Einheit  - `dateReceived[date-time]`: Zeitstempel, zu dem die Beobachtung von der Plattform empfangen wurde  - `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `laneId[string]`: Fahrspur-Kennung. Vom Beobachter bereitgestellte Fahrspurkennung  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels  - `observedBy[*]`: Die Einrichtung oder das Gerät, das diese Beobachtung gemeldet hat  - `observedVehicle[object]`: Informationen über das beobachtete Fahrzeug  	- `brand[object]`: Ermittelte Marke des beobachteten Fahrzeugs    
 	- `color[object]`: Erkannte Farbe des beobachteten Fahrzeugs    
 	- `country[object]`: Erkanntes Land des beobachteten Fahrzeugs    
 	- `direction[string]`: Ermittelte Richtung des beobachteten Fahrzeugs    
 	- `licensePlate[object]`: Erkanntes Nummernschild des beobachteten Fahrzeugs    
 	- `model[object]`: Erkanntes Markenmodell des beobachteten Fahrzeugs    
+	- `speed[number]`: Ermittelte Geschwindigkeit des beobachteten Fahrzeugs    
 - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `refImages[array]`: Array mit mehreren Objekten, die auf Bilder verweisen  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type[string]`: NGSI-Entitätstyp. Es muss AnprFlowObserved sein  - `vehiclePlateNotRead[boolean]`: Zeigt an, ob eine Lizenz nicht gelesen werden konnte  - `zonesServed[array]`: Reihe von Zonen, die die Beobachtungen empfangen oder lesen können  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
@@ -428,7 +430,7 @@ AnprFlowObserved:
               x-ngsi:    
                 type: Property    
             coordinates:    
-              description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              description: 'Sequence of position points describing this location, expressed in coordinate system'    
               oneOf:    
                 - description: Geojson reference to the item. Point    
                   properties:    
@@ -585,7 +587,7 @@ AnprFlowObserved:
                   x-ngsi:    
                     type: GeoProperty    
               x-ngsi:    
-                type: GeoProperty    
+                type: Property    
             identifier:    
               description: License plate identifier    
               type: string    
@@ -929,7 +931,7 @@ AnprFlowObserved:
 ```  
 </details>  
 #### AnprFlowObserved NGSI-LD key-values Beispiel  
-Hier ist ein Beispiel für einen AnprFlowObserved im JSON-LD Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen AnprFlowObserved im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
