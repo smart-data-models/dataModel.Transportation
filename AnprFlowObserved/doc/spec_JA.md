@@ -22,12 +22,14 @@
 	- `postOfficeBoxNumber[string]`: 私書箱の住所のための私書箱番号。例：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: 郵便番号。例：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 番地  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: 公道上の特定の物件を特定する番号    
 - `alternateName[string]`: この項目の別名  - `areaServed[string]`: サービスまたは提供品が提供される地理的地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: ハーモナイズされたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated[date-time]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified[date-time]`: エンティティの最終変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateObserved[date-time]`: ユーザーが定義した観測されたエンティティの日付  - `dateReceived[date-time]`: 観測がプラットフォームによって受信されたタイムスタンプ  - `description[string]`: この商品の説明  - `id[*]`: エンティティの一意識別子  - `laneId[string]`: レーン識別子。オブザーバーによるレーン識別  - `location[*]`: アイテムへの Geojson 参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygon のいずれか。  - `name[string]`: このアイテムの名前  - `observedBy[*]`: この観測を報告した団体または装置  - `observedVehicle[object]`: 観測車両に関する情報  	- `brand[object]`: 検出された車両のブランド    
 	- `color[object]`: 観測車両の検出色    
 	- `country[object]`: 検出された車両の国    
 	- `direction[string]`: 観測された車両の方向    
 	- `licensePlate[object]`: 検出された車両のナンバープレート    
 	- `model[object]`: 検出された車両のブランドモデル    
+	- `speed[number]`: 観測車両の検出速度    
 - `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリスト。  - `refImages[array]`: 画像を参照する複数のオブジェクトの配列  - `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `source[string]`: エンティティ・データの元のソースを URL として示す一連の文字。ソース・プロバイダの完全修飾ドメイン名、またはソース・オブジェクトの URL を推奨する。  - `type[string]`: NGSIエンティティタイプ。AnprFlowObservedでなければならない。  - `vehiclePlateNotRead[boolean]`: ライセンスが読み取れなかった場合  - `zonesServed[array]`: 観測値を受信または読み取ることができるゾーンの配列  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 必須プロパティ  
@@ -428,7 +430,7 @@ AnprFlowObserved:
               x-ngsi:    
                 type: Property    
             coordinates:    
-              description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              description: 'Sequence of position points describing this location, expressed in coordinate system'    
               oneOf:    
                 - description: Geojson reference to the item. Point    
                   properties:    
@@ -585,7 +587,7 @@ AnprFlowObserved:
                   x-ngsi:    
                     type: GeoProperty    
               x-ngsi:    
-                type: GeoProperty    
+                type: Property    
             identifier:    
               description: License plate identifier    
               type: string    
