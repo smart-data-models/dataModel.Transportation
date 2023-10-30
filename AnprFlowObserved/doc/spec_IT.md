@@ -18,17 +18,19 @@
 - `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Il paese. Ad esempio, la Spagna  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
 	- `addressLocality[string]`: La località in cui si trova l'indirizzo civico e che si trova nella regione  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
 	- `addressRegion[string]`: La regione in cui si trova la località, e che si trova nel paese  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
-	- `district[string]`: Un distretto è un tipo di divisione amministrativa che, in alcuni Paesi, è gestita dal governo locale.    
+	- `district[string]`: Un distretto è un tipo di divisione amministrativa che, in alcuni paesi, è gestita dal governo locale.    
 	- `postOfficeBoxNumber[string]`: Il numero di casella postale per gli indirizzi di casella postale. Ad esempio, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: Il codice postale. Ad esempio, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: L'indirizzo stradale  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Numero che identifica una proprietà specifica su una strada pubblica    
 - `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata  - `dateCreated[date-time]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `dateModified[date-time]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `dateObserved[date-time]`: Data dell'entità osservata definita dall'utente  - `dateReceived[date-time]`: Data e ora in cui l'osservazione è stata ricevuta dalla piattaforma.  - `description[string]`: Descrizione dell'articolo  - `id[*]`: Identificatore univoco dell'entità  - `laneId[string]`: Identificatore di corsia. Identificazione della corsia fornita dall'osservatore  - `location[*]`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name[string]`: Il nome di questo elemento  - `observedBy[*]`: L'entità o il dispositivo che ha segnalato l'osservazione  - `observedVehicle[object]`: Informazioni sul veicolo osservato  	- `brand[object]`: Marca rilevata del veicolo osservato    
 	- `color[object]`: Colore rilevato del veicolo osservato    
 	- `country[object]`: Paese rilevato del veicolo osservato    
 	- `direction[string]`: Direzione rilevata del veicolo osservato    
 	- `licensePlate[object]`: Targa rilevata del veicolo osservato    
 	- `model[object]`: Modello di marca rilevato del veicolo osservato    
-- `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `refImages[array]`: Array di oggetti multipli che fanno riferimento alle immagini  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type[string]`: Tipo di entità NGSI. Deve essere AnprFlowObserved  - `vehiclePlateNotRead[boolean]`: Indica se non è stato possibile leggere una licenza  - `zonesServed[array]`: Array di zone in grado di ricevere o leggere le osservazioni  <!-- /30-PropertiesList -->  
+	- `speed[number]`: Velocità rilevata del veicolo osservato    
+- `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `refImages[array]`: Array di oggetti multipli che fanno riferimento alle immagini  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type[string]`: Tipo di entità NGSI. Deve essere AnprFlowObserved  - `vehiclePlateNotRead[boolean]`: Indica se non è stato possibile leggere una licenza  - `zonesServed[array]`: Array di zone che sono in grado di ricevere o leggere le osservazioni  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Proprietà richieste  
 - `dateObserved`  - `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
@@ -428,7 +430,7 @@ AnprFlowObserved:
               x-ngsi:    
                 type: Property    
             coordinates:    
-              description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              description: 'Sequence of position points describing this location, expressed in coordinate system'    
               oneOf:    
                 - description: Geojson reference to the item. Point    
                   properties:    
@@ -585,7 +587,7 @@ AnprFlowObserved:
                   x-ngsi:    
                     type: GeoProperty    
               x-ngsi:    
-                type: GeoProperty    
+                type: Property    
             identifier:    
               description: License plate identifier    
               type: string    
