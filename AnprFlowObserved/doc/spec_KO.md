@@ -430,7 +430,7 @@ AnprFlowObserved:
               x-ngsi:    
                 type: Property    
             coordinates:    
-              description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+              description: 'Sequence of position points describing this location, expressed in coordinate system'    
               oneOf:    
                 - description: Geojson reference to the item. Point    
                   properties:    
@@ -587,7 +587,7 @@ AnprFlowObserved:
                   x-ngsi:    
                     type: GeoProperty    
               x-ngsi:    
-                type: GeoProperty    
+                type: Property    
             identifier:    
               description: License plate identifier    
               type: string    
@@ -1067,7 +1067,7 @@ AnprFlowObserved:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-[FAQ 10](https://smartdatamodels.org/index.php/faqs/)을 참조하여 규모 단위를 다루는 방법에 대한 답변을 확인하세요.  
+10](https://smartdatamodels.org/index.php/faqs/)를 참조하여 규모 단위를 다루는 방법에 대한 답변을 확인하세요.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
