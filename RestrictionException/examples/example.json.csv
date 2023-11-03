@@ -1,0 +1,2 @@
+"id_", "type_", "name_", "allowedVehicleType__0_", "allowedVehicleType__1_", "exceptionValidityHours_", "refVehicleModel__0_", "refRestrictedTrafficArea_"
+"urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictionException:GeoJson:ds51-1", "RestrictionException", "Corso Concordia Area", "dieselCarEuro6", "petrolCarEuro6", "Tu,Th 16:00-20:00", "vehicle:VehicleModel:modelName-1", "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1"
