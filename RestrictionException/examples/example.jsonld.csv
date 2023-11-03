@@ -1,0 +1,2 @@
+"id_", "type_", "allowedVehicleType__0_", "allowedVehicleType__1_", "exceptionValidityHours_", "name_", "refRestrictedTrafficArea_", "refVehicleModel__0_", "@context__0_"
+"urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictionException:GeoJson:ds51-1", "RestrictionException", "dieselCarEuro6", "petrolCarEuro6", "Tu,Th 16:00-20:00", "Corso Concordia Area", "urn:ngsi-ld:RestrictedTrafficArea:Milan:RestrictedTrafficAreas:GeoJson:ds51-1", "vehicle:VehicleModel:modelName-1", "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
