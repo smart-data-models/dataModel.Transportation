@@ -1,2 +1,2 @@
-"id_", "type_", "amountCollected_", "mediaURL_", "equipmentId_", "equipmentType_", "titleCode_", "reportId_", "observationDateTime_", "paymentStatus_", "@context__0_"
-"ngsi-ld:Trafficviolation:234R:0212", "TrafficViolation", "10500", "https://www.google.com/", "4", "Camera", "11", "182", "2021-03-11T15:51:02+05:30", "Paid", "https://smartdatamodels.org/context.jsonld"
+"id_", "type_", "amountCollected_", "equipmentId_", "equipmentType_", "mediaURL_", "observationDateTime_", "paymentStatus_", "reportId_", "titleCode_", "@context__0_"
+"ngsi-ld:Trafficviolation:234R:0212", "TrafficViolation", "10500", "4", "Camera", "https://www.google.com/", "2021-03-11T15:51:02+05:30", "Paid", "182", "11", "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
