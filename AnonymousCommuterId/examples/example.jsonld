@@ -1,43 +1,20 @@
 {
     "id": "ngsi-ld:HUES:001",
-    "anonymizedId": {
-        "type": "Text",
-        "value": "D20220AC3478565F"
-    },
+    "anonymizedId": "D20220AC3478565F",
     "type": "AnonymousCommuterId",
-    "orig": {
-        "type": "Text",
-        "value": "City hall"
-    },
-    "dest": {
-        "type": "Text",
-        "value": "Library"
-    },
+    "date": "2022-09-05T08:25:35.00Z",
+    "orig": "City hall",
+    "dest": "Library",
+    "source": "People Monitoring",
+    "algorithm": "SHA1",
+    "dateCreated": "2022-09-05T09:25:35.00Z",
+    "dateModified": "2022-09-12T09:25:35.00Z",
     "location": {
-        "type": "GeoProperty",
-        "value": {
-            "type": "Point",
-            "coordinates": [
-                43.23161118206764,
-                -2.844695196525928
-            ]
-        }
-    },
-    "date": {
-        "type": "DateTime",
-        "value": "2022-09-05T08:25:35.00Z"
-    },
-    "algorithm": {
-        "type": "Text",
-        "value": "SHA1"
-    },
-    "dateCreated": {
-        "type": "DateTime",
-        "value": "2022-09-05T09:25:35.00Z"
-    },
-    "dateModified": {
-        "type": "DateTime",
-        "value": "2022-09-12T09:25:35.00Z"
+        "type": "Point",
+        "coordinates": [
+            43.23161118206764, 
+            -2.844695196525928
+        ]
     },
     "@context": [
         "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
