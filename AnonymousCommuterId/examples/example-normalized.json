@@ -14,7 +14,7 @@
         "value": "Library"
     },
     "location": {
-        "type": "GeoProperty",
+        "type": "geo:json",
         "value": {
             "type": "Point",
             "coordinates": [
