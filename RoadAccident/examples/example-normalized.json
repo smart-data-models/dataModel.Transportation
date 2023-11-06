@@ -1,55 +1,49 @@
 {
   "id": "urn:ngsi-ld:RoadAccident:id:ORHW:45620815",
   "dateCreated": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2018-06-23T04:19:24Z"
-    }
+    "type": "DateTime",
+    "value": "2018-06-23T04:19:24Z"
   },
   "dateModified": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2020-10-29T08:36:40Z"
-    }
+    "type": "DateTime",
+    "value": "2020-10-29T08:36:40Z"
   },
   "source": {
-    "type": "Property",
+    "type": "Text",
     "value": "To be defined"
   },
   "name": {
-    "type": "Property",
+    "type": "Text",
     "value": "Name of the element of the accident."
   },
   "alternateName": {
-    "type": "Property",
+    "type": "Text",
     "value": "Other name."
   },
   "description": {
-    "type": "Property",
+    "type": "Text",
     "value": "Clash in the middle of a traffic light"
   },
   "dataProvider": {
-    "type": "Property",
+    "type": "Text",
     "value": "Municipality."
   },
   "owner": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:RoadAccident:items:SUUU:18395806",
       "urn:ngsi-ld:RoadAccident:items:GVOF:30958855"
     ]
   },
   "seeAlso": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:RoadAccident:items:ESLS:37894243",
       "urn:ngsi-ld:RoadAccident:items:ZNUH:87936284"
     ]
   },
   "location": {
-    "type": "Property",
+    "type": "geo:json",
     "value": {
       "type": "Point",
       "coordinates": [
@@ -59,7 +53,7 @@
     }
   },
   "address": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": {
       "streetAddress": "FranklinStrasse",
       "addressLocality": "Berlin",
@@ -71,27 +65,24 @@
     }
   },
   "areaServed": {
-    "type": "Property",
+    "type": "Text",
     "value": "worldwide"
   },
   "type": "RoadAccident",
   "localId": {
-    "type": "Property",
+    "type": "Text",
     "value": "20210312-A1."
   },
   "status": {
-    "type": "Property",
+    "type": "Text",
     "value": "onGoing"
   },
   "accidentDate": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2021-03-12T13:59:36Z"
-    }
+    "type": "DateTime",
+    "value": "2021-03-12T13:59:36Z"
   },
   "accidentStatisticalDate": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": {
       "year": 2021,
       "quarter": 1,
@@ -100,95 +91,95 @@
     }
   },
   "accidentType": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": [
       "10",
       "6"
     ]
   },
   "accidentDescription": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": [
       "23",
       "46"
     ]
   },
   "weatherConditions": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": [
       "10",
       "20"
     ]
   },
   "roadSurface": {
-    "type": "Property",
+    "type": "Text",
     "value": "2"
   },
   "roadPaving": {
-    "type": "Property",
+    "type": "Text",
     "value": "2"
   },
   "accidentLocation": {
-    "type": "Property",
+    "type": "Text",
     "value": "5"
   },
   "roadClass": {
-    "type": "Property",
+    "type": "Text",
     "value": "Motorway."
   },
   "roadIntersection": {
-    "type": "Property",
+    "type": "Text",
     "value": "8"
   },
   "roadTrunk": {
-    "type": "Property",
+    "type": "Text",
     "value": "12"
   },
   "roadSign": {
-    "type": "Property",
+    "type": "Text",
     "value": "5"
   },
   "pedestriansInvolved": {
-    "type": "Property",
+    "type": "Boolean",
     "value": true
   },
   "vehiclesInvolved": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": [
       "21",
       "6"
     ]
   },
   "weakestSubject": {
-    "type": "Property",
+    "type": "Text",
     "value": "20"
   },
   "numPassengersInjured": {
-    "type": "Property",
+    "type": "Number",
     "value": 1
   },
   "numPassengersDead": {
-    "type": "Property",
+    "type": "Number",
     "value": 1
   },
   "numPedestrianInjured": {
-    "type": "Property",
+    "type": "Number",
     "value": 1
   },
   "numPedestrianDead": {
-    "type": "Property",
+    "type": "Number",
     "value": 0
   },
   "totalInjured": {
-    "type": "Property",
+    "type": "Number",
     "value": 2
   },
   "totalDeadPeopleWithin30Days": {
-    "type": "Property",
+    "type": "Number",
     "value": 0
   },
   "totalDeadPeopleWithin24Hours": {
-    "type": "Property",
+    "type": "Number",
     "value": 0
   }
 }
