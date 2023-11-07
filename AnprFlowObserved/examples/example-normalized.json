@@ -11,7 +11,7 @@
   },
   "dateObserved": {
     "type": "DateTime",
-    "@value": "2022-09-01T16:30:00Z"
+    "value": "2022-09-01T16:30:00Z"
   },
   "laneId": {
     "type": "Text",
@@ -113,7 +113,7 @@
     }
   },
   "refImages": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {
         "type": "StructuredValue",
