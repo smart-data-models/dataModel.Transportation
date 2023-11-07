@@ -51,11 +51,13 @@
   },
   "refImages": {
     "type": "Property",
-    "value": {
-      "type": "s3://bucket/object-xxx-plate",
-      "contentType": "image/jpg",
-      "imageType": "anpr"
-    }
+    "value": [
+      {
+        "type": "s3://bucket/object-xxx-plate",
+        "contentType": "image/jpg",
+        "imageType": "anpr"
+      }
+    ]
   },
     "@context": [
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
