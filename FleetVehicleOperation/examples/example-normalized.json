@@ -11,11 +11,11 @@
   },
   "fleetVehicle": {
     "type": "Relationship",
-    "object": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f"
+    "value": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f"
   },
   "fleetVehicleStatus": {
     "type": "Relationship",
-    "object": "urn:ngsi-ld:FleetVehicleStatus:0284e0dc-5aa4-11e8-97e6-2351fc70c286"
+    "value": "urn:ngsi-ld:FleetVehicleStatus:0284e0dc-5aa4-11e8-97e6-2351fc70c286"
   },
   "initiatingLocation": {
     "type": "geo:json",
@@ -33,7 +33,7 @@
   },
   "endedAt": {
     "type": "DateTime",
-    "@value": "2016-08-28T10:18:16Z"
+    "value": "2016-08-28T10:18:16Z"
   },
   "operationType": {
     "type": "Text",
