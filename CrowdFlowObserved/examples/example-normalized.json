@@ -2,9 +2,11 @@
   "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",
   "type": "CrowdFlowObserved",
   "dateObserved": {
-    "value": "2018-08-07T11:10:00/2018-08-07T11:15:00"
+    "type": "DateTime",
+    "value": "2018-08-07T11:10:00"
   },
   "direction": {
+    "type": "Text",
     "value": "inbound"
   },
   "dateObservedFrom": {
@@ -12,9 +14,11 @@
     "value": "2018-08-07T11:10:00Z"
   },
   "peopleCount": {
+    "type": "Number",
     "value": 100
   },
   "averageHeadwayTime": {
+    "type": "Number",
     "value": 5
   },
   "dateObservedTo": {
@@ -33,6 +37,7 @@
     }
   },
   "congested": {
+    "type": "Boolean",
     "value": false
   }
 }
