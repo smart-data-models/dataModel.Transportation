@@ -760,7 +760,7 @@ Vehicle:
         type: Property
     serviceOnDuty:
       description: Nature of service provided by emergency vehicle corresponding to this observation. True indicates the emergency vehicle corresponding to this observation is attending to/ servicing to an emergency call of duty and is False otherwise
-      type: string
+      type: boolean
       x-ngsi:
         model: https://schema.org/Boolean
         type: Property
