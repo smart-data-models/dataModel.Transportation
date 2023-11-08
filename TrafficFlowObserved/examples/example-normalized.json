@@ -2,9 +2,11 @@
   "id": "TrafficFlowObserved-Valladolid-osm-60821110",
   "type": "TrafficFlowObserved",
   "dateObserved": {
+    "type": "DateTime",
     "value": "2016-12-07T11:10:00/2016-12-07T11:15:00"
   },
   "laneDirection": {
+    "type": "DateTime",
     "value": "forward"
   },
   "dateObservedFrom": {
@@ -12,15 +14,19 @@
     "value": "2016-12-07T11:10:00Z"
   },
   "averageVehicleLength": {
+    "type": "DateTime",
     "value": 9.87
   },
   "averageHeadwayTime": {
+    "type": "DateTime",
     "value": 0.5
   },
   "occupancy": {
+    "type": "DateTime",
     "value": 0.76
   },
   "reversedLane": {
+    "type": "DateTime",
     "value": false
   },
   "dateObservedTo": {
@@ -28,9 +34,11 @@
     "value": "2016-12-07T11:15:00Z"
   },
   "intensity": {
+    "type": "DateTime",
     "value": 197
   },
   "laneId": {
+    "type": "DateTime",
     "value": 1
   },
   "location": {
@@ -53,6 +61,7 @@
     }
   },
   "averageVehicleSpeed": {
+    "type": "DateTime",
     "value": 52.6
   }
 }
