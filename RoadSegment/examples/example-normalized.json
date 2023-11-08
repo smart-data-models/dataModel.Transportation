@@ -2,11 +2,13 @@
   "id": "Spain-RoadSegment-A62-osm-24702186",
   "type": "RoadSegment",
   "category": {
+    "type": "StructuredValue",
     "value": [
       "oneway"
     ]
   },
   "endPoint": {
+    "type": "geo:json",
     "value": {
       "type": "Point",
       "coordinates": [
@@ -16,9 +18,11 @@
     }
   },
   "name": {
+    "type": "Text",
     "value": "Valladolid-Dueñas"
   },
   "startPoint": {
+    "type": "geo:json",
     "value": {
       "type": "Point",
       "coordinates": [
@@ -28,6 +32,7 @@
     }
   },
   "allowedVehicleType": {
+    "type": "StructuredValue",
     "value": [
       "car",
       "bus",
@@ -39,9 +44,11 @@
     ]
   },
   "source": {
+    "type": "Text",
     "value": "http://wwww.openstreetmap.org"
   },
   "totalLaneNumber": {
+    "type": "Number",
     "value": 2
   },
   "location": {
@@ -69,154 +76,162 @@
     }
   },
   "minimumAllowedSpeed": {
+    "type": "Number",
     "value": 60
   },
   "refRoad": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "Spain-Road-A62"
   },
   "maximumAllowedSpeed": {
+    "type": "Number",
     "value": 120
   },
   "laneUsage": {
+    "type": "StructuredValue"
     "value": [
       "forward",
       "forward"
     ]
   },
   "status": {
+    "type": "Text",
     "value": "open"
   },
   "statusDescription": {
+    "type": "Text",
     "value": "Bridge state = DOWN"
   },
-  "cyclePathMaterial": "ASPHALT",
+  "cyclePathMaterial": {
+    "type": "Text",
+    "value": "ASPHALT"
+  },
   "carriagewayLength": {
-    "type": "number",
+    "type": "Number",
     "value": 0.095454461114818
   },
   "totalPedestrianPathWidth": {
-    "type": "number",
+    "type": "Number",
     "value": 7
   },
   "bridgeCount": {
-    "type": "number",
+    "type": "Number",
     "value": 1
   },
   "pedestrianPathLeftHeight": {
-    "type": "number",
+    "type": "Number",
     "value": 2
   },
   "maximumAllowedHeight": {
-    "type": "number",
+    "type": "Number",
     "value": 72
   },
   "totalPedestrianPathLength": {
-    "type": "number",
+    "type": "Number",
     "value": 0.09
   },
   "culvertCount": {
-    "type": "number",
+    "type": "Number",
     "value": 0
   },
   "roadName": {
-    "type": "string",
+    "type": "Text",
     "value": "GREEN VILLA ROAD TO CHAITHRAM HOUSE"
   },
   "roadClass": {
-    "type": "string",
+    "type": "Text",
     "value": "OTHER_PUBLIC_ROAD"
   },
   "medianHeight": {
-    "type": "number",
+    "type": "Number",
     "value": 3.6
   },
   "roadWork": {
-    "type": "string",
+    "type": "Text",
     "value": "OTHER"
   },
   "roadID": {
-    "type": "string",
+    "type": "Number",
     "value": "5272"
   },
   "cyclePathRightWidth": {
-    "type": "number",
+    "type": "Number",
     "value": 2.5
   },
   "roadMaterial": {
-    "type": "string",
+    "type": "Text",
     "value": "TAR"
   },
   "medianWidth": {
-    "type": "number",
+    "type": "Number",
     "value": 1.5
   },
   "carriagewayWidth": {
-    "type": "number",
+    "type": "Number",
     "value": 3
   },
   "cyclePathRightHeight": {
-    "type": "number",
+    "type": "Number",
     "value": 1
   },
   "roadDirection": {
-    "type": "string",
+    "type": "Text",
     "value": "N"
   },
   "medianLength": {
-    "type": "number",
+    "type": "Number",
     "value": 0.09
   },
   "pedestrianPathMaterial": {
-    "type": "string",
+    "type": "Text",
     "value": "PAVEMENT BLOCK"
   },
   "cyclePathLeftWidth": {
-    "type": "number",
+    "type": "Number",
     "value": 2.5
   },
   "maximumAllowedWidth": {
-    "type": "number",
+    "type": "Number",
     "value": 74
   },
   "rightOfWayWidth": {
-    "type": "number",
+    "type": "Number",
     "value": 4
   },
   "cyclePathLeftHeight": {
-    "type": "number",
+    "type": "Number",
     "value": 1
   },
   "maximumAllowedWeight": {
-    "type": "number",
+    "type": "Number",
     "value": 109
   },
   "pedestrianPathRightWidth": {
-    "type": "number",
+    "type": "Number",
     "value": 3.5
   },
   "pedestrianPathLeftWidth": {
-    "type": "number",
+    "type": "Number",
     "value": 3.5
   },
   "pedestrianPathPlacement": {
-    "type": "string",
+    "type": "Text",
     "value": "NOT_AVAILABLE"
   },
   "pedestrianPathRightHeight": {
-    "type": "number",
+    "type": "Number",
     "value": 2
   },
   "cyclePathPlacement": {
-    "type": "string",
+    "type": "Text",
     "value": "NOT_AVAILABLE"
   },
   "totalCyclePathWidth": {
-    "type": "number",
+    "type": "Number",
     "value": 5
   },
   "agency_name": {
-    "type": "string",
+    "type": "Text",
     "value": "CORPORATION"
   },
   "municipalityInfo": {
