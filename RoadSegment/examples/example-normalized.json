@@ -88,7 +88,7 @@
     "value": 120
   },
   "laneUsage": {
-    "type": "StructuredValue"
+    "type": "StructuredValue",
     "value": [
       "forward",
       "forward"
