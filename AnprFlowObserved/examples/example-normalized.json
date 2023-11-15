@@ -22,13 +22,10 @@
     "value": "Antwerp"
   },
   "zonesServed": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
-      {
-      "type": "string",
-      "value": "Antwerp"
-    }
-  ]
+      "Antwerp"
+    ]
   },
   "vehiclePlateNotRead": {
     "type": "Boolean",
@@ -37,78 +34,27 @@
   "observedVehicle": {
     "type": "StructuredValue",
     "value": {
-      "direction": {
-        "type": "Text",
-        "value": "towards"
-      },
-      "speed": {
-        "type": "Number",
-        "value": 50
-      },
+      "direction": "towards",
+      "speed": 50,
       "brand": {
-        "type": "StructuredValue",
-        "value": {
-          "name": {
-            "type": "Text",
-            "value": "Audi"
-          },
-          "confidence": {
-            "type": "Number",
-            "value": 0.97
-          }
-        }
+        "name": "Audi",
+        "confidence": 0.97
       },
       "model": {
-        "type": "StructuredValue",
-        "value": {
-          "name": {
-            "type": "Text",
-            "value": "A3"
-          },
-          "confidence": {
-            "type": "Number",
-            "value": 0.98
-          }
-        }
+        "name": "A3",
+        "confidence": 0.98
       },
       "color": {
-        "type": "StructuredValue",
-        "value": {
-          "name": {
-            "type": "Text",
-            "value": "black"
-          },
-          "confidence": {
-            "type": "Number",
-            "value": 0.95
-          }
-        }
+        "name": "black",
+        "confidence": 0.95
       },
       "country": {
-        "type": "StructuredValue",
-        "value": {
-          "code": {
-            "type": "Text",
-            "value": "BE"
-          },
-          "confidence": {
-            "type": "Number",
-            "value": 0.95
-          }
-        }
+        "code": "BE",
+        "confidence": 0.95
       },
       "licensePlate": {
-        "type": "StructuredValue",
-        "value": {
-          "identifier": {
-            "type": "Text",
-            "value": "1-ABC-123"
-          },
-          "confidence": {
-            "type": "Number",
-            "value": 0.96
-          }
-        }
+        "identifier": "1-ABC-123",
+        "confidence": 0.96
       }
     }
   },
@@ -116,13 +62,20 @@
     "type": "StructuredValue",
     "value": [
       {
-        "type": "StructuredValue",
-        "value": {
-          "url": "s3://bucket/object-xxx-plate",
-          "contentType": "image/jpg",
-          "imageType": "anpr"
-        }
+        "url": "s3://bucket/object-xxx-plate",
+        "contentType": "image/jpg",
+        "imageType": "anpr"
       }
     ]
+  },
+  "location": {
+    "type": "geo:json",
+    "value": {
+      "coordinates": [
+        -56.6404505,
+        168.370658
+      ],
+      "type": "Point"
+    }
   }
 }
