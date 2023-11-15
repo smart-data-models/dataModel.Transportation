@@ -38,7 +38,7 @@
     }
   },
   "address": {
-    "type": "PostalAddress",
+    "type": "StructuredValue",
     "value": {
       "addressCountry": "ES",
       "addressLocality": "Barcelona",
@@ -70,7 +70,7 @@
     "value": "PedalSaddle"
   },
   "stationCode": {
-    "type": "Number",
+    "type": "Text",
     "value": "2"
   },
   "observationDate": {
