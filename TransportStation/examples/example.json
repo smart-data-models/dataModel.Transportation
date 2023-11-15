@@ -8,7 +8,7 @@
   "location": {
     "type": "Point",
     "coordinates": [
-      43.664810,
+      43.66481,
       7.196545
     ]
   },
@@ -89,7 +89,7 @@
     "uri:ngsi:StreetRetail"
   ],
   "contractingAuthority": "MNCA - Metropole Nice Cote d'Azur",
-  "contractingCompagny": "Régie Ligne d'Azur",
+  "contractingCompagny": "R\u00e9gie Ligne d'Azur",
   "contactPoint": {
     "url": "uri:ngsi:www.lignesdazur.com"
   },
@@ -127,7 +127,7 @@
       "linesConnected": [
         "L20 - Giono / Les Pugets",
         "L20 - Centre Commercial St Isidore",
-        "L21 - Le Gué / Polygone Riviera",
+        "L21 - Le Gu\u00e9 / Polygone Riviera",
         "L54 - Centre Commercial Cap 3000 - St Jeannet",
         "L90 - La Bolline",
         "91 Auron",
