@@ -6,19 +6,19 @@
     "value": 0.81
   },
   "source": {
-    "type": "URL",
+    "type": "Text",
     "value": "https://source.example.com"
   },
   "dataProvider": {
-    "type": "URL",
+    "type": "Text",
     "value": "https://provider.example.com"
   },
   "fleetVehicle": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f"
   },
   "fleetVehicleOperation": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "urn:ngsi-ld:FleetVehicleOperation:a4f0a07a-5aa6-11e8-b70f-4b9d36e53d7b"
   },
   "restFuelAmount": {
