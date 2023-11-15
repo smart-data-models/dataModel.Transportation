@@ -19,7 +19,7 @@
   },
   "name": {
     "type": "Text",
-    "value": "Valladolid-Dueñas"
+    "value": "Valladolid-Due\u00f1as"
   },
   "startPoint": {
     "type": "geo:json",
@@ -115,8 +115,8 @@
     "value": 7
   },
   "bridgeCount": {
-    "type": "Number",
-    "value": 1
+    "type": "Boolean",
+    "value": true
   },
   "pedestrianPathLeftHeight": {
     "type": "Number",
@@ -131,8 +131,8 @@
     "value": 0.09
   },
   "culvertCount": {
-    "type": "Number",
-    "value": 0
+    "type": "Boolean",
+    "value": false
   },
   "roadName": {
     "type": "Text",
@@ -151,7 +151,7 @@
     "value": "OTHER"
   },
   "roadID": {
-    "type": "Number",
+    "type": "Text",
     "value": "5272"
   },
   "cyclePathRightWidth": {
@@ -171,8 +171,8 @@
     "value": 3
   },
   "cyclePathRightHeight": {
-    "type": "Number",
-    "value": 1
+    "type": "Boolean",
+    "value": true
   },
   "roadDirection": {
     "type": "Text",
@@ -199,8 +199,8 @@
     "value": 4
   },
   "cyclePathLeftHeight": {
-    "type": "Number",
-    "value": 1
+    "type": "Boolean",
+    "value": true
   },
   "maximumAllowedWeight": {
     "type": "Number",
