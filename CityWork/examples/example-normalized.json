@@ -2,15 +2,15 @@
   "id": "urn:ngsi-ld:CityWork:CityWork:MNCA-CW-2020Q2-006",
   "type": "CityWork",
   "name": {
-    "type": "string",
+    "type": "Text",
     "value": "Nice-Airport-CW2020Q2-006"
   },
   "alternateName": {
-    "type": "string",
+    "type": "Text",
     "value": "AirPort global Observation"
   },
   "description": {
-    "type": "string",
+    "type": "Text",
     "value": "Widening work on access roads and installation of a new electrical and digital network for the connection of T1 & T2 terminals"
   },
   "location": {
@@ -48,11 +48,11 @@
     }
   },
   "areaServed": {
-    "type": "string",
+    "type": "Text",
     "value": "Nice Aeroport"
   },
   "territorialArea": {
-    "type": "string",
+    "type": "Text",
     "value": "subwaypole Nice"
   },
   "dateLastReported": {
@@ -60,11 +60,11 @@
     "value": "2020-04-02T10:30:00Z"
   },
   "workNumber": {
-    "type": "string",
+    "type": "Text",
     "value": "CW2020Q2-006"
   },
   "workState": {
-    "type": "string",
+    "type": "Text",
     "value": "open"
   },
   "workDate": {
@@ -98,7 +98,7 @@
     }
   },
   "openingHoursSpecification": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {
         "dayOfWeek": "Monday",
@@ -133,20 +133,17 @@
     ]
   },
   "contractingAuthority": {
-    "type": "string",
+    "type": "Text",
     "value": "MNCA - subwaypole Nice Cote d'Azur"
   },
   "contactPoint": {
     "type": "StructuredValue",
     "value": {
-      "name": {
-        "type": "string",
-        "value": "Service des AO"
-      }
+      "name": "Service des AO"
     }
   },
   "decrees": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "https://MNCA/CityWork/Decree/CW-2020Q2-006",
       "CW-2020Q2-006",
@@ -157,7 +154,7 @@
   "workLastDateUpdate": {
     "type": "DateTime",
     "value": "2020-03-17T08:45:00Z",
-     "metadata": {
+    "metadata": {
       "TimeInstant": {
         "type": "Text",
         "value": "2020-03-16T09:12:25Z"
@@ -165,11 +162,11 @@
     }
   },
   "mainContractingCompany": {
-    "type": "string",
+    "type": "Text",
     "value": "XRP - NICOLSPA"
   },
   "othersContractingCompagny": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "VRD - Terrassement Nicois",
       "ELEC - Electricite de Nice",
@@ -177,14 +174,14 @@
     ]
   },
   "workLevel": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "ground",
       "underground"
     ]
   },
   "workTarget": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "electricityNetworks",
       "opticalFibers",
@@ -195,7 +192,7 @@
     ]
   },
   "workNature": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "landFill",
       "repair",
@@ -206,32 +203,32 @@
     ]
   },
   "infrastructureFunction": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "collection",
       "distribution"
     ]
   },
   "encroachment": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "public",
       "private"
     ]
   },
   "typeOfInterventionRequest": {
-    "type": "string",
+    "type": "Text",
     "value": "authorizationRequest"
   },
   "workReason": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "sagging",
       "powerCut"
     ]
   },
   "workZone": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "busCorridor",
       "road",
@@ -240,7 +237,7 @@
     ]
   },
   "workDisposition": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {
         "disposition": "laneReduction",
@@ -298,7 +295,7 @@
     ]
   },
   "workOtherImpact": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "layingCablesOnGround",
       "shopsTerrace"
@@ -309,11 +306,11 @@
     "value": false
   },
   "countOfDerogation": {
-    "type": "number",
+    "type": "Number",
     "value": 2
   },
   "derogation": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {
         "derogationType": "Work Night during Workday",
@@ -342,11 +339,11 @@
     "value": true
   },
   "countOfRoadImpacted": {
-    "type": "number",
+    "type": "Number",
     "value": 3
   },
   "roadImpacted": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {
         "roadId": "urn:ngsi-ld:Road:N202",
@@ -391,7 +388,7 @@
     ]
   },
   "allowedVehicle": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "firefighters",
       "police",
@@ -400,7 +397,7 @@
     ]
   },
   "maxAuthorizedTonnage": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {
         "roadImpacted": "urn:ngsi-ld:Road:N202",
@@ -417,11 +414,11 @@
     ]
   },
   "countOfBusLineImpacted": {
-    "type": "number",
-    "value": 1
+    "type": "Boolean",
+    "value": true
   },
   "busImpacted": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {
         "lineImpacted": "urn:ngsi-ld:BusLine:L205"
@@ -429,11 +426,11 @@
     ]
   },
   "countOfTramwayLineImpacted": {
-    "type": "number",
+    "type": "Number",
     "value": 2
   },
   "tramwayImpacted": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {
         "lineImpacted": "TramWayLine:L01",
@@ -451,11 +448,11 @@
     ]
   },
   "countOfRailwayLineImpacted": {
-    "type": "number",
-    "value": 1
+    "type": "Boolean",
+    "value": true
   },
   "railwayImpacted": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {
         "lineImpacted": "Nice-Grasse",
@@ -466,22 +463,22 @@
     ]
   },
   "countOfSchoolImpacted": {
-    "type": "number",
+    "type": "Number",
     "value": 2
   },
   "schoolImpacted": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
-      "Lycée Massena",
-      "Université Campus Saint Jean"
+      "Lyc\u00e9e Massena",
+      "Universit\u00e9 Campus Saint Jean"
     ]
   },
   "countOfStationImpacted": {
-    "type": "number",
+    "type": "Number",
     "value": 4
   },
   "stationImpacted": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {
         "stationType": "bus",
@@ -500,11 +497,11 @@
     ]
   },
   "countOfEventImpacted": {
-    "type": "number",
+    "type": "Number",
     "value": 2
   },
   "eventsImpact": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:events:MNCA-EV-JazzCimiez",
       "NiceMarathon"
