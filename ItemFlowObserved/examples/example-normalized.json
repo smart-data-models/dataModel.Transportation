@@ -20,7 +20,7 @@
     }
   },
   "address": {
-    "type": "PostalAddress",
+    "type": "StructuredValue",
     "value": {
       "streetAddress": "Port Lympia",
       "addressLocality": "Nice",
@@ -44,7 +44,7 @@
     "value": "2020-03-20T22:30:00Z"
   },
   "refDevice": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "Device:BFO-NCE-MNCA-SP-001-Dev-02"
   },
   "itemType": {
@@ -56,8 +56,8 @@
     "value": "monoHull"
   },
   "laneId": {
-    "type": "Integer",
-    "value": 1
+    "type": "Boolean",
+    "value": true
   },
   "laneDirection": {
     "type": "Text",
