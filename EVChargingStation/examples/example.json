@@ -1,26 +1,35 @@
 {
   "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",
   "type": "EVChargingStation",
-  "name": "Agencia de Innovación",
+  "name": "Agencia de Innovaci\u00f3n",
   "location": {
-    "coordinates": [-4.747901, 41.618265],
+    "coordinates": [
+      -4.747901,
+      41.618265
+    ],
     "type": "Point"
   },
   "capacity": 2,
-  "socketType": ["Wall_Euro"],
+  "socketType": [
+    "Wall_Euro"
+  ],
   "address": {
     "streetAddress": "Paseo de Zorrilla, 191",
     "addressLocality": "Valladolid",
-    "addressCountry": "España"
+    "addressCountry": "Espa\u00f1a"
   },
   "contactPoint": {
     "email": "vehiculoelectrico@ava.es"
   },
   "operator": "Iberdrola",
-  "allowedVehicleType": ["car"],
-  "chargeType": ["free"],
+  "allowedVehicleType": [
+    "car"
+  ],
+  "chargeType": [
+    "free"
+  ],
   "source": "https://openchargemap.org/",
-   "powerConsumption": 10.0,
+  "powerConsumption": 10.0,
   "chargingUnitId": "PZEV01-DeltaBharatAC001-SCTLGandhiPark001",
   "transactionId": "84068784",
   "transactionType": "RFID",
