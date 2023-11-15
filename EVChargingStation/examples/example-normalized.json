@@ -2,7 +2,7 @@
   "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",
   "type": "EVChargingStation",
   "socketType": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "Wall_Euro"
     ]
@@ -16,7 +16,7 @@
     "value": "Agencia de Innovaci\u00f3n"
   },
   "allowedVehicleType": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "car"
     ]
@@ -36,13 +36,13 @@
     }
   },
   "chargeType": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "free"
     ]
   },
   "address": {
-    "type": "PostalAddress",
+    "type": "StructuredValue",
     "value": {
       "addressLocality": "Valladolid",
       "addressCountry": "Espa\u00f1a",
@@ -60,50 +60,47 @@
     }
   },
   "powerConsumption": {
-    "type": "number",
+    "type": "Number",
     "value": 10.0
   },
   "chargingUnitId": {
-    "type": "string",
+    "type": "Text",
     "value": "PZEV01-DeltaBharatAC001-SCTLGandhiPark001"
   },
   "transactionId": {
-    "type": "string",
+    "type": "Text",
     "value": "84068784"
   },
   "transactionType": {
-    "type": "string",
+    "type": "Text",
     "value": "RFID"
   },
   "stationName": {
-    "type": "string",
+    "type": "Text",
     "value": "SmartCityTvmGandhiParkOne"
   },
   "amountCollected": {
-    "type": "number",
+    "type": "Number",
     "value": 0.08
   },
   "taxAmountCollected": {
-    "type": "Number",
-    "value": 0.0
+    "type": "Boolean",
+    "value": false
   },
   "endDateTime": {
-    "format": "date-time",
-    "type": "string",
+    "type": "DateTime",
     "value": "2022-06-28T20:28:41+05:30"
   },
   "startDateTime": {
-    "format": "date-time",
-    "type": "string",
+    "type": "DateTime",
     "value": "2022-06-28T20:27:27+05:30"
   },
   "vehicleType": {
-    "type": "string",
+    "type": "Text",
     "value": "e-motorcycle"
   },
   "observationDateTime": {
-    "format": "date-time",
-    "type": "string",
+    "type": "DateTime",
     "value": "2022-06-28T20:27:29+05:30"
   }
 }
