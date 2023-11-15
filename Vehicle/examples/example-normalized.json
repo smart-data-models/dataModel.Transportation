@@ -2,7 +2,7 @@
   "id": "vehicle:WasteManagement:1",
   "type": "Vehicle",
   "category": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "municipalServices"
     ]
@@ -20,7 +20,7 @@
     "value": "3456ABC"
   },
   "refVehicleModel": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "vehiclemodel:econic"
   },
   "location": {
@@ -62,7 +62,7 @@
     }
   },
   "serviceProvided": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "garbageCollection",
       "wasteContainerCleaning"
@@ -101,8 +101,8 @@
     "value": "KA052134"
   },
   "currentTripCount": {
-    "type": "Number",
-    "value": 1
+    "type": "Boolean",
+    "value": true
   },
   "reportId": {
     "type": "Text",
@@ -113,8 +113,8 @@
     "value": "South Zone"
   },
   "vehicleAltitude": {
-    "type": "Number",
-    "value": 600
+    "type": "Text",
+    "value": "600"
   },
   "deviceSimNumber": {
     "type": "Text",
@@ -126,7 +126,7 @@
   },
   "deviceBatteryStatus": {
     "type": "Text",
-    "value": "Connected"
+    "value": "connected"
   },
   "ignitionStatus": {
     "type": "Boolean",
