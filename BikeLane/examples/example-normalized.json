@@ -17,16 +17,16 @@
   },
   "name": {
     "type": "Text",
-    "value": "Carril bici - Avenida del Mediterráneo"
+    "value": "Carril bici - Avenida del Mediterr\u00e1neo"
   },
   "description": {
     "type": "Text",
-    "value": "Información del carril bici"
+    "value": "Informaci\u00f3n del carril bici"
   },
   "address": {
     "type": "StructuredValue",
     "value": {
-      "streetAddress": "37 Avenida del Mediterráneo",
+      "streetAddress": "37 Avenida del Mediterr\u00e1neo",
       "addressCountry": "ES",
       "addressLocality": "Benidorm"
     }
