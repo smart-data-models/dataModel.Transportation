@@ -9,10 +9,10 @@
       42.60214472222222
     ]
   },
-  "name": "Carril bici - Avenida del Mediterráneo",
-  "description": "Información del carril bici",
+  "name": "Carril bici - Avenida del Mediterr\u00e1neo",
+  "description": "Informaci\u00f3n del carril bici",
   "address": {
-    "streetAddress": "37 Avenida del Mediterráneo",
+    "streetAddress": "37 Avenida del Mediterr\u00e1neo",
     "addressCountry": "ES",
     "addressLocality": "Benidorm"
   },
