@@ -2,15 +2,15 @@
   "id": "urn:ngsi-ld:VehicleFault:4939200a-5ef5-4266-8c91-1f82ad3b543b",
   "type": "VehicleFault",
   "source": {
-    "type": "URL",
+    "type": "Text",
     "value": "https://source.example.com"
   },
   "dataProvider": {
-    "type": "URL",
+    "type": "Text",
     "value": "https://provider.example.com"
   },
   "vehicle": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "urn:ngsi-ld:Vehicle:1fa179a6-b507-4857-ad72-eb5513ef05c6"
   },
   "observedAt": {
