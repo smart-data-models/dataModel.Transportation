@@ -155,31 +155,31 @@
     "value": "20"
   },
   "numPassengersInjured": {
-    "type": "Number",
-    "value": 1
+    "type": "Boolean",
+    "value": true
   },
   "numPassengersDead": {
-    "type": "Number",
-    "value": 1
+    "type": "Boolean",
+    "value": true
   },
   "numPedestrianInjured": {
-    "type": "Number",
-    "value": 1
+    "type": "Boolean",
+    "value": true
   },
   "numPedestrianDead": {
-    "type": "Number",
-    "value": 0
+    "type": "Boolean",
+    "value": false
   },
   "totalInjured": {
     "type": "Number",
     "value": 2
   },
   "totalDeadPeopleWithin30Days": {
-    "type": "Number",
-    "value": 0
+    "type": "Boolean",
+    "value": false
   },
   "totalDeadPeopleWithin24Hours": {
-    "type": "Number",
-    "value": 0
+    "type": "Boolean",
+    "value": false
   }
 }
