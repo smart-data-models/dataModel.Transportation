@@ -1,32 +1,32 @@
 {
-    "id": "vehiclemodel:econic",
-    "type": "VehicleModel",
-    "name": {
-        "type": "Text",
-        "value": "MBenz-Econic2014"
-    },
-    "cargoVolume": {
-        "type": "Number",
-        "value": 1000
-    }, 
-    "modelName": {
-        "type": "Text",
-        "value": "Econic"
-    }, 
-    "brandName": {
-        "type": "Text",
-        "value": "Mercedes Benz"
-    },
-    "manufacturerName": {
-        "type": "Text",
-        "value": "Daimler"
-    }, 
-    "fuelType": {
-        "type": "Text",
-        "value": "diesel"
-    }, 
-    "vehicleType": {
-        "type": "Text",
-        "value": "lorry"
-    }
+  "id": "vehiclemodel:econic",
+  "type": "VehicleModel",
+  "name": {
+    "type": "Text",
+    "value": "MBenz-Econic2014"
+  },
+  "cargoVolume": {
+    "type": "Number",
+    "value": 1000
+  },
+  "modelName": {
+    "type": "Text",
+    "value": "Econic"
+  },
+  "brandName": {
+    "type": "Text",
+    "value": "Mercedes Benz"
+  },
+  "manufacturerName": {
+    "type": "Text",
+    "value": "Daimler"
+  },
+  "fuelType": {
+    "type": "Text",
+    "value": "diesel"
+  },
+  "vehicleType": {
+    "type": "Text",
+    "value": "lorry"
+  }
 }
