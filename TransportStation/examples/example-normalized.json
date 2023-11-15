@@ -2,33 +2,33 @@
   "id": "urn:ngsi-ld:Station:Station:MNCA-STram-L02-AP-T2",
   "type": "TransportStation",
   "name": {
-    "type": "Property",
+    "type": "Text",
     "value": "NCE-Tram-Station-L02-AP-T2"
   },
   "alternateName": {
-    "type": "Property",
+    "type": "Text",
     "value": "Nice - Tramway Station Description - L02-AP-T2"
   },
   "description": {
-    "type": "Property",
+    "type": "Text",
     "value": "Description and services provided in the station"
   },
   "seeAlso": {
-    "type": "Property",
+    "type": "Text",
     "value": "http://tramway.nice.fr/wp-content/uploads/2019/10/BD_pocket_plan_MAJ03_2019_20082019.pdf"
   },
   "location": {
-    "type": "GeoProperty",
+    "type": "geo:json",
     "value": {
       "type": "Point",
       "coordinates": [
-        43.664810,
+        43.66481,
         7.196545
       ]
     }
   },
   "address": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": {
       "addressCountry": "FR",
       "addressLocality": "Nice",
@@ -36,7 +36,7 @@
     }
   },
   "areaServed": {
-    "type": "Property",
+    "type": "Text",
     "value": "Nice Airport"
   },
   "dateLastReported": {
@@ -44,32 +44,62 @@
     "value": "2020-03-17T08:45:00Z"
   },
   "stationType": {
-    "type": "Property",
-    "value": ["tram"]
+    "type": "StructuredValue",
+    "value": [
+      "tram"
+    ]
   },
   "locationType": {
-    "type": "Property",
-    "value": 1
+    "type": "Boolean",
+    "value": true
   },
   "levelId": {
-    "type": "Property",
-    "value": 0
+    "type": "Boolean",
+    "value": false
   },
   "zoneId": {
-    "type": "Property",
+    "type": "Text",
     "value": "B"
   },
   "wheelChairAccessible": {
-    "type": "Property",
-    "value": 1
+    "type": "Boolean",
+    "value": true
   },
   "openingHoursSpecification": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": [
       {
-        "dayOfWeek": "Monday, Tuesday, Wednesday, Thursday, Friday",
-        "opens": "07:00:00",
         "closes": "22:00:00",
+        "dayOfWeek": "Monday",
+        "opens": "07:00:00",
+        "validFrom": "2021-01-01T00:00:00",
+        "validThrough": "2021-12-31T23:59:59"
+      },
+      {
+        "closes": "22:00:00",
+        "dayOfWeek": "Tuesday",
+        "opens": "07:00:00",
+        "validFrom": "2021-01-01T00:00:00",
+        "validThrough": "2021-12-31T23:59:59"
+      },
+      {
+        "closes": "22:00:00",
+        "dayOfWeek": "Wednesday",
+        "opens": "07:00:00",
+        "validFrom": "2021-01-01T00:00:00",
+        "validThrough": "2021-12-31T23:59:59"
+      },
+      {
+        "closes": "22:00:00",
+        "dayOfWeek": "Thursday",
+        "opens": "07:00:00",
+        "validFrom": "2021-01-01T00:00:00",
+        "validThrough": "2021-12-31T23:59:59"
+      },
+      {
+        "closes": "22:00:00",
+        "dayOfWeek": "Friday",
+        "opens": "07:00:00",
         "validFrom": "2021-01-01T00:00:00",
         "validThrough": "2021-12-31T23:59:59"
       },
@@ -97,35 +127,35 @@
     ]
   },
   "owner": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": [
       "Street furniture Urbain & Retail"
     ]
   },
   "contractingAuthority": {
-    "type": "Property",
+    "type": "Text",
     "value": "MNCA - Metropole Nice Cote d'Azur"
   },
   "contractingCompany": {
-    "type": "Property",
-    "value": "Régie Ligne d'Azur"
+    "type": "Text",
+    "value": "R\u00e9gie Ligne d'Azur"
   },
   "contactPoint": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": {
       "url": "www.lignesdazur.com"
     }
   },
   "webSite": {
-    "type": "Property",
+    "type": "Text",
     "value": "https://tramway.nice.fr/Plan-Station-L02-AP-T2.pdf"
   },
   "installationMode": {
-    "type": "Property",
+    "type": "Text",
     "value": "ground"
   },
   "dimension": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": {
       "length": 300,
       "width": 25,
@@ -133,115 +163,72 @@
     }
   },
   "inventory": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": {
       "nbOfIOPoint": 2,
       "nbOfLane": 1,
       "nbOfPlatform": 1,
-      "PlatformType": ["lateral"]
+      "PlatformType": [
+        "lateral"
+      ]
     }
   },
   "stationConnected": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": [
       {
         "stationType": "tram",
-        "linesConnected": {
-          "type": "Property",
-          "value": [
-            "Tram 2 - CADAM / Nikaia",
-            "Tram 3 - Saint Isidore / Stade Allianz Riviera"
-          ]
-        }
+        "linesConnected": [
+          "Tram 2 - CADAM / Nikaia",
+          "Tram 3 - Saint Isidore / Stade Allianz Riviera"
+        ]
       },
       {
         "stationType": "train",
-        "linesConnected": {
-          "type": "Property",
-          "value": [
-            "Gare SNCF Nice Saint Augustin (600m)"
-          ]
-        }
+        "linesConnected": [
+          "Gare SNCF Nice Saint Augustin (600m)"
+        ]
       },
       {
         "stationType": "bus",
-        "linesConnected": {
-          "type": "Property",
-          "value": [
-            "L20 - Giono / Les Pugets",
-            "L20 - Centre Commercial St Isidore",
-            "L21 - Le Gué / Polygone Riviera",
-            "L54 - Centre Commercial Cap 3000 - St Jeannet",
-            "L90 - La Bolline",
-            "91 Auron",
-            "L92 - Isola 2000"
-          ]
-        }
+        "linesConnected": [
+          "L20 - Giono / Les Pugets",
+          "L20 - Centre Commercial St Isidore",
+          "L21 - Le Gu\u00e9 / Polygone Riviera",
+          "L54 - Centre Commercial Cap 3000 - St Jeannet",
+          "L90 - La Bolline",
+          "91 Auron",
+          "L92 - Isola 2000"
+        ]
       }
     ]
   },
   "services": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": {
-      "purchaseDevice": {
-        "type": "Property",
-        "value": true
-      },
-      "interactiveDevice": {
-        "type": "Property",
-        "value": true
-      },
-      "timetableDevice": {
-        "type": "Property",
-        "value": true
-      },
-      "voiceDevice": {
-        "type": "Property",
-        "value": true
-      },
-      "informationBoardDevice": {
-        "type": "Property",
-        "value": true
-      },
-      "messageDevice": {
-        "type": "Property",
-        "value": false
-      },
-      "shelters": {
-        "type": "Property",
-        "value": true
-      },
-      "restBench": {
-        "type": "Property",
-        "value": false
-      },
-      "emergencyPhone": {
-        "type": "Property",
-        "value": false
-      },
-      "videoSurveillance": {
-        "type": "Property",
-        "value": true
-      },
-      "defibrillator": {
-        "type": "Property",
-        "value": false
-      },
-      "wheelChairAccessible": {
-        "type": "Property",
-        "value": true
-      }
+      "purchaseDevice": true,
+      "interactiveDevice": true,
+      "timetableDevice": true,
+      "voiceDevice": true,
+      "informationBoardDevice": true,
+      "messageDevice": false,
+      "shelters": true,
+      "restBench": false,
+      "emergencyPhone": false,
+      "videoSurveillance": true,
+      "defibrillator": false,
+      "wheelChairAccessible": true
     }
   },
   "paymentAccepted": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": [
       "Cash",
       "CreditCard"
     ]
   },
   "currencyAccepted": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": [
       "EUR"
     ]
@@ -255,11 +242,11 @@
     "value": "2018-09-15"
   },
   "architect": {
-    "type": "Property",
+    "type": "Text",
     "value": "Nice Architecture"
   },
   "featuredArtist ": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": [
       "Leopold",
       "De Renaiss"
