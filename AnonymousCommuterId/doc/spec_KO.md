@@ -391,11 +391,11 @@ AnonymousCommuterId:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/AnonymousCommuterId/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/AnonymousCommuterId/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.2    
+  x-version: 0.0.3    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -408,23 +408,23 @@ AnonymousCommuterId:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "ngsi-ld:HUES:001",  
-    "anonymizedId": "D20220AC3478565F",  
-    "type": "AnonymousCommuterId",  
-    "date": "2022-09-05T08:25:35.00Z",  
-    "orig": "City hall",  
-    "dest": "Library",  
-    "source": "People Monitoring",  
-    "algorithm": "SHA1",  
-    "dateCreated": "2022-09-05T09:25:35.00Z",  
-    "dateModified": "2022-09-12T09:25:35.00Z",  
-    "location": {  
-        "type": "Point",  
-        "coordinates": [  
-            43.23161118206764,  
-            -2.844695196525928  
-        ]  
-    }  
+  "id": "ngsi-ld:HUES:001",  
+  "anonymizedId": "D20220AC3478565F",  
+  "type": "AnonymousCommuterId",  
+  "date": "2022-09-05T08:25:35.00Z",  
+  "orig": "City hall",  
+  "dest": "Library",  
+  "source": "People Monitoring",  
+  "algorithm": "SHA1",  
+  "dateCreated": "2022-09-05T09:25:35.00Z",  
+  "dateModified": "2022-09-12T09:25:35.00Z",  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      43.23161118206764,  
+      -2.844695196525928  
+    ]  
+  }  
 }  
 ```  
 </details>  
@@ -433,46 +433,46 @@ AnonymousCommuterId:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-   "id": "ngsi-ld:HUES:001",  
-    "anonymizedId": {  
-        "type": "Text",  
-        "value": "D20220AC3478565F"  
-    },  
-    "type": "AnonymousCommuterId",  
-    "orig": {  
-        "type": "Text",  
-        "value": "City hall"  
-    },  
-    "dest": {  
-        "type": "Text",  
-        "value": "Library"  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                43.23161118206764,  
-                -2.844695196525928  
-            ]  
-        }  
-    },  
-    "date": {  
-        "type": "DateTime",  
-        "value": "2022-09-05T08:25:35.00Z"  
-    },  
-    "algorithm": {  
-        "type": "Text",  
-        "value": "SHA1"  
-    },  
-    "dateCreated": {  
-        "type": "DateTime",  
-        "value": "2022-09-05T09:25:35.00Z"  
-    },  
-    "dateModified": {  
-        "type": "DateTime",  
-        "value": "2022-09-12T09:25:35.00Z"  
+  "id": "ngsi-ld:HUES:001",  
+  "anonymizedId": {  
+    "type": "Text",  
+    "value": "D20220AC3478565F"  
+  },  
+  "type": "AnonymousCommuterId",  
+  "orig": {  
+    "type": "Text",  
+    "value": "City hall"  
+  },  
+  "dest": {  
+    "type": "Text",  
+    "value": "Library"  
+  },  
+  "location": {  
+    "type": "geo:json",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        43.23161118206764,  
+        -2.844695196525928  
+      ]  
     }  
+  },  
+  "date": {  
+    "type": "DateTime",  
+    "value": "2022-09-05T08:25:35.00Z"  
+  },  
+  "algorithm": {  
+    "type": "Text",  
+    "value": "SHA1"  
+  },  
+  "dateCreated": {  
+    "type": "DateTime",  
+    "value": "2022-09-05T09:25:35.00Z"  
+  },  
+  "dateModified": {  
+    "type": "DateTime",  
+    "value": "2022-09-12T09:25:35.00Z"  
+  }  
 }  
 ```  
 </details>  
@@ -481,49 +481,26 @@ AnonymousCommuterId:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "ngsi-ld:HUES:001",  
-    "anonymizedId": {  
-        "type": "Text",  
-        "value": "D20220AC3478565F"  
-    },  
-    "type": "AnonymousCommuterId",  
-    "orig": {  
-        "type": "Text",  
-        "value": "City hall"  
-    },  
-    "dest": {  
-        "type": "Text",  
-        "value": "Library"  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                43.23161118206764,  
-                -2.844695196525928  
-            ]  
-        }  
-    },  
-    "date": {  
-        "type": "DateTime",  
-        "value": "2022-09-05T08:25:35.00Z"  
-    },  
-    "algorithm": {  
-        "type": "Text",  
-        "value": "SHA1"  
-    },  
-    "dateCreated": {  
-        "type": "DateTime",  
-        "value": "2022-09-05T09:25:35.00Z"  
-    },  
-    "dateModified": {  
-        "type": "DateTime",  
-        "value": "2022-09-12T09:25:35.00Z"  
-    },  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+  "id": "ngsi-ld:HUES:001",  
+  "anonymizedId": "D20220AC3478565F",  
+  "type": "AnonymousCommuterId",  
+  "date": "2022-09-05T08:25:35.00Z",  
+  "orig": "City hall",  
+  "dest": "Library",  
+  "source": "People Monitoring",  
+  "algorithm": "SHA1",  
+  "dateCreated": "2022-09-05T09:25:35.00Z",  
+  "dateModified": "2022-09-12T09:25:35.00Z",  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      43.23161118206764,  
+      -2.844695196525928  
     ]  
+  },  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
@@ -533,21 +510,44 @@ AnonymousCommuterId:
 ```json  
 {  
     "id": "ngsi-ld:HUES:001",  
-    "anonymizedId": "D20220AC3478565F",  
+    "anonymizedId": {  
+        "type": "Property",  
+        "value": "D20220AC3478565F"  
+    },  
     "type": "AnonymousCommuterId",  
-    "date": "2022-09-05T08:25:35.00Z",  
-    "orig": "City hall",  
-    "dest": "Library",  
-    "source": "People Monitoring",  
-    "algorithm": "SHA1",  
-    "dateCreated": "2022-09-05T09:25:35.00Z",  
-    "dateModified": "2022-09-12T09:25:35.00Z",  
+    "orig": {  
+        "type": "Property",  
+        "value": "City hall"  
+    },  
+    "dest": {  
+        "type": "Property",  
+        "value": "Library"  
+    },  
     "location": {  
-        "type": "Point",  
-        "coordinates": [  
-            43.23161118206764,   
-            -2.844695196525928  
-        ]  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                43.23161118206764,  
+                -2.844695196525928  
+            ]  
+        }  
+    },  
+    "date": {  
+        "type": "Property",  
+        "value": "2022-09-05T08:25:35.00Z"  
+    },  
+    "algorithm": {  
+        "type": "Property",  
+        "value": "SHA1"  
+    },  
+    "dateCreated": {  
+        "type": "Property",  
+        "value": "2022-09-05T09:25:35.00Z"  
+    },  
+    "dateModified": {  
+        "type": "Property",  
+        "value": "2022-09-12T09:25:35.00Z"  
     },  
     "@context": [  
         "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
@@ -559,7 +559,7 @@ AnonymousCommuterId:
 이 모델은 Purple Blob S.L.에서 제공한 것으로, 트위터의 METIS 익명화된 유동인구 제품의 관점과 필요성에 따라 맞춤화되었습니다. 트위터는 광범위하게 사용되는 익명 통근자 ID 상호 운용 데이터 모델의 개발에 대해 개방적이므로 adelgado@purpleblob.net 또는 iruiz@purpleblob.net 으로 연락하여 추가 논의를 진행하거나 Github 이슈를 개설해 주세요!  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-[FAQ 10](https://smartdatamodels.org/index.php/faqs/)을 참조하여 규모 단위를 다루는 방법에 대한 답변을 확인하세요.  
+10](https://smartdatamodels.org/index.php/faqs/)를 참조하여 규모 단위를 다루는 방법에 대한 답변을 확인하세요.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
