@@ -1,47 +1,47 @@
 {
-    "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",
-    "type": "EVChargingStation",
-    "name": "Agencia de Innovaci\u00f3n",
-    "location": {
-        "coordinates": [
-            -4.747901,
-            41.618265
-        ],
-        "type": "Point"
-    },
-    "capacity": 2,
-    "socketType": [
-        "Wall_Euro"
+  "id": "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa",
+  "type": "EVChargingStation",
+  "name": "Agencia de Innovaci\u00f3n",
+  "location": {
+    "coordinates": [
+      -4.747901,
+      41.618265
     ],
-    "address": {
-        "streetAddress": "Paseo de Zorrilla, 191",
-        "addressLocality": "Valladolid",
-        "addressCountry": "Espa\u00f1a"
-    },
-    "contactPoint": {
-        "email": "vehiculoelectrico@ava.es"
-    },
-    "operator": "Iberdrola",
-    "allowedVehicleType": [
-        "car"
-    ],
-    "chargeType": [
-        "free"
-    ],
-    "source": "https://openchargemap.org/",
-    "powerConsumption": 10.0,
-    "chargingUnitId": "PZEV01-DeltaBharatAC001-SCTLGandhiPark001",
-    "transactionId": "84068784",
-    "transactionType": "RFID",
-    "stationName": "SmartCityTvmGandhiParkOne",
-    "amountCollected": 0.08,
-    "taxAmountCollected": 0.0,
-    "endDateTime": "2022-06-28T20:28:41+05:30",
-    "startDateTime": "2022-06-28T20:27:27+05:30",
-    "vehicleType": "e-motorcycle",
-    "observationDateTime": "2022-06-28T20:27:29+05:30",
-    "@context": [
-        "https://smart-data-models.github.io/dataModel.Transportation/context.jsonld",
-        "iudx:EVChargingStation"
-    ]
+    "type": "Point"
+  },
+  "capacity": 2,
+  "socketType": [
+    "Wall_Euro"
+  ],
+  "address": {
+    "streetAddress": "Paseo de Zorrilla, 191",
+    "addressLocality": "Valladolid",
+    "addressCountry": "Espa\u00f1a"
+  },
+  "contactPoint": {
+    "email": "vehiculoelectrico@ava.es"
+  },
+  "operator": "Iberdrola",
+  "allowedVehicleType": [
+    "car"
+  ],
+  "chargeType": [
+    "free"
+  ],
+  "source": "https://openchargemap.org/",
+  "powerConsumption": 10.0,
+  "chargingUnitId": "PZEV01-DeltaBharatAC001-SCTLGandhiPark001",
+  "transactionId": "84068784",
+  "transactionType": "RFID",
+  "stationName": "SmartCityTvmGandhiParkOne",
+  "amountCollected": 0.08,
+  "taxAmountCollected": 0.0,
+  "endDateTime": "2022-06-28T20:28:41+05:30",
+  "startDateTime": "2022-06-28T20:27:27+05:30",
+  "vehicleType": "e-motorcycle",
+  "observationDateTime": "2022-06-28T20:27:29+05:30",
+  "@context": [
+    "https://smart-data-models.github.io/dataModel.Transportation/context.jsonld",
+    "iudx:EVChargingStation"
+  ]
 }
