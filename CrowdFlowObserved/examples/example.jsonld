@@ -3,6 +3,7 @@
   "type": "CrowdFlowObserved",
   "averageHeadwayTime": 5,
   "congested": false,
+  "dateObserved": "2018-08-07T11:10:00/2018-08-07T11:15:00",
   "dateObservedFrom": "2018-08-07T11:10:00Z",
   "dateObservedTo": "2018-08-07T11:15:00Z",
   "direction": "inbound",
