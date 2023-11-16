@@ -10,34 +10,34 @@
   "dateReceived": "2022-09-01T16:35:00Z",
   "observedBy": "ANPR1_Noorderlaan",
   "laneId": "ABC123",
-  "areaServed":"Antwerp",
+  "areaServed": "Antwerp",
   "zonesServed": [
-      "Antwerp"
-    ],
+    "Antwerp"
+  ],
   "vehiclePlateNotRead": false,
   "observedVehicle": {
     "direction": "towards",
     "speed": 50,
-    "brand":{
+    "brand": {
       "name": "Audi",
       "confidence": 0.97
     },
-    "model":{
+    "model": {
       "name": "A3",
       "confidence": 0.98
     },
-    "color":{
+    "color": {
       "name": "black",
       "confidence": 0.95
     },
-    "country":{
+    "country": {
       "code": "BE",
-      "confidence":0.95
+      "confidence": 0.95
     },
-    "licensePlate":{
+    "licensePlate": {
       "identifier": "1-ABC-123",
       "confidence": 0.96
-    } 
+    }
   },
   "location": {
     "type": "Point",
@@ -46,14 +46,14 @@
       168.370658
     ]
   },
-  "refImages":[
+  "refImages": [
     {
       "contentType": "image/jpg",
       "imageType": "anpr",
       "url": "urn:ngsi-ld:ANPR:items:123"
     }
   ],
-    "@context": [
+  "@context": [
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
   ]
 }
