@@ -11,10 +11,8 @@
   "averageVehicleLength": 9.87,
   "averageVehicleSpeed": 52.6,
   "dateObserved": "2016-12-07T11:10:00/2016-12-07T11:15:00",
-  "dateObservedFrom": "2016-12-07T11:10:00Z"
-  ,
-  "dateObservedTo":  "2016-12-07T11:15:00Z"
-  ,
+  "dateObservedFrom": "2016-12-07T11:10:00Z",
+  "dateObservedTo": "2016-12-07T11:15:00Z",
   "intensity": 197,
   "laneDirection": "forward",
   "laneId": 1,
