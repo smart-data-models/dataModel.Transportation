@@ -22,6 +22,7 @@
 	- `postOfficeBoxNumber[string]`: Le numéro de la boîte postale pour les adresses de boîtes postales. Par exemple, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: Le code postal. Par exemple, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: L'adresse de la rue  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Numéro identifiant une propriété spécifique sur une voie publique    
 - `algorithm[string]`: Nom de l'algorithme utilisé pour anonymiser l'Id  - `alternateName[string]`: Un nom alternatif pour ce poste  - `anonymizedId[string]`: Identifiant anonyme  - `areaServed[string]`: La zone géographique où un service ou un article est offert  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées  - `date[date-time]`: Date de l'identifiant anonyme détecté  - `dateCreated[date-time]`: Horodatage de la création de l'entité. Celle-ci est généralement attribuée par la plate-forme de stockage  - `dateModified[date-time]`: Date de la dernière modification de l'entité. Cette date est généralement attribuée par la plate-forme de stockage  - `description[string]`: Une description de l'article  - `dest[string]`: Chaîne de l'identifiant de destination, entité réelle où l'identifiant anonyme a été détecté  - `id[*]`: Identifiant unique de l'entité  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une chaîne de ligne, d'un polygone, d'un point multiple, d'une chaîne de ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément  - `orig[string]`: Chaîne de l'identifiant d'origine, dernière entité où l'identifiant anonyme a été détecté  - `owner[array]`: Une liste contenant une séquence de caractères encodés JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires concernant l'élément  - `source[string]`: Chaîne de valeur de la source de cet AnonymousCommuterId, par exemple (ALPR, surveillance des personnes, reconnaissance faciale, etc...)  - `type[string]`: Type d'entité NGSI. Il doit s'agir de AnonymousCommuterId  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propriétés requises  
@@ -390,11 +391,11 @@ AnonymousCommuterId:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/AnonymousCommuterId/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/AnonymousCommuterId/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.2    
+  x-version: 0.0.3    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -407,23 +408,23 @@ AnonymousCommuterId:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "ngsi-ld:HUES:001",  
-    "anonymizedId": "D20220AC3478565F",  
-    "type": "AnonymousCommuterId",  
-    "date": "2022-09-05T08:25:35.00Z",  
-    "orig": "City hall",  
-    "dest": "Library",  
-    "source": "People Monitoring",  
-    "algorithm": "SHA1",  
-    "dateCreated": "2022-09-05T09:25:35.00Z",  
-    "dateModified": "2022-09-12T09:25:35.00Z",  
-    "location": {  
-        "type": "Point",  
-        "coordinates": [  
-            43.23161118206764,  
-            -2.844695196525928  
-        ]  
-    }  
+  "id": "ngsi-ld:HUES:001",  
+  "anonymizedId": "D20220AC3478565F",  
+  "type": "AnonymousCommuterId",  
+  "date": "2022-09-05T08:25:35.00Z",  
+  "orig": "City hall",  
+  "dest": "Library",  
+  "source": "People Monitoring",  
+  "algorithm": "SHA1",  
+  "dateCreated": "2022-09-05T09:25:35.00Z",  
+  "dateModified": "2022-09-12T09:25:35.00Z",  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      43.23161118206764,  
+      -2.844695196525928  
+    ]  
+  }  
 }  
 ```  
 </details>  
@@ -432,46 +433,46 @@ AnonymousCommuterId:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-   "id": "ngsi-ld:HUES:001",  
-    "anonymizedId": {  
-        "type": "Text",  
-        "value": "D20220AC3478565F"  
-    },  
-    "type": "AnonymousCommuterId",  
-    "orig": {  
-        "type": "Text",  
-        "value": "City hall"  
-    },  
-    "dest": {  
-        "type": "Text",  
-        "value": "Library"  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                43.23161118206764,  
-                -2.844695196525928  
-            ]  
-        }  
-    },  
-    "date": {  
-        "type": "DateTime",  
-        "value": "2022-09-05T08:25:35.00Z"  
-    },  
-    "algorithm": {  
-        "type": "Text",  
-        "value": "SHA1"  
-    },  
-    "dateCreated": {  
-        "type": "DateTime",  
-        "value": "2022-09-05T09:25:35.00Z"  
-    },  
-    "dateModified": {  
-        "type": "DateTime",  
-        "value": "2022-09-12T09:25:35.00Z"  
+  "id": "ngsi-ld:HUES:001",  
+  "anonymizedId": {  
+    "type": "Text",  
+    "value": "D20220AC3478565F"  
+  },  
+  "type": "AnonymousCommuterId",  
+  "orig": {  
+    "type": "Text",  
+    "value": "City hall"  
+  },  
+  "dest": {  
+    "type": "Text",  
+    "value": "Library"  
+  },  
+  "location": {  
+    "type": "geo:json",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        43.23161118206764,  
+        -2.844695196525928  
+      ]  
     }  
+  },  
+  "date": {  
+    "type": "DateTime",  
+    "value": "2022-09-05T08:25:35.00Z"  
+  },  
+  "algorithm": {  
+    "type": "Text",  
+    "value": "SHA1"  
+  },  
+  "dateCreated": {  
+    "type": "DateTime",  
+    "value": "2022-09-05T09:25:35.00Z"  
+  },  
+  "dateModified": {  
+    "type": "DateTime",  
+    "value": "2022-09-12T09:25:35.00Z"  
+  }  
 }  
 ```  
 </details>  
@@ -480,49 +481,26 @@ AnonymousCommuterId:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "ngsi-ld:HUES:001",  
-    "anonymizedId": {  
-        "type": "Text",  
-        "value": "D20220AC3478565F"  
-    },  
-    "type": "AnonymousCommuterId",  
-    "orig": {  
-        "type": "Text",  
-        "value": "City hall"  
-    },  
-    "dest": {  
-        "type": "Text",  
-        "value": "Library"  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                43.23161118206764,  
-                -2.844695196525928  
-            ]  
-        }  
-    },  
-    "date": {  
-        "type": "DateTime",  
-        "value": "2022-09-05T08:25:35.00Z"  
-    },  
-    "algorithm": {  
-        "type": "Text",  
-        "value": "SHA1"  
-    },  
-    "dateCreated": {  
-        "type": "DateTime",  
-        "value": "2022-09-05T09:25:35.00Z"  
-    },  
-    "dateModified": {  
-        "type": "DateTime",  
-        "value": "2022-09-12T09:25:35.00Z"  
-    },  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+  "id": "ngsi-ld:HUES:001",  
+  "anonymizedId": "D20220AC3478565F",  
+  "type": "AnonymousCommuterId",  
+  "date": "2022-09-05T08:25:35.00Z",  
+  "orig": "City hall",  
+  "dest": "Library",  
+  "source": "People Monitoring",  
+  "algorithm": "SHA1",  
+  "dateCreated": "2022-09-05T09:25:35.00Z",  
+  "dateModified": "2022-09-12T09:25:35.00Z",  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      43.23161118206764,  
+      -2.844695196525928  
     ]  
+  },  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
@@ -532,21 +510,44 @@ AnonymousCommuterId:
 ```json  
 {  
     "id": "ngsi-ld:HUES:001",  
-    "anonymizedId": "D20220AC3478565F",  
+    "anonymizedId": {  
+        "type": "Property",  
+        "value": "D20220AC3478565F"  
+    },  
     "type": "AnonymousCommuterId",  
-    "date": "2022-09-05T08:25:35.00Z",  
-    "orig": "City hall",  
-    "dest": "Library",  
-    "source": "People Monitoring",  
-    "algorithm": "SHA1",  
-    "dateCreated": "2022-09-05T09:25:35.00Z",  
-    "dateModified": "2022-09-12T09:25:35.00Z",  
+    "orig": {  
+        "type": "Property",  
+        "value": "City hall"  
+    },  
+    "dest": {  
+        "type": "Property",  
+        "value": "Library"  
+    },  
     "location": {  
-        "type": "Point",  
-        "coordinates": [  
-            43.23161118206764,   
-            -2.844695196525928  
-        ]  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                43.23161118206764,  
+                -2.844695196525928  
+            ]  
+        }  
+    },  
+    "date": {  
+        "type": "Property",  
+        "value": "2022-09-05T08:25:35.00Z"  
+    },  
+    "algorithm": {  
+        "type": "Property",  
+        "value": "SHA1"  
+    },  
+    "dateCreated": {  
+        "type": "Property",  
+        "value": "2022-09-05T09:25:35.00Z"  
+    },  
+    "dateModified": {  
+        "type": "Property",  
+        "value": "2022-09-12T09:25:35.00Z"  
     },  
     "@context": [  
         "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
