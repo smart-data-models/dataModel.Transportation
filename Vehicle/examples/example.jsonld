@@ -8,7 +8,7 @@
     "municipalServices"
   ],
   "currentTripCount": 1,
-  "deviceBatteryStatus": "Connected",
+  "deviceBatteryStatus": "connected",
   "deviceSimNumber": "9942142573",
   "emergencyVehicleType": "ambulance",
   "fuelEfficiency": 13,
@@ -41,13 +41,13 @@
   "reportId": "21645",
   "serviceOnDuty": false,
   "serviceProvided": [
-    "gargabeCollection",
+    "garbageCollection",
     "wasteContainerCleaning"
   ],
   "serviceStatus": "onRoute",
   "speed": 50,
   "tripNetWeightCollected": 12,
-  "vehicleAltitude": 600,
+  "vehicleAltitude": "600",
   "vehiclePlateIdentifier": "3456ABC",
   "vehicleRunningStatus": "running",
   "vehicleTrackerDevice": "Installed",
