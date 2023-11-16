@@ -1,22 +1,22 @@
 {
-    "id": "ngsi-ld:HUES:001",
-    "anonymizedId": "D20220AC3478565F",
-    "type": "AnonymousCommuterId",
-    "date": "2022-09-05T08:25:35.00Z",
-    "orig": "City hall",
-    "dest": "Library",
-    "source": "People Monitoring",
-    "algorithm": "SHA1",
-    "dateCreated": "2022-09-05T09:25:35.00Z",
-    "dateModified": "2022-09-12T09:25:35.00Z",
-    "location": {
-        "type": "Point",
-        "coordinates": [
-            43.23161118206764, 
-            -2.844695196525928
-        ]
-    },
-    "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
+  "id": "ngsi-ld:HUES:001",
+  "anonymizedId": "D20220AC3478565F",
+  "type": "AnonymousCommuterId",
+  "date": "2022-09-05T08:25:35.00Z",
+  "orig": "City hall",
+  "dest": "Library",
+  "source": "People Monitoring",
+  "algorithm": "SHA1",
+  "dateCreated": "2022-09-05T09:25:35.00Z",
+  "dateModified": "2022-09-12T09:25:35.00Z",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      43.23161118206764,
+      -2.844695196525928
     ]
+  },
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
+  ]
 }
