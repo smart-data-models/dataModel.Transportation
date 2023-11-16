@@ -7,7 +7,7 @@
 [文件自动生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-全局描述：**用于流量监控的匿名标识符。包括起点和终点属性，用于映射其路径。  
+全局描述：**用于流量监控的匿名标识符。包括一个起点和终点属性，用于映射其路径。  
 版本： 0.0.2  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
@@ -22,6 +22,7 @@
 	- `postOfficeBoxNumber[string]`: 用于邮政信箱地址的邮政信箱号码。例如：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: 邮政编码。例如：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 街道地址  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: 标识公共街道上特定房产的编号    
 - `algorithm[string]`: 用于匿名标识的算法名称  - `alternateName[string]`: 该项目的替代名称  - `anonymizedId[string]`: 匿名标识符  - `areaServed[string]`: 提供服务或提供物品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `date[date-time]`: 检测到匿名标识符的日期  - `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配  - `dateModified[date-time]`: 实体最后一次修改的时间戳。通常由存储平台分配  - `description[string]`: 项目描述  - `dest[string]`: 目标 ID 的字符串值，即检测到匿名 ID 的实际实体  - `id[*]`: 实体的唯一标识符  - `location[*]`: 项目的 Geojson 引用。它可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `name[string]`: 该项目的名称  - `orig[string]`: 来源 ID 的字符串值，即检测到匿名 ID 的最后一个实体  - `owner[array]`: 包含一个 JSON 编码字符序列的列表，其中引用了所有者的唯一 Ids  - `seeAlso[*]`: 指向有关该项目的其他资源的 uri 列表  - `source[string]`: 匿名通勤者 ID 来源的字符串值，例如（ALPR、人员监控、人脸识别等......）。  - `type[string]`: NGSI 实体类型。必须是 AnonymousCommuterId  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 所需属性  
@@ -390,11 +391,11 @@ AnonymousCommuterId:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/AnonymousCommuterId/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/AnonymousCommuterId/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.2    
+  x-version: 0.0.3    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -407,23 +408,23 @@ AnonymousCommuterId:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "ngsi-ld:HUES:001",  
-    "anonymizedId": "D20220AC3478565F",  
-    "type": "AnonymousCommuterId",  
-    "date": "2022-09-05T08:25:35.00Z",  
-    "orig": "City hall",  
-    "dest": "Library",  
-    "source": "People Monitoring",  
-    "algorithm": "SHA1",  
-    "dateCreated": "2022-09-05T09:25:35.00Z",  
-    "dateModified": "2022-09-12T09:25:35.00Z",  
-    "location": {  
-        "type": "Point",  
-        "coordinates": [  
-            43.23161118206764,  
-            -2.844695196525928  
-        ]  
-    }  
+  "id": "ngsi-ld:HUES:001",  
+  "anonymizedId": "D20220AC3478565F",  
+  "type": "AnonymousCommuterId",  
+  "date": "2022-09-05T08:25:35.00Z",  
+  "orig": "City hall",  
+  "dest": "Library",  
+  "source": "People Monitoring",  
+  "algorithm": "SHA1",  
+  "dateCreated": "2022-09-05T09:25:35.00Z",  
+  "dateModified": "2022-09-12T09:25:35.00Z",  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      43.23161118206764,  
+      -2.844695196525928  
+    ]  
+  }  
 }  
 ```  
 </details>  
@@ -432,97 +433,74 @@ AnonymousCommuterId:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-   "id": "ngsi-ld:HUES:001",  
-    "anonymizedId": {  
-        "type": "Text",  
-        "value": "D20220AC3478565F"  
-    },  
-    "type": "AnonymousCommuterId",  
-    "orig": {  
-        "type": "Text",  
-        "value": "City hall"  
-    },  
-    "dest": {  
-        "type": "Text",  
-        "value": "Library"  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                43.23161118206764,  
-                -2.844695196525928  
-            ]  
-        }  
-    },  
-    "date": {  
-        "type": "DateTime",  
-        "value": "2022-09-05T08:25:35.00Z"  
-    },  
-    "algorithm": {  
-        "type": "Text",  
-        "value": "SHA1"  
-    },  
-    "dateCreated": {  
-        "type": "DateTime",  
-        "value": "2022-09-05T09:25:35.00Z"  
-    },  
-    "dateModified": {  
-        "type": "DateTime",  
-        "value": "2022-09-12T09:25:35.00Z"  
+  "id": "ngsi-ld:HUES:001",  
+  "anonymizedId": {  
+    "type": "Text",  
+    "value": "D20220AC3478565F"  
+  },  
+  "type": "AnonymousCommuterId",  
+  "orig": {  
+    "type": "Text",  
+    "value": "City hall"  
+  },  
+  "dest": {  
+    "type": "Text",  
+    "value": "Library"  
+  },  
+  "location": {  
+    "type": "geo:json",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        43.23161118206764,  
+        -2.844695196525928  
+      ]  
     }  
+  },  
+  "date": {  
+    "type": "DateTime",  
+    "value": "2022-09-05T08:25:35.00Z"  
+  },  
+  "algorithm": {  
+    "type": "Text",  
+    "value": "SHA1"  
+  },  
+  "dateCreated": {  
+    "type": "DateTime",  
+    "value": "2022-09-05T09:25:35.00Z"  
+  },  
+  "dateModified": {  
+    "type": "DateTime",  
+    "value": "2022-09-12T09:25:35.00Z"  
+  }  
 }  
 ```  
 </details>  
-#### AnonymousCommuterId NGSI-LD 键值 示例  
+#### AnonymousCommuterId NGSI-LD 键值示例  
 下面是一个以 JSON-LD 格式作为键值的 AnonymousCommuterId 示例。当使用 `options=keyValues` 时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "ngsi-ld:HUES:001",  
-    "anonymizedId": {  
-        "type": "Text",  
-        "value": "D20220AC3478565F"  
-    },  
-    "type": "AnonymousCommuterId",  
-    "orig": {  
-        "type": "Text",  
-        "value": "City hall"  
-    },  
-    "dest": {  
-        "type": "Text",  
-        "value": "Library"  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                43.23161118206764,  
-                -2.844695196525928  
-            ]  
-        }  
-    },  
-    "date": {  
-        "type": "DateTime",  
-        "value": "2022-09-05T08:25:35.00Z"  
-    },  
-    "algorithm": {  
-        "type": "Text",  
-        "value": "SHA1"  
-    },  
-    "dateCreated": {  
-        "type": "DateTime",  
-        "value": "2022-09-05T09:25:35.00Z"  
-    },  
-    "dateModified": {  
-        "type": "DateTime",  
-        "value": "2022-09-12T09:25:35.00Z"  
-    },  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+  "id": "ngsi-ld:HUES:001",  
+  "anonymizedId": "D20220AC3478565F",  
+  "type": "AnonymousCommuterId",  
+  "date": "2022-09-05T08:25:35.00Z",  
+  "orig": "City hall",  
+  "dest": "Library",  
+  "source": "People Monitoring",  
+  "algorithm": "SHA1",  
+  "dateCreated": "2022-09-05T09:25:35.00Z",  
+  "dateModified": "2022-09-12T09:25:35.00Z",  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      43.23161118206764,  
+      -2.844695196525928  
     ]  
+  },  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
@@ -532,21 +510,44 @@ AnonymousCommuterId:
 ```json  
 {  
     "id": "ngsi-ld:HUES:001",  
-    "anonymizedId": "D20220AC3478565F",  
+    "anonymizedId": {  
+        "type": "Property",  
+        "value": "D20220AC3478565F"  
+    },  
     "type": "AnonymousCommuterId",  
-    "date": "2022-09-05T08:25:35.00Z",  
-    "orig": "City hall",  
-    "dest": "Library",  
-    "source": "People Monitoring",  
-    "algorithm": "SHA1",  
-    "dateCreated": "2022-09-05T09:25:35.00Z",  
-    "dateModified": "2022-09-12T09:25:35.00Z",  
+    "orig": {  
+        "type": "Property",  
+        "value": "City hall"  
+    },  
+    "dest": {  
+        "type": "Property",  
+        "value": "Library"  
+    },  
     "location": {  
-        "type": "Point",  
-        "coordinates": [  
-            43.23161118206764,   
-            -2.844695196525928  
-        ]  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                43.23161118206764,  
+                -2.844695196525928  
+            ]  
+        }  
+    },  
+    "date": {  
+        "type": "Property",  
+        "value": "2022-09-05T08:25:35.00Z"  
+    },  
+    "algorithm": {  
+        "type": "Property",  
+        "value": "SHA1"  
+    },  
+    "dateCreated": {  
+        "type": "Property",  
+        "value": "2022-09-05T09:25:35.00Z"  
+    },  
+    "dateModified": {  
+        "type": "Property",  
+        "value": "2022-09-12T09:25:35.00Z"  
     },  
     "@context": [  
         "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
