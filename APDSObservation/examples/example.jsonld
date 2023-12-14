@@ -92,6 +92,6 @@
   "observerLocationPDOP": 0.2959945752,
   "observerSpeed": 26,
   "@context": [
-    "https://raw.githubusercontent.com/dataModel.Transportation/master/context.jsonld"
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
   ]
 }
