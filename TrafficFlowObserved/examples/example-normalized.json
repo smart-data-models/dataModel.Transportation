@@ -38,8 +38,8 @@
     "value": 197
   },
   "laneId": {
-    "type": "Boolean",
-    "value": true
+    "type": "Number",
+    "value": 1
   },
   "location": {
     "type": "geo:json",
