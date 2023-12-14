@@ -1,6 +1,6 @@
 {
   "id": "urn:ngsi-ld:BikeLane:BikeLane-AveMed-Benidorm-123456",
-  "type": "BikeLanes",
+  "type": "BikeLane",
   "address": {
     "type": "Property",
     "value": {
