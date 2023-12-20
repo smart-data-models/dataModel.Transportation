@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$schemaVersion": "0.0.1",
+    "$schemaVersion": "0.0.2",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/data-models/Transportation/ItemFlowObserved/schema.json",
     "title": "Flow Observed schema",
@@ -100,7 +100,7 @@
                     ],
                     "description": "Property. Usual direction of travel in the lane referred by this observation. This attribute is useful when the observation is not referencing any road segment, allowing to know the direction of travel of the traffic flow observed. See RoadSegment for a description of the semantics of these values"
                 },
-                "reversedLane": {
+                "reverseLane": {
                     "type": "boolean",
                     "description": "Property. Flags whether traffic in the lane was reversed during the observation period. The absence of this attribute means no lane reversion"
                 },
@@ -139,12 +139,12 @@
                     "minimum": 0,
                     "description": "Property. Average gap distance between consecutive 2 detected items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **MTR** represents Meter"
                 },
-                "speedMin": {
+                "minSpeed": {
                     "type": "number",
                     "minimum": 0,
                     "description": "Property. Minimum speed detected during the observation period. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) . Depending the type of Flow, the value can be **KMH** (vehicule, pedestrian, ...) represents Kilometer per hour (km/h) or **KNT** represents Knot (Boat)"
                 },
-                "speedMax": {
+                "maxSpeed": {
                     "type": "number",
                     "minimum": 0,
                     "description": "Property. Maximum speed detected during the observation period. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) . Depending the type of Flow, the value can be **KMH** (vehicule, pedestrian, ...) represents Kilometer per hour (km/h) or **KNT** represents Knot (Boat)"
