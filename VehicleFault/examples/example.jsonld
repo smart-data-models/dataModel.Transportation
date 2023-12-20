@@ -1,10 +1,8 @@
 {
   "id": "urn:ngsi-ld:VehicleFault:4939200a-5ef5-4266-8c91-1f82ad3b543b",
   "type": "VehicleFault",
-  "createdAt": "2017-01-01T01:20:00Z",
   "dataProvider": "https://provider.example.com",
   "dtCode": "EMERG-1234-a",
-  "entityVersion": 2.0,
   "eventType": "emergency",
   "faultLog": "Emergency stop. Fault with engine",
   "location": {
@@ -14,7 +12,6 @@
       39.75621
     ]
   },
-  "modifiedAt": "2017-05-04T12:30:00Z",
   "observedAt": "2017-05-04T10:18:16Z",
   "processingType": "systemHandled",
   "resolvedAt": "2017-05-04T10:18:16Z",
