@@ -200,10 +200,6 @@
         "type": "Property",
         "value": "Regular Fare."
     },
-    "transactionTypeId": {
-        "type": "Property",
-        "value": "2401"
-    },
     "transactionVehicleNum": {
         "type": "Property",
         "value": 23
