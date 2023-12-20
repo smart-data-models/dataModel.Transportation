@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$schemaVersion": "0.0.1",
+    "$schemaVersion": "0.0.2",
     "modelTags": "GSMA",
     "$id": "https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleOperation/schema.json",
     "title": "Smart Data models - FleetVehicleOperation schema",
@@ -39,7 +39,7 @@
                     ],
                     "description": "Relationship. Reference to the FleetVehicle entity to which this operation relates"
                 },
-                "fleetVehicleOperation": {
+                "fleetVehicleStatus": {
                     "anyOf": [
                         {
                             "type": "string",
