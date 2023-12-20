@@ -62,7 +62,6 @@
   "transactionDateTime": "2021-08-20T15:45:22Z",
   "transactionType": "Issue",
   "transactionTypeDescription": "Regular Fare.",
-  "transactionTypeId": "2401",
   "transactionVehicleNum": 23,
   "travelDistance": 7.5,
   "trip_id": "4A",
