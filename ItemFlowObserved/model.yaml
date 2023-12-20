@@ -355,6 +355,18 @@ ItemFlowObserved:
             type: GeoProperty
       x-ngsi:
         type: GeoProperty
+    maxSpeed:
+      description: 'Maximum speed detected during the observation period. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) . Depending the type of Flow, the value can be **KMH** (vehicule, pedestrian, ...) represents Kilometer per hour (km/h) or **KNT** represents Knot (Boat)'
+      minimum: 0
+      type: number
+      x-ngsi:
+        type: Property
+    minSpeed:
+      description: 'Minimum speed detected during the observation period. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) . Depending the type of Flow, the value can be **KMH** (vehicule, pedestrian, ...) represents Kilometer per hour (km/h) or **KNT** represents Knot (Boat)'
+      minimum: 0
+      type: number
+      x-ngsi:
+        type: Property
     name:
       description: The name of this item
       type: string
@@ -423,7 +435,7 @@ ItemFlowObserved:
       description: Concerned road segment on which the observation has been made
       x-ngsi:
         type: Relationship
-    reversedLane:
+    reverseLane:
       description: Flags whether traffic in the lane was reversed during the observation period. The absence of this attribute means no lane reversion
       type: boolean
       x-ngsi:
@@ -445,18 +457,6 @@ ItemFlowObserved:
       type: string
       x-ngsi:
         type: Property
-    speedMax:
-      description: 'Maximum speed detected during the observation period. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) . Depending the type of Flow, the value can be **KMH** (vehicule, pedestrian, ...) represents Kilometer per hour (km/h) or **KNT** represents Knot (Boat)'
-      minimum: 0
-      type: number
-      x-ngsi:
-        type: Property
-    speedMin:
-      description: 'Minimum speed detected during the observation period. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) . Depending the type of Flow, the value can be **KMH** (vehicule, pedestrian, ...) represents Kilometer per hour (km/h) or **KNT** represents Knot (Boat)'
-      minimum: 0
-      type: number
-      x-ngsi:
-        type: Property
     type:
       description: NGSI Entity type. It has to be ItemFlowObserved
       enum:
@@ -472,8 +472,8 @@ ItemFlowObserved:
     - laneId
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/ItemFlowObserved/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/data-models/Transportation/ItemFlowObserved/schema.json
   x-model-tags: ""
-  x-version: 0.0.1
+  x-version: 0.0.2
