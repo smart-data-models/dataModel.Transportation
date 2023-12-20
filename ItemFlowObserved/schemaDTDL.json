@@ -28,7 +28,7 @@
             "displayName": "averageGapDistance",
             "@type": "Property",
             "schema": "long",
-            "comment": "Average gap distance between consecutive 2 detected items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **MTR** represents Meter."
+            "comment": "Average gap distance between consecutive 2 detected items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **MTR** represents Meter"
         },
         {
             "name": "averageHeadwayTime",
@@ -36,7 +36,7 @@
             "displayName": "averageHeadwayTime",
             "@type": "Property",
             "schema": "long",
-            "comment": "Average headway time. Head away time is the time elapsed between two consecutive items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **SEC** represents Second."
+            "comment": "Average headway time. Head away time is the time elapsed between two consecutive items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **SEC** represents Second"
         },
         {
             "name": "averageLength",
@@ -44,7 +44,7 @@
             "displayName": "averageLength",
             "@type": "Property",
             "schema": "long",
-            "comment": "Average length of detected items transiting during the observation period. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) . For instance, **MTR** represents Meter."
+            "comment": "Average length of detected items transiting during the observation period. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) . For instance, **MTR** represents Meter"
         },
         {
             "name": "averageSpeed",
@@ -52,7 +52,7 @@
             "displayName": "averageSpeed",
             "@type": "Property",
             "schema": "long",
-            "comment": "Average speed of detected items transiting during the observation period. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) . Depending the type of Flow, the value can be **KMH** f(vehicule, pedestrian, etc.) represents Kilometer per hour (km/h) or **KNT** represents Knot (Boat)."
+            "comment": "Average speed of detected items transiting during the observation period. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) . Depending the type of Flow, the value can be **KMH** f(vehicule, pedestrian, etc.) represents Kilometer per hour (km/h) or **KNT** represents Knot (Boat)"
         },
         {
             "name": "congested",
@@ -68,7 +68,7 @@
             "displayName": "dataProvider",
             "@type": "Property",
             "schema": "string",
-            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity"
         },
         {
             "name": "dateCreated",
@@ -76,7 +76,7 @@
             "displayName": "dateCreated",
             "@type": "Property",
             "schema": "dateTime",
-            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform"
         },
         {
             "name": "dateModified",
@@ -84,7 +84,7 @@
             "displayName": "dateModified",
             "@type": "Property",
             "schema": "dateTime",
-            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform"
         },
         {
             "name": "dateObserved",
@@ -92,7 +92,7 @@
             "displayName": "dateObserved",
             "@type": "Property",
             "schema": "dateTime",
-            "comment": "Date of the observed entity defined by the user."
+            "comment": "Date of the observed entity defined by the user"
         },
         {
             "name": "dateObservedFrom",
@@ -100,7 +100,7 @@
             "displayName": "dateObservedFrom",
             "@type": "Property",
             "schema": "dateTime",
-            "comment": "Observation period : Start date and time in an ISO8601 UTC format."
+            "comment": "Observation period : Start date and time in an ISO8601 UTC format"
         },
         {
             "name": "dateObservedTo",
@@ -108,7 +108,7 @@
             "displayName": "dateObservedTo",
             "@type": "Property",
             "schema": "dateTime",
-            "comment": "Observation period : End date and time in an ISO8601 UTC format."
+            "comment": "Observation period : End date and time in an ISO8601 UTC format"
         },
         {
             "name": "description",
@@ -132,15 +132,36 @@
             "displayName": "itemSubType",
             "@type": "Property",
             "schema": "string",
-            "comment": "Reference to an identifier of an existing 'subType' attribute of an NGSI entity (Vehicle / BoatType / Person ) or of a future entity listing an item 'subType' to be counted."
+            "comment": "Reference to an identifier of an existing 'subType' attribute of an NGSI entity (Vehicle / BoatType / Person ) or of a future entity listing an item 'subType' to be counted"
         },
         {
             "name": "laneId",
             "writable": true,
             "displayName": "laneId",
             "@type": "Property",
-            "schema": "integer",
-            "comment": "Lane identifier. Lane identification is done using the conventions defined by RoadSegment entity which are based on [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Forward_%26_backward,_left_%26_right)."
+            "schema": "long",
+            "comment": "Lane identifier. Lane identification is done using the conventions defined by RoadSegment entity which are based on [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Forward_%26_backward,_left_%26_right)"
+        },
+        {
+            "name": "location",
+            "writable": true,
+            "displayName": "location"
+        },
+        {
+            "name": "maxSpeed",
+            "writable": true,
+            "displayName": "maxSpeed",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Maximum speed detected during the observation period. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) . Depending the type of Flow, the value can be **KMH** (vehicule, pedestrian, ...) represents Kilometer per hour (km/h) or **KNT** represents Knot (Boat)"
+        },
+        {
+            "name": "minSpeed",
+            "writable": true,
+            "displayName": "minSpeed",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Minimum speed detected during the observation period. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) . Depending the type of Flow, the value can be **KMH** (vehicule, pedestrian, ...) represents Kilometer per hour (km/h) or **KNT** represents Knot (Boat)"
         },
         {
             "name": "name",
@@ -148,7 +169,7 @@
             "displayName": "name",
             "@type": "Property",
             "schema": "string",
-            "comment": "The name of this item."
+            "comment": "The name of this item"
         },
         {
             "name": "occupancy",
@@ -169,9 +190,9 @@
             "displayName": "refRoadSegment"
         },
         {
-            "name": "reversedLane",
+            "name": "reverseLane",
             "writable": true,
-            "displayName": "reversedLane",
+            "displayName": "reverseLane",
             "@type": "Property",
             "schema": "boolean",
             "comment": "Flags whether traffic in the lane was reversed during the observation period. The absence of this attribute means no lane reversion"
@@ -187,23 +208,7 @@
             "displayName": "source",
             "@type": "Property",
             "schema": "string",
-            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
-        },
-        {
-            "name": "speedMax",
-            "writable": true,
-            "displayName": "speedMax",
-            "@type": "Property",
-            "schema": "long",
-            "comment": "Maximum speed detected during the observation period. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) . Depending the type of Flow, the value can be **KMH** (vehicule, pedestrian, ...) represents Kilometer per hour (km/h) or **KNT** represents Knot (Boat)."
-        },
-        {
-            "name": "speedMin",
-            "writable": true,
-            "displayName": "speedMin",
-            "@type": "Property",
-            "schema": "long",
-            "comment": "Minimum speed detected during the observation period. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) . Depending the type of Flow, the value can be **KMH** (vehicule, pedestrian, ...) represents Kilometer per hour (km/h) or **KNT** represents Knot (Boat)."
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object"
         },
         {
             "@type": "Telemetry",
@@ -234,6 +239,10 @@
                     "schema": "string"
                 },
                 {
+                    "name": "district",
+                    "schema": "string"
+                },
+                {
                     "name": "postOfficeBoxNumber",
                     "schema": "string"
                 },
@@ -244,38 +253,12 @@
                 {
                     "name": "streetAddress",
                     "schema": "string"
+                },
+                {
+                    "name": "streetNr",
+                    "schema": "string"
                 }
             ]
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_Point",
-            "schema": "point"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_LineString",
-            "schema": "lineString"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_Polygon",
-            "schema": "polygon"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiPoint",
-            "schema": "multiPoint"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiLineString",
-            "schema": "multiLineString"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiPolygon",
-            "schema": "multiPolygon"
         },
         {
             "@type": "Telemetry",
