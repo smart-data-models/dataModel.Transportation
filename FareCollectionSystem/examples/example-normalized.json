@@ -104,10 +104,6 @@
     "type": "Text",
     "value": "987201910"
   },
-  "transactionTypeId": {
-    "type": "Text",
-    "value": "2401"
-  },
   "stage": {
     "type": "Number",
     "value": 4
