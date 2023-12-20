@@ -27,7 +27,13 @@
       ]
     }
   },
-  "observedAt": "2017-05-04T10:18:16Z",
+  "observedAt": {
+    "type": "Property",
+    "value": {
+      "@type": "DateTime",
+      "@value": "2017-05-04T10:18:16Z"
+    }
+  },
   "processingType": {
     "type": "Property",
     "value": "systemHandled"
