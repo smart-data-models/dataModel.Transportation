@@ -110,7 +110,7 @@ FleetVehicleOperation:
       description: Reference to the FleetVehicle entity to which this operation relates
       x-ngsi:
         type: Relationship
-    fleetVehicleOperation:
+    fleetVehicleStatus:
       anyOf:
         - description: Identifier format of any NGSI entity
           maxLength: 256
@@ -557,8 +557,8 @@ FleetVehicleOperation:
     - type
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/FleetVehicleOperation/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/FleetVehicleOperation/schema.json
   x-model-tags: GSMA
-  x-version: 0.0.1
+  x-version: 0.0.2
