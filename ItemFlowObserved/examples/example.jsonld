@@ -17,7 +17,7 @@
   "dateObservedTo": "2020-03-20T22:30:00Z",
   "description": "Boat Flow Observed from Nice Harbor.",
   "intensity": 12,
-  "itemSubtype": "monoHull",
+  "itemSubType": "monoHull",
   "itemType": "yacht",
   "laneDirection": "outbound",
   "laneId": 1,
