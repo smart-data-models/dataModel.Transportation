@@ -8,7 +8,7 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 全局描述：**数据模型是根据 GFTS 标准 https://developers.google.com/transit/gtfs/reference/#stopstxt 对城市车站（地铁、公共汽车、有轨电车、直升机场......）的一般描述，以及这些车站的详细描述（出入口、站台、辅助设施......）。  
-版本： 0.1.3  
+版本： 0.1.4  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
@@ -22,7 +22,8 @@
 	- `postOfficeBoxNumber[string]`: 用于邮政信箱地址的邮政信箱号码。例如：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: 邮政编码。例如：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 街道地址  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-- `alternateName[string]`: 该项目的替代名称  - `areaServed[string]`: 提供服务或产品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `contactPoint[object]`: 与物品联系的详细信息  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)	- `areaServed[string]`: 提供服务或所提供项目的地理区域。取代服务区域    
+	- `streetNr[string]`: 标识公共街道上特定房产的编号    
+- `alternateName[string]`: 该项目的替代名称  - `architect`:   - `areaServed[string]`: 提供服务或提供物品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `commissioningDate`:   - `constructionDate`:   - `contactPoint[object]`: 与物品联系的详细信息  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)	- `areaServed[string]`: 提供服务或所提供项目的地理区域。取代服务区域    
 	- `availabilityRestriction[*]`: 该属性将一个联络点与该联络点不在时的信息联系起来。详细信息通过 "开放时间规范 "类提供  . Model: [http://schema.org/hoursAvailable](http://schema.org/hoursAvailable)  
 	- `availableLanguage[*]`: 某人在使用物品、服务或场所时可能使用的语言。请使用 IETF BCP 47 标准中的一种语言代码。可使用 "文本 "选项，但也可以使用 "语言 "选项。  . Model: [http://schema.org/availableLanguage](http://schema.org/availableLanguage)  
 	- `contactOption[*]`: 该联络点的可用选项（如免费电话号码或对听力受损来电者的支持）  . Model: [http://schema.org/contactOption](http://schema.org/contactOption)  
@@ -32,17 +33,31 @@
 	- `name[string]`: 该项目的名称    
 	- `productSupported[string]`: 该支持联络点所涉及的产品或服务（如特定产品系列的产品支持）。可以是特定产品或产品系列（如 "iPhone"），也可以是产品或服务的一般类别（如 "智能手机）  . Model: [http://schema.org/Text](http://schema.org/Text)  
 	- `telephone[string]`: 联系人电话    
-- `contractingAuthority[string]`: 订约当局名称  - `contractingCompany[string]`: 负责开发该站的承包公司名称  - `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配  - `dateLastReported[date-time]`: 时间戳，表示设备最后一次成功报告数据的时间。以 ISO8601 UTC 格式表示的日期和时间  - `dateModified[date-time]`: 实体最后一次修改的时间戳。通常由存储平台分配  - `description[string]`: 项目描述  - `dimension[object]`: 全局维度。格式由一个包含 3 个项目的子属性构成。单位代码（文本）使用 [UN/CEFACT 通用代码](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)。例如，**MTR** 表示米  	- `depth`:     
+	- `url[uri]`: 提供有关此项目的描述或更多信息的 URL    
+- `contractingAuthority[string]`: 订约当局名称  - `contractingCompany[string]`: 负责开发该站的承包公司名称  - `currencyAccepted`:   - `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配  - `dateLastReported[date-time]`: 时间戳，表示设备最后一次成功报告数据的时间。以 ISO8601 UTC 格式表示的日期和时间  - `dateModified[date-time]`: 实体最后一次修改的时间戳。通常由存储平台分配  - `description[string]`: 项目描述  - `dimension[object]`: 全局维度。格式由一个包含 3 个项目的子属性构成。单位代码（文本）使用 [UN/CEFACT 通用代码](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)。例如，**MTR** 表示米  	- `depth`:     
 	- `height`:     
-- `id[*]`: 实体的唯一标识符  - `installationMode[string]`: 相对于地面基准的位置。枚举："空中、地面、地面下、海底  - `inventory[object]`: 一般数据映射仅适用于 `locationType` = 0、1、3、4。格式由包含 4 个项目的子属性构成  	- `PlatformType`:     
+	- `width`:     
+- `featuredArtist`:   - `id[*]`: 实体的唯一标识符  - `installationMode[string]`: 相对于地面基准的位置。枚举："空中、地面、地面下、海底"。  - `inventory[object]`: 一般数据映射仅适用于 `locationType` = 0、1、3、4。格式由包含 4 个项目的子属性构成  	- `PlatformType`:     
 	- `nbOfIOPoint`:     
 	- `nbOfLane`:     
-- `levelId[number]`: 位置所在楼层。与楼层相关的数字索引。表示该阶段与其他阶段的相对位置。指数 0 表示地面层。地面以上的楼层用正数表示，地下楼层用负数表示。  - `location[*]`: 项目的 Geojson 引用。它可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `locationType[number]`: 指向描述不同位置[位置类型]的 GTFS 标准资源库的链接。0 停靠站或站台（用户在公共交通工具上上下车的地方）。1 车站（由一个或多个站台组成的区域或物理结构）。2 入口或出口（用户可从街道进入或离开车站的地方）。3 通用交叉口（车站内与任何其他 "location_type "值不对应的位置）。4 乘客可在站台上的特定位置上车/下车的上车区  - `name[string]`: 该项目的名称  - `openingHoursSpecification[array]`: 一个结构化数值，提供有关某个场所或场所内某项服务开放时间的信息  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: 包含一个 JSON 编码字符序列的列表，其中引用了所有者的唯一 Ids  - `parentStation[*]`: 描述车站和站台[父站]之间不同联系的 GTFS 标准资料库链接。情况'1' location_type = 0（车站/站台），父站字段包含车站 ID。情况'2' location_type = 1（车站），该字段必须为空。情况'3' location_type = 2（输入/输出）或 location_type = 3（一般交叉路口），父站点字段包含站点 location_type = 1 的 ID。情况'4' location_type = 4（乘车区），父站字段中包含站台 ID  - `platformCode[number]`: 站台类型停靠站的站台标识符 `location_type` = 0（当停靠站位于车站内时  - `refPointOfInterest[*]`: 与该观测点相关的兴趣点参考文献  - `seeAlso[*]`: 指向有关该项目的其他资源的 uri 列表  - `source[string]`: 以 URL 形式给出实体数据原始来源的字符串。建议使用源提供者的完全合格域名或源对象的 URL  - `stationConnected[array]`: 该站可能连接的线路。从 0 到 N 次出现的结构化值，其中每个项都是一个字符串，格式为 `stationType` : [连接的线路列表，用逗号分隔]。枚举：'空中索道、公共汽车、缆车、渡轮、缆车、单轨铁路、铁路、地铁、火车、有轨电车、无轨电车'。  - `stationType[array]`: 交通站类型。枚举：'架空索道、公共汽车、缆车、渡轮、缆车、单轨铁路、铁路、地铁、无轨电车、有轨电车'。  - `type[string]`: NGSI 实体类型。必须是 TransportStation  - `webSite[string]`: 更多信息请链接至官方网站  - `wheelChairAccessible[number]`: 行动不便者可以进入。对于没有家长的站点 0 没有关于该站点无障碍情况的信息。1 此站点的某些车辆可以让 PMR 用户上车。2 残疾人不能在此站上车。对于作为车站一部分的停靠站 0，如果填写了父车站的轮椅上车行为，则该停靠站继承父车站的轮椅上车行为。1 车道提供轮椅从站外进入车站/站台的通道。2 没有车道提供从站外进入车站/站台的轮椅通道。对于车站输入/输出端 0 车站入口继承主车站的轮椅上车行为（如果指定）。1 车站入口可供轮椅进出。2 车站入口与车站/站台之间没有连接轮椅无障碍通道  - `zoneId[string]`: 车站定价区  <!-- /30-PropertiesList -->  
+	- `nbOfPlatform`:     
+- `levelId[number]`: 位置所在楼层。与楼层相关的数字索引。表示该阶段与其他阶段的相对位置。指数 0 表示地面层。地面以上的楼层用正数表示，地下楼层用负数表示。  - `location[*]`: 项目的 Geojson 引用。它可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `locationType[number]`: 指向描述不同位置[位置类型]的 GTFS 标准资源库的链接。0 停靠站或站台（用户在公共交通工具上上下车的地方）。1 车站（由一个或多个站台组成的区域或物理结构）。2 入口或出口（用户可从街道进入或离开车站的地方）。3 通用交叉口（车站内与任何其他 "location_type "值不对应的位置）。4 乘客可在站台上特定位置上车/下车的上车区  - `name[string]`: 该项目的名称  - `openingHoursSpecification[array]`: 一个结构化数值，提供有关某个场所或场所内某项服务开放时间的信息  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: 包含一个 JSON 编码字符序列的列表，其中引用了所有者的唯一 Ids  - `parentStation[*]`: 描述车站和站台[父站台]之间不同联系的 GTFS 标准资料库链接。情况'1' location_type = 0（车站/站台），父站字段包含车站 ID。情况'2' location_type = 1（车站），该字段必须为空。情况'3' location_type = 2（输入/输出）或 location_type = 3（一般交叉路口），父站点字段包含站点 location_type = 1 的 ID。情况'4' location_type = 4（乘车区），父站字段中包含站台 ID  - `paymentAccepted`:   - `platformCode[number]`: 站台类型停靠站的站台标识符 `location_type` = 0（当停靠站位于车站内时  - `refPointOfInterest[*]`: 与该观测点相关的兴趣点参考文献  - `seeAlso[*]`: 指向有关该项目的其他资源的 uri 列表  - `services`:   	- `defibrillator`:     
+	- `emergencyPhone`:     
+	- `informationBoardDevice`:     
+	- `interactiveDevice`:     
+	- `messageDevice`:     
+	- `purchaseDevice`:     
+	- `restBench`:     
+	- `shelters`:     
+	- `timetableDevice`:     
+	- `voiceDevice`:     
+	- `wheelChairAccessible`:     
+- `source[string]`: 以 URL 形式给出实体数据原始来源的字符串。建议使用源提供者的完全合格域名或源对象的 URL  - `stationConnected[array]`: 该站可能连接的线路。从 0 到 N 次出现的结构化值，其中每个项都是一个字符串，格式为 `stationType` : [连接的线路列表，用逗号分隔]。枚举：'空中索道、公共汽车、缆车、渡轮、缆车、单轨铁路、铁路、地铁、火车、有轨电车、无轨电车'。  - `stationType[array]`: 交通站类型。枚举：'架空索道、公共汽车、缆车、渡轮、缆车、单轨铁路、铁路、地铁、无轨电车、有轨电车'。  - `type[string]`: NGSI 实体类型。必须是 TransportStation  - `webSite[string]`: 更多信息请链接至官方网站  - `wheelChairAccessible[number]`: 行动不便者可以进入。对于没有家长的站点 0 没有关于该站点无障碍情况的信息。1 此站点的某些车辆可以让 PMR 用户上车。2 残疾人不能在此站上车。对于作为车站一部分的停靠站 0，如果填写了父车站的轮椅上车行为，则该停靠站继承父车站的轮椅上车行为。1 车道提供轮椅从站外进入车站/站台的通道。2 没有车道提供从站外进入车站/站台的轮椅通道。对于车站输入/输出端 0 车站入口继承主车站的轮椅上车行为（如果指定）。1 车站入口可供轮椅进出。2 车站入口与车站/站台之间没有连接轮椅无障碍通道  - `zoneId[string]`: 车站定价区  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 所需属性  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
-<!-- 40-RequiredProperties -->  
-<!-- /40-RequiredProperties -->  
+<!-- 40-NotesYaml -->  
+<!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
 ## 属性的数据模型描述  
 按字母顺序排列（点击查看详情）  
@@ -111,12 +126,20 @@ TransportStation:
       type: string    
       x-ngsi:    
         type: Property    
+    architect:    
+      type: string    
     areaServed:    
       description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
+    commissioningDate:    
+      format: date-time    
+      type: string    
+    constructionDate:    
+      format: date-time    
+      type: string    
     contactPoint:    
       description: The details to contact with the item    
       properties:    
@@ -221,6 +244,13 @@ TransportStation:
       type: string    
       x-ngsi:    
         type: Property    
+    currencyAccepted:    
+      items:    
+        enum:    
+          - EUR    
+          - USD    
+        type: string    
+      type: array    
     dataProvider:    
       description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
@@ -265,6 +295,27 @@ TransportStation:
       x-ngsi:    
         type: Property    
         units: meters    
+    featuredArtist:    
+      items:    
+        anyOf:    
+          - anyOf:    
+              - description: Identifier format of any NGSI entity    
+                maxLength: 256    
+                minLength: 1    
+                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+                type: string    
+                x-ngsi:    
+                  type: Property    
+              - description: Identifier format of any NGSI entity    
+                format: uri    
+                type: string    
+                x-ngsi:    
+                  type: Property    
+            description: Unique identifier of the entity    
+            x-ngsi:    
+              type: Property    
+          - type: string    
+      type: array    
     id:    
       anyOf:    
         - description: Identifier format of any NGSI entity    
@@ -629,6 +680,15 @@ TransportStation:
       description: 'Link to the GTFS standard repository describing the different link between Station and Platform [Parent STATION]. Case ''1'' location_type = 0 (Stop / platform ), the parent_station field contains the ID of a station. Case ''2'' location_type = 1  (Station), this field must be empty. Case ''3'' location_type = 2 (Input / output) or location_type = 3 (generic intersection), the parent_station field contains the ID of a station location_type = 1. Case ''4'' location_type = 4 (boarding area), the parent_station field contains the ID of a platform'    
       x-ngsi:    
         type: Relationship    
+    paymentAccepted:    
+      items:    
+        enum:    
+          - Cash    
+          - CreditCard    
+          - CryptoCurrency    
+          - other    
+        type: string    
+      type: array    
     platformCode:    
       description: Platform identifier for a platform type stop `location_type` = 0 when the stop is in a station    
       type: number    
@@ -663,43 +723,38 @@ TransportStation:
           type: string    
       x-ngsi:    
         type: Property    
+    services:    
+      properties:    
+        defibrillator:    
+          type: Boolean    
+        emergencyPhone:    
+          type: Boolean    
+        informationBoardDevice:    
+          type: Boolean    
+        interactiveDevice:    
+          type: Boolean    
+        messageDevice:    
+          type: Boolean    
+        purchaseDevice:    
+          type: Boolean    
+        restBench:    
+          type: Boolean    
+        shelters:    
+          type: Boolean    
+        timetableDevice:    
+          type: Boolean    
+        voiceDevice:    
+          type: Boolean    
+        wheelChairAccessible:    
+          type: Boolean    
+      type: object    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     stationConnected:    
-      architect:    
-        type: string    
-      commissioningDate:    
-        format: date-time    
-        type: string    
-      constructionDate:    
-        format: date-time    
-        type: string    
-      currencyAccepted:    
-        items:    
-          enum:    
-            - EUR    
-            - USD    
-          type: string    
-        type: array    
       description: 'Connections possible from this station. A structured value from 0 to N occurrences where each items is a string in the format `stationType` : [List of Lines connected, separated by a comma]. Enum:''aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, train, tram, trolleybus'''    
-      featuredArtist:    
-        items:    
-          anyOf:    
-            - anyOf:    
-                - description: Property. Identifier format of any NGSI entity    
-                  maxLength: 256    
-                  minLength: 1    
-                  pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-                  type: string    
-                - description: Property. Identifier format of any NGSI entity    
-                  format: uri    
-                  type: string    
-              description: Property. Unique identifier of the entity    
-            - type: string    
-        type: array    
       items:    
         properties:    
           linesConnected:    
@@ -720,40 +775,6 @@ TransportStation:
               - tram    
               - trolleybus    
             type: string    
-        type: object    
-      paymentAccepted:    
-        items:    
-          enum:    
-            - Cash    
-            - CreditCard    
-            - CryptoCurrency    
-            - other    
-          type: string    
-        type: array    
-      services:    
-        properties:    
-          defibrillator:    
-            type: Boolean    
-          emergencyPhone:    
-            type: Boolean    
-          informationBoardDevice:    
-            type: Boolean    
-          interactiveDevice:    
-            type: Boolean    
-          messageDevice:    
-            type: Boolean    
-          purchaseDevice:    
-            type: Boolean    
-          restBench:    
-            type: Boolean    
-          shelters:    
-            type: Boolean    
-          timetableDevice:    
-            type: Boolean    
-          voiceDevice:    
-            type: Boolean    
-          wheelChairAccessible:    
-            type: Boolean    
         type: object    
       type: array    
       x-ngsi:    
@@ -807,11 +828,11 @@ TransportStation:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/TransportStation/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/data-models/Transportation/TransportStation/schema.json    
   x-model-tags: ""    
-  x-version: 0.1.3    
+  x-version: 0.1.4    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -833,7 +854,7 @@ TransportStation:
   "location": {  
     "type": "Point",  
     "coordinates": [  
-      43.664810,  
+      43.66481,  
       7.196545  
     ]  
   },  
@@ -914,7 +935,7 @@ TransportStation:
     "uri:ngsi:StreetRetail"  
   ],  
   "contractingAuthority": "MNCA - Metropole Nice Cote d'Azur",  
-  "contractingCompagny": "Régie Ligne d'Azur",  
+  "contractingCompagny": "R\u00e9gie Ligne d'Azur",  
   "contactPoint": {  
     "url": "uri:ngsi:www.lignesdazur.com"  
   },  
@@ -952,7 +973,7 @@ TransportStation:
       "linesConnected": [  
         "L20 - Giono / Les Pugets",  
         "L20 - Centre Commercial St Isidore",  
-        "L21 - Le Gué / Polygone Riviera",  
+        "L21 - Le Gu\u00e9 / Polygone Riviera",  
         "L54 - Centre Commercial Cap 3000 - St Jeannet",  
         "L90 - La Bolline",  
         "91 Auron",  
@@ -999,33 +1020,33 @@ TransportStation:
   "id": "urn:ngsi-ld:Station:Station:MNCA-STram-L02-AP-T2",  
   "type": "TransportStation",  
   "name": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "NCE-Tram-Station-L02-AP-T2"  
   },  
   "alternateName": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Nice - Tramway Station Description - L02-AP-T2"  
   },  
   "description": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Description and services provided in the station"  
   },  
   "seeAlso": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "http://tramway.nice.fr/wp-content/uploads/2019/10/BD_pocket_plan_MAJ03_2019_20082019.pdf"  
   },  
   "location": {  
-    "type": "GeoProperty",  
+    "type": "geo:json",  
     "value": {  
       "type": "Point",  
       "coordinates": [  
-        43.664810,  
+        43.66481,  
         7.196545  
       ]  
     }  
   },  
   "address": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": {  
       "addressCountry": "FR",  
       "addressLocality": "Nice",  
@@ -1033,7 +1054,7 @@ TransportStation:
     }  
   },  
   "areaServed": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Nice Airport"  
   },  
   "dateLastReported": {  
@@ -1041,32 +1062,62 @@ TransportStation:
     "value": "2020-03-17T08:45:00Z"  
   },  
   "stationType": {  
-    "type": "Property",  
-    "value": ["tram"]  
+    "type": "StructuredValue",  
+    "value": [  
+      "tram"  
+    ]  
   },  
   "locationType": {  
-    "type": "Property",  
-    "value": 1  
+    "type": "Boolean",  
+    "value": true  
   },  
   "levelId": {  
-    "type": "Property",  
-    "value": 0  
+    "type": "Boolean",  
+    "value": false  
   },  
   "zoneId": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "B"  
   },  
   "wheelChairAccessible": {  
-    "type": "Property",  
-    "value": 1  
+    "type": "Boolean",  
+    "value": true  
   },  
   "openingHoursSpecification": {  
-    "type": "object",  
+    "type": "StructuredValue",  
     "value": [  
       {  
-        "dayOfWeek": "Monday, Tuesday, Wednesday, Thursday, Friday",  
-        "opens": "07:00:00",  
         "closes": "22:00:00",  
+        "dayOfWeek": "Monday",  
+        "opens": "07:00:00",  
+        "validFrom": "2021-01-01T00:00:00",  
+        "validThrough": "2021-12-31T23:59:59"  
+      },  
+      {  
+        "closes": "22:00:00",  
+        "dayOfWeek": "Tuesday",  
+        "opens": "07:00:00",  
+        "validFrom": "2021-01-01T00:00:00",  
+        "validThrough": "2021-12-31T23:59:59"  
+      },  
+      {  
+        "closes": "22:00:00",  
+        "dayOfWeek": "Wednesday",  
+        "opens": "07:00:00",  
+        "validFrom": "2021-01-01T00:00:00",  
+        "validThrough": "2021-12-31T23:59:59"  
+      },  
+      {  
+        "closes": "22:00:00",  
+        "dayOfWeek": "Thursday",  
+        "opens": "07:00:00",  
+        "validFrom": "2021-01-01T00:00:00",  
+        "validThrough": "2021-12-31T23:59:59"  
+      },  
+      {  
+        "closes": "22:00:00",  
+        "dayOfWeek": "Friday",  
+        "opens": "07:00:00",  
         "validFrom": "2021-01-01T00:00:00",  
         "validThrough": "2021-12-31T23:59:59"  
       },  
@@ -1094,35 +1145,35 @@ TransportStation:
     ]  
   },  
   "owner": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": [  
       "Street furniture Urbain & Retail"  
     ]  
   },  
   "contractingAuthority": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "MNCA - Metropole Nice Cote d'Azur"  
   },  
   "contractingCompany": {  
-    "type": "Property",  
-    "value": "Régie Ligne d'Azur"  
+    "type": "Text",  
+    "value": "R\u00e9gie Ligne d'Azur"  
   },  
   "contactPoint": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": {  
       "url": "www.lignesdazur.com"  
     }  
   },  
   "webSite": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "https://tramway.nice.fr/Plan-Station-L02-AP-T2.pdf"  
   },  
   "installationMode": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "ground"  
   },  
   "dimension": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": {  
       "length": 300,  
       "width": 25,  
@@ -1130,115 +1181,72 @@ TransportStation:
     }  
   },  
   "inventory": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": {  
       "nbOfIOPoint": 2,  
       "nbOfLane": 1,  
       "nbOfPlatform": 1,  
-      "PlatformType": ["lateral"]  
+      "PlatformType": [  
+        "lateral"  
+      ]  
     }  
   },  
   "stationConnected": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": [  
       {  
         "stationType": "tram",  
-        "linesConnected": {  
-          "type": "Property",  
-          "value": [  
-            "Tram 2 - CADAM / Nikaia",  
-            "Tram 3 - Saint Isidore / Stade Allianz Riviera"  
-          ]  
-        }  
+        "linesConnected": [  
+          "Tram 2 - CADAM / Nikaia",  
+          "Tram 3 - Saint Isidore / Stade Allianz Riviera"  
+        ]  
       },  
       {  
         "stationType": "train",  
-        "linesConnected": {  
-          "type": "Property",  
-          "value": [  
-            "Gare SNCF Nice Saint Augustin (600m)"  
-          ]  
-        }  
+        "linesConnected": [  
+          "Gare SNCF Nice Saint Augustin (600m)"  
+        ]  
       },  
       {  
         "stationType": "bus",  
-        "linesConnected": {  
-          "type": "Property",  
-          "value": [  
-            "L20 - Giono / Les Pugets",  
-            "L20 - Centre Commercial St Isidore",  
-            "L21 - Le Gué / Polygone Riviera",  
-            "L54 - Centre Commercial Cap 3000 - St Jeannet",  
-            "L90 - La Bolline",  
-            "91 Auron",  
-            "L92 - Isola 2000"  
-          ]  
-        }  
+        "linesConnected": [  
+          "L20 - Giono / Les Pugets",  
+          "L20 - Centre Commercial St Isidore",  
+          "L21 - Le Gu\u00e9 / Polygone Riviera",  
+          "L54 - Centre Commercial Cap 3000 - St Jeannet",  
+          "L90 - La Bolline",  
+          "91 Auron",  
+          "L92 - Isola 2000"  
+        ]  
       }  
     ]  
   },  
   "services": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": {  
-      "purchaseDevice": {  
-        "type": "Property",  
-        "value": true  
-      },  
-      "interactiveDevice": {  
-        "type": "Property",  
-        "value": true  
-      },  
-      "timetableDevice": {  
-        "type": "Property",  
-        "value": true  
-      },  
-      "voiceDevice": {  
-        "type": "Property",  
-        "value": true  
-      },  
-      "informationBoardDevice": {  
-        "type": "Property",  
-        "value": true  
-      },  
-      "messageDevice": {  
-        "type": "Property",  
-        "value": false  
-      },  
-      "shelters": {  
-        "type": "Property",  
-        "value": true  
-      },  
-      "restBench": {  
-        "type": "Property",  
-        "value": false  
-      },  
-      "emergencyPhone": {  
-        "type": "Property",  
-        "value": false  
-      },  
-      "videoSurveillance": {  
-        "type": "Property",  
-        "value": true  
-      },  
-      "defibrillator": {  
-        "type": "Property",  
-        "value": false  
-      },  
-      "wheelChairAccessible": {  
-        "type": "Property",  
-        "value": true  
-      }  
+      "purchaseDevice": true,  
+      "interactiveDevice": true,  
+      "timetableDevice": true,  
+      "voiceDevice": true,  
+      "informationBoardDevice": true,  
+      "messageDevice": false,  
+      "shelters": true,  
+      "restBench": false,  
+      "emergencyPhone": false,  
+      "videoSurveillance": true,  
+      "defibrillator": false,  
+      "wheelChairAccessible": true  
     }  
   },  
   "paymentAccepted": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": [  
       "Cash",  
       "CreditCard"  
     ]  
   },  
   "currencyAccepted": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": [  
       "EUR"  
     ]  
@@ -1252,11 +1260,11 @@ TransportStation:
     "value": "2018-09-15"  
   },  
   "architect": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Nice Architecture"  
   },  
   "featuredArtist ": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": [  
       "Leopold",  
       "De Renaiss"  
@@ -1285,8 +1293,8 @@ TransportStation:
   "contactPoint": {  
     "url": "uri:ngsi:www.lignesdazur.com"  
   },  
-  "contractingAuthority": "MNCA - Metropole Nice Cote d'Azur",  
-  "contractingCompagny": "R\u00e9gie Ligne d'Azur",  
+  "contractingAuthority": "MNCA - Metropole Nice Cote d Azur",  
+  "contractingCompagny": "Regie Ligne dAzur",  
   "currencyAccepted": [  
     "EUR"  
   ],  
@@ -1420,7 +1428,7 @@ TransportStation:
       "linesConnected": [  
         "L20 - Giono / Les Pugets",  
         "L20 - Centre Commercial St Isidore",  
-        "L21 - Le Gu\u00e9 / Polygone Riviera",  
+        "L21 - Le Gui / Polygone Riviera",  
         "L54 - Centre Commercial Cap 3000 - St Jeannet",  
         "L90 - La Bolline",  
         "91 Auron",  
