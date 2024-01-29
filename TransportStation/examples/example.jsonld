@@ -14,8 +14,8 @@
   "contactPoint": {
     "url": "uri:ngsi:www.lignesdazur.com"
   },
-  "contractingAuthority": "MNCA - Metropole Nice Cote d'Azur",
-  "contractingCompagny": "R\u00e9gie Ligne d'Azur",
+  "contractingAuthority": "MNCA - Metropole Nice Cote d Azur",
+  "contractingCompagny": "Regie Ligne dAzur",
   "currencyAccepted": [
     "EUR"
   ],
@@ -149,7 +149,7 @@
       "linesConnected": [
         "L20 - Giono / Les Pugets",
         "L20 - Centre Commercial St Isidore",
-        "L21 - Le Gu\u00e9 / Polygone Riviera",
+        "L21 - Le Gui / Polygone Riviera",
         "L54 - Centre Commercial Cap 3000 - St Jeannet",
         "L90 - La Bolline",
         "91 Auron",
