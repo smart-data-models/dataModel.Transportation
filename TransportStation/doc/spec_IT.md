@@ -8,7 +8,7 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 Descrizione globale: **Il modello di dati è una descrizione generale delle stazioni urbane (Metro, Bus, Tram, Eliporto, ...) secondo lo standard GFTS https://developers.google.com/transit/gtfs/reference/#stopstxt, così come la descrizione dettagliata di queste (mezzi di accesso, piattaforma, assistenza, ...).  
-versione: 0.1.3  
+versione: 0.1.4  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
@@ -22,7 +22,8 @@
 	- `postOfficeBoxNumber[string]`: Il numero di casella postale per gli indirizzi di casella postale. Ad esempio, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: Il codice postale. Ad esempio, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: L'indirizzo stradale  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-- `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `contactPoint[object]`: I dati da contattare con l'articolo  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)	- `areaServed[string]`: L'area geografica in cui viene fornito un servizio o un articolo offerto. Sostituisce ServiceArea    
+	- `streetNr[string]`: Numero che identifica una proprietà specifica su una strada pubblica    
+- `alternateName[string]`: Un nome alternativo per questa voce  - `architect`:   - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `commissioningDate`:   - `constructionDate`:   - `contactPoint[object]`: I dati da contattare con l'articolo  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)	- `areaServed[string]`: L'area geografica in cui viene fornito un servizio o un articolo offerto. Sostituisce ServiceArea    
 	- `availabilityRestriction[*]`: Questa proprietà collega un punto di contatto a informazioni su quando il punto di contatto non è disponibile. I dettagli sono forniti utilizzando la classe Specifica degli orari di apertura  . Model: [http://schema.org/hoursAvailable](http://schema.org/hoursAvailable)  
 	- `availableLanguage[*]`: Una lingua che qualcuno può usare con o per l'oggetto, il servizio o il luogo. Utilizzare uno dei codici lingua dello standard BCP 47 dell'IETF. È stata implementata l'opzione Testo, ma potrebbe essere anche Lingua.  . Model: [http://schema.org/availableLanguage](http://schema.org/availableLanguage)  
 	- `contactOption[*]`: Un'opzione disponibile su questo punto di contatto (ad esempio un numero verde o un supporto per chi chiama con problemi di udito)  . Model: [http://schema.org/contactOption](http://schema.org/contactOption)  
@@ -32,17 +33,31 @@
 	- `name[string]`: Il nome di questo elemento    
 	- `productSupported[string]`: Il prodotto o il servizio a cui si riferisce il punto di contatto dell'assistenza (ad esempio, l'assistenza per una particolare linea di prodotti). Può trattarsi di un prodotto o di una linea di prodotti specifici (ad esempio, "iPhone") o di una categoria generale di prodotti o servizi (ad esempio, "smartphone").  . Model: [http://schema.org/Text](http://schema.org/Text)  
 	- `telephone[string]`: Telefono di questo contatto    
-- `contractingAuthority[string]`: Nome dell'amministrazione aggiudicatrice  - `contractingCompany[string]`: Nome della società appaltatrice responsabile dello sfruttamento della stazione  - `dataProvider[string]`: una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata  - `dateCreated[date-time]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `dateLastReported[date-time]`: Un timestamp che indica l'ultima volta in cui il dispositivo ha riportato dati con successo. Data e ora in formato ISO8601 UTC  - `dateModified[date-time]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `description[string]`: Descrizione dell'articolo  - `dimension[object]`: Dimensione globale. Il formato è strutturato da una sotto-proprietà di 3 elementi. Il codice dell'unità (testo) è fornito utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **MTR** rappresenta i metri.  	- `depth`:     
+	- `url[uri]`: URL che fornisce una descrizione o ulteriori informazioni su questo elemento    
+- `contractingAuthority[string]`: Nome dell'amministrazione aggiudicatrice  - `contractingCompany[string]`: Nome dell'azienda appaltatrice responsabile dello sfruttamento della stazione  - `currencyAccepted`:   - `dataProvider[string]`: una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata  - `dateCreated[date-time]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `dateLastReported[date-time]`: Un timestamp che indica l'ultima volta in cui il dispositivo ha riportato dati con successo. Data e ora in formato ISO8601 UTC  - `dateModified[date-time]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `description[string]`: Descrizione dell'articolo  - `dimension[object]`: Dimensione globale. Il formato è strutturato da una sotto-proprietà di 3 elementi. Il codice dell'unità (testo) è fornito utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **MTR** rappresenta i metri.  	- `depth`:     
 	- `height`:     
-- `id[*]`: Identificatore univoco dell'entità  - `installationMode[string]`: Posizione rispetto al riferimento al suolo. Enum:'aerial, ground, underGround, underSea'.  - `inventory[object]`: Mappatura generale dei dati solo per `locationType` = 0, 1, 3, 4. Il formato è strutturato da una sotto-proprietà di 4 elementi  	- `PlatformType`:     
+	- `width`:     
+- `featuredArtist`:   - `id[*]`: Identificatore univoco dell'entità  - `installationMode[string]`: Posizione rispetto al riferimento al suolo. Enum:'aerial, ground, underGround, underSea'.  - `inventory[object]`: Mappatura generale dei dati solo per `locationType` = 0, 1, 3, 4. Il formato è strutturato da una sotto-proprietà di 4 elementi  	- `PlatformType`:     
 	- `nbOfIOPoint`:     
 	- `nbOfLane`:     
-- `levelId[number]`: Piano in cui si trova la posizione. Indice numerico associato al piano. Indica la posizione relativa di questo piano rispetto agli altri. L'indice 0 indica il piano terra. I piani sopra il livello del suolo sono indicati da indici positivi e gli stadi sotterranei da indici negativi.  - `location[*]`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `locationType[number]`: Collegamento all'archivio standard GTFS che descrive le diverse località [Tipo di località]. 0 Fermata o piattaforma (luogo in cui gli utenti salgono o scendono da un veicolo di trasporto pubblico). 1 Stazione (area o struttura fisica che comprende una o più piattaforme). 2 Ingresso o uscita (luogo in cui gli utenti possono entrare/uscire da una stazione dalla strada). 3 Intersezione generica (luogo in una stazione che non corrisponde a nessun altro valore di `tipo_di_localizzazione`). 4 Area di imbarco (luogo specifico su un binario dove gli utenti possono salire/scendere con un veicolo).  - `name[string]`: Il nome di questo elemento  - `openingHoursSpecification[array]`: Un valore strutturato che fornisce informazioni sugli orari di apertura di un luogo o di un determinato servizio all'interno di un luogo.  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `parentStation[*]`: Collegamento all'archivio standard GTFS che descrive il diverso collegamento tra stazione e piattaforma [Parent STATION]. Caso '1' location_type = 0 (Stop / platform ), il campo parent_station contiene l'ID di una stazione. Caso '2' location_type = 1 (Station), questo campo deve essere vuoto. Caso '3' location_type = 2 (Input / output) o location_type = 3 (intersezione generica), il campo parent_station contiene l'ID di una stazione location_type = 1. Caso '4' location_type = 4 (area di imbarco), il campo parent_station contiene l'ID di una piattaforma  - `platformCode[number]`: Identificatore del binario per una fermata di tipo binario `location_type` = 0 se la fermata è in una stazione  - `refPointOfInterest[*]`: Un riferimento a un punto di interesse associato a questa osservazione.  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `stationConnected[array]`: Connessioni possibili da questa stazione. Un valore strutturato da 0 a N occorrenze, dove ogni voce è una stringa nel formato `stationType` : [Elenco delle linee collegate, separate da una virgola]. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, train, tram, trolleybus'.  - `stationType[array]`: Tipo di stazione di trasporto. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, trolleybus, tram'.  - `type[string]`: Tipo di entità NGSI. Deve essere TransportStation  - `webSite[string]`: Link al sito ufficiale per maggiori informazioni  - `wheelChairAccessible[number]`: Accesso possibile per le persone a mobilità ridotta. Per le fermate senza genitori 0 non sono disponibili informazioni sull'accessibilità della fermata. 1 alcuni veicoli di questa fermata possono far salire un utente PMR. 2 L'utente PMR non può salire su questa fermata. Per una fermata che fa parte di una stazione 0 la fermata eredita il comportamento di imbarco di sedie a rotelle della stazione madre, se questa è compilata. 1 le corsie consentono l'accesso delle sedie a rotelle alla fermata/piattaforma dall'esterno della stazione. 2 nessuna corsia consente l'accesso della sedia a rotelle alla fermata/piattaforma dall'esterno della stazione. Per gli ingressi/uscite della stazione 0 l'ingresso della stazione eredita il comportamento di accesso per sedie a rotelle della stazione principale, se specificato. 1 l'ingresso della stazione è accessibile alle sedie a rotelle. 2 nessun percorso accessibile alle sedie a rotelle collega l'ingresso della stazione alle fermate/piattaforme.  - `zoneId[string]`: Zona tariffaria della stazione  <!-- /30-PropertiesList -->  
+	- `nbOfPlatform`:     
+- `levelId[number]`: Piano in cui si trova la posizione. Indice numerico associato al piano. Indica la posizione relativa di questo piano rispetto agli altri. L'indice 0 indica il piano terra. I piani sopra il livello del suolo sono indicati da indici positivi e gli stadi sotterranei da indici negativi.  - `location[*]`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `locationType[number]`: Collegamento all'archivio standard GTFS che descrive le diverse località [Tipo di località]. 0 Fermata o piattaforma (luogo in cui gli utenti salgono o scendono da un veicolo di trasporto pubblico). 1 Stazione (area o struttura fisica che comprende una o più piattaforme). 2 Ingresso o uscita (luogo in cui gli utenti possono entrare/uscire da una stazione dalla strada). 3 Intersezione generica (luogo in una stazione che non corrisponde a nessun altro valore di `tipo_di_localizzazione`). 4 Area di imbarco (luogo specifico su un binario dove gli utenti possono salire/scendere con un veicolo).  - `name[string]`: Il nome di questo elemento  - `openingHoursSpecification[array]`: Un valore strutturato che fornisce informazioni sugli orari di apertura di un luogo o di un determinato servizio all'interno di un luogo.  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `parentStation[*]`: Collegamento all'archivio standard GTFS che descrive il diverso collegamento tra stazione e piattaforma [Parent STATION]. Caso '1' location_type = 0 (Stop / platform ), il campo parent_station contiene l'ID di una stazione. Caso '2' location_type = 1 (Station), questo campo deve essere vuoto. Caso '3' location_type = 2 (Input / output) o location_type = 3 (intersezione generica), il campo parent_station contiene l'ID di una stazione location_type = 1. Caso '4' location_type = 4 (area di imbarco), il campo parent_station contiene l'ID di una piattaforma  - `paymentAccepted`:   - `platformCode[number]`: Identificatore del binario per una fermata di tipo binario `location_type` = 0 se la fermata è in una stazione  - `refPointOfInterest[*]`: Un riferimento a un punto di interesse associato a questa osservazione.  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `services`:   	- `defibrillator`:     
+	- `emergencyPhone`:     
+	- `informationBoardDevice`:     
+	- `interactiveDevice`:     
+	- `messageDevice`:     
+	- `purchaseDevice`:     
+	- `restBench`:     
+	- `shelters`:     
+	- `timetableDevice`:     
+	- `voiceDevice`:     
+	- `wheelChairAccessible`:     
+- `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `stationConnected[array]`: Connessioni possibili da questa stazione. Un valore strutturato da 0 a N occorrenze, dove ogni voce è una stringa nel formato `stationType` : [Elenco delle linee collegate, separate da una virgola]. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, train, tram, trolleybus'.  - `stationType[array]`: Tipo di stazione di trasporto. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, trolleybus, tram'.  - `type[string]`: Tipo di entità NGSI. Deve essere TransportStation  - `webSite[string]`: Link al sito ufficiale per maggiori informazioni  - `wheelChairAccessible[number]`: Accesso possibile per le persone a mobilità ridotta. Per le fermate senza genitori 0 non sono disponibili informazioni sull'accessibilità della fermata. 1 alcuni veicoli di questa fermata possono far salire un utente PMR. 2 L'utente PMR non può salire su questa fermata. Per una fermata che fa parte di una stazione 0 la fermata eredita il comportamento di imbarco di sedie a rotelle della stazione madre, se questa è compilata. 1 le corsie consentono l'accesso delle sedie a rotelle alla fermata/piattaforma dall'esterno della stazione. 2 nessuna corsia consente l'accesso della sedia a rotelle alla fermata/piattaforma dall'esterno della stazione. Per gli ingressi/uscite della stazione 0 l'ingresso della stazione eredita il comportamento di accesso per sedie a rotelle della stazione principale, se specificato. 1 l'ingresso della stazione è accessibile alle sedie a rotelle. 2 nessun percorso accessibile alle sedie a rotelle collega l'ingresso della stazione alle fermate/piattaforme.  - `zoneId[string]`: Zona tariffaria della stazione  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Proprietà richieste  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
-<!-- 40-RequiredProperties -->  
-<!-- /40-RequiredProperties -->  
+<!-- 40-NotesYaml -->  
+<!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
 ## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
@@ -111,12 +126,20 @@ TransportStation:
       type: string    
       x-ngsi:    
         type: Property    
+    architect:    
+      type: string    
     areaServed:    
       description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
+    commissioningDate:    
+      format: date-time    
+      type: string    
+    constructionDate:    
+      format: date-time    
+      type: string    
     contactPoint:    
       description: The details to contact with the item    
       properties:    
@@ -221,6 +244,13 @@ TransportStation:
       type: string    
       x-ngsi:    
         type: Property    
+    currencyAccepted:    
+      items:    
+        enum:    
+          - EUR    
+          - USD    
+        type: string    
+      type: array    
     dataProvider:    
       description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
@@ -265,6 +295,27 @@ TransportStation:
       x-ngsi:    
         type: Property    
         units: meters    
+    featuredArtist:    
+      items:    
+        anyOf:    
+          - anyOf:    
+              - description: Identifier format of any NGSI entity    
+                maxLength: 256    
+                minLength: 1    
+                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+                type: string    
+                x-ngsi:    
+                  type: Property    
+              - description: Identifier format of any NGSI entity    
+                format: uri    
+                type: string    
+                x-ngsi:    
+                  type: Property    
+            description: Unique identifier of the entity    
+            x-ngsi:    
+              type: Property    
+          - type: string    
+      type: array    
     id:    
       anyOf:    
         - description: Identifier format of any NGSI entity    
@@ -629,6 +680,15 @@ TransportStation:
       description: 'Link to the GTFS standard repository describing the different link between Station and Platform [Parent STATION]. Case ''1'' location_type = 0 (Stop / platform ), the parent_station field contains the ID of a station. Case ''2'' location_type = 1  (Station), this field must be empty. Case ''3'' location_type = 2 (Input / output) or location_type = 3 (generic intersection), the parent_station field contains the ID of a station location_type = 1. Case ''4'' location_type = 4 (boarding area), the parent_station field contains the ID of a platform'    
       x-ngsi:    
         type: Relationship    
+    paymentAccepted:    
+      items:    
+        enum:    
+          - Cash    
+          - CreditCard    
+          - CryptoCurrency    
+          - other    
+        type: string    
+      type: array    
     platformCode:    
       description: Platform identifier for a platform type stop `location_type` = 0 when the stop is in a station    
       type: number    
@@ -663,43 +723,38 @@ TransportStation:
           type: string    
       x-ngsi:    
         type: Property    
+    services:    
+      properties:    
+        defibrillator:    
+          type: Boolean    
+        emergencyPhone:    
+          type: Boolean    
+        informationBoardDevice:    
+          type: Boolean    
+        interactiveDevice:    
+          type: Boolean    
+        messageDevice:    
+          type: Boolean    
+        purchaseDevice:    
+          type: Boolean    
+        restBench:    
+          type: Boolean    
+        shelters:    
+          type: Boolean    
+        timetableDevice:    
+          type: Boolean    
+        voiceDevice:    
+          type: Boolean    
+        wheelChairAccessible:    
+          type: Boolean    
+      type: object    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     stationConnected:    
-      architect:    
-        type: string    
-      commissioningDate:    
-        format: date-time    
-        type: string    
-      constructionDate:    
-        format: date-time    
-        type: string    
-      currencyAccepted:    
-        items:    
-          enum:    
-            - EUR    
-            - USD    
-          type: string    
-        type: array    
       description: 'Connections possible from this station. A structured value from 0 to N occurrences where each items is a string in the format `stationType` : [List of Lines connected, separated by a comma]. Enum:''aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, train, tram, trolleybus'''    
-      featuredArtist:    
-        items:    
-          anyOf:    
-            - anyOf:    
-                - description: Property. Identifier format of any NGSI entity    
-                  maxLength: 256    
-                  minLength: 1    
-                  pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-                  type: string    
-                - description: Property. Identifier format of any NGSI entity    
-                  format: uri    
-                  type: string    
-              description: Property. Unique identifier of the entity    
-            - type: string    
-        type: array    
       items:    
         properties:    
           linesConnected:    
@@ -720,40 +775,6 @@ TransportStation:
               - tram    
               - trolleybus    
             type: string    
-        type: object    
-      paymentAccepted:    
-        items:    
-          enum:    
-            - Cash    
-            - CreditCard    
-            - CryptoCurrency    
-            - other    
-          type: string    
-        type: array    
-      services:    
-        properties:    
-          defibrillator:    
-            type: Boolean    
-          emergencyPhone:    
-            type: Boolean    
-          informationBoardDevice:    
-            type: Boolean    
-          interactiveDevice:    
-            type: Boolean    
-          messageDevice:    
-            type: Boolean    
-          purchaseDevice:    
-            type: Boolean    
-          restBench:    
-            type: Boolean    
-          shelters:    
-            type: Boolean    
-          timetableDevice:    
-            type: Boolean    
-          voiceDevice:    
-            type: Boolean    
-          wheelChairAccessible:    
-            type: Boolean    
         type: object    
       type: array    
       x-ngsi:    
@@ -807,11 +828,11 @@ TransportStation:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/TransportStation/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/data-models/Transportation/TransportStation/schema.json    
   x-model-tags: ""    
-  x-version: 0.1.3    
+  x-version: 0.1.4    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -833,7 +854,7 @@ TransportStation:
   "location": {  
     "type": "Point",  
     "coordinates": [  
-      43.664810,  
+      43.66481,  
       7.196545  
     ]  
   },  
@@ -914,7 +935,7 @@ TransportStation:
     "uri:ngsi:StreetRetail"  
   ],  
   "contractingAuthority": "MNCA - Metropole Nice Cote d'Azur",  
-  "contractingCompagny": "Régie Ligne d'Azur",  
+  "contractingCompagny": "R\u00e9gie Ligne d'Azur",  
   "contactPoint": {  
     "url": "uri:ngsi:www.lignesdazur.com"  
   },  
@@ -952,7 +973,7 @@ TransportStation:
       "linesConnected": [  
         "L20 - Giono / Les Pugets",  
         "L20 - Centre Commercial St Isidore",  
-        "L21 - Le Gué / Polygone Riviera",  
+        "L21 - Le Gu\u00e9 / Polygone Riviera",  
         "L54 - Centre Commercial Cap 3000 - St Jeannet",  
         "L90 - La Bolline",  
         "91 Auron",  
@@ -999,33 +1020,33 @@ TransportStation:
   "id": "urn:ngsi-ld:Station:Station:MNCA-STram-L02-AP-T2",  
   "type": "TransportStation",  
   "name": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "NCE-Tram-Station-L02-AP-T2"  
   },  
   "alternateName": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Nice - Tramway Station Description - L02-AP-T2"  
   },  
   "description": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Description and services provided in the station"  
   },  
   "seeAlso": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "http://tramway.nice.fr/wp-content/uploads/2019/10/BD_pocket_plan_MAJ03_2019_20082019.pdf"  
   },  
   "location": {  
-    "type": "GeoProperty",  
+    "type": "geo:json",  
     "value": {  
       "type": "Point",  
       "coordinates": [  
-        43.664810,  
+        43.66481,  
         7.196545  
       ]  
     }  
   },  
   "address": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": {  
       "addressCountry": "FR",  
       "addressLocality": "Nice",  
@@ -1033,7 +1054,7 @@ TransportStation:
     }  
   },  
   "areaServed": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Nice Airport"  
   },  
   "dateLastReported": {  
@@ -1041,32 +1062,62 @@ TransportStation:
     "value": "2020-03-17T08:45:00Z"  
   },  
   "stationType": {  
-    "type": "Property",  
-    "value": ["tram"]  
+    "type": "StructuredValue",  
+    "value": [  
+      "tram"  
+    ]  
   },  
   "locationType": {  
-    "type": "Property",  
-    "value": 1  
+    "type": "Boolean",  
+    "value": true  
   },  
   "levelId": {  
-    "type": "Property",  
-    "value": 0  
+    "type": "Boolean",  
+    "value": false  
   },  
   "zoneId": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "B"  
   },  
   "wheelChairAccessible": {  
-    "type": "Property",  
-    "value": 1  
+    "type": "Boolean",  
+    "value": true  
   },  
   "openingHoursSpecification": {  
-    "type": "object",  
+    "type": "StructuredValue",  
     "value": [  
       {  
-        "dayOfWeek": "Monday, Tuesday, Wednesday, Thursday, Friday",  
-        "opens": "07:00:00",  
         "closes": "22:00:00",  
+        "dayOfWeek": "Monday",  
+        "opens": "07:00:00",  
+        "validFrom": "2021-01-01T00:00:00",  
+        "validThrough": "2021-12-31T23:59:59"  
+      },  
+      {  
+        "closes": "22:00:00",  
+        "dayOfWeek": "Tuesday",  
+        "opens": "07:00:00",  
+        "validFrom": "2021-01-01T00:00:00",  
+        "validThrough": "2021-12-31T23:59:59"  
+      },  
+      {  
+        "closes": "22:00:00",  
+        "dayOfWeek": "Wednesday",  
+        "opens": "07:00:00",  
+        "validFrom": "2021-01-01T00:00:00",  
+        "validThrough": "2021-12-31T23:59:59"  
+      },  
+      {  
+        "closes": "22:00:00",  
+        "dayOfWeek": "Thursday",  
+        "opens": "07:00:00",  
+        "validFrom": "2021-01-01T00:00:00",  
+        "validThrough": "2021-12-31T23:59:59"  
+      },  
+      {  
+        "closes": "22:00:00",  
+        "dayOfWeek": "Friday",  
+        "opens": "07:00:00",  
         "validFrom": "2021-01-01T00:00:00",  
         "validThrough": "2021-12-31T23:59:59"  
       },  
@@ -1094,35 +1145,35 @@ TransportStation:
     ]  
   },  
   "owner": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": [  
       "Street furniture Urbain & Retail"  
     ]  
   },  
   "contractingAuthority": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "MNCA - Metropole Nice Cote d'Azur"  
   },  
   "contractingCompany": {  
-    "type": "Property",  
-    "value": "Régie Ligne d'Azur"  
+    "type": "Text",  
+    "value": "R\u00e9gie Ligne d'Azur"  
   },  
   "contactPoint": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": {  
       "url": "www.lignesdazur.com"  
     }  
   },  
   "webSite": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "https://tramway.nice.fr/Plan-Station-L02-AP-T2.pdf"  
   },  
   "installationMode": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "ground"  
   },  
   "dimension": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": {  
       "length": 300,  
       "width": 25,  
@@ -1130,115 +1181,72 @@ TransportStation:
     }  
   },  
   "inventory": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": {  
       "nbOfIOPoint": 2,  
       "nbOfLane": 1,  
       "nbOfPlatform": 1,  
-      "PlatformType": ["lateral"]  
+      "PlatformType": [  
+        "lateral"  
+      ]  
     }  
   },  
   "stationConnected": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": [  
       {  
         "stationType": "tram",  
-        "linesConnected": {  
-          "type": "Property",  
-          "value": [  
-            "Tram 2 - CADAM / Nikaia",  
-            "Tram 3 - Saint Isidore / Stade Allianz Riviera"  
-          ]  
-        }  
+        "linesConnected": [  
+          "Tram 2 - CADAM / Nikaia",  
+          "Tram 3 - Saint Isidore / Stade Allianz Riviera"  
+        ]  
       },  
       {  
         "stationType": "train",  
-        "linesConnected": {  
-          "type": "Property",  
-          "value": [  
-            "Gare SNCF Nice Saint Augustin (600m)"  
-          ]  
-        }  
+        "linesConnected": [  
+          "Gare SNCF Nice Saint Augustin (600m)"  
+        ]  
       },  
       {  
         "stationType": "bus",  
-        "linesConnected": {  
-          "type": "Property",  
-          "value": [  
-            "L20 - Giono / Les Pugets",  
-            "L20 - Centre Commercial St Isidore",  
-            "L21 - Le Gué / Polygone Riviera",  
-            "L54 - Centre Commercial Cap 3000 - St Jeannet",  
-            "L90 - La Bolline",  
-            "91 Auron",  
-            "L92 - Isola 2000"  
-          ]  
-        }  
+        "linesConnected": [  
+          "L20 - Giono / Les Pugets",  
+          "L20 - Centre Commercial St Isidore",  
+          "L21 - Le Gu\u00e9 / Polygone Riviera",  
+          "L54 - Centre Commercial Cap 3000 - St Jeannet",  
+          "L90 - La Bolline",  
+          "91 Auron",  
+          "L92 - Isola 2000"  
+        ]  
       }  
     ]  
   },  
   "services": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": {  
-      "purchaseDevice": {  
-        "type": "Property",  
-        "value": true  
-      },  
-      "interactiveDevice": {  
-        "type": "Property",  
-        "value": true  
-      },  
-      "timetableDevice": {  
-        "type": "Property",  
-        "value": true  
-      },  
-      "voiceDevice": {  
-        "type": "Property",  
-        "value": true  
-      },  
-      "informationBoardDevice": {  
-        "type": "Property",  
-        "value": true  
-      },  
-      "messageDevice": {  
-        "type": "Property",  
-        "value": false  
-      },  
-      "shelters": {  
-        "type": "Property",  
-        "value": true  
-      },  
-      "restBench": {  
-        "type": "Property",  
-        "value": false  
-      },  
-      "emergencyPhone": {  
-        "type": "Property",  
-        "value": false  
-      },  
-      "videoSurveillance": {  
-        "type": "Property",  
-        "value": true  
-      },  
-      "defibrillator": {  
-        "type": "Property",  
-        "value": false  
-      },  
-      "wheelChairAccessible": {  
-        "type": "Property",  
-        "value": true  
-      }  
+      "purchaseDevice": true,  
+      "interactiveDevice": true,  
+      "timetableDevice": true,  
+      "voiceDevice": true,  
+      "informationBoardDevice": true,  
+      "messageDevice": false,  
+      "shelters": true,  
+      "restBench": false,  
+      "emergencyPhone": false,  
+      "videoSurveillance": true,  
+      "defibrillator": false,  
+      "wheelChairAccessible": true  
     }  
   },  
   "paymentAccepted": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": [  
       "Cash",  
       "CreditCard"  
     ]  
   },  
   "currencyAccepted": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": [  
       "EUR"  
     ]  
@@ -1252,11 +1260,11 @@ TransportStation:
     "value": "2018-09-15"  
   },  
   "architect": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Nice Architecture"  
   },  
   "featuredArtist ": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": [  
       "Leopold",  
       "De Renaiss"  
@@ -1285,8 +1293,8 @@ TransportStation:
   "contactPoint": {  
     "url": "uri:ngsi:www.lignesdazur.com"  
   },  
-  "contractingAuthority": "MNCA - Metropole Nice Cote d'Azur",  
-  "contractingCompagny": "R\u00e9gie Ligne d'Azur",  
+  "contractingAuthority": "MNCA - Metropole Nice Cote d Azur",  
+  "contractingCompagny": "Regie Ligne dAzur",  
   "currencyAccepted": [  
     "EUR"  
   ],  
@@ -1420,7 +1428,7 @@ TransportStation:
       "linesConnected": [  
         "L20 - Giono / Les Pugets",  
         "L20 - Centre Commercial St Isidore",  
-        "L21 - Le Gu\u00e9 / Polygone Riviera",  
+        "L21 - Le Gui / Polygone Riviera",  
         "L54 - Centre Commercial Cap 3000 - St Jeannet",  
         "L90 - La Bolline",  
         "91 Auron",  
