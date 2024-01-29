@@ -1,52 +1,63 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-엔티티: 운송 스테이션  
-============<!-- /10-Header -->  
+엔티티: TransportStation  
+=====================<!-- /10-Header -->  
 <!-- 15-License -->  
 [오픈 라이선스](https://github.com/smart-data-models//dataModel.Transportation/blob/master/TransportStation/LICENSE.md)  
 [문서 자동 생성](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
 글로벌 설명: **데이터 모델은 GFTS 표준 https://developers.google.com/transit/gtfs/reference/#stopstxt 에 따른 도시 역(지하철, 버스, 트램, 헬기장, ...)에 대한 일반적인 설명과 이에 대한 세부 설명(접근 수단, 플랫폼, 지원 등)** 입니다.  
-버전: 0.1.3  
+버전: 0.1.4  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## 속성 목록  
 
 <sup><sub>[*] 속성에 유형이 없는 것은 여러 유형 또는 다른 형식/패턴을 가질 수 있기 때문입니다</sub></sup>.  
-- `address[object]`: 우편 주소  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 국가. 예를 들어, 스페인  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: 도로명 주소가 있는 지역 및 해당 지역에 속한 지역  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+- `address[object]`: 우편 주소  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 국가. 예: 스페인  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: 도로명 주소가 있는 지역 및 해당 지역 내 지역  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
 	- `addressRegion[string]`: 해당 지역이 위치한 지역과 해당 국가의 지역  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
 	- `district[string]`: 지구는 일부 국가에서는 지방 정부에서 관리하는 행정 구역의 일종입니다.    
 	- `postOfficeBoxNumber[string]`: 사서함 주소의 우체국 사서함 번호입니다. 예: 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: 우편 번호입니다. 예: 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 거리 주소  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
 	- `streetNr[string]`: 공공 도로의 특정 건물을 식별하는 번호    
-- `alternateName[string]`: 이 항목의 대체 이름  - `areaServed[string]`: 서비스 또는 제공 품목이 제공되는 지리적 영역  . Model: [https://schema.org/Text](https://schema.org/Text)- `contactPoint[object]`: 항목과 관련하여 문의할 세부 정보  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)	- `areaServed[string]`: 서비스 또는 제공 품목이 제공되는 지리적 영역입니다. 서비스 지역 대체    
-	- `availabilityRestriction[*]`: 이 속성은 연락처를 연락처를 사용할 수 없는 시간에 대한 정보에 연결합니다. 세부 정보는 영업 시간 지정 클래스를 사용하여 제공됩니다.  . Model: [http://schema.org/hoursAvailable](http://schema.org/hoursAvailable)  
-	- `availableLanguage[*]`: 누군가가 해당 상품, 서비스 또는 장소에서 사용할 수 있는 언어입니다. IETF BCP 47 표준의 언어 코드 중 하나를 사용하세요. 텍스트 옵션이 구현되어 있지만 언어  . Model: [http://schema.org/availableLanguage](http://schema.org/availableLanguage)  
-	- `contactOption[*]`: 이 연락처에서 사용할 수 있는 옵션(예: 수신자 부담 번호 또는 청각 장애 발신자를 위한 지원)  . Model: [http://schema.org/contactOption](http://schema.org/contactOption)  
+- `alternateName[string]`: 이 항목의 대체 이름  - `architect`:   - `areaServed[string]`: 서비스 또는 제공 품목이 제공되는 지리적 영역  . Model: [https://schema.org/Text](https://schema.org/Text)- `commissioningDate`:   - `constructionDate`:   - `contactPoint[object]`: 항목과 관련하여 문의할 세부 정보  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)	- `areaServed[string]`: 서비스 또는 제공 품목이 제공되는 지리적 영역입니다. 서비스 지역 대체    
+	- `availabilityRestriction[*]`: 이 속성은 연락처를 사용할 수 없는 시간에 대한 정보에 연락처를 연결합니다. 세부 정보는 영업 시간 지정 클래스를 사용하여 제공됩니다.  . Model: [http://schema.org/hoursAvailable](http://schema.org/hoursAvailable)  
+	- `availableLanguage[*]`: 누군가가 해당 아이템, 서비스 또는 장소에서 사용할 수 있는 언어입니다. IETF BCP 47 표준의 언어 코드 중 하나를 사용하세요. 텍스트 옵션이 구현되어 있지만 언어  . Model: [http://schema.org/availableLanguage](http://schema.org/availableLanguage)  
+	- `contactOption[*]`: 이 문의처에서 사용할 수 있는 옵션(예: 수신자 부담 번호 또는 청각 장애가 있는 발신자를 위한 지원)  . Model: [http://schema.org/contactOption](http://schema.org/contactOption)  
 	- `contactType[string]`: 이 항목의 연락처 유형    
 	- `email[idn-email]`: 소유자의 이메일 주소    
 	- `faxNumber[string]`: 팩스 번호  . Model: [http://schema.org/Text](http://schema.org/Text)  
 	- `name[string]`: 이 항목의 이름    
-	- `productSupported[string]`: 이 지원 문의처가 관련된 제품 또는 서비스(예: 특정 제품 라인에 대한 제품 지원). 특정 제품 또는 제품 라인(예: 'iPhone') 또는 일반적인 제품 또는 서비스 카테고리(예: '스마트폰')일 수 있습니다.  . Model: [http://schema.org/Text](http://schema.org/Text)  
+	- `productSupported[string]`: 이 지원 문의창구가 관련된 제품 또는 서비스(예: 특정 제품 라인에 대한 제품 지원). 특정 제품 또는 제품군(예: 'iPhone')이거나 일반적인 제품 또는 서비스 카테고리(예: '스마트폰')일 수 있습니다.  . Model: [http://schema.org/Text](http://schema.org/Text)  
 	- `telephone[string]`: 이 연락처의 전화    
 	- `url[uri]`: 이 항목에 대한 설명이나 추가 정보를 제공하는 URL입니다.    
-- `contractingAuthority[string]`: 계약 기관의 이름  - `contractingCompany[string]`: 스테이션 개발을 담당하는 계약 회사 이름  - `dataProvider[string]`: 조화된 데이터 엔티티의 공급자를 식별하는 일련의 문자  - `dateCreated[date-time]`: 엔티티 생성 타임스탬프. 이는 일반적으로 스토리지 플랫폼에서 할당합니다.  - `dateLastReported[date-time]`: 디바이스가 데이터를 성공적으로 보고한 마지막 시간을 나타내는 타임스탬프입니다. ISO8601 UTC 형식의 날짜 및 시간  - `dateModified[date-time]`: 엔티티의 마지막 수정 타임스탬프입니다. 이는 일반적으로 스토리지 플랫폼에서 할당합니다.  - `description[string]`: 이 항목에 대한 설명  - `dimension[object]`: 전역 차원입니다. 형식은 3개 항목의 하위 속성으로 구성됩니다. 단위 코드(텍스트)는 [UN/CEFACT 공통 코드](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)를 사용하여 지정합니다. 예를 들어 **MTR**은 미터를 나타냅니다.  	- `depth`:     
+- `contractingAuthority[string]`: 계약 기관의 이름  - `contractingCompany[string]`: 스테이션 개발을 담당하는 계약 회사 이름  - `currencyAccepted`:   - `dataProvider[string]`: 조화된 데이터 엔티티의 공급자를 식별하는 일련의 문자열입니다.  - `dateCreated[date-time]`: 엔티티 생성 타임스탬프. 이는 일반적으로 스토리지 플랫폼에서 할당합니다.  - `dateLastReported[date-time]`: 디바이스가 데이터를 성공적으로 보고한 마지막 시간을 나타내는 타임스탬프입니다. ISO8601 UTC 형식의 날짜 및 시간입니다.  - `dateModified[date-time]`: 엔티티의 마지막 수정 타임스탬프입니다. 이는 일반적으로 스토리지 플랫폼에서 할당합니다.  - `description[string]`: 이 항목에 대한 설명  - `dimension[object]`: 전역 차원입니다. 형식은 3개 항목의 하위 속성으로 구성됩니다. 단위 코드(텍스트)는 [UN/CEFACT 공통 코드](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)를 사용하여 지정합니다. 예를 들어 **MTR**은 미터를 나타냅니다.  	- `depth`:     
 	- `height`:     
 	- `width`:     
-- `id[*]`: 엔티티의 고유 식별자  - `installationMode[string]`: 지상 기준 상대 위치. Enum:'aerial, ground, underGround, underSea'  - `inventory[object]`: 위치 유형` = 0, 1, 3, 4에 대해서만 일반 데이터 매핑. 형식은 4개의 항목으로 구성된 하위 속성으로 구성됩니다.  	- `PlatformType`:     
+- `featuredArtist`:   - `id[*]`: 엔티티의 고유 식별자  - `installationMode[string]`: 지상 기준을 기준으로 한 위치입니다. Enum:'aerial, ground, underGround, underSea'  - `inventory[object]`: 위치 유형` = 0, 1, 3, 4에 대해서만 일반 데이터 매핑. 형식은 4개의 항목으로 구성된 하위 속성으로 구성됩니다.  	- `PlatformType`:     
 	- `nbOfIOPoint`:     
 	- `nbOfLane`:     
 	- `nbOfPlatform`:     
-- `levelId[number]`: 위치가 위치한 층입니다. 층과 관련된 숫자 인덱스입니다. 다른 단계에 대한 이 단계의 상대적 위치를 나타냅니다. 인덱스 0은 1층을 나타냅니다. 지상층은 양수 인덱스로, 지하층은 음수 인덱스로 표시됩니다.  - `location[*]`: 항목에 대한 지오숀 참조입니다. 포인트, 라인 문자열, 다각형, 멀티포인트, 멀티라인 문자열 또는 멀티폴리곤일 수 있습니다.  - `locationType[number]`: 다른 위치 [위치 유형]을 설명하는 GTFS 표준 저장소에 대한 링크입니다. 0 정류장 또는 플랫폼(사용자가 대중교통 차량에 승하차하는 장소). 1 역(하나 이상의 플랫폼으로 구성된 구역 또는 물리적 구조물). 2 입구 또는 출구(사용자가 거리에서 역에 출입할 수 있는 장소). 3 일반 교차로(다른 '위치_유형' 값에 해당하지 않는 역 내 위치). 4 사용자가 차량에서 승하차할 수 있는 플랫폼 내 특정 위치의 탑승 구역  - `name[string]`: 이 항목의 이름  - `openingHoursSpecification[array]`: 장소의 영업 시간 또는 장소 내 특정 서비스에 대한 정보를 제공하는 구조화된 값입니다.  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: 소유자의 고유 ID를 참조하는 JSON 인코딩된 문자 시퀀스가 포함된 목록입니다.  - `parentStation[*]`: 역과 플랫폼 [부모 역] 사이의 다른 링크를 설명하는 GTFS 표준 저장소에 대한 링크입니다. '1' 위치 유형이 0(정류장/플랫폼)인 경우, parent_station 필드에 역의 ID가 포함됩니다. Case '2' location_type = 1 (역), 이 필드는 비어 있어야 합니다. 케이스 '3' 위치_유형 = 2(입력/출력) 또는 위치_유형 = 3(일반 교차로)인 경우, 부모_역 필드에 역 위치_유형 = 1의 ID가 포함됩니다. '4' 위치 유형이 4(탑승 구역)인 경우, 부모_스테이션 필드에 플랫폼의 ID가 포함됩니다.  - `platformCode[number]`: 정류장이 역에 있는 경우 플랫폼 유형 정류장의 플랫폼 식별자 '위치_유형' = 0입니다.  - `refPointOfInterest[*]`: 이 관찰과 관련된 관심 지점에 대한 참조입니다.  - `seeAlso[*]`: 항목에 대한 추가 리소스를 가리키는 URL 목록  - `source[string]`: 엔티티 데이터의 원본 소스를 URL로 제공하는 문자 시퀀스입니다. 소스 공급자의 정규화된 도메인 이름 또는 소스 개체에 대한 URL을 사용하는 것이 좋습니다.  - `stationConnected[array]`: 이 스테이션에서 가능한 연결. 0에서 N까지의 구조화된 값으로, 각 항목이 `stationType` : [쉼표로 구분된 연결 가능한 노선의 목록] 형식의 문자열입니다. 열거형:'aerialLift, 버스, 케이블카, 페리, 푸니쿨라, 모노레일, 철도, 지하철, 기차, 트램, 트롤리버스'  - `stationType[array]`: 교통수단 유형. Enum:'aerialLift, 버스, 케이블트램, 페리, 케이블카, 모노레일, 철도, 지하철, 트롤리버스, 트램'  - `type[string]`: NGSI 엔티티 유형. TransportStation이어야 합니다.  - `webSite[string]`: 자세한 내용은 공식 웹사이트에 링크하세요.  - `wheelChairAccessible[number]`: 거동이 불편한 분도 이용 가능. 보호자가 없는 정류장의 경우 0 해당 정류장의 접근성에 관한 정보가 없습니다. 1 이 정류장의 일부 차량에 PMR 사용자가 탑승할 수 있습니다. 2 이 정류장에서는 PRM 사용자가 탑승할 수 없습니다. 0 정류장의 일부인 정류장의 경우, 해당 정류장은 상위 정류장의 휠체어 탑승 동작을 상속합니다(채워진 경우). 1 차선은 역 외부에서 휠체어로 정류장/플랫폼에 접근할 수 있습니다. 2 차선은 역 외부에서 휠체어로 정류장/플랫폼에 접근할 수 없습니다. 역 입력/출력 0의 경우 역 입구는 지정된 경우 주 역의 휠체어_탑승 동작을 상속합니다. 1은 역 입구가 휠체어로 접근 가능합니다. 2 역 입구와 정류장/플랫폼을 연결하는 휠체어 접근 경로가 없습니다.  - `zoneId[string]`: 스테이션의 가격 영역  <!-- /30-PropertiesList -->  
+- `levelId[number]`: 위치가 위치한 층입니다. 층과 관련된 숫자 인덱스입니다. 다른 스테이지에 대한 이 스테이지의 상대적 위치를 나타냅니다. 인덱스 0은 1층을 나타냅니다. 지상층은 양수 인덱스로, 지하층은 음수 인덱스로 표시됩니다.  - `location[*]`: 항목에 대한 지오숀 참조입니다. 포인트, 라인 문자열, 다각형, 멀티포인트, 멀티라인 문자열 또는 멀티폴리곤일 수 있습니다.  - `locationType[number]`: 다양한 위치 [위치 유형]을 설명하는 GTFS 표준 저장소로 연결되는 링크입니다. 0 정류장 또는 플랫폼(사용자가 대중교통 수단을 타고 내리는 장소). 1 역(하나 이상의 플랫폼으로 구성된 지역 또는 물리적 구조물). 2 입구 또는 출구(사용자가 거리에서 역에 출입할 수 있는 장소). 3 일반 교차로(다른 '위치_유형' 값에 해당하지 않는 역 내 위치). 4 사용자가 차량에 승하차할 수 있는 플랫폼의 특정 위치 탑승 구역  - `name[string]`: 이 항목의 이름  - `openingHoursSpecification[array]`: 장소의 영업 시간 또는 장소 내 특정 서비스에 대한 정보를 제공하는 구조화된 값입니다.  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: 소유자의 고유 ID를 참조하는 JSON 인코딩된 문자 시퀀스가 포함된 목록입니다.  - `parentStation[*]`: 역과 플랫폼 [부모 역] 사이의 다른 링크를 설명하는 GTFS 표준 저장소에 대한 링크입니다. '1' 위치_유형 = 0(정류장/플랫폼)인 경우, parent_station 필드에 역의 ID가 포함됩니다. 케이스 '2' location_type = 1(역)인 경우, 이 필드는 비어 있어야 합니다. '3' 위치_유형 = 2(입력/출력) 또는 위치_유형 = 3(일반 교차로)인 경우, parent_station 필드에 역의 ID가 위치_유형 = 1로 포함됩니다. '4' 위치_type = 4(탑승 구역)인 경우, parent_station 필드에 플랫폼의 ID가 포함됩니다.  - `paymentAccepted`:   - `platformCode[number]`: 정류장이 역에 있는 경우 플랫폼 유형 정류장의 플랫폼 식별자 '위치_유형'이 0입니다.  - `refPointOfInterest[*]`: 이 관찰과 관련된 관심 지점에 대한 참조입니다.  - `seeAlso[*]`: 항목에 대한 추가 리소스를 가리키는 URL 목록  - `services`:   	- `defibrillator`:     
+	- `emergencyPhone`:     
+	- `informationBoardDevice`:     
+	- `interactiveDevice`:     
+	- `messageDevice`:     
+	- `purchaseDevice`:     
+	- `restBench`:     
+	- `shelters`:     
+	- `timetableDevice`:     
+	- `voiceDevice`:     
+	- `wheelChairAccessible`:     
+- `source[string]`: 엔티티 데이터의 원본 소스를 URL로 제공하는 일련의 문자입니다. 소스 공급자의 정규화된 도메인 이름 또는 소스 개체에 대한 URL을 사용하는 것이 좋습니다.  - `stationConnected[array]`: 이 스테이션에서 연결 가능한 회선 수입니다. 각 항목이 쉼표로 구분된 [연결된 노선 목록] 형식의 문자열인 0에서 N까지의 구조화된 값입니다. 열거형:'공중 리프트, 버스, 케이블카, 페리, 푸니쿨라, 모노레일, 철도, 지하철, 기차, 트램, 트롤리버스'  - `stationType[array]`: 교통수단의 종류. Enum:'공중 리프트, 버스, 케이블트램, 페리, 케이블카, 모노레일, 철도, 지하철, 트롤리버스, 트램'  - `type[string]`: NGSI 엔티티 유형. TransportStation이어야 합니다.  - `webSite[string]`: 자세한 내용은 공식 웹사이트 링크  - `wheelChairAccessible[number]`: 거동이 불편한 분도 이용 가능. 보호자가 없는 정류장의 경우 0 해당 정류장의 접근성에 관한 정보가 없습니다. 1 이 정류장의 일부 차량에 PMR 사용자가 탑승할 수 있습니다. 2 이 정류장에서는 PRM 사용자가 탑승할 수 없습니다. 0 정류장의 일부인 정류장의 경우, 해당 정류장은 상위 정류장의 휠체어 탑승 동작을 상속합니다(채워져 있는 경우). 1 차선은 역 외부에서 휠체어로 정류장/플랫폼에 접근할 수 있습니다. 2 차선 없음은 역 외부에서 휠체어로 정류장/플랫폼에 접근할 수 없습니다. 역 입력/출력 0의 경우 역 입구는 지정된 경우 기본 역의 휠체어 탑승 동작을 상속합니다. 1 역 입구는 휠체어로 접근 가능합니다. 2 역 입구와 정류장/플랫폼을 연결하는 휠체어 접근 가능 경로가 없습니다.  - `zoneId[string]`: 역의 요금 구역  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 필수 속성  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
-<!-- 40-RequiredProperties -->  
-<!-- /40-RequiredProperties -->  
+<!-- 40-NotesYaml -->  
+<!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
 ## 속성에 대한 데이터 모델 설명  
 알파벳순으로 정렬(자세한 내용을 보려면 클릭)  
@@ -115,12 +126,20 @@ TransportStation:
       type: string    
       x-ngsi:    
         type: Property    
+    architect:    
+      type: string    
     areaServed:    
       description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
+    commissioningDate:    
+      format: date-time    
+      type: string    
+    constructionDate:    
+      format: date-time    
+      type: string    
     contactPoint:    
       description: The details to contact with the item    
       properties:    
@@ -225,6 +244,13 @@ TransportStation:
       type: string    
       x-ngsi:    
         type: Property    
+    currencyAccepted:    
+      items:    
+        enum:    
+          - EUR    
+          - USD    
+        type: string    
+      type: array    
     dataProvider:    
       description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
@@ -269,6 +295,27 @@ TransportStation:
       x-ngsi:    
         type: Property    
         units: meters    
+    featuredArtist:    
+      items:    
+        anyOf:    
+          - anyOf:    
+              - description: Identifier format of any NGSI entity    
+                maxLength: 256    
+                minLength: 1    
+                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+                type: string    
+                x-ngsi:    
+                  type: Property    
+              - description: Identifier format of any NGSI entity    
+                format: uri    
+                type: string    
+                x-ngsi:    
+                  type: Property    
+            description: Unique identifier of the entity    
+            x-ngsi:    
+              type: Property    
+          - type: string    
+      type: array    
     id:    
       anyOf:    
         - description: Identifier format of any NGSI entity    
@@ -633,6 +680,15 @@ TransportStation:
       description: 'Link to the GTFS standard repository describing the different link between Station and Platform [Parent STATION]. Case ''1'' location_type = 0 (Stop / platform ), the parent_station field contains the ID of a station. Case ''2'' location_type = 1  (Station), this field must be empty. Case ''3'' location_type = 2 (Input / output) or location_type = 3 (generic intersection), the parent_station field contains the ID of a station location_type = 1. Case ''4'' location_type = 4 (boarding area), the parent_station field contains the ID of a platform'    
       x-ngsi:    
         type: Relationship    
+    paymentAccepted:    
+      items:    
+        enum:    
+          - Cash    
+          - CreditCard    
+          - CryptoCurrency    
+          - other    
+        type: string    
+      type: array    
     platformCode:    
       description: Platform identifier for a platform type stop `location_type` = 0 when the stop is in a station    
       type: number    
@@ -667,43 +723,38 @@ TransportStation:
           type: string    
       x-ngsi:    
         type: Property    
+    services:    
+      properties:    
+        defibrillator:    
+          type: Boolean    
+        emergencyPhone:    
+          type: Boolean    
+        informationBoardDevice:    
+          type: Boolean    
+        interactiveDevice:    
+          type: Boolean    
+        messageDevice:    
+          type: Boolean    
+        purchaseDevice:    
+          type: Boolean    
+        restBench:    
+          type: Boolean    
+        shelters:    
+          type: Boolean    
+        timetableDevice:    
+          type: Boolean    
+        voiceDevice:    
+          type: Boolean    
+        wheelChairAccessible:    
+          type: Boolean    
+      type: object    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     stationConnected:    
-      architect:    
-        type: string    
-      commissioningDate:    
-        format: date-time    
-        type: string    
-      constructionDate:    
-        format: date-time    
-        type: string    
-      currencyAccepted:    
-        items:    
-          enum:    
-            - EUR    
-            - USD    
-          type: string    
-        type: array    
       description: 'Connections possible from this station. A structured value from 0 to N occurrences where each items is a string in the format `stationType` : [List of Lines connected, separated by a comma]. Enum:''aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, train, tram, trolleybus'''    
-      featuredArtist:    
-        items:    
-          anyOf:    
-            - anyOf:    
-                - description: Property. Identifier format of any NGSI entity    
-                  maxLength: 256    
-                  minLength: 1    
-                  pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-                  type: string    
-                - description: Property. Identifier format of any NGSI entity    
-                  format: uri    
-                  type: string    
-              description: Property. Unique identifier of the entity    
-            - type: string    
-        type: array    
       items:    
         properties:    
           linesConnected:    
@@ -724,40 +775,6 @@ TransportStation:
               - tram    
               - trolleybus    
             type: string    
-        type: object    
-      paymentAccepted:    
-        items:    
-          enum:    
-            - Cash    
-            - CreditCard    
-            - CryptoCurrency    
-            - other    
-          type: string    
-        type: array    
-      services:    
-        properties:    
-          defibrillator:    
-            type: Boolean    
-          emergencyPhone:    
-            type: Boolean    
-          informationBoardDevice:    
-            type: Boolean    
-          interactiveDevice:    
-            type: Boolean    
-          messageDevice:    
-            type: Boolean    
-          purchaseDevice:    
-            type: Boolean    
-          restBench:    
-            type: Boolean    
-          shelters:    
-            type: Boolean    
-          timetableDevice:    
-            type: Boolean    
-          voiceDevice:    
-            type: Boolean    
-          wheelChairAccessible:    
-            type: Boolean    
         type: object    
       type: array    
       x-ngsi:    
@@ -811,11 +828,11 @@ TransportStation:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/TransportStation/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/data-models/Transportation/TransportStation/schema.json    
   x-model-tags: ""    
-  x-version: 0.1.3    
+  x-version: 0.1.4    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -824,7 +841,7 @@ TransportStation:
 <!-- 80-Examples -->  
 ## 페이로드 예시  
 #### TransportStation NGSI-v2 키-값 예시  
-다음은 JSON-LD 형식의 TransportStation을 키-값으로 사용하는 예입니다. 이는 `옵션=키값`을 사용할 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
+다음은 JSON-LD 형식의 TransportStation을 키 값으로 사용하는 예제입니다. 이는 `옵션=키값`을 사용할 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -837,7 +854,7 @@ TransportStation:
   "location": {  
     "type": "Point",  
     "coordinates": [  
-      43.664810,  
+      43.66481,  
       7.196545  
     ]  
   },  
@@ -918,7 +935,7 @@ TransportStation:
     "uri:ngsi:StreetRetail"  
   ],  
   "contractingAuthority": "MNCA - Metropole Nice Cote d'Azur",  
-  "contractingCompagny": "Régie Ligne d'Azur",  
+  "contractingCompagny": "R\u00e9gie Ligne d'Azur",  
   "contactPoint": {  
     "url": "uri:ngsi:www.lignesdazur.com"  
   },  
@@ -956,7 +973,7 @@ TransportStation:
       "linesConnected": [  
         "L20 - Giono / Les Pugets",  
         "L20 - Centre Commercial St Isidore",  
-        "L21 - Le Gué / Polygone Riviera",  
+        "L21 - Le Gu\u00e9 / Polygone Riviera",  
         "L54 - Centre Commercial Cap 3000 - St Jeannet",  
         "L90 - La Bolline",  
         "91 Auron",  
@@ -995,41 +1012,41 @@ TransportStation:
 }  
 ```  
 </details>  
-#### TransportStation NGSI-v2 정규화 예제  
-다음은 정규화된 JSON-LD 형식의 TransportStation의 예입니다. 이는 옵션을 사용하지 않을 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
+#### 전송 스테이션 NGSI-v2 정규화 예제  
+다음은 정규화된 JSON-LD 형식의 전송 스테이션의 예입니다. 이는 옵션을 사용하지 않을 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:Station:Station:MNCA-STram-L02-AP-T2",  
   "type": "TransportStation",  
   "name": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "NCE-Tram-Station-L02-AP-T2"  
   },  
   "alternateName": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Nice - Tramway Station Description - L02-AP-T2"  
   },  
   "description": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Description and services provided in the station"  
   },  
   "seeAlso": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "http://tramway.nice.fr/wp-content/uploads/2019/10/BD_pocket_plan_MAJ03_2019_20082019.pdf"  
   },  
   "location": {  
-    "type": "GeoProperty",  
+    "type": "geo:json",  
     "value": {  
       "type": "Point",  
       "coordinates": [  
-        43.664810,  
+        43.66481,  
         7.196545  
       ]  
     }  
   },  
   "address": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": {  
       "addressCountry": "FR",  
       "addressLocality": "Nice",  
@@ -1037,7 +1054,7 @@ TransportStation:
     }  
   },  
   "areaServed": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Nice Airport"  
   },  
   "dateLastReported": {  
@@ -1045,32 +1062,62 @@ TransportStation:
     "value": "2020-03-17T08:45:00Z"  
   },  
   "stationType": {  
-    "type": "Property",  
-    "value": ["tram"]  
+    "type": "StructuredValue",  
+    "value": [  
+      "tram"  
+    ]  
   },  
   "locationType": {  
-    "type": "Property",  
-    "value": 1  
+    "type": "Boolean",  
+    "value": true  
   },  
   "levelId": {  
-    "type": "Property",  
-    "value": 0  
+    "type": "Boolean",  
+    "value": false  
   },  
   "zoneId": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "B"  
   },  
   "wheelChairAccessible": {  
-    "type": "Property",  
-    "value": 1  
+    "type": "Boolean",  
+    "value": true  
   },  
   "openingHoursSpecification": {  
-    "type": "object",  
+    "type": "StructuredValue",  
     "value": [  
       {  
-        "dayOfWeek": "Monday, Tuesday, Wednesday, Thursday, Friday",  
-        "opens": "07:00:00",  
         "closes": "22:00:00",  
+        "dayOfWeek": "Monday",  
+        "opens": "07:00:00",  
+        "validFrom": "2021-01-01T00:00:00",  
+        "validThrough": "2021-12-31T23:59:59"  
+      },  
+      {  
+        "closes": "22:00:00",  
+        "dayOfWeek": "Tuesday",  
+        "opens": "07:00:00",  
+        "validFrom": "2021-01-01T00:00:00",  
+        "validThrough": "2021-12-31T23:59:59"  
+      },  
+      {  
+        "closes": "22:00:00",  
+        "dayOfWeek": "Wednesday",  
+        "opens": "07:00:00",  
+        "validFrom": "2021-01-01T00:00:00",  
+        "validThrough": "2021-12-31T23:59:59"  
+      },  
+      {  
+        "closes": "22:00:00",  
+        "dayOfWeek": "Thursday",  
+        "opens": "07:00:00",  
+        "validFrom": "2021-01-01T00:00:00",  
+        "validThrough": "2021-12-31T23:59:59"  
+      },  
+      {  
+        "closes": "22:00:00",  
+        "dayOfWeek": "Friday",  
+        "opens": "07:00:00",  
         "validFrom": "2021-01-01T00:00:00",  
         "validThrough": "2021-12-31T23:59:59"  
       },  
@@ -1098,35 +1145,35 @@ TransportStation:
     ]  
   },  
   "owner": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": [  
       "Street furniture Urbain & Retail"  
     ]  
   },  
   "contractingAuthority": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "MNCA - Metropole Nice Cote d'Azur"  
   },  
   "contractingCompany": {  
-    "type": "Property",  
-    "value": "Régie Ligne d'Azur"  
+    "type": "Text",  
+    "value": "R\u00e9gie Ligne d'Azur"  
   },  
   "contactPoint": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": {  
       "url": "www.lignesdazur.com"  
     }  
   },  
   "webSite": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "https://tramway.nice.fr/Plan-Station-L02-AP-T2.pdf"  
   },  
   "installationMode": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "ground"  
   },  
   "dimension": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": {  
       "length": 300,  
       "width": 25,  
@@ -1134,115 +1181,72 @@ TransportStation:
     }  
   },  
   "inventory": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": {  
       "nbOfIOPoint": 2,  
       "nbOfLane": 1,  
       "nbOfPlatform": 1,  
-      "PlatformType": ["lateral"]  
+      "PlatformType": [  
+        "lateral"  
+      ]  
     }  
   },  
   "stationConnected": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": [  
       {  
         "stationType": "tram",  
-        "linesConnected": {  
-          "type": "Property",  
-          "value": [  
-            "Tram 2 - CADAM / Nikaia",  
-            "Tram 3 - Saint Isidore / Stade Allianz Riviera"  
-          ]  
-        }  
+        "linesConnected": [  
+          "Tram 2 - CADAM / Nikaia",  
+          "Tram 3 - Saint Isidore / Stade Allianz Riviera"  
+        ]  
       },  
       {  
         "stationType": "train",  
-        "linesConnected": {  
-          "type": "Property",  
-          "value": [  
-            "Gare SNCF Nice Saint Augustin (600m)"  
-          ]  
-        }  
+        "linesConnected": [  
+          "Gare SNCF Nice Saint Augustin (600m)"  
+        ]  
       },  
       {  
         "stationType": "bus",  
-        "linesConnected": {  
-          "type": "Property",  
-          "value": [  
-            "L20 - Giono / Les Pugets",  
-            "L20 - Centre Commercial St Isidore",  
-            "L21 - Le Gué / Polygone Riviera",  
-            "L54 - Centre Commercial Cap 3000 - St Jeannet",  
-            "L90 - La Bolline",  
-            "91 Auron",  
-            "L92 - Isola 2000"  
-          ]  
-        }  
+        "linesConnected": [  
+          "L20 - Giono / Les Pugets",  
+          "L20 - Centre Commercial St Isidore",  
+          "L21 - Le Gu\u00e9 / Polygone Riviera",  
+          "L54 - Centre Commercial Cap 3000 - St Jeannet",  
+          "L90 - La Bolline",  
+          "91 Auron",  
+          "L92 - Isola 2000"  
+        ]  
       }  
     ]  
   },  
   "services": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": {  
-      "purchaseDevice": {  
-        "type": "Property",  
-        "value": true  
-      },  
-      "interactiveDevice": {  
-        "type": "Property",  
-        "value": true  
-      },  
-      "timetableDevice": {  
-        "type": "Property",  
-        "value": true  
-      },  
-      "voiceDevice": {  
-        "type": "Property",  
-        "value": true  
-      },  
-      "informationBoardDevice": {  
-        "type": "Property",  
-        "value": true  
-      },  
-      "messageDevice": {  
-        "type": "Property",  
-        "value": false  
-      },  
-      "shelters": {  
-        "type": "Property",  
-        "value": true  
-      },  
-      "restBench": {  
-        "type": "Property",  
-        "value": false  
-      },  
-      "emergencyPhone": {  
-        "type": "Property",  
-        "value": false  
-      },  
-      "videoSurveillance": {  
-        "type": "Property",  
-        "value": true  
-      },  
-      "defibrillator": {  
-        "type": "Property",  
-        "value": false  
-      },  
-      "wheelChairAccessible": {  
-        "type": "Property",  
-        "value": true  
-      }  
+      "purchaseDevice": true,  
+      "interactiveDevice": true,  
+      "timetableDevice": true,  
+      "voiceDevice": true,  
+      "informationBoardDevice": true,  
+      "messageDevice": false,  
+      "shelters": true,  
+      "restBench": false,  
+      "emergencyPhone": false,  
+      "videoSurveillance": true,  
+      "defibrillator": false,  
+      "wheelChairAccessible": true  
     }  
   },  
   "paymentAccepted": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": [  
       "Cash",  
       "CreditCard"  
     ]  
   },  
   "currencyAccepted": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": [  
       "EUR"  
     ]  
@@ -1256,11 +1260,11 @@ TransportStation:
     "value": "2018-09-15"  
   },  
   "architect": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Nice Architecture"  
   },  
   "featuredArtist ": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": [  
       "Leopold",  
       "De Renaiss"  
@@ -1269,8 +1273,8 @@ TransportStation:
 }  
 ```  
 </details>  
-#### TransportStation NGSI-LD 키-값 예시  
-다음은 JSON-LD 형식의 TransportStation을 키-값으로 사용하는 예입니다. 이는 `옵션=키값`을 사용할 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
+#### 전송 스테이션 NGSI-LD 키-값 예제  
+다음은 JSON-LD 형식의 TransportStation을 키 값으로 사용하는 예제입니다. 이는 `옵션=키값`을 사용할 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -1289,8 +1293,8 @@ TransportStation:
   "contactPoint": {  
     "url": "uri:ngsi:www.lignesdazur.com"  
   },  
-  "contractingAuthority": "MNCA - Metropole Nice Cote d'Azur",  
-  "contractingCompagny": "R\u00e9gie Ligne d'Azur",  
+  "contractingAuthority": "MNCA - Metropole Nice Cote d Azur",  
+  "contractingCompagny": "Regie Ligne dAzur",  
   "currencyAccepted": [  
     "EUR"  
   ],  
@@ -1424,7 +1428,7 @@ TransportStation:
       "linesConnected": [  
         "L20 - Giono / Les Pugets",  
         "L20 - Centre Commercial St Isidore",  
-        "L21 - Le Gu\u00e9 / Polygone Riviera",  
+        "L21 - Le Gui / Polygone Riviera",  
         "L54 - Centre Commercial Cap 3000 - St Jeannet",  
         "L90 - La Bolline",  
         "91 Auron",  
@@ -1444,8 +1448,8 @@ TransportStation:
 }  
 ```  
 </details>  
-#### TransportStation NGSI-LD 정규화 예제  
-다음은 정규화된 JSON-LD 형식의 TransportStation의 예입니다. 이는 옵션을 사용하지 않을 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
+#### 전송 스테이션 NGSI-LD 정규화 예제  
+다음은 정규화된 JSON-LD 형식의 전송 스테이션의 예입니다. 이는 옵션을 사용하지 않을 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -1724,7 +1728,7 @@ TransportStation:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-[FAQ 10](https://smartdatamodels.org/index.php/faqs/)을 참조하여 규모 단위를 다루는 방법에 대한 답변을 확인하세요.  
+크기 단위를 다루는 방법에 대한 답변은 [FAQ 10](https://smartdatamodels.org/index.php/faqs/)을 참조하세요.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
