@@ -59,12 +59,20 @@ TransportStation:
       type: string
       x-ngsi:
         type: Property
+    architect:
+      type: string
     areaServed:
       description: The geographic area where a service or offered item is provided
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
+    commissioningDate:
+      format: date-time
+      type: string
+    constructionDate:
+      format: date-time
+      type: string
     contactPoint:
       description: The details to contact with the item
       properties:
@@ -169,6 +177,13 @@ TransportStation:
       type: string
       x-ngsi:
         type: Property
+    currencyAccepted:
+      items:
+        enum:
+          - EUR
+          - USD
+        type: string
+      type: array
     dataProvider:
       description: A sequence of characters identifying the provider of the harmonised data entity
       type: string
@@ -213,6 +228,27 @@ TransportStation:
       x-ngsi:
         type: Property
         units: meters
+    featuredArtist:
+      items:
+        anyOf:
+          - anyOf:
+              - description: Identifier format of any NGSI entity
+                maxLength: 256
+                minLength: 1
+                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+                type: string
+                x-ngsi:
+                  type: Property
+              - description: Identifier format of any NGSI entity
+                format: uri
+                type: string
+                x-ngsi:
+                  type: Property
+            description: Unique identifier of the entity
+            x-ngsi:
+              type: Property
+          - type: string
+      type: array
     id:
       anyOf:
         - description: Identifier format of any NGSI entity
@@ -577,6 +613,15 @@ TransportStation:
       description: 'Link to the GTFS standard repository describing the different link between Station and Platform [Parent STATION]. Case ''1'' location_type = 0 (Stop / platform ), the parent_station field contains the ID of a station. Case ''2'' location_type = 1  (Station), this field must be empty. Case ''3'' location_type = 2 (Input / output) or location_type = 3 (generic intersection), the parent_station field contains the ID of a station location_type = 1. Case ''4'' location_type = 4 (boarding area), the parent_station field contains the ID of a platform'
       x-ngsi:
         type: Relationship
+    paymentAccepted:
+      items:
+        enum:
+          - Cash
+          - CreditCard
+          - CryptoCurrency
+          - other
+        type: string
+      type: array
     platformCode:
       description: Platform identifier for a platform type stop `location_type` = 0 when the stop is in a station
       type: number
@@ -611,43 +656,38 @@ TransportStation:
           type: string
       x-ngsi:
         type: Property
+    services:
+      properties:
+        defibrillator:
+          type: Boolean
+        emergencyPhone:
+          type: Boolean
+        informationBoardDevice:
+          type: Boolean
+        interactiveDevice:
+          type: Boolean
+        messageDevice:
+          type: Boolean
+        purchaseDevice:
+          type: Boolean
+        restBench:
+          type: Boolean
+        shelters:
+          type: Boolean
+        timetableDevice:
+          type: Boolean
+        voiceDevice:
+          type: Boolean
+        wheelChairAccessible:
+          type: Boolean
+      type: object
     source:
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'
       type: string
       x-ngsi:
         type: Property
     stationConnected:
-      architect:
-        type: string
-      commissioningDate:
-        format: date-time
-        type: string
-      constructionDate:
-        format: date-time
-        type: string
-      currencyAccepted:
-        items:
-          enum:
-            - EUR
-            - USD
-          type: string
-        type: array
       description: 'Connections possible from this station. A structured value from 0 to N occurrences where each items is a string in the format `stationType` : [List of Lines connected, separated by a comma]. Enum:''aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, train, tram, trolleybus'''
-      featuredArtist:
-        items:
-          anyOf:
-            - anyOf:
-                - description: Property. Identifier format of any NGSI entity
-                  maxLength: 256
-                  minLength: 1
-                  pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
-                  type: string
-                - description: Property. Identifier format of any NGSI entity
-                  format: uri
-                  type: string
-              description: Property. Unique identifier of the entity
-            - type: string
-        type: array
       items:
         properties:
           linesConnected:
@@ -668,40 +708,6 @@ TransportStation:
               - tram
               - trolleybus
             type: string
-        type: object
-      paymentAccepted:
-        items:
-          enum:
-            - Cash
-            - CreditCard
-            - CryptoCurrency
-            - other
-          type: string
-        type: array
-      services:
-        properties:
-          defibrillator:
-            type: Boolean
-          emergencyPhone:
-            type: Boolean
-          informationBoardDevice:
-            type: Boolean
-          interactiveDevice:
-            type: Boolean
-          messageDevice:
-            type: Boolean
-          purchaseDevice:
-            type: Boolean
-          restBench:
-            type: Boolean
-          shelters:
-            type: Boolean
-          timetableDevice:
-            type: Boolean
-          voiceDevice:
-            type: Boolean
-          wheelChairAccessible:
-            type: Boolean
         type: object
       type: array
       x-ngsi:
@@ -755,8 +761,8 @@ TransportStation:
     - type
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/TransportStation/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/data-models/Transportation/TransportStation/schema.json
   x-model-tags: ""
-  x-version: 0.1.3
+  x-version: 0.1.4
