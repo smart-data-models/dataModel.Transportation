@@ -16,3 +16,12 @@ currentAdopters:
  project: CAPTN 5G
  comments: Extension of the enumeration for the attribute vehicleType to also cover different watercraft.
  startDate: 2022-11-03
+-
+ adopter: SEDIMARK project
+ description: Urban bike mobility planning use case in Santander
+ mail: 
+ organization: 
+ project: https://sedimark.eu/
+ comments: 
+ startDate:
+ 

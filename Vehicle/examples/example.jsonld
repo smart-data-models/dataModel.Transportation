@@ -2,6 +2,7 @@
   "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",
   "type": "Vehicle",
   "areaServed": "Centro",
+  "battery": 0.81,
   "bearing": 43,
   "cargoWeight": 314,
   "category": [
