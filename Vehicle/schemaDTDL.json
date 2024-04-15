@@ -23,6 +23,14 @@
             "comment": "The geographic area where a service or offered item is provided"
         },
         {
+            "name": "battery",
+            "writable": true,
+            "displayName": "battery",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The current percentage of battery left in case of an electric vehicle, or a device connected to the vehicle"
+        },
+        {
             "name": "bearing",
             "writable": true,
             "displayName": "bearing",
@@ -236,7 +244,7 @@
             "writable": true,
             "displayName": "serviceOnDuty",
             "@type": "Property",
-            "schema": "string",
+            "schema": "boolean",
             "comment": "Nature of service provided by emergency vehicle corresponding to this observation. True indicates the emergency vehicle corresponding to this observation is attending to/ servicing to an emergency call of duty and is False otherwise"
         },
         {
@@ -755,194 +763,199 @@
                         "enumValue": 19
                     },
                     {
+                        "name": "e-bike",
+                        "displayName": "e-bike",
+                        "enumValue": 20
+                    },
+                    {
                         "name": "e-moped",
                         "displayName": "e-moped",
-                        "enumValue": 20
+                        "enumValue": 21
                     },
                     {
                         "name": "e-scooter",
                         "displayName": "e-scooter",
-                        "enumValue": 21
+                        "enumValue": 22
                     },
                     {
                         "name": "e-motorcycle",
                         "displayName": "e-motorcycle",
-                        "enumValue": 22
+                        "enumValue": 23
                     },
                     {
                         "name": "fireTender",
                         "displayName": "fireTender",
-                        "enumValue": 23
+                        "enumValue": 24
                     },
                     {
                         "name": "fourWheelDrive",
                         "displayName": "fourWheelDrive",
-                        "enumValue": 24
+                        "enumValue": 25
                     },
                     {
                         "name": "highSidedVehicle",
                         "displayName": "highSidedVehicle",
-                        "enumValue": 25
+                        "enumValue": 26
                     },
                     {
                         "name": "hopper",
                         "displayName": "hopper",
-                        "enumValue": 26
+                        "enumValue": 27
                     },
                     {
                         "name": "lorry",
                         "displayName": "lorry",
-                        "enumValue": 27
+                        "enumValue": 28
                     },
                     {
                         "name": "minibus",
                         "displayName": "minibus",
-                        "enumValue": 28
+                        "enumValue": 29
                     },
                     {
                         "name": "moped",
                         "displayName": "moped",
-                        "enumValue": 29
+                        "enumValue": 30
                     },
                     {
                         "name": "motorcycle",
                         "displayName": "motorcycle",
-                        "enumValue": 30
+                        "enumValue": 31
                     },
                     {
                         "name": "motorcycleWithSideCar",
                         "displayName": "motorcycleWithSideCar",
-                        "enumValue": 31
+                        "enumValue": 32
                     },
                     {
                         "name": "motorscooter",
                         "displayName": "motorscooter",
-                        "enumValue": 32
+                        "enumValue": 33
                     },
                     {
                         "name": "policeVan",
                         "displayName": "policeVan",
-                        "enumValue": 33
+                        "enumValue": 34
                     },
                     {
                         "name": "publicMotor",
                         "displayName": "publicMotor",
-                        "enumValue": 34
+                        "enumValue": 35
                     },
                     {
                         "name": "sweepingMachine",
                         "displayName": "sweepingMachine",
-                        "enumValue": 35
+                        "enumValue": 36
                     },
                     {
                         "name": "tanker",
                         "displayName": "tanker",
-                        "enumValue": 36
+                        "enumValue": 37
                     },
                     {
                         "name": "tempo",
                         "displayName": "tempo",
-                        "enumValue": 37
+                        "enumValue": 38
                     },
                     {
                         "name": "threeWheeledVehicle",
                         "displayName": "threeWheeledVehicle",
-                        "enumValue": 38
+                        "enumValue": 39
                     },
                     {
                         "name": "tipper",
                         "displayName": "tipper",
-                        "enumValue": 39
+                        "enumValue": 40
                     },
                     {
                         "name": "trailer",
                         "displayName": "trailer",
-                        "enumValue": 40
+                        "enumValue": 41
                     },
                     {
                         "name": "tram",
                         "displayName": "tram",
-                        "enumValue": 41
+                        "enumValue": 42
                     },
                     {
                         "name": "trolley",
                         "displayName": "trolley",
-                        "enumValue": 42
+                        "enumValue": 43
                     },
                     {
                         "name": "twoWheeledVehicle",
                         "displayName": "twoWheeledVehicle",
-                        "enumValue": 43
+                        "enumValue": 44
                     },
                     {
                         "name": "van",
                         "displayName": "van",
-                        "enumValue": 44
+                        "enumValue": 45
                     },
                     {
                         "name": "vehicleWithoutCatalyticConverter",
                         "displayName": "vehicleWithoutCatalyticConverter",
-                        "enumValue": 45
+                        "enumValue": 46
                     },
                     {
                         "name": "vehicleWithCaravan",
                         "displayName": "vehicleWithCaravan",
-                        "enumValue": 46
+                        "enumValue": 47
                     },
                     {
                         "name": "vehicleWithTrailer",
                         "displayName": "vehicleWithTrailer",
-                        "enumValue": 47
+                        "enumValue": 48
                     },
                     {
                         "name": "withEvenNumberedRegistrationPlates",
                         "displayName": "withEvenNumberedRegistrationPlates",
-                        "enumValue": 48
+                        "enumValue": 49
                     },
                     {
                         "name": "withOddNumberedRegistrationPlates",
                         "displayName": "withOddNumberedRegistrationPlates",
-                        "enumValue": 49
+                        "enumValue": 50
                     },
                     {
                         "name": "pilotVessel",
                         "displayName": "pilotVessel",
-                        "enumValue": 50
+                        "enumValue": 51
                     },
                     {
                         "name": "passengerVessel",
                         "displayName": "passengerVessel",
-                        "enumValue": 51
+                        "enumValue": 52
                     },
                     {
                         "name": "cargoVessel",
                         "displayName": "cargoVessel",
-                        "enumValue": 52
+                        "enumValue": 53
                     },
                     {
                         "name": "tug",
                         "displayName": "tug",
-                        "enumValue": 53
+                        "enumValue": 54
                     },
                     {
                         "name": "militaryVessel",
                         "displayName": "militaryVessel",
-                        "enumValue": 54
+                        "enumValue": 55
                     },
                     {
                         "name": "sailingVessel",
                         "displayName": "sailingVessel",
-                        "enumValue": 55
+                        "enumValue": 56
                     },
                     {
                         "name": "vessel",
                         "displayName": "vessel",
-                        "enumValue": 56
+                        "enumValue": 57
                     },
                     {
                         "name": "other",
                         "displayName": "other",
-                        "enumValue": 57
+                        "enumValue": 58
                     }
                 ]
             }
