@@ -2,6 +2,7 @@
   "id": "vehicle:WasteManagement:1",
   "type": "Vehicle",
   "vehicleType": "lorry",
+  "battery": 0.81,
   "category": [
     "municipalServices"
   ],

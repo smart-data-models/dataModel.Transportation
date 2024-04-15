@@ -11,6 +11,10 @@
     "type": "Text",
     "value": "lorry"
   },
+  "battery": {
+    "type": "Number",
+    "value": 0.81
+  },
   "name": {
     "type": "Text",
     "value": "C Recogida 1"

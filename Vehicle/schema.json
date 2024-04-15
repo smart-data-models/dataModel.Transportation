@@ -48,6 +48,7 @@
                         "compactor",
                         "constructionOrMaintenanceVehicle",
                         "dumper",
+                        "e-bike",
                         "e-moped",
                         "e-scooter",
                         "e-motorcycle",
@@ -87,6 +88,12 @@
                         "vessel",
                         "other"
                     ]
+                },
+                "battery": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1,
+                    "description": "Property. The current percentage of battery left in case of an electric vehicle, or a device connected to the vehicle"
                 },
                 "category": {
                     "type": "array",

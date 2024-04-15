@@ -5,6 +5,11 @@
     "type": "Property",
     "value": "Centro"
   },
+  "battery": {
+    "type": "Property",
+    "value": 0.81,
+    "observedAt": "2021-03-11T15:51:02+05:30"
+  },
   "bearing": {
     "type": "Property",
     "value": 43
