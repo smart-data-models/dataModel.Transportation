@@ -1,6 +1,6 @@
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)
 # Vehicle
-Version: 0.2.1
+Version: 0.2.2
 
 ## Description 
 
@@ -33,6 +33,14 @@ Link to the [example](https://smart-data-models.github.io/dataModel.Transportati
 Link to the [example](https://smart-data-models.github.io/dataModel.Transportation/Vehicle/examples/example-normalized.json) (normalized) for NGSI-V2
 
 Link to the [example](https://smart-data-models.github.io/dataModel.Transportation/Vehicle/examples/example-normalized.jsonld) (normalized) for NGSI-LD
+
+Link to the [example](https://github.com/smart-data-models/dataModel.Transportation/blob/master/Vehicle/examples/example.json.csv) (keyvalues) for NGSI v2 in CSV format
+
+Link to the [example](https://github.com/smart-data-models/dataModel.Transportation/blob/master/Vehicle/examples/example.jsonld.csv) (keyvalues) for NGSI-LD in CSV format
+
+Link to the [example](https://github.com/smart-data-models/dataModel.Transportation/blob/master/Vehicle/examples/example-normalized.json.csv) (normalized) for NGSI-V2 in CSV format
+
+Link to the [example](https://github.com/smart-data-models/dataModel.Transportation/blob/master/Vehicle/examples/example-normalized.jsonld.csv) (normalized) for NGSI-LD in CSV format
 ### Dynamic Examples generation
 
 Link to the [Generator](https://smartdatamodels.org/extra/ngsi-ld_generator.php?schemaUrl=https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/Vehicle/schema.json&email=info@smartdatamodels.org) of NGSI-LD normalized payloads compliant with this data model. Refresh for new values
