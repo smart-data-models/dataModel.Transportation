@@ -73,6 +73,13 @@ Vehicle:
       x-ngsi:
         model: https://schema.org/Text
         type: Property
+    battery:
+      description: 'The current percentage of battery left in case of an electric vehicle, or a device connected to the vehicle'
+      maximum: 1
+      minimum: 0
+      type: number
+      x-ngsi:
+        type: Property
     bearing:
       description: "Gives the vehicle GPS angle measured in a clockwise direction from the True North. SameAs 'bearing' field from GTFS Realtime message-Position(https://developers.google.com/transit/gtfs-realtime/reference#message-position)"
       type: number
@@ -904,6 +911,7 @@ Vehicle:
         - compactor
         - constructionOrMaintenanceVehicle
         - dumper
+        - e-bike
         - e-moped
         - e-scooter
         - e-motorcycle
@@ -972,8 +980,8 @@ Vehicle:
     - location
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2024 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/Vehicle/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/Vehicle/schema.json
-  x-model-tags: IUDX
-  x-version: 0.2.1
+  x-model-tags: 'IUDX, SEDIMARK'
+  x-version: 0.2.2
