@@ -1,21 +1,21 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-엔티티: TransportStation  
-=====================<!-- /10-Header -->  
+엔티티: 전송 스테이션  
+============<!-- /10-Header -->  
 <!-- 15-License -->  
 [오픈 라이선스](https://github.com/smart-data-models//dataModel.Transportation/blob/master/TransportStation/LICENSE.md)  
 [문서 자동 생성](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-글로벌 설명: **데이터 모델은 GFTS 표준 https://developers.google.com/transit/gtfs/reference/#stopstxt 에 따른 도시 역(지하철, 버스, 트램, 헬기장, ...)에 대한 일반적인 설명과 이에 대한 세부 설명(접근 수단, 플랫폼, 지원 등)** 입니다.  
-버전: 0.1.4  
+글로벌 설명: **데이터 모델은 GFTS 표준 https://developers.google.com/transit/gtfs/reference/#stopstxt 에 따른 도시 역(지하철, 버스, 트램, 헬기장 등)에 대한 일반적인 설명과 이에 대한 세부 설명(접근 수단, 플랫폼, 지원 등)** 입니다.  
+버전: 0.1.5  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## 속성 목록  
 
 <sup><sub>[*] 속성에 유형이 없는 것은 여러 유형 또는 다른 형식/패턴을 가질 수 있기 때문입니다</sub></sup>.  
-- `address[object]`: 우편 주소  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 국가. 예: 스페인  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+- `address[object]`: 우편 주소  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 국가. 예를 들어, 스페인  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
 	- `addressLocality[string]`: 도로명 주소가 있는 지역 및 해당 지역 내 지역  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
 	- `addressRegion[string]`: 해당 지역이 위치한 지역과 해당 국가의 지역  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
 	- `district[string]`: 지구는 일부 국가에서는 지방 정부에서 관리하는 행정 구역의 일종입니다.    
@@ -23,36 +23,36 @@
 	- `postalCode[string]`: 우편 번호입니다. 예: 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 거리 주소  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
 	- `streetNr[string]`: 공공 도로의 특정 건물을 식별하는 번호    
-- `alternateName[string]`: 이 항목의 대체 이름  - `architect`:   - `areaServed[string]`: 서비스 또는 제공 품목이 제공되는 지리적 영역  . Model: [https://schema.org/Text](https://schema.org/Text)- `commissioningDate`:   - `constructionDate`:   - `contactPoint[object]`: 항목과 관련하여 문의할 세부 정보  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)	- `areaServed[string]`: 서비스 또는 제공 품목이 제공되는 지리적 영역입니다. 서비스 지역 대체    
+- `alternateName[string]`: 이 항목의 대체 이름  - `architect[string]`: 스테이션을 설계한 건축가  - `areaServed[string]`: 서비스 또는 제공 품목이 제공되는 지리적 영역  . Model: [https://schema.org/Text](https://schema.org/Text)- `commissioningDate[date-time]`: 스테이션의 시운전 날짜  - `constructionDate[date-time]`: 역의 건설 날짜  - `contactPoint[object]`: 항목과 관련하여 문의할 세부 정보  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)	- `areaServed[string]`: 서비스 또는 제공 품목이 제공되는 지리적 영역입니다. 서비스 지역 대체    
 	- `availabilityRestriction[*]`: 이 속성은 연락처를 사용할 수 없는 시간에 대한 정보에 연락처를 연결합니다. 세부 정보는 영업 시간 지정 클래스를 사용하여 제공됩니다.  . Model: [http://schema.org/hoursAvailable](http://schema.org/hoursAvailable)  
-	- `availableLanguage[*]`: 누군가가 해당 아이템, 서비스 또는 장소에서 사용할 수 있는 언어입니다. IETF BCP 47 표준의 언어 코드 중 하나를 사용하세요. 텍스트 옵션이 구현되어 있지만 언어  . Model: [http://schema.org/availableLanguage](http://schema.org/availableLanguage)  
-	- `contactOption[*]`: 이 문의처에서 사용할 수 있는 옵션(예: 수신자 부담 번호 또는 청각 장애가 있는 발신자를 위한 지원)  . Model: [http://schema.org/contactOption](http://schema.org/contactOption)  
+	- `availableLanguage[*]`: 누군가 해당 아이템, 서비스 또는 장소에서 사용할 수 있는 언어입니다. IETF BCP 47 표준의 언어 코드 중 하나를 사용하세요. 텍스트 옵션이 구현되어 있지만 언어  . Model: [http://schema.org/availableLanguage](http://schema.org/availableLanguage)  
+	- `contactOption[*]`: 이 연락처에서 사용할 수 있는 옵션(예: 수신자 부담 번호 또는 청각 장애 발신자를 위한 지원)  . Model: [http://schema.org/contactOption](http://schema.org/contactOption)  
 	- `contactType[string]`: 이 항목의 연락처 유형    
 	- `email[idn-email]`: 소유자의 이메일 주소    
 	- `faxNumber[string]`: 팩스 번호  . Model: [http://schema.org/Text](http://schema.org/Text)  
 	- `name[string]`: 이 항목의 이름    
-	- `productSupported[string]`: 이 지원 문의창구가 관련된 제품 또는 서비스(예: 특정 제품 라인에 대한 제품 지원). 특정 제품 또는 제품군(예: 'iPhone')이거나 일반적인 제품 또는 서비스 카테고리(예: '스마트폰')일 수 있습니다.  . Model: [http://schema.org/Text](http://schema.org/Text)  
+	- `productSupported[string]`: 이 지원 문의 창구가 관련된 제품 또는 서비스(예: 특정 제품 라인에 대한 제품 지원). 특정 제품 또는 제품군(예: 'iPhone')이거나 일반적인 제품 또는 서비스 카테고리(예: '스마트폰')일 수 있습니다.  . Model: [http://schema.org/Text](http://schema.org/Text)  
 	- `telephone[string]`: 이 연락처의 전화    
 	- `url[uri]`: 이 항목에 대한 설명이나 추가 정보를 제공하는 URL입니다.    
-- `contractingAuthority[string]`: 계약 기관의 이름  - `contractingCompany[string]`: 스테이션 개발을 담당하는 계약 회사 이름  - `currencyAccepted`:   - `dataProvider[string]`: 조화된 데이터 엔티티의 공급자를 식별하는 일련의 문자열입니다.  - `dateCreated[date-time]`: 엔티티 생성 타임스탬프. 이는 일반적으로 스토리지 플랫폼에서 할당합니다.  - `dateLastReported[date-time]`: 디바이스가 데이터를 성공적으로 보고한 마지막 시간을 나타내는 타임스탬프입니다. ISO8601 UTC 형식의 날짜 및 시간입니다.  - `dateModified[date-time]`: 엔티티의 마지막 수정 타임스탬프입니다. 이는 일반적으로 스토리지 플랫폼에서 할당합니다.  - `description[string]`: 이 항목에 대한 설명  - `dimension[object]`: 전역 차원입니다. 형식은 3개 항목의 하위 속성으로 구성됩니다. 단위 코드(텍스트)는 [UN/CEFACT 공통 코드](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)를 사용하여 지정합니다. 예를 들어 **MTR**은 미터를 나타냅니다.  	- `depth`:     
-	- `height`:     
-	- `width`:     
-- `featuredArtist`:   - `id[*]`: 엔티티의 고유 식별자  - `installationMode[string]`: 지상 기준을 기준으로 한 위치입니다. Enum:'aerial, ground, underGround, underSea'  - `inventory[object]`: 위치 유형` = 0, 1, 3, 4에 대해서만 일반 데이터 매핑. 형식은 4개의 항목으로 구성된 하위 속성으로 구성됩니다.  	- `PlatformType`:     
-	- `nbOfIOPoint`:     
-	- `nbOfLane`:     
-	- `nbOfPlatform`:     
-- `levelId[number]`: 위치가 위치한 층입니다. 층과 관련된 숫자 인덱스입니다. 다른 스테이지에 대한 이 스테이지의 상대적 위치를 나타냅니다. 인덱스 0은 1층을 나타냅니다. 지상층은 양수 인덱스로, 지하층은 음수 인덱스로 표시됩니다.  - `location[*]`: 항목에 대한 지오숀 참조입니다. 포인트, 라인 문자열, 다각형, 멀티포인트, 멀티라인 문자열 또는 멀티폴리곤일 수 있습니다.  - `locationType[number]`: 다양한 위치 [위치 유형]을 설명하는 GTFS 표준 저장소로 연결되는 링크입니다. 0 정류장 또는 플랫폼(사용자가 대중교통 수단을 타고 내리는 장소). 1 역(하나 이상의 플랫폼으로 구성된 지역 또는 물리적 구조물). 2 입구 또는 출구(사용자가 거리에서 역에 출입할 수 있는 장소). 3 일반 교차로(다른 '위치_유형' 값에 해당하지 않는 역 내 위치). 4 사용자가 차량에 승하차할 수 있는 플랫폼의 특정 위치 탑승 구역  - `name[string]`: 이 항목의 이름  - `openingHoursSpecification[array]`: 장소의 영업 시간 또는 장소 내 특정 서비스에 대한 정보를 제공하는 구조화된 값입니다.  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: 소유자의 고유 ID를 참조하는 JSON 인코딩된 문자 시퀀스가 포함된 목록입니다.  - `parentStation[*]`: 역과 플랫폼 [부모 역] 사이의 다른 링크를 설명하는 GTFS 표준 저장소에 대한 링크입니다. '1' 위치_유형 = 0(정류장/플랫폼)인 경우, parent_station 필드에 역의 ID가 포함됩니다. 케이스 '2' location_type = 1(역)인 경우, 이 필드는 비어 있어야 합니다. '3' 위치_유형 = 2(입력/출력) 또는 위치_유형 = 3(일반 교차로)인 경우, parent_station 필드에 역의 ID가 위치_유형 = 1로 포함됩니다. '4' 위치_type = 4(탑승 구역)인 경우, parent_station 필드에 플랫폼의 ID가 포함됩니다.  - `paymentAccepted`:   - `platformCode[number]`: 정류장이 역에 있는 경우 플랫폼 유형 정류장의 플랫폼 식별자 '위치_유형'이 0입니다.  - `refPointOfInterest[*]`: 이 관찰과 관련된 관심 지점에 대한 참조입니다.  - `seeAlso[*]`: 항목에 대한 추가 리소스를 가리키는 URL 목록  - `services`:   	- `defibrillator`:     
-	- `emergencyPhone`:     
-	- `informationBoardDevice`:     
-	- `interactiveDevice`:     
-	- `messageDevice`:     
-	- `purchaseDevice`:     
-	- `restBench`:     
-	- `shelters`:     
-	- `timetableDevice`:     
-	- `voiceDevice`:     
-	- `wheelChairAccessible`:     
-- `source[string]`: 엔티티 데이터의 원본 소스를 URL로 제공하는 일련의 문자입니다. 소스 공급자의 정규화된 도메인 이름 또는 소스 개체에 대한 URL을 사용하는 것이 좋습니다.  - `stationConnected[array]`: 이 스테이션에서 연결 가능한 회선 수입니다. 각 항목이 쉼표로 구분된 [연결된 노선 목록] 형식의 문자열인 0에서 N까지의 구조화된 값입니다. 열거형:'공중 리프트, 버스, 케이블카, 페리, 푸니쿨라, 모노레일, 철도, 지하철, 기차, 트램, 트롤리버스'  - `stationType[array]`: 교통수단의 종류. Enum:'공중 리프트, 버스, 케이블트램, 페리, 케이블카, 모노레일, 철도, 지하철, 트롤리버스, 트램'  - `type[string]`: NGSI 엔티티 유형. TransportStation이어야 합니다.  - `webSite[string]`: 자세한 내용은 공식 웹사이트 링크  - `wheelChairAccessible[number]`: 거동이 불편한 분도 이용 가능. 보호자가 없는 정류장의 경우 0 해당 정류장의 접근성에 관한 정보가 없습니다. 1 이 정류장의 일부 차량에 PMR 사용자가 탑승할 수 있습니다. 2 이 정류장에서는 PRM 사용자가 탑승할 수 없습니다. 0 정류장의 일부인 정류장의 경우, 해당 정류장은 상위 정류장의 휠체어 탑승 동작을 상속합니다(채워져 있는 경우). 1 차선은 역 외부에서 휠체어로 정류장/플랫폼에 접근할 수 있습니다. 2 차선 없음은 역 외부에서 휠체어로 정류장/플랫폼에 접근할 수 없습니다. 역 입력/출력 0의 경우 역 입구는 지정된 경우 기본 역의 휠체어 탑승 동작을 상속합니다. 1 역 입구는 휠체어로 접근 가능합니다. 2 역 입구와 정류장/플랫폼을 연결하는 휠체어 접근 가능 경로가 없습니다.  - `zoneId[string]`: 역의 요금 구역  <!-- /30-PropertiesList -->  
+- `contractingAuthority[string]`: 계약 기관의 이름  - `contractingCompany[string]`: 스테이션 개발을 담당하는 계약 회사 이름  - `currencyAccepted[array]`: 스테이션에서 결제할 때 사용할 수 있는 통화  - `dataProvider[string]`: 조화된 데이터 엔티티의 공급자를 식별하는 일련의 문자  - `dateCreated[date-time]`: 엔티티 생성 타임스탬프. 이는 일반적으로 스토리지 플랫폼에서 할당합니다.  - `dateLastReported[date-time]`: 디바이스가 데이터를 성공적으로 보고한 마지막 시간을 나타내는 타임스탬프입니다. ISO8601 UTC 형식의 날짜 및 시간  - `dateModified[date-time]`: 엔티티의 마지막 수정 타임스탬프입니다. 이는 일반적으로 스토리지 플랫폼에서 할당합니다.  - `description[string]`: 이 항목에 대한 설명  - `dimension[object]`: 글로벌 차원입니다. 형식은 3개 항목의 하위 속성으로 구성됩니다. 단위 코드(텍스트)는 [UN/CEFACT 공통 코드](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)를 사용하여 지정합니다. 예를 들어 **MTR**은 미터를 나타냅니다.  	- `depth[number]`: 역의 깊이    
+	- `height[number]`: 역의 높이    
+	- `width[number]`: 스테이션 너비    
+- `featuredArtist[array]`: 스테이션의 추천 아티스트  - `id[*]`: 엔티티의 고유 식별자  - `installationMode[string]`: 지상 기준 상대 위치. Enum:'aerial, ground, underGround, underSea'  - `inventory[object]`: 위치 유형` = 0, 1, 3, 4에 대해서만 일반 데이터 매핑. 형식은 4가지 항목의 하위 속성으로 구성됩니다.  	- `PlatformType[array]`: 사용 가능한 플랫폼 유형    
+	- `nbOfIOPoint[number]`: 입력 출력 포인트 수    
+	- `nbOfLane[number]`: 역의 차선 수    
+	- `nbOfPlatform[number]`: 플랫폼 수    
+- `levelId[number]`: 위치가 위치한 층입니다. 층과 관련된 숫자 인덱스입니다. 다른 스테이지에 대한 이 스테이지의 상대적 위치를 나타냅니다. 인덱스 0은 1층을 나타냅니다. 지상층은 양수 인덱스로, 지하층은 음수 인덱스로 표시됩니다.  - `location[*]`: 항목에 대한 지오숀 참조입니다. 포인트, 라인스트링, 다각형, 멀티포인트, 멀티라인스트링 또는 멀티폴리곤일 수 있습니다.  - `locationType[number]`: 다른 위치 [위치 유형]을 설명하는 GTFS 표준 저장소에 대한 링크입니다. 0 정류장 또는 플랫폼(사용자가 대중교통 수단에서 승하차하는 장소). 1 역(하나 이상의 플랫폼으로 구성된 지역 또는 물리적 구조물). 2 입구 또는 출구(사용자가 거리에서 역에 출입할 수 있는 장소). 3 일반 교차로(다른 '위치 유형' 값에 해당하지 않는 역 내 위치). 4 사용자가 차량에서 승하차할 수 있는 플랫폼의 특정 위치의 탑승 구역  - `name[string]`: 이 항목의 이름  - `openingHoursSpecification[array]`: 장소의 영업 시간 또는 장소 내 특정 서비스에 대한 정보를 제공하는 구조화된 값입니다.  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: 소유자의 고유 ID를 참조하는 JSON 인코딩된 문자 시퀀스가 포함된 목록입니다.  - `parentStation[*]`: 역과 플랫폼 [부모 역] 사이의 다른 링크를 설명하는 GTFS 표준 저장소에 대한 링크입니다. '1' 위치_type = 0(정류장/플랫폼)인 경우, parent_station 필드에 역의 ID가 포함됩니다. 케이스 '2' location_type = 1(역), 이 필드는 비어 있어야 합니다. 케이스 '3' 위치_유형 = 2(입력/출력) 또는 위치_유형 = 3(일반 교차로)인 경우, 부모_스테이션 필드에 역 위치_유형 = 1의 ID가 포함됩니다. '4' 위치 유형이 4(탑승 구역)인 경우, 부모_스테이션 필드에 플랫폼의 ID가 포함됩니다.  - `paymentAccepted[array]`: 스테이션에서 사용 가능한 결제 수단  - `platformCode[number]`: 정류장이 역에 있는 경우 플랫폼 유형 정류장의 플랫폼 식별자 '위치_유형' = 0입니다.  - `refPointOfInterest[*]`: 이 관찰과 관련된 관심 지점에 대한 참조입니다.  - `seeAlso[*]`: 항목에 대한 추가 리소스를 가리키는 URL 목록  - `services[object]`: 포함된 서비스에 대한 정보가 포함된 개체  	- `defibrillator[boolean]`: 제세동기가 있는지 여부를 나타내는 속성    
+	- `emergencyPhone[boolean]`: 사용 가능한 비상 전화가 있는지 표시하는 속성    
+	- `informationBoardDevice[boolean]`: 사용자를 위한 정보 게시판이 있는지 여부를 나타내는 속성    
+	- `interactiveDevice[boolean]`: 사용자를 위한 대화형 장치(예: 키오스크)가 있는지 여부를 나타내는 속성    
+	- `messageDevice[boolean]`: 사용자와 메시지를 공유할 수 있는 디바이스가 있는지 여부를 나타내는 속성    
+	- `purchaseDevice[boolean]`: 티켓 구매용 기계가 있는지 여부를 나타내는 속성    
+	- `restBench[boolean]`: 역에 앉아서 쉴 수 있는 벤치가 있는지 나타내는 속성    
+	- `shelters[boolean]`: 사용자를 위한 대피소가 있는지 여부를 나타내는 속성(예: 비)    
+	- `timetableDevice[boolean]`: 스테이션의 시간표를 표시하는 보드 또는 장치가 있는지 나타내는 속성    
+	- `voiceDevice[boolean]`: PA 시스템 또는 기타 음성 장치가 있는지 나타내는 속성    
+	- `wheelChairAccessible[boolean]`: 휠체어 사용자를 위한 시설이 있는지 표시하는 속성    
+- `source[string]`: 엔티티 데이터의 원본 소스를 URL로 제공하는 문자 시퀀스입니다. 소스 공급자의 정규화된 도메인 이름 또는 소스 개체에 대한 URL을 사용하는 것이 좋습니다.  - `stationConnected[array]`: 이 스테이션에서 연결 가능한 회선입니다. 각 항목이 쉼표로 구분된 [연결 가능한 노선 목록] 형식의 문자열인 0에서 N까지의 구조화된 값입니다(`stationType`: [쉼표로 구분]). Enum:'공중 리프트, 버스, 케이블카, 페리, 푸니쿨라, 모노레일, 철도, 지하철, 기차, 트램, 트롤리버스'  - `stationType[array]`: 교통수단 유형. Enum:'공중 리프트, 버스, 케이블트램, 페리, 케이블카, 모노레일, 철도, 지하철, 트롤리버스, 트램'  - `type[string]`: NGSI 엔티티 유형. TransportStation이어야 합니다.  - `webSite[string]`: 자세한 내용은 공식 웹사이트 링크  - `wheelChairAccessible[number]`: 거동이 불편한 분도 이용 가능. 보호자가 없는 정류장의 경우 0 해당 정류장의 접근성에 관한 정보가 없습니다. 1 이 정류장의 일부 차량에 PMR 사용자가 탑승할 수 있습니다. 2 이 정류장에서는 PRM 사용자가 탑승할 수 없습니다. 0 정류장의 일부인 정류장의 경우, 해당 정류장은 상위 정류장의 휠체어 탑승 동작을 상속합니다(채워져 있는 경우). 1 차선은 정류장 외부에서 휠체어로 정류장/플랫폼에 접근할 수 있습니다. 2 차선은 역 외부에서 휠체어로 정류장/플랫폼에 접근할 수 없습니다. 역 입력/출력 0의 경우 역 입구는 지정한 경우 주 역의 휠체어 탑승 동작을 상속합니다. 1 역 입구는 휠체어로 접근 가능합니다. 2 역 입구와 정류장/플랫폼을 연결하는 휠체어 접근 가능 경로가 없습니다.  - `zoneId[string]`: 스테이션의 가격 영역  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 필수 속성  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
@@ -127,7 +127,10 @@ TransportStation:
       x-ngsi:    
         type: Property    
     architect:    
+      description: Architect that designed the station    
       type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: The geographic area where a service or offered item is provided    
       type: string    
@@ -135,11 +138,17 @@ TransportStation:
         model: https://schema.org/Text    
         type: Property    
     commissioningDate:    
+      description: Commissioning date of the station    
       format: date-time    
       type: string    
+      x-ngsi:    
+        type: Property    
     constructionDate:    
+      description: Construction date of the station    
       format: date-time    
       type: string    
+      x-ngsi:    
+        type: Property    
     contactPoint:    
       description: The details to contact with the item    
       properties:    
@@ -245,12 +254,15 @@ TransportStation:
       x-ngsi:    
         type: Property    
     currencyAccepted:    
+      description: Accepted currencies for making payments in the Station    
       items:    
         enum:    
           - EUR    
           - USD    
         type: string    
       type: array    
+      x-ngsi:    
+        type: Property    
     dataProvider:    
       description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
@@ -263,7 +275,7 @@ TransportStation:
       x-ngsi:    
         type: Property    
     dateLastReported:    
-      description: A timestamp which denotes the last time when the device successfully reported data. Date and time in an ISO8601 UTCformat    
+      description: A timestamp which denotes the last time when the device successfully reported data. Date and time in an ISO8601 UTC format    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -283,19 +295,29 @@ TransportStation:
       description: 'Global dimension. The format is structured by a sub-property of 3 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **MTR** represents Meters'    
       properties:    
         depth:    
+          description: Depth of the Station    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
         height:    
+          description: Height of the Station    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
         width:    
+          description: Width of the Station    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
         units: meters    
     featuredArtist:    
+      description: Featured artists in the station    
       items:    
         anyOf:    
           - anyOf:    
@@ -316,6 +338,8 @@ TransportStation:
               type: Property    
           - type: string    
       type: array    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf:    
         - description: Identifier format of any NGSI entity    
@@ -347,21 +371,33 @@ TransportStation:
       description: 'General data mapping only for `locationType` = 0, 1, 3, 4. The format is structured by a sub-property of 4 items'    
       properties:    
         PlatformType:    
+          description: Type of platforms available    
           items:    
             enum:    
               - lateral    
               - central    
             type: string    
           type: array    
+          x-ngsi:    
+            type: Property    
         nbOfIOPoint:    
+          description: Number of input output points    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
         nbOfLane:    
+          description: Number of Lane in the station    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
         nbOfPlatform:    
+          description: Number of platform    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
@@ -681,6 +717,7 @@ TransportStation:
       x-ngsi:    
         type: Relationship    
     paymentAccepted:    
+      description: Accepted methods of payment in the Station    
       items:    
         enum:    
           - Cash    
@@ -689,6 +726,8 @@ TransportStation:
           - other    
         type: string    
       type: array    
+      x-ngsi:    
+        type: Property    
     platformCode:    
       description: Platform identifier for a platform type stop `location_type` = 0 when the stop is in a station    
       type: number    
@@ -724,30 +763,66 @@ TransportStation:
       x-ngsi:    
         type: Property    
     services:    
+      description: Object containing information bout the services included    
       properties:    
         defibrillator:    
-          type: Boolean    
+          description: Attribute to indicate if there are defibrillators    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         emergencyPhone:    
-          type: Boolean    
+          description: Attribute to indicate if there are emergency phones available    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         informationBoardDevice:    
-          type: Boolean    
+          description: Attribute to indicate if there are information boards for users    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         interactiveDevice:    
-          type: Boolean    
+          description: Attribute to indicate if there are interactive devices (i.e. kiosks) for users    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         messageDevice:    
-          type: Boolean    
+          description: Attribute to indicate if there are devices for sharing messages with the users    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         purchaseDevice:    
-          type: Boolean    
+          description: Attribute to indicate if there are machines for ticket purchase    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         restBench:    
-          type: Boolean    
+          description: Attribute to indicate if the station has benches to sit on for resting    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         shelters:    
-          type: Boolean    
+          description: Attribute to indicate if there are shelter for users (i.e. rain)    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         timetableDevice:    
-          type: Boolean    
+          description: Attribute to indicate if there are boards or devices showing the time table of the station    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         voiceDevice:    
-          type: Boolean    
+          description: 'Attribute to indicate if there are PA systems or other voice devices '    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         wheelChairAccessible:    
-          type: Boolean    
+          description: Attribute to indicate if there are facilities for wheelchair users    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
       type: object    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
@@ -758,10 +833,14 @@ TransportStation:
       items:    
         properties:    
           linesConnected:    
+            description: Identifiers of the connected lines to the station    
             items:    
               type: string    
             type: array    
+            x-ngsi:    
+              type: Property    
           stationType:    
+            description: Type of transport station connected to    
             enum:    
               - aerialLift    
               - bus    
@@ -775,6 +854,8 @@ TransportStation:
               - tram    
               - trolleybus    
             type: string    
+            x-ngsi:    
+              type: Property    
         type: object    
       type: array    
       x-ngsi:    
@@ -828,11 +909,11 @@ TransportStation:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2024 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/TransportStation/LICENSE.md    
-  x-model-schema: https://smart-data-models.github.io/data-models/Transportation/TransportStation/schema.json    
-  x-model-tags: ""    
-  x-version: 0.1.4    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/TransportStation/schema.json    
+  x-model-tags: Nice    
+  x-version: 0.1.5    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -840,8 +921,8 @@ TransportStation:
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
 ## 페이로드 예시  
-#### TransportStation NGSI-v2 키-값 예시  
-다음은 JSON-LD 형식의 TransportStation을 키 값으로 사용하는 예제입니다. 이는 `옵션=키값`을 사용할 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
+#### TransportStation NGSI-v2 키-값 예제  
+다음은 JSON-LD 형식의 TransportStation을 키값으로 사용한 예시입니다. 이는 `옵션=키값`을 사용할 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -1012,8 +1093,8 @@ TransportStation:
 }  
 ```  
 </details>  
-#### 전송 스테이션 NGSI-v2 정규화 예제  
-다음은 정규화된 JSON-LD 형식의 전송 스테이션의 예입니다. 이는 옵션을 사용하지 않을 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
+#### TransportStation NGSI-v2 정규화 예제  
+다음은 정규화된 JSON-LD 형식의 TransportStation 예시입니다. 이는 옵션을 사용하지 않을 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -1273,8 +1354,8 @@ TransportStation:
 }  
 ```  
 </details>  
-#### 전송 스테이션 NGSI-LD 키-값 예제  
-다음은 JSON-LD 형식의 TransportStation을 키 값으로 사용하는 예제입니다. 이는 `옵션=키값`을 사용할 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
+#### TransportStation NGSI-LD 키-값 예시  
+다음은 JSON-LD 형식의 TransportStation을 키 값으로 사용한 예시입니다. 이는 `옵션=키값`을 사용할 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -1448,8 +1529,8 @@ TransportStation:
 }  
 ```  
 </details>  
-#### 전송 스테이션 NGSI-LD 정규화 예제  
-다음은 정규화된 JSON-LD 형식의 전송 스테이션의 예입니다. 이는 옵션을 사용하지 않을 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
+#### TransportStation NGSI-LD 정규화 예제  
+다음은 정규화된 JSON-LD 형식의 TransportStation 예시입니다. 이는 옵션을 사용하지 않을 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -1728,7 +1809,7 @@ TransportStation:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-크기 단위를 다루는 방법에 대한 답변은 [FAQ 10](https://smartdatamodels.org/index.php/faqs/)을 참조하세요.  
+규모 단위를 다루는 방법에 대한 답변은 [FAQ 10](https://smartdatamodels.org/index.php/faqs/)을 참조하세요.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
