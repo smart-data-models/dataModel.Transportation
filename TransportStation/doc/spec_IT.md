@@ -8,7 +8,7 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 Descrizione globale: **Il modello di dati è una descrizione generale delle stazioni urbane (Metro, Bus, Tram, Eliporto, ...) secondo lo standard GFTS https://developers.google.com/transit/gtfs/reference/#stopstxt, così come la descrizione dettagliata di queste (mezzi di accesso, piattaforma, assistenza, ...).  
-versione: 0.1.4  
+versione: 0.1.5  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
@@ -17,13 +17,13 @@
 <sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
 - `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Il paese. Ad esempio, la Spagna  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
 	- `addressLocality[string]`: La località in cui si trova l'indirizzo civico e che si trova nella regione  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: La regione in cui si trova la località, e che si trova nel paese  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `addressRegion[string]`: La regione in cui si trova la località, e che si trova in campagna  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
 	- `district[string]`: Un distretto è un tipo di divisione amministrativa che, in alcuni paesi, è gestita dal governo locale.    
 	- `postOfficeBoxNumber[string]`: Il numero di casella postale per gli indirizzi di casella postale. Ad esempio, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: Il codice postale. Ad esempio, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: L'indirizzo stradale  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
 	- `streetNr[string]`: Numero che identifica una proprietà specifica su una strada pubblica    
-- `alternateName[string]`: Un nome alternativo per questa voce  - `architect`:   - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `commissioningDate`:   - `constructionDate`:   - `contactPoint[object]`: I dati da contattare con l'articolo  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)	- `areaServed[string]`: L'area geografica in cui viene fornito un servizio o un articolo offerto. Sostituisce ServiceArea    
+- `alternateName[string]`: Un nome alternativo per questa voce  - `architect[string]`: Architetto che ha progettato la stazione  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `commissioningDate[date-time]`: Data di messa in servizio della stazione  - `constructionDate[date-time]`: Data di costruzione della stazione  - `contactPoint[object]`: I dati da contattare con l'articolo  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)	- `areaServed[string]`: L'area geografica in cui viene fornito un servizio o un articolo offerto. Sostituisce ServiceArea    
 	- `availabilityRestriction[*]`: Questa proprietà collega un punto di contatto a informazioni su quando il punto di contatto non è disponibile. I dettagli sono forniti utilizzando la classe Specifica degli orari di apertura  . Model: [http://schema.org/hoursAvailable](http://schema.org/hoursAvailable)  
 	- `availableLanguage[*]`: Una lingua che qualcuno può usare con o per l'oggetto, il servizio o il luogo. Utilizzare uno dei codici lingua dello standard BCP 47 dell'IETF. È stata implementata l'opzione Testo, ma potrebbe essere anche Lingua.  . Model: [http://schema.org/availableLanguage](http://schema.org/availableLanguage)  
 	- `contactOption[*]`: Un'opzione disponibile su questo punto di contatto (ad esempio un numero verde o un supporto per chi chiama con problemi di udito)  . Model: [http://schema.org/contactOption](http://schema.org/contactOption)  
@@ -34,25 +34,25 @@
 	- `productSupported[string]`: Il prodotto o il servizio a cui si riferisce il punto di contatto dell'assistenza (ad esempio, l'assistenza per una particolare linea di prodotti). Può trattarsi di un prodotto o di una linea di prodotti specifici (ad esempio, "iPhone") o di una categoria generale di prodotti o servizi (ad esempio, "smartphone").  . Model: [http://schema.org/Text](http://schema.org/Text)  
 	- `telephone[string]`: Telefono di questo contatto    
 	- `url[uri]`: URL che fornisce una descrizione o ulteriori informazioni su questo elemento    
-- `contractingAuthority[string]`: Nome dell'amministrazione aggiudicatrice  - `contractingCompany[string]`: Nome dell'azienda appaltatrice responsabile dello sfruttamento della stazione  - `currencyAccepted`:   - `dataProvider[string]`: una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata  - `dateCreated[date-time]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `dateLastReported[date-time]`: Un timestamp che indica l'ultima volta in cui il dispositivo ha riportato dati con successo. Data e ora in formato ISO8601 UTC  - `dateModified[date-time]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `description[string]`: Descrizione dell'articolo  - `dimension[object]`: Dimensione globale. Il formato è strutturato da una sotto-proprietà di 3 elementi. Il codice dell'unità (testo) è fornito utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **MTR** rappresenta i metri.  	- `depth`:     
-	- `height`:     
-	- `width`:     
-- `featuredArtist`:   - `id[*]`: Identificatore univoco dell'entità  - `installationMode[string]`: Posizione rispetto al riferimento al suolo. Enum:'aerial, ground, underGround, underSea'.  - `inventory[object]`: Mappatura generale dei dati solo per `locationType` = 0, 1, 3, 4. Il formato è strutturato da una sotto-proprietà di 4 elementi  	- `PlatformType`:     
-	- `nbOfIOPoint`:     
-	- `nbOfLane`:     
-	- `nbOfPlatform`:     
-- `levelId[number]`: Piano in cui si trova la posizione. Indice numerico associato al piano. Indica la posizione relativa di questo piano rispetto agli altri. L'indice 0 indica il piano terra. I piani sopra il livello del suolo sono indicati da indici positivi e gli stadi sotterranei da indici negativi.  - `location[*]`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `locationType[number]`: Collegamento all'archivio standard GTFS che descrive le diverse località [Tipo di località]. 0 Fermata o piattaforma (luogo in cui gli utenti salgono o scendono da un veicolo di trasporto pubblico). 1 Stazione (area o struttura fisica che comprende una o più piattaforme). 2 Ingresso o uscita (luogo in cui gli utenti possono entrare/uscire da una stazione dalla strada). 3 Intersezione generica (luogo in una stazione che non corrisponde a nessun altro valore di `tipo_di_localizzazione`). 4 Area di imbarco (luogo specifico su un binario dove gli utenti possono salire/scendere con un veicolo).  - `name[string]`: Il nome di questo elemento  - `openingHoursSpecification[array]`: Un valore strutturato che fornisce informazioni sugli orari di apertura di un luogo o di un determinato servizio all'interno di un luogo.  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `parentStation[*]`: Collegamento all'archivio standard GTFS che descrive il diverso collegamento tra stazione e piattaforma [Parent STATION]. Caso '1' location_type = 0 (Stop / platform ), il campo parent_station contiene l'ID di una stazione. Caso '2' location_type = 1 (Station), questo campo deve essere vuoto. Caso '3' location_type = 2 (Input / output) o location_type = 3 (intersezione generica), il campo parent_station contiene l'ID di una stazione location_type = 1. Caso '4' location_type = 4 (area di imbarco), il campo parent_station contiene l'ID di una piattaforma  - `paymentAccepted`:   - `platformCode[number]`: Identificatore del binario per una fermata di tipo binario `location_type` = 0 se la fermata è in una stazione  - `refPointOfInterest[*]`: Un riferimento a un punto di interesse associato a questa osservazione.  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `services`:   	- `defibrillator`:     
-	- `emergencyPhone`:     
-	- `informationBoardDevice`:     
-	- `interactiveDevice`:     
-	- `messageDevice`:     
-	- `purchaseDevice`:     
-	- `restBench`:     
-	- `shelters`:     
-	- `timetableDevice`:     
-	- `voiceDevice`:     
-	- `wheelChairAccessible`:     
-- `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `stationConnected[array]`: Connessioni possibili da questa stazione. Un valore strutturato da 0 a N occorrenze, dove ogni voce è una stringa nel formato `stationType` : [Elenco delle linee collegate, separate da una virgola]. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, train, tram, trolleybus'.  - `stationType[array]`: Tipo di stazione di trasporto. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, trolleybus, tram'.  - `type[string]`: Tipo di entità NGSI. Deve essere TransportStation  - `webSite[string]`: Link al sito ufficiale per maggiori informazioni  - `wheelChairAccessible[number]`: Accesso possibile per le persone a mobilità ridotta. Per le fermate senza genitori 0 non sono disponibili informazioni sull'accessibilità della fermata. 1 alcuni veicoli di questa fermata possono far salire un utente PMR. 2 L'utente PMR non può salire su questa fermata. Per una fermata che fa parte di una stazione 0 la fermata eredita il comportamento di imbarco di sedie a rotelle della stazione madre, se questa è compilata. 1 le corsie consentono l'accesso delle sedie a rotelle alla fermata/piattaforma dall'esterno della stazione. 2 nessuna corsia consente l'accesso della sedia a rotelle alla fermata/piattaforma dall'esterno della stazione. Per gli ingressi/uscite della stazione 0 l'ingresso della stazione eredita il comportamento di accesso per sedie a rotelle della stazione principale, se specificato. 1 l'ingresso della stazione è accessibile alle sedie a rotelle. 2 nessun percorso accessibile alle sedie a rotelle collega l'ingresso della stazione alle fermate/piattaforme.  - `zoneId[string]`: Zona tariffaria della stazione  <!-- /30-PropertiesList -->  
+- `contractingAuthority[string]`: Nome dell'amministrazione aggiudicatrice  - `contractingCompany[string]`: Nome della società appaltatrice responsabile dello sfruttamento della stazione  - `currencyAccepted[array]`: Valute accettate per effettuare pagamenti nella Stazione  - `dataProvider[string]`: una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata  - `dateCreated[date-time]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `dateLastReported[date-time]`: Un timestamp che indica l'ultima volta in cui il dispositivo ha riportato dati con successo. Data e ora in formato ISO8601 UTC  - `dateModified[date-time]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `description[string]`: Descrizione dell'articolo  - `dimension[object]`: Dimensione globale. Il formato è strutturato da una sotto-proprietà di 3 elementi. Il codice dell'unità (testo) è fornito utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **MTR** rappresenta i metri.  	- `depth[number]`: Profondità della stazione    
+	- `height[number]`: Altezza della stazione    
+	- `width[number]`: Larghezza della stazione    
+- `featuredArtist[array]`: Artisti in primo piano nella stazione  - `id[*]`: Identificatore univoco dell'entità  - `installationMode[string]`: Posizione rispetto al riferimento al suolo. Enum:'aerial, ground, underGround, underSea'.  - `inventory[object]`: Mappatura generale dei dati solo per `locationType` = 0, 1, 3, 4. Il formato è strutturato da una sotto-proprietà di 4 elementi  	- `PlatformType[array]`: Tipo di piattaforme disponibili    
+	- `nbOfIOPoint[number]`: Numero di punti di ingresso e uscita    
+	- `nbOfLane[number]`: Numero di corsie nella stazione    
+	- `nbOfPlatform[number]`: Numero di piattaforme    
+- `levelId[number]`: Piano in cui si trova la posizione. Indice numerico associato al piano. Indica la posizione relativa di questo piano rispetto agli altri. L'indice 0 indica il piano terra. I piani sopra il livello del suolo sono indicati da indici positivi e gli stadi sotterranei da indici negativi.  - `location[*]`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `locationType[number]`: Collegamento all'archivio standard GTFS che descrive le diverse località [Tipo di località]. 0 Fermata o piattaforma (luogo in cui gli utenti salgono o scendono da un veicolo di trasporto pubblico). 1 Stazione (area o struttura fisica che comprende una o più piattaforme). 2 Ingresso o uscita (luogo in cui gli utenti possono entrare/uscire da una stazione dalla strada). 3 Intersezione generica (luogo in una stazione che non corrisponde a nessun altro valore di `tipo_di_localizzazione`). 4 Area di imbarco (luogo specifico su un binario dove gli utenti possono salire/scendere con un veicolo).  - `name[string]`: Il nome di questo elemento  - `openingHoursSpecification[array]`: Un valore strutturato che fornisce informazioni sugli orari di apertura di un luogo o di un determinato servizio all'interno di un luogo.  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `parentStation[*]`: Collegamento all'archivio standard GTFS che descrive il diverso collegamento tra stazione e piattaforma [Parent STATION]. Caso '1' location_type = 0 (Stop / platform ), il campo parent_station contiene l'ID di una stazione. Caso '2' location_type = 1 (Station), questo campo deve essere vuoto. Caso '3' location_type = 2 (Input / output) o location_type = 3 (intersezione generica), il campo parent_station contiene l'ID di una stazione location_type = 1. Caso '4' location_type = 4 (area di imbarco), il campo parent_station contiene l'ID di una piattaforma  - `paymentAccepted[array]`: Metodi di pagamento accettati nella Stazione  - `platformCode[number]`: Identificatore del binario per una fermata di tipo binario `location_type` = 0 se la fermata è in una stazione  - `refPointOfInterest[*]`: Un riferimento a un punto di interesse associato a questa osservazione.  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `services[object]`: Oggetto contenente informazioni sui servizi inclusi  	- `defibrillator[boolean]`: Attributo per indicare la presenza di defibrillatori    
+	- `emergencyPhone[boolean]`: Attributo per indicare se ci sono telefoni di emergenza disponibili    
+	- `informationBoardDevice[boolean]`: Attributo per indicare se ci sono pannelli informativi per gli utenti    
+	- `interactiveDevice[boolean]`: Attributo per indicare se ci sono dispositivi interattivi (ad esempio, chioschi) per gli utenti.    
+	- `messageDevice[boolean]`: Attributo per indicare se ci sono dispositivi per la condivisione dei messaggi con gli utenti    
+	- `purchaseDevice[boolean]`: Attributo per indicare se ci sono macchine per l'acquisto dei biglietti    
+	- `restBench[boolean]`: Attributo per indicare se la stazione dispone di panchine per il riposo.    
+	- `shelters[boolean]`: Attributo per indicare se ci sono ripari per gli utenti (es. pioggia)    
+	- `timetableDevice[boolean]`: Attributo per indicare se ci sono schede o dispositivi che mostrano l'orario della stazione.    
+	- `voiceDevice[boolean]`: Attributo per indicare la presenza di sistemi di amplificazione o altri dispositivi vocali.    
+	- `wheelChairAccessible[boolean]`: Attributo per indicare se ci sono strutture per persone in sedia a rotelle    
+- `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `stationConnected[array]`: Connessioni possibili da questa stazione. Un valore strutturato da 0 a N occorrenze, dove ogni voce è una stringa nel formato `stationType` : [Elenco delle linee collegate, separate da una virgola]. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, train, tram, trolleybus'.  - `stationType[array]`: Tipo di stazione di trasporto. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, trolleybus, tram'.  - `type[string]`: Tipo di entità NGSI. Deve essere TransportStation  - `webSite[string]`: Link al sito ufficiale per maggiori informazioni  - `wheelChairAccessible[number]`: Accesso possibile per le persone a mobilità ridotta. Per le fermate senza genitori 0 non sono disponibili informazioni sull'accessibilità della fermata. 1 alcuni veicoli di questa fermata possono far salire un utente PMR. 2 L'utente PMR non può salire su questa fermata. Per una fermata che fa parte di una stazione 0 la fermata eredita il comportamento di imbarco di sedie a rotelle della stazione madre, se questa è compilata. 1 le corsie consentono l'accesso delle sedie a rotelle alla fermata/piattaforma dall'esterno della stazione. 2 nessuna corsia consente l'accesso della sedia a rotelle alla fermata/piattaforma dall'esterno della stazione. Per gli ingressi/uscite della stazione 0 l'ingresso della stazione eredita il comportamento di imbarco per sedie a rotelle della stazione principale, se specificato. 1 l'ingresso della stazione è accessibile alle sedie a rotelle. 2 nessun percorso accessibile alle sedie a rotelle collega l'ingresso della stazione alle fermate/piattaforme.  - `zoneId[string]`: Zona tariffaria della stazione  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Proprietà richieste  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
@@ -127,7 +127,10 @@ TransportStation:
       x-ngsi:    
         type: Property    
     architect:    
+      description: Architect that designed the station    
       type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: The geographic area where a service or offered item is provided    
       type: string    
@@ -135,11 +138,17 @@ TransportStation:
         model: https://schema.org/Text    
         type: Property    
     commissioningDate:    
+      description: Commissioning date of the station    
       format: date-time    
       type: string    
+      x-ngsi:    
+        type: Property    
     constructionDate:    
+      description: Construction date of the station    
       format: date-time    
       type: string    
+      x-ngsi:    
+        type: Property    
     contactPoint:    
       description: The details to contact with the item    
       properties:    
@@ -245,12 +254,15 @@ TransportStation:
       x-ngsi:    
         type: Property    
     currencyAccepted:    
+      description: Accepted currencies for making payments in the Station    
       items:    
         enum:    
           - EUR    
           - USD    
         type: string    
       type: array    
+      x-ngsi:    
+        type: Property    
     dataProvider:    
       description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
@@ -263,7 +275,7 @@ TransportStation:
       x-ngsi:    
         type: Property    
     dateLastReported:    
-      description: A timestamp which denotes the last time when the device successfully reported data. Date and time in an ISO8601 UTCformat    
+      description: A timestamp which denotes the last time when the device successfully reported data. Date and time in an ISO8601 UTC format    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -283,19 +295,29 @@ TransportStation:
       description: 'Global dimension. The format is structured by a sub-property of 3 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **MTR** represents Meters'    
       properties:    
         depth:    
+          description: Depth of the Station    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
         height:    
+          description: Height of the Station    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
         width:    
+          description: Width of the Station    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
         units: meters    
     featuredArtist:    
+      description: Featured artists in the station    
       items:    
         anyOf:    
           - anyOf:    
@@ -316,6 +338,8 @@ TransportStation:
               type: Property    
           - type: string    
       type: array    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf:    
         - description: Identifier format of any NGSI entity    
@@ -347,21 +371,33 @@ TransportStation:
       description: 'General data mapping only for `locationType` = 0, 1, 3, 4. The format is structured by a sub-property of 4 items'    
       properties:    
         PlatformType:    
+          description: Type of platforms available    
           items:    
             enum:    
               - lateral    
               - central    
             type: string    
           type: array    
+          x-ngsi:    
+            type: Property    
         nbOfIOPoint:    
+          description: Number of input output points    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
         nbOfLane:    
+          description: Number of Lane in the station    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
         nbOfPlatform:    
+          description: Number of platform    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
@@ -681,6 +717,7 @@ TransportStation:
       x-ngsi:    
         type: Relationship    
     paymentAccepted:    
+      description: Accepted methods of payment in the Station    
       items:    
         enum:    
           - Cash    
@@ -689,6 +726,8 @@ TransportStation:
           - other    
         type: string    
       type: array    
+      x-ngsi:    
+        type: Property    
     platformCode:    
       description: Platform identifier for a platform type stop `location_type` = 0 when the stop is in a station    
       type: number    
@@ -724,30 +763,66 @@ TransportStation:
       x-ngsi:    
         type: Property    
     services:    
+      description: Object containing information bout the services included    
       properties:    
         defibrillator:    
-          type: Boolean    
+          description: Attribute to indicate if there are defibrillators    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         emergencyPhone:    
-          type: Boolean    
+          description: Attribute to indicate if there are emergency phones available    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         informationBoardDevice:    
-          type: Boolean    
+          description: Attribute to indicate if there are information boards for users    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         interactiveDevice:    
-          type: Boolean    
+          description: Attribute to indicate if there are interactive devices (i.e. kiosks) for users    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         messageDevice:    
-          type: Boolean    
+          description: Attribute to indicate if there are devices for sharing messages with the users    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         purchaseDevice:    
-          type: Boolean    
+          description: Attribute to indicate if there are machines for ticket purchase    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         restBench:    
-          type: Boolean    
+          description: Attribute to indicate if the station has benches to sit on for resting    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         shelters:    
-          type: Boolean    
+          description: Attribute to indicate if there are shelter for users (i.e. rain)    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         timetableDevice:    
-          type: Boolean    
+          description: Attribute to indicate if there are boards or devices showing the time table of the station    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         voiceDevice:    
-          type: Boolean    
+          description: 'Attribute to indicate if there are PA systems or other voice devices '    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         wheelChairAccessible:    
-          type: Boolean    
+          description: Attribute to indicate if there are facilities for wheelchair users    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
       type: object    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
@@ -758,10 +833,14 @@ TransportStation:
       items:    
         properties:    
           linesConnected:    
+            description: Identifiers of the connected lines to the station    
             items:    
               type: string    
             type: array    
+            x-ngsi:    
+              type: Property    
           stationType:    
+            description: Type of transport station connected to    
             enum:    
               - aerialLift    
               - bus    
@@ -775,6 +854,8 @@ TransportStation:
               - tram    
               - trolleybus    
             type: string    
+            x-ngsi:    
+              type: Property    
         type: object    
       type: array    
       x-ngsi:    
@@ -828,11 +909,11 @@ TransportStation:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2024 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/TransportStation/LICENSE.md    
-  x-model-schema: https://smart-data-models.github.io/data-models/Transportation/TransportStation/schema.json    
-  x-model-tags: ""    
-  x-version: 0.1.4    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/TransportStation/schema.json    
+  x-model-tags: Nice    
+  x-version: 0.1.5    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
