@@ -127,7 +127,10 @@ TransportStation:
       x-ngsi:    
         type: Property    
     architect:    
+      description: Architect that designed the station    
       type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: The geographic area where a service or offered item is provided    
       type: string    
@@ -135,11 +138,17 @@ TransportStation:
         model: https://schema.org/Text    
         type: Property    
     commissioningDate:    
+      description: Commissioning date of the station    
       format: date-time    
       type: string    
+      x-ngsi:    
+        type: Property    
     constructionDate:    
+      description: Construction date of the station    
       format: date-time    
       type: string    
+      x-ngsi:    
+        type: Property    
     contactPoint:    
       description: The details to contact with the item    
       properties:    
@@ -245,12 +254,15 @@ TransportStation:
       x-ngsi:    
         type: Property    
     currencyAccepted:    
+      description: Accepted currencies for making payments in the Station    
       items:    
         enum:    
           - EUR    
           - USD    
         type: string    
       type: array    
+      x-ngsi:    
+        type: Property    
     dataProvider:    
       description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
@@ -263,7 +275,7 @@ TransportStation:
       x-ngsi:    
         type: Property    
     dateLastReported:    
-      description: A timestamp which denotes the last time when the device successfully reported data. Date and time in an ISO8601 UTCformat    
+      description: A timestamp which denotes the last time when the device successfully reported data. Date and time in an ISO8601 UTC format    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -283,19 +295,29 @@ TransportStation:
       description: 'Global dimension. The format is structured by a sub-property of 3 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **MTR** represents Meters'    
       properties:    
         depth:    
+          description: Depth of the Station    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
         height:    
+          description: Height of the Station    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
         width:    
+          description: Width of the Station    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
         units: meters    
     featuredArtist:    
+      description: Featured artists in the station    
       items:    
         anyOf:    
           - anyOf:    
@@ -316,6 +338,8 @@ TransportStation:
               type: Property    
           - type: string    
       type: array    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf:    
         - description: Identifier format of any NGSI entity    
@@ -347,21 +371,33 @@ TransportStation:
       description: 'General data mapping only for `locationType` = 0, 1, 3, 4. The format is structured by a sub-property of 4 items'    
       properties:    
         PlatformType:    
+          description: Type of platforms available    
           items:    
             enum:    
               - lateral    
               - central    
             type: string    
           type: array    
+          x-ngsi:    
+            type: Property    
         nbOfIOPoint:    
+          description: Number of input output points    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
         nbOfLane:    
+          description: Number of Lane in the station    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
         nbOfPlatform:    
+          description: Number of platform    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
@@ -681,6 +717,7 @@ TransportStation:
       x-ngsi:    
         type: Relationship    
     paymentAccepted:    
+      description: Accepted methods of payment in the Station    
       items:    
         enum:    
           - Cash    
@@ -689,6 +726,8 @@ TransportStation:
           - other    
         type: string    
       type: array    
+      x-ngsi:    
+        type: Property    
     platformCode:    
       description: Platform identifier for a platform type stop `location_type` = 0 when the stop is in a station    
       type: number    
@@ -724,30 +763,66 @@ TransportStation:
       x-ngsi:    
         type: Property    
     services:    
+      description: Object containing information bout the services included    
       properties:    
         defibrillator:    
-          type: Boolean    
+          description: Attribute to indicate if there are defibrillators    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         emergencyPhone:    
-          type: Boolean    
+          description: Attribute to indicate if there are emergency phones available    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         informationBoardDevice:    
-          type: Boolean    
+          description: Attribute to indicate if there are information boards for users    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         interactiveDevice:    
-          type: Boolean    
+          description: Attribute to indicate if there are interactive devices (i.e. kiosks) for users    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         messageDevice:    
-          type: Boolean    
+          description: Attribute to indicate if there are devices for sharing messages with the users    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         purchaseDevice:    
-          type: Boolean    
+          description: Attribute to indicate if there are machines for ticket purchase    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         restBench:    
-          type: Boolean    
+          description: Attribute to indicate if the station has benches to sit on for resting    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         shelters:    
-          type: Boolean    
+          description: Attribute to indicate if there are shelter for users (i.e. rain)    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         timetableDevice:    
-          type: Boolean    
+          description: Attribute to indicate if there are boards or devices showing the time table of the station    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         voiceDevice:    
-          type: Boolean    
+          description: 'Attribute to indicate if there are PA systems or other voice devices '    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         wheelChairAccessible:    
-          type: Boolean    
+          description: Attribute to indicate if there are facilities for wheelchair users    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
       type: object    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
@@ -758,10 +833,14 @@ TransportStation:
       items:    
         properties:    
           linesConnected:    
+            description: Identifiers of the connected lines to the station    
             items:    
               type: string    
             type: array    
+            x-ngsi:    
+              type: Property    
           stationType:    
+            description: Type of transport station connected to    
             enum:    
               - aerialLift    
               - bus    
@@ -775,6 +854,8 @@ TransportStation:
               - tram    
               - trolleybus    
             type: string    
+            x-ngsi:    
+              type: Property    
         type: object    
       type: array    
       x-ngsi:    
@@ -828,11 +909,11 @@ TransportStation:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2024 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/TransportStation/LICENSE.md    
-  x-model-schema: https://smart-data-models.github.io/data-models/Transportation/TransportStation/schema.json    
-  x-model-tags: ""    
-  x-version: 0.1.4    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/TransportStation/schema.json    
+  x-model-tags: Nice    
+  x-version: 0.1.5    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
