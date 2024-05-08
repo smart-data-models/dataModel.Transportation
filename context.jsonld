@@ -64,7 +64,7 @@
         "battery": "https://smartdatamodels.org/dataModel.Transportation/battery",
         "bbox": {
             "@container": "@list",
-            "@id": "geojson:bbox"
+            "@id": "https://purl.org/geojson/vocab#bbox"
         },
         "bearing": "https://smartdatamodels.org/dataModel.Transportation/bearing",
         "binaryContent": "https://smartdatamodels.org/dataModel.Transportation/binaryContent",
@@ -100,7 +100,7 @@
         "contractingCompany": "https://smartdatamodels.org/dataModel.Transportation/contractingCompany",
         "coordinates": {
             "@container": "@list",
-            "@id": "geojson:coordinates"
+            "@id": "https://purl.org/geojson/vocab#coordinates"
         },
         "countOfBusLineImpacted": "https://smartdatamodels.org/dataModel.Transportation/countOfBusLineImpacted",
         "countOfDerogation": "https://smartdatamodels.org/dataModel.Transportation/countOfDerogation",
@@ -237,7 +237,7 @@
         "lineName": "https://smartdatamodels.org/dataModel.Transportation/lineName",
         "linesConnected": "https://smartdatamodels.org/dataModel.Transportation/linesConnected",
         "localId": "https://smartdatamodels.org/dataModel.Transportation/localId",
-        "location": "ngsi-ld:location",
+        "location": "https://uri.etsi.org/ngsi-ld/location",
         "locationType": "https://smartdatamodels.org/dataModel.Transportation/locationType",
         "mainContractingCompany": "https://smartdatamodels.org/dataModel.Transportation/mainContractingCompany",
         "manufacturerName": "https://smartdatamodels.org/dataModel.Transportation/manufacturerName",
@@ -274,8 +274,8 @@
         "observationEndDateTime": "https://smartdatamodels.org/dataModel.Transportation/observationEndDateTime",
         "observationStartDateTime": "https://smartdatamodels.org/dataModel.Transportation/observationStartDateTime",
         "observedAt": {
-            "@id": "ngsi-ld:observedAt",
-            "@type": "DateTime"
+            "@id": "https://uri.etsi.org/ngsi-ld/observedAt",
+            "@type": "https://uri.etsi.org/ngsi-ld/DateTime"
         },
         "observedBy": "https://smartdatamodels.org/dataModel.Transportation/observedBy",
         "observedCredentialCharacterConfidence": "https://smartdatamodels.org/dataModel.Transportation/observedCredentialCharacterConfidence",
@@ -407,7 +407,7 @@
         "stationLocation": "https://smartdatamodels.org/dataModel.Transportation/stationLocation",
         "stationName": "https://smartdatamodels.org/dataModel.Transportation/stationName",
         "stationType": "https://smartdatamodels.org/dataModel.Transportation/stationType",
-        "status": "ngsi-ld:status",
+        "status": "https://uri.etsi.org/ngsi-ld/status",
         "statusDescription": "https://smartdatamodels.org/dataModel.Transportation/statusDescription",
         "streetAddress": "https://smartdatamodels.org/streetAddress",
         "streetNr": "https://smartdatamodels.org/streetNr",
