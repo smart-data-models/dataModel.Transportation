@@ -8,7 +8,7 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 全局描述：**数据模型是根据 GFTS 标准 https://developers.google.com/transit/gtfs/reference/#stopstxt 对城市车站（地铁、公共汽车、有轨电车、直升机场......）的一般描述，以及这些车站的详细描述（出入口、站台、辅助设施......）。  
-版本： 0.1.4  
+版本： 0.1.5  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
@@ -22,8 +22,8 @@
 	- `postOfficeBoxNumber[string]`: 用于邮政信箱地址的邮政信箱号码。例如：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: 邮政编码。例如：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 街道地址  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-	- `streetNr[string]`: 标识公共街道上特定房产的编号    
-- `alternateName[string]`: 该项目的替代名称  - `architect`:   - `areaServed[string]`: 提供服务或提供物品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `commissioningDate`:   - `constructionDate`:   - `contactPoint[object]`: 与物品联系的详细信息  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)	- `areaServed[string]`: 提供服务或所提供项目的地理区域。取代服务区域    
+	- `streetNr[string]`: 在公共街道上标识特定房产的编号    
+- `alternateName[string]`: 该项目的替代名称  - `architect[string]`: 设计车站的建筑师  - `areaServed[string]`: 提供服务或提供物品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `commissioningDate[date-time]`: 车站投入使用日期  - `constructionDate[date-time]`: 车站建造日期  - `contactPoint[object]`: 与物品联系的详细信息  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)	- `areaServed[string]`: 提供服务或所提供项目的地理区域。取代服务区域    
 	- `availabilityRestriction[*]`: 该属性将一个联络点与该联络点不在时的信息联系起来。详细信息通过 "开放时间规范 "类提供  . Model: [http://schema.org/hoursAvailable](http://schema.org/hoursAvailable)  
 	- `availableLanguage[*]`: 某人在使用物品、服务或场所时可能使用的语言。请使用 IETF BCP 47 标准中的一种语言代码。可使用 "文本 "选项，但也可以使用 "语言 "选项。  . Model: [http://schema.org/availableLanguage](http://schema.org/availableLanguage)  
 	- `contactOption[*]`: 该联络点的可用选项（如免费电话号码或对听力受损来电者的支持）  . Model: [http://schema.org/contactOption](http://schema.org/contactOption)  
@@ -34,25 +34,25 @@
 	- `productSupported[string]`: 该支持联络点所涉及的产品或服务（如特定产品系列的产品支持）。可以是特定产品或产品系列（如 "iPhone"），也可以是产品或服务的一般类别（如 "智能手机）  . Model: [http://schema.org/Text](http://schema.org/Text)  
 	- `telephone[string]`: 联系人电话    
 	- `url[uri]`: 提供有关此项目的描述或更多信息的 URL    
-- `contractingAuthority[string]`: 订约当局名称  - `contractingCompany[string]`: 负责开发该站的承包公司名称  - `currencyAccepted`:   - `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配  - `dateLastReported[date-time]`: 时间戳，表示设备最后一次成功报告数据的时间。以 ISO8601 UTC 格式表示的日期和时间  - `dateModified[date-time]`: 实体最后一次修改的时间戳。通常由存储平台分配  - `description[string]`: 项目描述  - `dimension[object]`: 全局维度。格式由一个包含 3 个项目的子属性构成。单位代码（文本）使用 [UN/CEFACT 通用代码](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)。例如，**MTR** 表示米  	- `depth`:     
-	- `height`:     
-	- `width`:     
-- `featuredArtist`:   - `id[*]`: 实体的唯一标识符  - `installationMode[string]`: 相对于地面基准的位置。枚举："空中、地面、地面下、海底"。  - `inventory[object]`: 一般数据映射仅适用于 `locationType` = 0、1、3、4。格式由包含 4 个项目的子属性构成  	- `PlatformType`:     
-	- `nbOfIOPoint`:     
-	- `nbOfLane`:     
-	- `nbOfPlatform`:     
-- `levelId[number]`: 位置所在楼层。与楼层相关的数字索引。表示该阶段与其他阶段的相对位置。指数 0 表示地面层。地面以上的楼层用正数表示，地下楼层用负数表示。  - `location[*]`: 项目的 Geojson 引用。它可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `locationType[number]`: 指向描述不同位置[位置类型]的 GTFS 标准资源库的链接。0 停靠站或站台（用户在公共交通工具上上下车的地方）。1 车站（由一个或多个站台组成的区域或物理结构）。2 入口或出口（用户可从街道进入或离开车站的地方）。3 通用交叉口（车站内与任何其他 "location_type "值不对应的位置）。4 乘客可在站台上特定位置上车/下车的上车区  - `name[string]`: 该项目的名称  - `openingHoursSpecification[array]`: 一个结构化数值，提供有关某个场所或场所内某项服务开放时间的信息  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: 包含一个 JSON 编码字符序列的列表，其中引用了所有者的唯一 Ids  - `parentStation[*]`: 描述车站和站台[父站台]之间不同联系的 GTFS 标准资料库链接。情况'1' location_type = 0（车站/站台），父站字段包含车站 ID。情况'2' location_type = 1（车站），该字段必须为空。情况'3' location_type = 2（输入/输出）或 location_type = 3（一般交叉路口），父站点字段包含站点 location_type = 1 的 ID。情况'4' location_type = 4（乘车区），父站字段中包含站台 ID  - `paymentAccepted`:   - `platformCode[number]`: 站台类型停靠站的站台标识符 `location_type` = 0（当停靠站位于车站内时  - `refPointOfInterest[*]`: 与该观测点相关的兴趣点参考文献  - `seeAlso[*]`: 指向有关该项目的其他资源的 uri 列表  - `services`:   	- `defibrillator`:     
-	- `emergencyPhone`:     
-	- `informationBoardDevice`:     
-	- `interactiveDevice`:     
-	- `messageDevice`:     
-	- `purchaseDevice`:     
-	- `restBench`:     
-	- `shelters`:     
-	- `timetableDevice`:     
-	- `voiceDevice`:     
-	- `wheelChairAccessible`:     
-- `source[string]`: 以 URL 形式给出实体数据原始来源的字符串。建议使用源提供者的完全合格域名或源对象的 URL  - `stationConnected[array]`: 该站可能连接的线路。从 0 到 N 次出现的结构化值，其中每个项都是一个字符串，格式为 `stationType` : [连接的线路列表，用逗号分隔]。枚举：'空中索道、公共汽车、缆车、渡轮、缆车、单轨铁路、铁路、地铁、火车、有轨电车、无轨电车'。  - `stationType[array]`: 交通站类型。枚举：'架空索道、公共汽车、缆车、渡轮、缆车、单轨铁路、铁路、地铁、无轨电车、有轨电车'。  - `type[string]`: NGSI 实体类型。必须是 TransportStation  - `webSite[string]`: 更多信息请链接至官方网站  - `wheelChairAccessible[number]`: 行动不便者可以进入。对于没有家长的站点 0 没有关于该站点无障碍情况的信息。1 此站点的某些车辆可以让 PMR 用户上车。2 残疾人不能在此站上车。对于作为车站一部分的停靠站 0，如果填写了父车站的轮椅上车行为，则该停靠站继承父车站的轮椅上车行为。1 车道提供轮椅从站外进入车站/站台的通道。2 没有车道提供从站外进入车站/站台的轮椅通道。对于车站输入/输出端 0 车站入口继承主车站的轮椅上车行为（如果指定）。1 车站入口可供轮椅进出。2 车站入口与车站/站台之间没有连接轮椅无障碍通道  - `zoneId[string]`: 车站定价区  <!-- /30-PropertiesList -->  
+- `contractingAuthority[string]`: 订约当局名称  - `contractingCompany[string]`: 负责开发该站的承包公司名称  - `currencyAccepted[array]`: 在火车站付款时可接受的货币  - `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配  - `dateLastReported[date-time]`: 时间戳，表示设备最后一次成功报告数据的时间。ISO8601 UTC 格式的日期和时间  - `dateModified[date-time]`: 实体最后一次修改的时间戳。通常由存储平台分配  - `description[string]`: 项目描述  - `dimension[object]`: 全局维度。格式由一个包含 3 个项目的子属性构成。单位代码（文本）使用 [UN/CEFACT 通用代码](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)。例如，**MTR** 表示米  	- `depth[number]`: 车站深度    
+	- `height[number]`: 车站高度    
+	- `width[number]`: 车站宽度    
+- `featuredArtist[array]`: 站内的特色艺术家  - `id[*]`: 实体的唯一标识符  - `installationMode[string]`: 相对于地面基准的位置。枚举："空中、地面、地面下、海底"。  - `inventory[object]`: 一般数据映射仅适用于 `locationType` = 0、1、3、4。格式由包含 4 个项目的子属性构成  	- `PlatformType[array]`: 可用平台类型    
+	- `nbOfIOPoint[number]`: 输入输出点数    
+	- `nbOfLane[number]`: 站内车道数    
+	- `nbOfPlatform[number]`: 平台数量    
+- `levelId[number]`: 位置所在楼层。与楼层相关的数字索引。表示该阶段与其他阶段的相对位置。指数 0 表示地面层。地面以上的楼层用正数表示，地下楼层用负数表示。  - `location[*]`: 项目的 Geojson 引用。它可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `locationType[number]`: 指向描述不同位置[位置类型]的 GTFS 标准资源库的链接。0 停靠站或站台（用户在公共交通工具上上下车的地方）。1 车站（由一个或多个站台组成的区域或物理结构）。2 入口或出口（用户可从街道进入或离开车站的地方）。3 通用交叉口（车站内与任何其他 "location_type "值不对应的位置）。4 乘客可在站台上的特定位置上车/下车的上车区  - `name[string]`: 该项目的名称  - `openingHoursSpecification[array]`: 一个结构化数值，提供有关某个场所或场所内某项服务开放时间的信息  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: 包含一个 JSON 编码字符序列的列表，其中引用了所有者的唯一 Ids  - `parentStation[*]`: 描述车站和站台[父站台]之间不同联系的 GTFS 标准资料库链接。情况'1' location_type = 0（车站/站台），父站字段包含车站 ID。情况'2' location_type = 1（车站），该字段必须为空。情况'3' location_type = 2（输入/输出）或 location_type = 3（一般交叉路口），父站点字段包含站点 location_type = 1 的 ID。情况'4' location_type = 4（乘车区），父站字段中包含站台 ID  - `paymentAccepted[array]`: 车站接受的付款方式  - `platformCode[number]`: 站台类型停靠站的站台标识符 `location_type` = 0（当停靠站位于车站内时  - `refPointOfInterest[*]`: 与该观测点相关的兴趣点参考文献  - `seeAlso[*]`: 指向有关该项目的其他资源的 uri 列表  - `services[object]`: 包含服务信息的对象  	- `defibrillator[boolean]`: 表示是否有去纤颤器的属性    
+	- `emergencyPhone[boolean]`: 表示是否有紧急电话的属性    
+	- `informationBoardDevice[boolean]`: 表示是否为用户提供信息板的属性    
+	- `interactiveDevice[boolean]`: 表明是否有供用户使用的互动设备（如信息亭）的属性    
+	- `messageDevice[boolean]`: 表示是否有与用户共享信息的设备的属性    
+	- `purchaseDevice[boolean]`: 表示是否有购票机的属性    
+	- `restBench[boolean]`: 属性表示站点是否有供休息的长凳    
+	- `shelters[boolean]`: 表明是否为用户提供庇护所（如雨）的属性    
+	- `timetableDevice[boolean]`: 表示是否有显示车站时间表的板块或设备的属性    
+	- `voiceDevice[boolean]`: 表示是否有扩音系统或其他语音设备的属性    
+	- `wheelChairAccessible[boolean]`: 表示是否有轮椅使用者设施的属性    
+- `source[string]`: 以 URL 形式给出实体数据原始来源的字符串。建议使用源提供者的完全合格域名或源对象的 URL  - `stationConnected[array]`: 该站可能连接的线路。从 0 到 N 次出现的结构化值，其中每个项都是一个字符串，格式为 `stationType` : [连接的线路列表，用逗号分隔]。枚举：'空中索道、公共汽车、缆车、渡轮、缆车、单轨铁路、铁路、地铁、火车、有轨电车、无轨电车'。  - `stationType[array]`: 交通站类型。枚举：'架空索道、公共汽车、缆车、渡轮、缆车、单轨铁路、铁路、地铁、无轨电车、有轨电车'。  - `type[string]`: NGSI 实体类型。必须是 TransportStation  - `webSite[string]`: 更多信息请链接至官方网站  - `wheelChairAccessible[number]`: 可为行动不便者提供无障碍通道。对于没有家长的站点 0 没有关于该站点无障碍情况的信息。1 此站点的某些车辆可以让 PMR 用户上车。2 残疾人不能在此站上车。对于作为车站一部分的停靠站 0，如果填写了父车站的轮椅上车行为，则该停靠站继承父车站的轮椅上车行为。1 车道提供轮椅从站外进入车站/站台的通道。2 没有车道提供从站外进入车站/站台的轮椅通道。对于车站输入/输出端 0 车站入口继承主车站的轮椅上车行为（如果指定）。1 车站入口可供轮椅进出。2 车站入口与车站/站台之间没有连接轮椅无障碍通道  - `zoneId[string]`: 车站定价区  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 所需属性  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
@@ -127,7 +127,10 @@ TransportStation:
       x-ngsi:    
         type: Property    
     architect:    
+      description: Architect that designed the station    
       type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: The geographic area where a service or offered item is provided    
       type: string    
@@ -135,11 +138,17 @@ TransportStation:
         model: https://schema.org/Text    
         type: Property    
     commissioningDate:    
+      description: Commissioning date of the station    
       format: date-time    
       type: string    
+      x-ngsi:    
+        type: Property    
     constructionDate:    
+      description: Construction date of the station    
       format: date-time    
       type: string    
+      x-ngsi:    
+        type: Property    
     contactPoint:    
       description: The details to contact with the item    
       properties:    
@@ -245,12 +254,15 @@ TransportStation:
       x-ngsi:    
         type: Property    
     currencyAccepted:    
+      description: Accepted currencies for making payments in the Station    
       items:    
         enum:    
           - EUR    
           - USD    
         type: string    
       type: array    
+      x-ngsi:    
+        type: Property    
     dataProvider:    
       description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
@@ -263,7 +275,7 @@ TransportStation:
       x-ngsi:    
         type: Property    
     dateLastReported:    
-      description: A timestamp which denotes the last time when the device successfully reported data. Date and time in an ISO8601 UTCformat    
+      description: A timestamp which denotes the last time when the device successfully reported data. Date and time in an ISO8601 UTC format    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -283,19 +295,29 @@ TransportStation:
       description: 'Global dimension. The format is structured by a sub-property of 3 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **MTR** represents Meters'    
       properties:    
         depth:    
+          description: Depth of the Station    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
         height:    
+          description: Height of the Station    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
         width:    
+          description: Width of the Station    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
         units: meters    
     featuredArtist:    
+      description: Featured artists in the station    
       items:    
         anyOf:    
           - anyOf:    
@@ -316,6 +338,8 @@ TransportStation:
               type: Property    
           - type: string    
       type: array    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf:    
         - description: Identifier format of any NGSI entity    
@@ -347,21 +371,33 @@ TransportStation:
       description: 'General data mapping only for `locationType` = 0, 1, 3, 4. The format is structured by a sub-property of 4 items'    
       properties:    
         PlatformType:    
+          description: Type of platforms available    
           items:    
             enum:    
               - lateral    
               - central    
             type: string    
           type: array    
+          x-ngsi:    
+            type: Property    
         nbOfIOPoint:    
+          description: Number of input output points    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
         nbOfLane:    
+          description: Number of Lane in the station    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
         nbOfPlatform:    
+          description: Number of platform    
           minimum: 0    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
@@ -681,6 +717,7 @@ TransportStation:
       x-ngsi:    
         type: Relationship    
     paymentAccepted:    
+      description: Accepted methods of payment in the Station    
       items:    
         enum:    
           - Cash    
@@ -689,6 +726,8 @@ TransportStation:
           - other    
         type: string    
       type: array    
+      x-ngsi:    
+        type: Property    
     platformCode:    
       description: Platform identifier for a platform type stop `location_type` = 0 when the stop is in a station    
       type: number    
@@ -724,30 +763,66 @@ TransportStation:
       x-ngsi:    
         type: Property    
     services:    
+      description: Object containing information bout the services included    
       properties:    
         defibrillator:    
-          type: Boolean    
+          description: Attribute to indicate if there are defibrillators    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         emergencyPhone:    
-          type: Boolean    
+          description: Attribute to indicate if there are emergency phones available    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         informationBoardDevice:    
-          type: Boolean    
+          description: Attribute to indicate if there are information boards for users    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         interactiveDevice:    
-          type: Boolean    
+          description: Attribute to indicate if there are interactive devices (i.e. kiosks) for users    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         messageDevice:    
-          type: Boolean    
+          description: Attribute to indicate if there are devices for sharing messages with the users    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         purchaseDevice:    
-          type: Boolean    
+          description: Attribute to indicate if there are machines for ticket purchase    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         restBench:    
-          type: Boolean    
+          description: Attribute to indicate if the station has benches to sit on for resting    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         shelters:    
-          type: Boolean    
+          description: Attribute to indicate if there are shelter for users (i.e. rain)    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         timetableDevice:    
-          type: Boolean    
+          description: Attribute to indicate if there are boards or devices showing the time table of the station    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         voiceDevice:    
-          type: Boolean    
+          description: 'Attribute to indicate if there are PA systems or other voice devices '    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
         wheelChairAccessible:    
-          type: Boolean    
+          description: Attribute to indicate if there are facilities for wheelchair users    
+          type: boolean    
+          x-ngsi:    
+            type: Property    
       type: object    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
@@ -758,10 +833,14 @@ TransportStation:
       items:    
         properties:    
           linesConnected:    
+            description: Identifiers of the connected lines to the station    
             items:    
               type: string    
             type: array    
+            x-ngsi:    
+              type: Property    
           stationType:    
+            description: Type of transport station connected to    
             enum:    
               - aerialLift    
               - bus    
@@ -775,6 +854,8 @@ TransportStation:
               - tram    
               - trolleybus    
             type: string    
+            x-ngsi:    
+              type: Property    
         type: object    
       type: array    
       x-ngsi:    
@@ -828,11 +909,11 @@ TransportStation:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2024 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/TransportStation/LICENSE.md    
-  x-model-schema: https://smart-data-models.github.io/data-models/Transportation/TransportStation/schema.json    
-  x-model-tags: ""    
-  x-version: 0.1.4    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/TransportStation/schema.json    
+  x-model-tags: Nice    
+  x-version: 0.1.5    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
