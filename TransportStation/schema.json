@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "modelTags": "",
-  "$id": "https://smart-data-models.github.io/data-models/Transportation/TransportStation/schema.json",
-  "$schemaVersion": "0.1.4",
+  "$id": "https://smart-data-models.github.io/dataModel.Transportation/TransportStation/schema.json",
+  "$schemaVersion": "0.1.5",
   "title": "Station schema",
   "description": "The data model is a general description of urban stations (Metro, Bus, Tram, Heliport, ...) according to the GFTS standard https://developers.google.com/transit/gtfs/reference/#stopstxt, as well the detailed description of these (means of access, platform, assistance, ...).",
   "type": "object",
@@ -25,7 +25,7 @@
         "dateLastReported": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. A timestamp which denotes the last time when the device successfully reported data. Date and time in an ISO8601 UTCformat"
+          "description": "Property. A timestamp which denotes the last time when the device successfully reported data. Date and time in an ISO8601 UTC format"
         },
         "refPointOfInterest": {
           "anyOf": [
@@ -146,15 +146,18 @@
           "properties": {
             "height": {
               "type": "number",
-              "minimum": 0
+              "minimum": 0,
+              "description": "Property. Height of the Station"
             },
             "width": {
               "type": "number",
-              "minimum": 0
+              "minimum": 0,
+              "description": "Property. Width of the Station"
             },
             "depth": {
               "type": "number",
-              "minimum": 0
+              "minimum": 0,
+              "description": "Property. Depth of the Station"
             }
           }
         },
@@ -164,18 +167,22 @@
           "properties": {
             "nbOfIOPoint": {
               "type": "number",
-              "minimum": 0
+              "minimum": 0,
+              "description": "Property. Number of input output points"
             },
             "nbOfLane": {
               "type": "number",
-              "minimum": 0
+              "minimum": 0,
+              "description": "Property. Number of Lane"
             },
             "nbOfPlatform": {
               "type": "number",
-              "minimum": 0
+              "minimum": 0,
+              "description": "Property. Number of platform"
             },
             "PlatformType": {
               "type": "array",
+              "description": "Property. Type of platforms available",
               "items": {
                 "type": "string",
                 "enum": [
@@ -194,6 +201,7 @@
             "properties": {
               "stationType": {
                 "type": "string",
+                "description": "Property. Type of transport station connected to",
                 "enum": [
                   "aerialLift",
                   "bus",
@@ -210,6 +218,7 @@
               },
               "linesConnected": {
                 "type": "array",
+                "description": "Property. Identifiers of the connected lines to the station",
                 "items": {
                   "type": "string"
                 }
@@ -219,44 +228,57 @@
         },
         "services": {
           "type": "object",
+          "description": "Property. Object containing information bout the services included",
           "properties": {
             "purchaseDevice": {
-              "type": "Boolean"
+              "type": "boolean",
+              "description": "Property. Attribute to indicate if there are machines for ticket purchase"
             },
             "interactiveDevice": {
-              "type": "Boolean"
+              "type": "boolean",
+              "description": "Property. Attribute to indicate if there are interactive devices (i.e. kiosks) for users"
             },
             "timetableDevice": {
-              "type": "Boolean"
+              "type": "boolean",
+              "description": "Property. Attribute to indicate if there are boards or devices showing the time table of the station"
             },
             "voiceDevice": {
-              "type": "Boolean"
+              "type": "boolean",
+              "description": "Property. Attribute to indicate if there are PA systems or other voice devices "
             },
             "informationBoardDevice": {
-              "type": "Boolean"
+              "type": "boolean",
+              "description": "Property. Attribute to indicate if there are information boards for users"
             },
             "messageDevice": {
-              "type": "Boolean"
+              "type": "boolean",
+              "description": "Property. Attribute to indicate if there are devices for sharing messages with the users"
             },
             "shelters": {
-              "type": "Boolean"
+              "type": "boolean",
+              "description": "Property. Attribute to indicate if there are shelter for users (i.e. rain)"
             },
             "restBench": {
-              "type": "Boolean"
+              "type": "boolean",
+              "description": "Property. Attribute to indicate if the station has benches to sit on for resting"
             },
             "emergencyPhone": {
-              "type": "Boolean"
+              "type": "boolean",
+              "description": "Property. Attribute to indicate if there are emergency phones available"
             },
             "defibrillator": {
-              "type": "Boolean"
+              "type": "boolean",
+              "description": "Property. Attribute to indicate if there are defibrillators"
             },
             "wheelChairAccessible": {
-              "type": "Boolean"
+              "type": "boolean",
+              "description": "Property. Attribute to indicate if there are facilities for wheelchair users"
             }
           }
         },
         "paymentAccepted": {
           "type": "array",
+          "description": "Property. Accepted methods of payment in the Station",
           "items": {
             "type": "string",
             "enum": [
@@ -269,6 +291,7 @@
         },
         "currencyAccepted": {
           "type": "array",
+          "description": "Property. Accepted currencies for making payments in the Station",
           "items": {
             "type": "string",
             "enum": [
@@ -279,17 +302,21 @@
         },
         "constructionDate": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "Property. Construction date of the station"
         },
         "commissioningDate": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "Property. Commissioning date of the station"
         },
         "architect": {
-          "type": "string"
+          "type": "string",
+          "description": "Property. Architect that designed the station"
         },
         "featuredArtist": {
           "type": "array",
+          "description": "Property. Featured artists in the station",
           "items": {
             "anyOf": [
               {
