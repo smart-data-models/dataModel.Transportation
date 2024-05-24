@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "BikeHireDockingStation"
 subject = "dataModel.Transportation"
-agency_fare_url = "{'type': 'Property', 'value': ''}"
+agency_fare_url = ""
 attribute = "agency_fare_url"
 value = agency_fare_url
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-agency_name = "{'type': 'Property', 'value': 'PedalSaddle'}"
+agency_name = "PedalSaddle"
 attribute = "agency_name"
 value = agency_name
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-agency_url = "{'type': 'Property', 'value': 'http://pedalsaddle.in/'}"
+agency_url = "http://pedalsaddle.in/"
 attribute = "agency_url"
 value = agency_url
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-availableBikeNumber = {'type': 'Property', 'value': 20}
+availableBikeNumber = 20
 attribute = "availableBikeNumber"
 value = availableBikeNumber
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
