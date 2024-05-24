@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "CrowdFlowObserved"
 subject = "dataModel.Transportation"
-averageHeadwayTime = {'type': 'Property', 'value': 5}
+averageHeadwayTime = 5
 attribute = "averageHeadwayTime"
 value = averageHeadwayTime
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-congested = {'type': 'Property', 'value': False}
+congested = False
 attribute = "congested"
 value = congested
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-dateObserved = "{'type': 'Property', 'value': {'@type': 'DateTime', '@value': '2018-08-07T11:10:00'}}"
+dateObserved = "2018-08-07T11:10:00/2018-08-07T11:15:00"
 attribute = "dateObserved"
 value = dateObserved
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-dateObservedFrom = "{'type': 'Property', 'value': {'@type': 'DateTime', '@value': '2018-08-07T11:10:00Z'}}"
+dateObservedFrom = "2018-08-07T11:10:00Z"
 attribute = "dateObservedFrom"
 value = dateObservedFrom
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
