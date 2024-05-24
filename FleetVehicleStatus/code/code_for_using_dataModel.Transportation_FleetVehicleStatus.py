@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "FleetVehicleStatus"
 subject = "dataModel.Transportation"
-battery = {'type': 'Property', 'value': 0.81, 'observedAt': '2016-08-22T10:18:16Z'}
+battery = 0.81
 attribute = "battery"
 value = battery
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-bearing = {'type': 'Property', 'value': 80, 'unitCode': 'DD', 'observedAt': '2016-08-22T10:18:16Z'}
+bearing = 80
 attribute = "bearing"
 value = bearing
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-currentOperative = {'type': 'Property', 'value': {'givenName': 'John Smith', 'jobTitle': 'Ambulance Operator'}}
+currentOperative = {'givenName': 'John Smith', 'jobTitle': 'Ambulance Operator'}
 attribute = "currentOperative"
 value = currentOperative
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-currentStatus = "{'type': 'Property', 'value': 'finished'}"
+currentStatus = "finished"
 attribute = "currentStatus"
 value = currentStatus
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
