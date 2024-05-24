@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "TrafficViolation"
 subject = "dataModel.Transportation"
-amountCollected = {'type': 'Property', 'value': 10500}
+amountCollected = 10500
 attribute = "amountCollected"
 value = amountCollected
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-equipmentId = "{'type': 'Property', 'value': '4'}"
+equipmentId = "4"
 attribute = "equipmentId"
 value = equipmentId
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-equipmentType = "{'type': 'Property', 'value': 'Camera'}"
+equipmentType = "Camera"
 attribute = "equipmentType"
 value = equipmentType
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-mediaURL = "{'type': 'Property', 'value': 'https://www.google.com/'}"
+mediaURL = "https://www.google.com/"
 attribute = "mediaURL"
 value = mediaURL
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
