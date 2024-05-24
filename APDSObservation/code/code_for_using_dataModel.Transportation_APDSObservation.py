@@ -24,33 +24,38 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "APDSObservation"
 subject = "dataModel.Transportation"
-observedMethod = "{'type': 'Property', 'value': 'anpr'}"
-attribute = "observedMethod"
-value = observedMethod
+creator = "25399"
+attribute = "creator"
+value = creator
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-observedCredentialType = "{'type': 'Property', 'value': 'license plate'}"
-attribute = "observedCredentialType"
-value = observedCredentialType
+images = [[{'URL': 'http://10.1.0.11:7400/getimage?sgid=8775639&amp;camid=lf&amp;imgreqtype=anpr'}, {'camId': 'LF'}, {'imageContent': 'ANPR'}], [{'URL': 'http://10.1.0.11:7400/getimage?sgid=8775639&amp;camid=lf&amp;imgreqtype=overview'}, {'camId': 'LF'}, {'imageContent': 'Overview'}], [{'URL': 'http://10.1.0.11:7400/getimage?sgid=8775639&amp;camid=lf&amp;imgreqtype=plate'}, {'camId': 'LF'}, {'imageContent': 'Plate'}], [{'URL': 'http://10.1.0.11:7400/getimage?sgid=8775639&amp;camid=plf&amp;distance=-5.22'}, {'camId': 'LF'}, {'imageContent': 'Panorama'}, {'distance': -5.22}]]
+attribute = "images"
+value = images
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-observedCredentialId = "{'type': 'Property', 'value': '1ENC003'}"
-attribute = "observedCredentialId"
-value = observedCredentialId
+observationDateTime = "2020-09-11T10:45:00.00Z"
+attribute = "observationDateTime"
+value = observationDateTime
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-observedCredentialCountry = "{'type': 'Property', 'value': 'BE'}"
-attribute = "observedCredentialCountry"
-value = observedCredentialCountry
+observedCredentialCharacterConfidence = [0.944, 0.851, 0.876, 0.95, 0.932, 0.936, 0.901]
+attribute = "observedCredentialCharacterConfidence"
+value = observedCredentialCharacterConfidence
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
