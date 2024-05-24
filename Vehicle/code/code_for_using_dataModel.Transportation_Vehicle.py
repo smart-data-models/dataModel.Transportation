@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "Vehicle"
 subject = "dataModel.Transportation"
-battery = {'type': 'Property', 'value': 0.81, 'observedAt': '2021-03-11T15:51:02+05:30'}
+battery = 0.81
 attribute = "battery"
 value = battery
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-bearing = {'type': 'Property', 'value': 43}
+bearing = 43
 attribute = "bearing"
 value = bearing
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-cargoWeight = {'type': 'Property', 'value': 314}
+cargoWeight = 314
 attribute = "cargoWeight"
 value = cargoWeight
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-category = {'type': 'Property', 'value': ['municipalServices']}
+category = ['municipalServices']
 attribute = "category"
 value = category
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
