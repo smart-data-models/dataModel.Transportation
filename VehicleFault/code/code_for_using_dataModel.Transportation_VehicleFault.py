@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "VehicleFault"
 subject = "dataModel.Transportation"
-dtCode = "{'type': 'Property', 'value': 'EMERG-1234-a'}"
+dtCode = "EMERG-1234-a"
 attribute = "dtCode"
 value = dtCode
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-eventType = "{'type': 'Property', 'value': 'emergency'}"
+eventType = "emergency"
 attribute = "eventType"
 value = eventType
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-faultLog = "{'type': 'Property', 'value': 'Emergency stop. Fault with engine'}"
+faultLog = "Emergency stop. Fault with engine"
 attribute = "faultLog"
 value = faultLog
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-observedAt = "{'type': 'Property', 'value': {'@type': 'DateTime', '@value': '2017-05-04T10:18:16Z'}}"
+observedAt = "2017-05-04T10:18:16Z"
 attribute = "observedAt"
 value = observedAt
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
