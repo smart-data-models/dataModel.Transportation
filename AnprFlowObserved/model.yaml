@@ -446,6 +446,7 @@ AnprFlowObserved:
                       items:
                         items:
                           items:
+                            type: number
                           minItems: 2
                           type: array
                         minItems: 4
@@ -498,6 +499,7 @@ AnprFlowObserved:
                       items:
                         items:
                           items:
+                            type: number
                           minItems: 2
                           type: array
                         minItems: 2
@@ -525,6 +527,10 @@ AnprFlowObserved:
                       items:
                         items:
                           items:
+                            items:
+                              type: number
+                            minItems: 2
+                            type: array
                           minItems: 4
                           type: array
                         type: array
@@ -547,8 +553,6 @@ AnprFlowObserved:
               type: string
               x-ngsi:
                 type: Property
-          required:
-            - identifier
           type: object
           x-ngsi:
             type: Property
@@ -625,10 +629,6 @@ AnprFlowObserved:
             type: string
             x-ngsi:
               type: Property
-        required:
-          - url
-          - contentType
-          - imageType
         type: object
       type: array
       x-ngsi:
@@ -676,8 +676,8 @@ AnprFlowObserved:
     - dateObserved
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2024 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/AnprFlowObserved/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/AnprFlowObserved/schema.json
   x-model-tags: ""
-  x-version: 0.0.1
+  x-version: 0.0.2
