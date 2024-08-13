@@ -189,12 +189,7 @@
                                     "anpr"
                                 ]
                             }
-                        },
-                        "required": [
-                            "url",
-                            "contentType",
-                            "imageType"
-                        ]
+                        }
                     }
                 }
             }
