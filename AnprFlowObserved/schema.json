@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$schemaVersion": "0.0.1",
+    "$schemaVersion": "0.0.2",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Transportation/AnprFlowObserved/schema.json",
     "title": "ANPR Flow Observed schema",
@@ -161,10 +161,7 @@
                                     "description": "Property. Sequence of position points describing this location, expressed in coordinate system",
                                     "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
                                 }
-                            },
-                            "required": [
-                                "identifier"
-                            ]
+                            }
                         }
                     }
                 },
