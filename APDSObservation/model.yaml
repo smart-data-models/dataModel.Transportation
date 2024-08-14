@@ -172,9 +172,9 @@ APDSObservation:
               minItems: 2
               type: array
             type:
+              type: string
               enum:
                 - Point
-              type: string
           required:
             - type
             - coordinates
