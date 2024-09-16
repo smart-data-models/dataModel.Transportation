@@ -1,10 +1,10 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "modelTags": "Nice",
-  "$id": "https://smart-data-models.github.io/dataModel.Transportation/TransportStation/schema.json",
-  "$schemaVersion": "0.1.5",
-  "title": "Station schema data model",
-  "description": "The data model is a general description of urban stations (Metro, Bus, Tram, Heliport, ...) according to the GFTS standard https://developers.google.com/transit/gtfs/reference/#stopstxt, as well the detailed description of these (means of access, platform, assistance, ...).",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schemaVersion": "0.3.4",
+  "modelTags": "IUDX",
+  "$id": "https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json",
+  "title": "Weather Observed schema - Smart Data Models",
+  "description": "An observation of weather conditions at a certain place and time. This data model has been developed in cooperation with mobile operators and the GSMA.",
   "type": "object",
   "allOf": [
     {
@@ -14,20 +14,61 @@
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
+      "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-Commons"
+    },
+    {
       "properties": {
         "type": {
           "type": "string",
           "enum": [
-            "TransportStation"
+            "WeatherObserved"
           ],
-          "description": "Property. NGSI Entity type. It has to be TransportStation"
+          "description": "Property. NGSI Entity type. It has to be WeatherObserved"
         },
-        "dateLastReported": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Property. A timestamp which denotes the last time when the device successfully reported data. Date and time in an ISO8601 UTC format"
+        "dateObserved": {
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/dateObserved"
         },
-        "refPointOfInterest": {
+        "precipitation": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. Amount of water rain registered. Units:'Liters per square meter'. "
+        },
+        "solarRadiation": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. The solar radiation observed measured in Watts per square. Units:'w/m2'"
+        },
+        "directIrradiation": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. Direct irradiance is the part of the solar irradiance that directly reaches a surface. Units:'w/m2'"
+        },
+        "diffuseIrradiation": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. Diffuse irradiance is the part of the solar irradiance that is scattered by the atmosphere. Units:'w/m2'"
+        },
+        "pressureTendency": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "falling",
+                "raising",
+                "steady"
+              ]
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "description": "Property. Enum:'falling, raising, steady'. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms"
+        },
+        "dewPoint": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units:'Celsius degrees'. The dew point encoded as a number. Observed temperature to which air must be cooled to become saturated with water vapor"
+        },
+        "refDevice": {
           "anyOf": [
             {
               "type": "string",
@@ -42,297 +83,63 @@
               "description": "Property. Identifier format of any NGSI entity"
             }
           ],
-          "description": "Relationship. A reference to a point of interest associated to this observation"
+          "description": "Relationship. Model:'https://schema.org/URL'. A reference to the device(s) which captured this observation"
         },
-        "stationType": {
-          "type": "array",
-          "description": "Property. Type of transport station. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, trolleybus, tram'",
-          "items": {
-            "type": "string",
-            "enum": [
-              "aerialLift",
-              "bus",
-              "cableTram",
-              "ferry",
-              "funicular",
-              "monorail",
-              "rail",
-              "subway",
-              "trolleybus",
-              "tram"
-            ]
-          }
-        },
-        "locationType": {
+        "streamGauge": {
           "type": "number",
-          "description": "Property. Link to the GTFS standard repository describing the different location [Location Type]. 0 Stop or platform (place where users get on or off in a public transport vehicle). 1 Station (area or physical structure comprising one or more platforms). 2 Entrance or Exit (place where users can enter / exit a station from the street). 3 Generic intersection (location in a station that doesn't correspond to any other `location_type` value). 4 Boarding area of a specific location on a platform where users can get on / off in a vehicle",
-          "enum": [
-            0,
-            1,
-            2,
-            3,
-            4
-          ]
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. The water level surface elevation observed by Hydrometric measurement sensors, namely a [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge) expressed in centimeters. Units:'centimeters'"
         },
-        "parentStation": {
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-              "description": "Property. Identifier format of any NGSI entity"
-            },
-            {
-              "type": "string",
-              "format": "uri",
-              "description": "Property. Identifier format of any NGSI entity"
-            }
-          ],
-          "description": "Relationship. Link to the GTFS standard repository describing the different link between Station and Platform [Parent STATION]. Case '1' location_type = 0 (Stop / platform ), the parent_station field contains the ID of a station. Case '2' location_type = 1  (Station), this field must be empty. Case '3' location_type = 2 (Input / output) or location_type = 3 (generic intersection), the parent_station field contains the ID of a station location_type = 1. Case '4' location_type = 4 (boarding area), the parent_station field contains the ID of a platform"
-        },
-        "levelId": {
+        "snowHeight": {
           "type": "number",
-          "description": "Property. Floor on which the location is located. Numerical index associated with the floor. Indicates the relative position of this stage in relation to the others. The index 0 indicates the ground floor. The floors above ground level are indicated by positive indices, and the underground stages by negative indices"
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. The snow height observed by generic snow depth measurement sensors, expressed in centimeters. Units:'centimeters'"
         },
-        "platformCode": {
+        "uVIndexMax": {
           "type": "number",
-          "description": "Property. Platform identifier for a platform type stop `location_type` = 0 when the stop is in a station"
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. The maximum UV index for the period, based on the World Health Organization's UV Index measure. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) the values between 1 and 11 are the valid range for the index. The value 0 is for describing that no signal is detected so no value is stored"
         },
-        "zoneId": {
+        "aqiMajorPollutant": {
           "type": "string",
-          "description": "Property. Pricing zone of the station"
+          "description": "Property. Model:'https://schema.org/Text'. Major pollutant in the Air Quality Index (AQI)"
         },
-        "wheelChairAccessible": {
+        "aqiMajorPollutantForecast": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Forecasted major air pollutant in the Air Quality Index (AQI) over a certain duration in future"
+        },
+        "airTemperatureForecast": {
           "type": "number",
-          "description": "Property. Access possible for Person with Reduced Mobility. For stops without parents 0 no information is available regarding the accessibility of the stop. 1 some vehicles at this stop can board a PMR user. 2 PRM user cannot board  at this stop. For a stop that is part of a station 0 the stop inherits the wheelchair_boarding behavior of the parent station, if it is filled in. 1 lanes provide wheelchair access to the stop / platform  from outside the station. 2 no lane provides wheelchair access to the stop / platform from outside the station. For station inputs / outputs 0 the station entry inherits the wheelchair_boarding behavior of the main station, if specified. 1 the station entrance is wheelchair accessible. 2 no wheelchair accessible route connects the station entrance to the stops / platforms",
-          "enum": [
-            0,
-            1,
-            2
-          ]
+          "description": "Property. Model:'https://schema.org/Number'. Forecasted value of air temperature over a certain duration in future"
         },
-        "openingHoursSpecification": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/DateTime-Commons/properties/openingHoursSpecification"
+        "precipitationForecast": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Forecasted rainfall over a certain duration in future"
         },
-        "contractingAuthority": {
-          "type": "string",
-          "description": "Property. Name of the contracting authority"
+        "airQualityIndex": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Air quality index is a number used to report the quality of the air on any given day"
         },
-        "contractingCompany": {
-          "type": "string",
-          "description": "Property. Name of the contracting company responsible for the exploitation of the station"
+        "relativeHumidityForecast": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Forecasted relative humidity (water vapour in air) over a certain duration in future"
         },
-        "contactPoint": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons/properties/contactPoint"
+        "airQualityIndexForecast": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Forecasted overall Air Quality Index (AQI) over a certain duration in future"
         },
-        "webSite": {
-          "type": "string",
-          "description": "Property. Link to the official website for more information"
-        },
-        "installationMode": {
-          "type": "string",
-          "description": "Property. Location  relative to the ground reference. Enum:'aerial, ground, underGround, underSea'",
-          "enum": [
-            "aerial",
-            "ground",
-            "underGround",
-            "underSea"
-          ]
-        },
-        "dimension": {
+        "airTemperatureTSA": {
           "type": "object",
-          "description": "Property. Global dimension. The format is structured by a sub-property of 3 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **MTR** represents Meters. Units:'meters'",
-          "properties": {
-            "height": {
-              "type": "number",
-              "minimum": 0,
-              "description": "Property. Height of the Station"
-            },
-            "width": {
-              "type": "number",
-              "minimum": 0,
-              "description": "Property. Width of the Station"
-            },
-            "depth": {
-              "type": "number",
-              "minimum": 0,
-              "description": "Property. Depth of the Station"
-            }
-          }
-        },
-        "inventory": {
-          "type": "object",
-          "description": "Property. General data mapping only for `locationType` = 0, 1, 3, 4. The format is structured by a sub-property of 4 items",
-          "properties": {
-            "nbOfIOPoint": {
-              "type": "number",
-              "minimum": 0,
-              "description": "Property. Number of input output points"
-            },
-            "nbOfLane": {
-              "type": "number",
-              "minimum": 0,
-              "description": "Property. Number of Lane in the station"
-            },
-            "nbOfPlatform": {
-              "type": "number",
-              "minimum": 0,
-              "description": "Property. Number of platform"
-            },
-            "PlatformType": {
-              "type": "array",
-              "description": "Property. Type of platforms available",
-              "items": {
-                "type": "string",
-                "enum": [
-                  "lateral",
-                  "central"
-                ]
-              }
-            }
-          }
-        },
-        "stationConnected": {
-          "type": "array",
-          "description": "Property. Connections possible from this station. A structured value from 0 to N occurrences where each items is a string in the format `stationType` : [List of Lines connected, separated by a comma]. Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, train, tram, trolleybus'",
-          "items": {
-            "type": "object",
-            "properties": {
-              "stationType": {
-                "type": "string",
-                "description": "Property. Type of transport station connected to",
-                "enum": [
-                  "aerialLift",
-                  "bus",
-                  "cableTram",
-                  "ferry",
-                  "funicular",
-                  "monorail",
-                  "rail",
-                  "subway",
-                  "train",
-                  "tram",
-                  "trolleybus"
-                ]
-              },
-              "linesConnected": {
-                "type": "array",
-                "description": "Property. Identifiers of the connected lines to the station",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        },
-        "services": {
-          "type": "object",
-          "description": "Property. Object containing information bout the services included",
-          "properties": {
-            "purchaseDevice": {
-              "type": "boolean",
-              "description": "Property. Attribute to indicate if there are machines for ticket purchase"
-            },
-            "interactiveDevice": {
-              "type": "boolean",
-              "description": "Property. Attribute to indicate if there are interactive devices (i.e. kiosks) for users"
-            },
-            "timetableDevice": {
-              "type": "boolean",
-              "description": "Property. Attribute to indicate if there are boards or devices showing the time table of the station"
-            },
-            "voiceDevice": {
-              "type": "boolean",
-              "description": "Property. Attribute to indicate if there are PA systems or other voice devices "
-            },
-            "informationBoardDevice": {
-              "type": "boolean",
-              "description": "Property. Attribute to indicate if there are information boards for users"
-            },
-            "messageDevice": {
-              "type": "boolean",
-              "description": "Property. Attribute to indicate if there are devices for sharing messages with the users"
-            },
-            "shelters": {
-              "type": "boolean",
-              "description": "Property. Attribute to indicate if there are shelter for users (i.e. rain)"
-            },
-            "restBench": {
-              "type": "boolean",
-              "description": "Property. Attribute to indicate if the station has benches to sit on for resting"
-            },
-            "emergencyPhone": {
-              "type": "boolean",
-              "description": "Property. Attribute to indicate if there are emergency phones available"
-            },
-            "defibrillator": {
-              "type": "boolean",
-              "description": "Property. Attribute to indicate if there are defibrillators"
-            },
-            "wheelChairAccessible": {
-              "type": "boolean",
-              "description": "Property. Attribute to indicate if there are facilities for wheelchair users"
-            }
-          }
-        },
-        "paymentAccepted": {
-          "type": "array",
-          "description": "Property. Accepted methods of payment in the Station",
-          "items": {
-            "type": "string",
-            "enum": [
-              "Cash",
-              "CreditCard",
-              "CryptoCurrency",
-              "other"
-            ]
-          }
-        },
-        "currencyAccepted": {
-          "type": "array",
-          "description": "Property. Accepted currencies for making payments in the Station",
-          "items": {
-            "type": "string",
-            "enum": [
-              "EUR",
-              "USD"
-            ]
-          }
-        },
-        "constructionDate": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Property. Construction date of the station"
-        },
-        "commissioningDate": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Property. Commissioning date of the station"
-        },
-        "architect": {
-          "type": "string",
-          "description": "Property. Architect that designed the station"
-        },
-        "featuredArtist": {
-          "type": "array",
-          "description": "Property. Featured artists in the station",
-          "items": {
-            "anyOf": [
-              {
-                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
-              },
-              {
-                "type": "string"
-              }
-            ]
-          }
+          "description": "Property. Air temperature time series aggregation",
+          "$ref": "https://smart-data-models.github.io/dataModel.Environment/Environment-schema.json#/definitions/TimeSeriesAggregation"
         }
       }
     }
   ],
   "required": [
     "id",
-    "type"
+    "type",
+    "dateObserved",
+    "location"
   ]
 }
