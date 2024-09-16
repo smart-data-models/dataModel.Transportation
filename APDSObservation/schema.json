@@ -1,13 +1,11 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.0.1",
-  "modelTags": "",
-  "$id": "https://smart-data-models.github.io/dataModel.Transportation/APDSObservation/schema.json",
-  "title": "Smart Data Models - APDSObservation.",
-  "description": "This entity models a particular observation of a set of ANPR camera. The Observation might be done with several ANPR cameras, but is limited to the observation of ONE vehicle. It implements the APDS data model https://www.allianceforparkingdatastandards.org/",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schemaVersion": "0.3.4",
+  "modelTags": "IUDX",
+  "$id": "https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json",
+  "title": "Weather Observed schema - Smart Data Models",
+  "description": "An observation of weather conditions at a certain place and time. This data model has been developed in cooperation with mobile operators and the GSMA.",
   "type": "object",
-  "derivedFrom": "https://www.allianceforparkingdatastandards.org/",
-  "license": "https://github.com/parkingdata/spec/blob/master/LICENSE",
   "allOf": [
     {
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
@@ -16,297 +14,132 @@
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
+      "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-Commons"
+    },
+    {
       "properties": {
         "type": {
           "type": "string",
           "enum": [
-            "APDSObservation"
+            "WeatherObserved"
           ],
-          "description": "Property. NGSI Entity type. It has to be APDSObservation"
+          "description": "Property. NGSI Entity type. It has to be WeatherObserved"
         },
-        "observedMethod": {
-          "type": "string",
-          "description": "Property. The method of observation recorded for this observation element as defined by APDS (ObservationType). Enum:'anpr, chalk, visual, scanner, rfTranspoder, other'",
-          "enum": [
-            "anpr",
-            "chalk",
-            "other",
-            "rfTranspoder",
-            "scanner",
-            "visual"
-          ]
+        "dateObserved": {
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/dateObserved"
         },
-        "observedCredentialType": {
-          "type": "string",
-          "description": "Property. Type of the credential referenced within  the observation. Allowed values are specified in the APDS CredentialType. Enum:'barcode, bluetooth, eticket, hangtag, licensePlate, permit, qrCode, rfid, ticket, other'",
-          "enum": [
-            "barcode",
-            "bluetooth",
-            "eticket",
-            "hangtag",
-            "licensePlate",
-            "permit",
-            "qrCode",
-            "rfid",
-            "ticket",
-            "other"
-          ]
-        },
-        "observedCredentialId": {
-          "type": "string",
-          "description": "Property. Specific identifier to the referenced observed credential. The credential is specified by observedCredentialType and may be an RFID tag, ticket number from a paystation, license plate number, etc. In case of a licensePlate only alpha numerical values (no spaces or hyphens) are allowed. Optionally an ':' can be used to indicate the position of e.g. the German City Seal (https://www.europeanplates.com/information/german-city-codes.html)."
-        },
-        "observedCredentialCountry": {
-          "type": "string",
-          "description": "Property. Country Code following the 2 character ISO3166 standard (https://www.iban.com/country-codes). Note that the International vehicle registration code should not be used to avoid ambiguity (https://en.wikipedia.org/wiki/International_vehicle_registration_code). If the country-code could not be determined, set 'XX' as for this attribute."
-        },
-        "observedCredentialConfidence": {
+        "precipitation": {
           "type": "number",
           "minimum": 0,
-          "maximum": 1,
-          "description": "Property. The overall confidence of the measurement. This can be vendor specific, but should always be rescaled to value between 0 en 1. Use the metadata to indicate how this number should be interpreted. Arvoo: range[0.0, 1.0](higher is better)."
+          "description": "Property. Model:'https://schema.org/Number'. Amount of water rain registered. Units:'Liters per square meter'. "
         },
-        "observedCredentialCharacterConfidence": {
-          "type": "array",
-          "description": "Property. The confidence of individual character recognition. As with observedCredentialConfidence this is vendor specific. Use the metadata to indicate how the confidences can be interpreted.",
-          "items": {
-            "type": "number",
-            "minimum": 0,
-            "maximum": 1,
-            "description": "Property. Every observation of the credential character confidence"
-          }
-        },
-        "observer": {
-          "type": "string",
-          "description": "Property. The name or identification of the scanning system making the observation recorded in this observation element."
-        },
-        "observerDescription": {
-          "type": "string",
-          "description": "Property. Free-text description for details of the observation or observer. Can e.g.be used as a friendly name of a specific ANPR scan car."
-        },
-        "creator": {
-          "type": "string",
-          "description": "Property. Id of current driver."
-        },
-        "observerCameras": {
-          "type": "array",
-          "description": "Property. Array of camera positions that detected the vehicle.The first camera in the list has the best recognition.Use the following abbreviations to indicate the camera positioning on a car: RF(Right Front), RM(Right Middle), RB(Right Back), LF(Left Front), LM(Left Middle), LB(Left Back).",
-          "items": {
-            "type": "string",
-            "description": "Property. Every camera position"
-          }
-        },
-        "observationDateTime": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Property. The timestamp the Observation was made (UTC). Mandatory if observationStartDateTime and observationEndDateTime are not used."
-        },
-        "observationStartDateTime": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Property. The date and time of the observation(in UTC)event started.(e.g.a car was observed to enter a delivery zone at 8: 01am). Mandatory if creationDateTime is not used."
-        },
-        "observationEndDateTime": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Property. The date and time of the observation event ended(in UTC).(e.g.a car was observed to exit a delivery zone at 9: 33am). Mandatory if creationDateTime is not used."
-        },
-        "observerLocation": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons",
-          "description": "GeoProperty. GPS position of the person or car equipped with the Camera/s that produce the observation."
-        },
-        "observerLocationPDOP": {
+        "solarRadiation": {
           "type": "number",
-          "description": "Property. Accuracy of the GPS position of the observer, expressed as 'Position Dilution Of Precision'(https: //en.wikipedia.org/wiki/Dilution_of_precision_(navigation)). Units:'meters'."
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. The solar radiation observed measured in Watts per square. Units:'w/m2'"
         },
-        "towardsObserver": {
+        "directIrradiation": {
           "type": "number",
-          "description": "Property. 1: Observed vehicle moves in direction of camera, 0: Observed vehicle moves away direction of camera, -1: Observed vehicle direction not detected.",
-          "enum": [
-            -1,
-            0,
-            1
-          ]
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. Direct irradiance is the part of the solar irradiance that directly reaches a surface. Units:'w/m2'"
         },
-        "observerHeading": {
+        "diffuseIrradiation": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. Diffuse irradiance is the part of the solar irradiance that is scattered by the atmosphere. Units:'w/m2'"
+        },
+        "pressureTendency": {
           "oneOf": [
             {
-              "type": "number",
-              "minimum": 0,
-              "maximum": 360,
-              "exclusiveMaximum": 360
-            },
-            {
-              "type": "number",
+              "type": "string",
               "enum": [
-                -1
+                "falling",
+                "raising",
+                "steady"
               ]
+            },
+            {
+              "type": "number"
             }
           ],
-          "description": "Property. Denotes the direction of travel of the observer and is specified in decimal degrees, where 0 <= 'heading' < 360, counting clockwise relative to the true north. If the vehicle is stationary(i.e. the value of the 'speed' attribute is '0'), then the value of the heading attribute must be equal to '-1'. Model:'https://schema.org/Number'. Units:'Degree'."
+          "description": "Property. Enum:'falling, raising, steady'. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms"
         },
-        "observedLocation": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons",
-          "description": "GeoProperty. GPS position of the middle position of the scanned vehicle."
-        },
-        "observedLocationPDOP": {
+        "dewPoint": {
           "type": "number",
-          "description": "Property. Accuracy of GPS position of the observed vehicle. This is expressed as 'Position Dilution Of Precision'(https: //en.wikipedia.org/wiki/Dilution_of_precision_(navigation)). Units:'meters'. (UN code 'MTR'). "
+          "description": "Property. Model:'https://schema.org/Number'. Units:'Celsius degrees'. The dew point encoded as a number. Observed temperature to which air must be cooled to become saturated with water vapor"
         },
-        "observedHeading": {
-          "oneOf": [
+        "refDevice": {
+          "anyOf": [
             {
-              "type": "number",
-              "minimum": 0,
-              "maximum": 360,
-              "exclusiveMaximum": 360
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
             },
             {
-              "type": "number",
-              "enum": [
-                -1
-              ]
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
             }
           ],
-          "description": "Property. Denotes the direction of travel of the observer and is specified in decimal degrees, where 0 <= 'heading' < 360, counting clockwise relative to the true north.If the vehicle is stationary(i.e. the value of the 'speed' attribute is '0'), then the value of the heading attribute must be equal to '-1'. Model:'https://schema.org/Number'. Units:'Degrees'. (UN code DD)"
+          "description": "Relationship. Model:'https://schema.org/URL'. A reference to the device(s) which captured this observation"
         },
-        "observerSpeed": {
-          "oneOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "number",
-              "minimum": -1,
-              "maximum": -1
-            }
-          ],
-          "description": "Property. Denotes the magnitude of the horizontal component of the observer current velocity and is specified in kilometers per hour. If provided, the value of the speed attribute must be a non - negative real number. '-1' MAY be used if speed is transiently unknown for some reason. Model:'https://schema.org/Number'. Units:'KMH' "
+        "streamGauge": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. The water level surface elevation observed by Hydrometric measurement sensors, namely a [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge) expressed in centimeters. Units:'centimeters'"
         },
-        "observedSpeed": {
-          "oneOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "number",
-              "minimum": -1,
-              "maximum": -1
-            }
-          ],
-          "description": "Property. Denotes the magnitude of the horizontal component of the observed vehicles current velocity and is specified in kilometers per hour. If provided, the value of the speed attribute must be a non - negative real number.'-1' MAY be used if speed is transiently unknown for some reason. Model:'https://schema.org/Number'. Units:'km/h'. (UN Code KMH)."
+        "snowHeight": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. The snow height observed by generic snow depth measurement sensors, expressed in centimeters. Units:'centimeters'"
         },
-        "images": {
-          "type": "array",
-          "description": "Property. Array of links to images. The array element contain the URLs of the images and additional info. As an alternative to the images URL, the image itself can be included in the binaryContent attribute.",
-          "items": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "URL": {
-                  "type": "string",
-                  "format": "uri",
-                  "description": "Property. Uri of the image"
-                },
-                "binaryContent": {
-                  "type": "string",
-                  "format": "uuencoded",
-                  "description": "Property. Binary format of the image content"
-                },
-                "expiryDateTime": {
-                  "type": "string",
-                  "format": "date-time",
-                  "description": "Property. Timestamp until which the URL is valid"
-                },
-                "camId": {
-                  "type": "string",
-                  "description": "Property. Identifier of the camera. It can be specified by the camera position (also used in the 'camera' attribute)"
-                },
-                "imageContent": {
-                  "type": "string",
-                  "description": "Property. It specifies the content of the image"
-                },
-                "distance": {
-                  "type": "number",
-                  "description": "Property. The distance in meters from the observer. Units:'meters'"
-                }
-              },
-              "description": "Property. Every element in the array of images"
-            }
-          }
+        "uVIndexMax": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. The maximum UV index for the period, based on the World Health Organization's UV Index measure. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) the values between 1 and 11 are the valid range for the index. The value 0 is for describing that no signal is detected so no value is stored"
         },
-        "observedVehicleColour": {
+        "aqiMajorPollutant": {
           "type": "string",
-          "description": "Property. The colour of the observed vehicle"
+          "description": "Property. Model:'https://schema.org/Text'. Major pollutant in the Air Quality Index (AQI)"
         },
-        "observedVehicleMake": {
+        "aqiMajorPollutantForecast": {
           "type": "string",
-          "description": "Property. The make of the observed vehicle"
+          "description": "Property. Model:'https://schema.org/Text'. Forecasted major air pollutant in the Air Quality Index (AQI) over a certain duration in future"
         },
-        "observedVehicleType": {
-          "type": "string",
-          "description": "Property. Type of vehicle from the point of view of its structural characteristics. This is different than the vehicle category . Model:'https://schema.org/Text'. Enum:'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'. The following values defined by _VehicleTypeEnum_ and _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm) and extended for other uses",
-          "enum": [
-            "agriculturalVehicle",
-            "ambulance",
-            "anyVehicle",
-            "articulatedVehicle",
-            "autorickshaw",
-            "bicycle",
-            "binTrolley",
-            "BRT mini busÂ·",
-            "BRT bus",
-            "bus",
-            "car",
-            "caravan",
-            "carOrLightVehicle",
-            "carWithCaravan",
-            "carWithTrailer",
-            "cleaningTrolley",
-            "compactor",
-            "constructionOrMaintenanceVehicle",
-            "dumper",
-            "e-moped",
-            "e-scooter",
-            "e-motorcycle",
-            "fireTender",
-            "fourWheelDrive",
-            "highSidedVehicle",
-            "hopper",
-            "lorry",
-            "minibus",
-            "moped",
-            "motorcycle",
-            "motorcycleWithSideCar",
-            "motorscooter",
-            "policeVan",
-            "publicMotor",
-            "sweepingMachine",
-            "tanker",
-            "tempo",
-            "threeWheeledVehicle",
-            "tipper",
-            "trailer",
-            "tram",
-            "trolley",
-            "twoWheeledVehicle",
-            "van",
-            "vehicleWithoutCatalyticConverter",
-            "vehicleWithCaravan",
-            "vehicleWithTrailer",
-            "withEvenNumberedRegistrationPlates",
-            "withOddNumberedRegistrationPlates",
-            "other"
-          ]
+        "airTemperatureForecast": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Forecasted value of air temperature over a certain duration in future"
+        },
+        "precipitationForecast": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Forecasted rainfall over a certain duration in future"
+        },
+        "airQualityIndex": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Air quality index is a number used to report the quality of the air on any given day"
+        },
+        "relativeHumidityForecast": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Forecasted relative humidity (water vapour in air) over a certain duration in future"
+        },
+        "airQualityIndexForecast": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Forecasted overall Air Quality Index (AQI) over a certain duration in future"
+        },
+        "airTemperatureTSA": {
+          "type": "object",
+          "description": "Property. Air temperature time series aggregation",
+          "$ref": "https://smart-data-models.github.io/dataModel.Environment/Environment-schema.json#/definitions/TimeSeriesAggregation"
         }
       }
     }
   ],
   "required": [
     "id",
-    "type"
+    "type",
+    "dateObserved",
+    "location"
   ]
 }
