@@ -1,204 +1,204 @@
 {
-    "$schema": "http://json-schema.org/schema#",
-    "$schemaVersion": "0.0.2",
-    "modelTags": "",
-    "$id": "https://smart-data-models.github.io/dataModel.Transportation/AnprFlowObserved/schema.json",
-    "title": "ANPR Flow Observed schema",
-    "description": "The data model represents an observation linked to the passing of a vehicle at a certain location and at a given time. This Data Model is based on the [dataModel.Transportation/ItemFlowObserved], extended with ANPR specific properties and links to the observation images.",
-    "type": "object",
-    "allOf": [
-        {
-            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schemaVersion": "0.0.2",
+  "modelTags": "",
+  "$id": "https://smart-data-models.github.io/dataModel.Transportation/AnprFlowObserved/schema.json",
+  "title": "ANPR Flow Observed schema",
+  "description": "The data model represents an observation linked to the passing of a vehicle at a certain location and at a given time. This Data Model is based on the [dataModel.Transportation/ItemFlowObserved], extended with ANPR specific properties and links to the observation images.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "description": "Property. NGSI Entity type. It has to be AnprFlowObserved",
+          "type": "string",
+          "enum": [
+            "AnprFlowObserved"
+          ]
         },
-        {
-            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+        "dateObserved": {
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/dateObserved"
         },
-        {
-            "properties": {
-                "type": {
-                    "description": "Property. NGSI Entity type. It has to be AnprFlowObserved",
-                    "type": "string",
-                    "enum": [
-                        "AnprFlowObserved"
-                    ]
-                },
-                "dateObserved": {
-                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/dateObserved"
-                },
-                "dateReceived": {
-                    "description": "Property. Timestamp when the observation has been received by the platform",
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "observedBy": {
-                    "anyOf": [
-                        {
-                            "type": "string",
-                            "minLength": 1,
-                            "maxLength": 256,
-                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-                            "description": "Property. Identifier format of any NGSI entity"
-                        },
-                        {
-                            "type": "string",
-                            "format": "uri",
-                            "description": "Property. Identifier format of any NGSI entity"
-                        }
-                    ],
-                    "description": "Relationship. The entity or device which has reported this observation"
-                },
-                "laneId": {
-                    "description": "Property. Lane identifier. Lane identification provided by the observer",
-                    "type": "string"
-                },
-                "zonesServed": {
-                    "description": "Property. Array of zones that are able to receive or read the observations",
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "vehiclePlateNotRead": {
-                    "description": "Property. Indicates if a license could not be read",
-                    "type": "boolean"
-                },
-                "observedVehicle": {
-                    "description": "Property. Information about the observed vehicle",
-                    "type": "object",
-                    "properties": {
-                        "direction": {
-                            "description": "Property. Detected direction of the observed vehicle",
-                            "type": "string",
-                            "enum": [
-                                "away",
-                                "towards"
-                            ]
-                        },
-                        "speed": {
-                            "description": "Property. Detected speed of the observed vehicle",
-                            "type": "number",
-                            "minimum": 0
-                        },
-                        "brand": {
-                            "description": "Property. Detected brand of the observed vehicle",
-                            "type": "object",
-                            "properties": {
-                                "name": {
-                                    "description": "Property. Brand name identified",
-                                    "type": "string"
-                                },
-                                "confidence": {
-                                    "description": "Property. Confidence level of the detection",
-                                    "type": "number",
-                                    "minimum": 0,
-                                    "maximum": 1
-                                }
-                            }
-                        },
-                        "model": {
-                            "description": "Property. Detected brand model of the observed vehicle",
-                            "type": "object",
-                            "properties": {
-                                "name": {
-                                    "description": "Property. Model name",
-                                    "type": "string"
-                                },
-                                "confidence": {
-                                    "description": "Property. Confidence level of the detection",
-                                    "type": "number",
-                                    "minimum": 0,
-                                    "maximum": 1
-                                }
-                            }
-                        },
-                        "color": {
-                            "description": "Property. Detected color of the observed vehicle",
-                            "type": "object",
-                            "properties": {
-                                "name": {
-                                    "description": "Property. Color name",
-                                    "type": "string"
-                                },
-                                "confidence": {
-                                    "description": "Property. Confidence level of the detection",
-                                    "type": "number",
-                                    "minimum": 0,
-                                    "maximum": 1
-                                }
-                            }
-                        },
-                        "country": {
-                            "description": "Property. Detected country of the observed vehicle",
-                            "type": "object",
-                            "properties": {
-                                "code": {
-                                    "description": "Property. Country code according to ISO 3166-1 alpha-2",
-                                    "type": "string"
-                                },
-                                "confidence": {
-                                    "description": "Property. Confidence level of the detection",
-                                    "type": "number",
-                                    "minimum": 0,
-                                    "maximum": 1
-                                }
-                            }
-                        },
-                        "licensePlate": {
-                            "description": "Property. Detected license plate of the observed vehicle",
-                            "type": "object",
-                            "properties": {
-                                "identifier": {
-                                    "description": "Property. License plate identifier",
-                                    "type": "string"
-                                },
-                                "confidence": {
-                                    "description": "Property. Confidence level of the detection",
-                                    "type": "number",
-                                    "minimum": 0,
-                                    "maximum": 1
-                                },
-                                "coordinates": {
-                                    "description": "Property. Sequence of position points describing this location, expressed in coordinate system",
-                                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
-                                }
-                            }
-                        }
-                    }
-                },
-                "refImages": {
-                    "description": "Relationship. Array of multiple objects that refer to images",
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "url": {
-                                "description": "Property. URL referencing to the image",
-                                "type": "string",
-                                "format": "uri"
-                            },
-                            "contentType": {
-                                "description": "Property. Content type according to IANA Media Types",
-                                "type": "string"
-                            },
-                            "imageType": {
-                                "description": "Property. Type of image",
-                                "type": "string",
-                                "enum": [
-                                    "plate",
-                                    "overview",
-                                    "anpr"
-                                ]
-                            }
-                        }
-                    }
-                }
+        "dateReceived": {
+          "description": "Property. Timestamp when the observation has been received by the platform",
+          "type": "string",
+          "format": "date-time"
+        },
+        "observedBy": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
             }
+          ],
+          "description": "Relationship. The entity or device which has reported this observation"
+        },
+        "laneId": {
+          "description": "Property. Lane identifier. Lane identification provided by the observer",
+          "type": "string"
+        },
+        "zonesServed": {
+          "description": "Property. Array of zones that are able to receive or read the observations",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "vehiclePlateNotRead": {
+          "description": "Property. Indicates if a license could not be read",
+          "type": "boolean"
+        },
+        "observedVehicle": {
+          "description": "Property. Information about the observed vehicle",
+          "type": "object",
+          "properties": {
+            "direction": {
+              "description": "Property. Detected direction of the observed vehicle",
+              "type": "string",
+              "enum": [
+                "away",
+                "towards"
+              ]
+            },
+            "speed": {
+              "description": "Property. Detected speed of the observed vehicle",
+              "type": "number",
+              "minimum": 0
+            },
+            "brand": {
+              "description": "Property. Detected brand of the observed vehicle",
+              "type": "object",
+              "properties": {
+                "name": {
+                  "description": "Property. Brand name identified",
+                  "type": "string"
+                },
+                "confidence": {
+                  "description": "Property. Confidence level of the detection",
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                }
+              }
+            },
+            "model": {
+              "description": "Property. Detected brand model of the observed vehicle",
+              "type": "object",
+              "properties": {
+                "name": {
+                  "description": "Property. Model name",
+                  "type": "string"
+                },
+                "confidence": {
+                  "description": "Property. Confidence level of the detection",
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                }
+              }
+            },
+            "color": {
+              "description": "Property. Detected color of the observed vehicle",
+              "type": "object",
+              "properties": {
+                "name": {
+                  "description": "Property. Color name",
+                  "type": "string"
+                },
+                "confidence": {
+                  "description": "Property. Confidence level of the detection",
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                }
+              }
+            },
+            "country": {
+              "description": "Property. Detected country of the observed vehicle",
+              "type": "object",
+              "properties": {
+                "code": {
+                  "description": "Property. Country code according to ISO 3166-1 alpha-2",
+                  "type": "string"
+                },
+                "confidence": {
+                  "description": "Property. Confidence level of the detection",
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                }
+              }
+            },
+            "licensePlate": {
+              "description": "Property. Detected license plate of the observed vehicle",
+              "type": "object",
+              "properties": {
+                "identifier": {
+                  "description": "Property. License plate identifier",
+                  "type": "string"
+                },
+                "confidence": {
+                  "description": "Property. Confidence level of the detection",
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "coordinates": {
+                  "description": "Property. Sequence of position points describing this location, expressed in coordinate system",
+                  "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+                }
+              }
+            }
+          }
+        },
+        "refImages": {
+          "description": "Relationship. Array of multiple objects that refer to images",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "description": "Property. URL referencing to the image",
+                "type": "string",
+                "format": "uri"
+              },
+              "contentType": {
+                "description": "Property. Content type according to IANA Media Types",
+                "type": "string"
+              },
+              "imageType": {
+                "description": "Property. Type of image",
+                "type": "string",
+                "enum": [
+                  "plate",
+                  "overview",
+                  "anpr"
+                ]
+              }
+            }
+          }
         }
-    ],
-    "required": [
-        "id",
-        "type",
-        "location",
-        "dateObserved"
-    ]
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type",
+    "location",
+    "dateObserved"
+  ]
 }
