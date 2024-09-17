@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "modelTags": "Nice",
   "$id": "https://smart-data-models.github.io/dataModel.Transportation/TransportStation/schema.json",
   "$schemaVersion": "0.1.5",
