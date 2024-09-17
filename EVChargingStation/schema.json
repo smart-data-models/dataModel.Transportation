@@ -1,262 +1,262 @@
 {
-    "$schema": "http://json-schema.org/schema#",
-    "$schemaVersion": "0.1.0",
-    "modelTags": "IUDX",
-    "$id": "https://smart-data-models.github.io/dataModel.Transportation/EVChargingStation/schema.json",
-    "title": "Smart Data Models - Transportation / EV Charging Station",
-    "description": "EV Charging Station",
-    "type": "object",
-    "allOf": [
-        {
-            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schemaVersion": "0.1.0",
+  "modelTags": "IUDX",
+  "$id": "https://smart-data-models.github.io/dataModel.Transportation/EVChargingStation/schema.json",
+  "title": "Smart Data Models - Transportation / EV Charging Station",
+  "description": "EV Charging Station",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "EVChargingStation"
+          ],
+          "description": "Property. NGSI Entity type. It has to be EVChargingStation"
         },
-        {
-            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+        "capacity": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Property. The total number of vehicles which can be charged at the same time. The total number of sockets can be higher. Model:'http://schema.org/Number'. "
         },
-        {
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "EVChargingStation"
-                    ],
-                    "description": "Property. NGSI Entity type. It has to be EVChargingStation"
-                },
-                "capacity": {
-                    "type": "integer",
-                    "minimum": 1,
-                    "description": "Property. The total number of vehicles which can be charged at the same time. The total number of sockets can be higher. Model:'http://schema.org/Number'. "
-                },
-                "socketNumber": {
-                    "type": "integer",
-                    "minimum": 1,
-                    "description": "Property. The total number of sockets offered by this charging station. Model:'http://schema.org/Number'"
-                },
-                "availableCapacity": {
-                    "type": "integer",
-                    "minimum": 0,
-                    "description": "Property. The number of vehicles which currently can be charged. Model:'http://schema.org/Number'. It must lower or equal than `capacity`"
-                },
-                "allowedVehicleType": {
-                    "type": "array",
-                    "description": "Property. Vehicle type(s) which can be charged. Model:'http://schema.org/Text'. Enum:'bicycle, bus, car, caravan, motorcycle, motorscooter, truck' ",
-                    "minItems": 1,
-                    "uniqueItems": true,
-                    "items": {
-                        "type": "string",
-                        "enum": [
-                            "bicycle",
-                            "bus",
-                            "car",
-                            "caravan",
-                            "motorcycle",
-                            "motorscooter",
-                            "truck"
-                        ]
-                    }
-                },
-                "socketType": {
-                    "type": "array",
-                    "description": "Property. The type of sockets offered by this station. Model:'http://schema.org/Text'. Enum:'Caravan_Mains_Socket, CHAdeMO, CCS/SAE, Dual_CHAdeMO, Dual_J-1772, Dual_Mennekes, J-1772, Mennekes, Other, Tesla, Type2, Type3, Wall_Euro'",
-                    "minItems": 1,
-                    "uniqueItems": true,
-                    "items": {
-                        "type": "string",
-                        "enum": [
-                            "Caravan_Mains_Socket",
-                            "CHAdeMO",
-                            "CCS/SAE",
-                            "Dual_CHAdeMO",
-                            "Dual_J-1772",
-                            "Dual_Mennekes",
-                            "J-1772",
-                            "Mennekes",
-                            "Other",
-                            "Tesla",
-                            "Type2",
-                            "Type3",
-                            "Wall_Euro"
-                        ]
-                    }
-                },
-                "openingHours": {
-                    "type": "string",
-                    "description": "Property. Opening hours of the charging station. Model:'http://schema.org/openingHours'. "
-                },
-                "status": {
-                    "type": "string",
-                    "description": "Property. Model:'http://schema.org/Text'. Status of the charging station. Enum:'almostEmpty, almostFull, empty, full, outOfService, withIncidence, working'. Or any other application-specific",
-                    "enum": [
-                        "almostEmpty",
-                        "almostFull",
-                        "empty",
-                        "full",
-                        "outOfService",
-                        "withIncidence",
-                        "working"
-                    ]
-                },
-                "network": {
-                    "type": "string",
-                    "description": "Property. The name of the Network, with that the operator cooperates. Model:'https://schema.org/Text'. "
-                },
-                "operator": {
-                    "type": "string",
-                    "description": "Property. Charging station's operator. Model:'https://schema.org/Text'. "
-                },
-                "contactPoint": {
-                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons/properties/contactPoint"
-                },
-                "amperage": {
-                    "type": "number",
-                    "minimum": 0,
-                    "description": "Property. The total amperage offered by the charging station.. Model:'http://schema.org/Number'. Units:'Ampers (A)'"
-                },
-                "voltage": {
-                    "type": "number",
-                    "minimum": 0,
-                    "description": "Property. The total voltage offered by the charging station. Model:'http://schema.org/Number'. Units:'Volts (V)'"
-                },
-                "chargeType": {
-                    "type": "array",
-                    "description": "Property. Type(s) of charge when using this station. Model:'https://schema.org/Text'. Enum:'annualPayment, flat, free, monthlyPayment, other'",
-                    "items": {
-                        "type": "string",
-                        "enum": [
-                            "annualPayment",
-                            "flat",
-                            "free",
-                            "monthlyPayment",
-                            "other"
-                        ]
-                    },
-                    "minItems": 1,
-                    "uniqueItems": true
-                },
-                "acceptedPaymentMethod": {
-                    "type": "array",
-                    "description": "Property. Type(s) of charge when using this station. Model:'https://schema.org/Text'. Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'",
-                    "items": {
-                        "type": "string",
-                        "enum": [
-                            "ByBankTransferInAdvance",
-                            "ByInvoice",
-                            "Cash",
-                            "CheckInAdvance",
-                            "COD",
-                            "DirectDebit",
-                            "GoogleCheckout",
-                            "PayPal",
-                            "PaySwarm"
-                        ]
-                    },
-                    "minItems": 1,
-                    "uniqueItems": true
-                },
-                "dataDescriptor": {
-                    "type": "string",
-                    "format": "uri",
-                    "description": "Relationship. URI pointing to the data-descriptor entity"
-                },
-                "powerConsumption": {
-                    "type": "number",
-                    "description": "Property. Power consumed by the entity corresponding to this observation"
-                },
-                "chargingUnitId": {
-                    "type": "string",
-                    "description": "Property. The Id of the charging point in the EV charging station corresponding to this observation"
-                },
-                "transactionId": {
-                    "type": "string",
-                    "description": "Property. Unique transaction Id of the entity corresponding to this observation"
-                },
-                "transactionType": {
-                    "type": "string",
-                    "description": "Property. Type of the transaction based on the mode of payment (For eg. mobile/UPI, card, etc) or mode of service (For eg. Issue, ReIssue, Entry, Exit etc.) corresponding to this observation"
-                },
-                "stationName": {
-                    "type": "string",
-                    "description": "Property. The name station corresponding to this observation. It can be the name of bike docking station, charging station, etc"
-                },
-                "amountCollected": {
-                    "type": "number",
-                    "description": "Property. Amount collected towards the service corresponding to this observation"
-                },
-                "taxAmountCollected": {
-                    "type": "number",
-                    "description": "Property. The amount of tax levied on the products, things and services which includes sales tax, value-added tax, service tax, Good and Service tax, customs duty, etc"
-                },
-                "endDateTime": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "Property. Reported end time corresponding to this observation"
-                },
-                "startDateTime": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "Property. Reported start time corresponding to this observation"
-                },
-                "vehicleType": {
-                    "type": "string",
-                    "description": "Property. Type of vehicle from the point of view of its structural characteristics. This is different than the vehicle category . Model:'https://schema.org/Text'. Enum:'agriculturalVehicle, ambulance, anyVehicle, articulatedVehicle, autorickshaw, bicycle, binTrolley, BRT bus, BRT minibus, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, compactor, constructionOrMaintenanceVehicle, dumper, e-moped, e-scooter, e-motorcycle,fire tender, fourWheelDrive, highSidedVehicle, hopper, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, police van, sweepingMachine, tanker, tempo, threeWheeledVehicle, tipper, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'. The following values defined by _VehicleTypeEnum_ and _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)",
-                    "enum": [
-                        "agriculturalVehicle",
-                        "ambulance",
-                        "articulatedVehicle",
-                        "autorickshaw",
-                        "bicycle",
-                        "binTrolley",
-                        "BRT bus",
-                        "BRT minibus",
-                        "bus",
-                        "car",
-                        "caravan",
-                        "carOrLightVehicle",
-                        "carWithCaravan",
-                        "carWithTrailer",
-                        "cleaningTrolley",
-                        "compactor",
-                        "constructionOrMaintenanceVehicle",
-                        "dumper",
-                        "e-moped",
-                        "e-scooter",
-                        "e-motorcycle",
-                        "fire tender",
-                        "fourWheelDrive",
-                        "highSidedVehicle",
-                        "hopper",
-                        "lorry",
-                        "minibus",
-                        "moped",
-                        "motorcycle",
-                        "motorcycleWithSideCar",
-                        "motorscooter",
-                        "police van",
-                        "sweepingMachine",
-                        "tanker",
-                        "tempo",
-                        "threeWheeledVehicle",
-                        "tipper",
-                        "trailer",
-                        "tram",
-                        "twoWheeledVehicle",
-                        "trolley",
-                        "van"
-                    ]
-                },
-                "observationDateTime": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "Property. Last reported time of observation"
-                }
-            }
+        "socketNumber": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Property. The total number of sockets offered by this charging station. Model:'http://schema.org/Number'"
+        },
+        "availableCapacity": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Property. The number of vehicles which currently can be charged. Model:'http://schema.org/Number'. It must lower or equal than `capacity`"
+        },
+        "allowedVehicleType": {
+          "type": "array",
+          "description": "Property. Vehicle type(s) which can be charged. Model:'http://schema.org/Text'. Enum:'bicycle, bus, car, caravan, motorcycle, motorscooter, truck' ",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "bicycle",
+              "bus",
+              "car",
+              "caravan",
+              "motorcycle",
+              "motorscooter",
+              "truck"
+            ]
+          }
+        },
+        "socketType": {
+          "type": "array",
+          "description": "Property. The type of sockets offered by this station. Model:'http://schema.org/Text'. Enum:'Caravan_Mains_Socket, CHAdeMO, CCS/SAE, Dual_CHAdeMO, Dual_J-1772, Dual_Mennekes, J-1772, Mennekes, Other, Tesla, Type2, Type3, Wall_Euro'",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "Caravan_Mains_Socket",
+              "CHAdeMO",
+              "CCS/SAE",
+              "Dual_CHAdeMO",
+              "Dual_J-1772",
+              "Dual_Mennekes",
+              "J-1772",
+              "Mennekes",
+              "Other",
+              "Tesla",
+              "Type2",
+              "Type3",
+              "Wall_Euro"
+            ]
+          }
+        },
+        "openingHours": {
+          "type": "string",
+          "description": "Property. Opening hours of the charging station. Model:'http://schema.org/openingHours'. "
+        },
+        "status": {
+          "type": "string",
+          "description": "Property. Model:'http://schema.org/Text'. Status of the charging station. Enum:'almostEmpty, almostFull, empty, full, outOfService, withIncidence, working'. Or any other application-specific",
+          "enum": [
+            "almostEmpty",
+            "almostFull",
+            "empty",
+            "full",
+            "outOfService",
+            "withIncidence",
+            "working"
+          ]
+        },
+        "network": {
+          "type": "string",
+          "description": "Property. The name of the Network, with that the operator cooperates. Model:'https://schema.org/Text'. "
+        },
+        "operator": {
+          "type": "string",
+          "description": "Property. Charging station's operator. Model:'https://schema.org/Text'. "
+        },
+        "contactPoint": {
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons/properties/contactPoint"
+        },
+        "amperage": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. The total amperage offered by the charging station.. Model:'http://schema.org/Number'. Units:'Ampers (A)'"
+        },
+        "voltage": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. The total voltage offered by the charging station. Model:'http://schema.org/Number'. Units:'Volts (V)'"
+        },
+        "chargeType": {
+          "type": "array",
+          "description": "Property. Type(s) of charge when using this station. Model:'https://schema.org/Text'. Enum:'annualPayment, flat, free, monthlyPayment, other'",
+          "items": {
+            "type": "string",
+            "enum": [
+              "annualPayment",
+              "flat",
+              "free",
+              "monthlyPayment",
+              "other"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "acceptedPaymentMethod": {
+          "type": "array",
+          "description": "Property. Type(s) of charge when using this station. Model:'https://schema.org/Text'. Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'",
+          "items": {
+            "type": "string",
+            "enum": [
+              "ByBankTransferInAdvance",
+              "ByInvoice",
+              "Cash",
+              "CheckInAdvance",
+              "COD",
+              "DirectDebit",
+              "GoogleCheckout",
+              "PayPal",
+              "PaySwarm"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "dataDescriptor": {
+          "type": "string",
+          "format": "uri",
+          "description": "Relationship. URI pointing to the data-descriptor entity"
+        },
+        "powerConsumption": {
+          "type": "number",
+          "description": "Property. Power consumed by the entity corresponding to this observation"
+        },
+        "chargingUnitId": {
+          "type": "string",
+          "description": "Property. The Id of the charging point in the EV charging station corresponding to this observation"
+        },
+        "transactionId": {
+          "type": "string",
+          "description": "Property. Unique transaction Id of the entity corresponding to this observation"
+        },
+        "transactionType": {
+          "type": "string",
+          "description": "Property. Type of the transaction based on the mode of payment (For eg. mobile/UPI, card, etc) or mode of service (For eg. Issue, ReIssue, Entry, Exit etc.) corresponding to this observation"
+        },
+        "stationName": {
+          "type": "string",
+          "description": "Property. The name station corresponding to this observation. It can be the name of bike docking station, charging station, etc"
+        },
+        "amountCollected": {
+          "type": "number",
+          "description": "Property. Amount collected towards the service corresponding to this observation"
+        },
+        "taxAmountCollected": {
+          "type": "number",
+          "description": "Property. The amount of tax levied on the products, things and services which includes sales tax, value-added tax, service tax, Good and Service tax, customs duty, etc"
+        },
+        "endDateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Reported end time corresponding to this observation"
+        },
+        "startDateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Reported start time corresponding to this observation"
+        },
+        "vehicleType": {
+          "type": "string",
+          "description": "Property. Type of vehicle from the point of view of its structural characteristics. This is different than the vehicle category . Model:'https://schema.org/Text'. Enum:'agriculturalVehicle, ambulance, anyVehicle, articulatedVehicle, autorickshaw, bicycle, binTrolley, BRT bus, BRT minibus, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, compactor, constructionOrMaintenanceVehicle, dumper, e-moped, e-scooter, e-motorcycle,fire tender, fourWheelDrive, highSidedVehicle, hopper, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, police van, sweepingMachine, tanker, tempo, threeWheeledVehicle, tipper, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'. The following values defined by _VehicleTypeEnum_ and _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)",
+          "enum": [
+            "agriculturalVehicle",
+            "ambulance",
+            "articulatedVehicle",
+            "autorickshaw",
+            "bicycle",
+            "binTrolley",
+            "BRT bus",
+            "BRT minibus",
+            "bus",
+            "car",
+            "caravan",
+            "carOrLightVehicle",
+            "carWithCaravan",
+            "carWithTrailer",
+            "cleaningTrolley",
+            "compactor",
+            "constructionOrMaintenanceVehicle",
+            "dumper",
+            "e-moped",
+            "e-scooter",
+            "e-motorcycle",
+            "fire tender",
+            "fourWheelDrive",
+            "highSidedVehicle",
+            "hopper",
+            "lorry",
+            "minibus",
+            "moped",
+            "motorcycle",
+            "motorcycleWithSideCar",
+            "motorscooter",
+            "police van",
+            "sweepingMachine",
+            "tanker",
+            "tempo",
+            "threeWheeledVehicle",
+            "tipper",
+            "trailer",
+            "tram",
+            "twoWheeledVehicle",
+            "trolley",
+            "van"
+          ]
+        },
+        "observationDateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Last reported time of observation"
         }
-    ],
-    "required": [
-        "id",
-        "type",
-        "socketType",
-        "capacity",
-        "allowedVehicleType"
-    ]
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type",
+    "socketType",
+    "capacity",
+    "allowedVehicleType"
+  ]
 }
