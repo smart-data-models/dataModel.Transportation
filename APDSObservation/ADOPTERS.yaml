@@ -1,27 +1,27 @@
 description: This is a compilation list of the current adopters of the data model APDSObservation of the Subject Transportation.
 currentAdopters:
 -
- adopter: Davy Van Deun 
- description: Project manager
- mail: davy.vandeun@antwerpen.be
- organization: Stad Antwerpen
- project: MPA ANPR scanwagens
- comments: A project to acquire vehicles equipped with ANPR cameras for automated parking enforcement for the city of Antwerp. The project scope included the standardisation of information flow from vehicle to backend.
- startDate: 1/1/2022
-
- adopter: Robert De Beukeulaer
- description: Domain Specialist
- mail: robert.debeukelaer@digipolis.be
- organization: Digipolis Antwerpen
- project: MPA ANPR scanwagens
- comments: Project to set up the neccesary integration components to facilitate information flow from the ALPR scanning vehicle to the parking enforcement software.
- startDate: 1/10/2022
- 
- adopter: Martijn Oostdam
- description: Project Manager
- mail: m.oostdam@arvoo.com
- organization: ARVOO
- project: MPA ANPR Scanwagens
- comments: ANPR Scanning equipment for Scancars
- startDate: 1/10/2022
+  adopter: Davy Van Deun
+  description: Project manager
+  mail: davy.vandeun@antwerpen.be
+  organization: Stad Antwerpen
+  project: MPA ANPR scanwagens
+  comments: A project to acquire vehicles equipped with ANPR cameras for automated parking enforcement for the city of Antwerp. The project scope included the standardisation of information flow from vehicle to backend.
+  startDate: 1/1/2022
+-
+  adopter: Robert De Beukeulaer
+  description: Domain Specialist
+  mail: robert.debeukelaer@digipolis.be
+  organization: Digipolis Antwerpen
+  project: MPA ANPR scanwagens
+  comments: Project to set up the neccesary integration components to facilitate information flow from the ALPR scanning vehicle to the parking enforcement software.
+  startDate: 1/10/2022
+-
+  adopter: Martijn Oostdam
+  description: Project Manager
+  mail: m.oostdam@arvoo.com
+  organization: ARVOO
+  project: MPA ANPR Scanwagens
+  comments: ANPR Scanning equipment for Scancars
+  startDate: 1/10/2022
  
