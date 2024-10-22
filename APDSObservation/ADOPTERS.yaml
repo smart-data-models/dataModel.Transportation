@@ -14,7 +14,7 @@ currentAdopters:
   mail: robert.debeukelaer@digipolis.be
   organization: Digipolis Antwerpen
   project: MPA ANPR scanwagens
-  comments: Project to set up the neccesary integration components to facilitate information flow from the ALPR scanning vehicle to the parking enforcement software.
+  comments: Project to set up the necessary integration components to facilitate information flow from the ALPR scanning vehicle to the parking enforcement software.
   startDate: 1/10/2022
 -
   adopter: Martijn Oostdam
