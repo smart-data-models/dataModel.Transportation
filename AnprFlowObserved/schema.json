@@ -162,6 +162,22 @@
                   "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
                 }
               }
+            },
+            "plateColor": {
+              "description": "Property. Detected plate color of the observed vehicle",
+              "type": "object",
+              "properties": {
+                "name": {
+                  "description": "Property. Color name",
+                  "type": "string"
+                },
+                "confidence": {
+                  "description": "Property. Confidence level of the detection",
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                }
+              }
             }
           }
         },
