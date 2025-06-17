@@ -46,7 +46,8 @@
       "model": "A3",
       "color": "black",
       "country": "BE",
-      "licensePlate": "1-ABC-123"
+      "licensePlate": "1-ABC-123",
+      "plateColor": "white"
     }
   },
   "refImages": {
