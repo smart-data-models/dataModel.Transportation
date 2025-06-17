@@ -5,6 +5,8 @@
   "dateObservedFrom": "2018-08-07T11:10:00Z",
   "dateObservedTo": "2018-08-07T11:15:00Z",
   "peopleCount": 100,
+  "peopleCountTowards": 50,
+  "peopleCountAway": 50,
   "averageHeadwayTime": 5,
   "congested": false,
   "direction": "inbound",
