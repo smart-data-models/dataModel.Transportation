@@ -58,6 +58,14 @@
     "type": "Property",
     "value": 100
   },
+  "peopleCountTowards": {
+    "type": "Property",
+    "value": 50
+  },
+  "peopleCountAway": {
+    "type": "Property",
+    "value": 50
+  },
   "@context": [
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
   ]
