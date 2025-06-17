@@ -17,6 +17,14 @@
     "type": "Number",
     "value": 100
   },
+  "peopleCountTowards": {
+    "type": "Number",
+    "value": 50
+  },
+  "peopleCountAway": {
+    "type": "Number",
+    "value": 50
+  },
   "averageHeadwayTime": {
     "type": "Number",
     "value": 5
