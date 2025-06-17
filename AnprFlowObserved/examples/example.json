@@ -41,7 +41,7 @@
     "plateColor": {
       "name": "white",
       "confidence": 0.95
-    },
+    }
   },
   "location": {
     "type": "Point",
