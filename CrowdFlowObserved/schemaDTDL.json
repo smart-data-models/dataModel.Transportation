@@ -52,7 +52,7 @@
             "displayName": "dataProvider",
             "@type": "Property",
             "schema": "string",
-            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity"
         },
         {
             "name": "dateCreated",
@@ -60,7 +60,7 @@
             "displayName": "dateCreated",
             "@type": "Property",
             "schema": "dateTime",
-            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform"
         },
         {
             "name": "dateModified",
@@ -68,7 +68,7 @@
             "displayName": "dateModified",
             "@type": "Property",
             "schema": "dateTime",
-            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform"
         },
         {
             "name": "dateObserved",
@@ -84,7 +84,7 @@
             "displayName": "dateObservedFrom",
             "@type": "Property",
             "schema": "dateTime",
-            "comment": "Observation period start date and time. See `dateObserved`."
+            "comment": "Observation period start date and time. See `dateObserved`"
         },
         {
             "name": "dateObservedTo",
@@ -108,7 +108,7 @@
             "displayName": "name",
             "@type": "Property",
             "schema": "string",
-            "comment": "The name of this item."
+            "comment": "The name of this item"
         },
         {
             "name": "occupancy",
@@ -123,8 +123,24 @@
             "writable": true,
             "displayName": "peopleCount",
             "@type": "Property",
-            "schema": "integer",
-            "comment": "Total number of people detected during this observation."
+            "schema": "long",
+            "comment": "Total number of people detected during this observation"
+        },
+        {
+            "name": "peopleCountAway",
+            "writable": true,
+            "displayName": "peopleCountAway",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Total number of people detected during this observation away direction"
+        },
+        {
+            "name": "peopleCountTowards",
+            "writable": true,
+            "displayName": "peopleCountTowards",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Total number of people detected during this observation towards direction"
         },
         {
             "name": "refRoadSegment",
@@ -142,7 +158,7 @@
             "displayName": "source",
             "@type": "Property",
             "schema": "string",
-            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object"
         },
         {
             "@type": "Telemetry",
@@ -173,6 +189,10 @@
                     "schema": "string"
                 },
                 {
+                    "name": "district",
+                    "schema": "string"
+                },
+                {
                     "name": "postOfficeBoxNumber",
                     "schema": "string"
                 },
@@ -182,6 +202,10 @@
                 },
                 {
                     "name": "streetAddress",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetNr",
                     "schema": "string"
                 }
             ]
