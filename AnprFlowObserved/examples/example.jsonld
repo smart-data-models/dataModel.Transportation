@@ -37,6 +37,10 @@
     "licensePlate": {
       "identifier": "1-ABC-123",
       "confidence": 0.96
+    },
+    "plateColor": {
+      "name": "white",
+      "confidence": 0.95
     }
   },
   "location": {

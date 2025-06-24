@@ -58,6 +58,16 @@
           "minimum": 0,
           "description": "Property. Total number of people detected during this observation"
         },
+         "peopleCountTowards": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Property. Total number of people detected during this observation towards direction"
+        },
+        "peopleCountAway": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Property. Total number of people detected during this observation away direction"
+        },
         "occupancy": {
           "type": "number",
           "minimum": 0,
