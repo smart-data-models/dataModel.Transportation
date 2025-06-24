@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$schemaVersion": "0.0.2",
+  "$schemaVersion": "0.0.3",
   "modelTags": "",
   "$id": "https://smart-data-models.github.io/dataModel.Transportation/CrowdFlowObserved/schema.json",
   "title": " - SynchroniCity - Transportation / CrowdFlowObserved",
