@@ -79,11 +79,6 @@
             "comment": "Lane identifier. Lane identification provided by the observer"
         },
         {
-            "name": "location",
-            "writable": true,
-            "displayName": "location"
-        },
-        {
             "name": "name",
             "writable": true,
             "displayName": "name",
@@ -218,10 +213,44 @@
                     "schema": "object"
                 },
                 {
+                    "name": "plateColor",
+                    "schema": "object"
+                },
+                {
                     "name": "speed",
                     "schema": "long"
                 }
             ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPolygon",
+            "schema": "multiPolygon"
         }
     ]
 }
