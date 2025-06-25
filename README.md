@@ -57,6 +57,11 @@ The following entity types are available:
 
 - [VehicleModel](https://github.com/smart-data-models/dataModel.Transportation/blob/master/VehicleModel/README.md). This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.
 
+## Mock Server
+
+You can simulate and test the Road API using a hosted mock server built directly from the OpenAPI spec. This is helpful for exploring the API behavior, validating request and response formats, or developing client-side integrations—without setting up a backend. The mock server uses schema and example data to generate dynamic, realistic responses.
+
+<a href="https://beeceptor.com/openapi-mock-server/?utm_source=github&utm_campaign=smart-data-models&url=https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/083e3bf77d2fffca4bfadee6ba895f4efb8a5c9e/Road/swagger.yaml" target="_blank"><img src="https://cdn.beeceptor.com/assets/images/buttons/mock-openapi-with-beeceptor.png" alt="Mock These APIs Instantly" style="height: 60px;"></a>
 
 
 ### Contributors
