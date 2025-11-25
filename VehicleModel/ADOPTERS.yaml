@@ -1,10 +1,10 @@
 description: This is a compilation list of the current adopters of the data model VehicleModel of the Subject dataModel.Transportation.  All fields are non mandatory. More info at https://smart-data-models.github.io/data-models/templates/dataModel/CURRENT_ADOPTERS.yaml
 currentAdopters:
 -
- adopter: 
- description: 
- mail: 
- organization: 
- project: 
- comments: 
+ adopter: OS2 GPS-Connector
+ description: Open source project for danish municipalities to collect GPS data for analysis and optimisation of their fleets
+ mail: os2fleetoptimiser@os2.eu
+ organization: https://www.os2.eu/
+ project: https://github.com/OS2sandbox/gps-connector
+ comments: Storing additional meta-data for vehicle models, such as 'tractionBatteryCapacity', allows further optimisation by calculating range for BEV.
  startDate: 
