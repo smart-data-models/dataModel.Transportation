@@ -1,0 +1,36 @@
+{
+  "id": "urn:ngsi-ld:ElectricVehicleMobility:PT:OUTROS-GDPR:OUTROS-GDPR:20251215",
+  "type": "ElectricVehicleMobility",
+  "dateObserved": {
+    "type": "Date-Time",
+    "value": "2025-12-15"
+  },
+  "region": {
+    "type": "Text",
+    "value": "Outros - GDPR"
+  },
+  "district": {
+    "type": "Text",
+    "value": "Outros - GDPR"
+  },
+  "municipality": {
+    "type": "Text",
+    "value": "Outros - GDPR"
+  },
+  "locationCode": {
+    "type": "Text",
+    "value": "Outros - GDPR"
+  },
+  "deviceBrand": {
+    "type": "Text",
+    "value": "Outros - GDPR"
+  },
+  "averageDistanceKm": {
+    "type": "Text",
+    "value": ""
+  },
+  "n": {
+    "type": "Property",
+    "value": 26
+  }
+}

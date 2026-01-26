@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schemaVersion": "0.0.1",
+  "$id": "https://smart-data-models.github.io/dataModel.Transportation/ElectricVehicleMobility/schema.json",
+  "title": "Electric Vehicle Mobility",
+  "modelTags": "transportation,electricVehicle,mobility,statistics",
+  "description": "Daily observation of electric vehicle mobility patterns aggregated by location, vehicle brand, and geographic region.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "ElectricVehicleMobility"
+          ],
+          "description": "Property. NGSI entity type. It has to be ElectricVehicleMobility"
+        },
+        "dateObserved": {
+          "type": "string",
+          "format": "date",
+          "description": "Property. Date of the observation (YYYY-MM-DD). Model:'https://schema.org/Date'"
+        },
+        "region": {
+          "type": "string",
+          "enum": [
+            "CONTINENTE",
+            "AÇORES",
+            "MADEIRA",
+            "Outros - GDPR"
+          ],
+          "description": "Property. Region where the observation was made. Model:'https://schema.org/Text'"
+        },
+        "district": {
+          "type": "string",
+          "description": "Property. District where the observation was made. Model:'https://schema.org/Text'"
+        },
+        "municipality": {
+          "type": "string",
+          "description": "Property. Municipality where the observation was made. Model:'https://schema.org/Text'"
+        },
+        "locationCode": {
+          "type": "string",
+          "description": "Property. Official municipality code. Model:'https://schema.org/Text'"
+        },
+        "deviceBrand": {
+          "type": "string",
+          "description": "Property. Brand or manufacturer of the electric vehicle. Model:'https://schema.org/Text'"
+        },
+        "averageDistanceKm": {
+          "type":
+            "number",
+          "minimum": 0,
+          "description": "Property. Average distance traveled in kilometers. Units:'kilometers'. Model:'https://schema.org/Number'"
+        },
+        "n": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Property. Number of observations used to calculate the average distance. Model:'https://schema.org/Number'"
+        },
+        "vehicleType": {
+          "type": "string",
+          "enum": [
+            "BEV",
+            "PHEV",
+            "HEV",
+            "FCEV",
+            "unknown"
+          ],
+          "description": "Property. Type of electric vehicle. Model:'https://schema.org/Text'"
+        },
+        "dataProvider": {
+          "type": "string",
+          "description": "Property. Provider of the harmonised data entity. Model:'https://schema.org/Text'"
+        },
+        "source": {
+          "type": "string",
+          "description": "Property. Original source of the data as a URL. Model:'https://schema.org/Text'"
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type"
+  ]
+}

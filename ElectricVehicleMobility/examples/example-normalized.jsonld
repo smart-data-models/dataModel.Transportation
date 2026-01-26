@@ -1,0 +1,42 @@
+{
+  "id": "urn:ngsi-ld:ElectricVehicleMobility:PT:OUTROS-GDPR:OUTROS-GDPR:20251215",
+  "type": "ElectricVehicleMobility",
+  "dateObserved": {
+    "type": "Property",
+    "value": {
+      "@type": "Date",
+      "@value": "2025-12-15"
+    }
+  },
+  "region": {
+    "type": "Property",
+    "value": "Outros - GDPR"
+  },
+  "district": {
+    "type": "Property",
+    "value": "Outros - GDPR"
+  },
+  "municipality": {
+    "type": "Property",
+    "value": "Outros - GDPR"
+  },
+  "locationCode": {
+    "type": "Property",
+    "value": "Outros - GDPR"
+  },
+  "deviceBrand": {
+    "type": "Property",
+    "value": "Outros - GDPR"
+  },
+  "averageDistanceKm": {
+    "type": "Property",
+    "value": ""
+  },
+  "n": {
+    "type": "Property",
+    "value": 26
+  },
+  "@context": [
+    "https://smart-data-models.github.io/dataModel.Transportation/context.jsonld"
+  ]
+}

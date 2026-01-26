@@ -1,0 +1,12 @@
+{
+  "id": "urn:ngsi-ld:ElectricVehicleMobility:PT:OUTROS-GDPR:OUTROS-GDPR:20251215",
+  "type": "ElectricVehicleMobility",
+  "dateObserved": "2025-12-15",
+  "region": "Outros - GDPR",
+  "district": "Outros - GDPR",
+  "municipality": "Outros - GDPR",
+  "locationCode": "Outros - GDPR",
+  "deviceBrand": "Outros - GDPR",
+  "averageDistanceKm": "",
+  "n": 26
+}
