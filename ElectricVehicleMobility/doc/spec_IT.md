@@ -14,7 +14,7 @@
 
  Elenco delle proprietà  
 
-<sup><sub>Se in un attributo non c'è un tipo è perché potrebbe avere diversi tipi o formati/modello diversi</sub></sup>  
+<sup><sub>Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o formati/modello diversi</sub></sup>  
 - `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: The country. For example, Spain  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
 	- `addressLocality[string]`: La località in cui si trova l'indirizzo di via e che si trova nella regione  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
 	- `addressRegion[string]`: La regione in cui si trova la località, e che si trova nel paese  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
@@ -501,7 +501,7 @@ ElectricVehicleMobility:
 ```  
 </details>  
  VeicoloElettricoMobilità NGSI-v2 esempio normalizzato  
- Ecco un esempio di ElectricVehicleMobility in formato JSON-LD come normalizzato. Ciò è compatibile con NGSI-v2 quando non si utilizzano opzioni e restituisce i dati di contesto di un'entità individuale.  
+ Ecco un esempio di ElectricVehicleMobility in formato JSON-LD come normalizzato, compatibile con NGSI-v2 quando non si utilizzano opzioni e restituisce i dati di contesto di un'entità individuale.  
 <details><summary><strong>mostra/nascondi esempio</strong></summary>    
 ```json  
 {  
@@ -542,8 +542,8 @@ ElectricVehicleMobility:
 }  
 ```  
 </details>  
- VeicoliElettriciMobilità esempio di valori chiave NGSI-LD  
- Ecco un esempio di ElectricVehicleMobility in formato JSON-LD come valori chiave. Ciò è compatibile con NGSI-LD quando si utilizza `options=keyValues` e restituisce i dati di contesto di un'entità individuale.  
+ MobilitàVeicoloElettrico NGSI-LD esempio di valori-chiave  
+ Ecco un esempio di ElectricVehicleMobility in formato JSON-LD come chiavi-valori. Ciò è compatibile con NGSI-LD quando si utilizza `options=keyValues` e restituisce i dati di contesto di un'entità individuale.  
 <details><summary><strong>mostra/nascondi esempio</strong></summary>    
 ```json  
 {  
@@ -564,7 +564,7 @@ ElectricVehicleMobility:
 ```  
 </details>  
  VeicoloElettricoMobilità esempio normalizzato NGSI-LD  
- Ecco un esempio di ElectricVehicleMobility in formato JSON-LD come normalizzato, compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di un'entità individuale.  
+ Ecco un esempio di ElectricVehicleMobility in formato JSON-LD come normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di un'entità individuale.  
 <details><summary><strong>mostra/nascondi esempio</strong></summary>    
 ```json  
 {  
