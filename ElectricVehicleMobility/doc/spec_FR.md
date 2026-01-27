@@ -1,42 +1,42 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
- Entité : Mobilité des véhicules électriques  
+ Entité : MobilitéVéhiculeÉlectrique  
 ===============================<!-- /10-Header -->  
 <!-- 15-License -->  
-[Licence Ouverte](https://github.com/smart-data-models//dataModel.Transportation/blob/master/ElectricVehicleMobility/LICENSE.md)  
+[Licence ouverte](https://github.com/smart-data-models//dataModel.Transportation/blob/master/ElectricVehicleMobility/LICENSE.md)  
 [document généré automatiquement](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
  Description globale : **Observation quotidienne des modèles de mobilité des véhicules électriques agrégés par emplacement, marque de véhicule et région géographique.**  
- Version : 0.0.1  
+ version : 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
- Liste de propriétés  
+ Liste des propriétés  
 
-<sup><sub>Si il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou des formats/patterns différents.</sub></sup>  
+<sup><sub>Si il n'y a pas de type dans un attribut, c'est parce qu'il peut avoir plusieurs types ou différents formats/motifs</sub></sup>  
 - `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: The country. For example, Spain  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: La localité dans laquelle se trouve l'adresse de la rue, et qui se trouve dans la région.  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: La région dans laquelle se trouve la localité, et qui se trouve dans le pays.  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
-	- `district[string]`: Un district est un type de division administrative qui, dans certains pays, est géré par l'administration locale.
-	- `postOfficeBoxNumber[string]`: Le numéro de boîte postale pour les adresses de boîte postale. Par exemple, 03578.  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
-	- `postalCode[string]`: Le code postal. Par exemple, 24004.  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `addressLocality[string]`: La localité dans laquelle se trouve l'adresse de rue, et qui se trouve dans la région  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: La région dans laquelle se trouve la localité, et qui est dans le pays  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Un district est un type de division administrative qui, dans certains pays, est géré par le gouvernement local
+	- `postOfficeBoxNumber[string]`: Le numéro de boîte postale pour les adresses de boîte postale. Par exemple, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: Le code postal. Par exemple, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: L'adresse de la rue  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-	- `streetNr[string]`: Numéro d'identification d'une propriété spécifique sur une rue publique
-- `alternateName[string]`: Un nom alternatif pour cet article  
-
-- `areaServed[string]` : L'aire géographique où un service ou un article offert est fourni.  . Model: [https://schema.org/Text](https://schema.org/Text)- `averageDistanceKm[number]`: Average distance traveled in kilometers  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: Provider of the harmonised data entity  . Model: [https://schema.org/Text](https://schema.org/Text)- `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `dateObserved[date]`: Date of the observation (YYYY-MM-DD)  . Model: [https://schema.org/Date](https://schema.org/Date)- `description[string]`: A description of this item  - `deviceBrand[string]`: Brand or manufacturer of the electric vehicle  . Model: [https://schema.org/Text](https://schema.org/Text)- `district[string]`: District where the observation was made  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: Unique identifier of the entity  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `locationCode[string]`: Official municipality code  . Model: [https://schema.org/Text](https://schema.org/Text)- `municipality[string]`: Municipality where the observation was made  . Model: [https://schema.org/Text](https://schema.org/Text)- `n[number]`: Number of observations used to calculate the average distance  . Model: [https://schema.org/Number](https://schema.org/Number)- `name[string]`: The name of this item  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `region[string]`: Region where the observation was made  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: Original source of the data as a URL  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI entity type. It has to be ElectricVehicleMobility  - `vehicleType[string]`: Type of electric vehicle  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
+	- `streetNr[string]`: Numéro identifiant une propriété spécifique dans une rue publique
+- `alternateName[string]`: Un nom alternatif pour cet article 
+- `areaServed[string]`: La zone géographique où un service ou un article offert est fourni  . Model: [https://schema.org/Text](https://schema.org/Text)- `averageDistanceKm[number]`: Average distance traveled in kilometers  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: Provider of the harmonised data entity  . Model: [https://schema.org/Text](https://schema.org/Text)- `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `dateObserved[date]`: Date of the observation (YYYY-MM-DD)  . Model: [https://schema.org/Date](https://schema.org/Date)- `description[string]`: A description of this item  - `deviceBrand[string]`: Brand or manufacturer of the electric vehicle  . Model: [https://schema.org/Text](https://schema.org/Text)- `district[string]`: District where the observation was made  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: Unique identifier of the entity  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `locationCode[string]`: Official municipality code  . Model: [https://schema.org/Text](https://schema.org/Text)- `municipality[string]`: Municipality where the observation was made  . Model: [https://schema.org/Text](https://schema.org/Text)- `n[number]`: Number of observations used to calculate the average distance  . Model: [https://schema.org/Number](https://schema.org/Number)- `name[string]`: The name of this item  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `region[string]`: Region where the observation was made  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: Original source of the data as a URL  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI entity type. It has to be ElectricVehicleMobility  - `vehicleType[string]`: Type of electric vehicle  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propriétés requises  
-- `id`  - `type`  <!-- /35-Propriétés requises -->  
+- `id`   
+- `type`  
 <!-- 40-NotesYaml -->  
 <!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
  Description du modèle de données des propriétés  
-Tri alphabétique (cliquez pour plus de détails)  
+Triés alphabétiquement (cliquez pour les détails)  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
-<details><summary><strong>Détails complèts YAML</strong></summary>    
+<details><summary><strong>détails complets de yaml</strong></summary>    
 ```yaml  
 ElectricVehicleMobility:    
   description: Daily observation of electric vehicle mobility patterns aggregated by location, vehicle brand, and geographic region.    
@@ -480,10 +480,10 @@ ElectricVehicleMobility:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
- Exemples de payloads  
- Exemple de clés-valeurs NGSI-v2 pour la mobilité des véhicules électriques  
- Voici un exemple d'ElectricVehicleMobility sous forme de JSON-LD en tant que clés-valeurs. Cela est compatible avec NGSI-v2 lorsqu'on utilise `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
-<details><summary><strong>Afficher/Cacher l'exemple</strong></summary>    
+ ## Exemples de charges utiles  
+ Exemple de valeurs clés NGSI-v2 pour ElectricVehicleMobility  
+ Voici un exemple de ElectricVehicleMobility au format JSON-LD en tant que valeurs clés. Ceci est compatible avec NGSI-v2 lors de l'utilisation de `options=keyValues` et retourne les données de contexte d'une entité individuelle.  
+<details><summary><strong>afficher/cacher l'exemple</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:ElectricVehicleMobility:PT:OUTROS-GDPR:OUTROS-GDPR:20251215",  
@@ -499,9 +499,9 @@ ElectricVehicleMobility:
 }  
 ```  
 </details>  
- Exemple normalisé de mobilité de véhicule électrique NGSI-v2  
- Voici un exemple d'ElectricVehicleMobility sous forme de JSON-LD normalisée. Cela est compatible avec NGSI-v2 lorsqu'on ne utilise pas d'options et retourne les données du contexte d'une entité individuelle.  
-<details><summary><strong>Afficher/ masquer l'exemple</strong></summary>    
+ Exemple normalisé ElectricVehicleMobility NGSI-v2  
+ Voici un exemple de ElectricVehicleMobility au format JSON-LD tel que normalisé. Ceci est compatible avec NGSI-v2 lorsqu'on n'utilise pas d'options et retourne les données de contexte d'une entité individuelle.  
+<details><summary><strong>afficher/cacher l'exemple</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:ElectricVehicleMobility:PT:OUTROS-GDPR:OUTROS-GDPR:20251215",  
@@ -541,9 +541,9 @@ ElectricVehicleMobility:
 }  
 ```  
 </details>  
- Exemple de clés-valeurs NGSI-LD pour la mobilité des véhicules électriques  
- Voici un exemple de ElectricVehicleMobility sous format JSON-LD avec des clés-valeurs. Cela est compatible avec NGSI-LD lors de l'utilisation de `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
-<details><summary><strong>Montrer/cacher l'exemple</strong></summary>    
+ Exemple de valeurs clés NGSI-LD pour la mobilité des véhicules électriques  
+ Voici un exemple de ElectricVehicleMobility au format JSON-LD en tant que valeurs clés. Ceci est compatible avec NGSI-LD lors de l'utilisation de `options=keyValues` et retourne les données contextuelles d'une entité individuelle.  
+<details><summary><strong>afficher/cacher l'exemple</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:ElectricVehicleMobility:PT:OUTROS-GDPR:OUTROS-GDPR:20251215",  
@@ -562,9 +562,9 @@ ElectricVehicleMobility:
 }  
 ```  
 </details>  
- Exemple normalisé de mobilité de véhicule électrique NGSI-LD  
- Voici un exemple d'une ElectricVehicleMobility au format JSON-LD normalisé. Cela est compatible avec NGSI-LD lorsqu'on ne utilise pas d'options et renvoie les données du contexte d'une entité individuelle.  
-<details><summary><strong>Afficher/Cacher l'exemple</strong></summary>    
+ Exemple normalisé NGSI-LD de ElectricVehicleMobility  
+ Voici un exemple d'une ElectricVehicleMobility au format JSON-LD tel que normalisé. Ceci est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+<details><summary><strong>afficher/cacher l'exemple</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:ElectricVehicleMobility:PT:OUTROS-GDPR:OUTROS-GDPR:20251215",  
