@@ -7,19 +7,19 @@
 [自動生成ドキュメント](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
- グローバル概要：**ロケーション、車両ブランド、地理的な地域別に集約された電気自動車の移動パターンの毎日の観察**  
+ グローバル概要：**ロケーション、車両ブランド、地理的地域別に集約された電気自動車のモビリティパターンの毎日の観察。**  
  バージョン: 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
  ## プロパティの一覧  
 
-<sup><sub>属性に型がないのは、複数の型や異なる形式/パターンを持つ可能性があるからです</sub></sup>  
+<sup><sub>属性に型がないのは、複数の型や異なる形式/パターンを持つ可能性があるためである</sub></sup>  
 - `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: The country. For example, Spain  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: 街路住所が存在する地域であり、かつその地域が地域に位置する  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: その地方は、地域が所在し、かつ、その国に所在する。  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
-	- `district[string]`: 地区は、一部の国では地方自治体によって管理されるタイプの行政区分の一種です
-	- `postOfficeBoxNumber[string]`: ポストオフィスボックス番号は、ポストオフィスボックス住所の場合に使用します。例えば、03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `addressLocality[string]`: 住所が存在する地域であり、またその地域が所在する地域です。  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: その地方は、自治体が存在し、かつその国に位置する地域です。  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 地区は、一部の国では地方自治体によって管理される行政区画の一種です
+	- `postOfficeBoxNumber[string]`: 郵便ポストボックス番号は、ポストオフィスボックスアドレスの場合に使用されます。たとえば、03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: 郵便番号。例えば、24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 住所  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
 	- `streetNr[string]`: 公道上の特定の物件を識別する番号
@@ -37,7 +37,7 @@
 アルファベット順（詳細）  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
-<details><summary><strong>フルYAML詳細</strong></summary>    
+<details><summary><strong>フルヤムル詳細</strong></summary>    
 ```yaml  
 ElectricVehicleMobility:    
   description: Daily observation of electric vehicle mobility patterns aggregated by location, vehicle brand, and geographic region.    
@@ -483,7 +483,7 @@ ElectricVehicleMobility:
 <!-- 80-Examples -->  
  ## 例のペイロード  
  電気自動車モビリティNGSI-v2キー値の例  
- ここはJSON-LD形式のElectricVehicleMobilityの例としてキー値を示すものです。これは、`options=keyValues`を使用してNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+ ここに、JSON-LD形式のElectricVehicleMobilityの例がキー値として記述されています。これは、`options=keyValues`を使用してNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>表示/非表示の例</strong></summary>    
 ```json  
 {  
@@ -500,7 +500,7 @@ ElectricVehicleMobility:
 }  
 ```  
 </details>  
- 電気自動車モビリティ NGSI-v2 正規化例  
+ 電気自動車モビリティNGSI-v2正規化例  
  ここには、JSON-LD形式で正規化されたElectricVehicleMobilityの例が示されています。これは、オプションを使用しない場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>表示/非表示の例</strong></summary>    
 ```json  
@@ -542,8 +542,8 @@ ElectricVehicleMobility:
 }  
 ```  
 </details>  
- 電気自動車モビリティNGSI-LD キー値の例  
- JSON-LD形式のElectricVehicleMobilityの例はこちらです。ここではキーと値のペアで表現されています。これは、`options=keyValues`を使用してNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+ 電気自動車モビリティ NGSI-LD キー値の例  
+ ここには、JSON-LD形式のElectricVehicleMobilityの例がキー値として記載されています。これは、`options=keyValues`を使用してNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>表示/非表示の例</strong></summary>    
 ```json  
 {  
@@ -563,8 +563,8 @@ ElectricVehicleMobility:
 }  
 ```  
 </details>  
- 電気自動車モビリティNGSI-LD正規化例  
- ここには、JSON-LD形式で正規化されたElectricVehicleMobilityの例が示されています。これは、オプションを使用しない場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+ 電気自動車モビリティ NGSI-LD 正規化例  
+ ここに、JSON-LD形式で正規化されたElectricVehicleMobilityの例が示されています。これは、オプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>表示/非表示の例</strong></summary>    
 ```json  
 {  
@@ -618,4 +618,4 @@ ElectricVehicleMobility:
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
-[スマートデータモデル](https://smartdatamodels.org) +++ [貢献マニュアル](https://bit.ly/contribution_manual)  
+[スマートデータモデル](https://smartdatamodels.org) +++ [寄付マニュアル](https://bit.ly/contribution_manual)  
