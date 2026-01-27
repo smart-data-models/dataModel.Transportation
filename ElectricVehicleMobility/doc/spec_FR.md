@@ -22,7 +22,7 @@
 	- `postOfficeBoxNumber[string]`: Le numéro de boîte postale pour les adresses de boîte postale, par exemple 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: Le code postal. Par exemple, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: L'adresse de la rue  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-	- `streetNr[string]`: Numéro d'identification d'une propriété spécifique sur une rue publique
+	- `streetNr[string]`: Numéro identifiant une propriété spécifique sur une rue publique
 - `alternateName[string]`: Un nom alternatif pour cet élément 
 - `areaServed[string]` : La zone géographique où un service ou un élément proposé est fourni  . Model: [https://schema.org/Text](https://schema.org/Text)- `averageDistanceKm[number]`: Average distance traveled in kilometers  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: Provider of the harmonised data entity  . Model: [https://schema.org/Text](https://schema.org/Text)- `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `dateObserved[date]`: Date of the observation (YYYY-MM-DD)  . Model: [https://schema.org/Date](https://schema.org/Date)- `description[string]`: A description of this item  - `deviceBrand[string]`: Brand or manufacturer of the electric vehicle  . Model: [https://schema.org/Text](https://schema.org/Text)- `district[string]`: District where the observation was made  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: Unique identifier of the entity  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `locationCode[string]`: Official municipality code  . Model: [https://schema.org/Text](https://schema.org/Text)- `municipality[string]`: Municipality where the observation was made  . Model: [https://schema.org/Text](https://schema.org/Text)- `n[number]`: Number of observations used to calculate the average distance  . Model: [https://schema.org/Number](https://schema.org/Number)- `name[string]`: The name of this item  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `region[string]`: Region where the observation was made  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: Original source of the data as a URL  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI entity type. It has to be ElectricVehicleMobility  - `vehicleType[string]`: Type of electric vehicle  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
@@ -33,8 +33,8 @@ Propriétés requises
 <!-- 40-NotesYaml -->  
 <!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
- Description du modèle de données des propriétés  
-Classé par ordre alphabétique (cliquez pour plus de détails)  
+ ## Description du modèle de données des propriétés  
+Classés par ordre alphabétique (cliquez pour plus de détails)  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>détails yaml complets</strong></summary>    
@@ -481,7 +481,7 @@ ElectricVehicleMobility:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
- Exemples de charges utiles  
+ ## Exemples de charges utiles  
  VéhiculeÉlectriqueMobilité Exemple de valeurs-clés NGSI-v2  
  Voici un exemple d'ElectricVehicleMobility au format JSON-LD sous forme de paires clé-valeur. Ceci est compatible avec NGSI-v2 lors de l'utilisation de `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
 <details><summary><strong>afficher/masquer exemple</strong></summary>    
@@ -501,7 +501,7 @@ ElectricVehicleMobility:
 ```  
 </details>  
  VéhiculeÉlectriqueMobilité NGSI-v2 exemple normalisé  
- Voici un exemple de ElectricVehicleMobility au format JSON-LD normalisé. Ceci est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et retourne les données de contexte d'une entité individuelle.  
+ Voici un exemple d'ElectricVehicleMobility au format JSON-LD normalisé. Ceci est compatible avec NGSI-v2 lorsqu'aucune option n'est utilisée et renvoie les données de contexte d'une entité individuelle.  
 <details><summary><strong>afficher/masquer exemple</strong></summary>    
 ```json  
 {  
@@ -542,8 +542,8 @@ ElectricVehicleMobility:
 }  
 ```  
 </details>  
- VéhiculeÉlectriqueMobilité Exemple de valeurs clés NGSI-LD  
- Voici un exemple d'ElectricVehicleMobility au format JSON-LD sous forme de paires clé-valeur. Ceci est compatible avec NGSI-LD lors de l'utilisation de `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
+ VéhiculeÉlectriqueMobilité Exemple de valeurs-clés NGSI-LD  
+ Voici un exemple de ElectricVehicleMobility au format JSON-LD sous forme de paires clé-valeur. Ceci est compatible avec NGSI-LD lors de l'utilisation de `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
 <details><summary><strong>afficher/masquer exemple</strong></summary>    
 ```json  
 {  
@@ -564,7 +564,7 @@ ElectricVehicleMobility:
 ```  
 </details>  
  VéhiculeÉlectriqueMobilité Exemple normalisé NGSI-LD  
- Voici un exemple d'ElectricVehicleMobility au format JSON-LD normalisé. Ceci est compatible avec NGSI-LD lorsqu'aucune option n'est utilisée et renvoie les données de contexte d'une entité individuelle.  
+ Voici un exemple d'ElectricVehicleMobility au format JSON-LD normalisé. Ceci est compatible avec NGSI-LD lorsqu'aucune option n'est utilisée et retourne les données de contexte d'une entité individuelle.  
 <details><summary><strong>afficher/masquer exemple</strong></summary>    
 ```json  
 {  
@@ -614,7 +614,7 @@ ElectricVehicleMobility:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
- Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de gérer les unités de grandeur  
+ Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de gérer les unités de magnitude  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
