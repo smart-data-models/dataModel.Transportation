@@ -7,19 +7,19 @@
 [자동으로 생성된 문서](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
- 전역 설명: 위치, 차량 브랜드, 지리적 지역별 전기차 이동 패턴의 일일 관찰 집계  
+ 전역 설명: 위치, 차량 브랜드, 지리적 지역별로 집계된 전기차 이동 패턴에 대한 일일 관찰  
  버전: 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
  ## 속성 목록  
 
-<sup><sub>속성에 유형이 없으면 여러 유형이나 서로 다른 형식/패턴을 가질 수 있기 때문이다</sub></sup>  
+<sup><sub>속성에 유형이 없다면 그것은 여러 유형이나 서로 다른 형식/패턴을 가질 수 있기 때문이다</sub></sup>  
 - `address[object]`: 우편 주소  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: The country. For example, Spain  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: 그 거리 주소가 있는 지역이며, 또한 그 지역에 있는 지역  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: 그 지역은 그 지방이 있으며, 그 국가에 있습니다  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
-	- `district[string]`: 구는 일부 국가에서 지방 정부가 관리하는 유형의 행정 구역입니다
-	- `postOfficeBoxNumber[string]`: 우체국 사서함 번호는 우체국 사서함 주소에 사용됩니다. 예를 들어, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `addressLocality[string]`: 그 거리 주소가 속한 지역이자 그 지역에 있는  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: 그 지역은 지자체가 위치하고 있으며, 그 국가에 있습니다  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 구는 일부 국가에서 지방 정부에 의해 관리되는 유형의 행정 구역입니다
+	- `postOfficeBoxNumber[string]`: 우체국 사서함 주소의 사서함 번호입니다. 예를 들어, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: 우편번호, 예를 들어 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 도로 주소  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
 	- `streetNr[string]`: 공공 도로상 특정 부동산을 식별하는 번호
@@ -29,12 +29,12 @@
 필수 속성  
 - `id`   
 - `type`   
-<!-- /35-필수속성 -->  
+<!-- /35-필수 속성 -->  
 <!-- 40-NotesYaml -->  
 <!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
  ## 데이터 모델 속성 설명  
-가나다 순으로 정렬됨(자세한 정보 클릭)  
+알파벳 순으로 정렬됨(자세한 정보 클릭)  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>전체 yaml 세부 정보</strong></summary>    
@@ -481,10 +481,10 @@ ElectricVehicleMobility:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
- ## 예제 페이로드  
- 전기차 모빌리티 NGSI-v2 키-값 예시  
- JSON-LD 형식의 키-값으로 된 ElectricVehicleMobility의 예는 다음과 같습니다. 이는 `options=keyValues`를 사용하여 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
-<details><summary><strong>보기/숨기기 예시</strong></summary>    
+ ## 예시 페이로드  
+ 전기차 이동성 NGSI-v2 키-값 예시  
+ JSON-LD 형식의 키-값으로 된 ElectricVehicleMobility의 예는 다음과 같습니다. 이것은 `options=keyValues`를 사용할 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
+<details><summary><strong>예시 표시/숨기기</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:ElectricVehicleMobility:PT:OUTROS-GDPR:OUTROS-GDPR:20251215",  
@@ -500,9 +500,9 @@ ElectricVehicleMobility:
 }  
 ```  
 </details>  
- 전기차이동성 NGSI-v2 표준화 예시  
- 이것은 JSON-LD 형식으로 정규화된 ElectricVehicleMobility의 예입니다. 옵션을 사용하지 않을 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
-<details><summary><strong>보기/숨기기 예시</strong></summary>    
+ 전기차이동성 NGSI-v2 정규화 예시  
+ JSON-LD 형식으로 정규화된 ElectricVehicleMobility의 예는 다음과 같다. 옵션을 사용하지 않을 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환한다.  
+<details><summary><strong>예시 표시/숨기기</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:ElectricVehicleMobility:PT:OUTROS-GDPR:OUTROS-GDPR:20251215",  
@@ -542,8 +542,8 @@ ElectricVehicleMobility:
 }  
 ```  
 </details>  
- 전기차 이동성 NGSI-LD 키-값 예시  
- 이것은 JSON-LD 형식의 키-값으로 ElectricVehicleMobility의 예입니다. 이것은 `options=keyValues`를 사용할 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
+ 전기차 모빌리티 NGSI-LD 키-값 예시  
+ 이것은 JSON-LD 형식의 ElectricVehicleMobility의 예시로서 키-값으로 제공됩니다. 이것은 `options=keyValues`를 사용할 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>보기/숨기기 예시</strong></summary>    
 ```json  
 {  
@@ -563,8 +563,8 @@ ElectricVehicleMobility:
 }  
 ```  
 </details>  
- 전기차이동성 NGSI-LD 정규화 예시  
- JSON-LD 형식으로 정규화된 ElectricVehicleMobility의 예는 다음과 같다. 옵션을 사용하지 않을 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환한다.  
+ 전기차 이동성 NGSI-LD 정형화 예시  
+ JSON-LD 형식으로 정규화된 ElectricVehicleMobility의 예는 다음과 같습니다. 옵션을 사용하지 않을 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>보기/숨기기 예시</strong></summary>    
 ```json  
 {  
@@ -614,7 +614,7 @@ ElectricVehicleMobility:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
- [FAQ 10](https://smartdatamodels.org/index.php/faqs/)을 참조하여 크기 단위에 대한 처리 방법에 대한 답변을 얻으십시오  
+ [FAQ 10](https://smartdatamodels.org/index.php/faqs/)을 참조하여 크기 단위 처리 방법에 대한 답변을 얻으십시오  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
