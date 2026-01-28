@@ -14,9 +14,9 @@
 
  Liste des propriétés  
 
-<sup><sub>Si il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/motifs</sub></sup>  
+<sup><sub>Si il n'y a pas de type dans un attribut, c'est parce qu'il peut avoir plusieurs types ou différents formats/motifs</sub></sup>  
 - `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: The country. For example, Spain  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: La localité dans laquelle se trouve l'adresse de rue, et qui est dans la région  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressLocality[string]`: La localité dans laquelle se trouve l'adresse de rue, et qui se trouve dans la région  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
 	- `addressRegion[string]`: La région dans laquelle se trouve la localité, et qui est dans le pays  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
 	- `district[string]`: Un district est un type de division administrative qui, dans certains pays, est géré par le gouvernement local
 	- `postOfficeBoxNumber[string]`: Le numéro de boîte postale pour les adresses de boîte postale. Par exemple, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
@@ -28,8 +28,7 @@
 <!-- 35-RequiredProperties -->  
 Propriétés requises  
 - `id`   
-- `type`   
-<!-- /35-RequiredProperties -->  
+- `type`  
 <!-- 40-NotesYaml -->  
 <!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
@@ -483,7 +482,7 @@ ElectricVehicleMobility:
 <!-- 80-Examples -->  
  ## Exemples de charges utiles  
  Exemple de valeurs clés NGSI-v2 pour ElectricVehicleMobility  
- Voici un exemple de ElectricVehicleMobility au format JSON-LD en tant que valeurs clés. Ceci est compatible avec NGSI-v2 lors de l'utilisation de `options=keyValues` et retourne les données contextuelles d'une entité individuelle.  
+ Voici un exemple de ElectricVehicleMobility au format JSON-LD en tant que valeurs clés. Ceci est compatible avec NGSI-v2 lors de l'utilisation de `options=keyValues` et retourne les données de contexte d'une entité individuelle.  
 <details><summary><strong>afficher/cacher l'exemple</strong></summary>    
 ```json  
 {  
