@@ -1,0 +1,280 @@
+{
+    "@id": "dtmi:com:ngsi-ld:ElectricVehicleMobility;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "Electric Vehicle Mobility adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/ElectricVehicleMobility/schema.json",
+    "description": "Daily observation of electric vehicle mobility patterns aggregated by location, vehicle brand, and geographic region.",
+    "displayName": "ElectricVehicleMobility",
+    "contents": [
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The geographic area where a service or offered item is provided"
+        },
+        {
+            "name": "averageDistanceKm",
+            "writable": true,
+            "displayName": "averageDistanceKm",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Average distance traveled in kilometers"
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Provider of the harmonised data entity"
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform"
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform"
+        },
+        {
+            "name": "dateObserved",
+            "writable": true,
+            "displayName": "dateObserved",
+            "@type": "Property",
+            "schema": "date",
+            "comment": "Date of the observation (YYYY-MM-DD)"
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "deviceBrand",
+            "writable": true,
+            "displayName": "deviceBrand",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Brand or manufacturer of the electric vehicle"
+        },
+        {
+            "name": "district",
+            "writable": true,
+            "displayName": "district",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "District where the observation was made"
+        },
+        {
+            "name": "locationCode",
+            "writable": true,
+            "displayName": "locationCode",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Official municipality code"
+        },
+        {
+            "name": "municipality",
+            "writable": true,
+            "displayName": "municipality",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Municipality where the observation was made"
+        },
+        {
+            "name": "n",
+            "writable": true,
+            "displayName": "n",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Number of observations used to calculate the average distance"
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item"
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Original source of the data as a URL"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "district",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetNr",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPolygon",
+            "schema": "multiPolygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "region",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "CONTINENTE",
+                        "displayName": "CONTINENTE",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "A\u00c7ORES",
+                        "displayName": "A\u00c7ORES",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "MADEIRA",
+                        "displayName": "MADEIRA",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "Outros - GDPR",
+                        "displayName": "Outros - GDPR",
+                        "enumValue": 4
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "vehicleType",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "BEV",
+                        "displayName": "BEV",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "PHEV",
+                        "displayName": "PHEV",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "HEV",
+                        "displayName": "HEV",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "FCEV",
+                        "displayName": "FCEV",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "unknown",
+                        "displayName": "unknown",
+                        "enumValue": 5
+                    }
+                ]
+            }
+        }
+    ]
+}
