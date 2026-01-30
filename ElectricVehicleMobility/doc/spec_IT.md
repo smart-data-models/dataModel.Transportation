@@ -1,44 +1,93 @@
-<!-- 10-Header -->  
+<!-- 10-Header -->
+  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
- Entità: MobilitàVeicoliElettrici  
-===============================<!-- /10-Header -->  
-<!-- 15-License -->  
-[Licenza Aperta](https://github.com/smart-data-models//dataModel.Transportation/blob/master/ElectricVehicleMobility/LICENSE.md)  
+
+Entità: ElectricVehicleMobility  
+===============================
+<!-- /10-Header -->
+  
+<!-- 15-License -->
+  
+
+[Licenza aperta](https://github.com/smart-data-models//dataModel.Transportation/blob/master/ElectricVehicleMobility/LICENSE.md)  
+
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-<!-- /15-License -->  
-<!-- 20-Description -->  
- Descrizione globale: **Osservazione quotidiana dei modelli di mobilità dei veicoli elettrici aggregati per località, marchio di veicolo e regione geografica.**  
- versione: 0.0.1  
-<!-- /20-Description -->  
-<!-- 30-PropertiesList -->  
+<!-- /15-License -->
+  
+<!-- 20-Description -->
+  
 
- Elenco delle proprietà  
+Global description: **Osservazione quotidiana dei modelli di mobilità dei veicoli elettrici aggregati per posizione, marca del veicolo e regione geografica.**  
 
-<sup><sub>Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o formati/modello diversi</sub></sup>  
-- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: The country. For example, Spain  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: La località in cui si trova l'indirizzo di via e che si trova nella regione  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+version: 0.0.1  
+<!-- /20-Description -->
+  
+<!-- 30-PropertiesList -->
+  
+
+
+## Elenco delle proprietà  
+
+
+<sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o formati/pattern diversi</sub></sup>  
+- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)
+	- `addressCountry[string]`: Il paese. Ad esempio, la Spagna  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: La località in cui si trova l'indirizzo stradale e che si trova nella regione  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
 	- `addressRegion[string]`: La regione in cui si trova la località, e che si trova nel paese  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
-	- `district[string]`: Un distretto è un tipo di divisione amministrativa che, in alcuni paesi, è gestito dal governo locale
+	- `district[string]`: Un distretto è un tipo di divisione amministrativa che, in alcuni paesi, è gestita dal governo locale
 	- `postOfficeBoxNumber[string]`: Il numero di casella postale per gli indirizzi di casella postale. Ad esempio, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: Il codice postale. Ad esempio, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
-	- `streetAddress[string]`: L'indirizzo di via  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-	- `streetNr[string]`: Numero che identifica una proprietà specifica in una strada pubblica
-- `alternateName[string]`: Un nome alternativo per questo elemento   
-- `areaServed[string]`: L'area geografica in cui viene fornito un servizio o un elemento offerto  . Model: [https://schema.org/Text](https://schema.org/Text)- `averageDistanceKm[number]`: Average distance traveled in kilometers  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: Provider of the harmonised data entity  . Model: [https://schema.org/Text](https://schema.org/Text)- `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `dateObserved[date]`: Date of the observation (YYYY-MM-DD)  . Model: [https://schema.org/Date](https://schema.org/Date)- `description[string]`: A description of this item  - `deviceBrand[string]`: Brand or manufacturer of the electric vehicle  . Model: [https://schema.org/Text](https://schema.org/Text)- `district[string]`: District where the observation was made  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: Unique identifier of the entity  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `locationCode[string]`: Official municipality code  . Model: [https://schema.org/Text](https://schema.org/Text)- `municipality[string]`: Municipality where the observation was made  . Model: [https://schema.org/Text](https://schema.org/Text)- `n[number]`: Number of observations used to calculate the average distance  . Model: [https://schema.org/Number](https://schema.org/Number)- `name[string]`: The name of this item  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `region[string]`: Region where the observation was made  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: Original source of the data as a URL  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI entity type. It has to be ElectricVehicleMobility  - `vehicleType[string]`: Type of electric vehicle  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
-<!-- 35-RequiredProperties -->  
+	- `streetAddress[string]`: L'indirizzo stradale  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Numero civico
+- `alternateName[string]`: Un nome alternativo per questo articolo
+- `areaServed[string]`: L'area geografica in cui viene fornito un servizio o un articolo offerto  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `averageDistanceKm[number]`: Distanza media percorsa in chilometri  . Model: [https://schema.org/Number](https://schema.org/Number)
+- `dataProvider[string]`: Fornitore dell'entità di dati armonizzati  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `dateCreated[date-time]`: Timestamp di creazione dell'entità. Questo di solito viene allocato dalla piattaforma di archiviazione
+- `dateModified[date-time]`: Timestamp dell'ultima modifica dell'entità. Questo di solito verrà allocato dalla piattaforma di archiviazione
+- `dateObserved[date]`: Data dell'osservazione (YYYY-MM-DD)  . Model: [https://schema.org/Date](https://schema.org/Date)
+- `description[string]`: Una descrizione di questo articolo
+- `deviceBrand[string]`: Marca o produttore del veicolo elettrico  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `district[string]`: Distretto in cui è stata effettuata l'osservazione  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `id[*]`: Identificatore univoco dell'entità
+- `location[*]`: Riferimento Geojson dell'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon
+- `locationCode[string]`: Codice ufficiale del comune  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `municipality[string]`: Comune dove è stata effettuata l'osservazione  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `n[number]`: Numero di osservazioni utilizzate per calcolare la distanza media  . Model: [https://schema.org/Number](https://schema.org/Number)
+- `name[string]`: Il nome di questo articolo
+- `owner[array]`: Un elenco contenente una sequenza di caratteri codificati JSON che fanno riferimento agli ID univoci del proprietario/i
+- `region[string]`: Regione in cui è stata effettuata l'osservazione  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento
+- `source[string]`: Fonte originale dei dati come URL  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `type[string]`: Tipo di entità NGSI. Deve essere ElectricVehicleMobility
+- `vehicleType[string]`: Tipo di veicolo elettrico  . Model: [https://schema.org/Text](https://schema.org/Text)
+<!-- /30-PropertiesList -->
+  
+<!-- 35-RequiredProperties -->
+  
+
 Proprietà richieste  
-- `id`   
-- `tipo`   
-<!-- /35-ProprietàObbligatorie -->  
-<!-- 40-NotesYaml -->  
-<!-- /40-NotesYaml -->  
-<!-- 50-DataModelHeader -->  
- ## Descrizione del modello di dati delle proprietà  
+- `id`  
+- `type`  
+<!-- /35-RequiredProperties -->
+  
+<!-- 40-NotesYaml -->
+  
+<!-- /40-NotesYaml -->
+  
+<!-- 50-DataModelHeader -->
+  
+
+## Descrizione del modello di dati delle proprietà  
+
 Ordinati alfabeticamente (clicca per i dettagli)  
-<!-- /50-DataModelHeader -->  
-<!-- 60-ModelYaml -->  
+<!-- /50-DataModelHeader -->
+  
+<!-- 60-ModelYaml -->
+  
 <details><summary><strong>dettagli yaml completi</strong></summary>    
-```yaml  
+
+```yaml  
 ElectricVehicleMobility:    
   description: Daily observation of electric vehicle mobility patterns aggregated by location, vehicle brand, and geographic region.    
   properties:    
@@ -477,16 +526,25 @@ ElectricVehicleMobility:
   x-version: 0.0.1    
 ```  
 </details>    
-<!-- /60-ModelYaml -->  
-<!-- 70-MiddleNotes -->  
-<!-- /70-MiddleNotes -->  
-<!-- 80-Examples -->  
- Esempi di payload  
- VeicoliElettriciMobilità Esempio di valori chiave NGSI-v2  
- Ecco un esempio di ElectricVehicleMobility in formato JSON-LD come valori chiave. Ciò è compatibile con NGSI-v2 quando si utilizza `options=keyValues` e restituisce i dati di contesto di un'entità individuale.  
+<!-- /60-ModelYaml -->
+  
+<!-- 70-MiddleNotes -->
+  
+<!-- /70-MiddleNotes -->
+  
+<!-- 80-Examples -->
+  
+
+## Esempi di payload  
+
+#### Esempio di valori chiave ElectricVehicleMobility NGSI-v2  
+
+Ecco un esempio di ElectricVehicleMobility in formato JSON-LD come valori chiave. Questo è compatibile con NGSI-v2 quando si utilizza `options=keyValues` e restituisce i dati di contesto di un'entità individuale.  
 <details><summary><strong>mostra/nascondi esempio</strong></summary>    
-```json  
-{  
+
+```json  
+
+{  
   "id": "urn:ngsi-ld:ElectricVehicleMobility:PT:OUTROS-GDPR:OUTROS-GDPR:20251215",  
   "type": "ElectricVehicleMobility",  
   "dateObserved": "2025-12-15",  
@@ -500,11 +558,15 @@ ElectricVehicleMobility:
 }  
 ```  
 </details>  
- VeicoloElettricoMobilità NGSI-v2 esempio normalizzato  
- Ecco un esempio di ElectricVehicleMobility in formato JSON-LD come normalizzato, compatibile con NGSI-v2 quando non si utilizzano opzioni e restituisce i dati di contesto di un'entità individuale.  
+
+#### Esempio normalizzato ElectricVehicleMobility NGSI-v2  
+
+Ecco un esempio di ElectricVehicleMobility in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano opzioni e restituisce i dati di contesto di un'entità individuale.  
 <details><summary><strong>mostra/nascondi esempio</strong></summary>    
-```json  
-{  
+
+```json  
+
+{  
   "id": "urn:ngsi-ld:ElectricVehicleMobility:PT:OUTROS-GDPR:OUTROS-GDPR:20251215",  
   "type": "ElectricVehicleMobility",  
   "dateObserved": {  
@@ -542,11 +604,15 @@ ElectricVehicleMobility:
 }  
 ```  
 </details>  
- MobilitàVeicoloElettrico NGSI-LD esempio di valori-chiave  
- Ecco un esempio di ElectricVehicleMobility in formato JSON-LD come chiavi-valori. Ciò è compatibile con NGSI-LD quando si utilizza `options=keyValues` e restituisce i dati di contesto di un'entità individuale.  
+
+#### Esempio di valori chiave NGSI-LD per la mobilità dei veicoli elettrici  
+
+Ecco un esempio di ElectricVehicleMobility in formato JSON-LD come valori-chiave. Ciò è compatibile con NGSI-LD quando si utilizza `options=keyValues` e restituisce i dati di contesto di un'entità individuale.  
 <details><summary><strong>mostra/nascondi esempio</strong></summary>    
-```json  
-{  
+
+```json  
+
+{  
   "id": "urn:ngsi-ld:ElectricVehicleMobility:PT:OUTROS-GDPR:OUTROS-GDPR:20251215",  
   "type": "ElectricVehicleMobility",  
   "dateObserved": "2025-12-15",  
@@ -563,11 +629,15 @@ ElectricVehicleMobility:
 }  
 ```  
 </details>  
- VeicoloElettricoMobilità esempio normalizzato NGSI-LD  
- Ecco un esempio di ElectricVehicleMobility in formato JSON-LD come normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di un'entità individuale.  
+
+#### Esempio normalizzato ElectricVehicleMobility NGSI-LD  
+
+Ecco un esempio di ElectricVehicleMobility in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di un'entità individuale.  
 <details><summary><strong>mostra/nascondi esempio</strong></summary>    
-```json  
-{  
+
+```json  
+
+{  
   "id": "urn:ngsi-ld:ElectricVehicleMobility:PT:OUTROS-GDPR:OUTROS-GDPR:20251215",  
   "type": "ElectricVehicleMobility",  
   "dateObserved": {  
@@ -610,12 +680,21 @@ ElectricVehicleMobility:
   ]  
 }  
 ```  
-</details><!-- /80-Examples -->  
-<!-- 90-FooterNotes -->  
-<!-- /90-FooterNotes -->  
-<!-- 95-Units -->  
- Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza  
-<!-- /95-Units -->  
-<!-- 97-LastFooter -->  
+</details><!-- /80-Examples -->
+  
+<!-- 90-FooterNotes -->
+  
+<!-- /90-FooterNotes -->
+  
+<!-- 95-Units -->
+  
+
+Vedi [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di misura della grandezza  
+<!-- /95-Units -->
+  
+<!-- 97-LastFooter -->
+  
 ---  
-[Modelli di Dati Intelligenti](https://smartdatamodels.org) +++ [Manuale di contribuzione](https://bit.ly/contribution_manual)  
+
+[Modelli di dati intelligenti](https://smartdatamodels.org) +++ [Manuale dei contributi](https://bit.ly/contribution_manual)  
+  
