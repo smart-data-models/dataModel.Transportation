@@ -1,44 +1,93 @@
-<!-- 10-Header -->  
+<!-- 10-Header -->
+  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
- 電気自動車モビリティ  
-===============================<!-- /10-Header -->  
-<!-- 15-License -->  
-[オープンライセンス](https://github.com/smart-data-models//dataModel.Transportation/blob/master/ElectricVehicleMobility/LICENSE.md)  
-[自動生成ドキュメント](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-<!-- /15-License -->  
-<!-- 20-Description -->  
- グローバル概要：**ロケーション、車両ブランド、地理的地域別に集約された電気自動車のモビリティパターンの毎日の観察。**  
- バージョン: 0.0.1  
-<!-- /20-Description -->  
-<!-- 30-PropertiesList -->  
 
- ## プロパティの一覧  
+エンティティ: ElectricVehicleMobility  
+===============================
+<!-- /10-Header -->
+  
+<!-- 15-License -->
+  
 
-<sup><sub>属性に型がないのは、複数の型や異なる形式/パターンを持つ可能性があるためである</sub></sup>  
-- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: The country. For example, Spain  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: 住所が存在する地域であり、またその地域が所在する地域です。  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: その地方は、自治体が存在し、かつその国に位置する地域です。  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
-	- `district[string]`: 地区は、一部の国では地方自治体によって管理される行政区画の一種です
-	- `postOfficeBoxNumber[string]`: 郵便ポストボックス番号は、ポストオフィスボックスアドレスの場合に使用されます。たとえば、03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
-	- `postalCode[string]`: 郵便番号。例えば、24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
-	- `streetAddress[string]`: 住所  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+[オープンレース](https://github.com/smart-data-models//dataModel.Transportation/blob/master/ElectricVehicleMobility/LICENSE.md)  
+
+[自動生成されたドキュメント](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->
+  
+<!-- 20-Description -->
+  
+
+Global description: **場所、車両ブランド、地理的地域別に集約された電気自動車のモビリティパターンの日々の観察**  
+
+version: 0.0.1  
+<!-- /20-Description -->
+  
+<!-- 30-PropertiesList -->
+  
+
+
+## プロパティ一覧  
+
+
+<sup><sub>属性に型がない場合、複数の型や異なるフォーマット/パターンがあり得るためである</sub></sup>  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)
+	- `addressCountry[string]`: 国。例えば、スペイン  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: その通り住所がある地域であり、かつ当該地域内にある地方自治体  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: その地方のある地域、およびその地域がある国  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 地区とは、ある国において地方自治体によって管理される行政区分の一種である。
+	- `postOfficeBoxNumber[string]`: 郵便受けの住所に使用する郵便箱番号（例：03578）  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: 郵便番号。例：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: 番地  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
 	- `streetNr[string]`: 公道上の特定の物件を識別する番号
-- `alternateName[string]`: このアイテムの別名 
-- `areaServed[string]`: サービスまたは提供されるアイテムが提供される地理的なエリア  . Model: [https://schema.org/Text](https://schema.org/Text)- `averageDistanceKm[number]`: Average distance traveled in kilometers  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: Provider of the harmonised data entity  . Model: [https://schema.org/Text](https://schema.org/Text)- `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `dateObserved[date]`: Date of the observation (YYYY-MM-DD)  . Model: [https://schema.org/Date](https://schema.org/Date)- `description[string]`: A description of this item  - `deviceBrand[string]`: Brand or manufacturer of the electric vehicle  . Model: [https://schema.org/Text](https://schema.org/Text)- `district[string]`: District where the observation was made  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: Unique identifier of the entity  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `locationCode[string]`: Official municipality code  . Model: [https://schema.org/Text](https://schema.org/Text)- `municipality[string]`: Municipality where the observation was made  . Model: [https://schema.org/Text](https://schema.org/Text)- `n[number]`: Number of observations used to calculate the average distance  . Model: [https://schema.org/Number](https://schema.org/Number)- `name[string]`: The name of this item  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `region[string]`: Region where the observation was made  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: Original source of the data as a URL  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI entity type. It has to be ElectricVehicleMobility  - `vehicleType[string]`: Type of electric vehicle  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
-<!-- 35-RequiredProperties -->  
-必要なプロパティ  
-- `id`   
-- `type`   
-<!-- /35-RequiredProperties -->  
-<!-- 40-NotesYaml -->  
-<!-- /40-NotesYaml -->  
-<!-- 50-DataModelHeader -->  
- ## プロパティのデータモデル説明  
-アルファベット順（詳細）  
-<!-- /50-DataModelHeader -->  
-<!-- 60-ModelYaml -->  
-<details><summary><strong>フルヤムル詳細</strong></summary>    
-```yaml  
+- `alternateName[string]`: このアイテムの別名
+- `areaServed[string]`: サービスまたは提供品目の提供が行われる地理的エリア  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `averageDistanceKm[number]`: 平均移動距離（キロメートル）  . Model: [https://schema.org/Number](https://schema.org/Number)
+- `dataProvider[string]`: 調整されたデータエンティティのプロバイダー  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `dateCreated[date-time]`: エンティティ作成タイムスタンプ。これは通常、ストレージ プラットフォームによって割り当てられる。
+- `dateModified[date-time]`: エンティティの最後の変更のタイムスタンプ。通常は、ストレージ プラットフォームによって割り当てられる。
+- `dateObserved[date]`: 観測日（YYYY-MM-DD）  . Model: [https://schema.org/Date](https://schema.org/Date)
+- `description[string]`: このアイテムの説明
+- `deviceBrand[string]`: 電気自動車のブランドまたはメーカー  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `district[string]`: 観測が行われた地区  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `id[*]`: エンティティのユニーク識別子
+- `location[*]`: アイテムへのGeojsonリファレンス。Point、LineString、Polygon、MultiPoint、MultiLineStringまたはMultiPolygonになります。
+- `locationCode[string]`: 公式町村コード  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `municipality[string]`: 観察が行われた自治体  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `n[number]`: 平均距離を計算するために使用される観測数  . Model: [https://schema.org/Number](https://schema.org/Number)
+- `name[string]`: このアイテムの名前
+- `owner[array]`: 所有者（一人または複数）のユニークなIDを参照するJSONエンコードされた文字シーケンスを含むリスト
+- `region[string]`: 観測が行われた地域  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `seeAlso[*]`: アイテムに関する追加リソースへのURIのリスト
+- `source[string]`: データの元の出典先のURL  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `type[string]`: NGSIエンティティタイプ。 ElectricVehicleMobilityである必要があります。
+- `vehicleType[string]`: 電気自動車の種類  . Model: [https://schema.org/Text](https://schema.org/Text)
+<!-- /30-PropertiesList -->
+  
+<!-- 35-RequiredProperties -->
+  
+
+必須プロパティ  
+- `id`  
+- `type`  
+<!-- /35-RequiredProperties -->
+  
+<!-- 40-NotesYaml -->
+  
+<!-- /40-NotesYaml -->
+  
+<!-- 50-DataModelHeader -->
+  
+
+## プロパティのデータモデル記述  
+
+アルファベット順に並べ替え（詳細はクリック）  
+<!-- /50-DataModelHeader -->
+  
+<!-- 60-ModelYaml -->
+  
+<details><summary><strong>YAMLの詳細全体</strong></summary>    
+
+```yaml  
 ElectricVehicleMobility:    
   description: Daily observation of electric vehicle mobility patterns aggregated by location, vehicle brand, and geographic region.    
   properties:    
@@ -477,16 +526,25 @@ ElectricVehicleMobility:
   x-version: 0.0.1    
 ```  
 </details>    
-<!-- /60-ModelYaml -->  
-<!-- 70-MiddleNotes -->  
-<!-- /70-MiddleNotes -->  
-<!-- 80-Examples -->  
- ## 例のペイロード  
- 電気自動車モビリティNGSI-v2キー値の例  
- ここに、JSON-LD形式のElectricVehicleMobilityの例がキー値として記述されています。これは、`options=keyValues`を使用してNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
-<details><summary><strong>表示/非表示の例</strong></summary>    
-```json  
-{  
+<!-- /60-ModelYaml -->
+  
+<!-- 70-MiddleNotes -->
+  
+<!-- /70-MiddleNotes -->
+  
+<!-- 80-Examples -->
+  
+
+## 例のペイロード  
+
+#### 電気自動車モビリティ NGSI-v2 キー値の例  
+
+以下は、JSON-LD形式のElectricVehicleMobilityの例である。これは、`options=keyValues`を使用する場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返す。  
+<details><summary><strong>表示/非表示例</strong></summary>    
+
+```json  
+
+{  
   "id": "urn:ngsi-ld:ElectricVehicleMobility:PT:OUTROS-GDPR:OUTROS-GDPR:20251215",  
   "type": "ElectricVehicleMobility",  
   "dateObserved": "2025-12-15",  
@@ -500,11 +558,15 @@ ElectricVehicleMobility:
 }  
 ```  
 </details>  
- 電気自動車モビリティNGSI-v2正規化例  
- ここには、JSON-LD形式で正規化されたElectricVehicleMobilityの例が示されています。これは、オプションを使用しない場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+
+#### 電気自動車モビリティ NGSI-v2 正規化例  
+
+以下は、JSON-LD形式で正規化されたElectricVehicleMobilityの例である。これは、オプションを使用しない場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返す。  
 <details><summary><strong>表示/非表示の例</strong></summary>    
-```json  
-{  
+
+```json  
+
+{  
   "id": "urn:ngsi-ld:ElectricVehicleMobility:PT:OUTROS-GDPR:OUTROS-GDPR:20251215",  
   "type": "ElectricVehicleMobility",  
   "dateObserved": {  
@@ -542,11 +604,15 @@ ElectricVehicleMobility:
 }  
 ```  
 </details>  
- 電気自動車モビリティ NGSI-LD キー値の例  
- ここには、JSON-LD形式のElectricVehicleMobilityの例がキー値として記載されています。これは、`options=keyValues`を使用してNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
-<details><summary><strong>表示/非表示の例</strong></summary>    
-```json  
-{  
+
+#### 電気自動車モビリティ NGSI-LD キー値の例  
+
+以下は、JSON-LD形式のElectricVehicleMobilityの例である。これは、`options=keyValues`を使用する場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
+<details><summary><strong>表示/非表示 例</strong></summary>    
+
+```json  
+
+{  
   "id": "urn:ngsi-ld:ElectricVehicleMobility:PT:OUTROS-GDPR:OUTROS-GDPR:20251215",  
   "type": "ElectricVehicleMobility",  
   "dateObserved": "2025-12-15",  
@@ -563,11 +629,15 @@ ElectricVehicleMobility:
 }  
 ```  
 </details>  
- 電気自動車モビリティ NGSI-LD 正規化例  
- ここに、JSON-LD形式で正規化されたElectricVehicleMobilityの例が示されています。これは、オプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
-<details><summary><strong>表示/非表示の例</strong></summary>    
-```json  
-{  
+
+#### 電気自動車モビリティ NGSI-LD 正規化例  
+
+正規化されたJSON-LD形式のElectricVehicleMobilityの例を次に示す。これは、オプションを使用せず、個々のエンティティのコンテキストデータを返す場合のNGSI-LDと互換性がある。  
+<details><summary><strong>表示/非表示例</strong></summary>    
+
+```json  
+
+{  
   "id": "urn:ngsi-ld:ElectricVehicleMobility:PT:OUTROS-GDPR:OUTROS-GDPR:20251215",  
   "type": "ElectricVehicleMobility",  
   "dateObserved": {  
@@ -610,12 +680,21 @@ ElectricVehicleMobility:
   ]  
 }  
 ```  
-</details><!-- /80-Examples -->  
-<!-- 90-FooterNotes -->  
-<!-- /90-FooterNotes -->  
-<!-- 95-Units -->  
- [FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照して、量の単位を扱う方法についての回答を得てください  
-<!-- /95-Units -->  
-<!-- 97-LastFooter -->  
+</details><!-- /80-Examples -->
+  
+<!-- 90-FooterNotes -->
+  
+<!-- /90-FooterNotes -->
+  
+<!-- 95-Units -->
+  
+
+大きさの単位の扱い方については、[FAQ 10](https://smartdatamodels.org/index.php/faqs/) を参照してください。  
+<!-- /95-Units -->
+  
+<!-- 97-LastFooter -->
+  
 ---  
-[スマートデータモデル](https://smartdatamodels.org) +++ [寄付マニュアル](https://bit.ly/contribution_manual)  
+
+[スマートデータモデル](https://smartdatamodels.org) +++ [コントリビューション・マニュアル](https://bit.ly/contribution_manual)  
+  
