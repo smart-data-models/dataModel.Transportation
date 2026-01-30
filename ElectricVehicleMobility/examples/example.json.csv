@@ -1,0 +1,2 @@
+"id_", "type_", "dateObserved_", "region_", "district_", "municipality_", "locationCode_", "deviceBrand_", "averageDistanceKm_", "n_"
+"urn:ngsi-ld:ElectricVehicleMobility:PT:OUTROS-GDPR:OUTROS-GDPR:20251215", "ElectricVehicleMobility", "2025-12-15", "Outros - GDPR", "Outros - GDPR", "Outros - GDPR", "Outros - GDPR", "Outros - GDPR", "", "26"
