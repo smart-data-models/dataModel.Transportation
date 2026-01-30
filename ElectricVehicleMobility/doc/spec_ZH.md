@@ -1,48 +1,93 @@
-<!-- 10-Header -->  
+<!-- 10-Header -->
+  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
- 电动车移动性实体  
-===============================<!-- /10-Header -->  
-<!-- 15-License -->  
-[开放许可证](https://github.com/smart-data-models//dataModel.Transportation/blob/master/ElectricVehicleMobility/LICENSE.md)  
-[自動生成文件](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-<!-- /15-License -->  
-<!-- 20-Description -->  
- 全球描述：**按位置、车辆品牌和地理区域聚合的电动汽车移动模式的每日观察。**  
- 版本：0.0.1  
-<!-- /20-Description -->  
-<!-- 30-PropertiesList -->  
 
- ## 属性列表  
+实体: ElectricVehicleMobility  
+===============================
+<!-- /10-Header -->
+  
+<!-- 15-License -->
+  
 
-<sup><sub>如果一个属性中没有指定类型，那是因为它可能有多种类型或不同的格式/模式</sub></sup>  
-- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: The country. For example, Spain  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: 该街道地址所在的地区，以及该地区所在的区域  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: 该地所在的地区，也是位于该国的地区  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
-	- `district[string]`: 区是某些国家的一种行政区划，由当地政府管理
-	- `postOfficeBoxNumber[string]`: 邮政信箱号码，用于邮政信箱地址，如03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
-	- `postalCode[string]`: 邮政编码。例如，24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+[开放许可](https://github.com/smart-data-models//dataModel.Transportation/blob/master/ElectricVehicleMobility/LICENSE.md)  
+
+[自动生成的文档](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->
+  
+<!-- 20-Description -->
+  
+
+Global description: **按位置、车辆品牌和地理区域汇总的电动汽车出行模式的日常观察。**  
+
+version: 0.0.1  
+<!-- /20-Description -->
+  
+<!-- 30-PropertiesList -->
+  
+
+
+## 财产清单  
+
+
+<sup><sub>[*] 属性中没有类型是因为它可能有多种类型或不同的格式/模式</sub></sup>  
+- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)
+	- `addressCountry[string]`: 国家。例如，西班牙  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: 地点  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: 行政區  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 区是一种行政区划，一些国家的区由地方政府管理。
+	- `postOfficeBoxNumber[string]`: 邮政信箱地址的邮政信箱号码。例如，03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: 邮政编码。例如：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 街道地址  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-	- `streetNr[string]`: 公共街道上特定房产的识别号码
-- `alternateName[string]`: 该项目的另一个名称 
- - `areaServed[string]`：提供服务或提供的项目的的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `averageDistanceKm[number]`: Average distance traveled in kilometers  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: Provider of the harmonised data entity  . Model: [https://schema.org/Text](https://schema.org/Text)- `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `dateObserved[date]`: Date of the observation (YYYY-MM-DD)  . Model: [https://schema.org/Date](https://schema.org/Date)- `description[string]`: A description of this item  - `deviceBrand[string]`: Brand or manufacturer of the electric vehicle  . Model: [https://schema.org/Text](https://schema.org/Text)- `district[string]`: District where the observation was made  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: Unique identifier of the entity  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `locationCode[string]`: Official municipality code  . Model: [https://schema.org/Text](https://schema.org/Text)- `municipality[string]`: Municipality where the observation was made  . Model: [https://schema.org/Text](https://schema.org/Text)- `n[number]`: Number of observations used to calculate the average distance  . Model: [https://schema.org/Number](https://schema.org/Number)- `name[string]`: The name of this item  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `region[string]`: Region where the observation was made  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: Original source of the data as a URL  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI entity type. It has to be ElectricVehicleMobility  - `vehicleType[string]`: Type of electric vehicle  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
-<!-- 35-RequiredProperties -->  
-必需属性  
-- `id`   
-- `type`   
-<!-- /35-RequiredProperties --> 
+	- `streetNr[string]`: 街道编号
+- `alternateName[string]`: 此条目的另一个名称
+- `areaServed[string]`: 提供服务或所提供项目的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `averageDistanceKm[number]`: 平均旅行距离（公里）  . Model: [https://schema.org/Number](https://schema.org/Number)
+- `dataProvider[string]`: 统一数据实体的提供者  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配。
+- `dateModified[date-time]`: 实体上一次修改的时间戳。通常由存储平台分配。
+- `dateObserved[date]`: 观测日期（年-月-日）  . Model: [https://schema.org/Date](https://schema.org/Date)
+- `description[string]`: 该商品的描述
+- `deviceBrand[string]`: 电动车辆的品牌或制造商  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `district[string]`: 进行观测的地区  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `id[*]`: 实体的唯一标识符
+- `location[*]`: 与该项目相关的Geojson引用，可以是Point、LineString、Polygon、MultiPoint、MultiLineString或MultiPolygon。
+- `locationCode[string]`: 官方自治市代码  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `municipality[string]`: 进行观测的市区町村  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `n[number]`: 用于计算平均距离的观测值数量  . Model: [https://schema.org/Number](https://schema.org/Number)
+- `name[string]`: 该物品的名称
+- `owner[array]`: 包含一个 JSON 编码的字符序列，引用所有者（owner(s)）的唯一标识符（Id(s)）的列表。
+- `region[string]`: 进行观测的区域  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `seeAlso[*]`: 指向关于该项目其他资源的 URI 列表
+- `source[string]`: 数据来源的原始网址  . Model: [https://schema.org/Text](https://schema.org/Text)
+- `type[string]`: NGSI 实体类型. 它必须是 ElectricVehicleMobility
+- `vehicleType[string]`: 电动车辆类型  . Model: [https://schema.org/Text](https://schema.org/Text)
+<!-- /30-PropertiesList -->
+  
+<!-- 35-RequiredProperties -->
+  
 
-- `id`   
-- `类型`   
-<!-- /35-必需属性 -->  
-<!-- 40-NotesYaml -->  
-<!-- /40-NotesYaml -->  
-<!-- 50-DataModelHeader -->  
- ## 数据模型属性描述  
-按字母顺序排列（点击查看详情）  
-<!-- /50-DataModelHeader -->  
-<!-- 60-ModelYaml -->  
-<details><summary><strong>完整的YAML详细信息</strong></summary>    
-```yaml  
+必填属性  
+- `id`  
+- `type`  
+<!-- /35-RequiredProperties -->
+  
+<!-- 40-NotesYaml -->
+  
+<!-- /40-NotesYaml -->
+  
+<!-- 50-DataModelHeader -->
+  
+
+## 属性的数据模型描述  
+
+按字母顺序排列（点击了解详情）  
+<!-- /50-DataModelHeader -->
+  
+<!-- 60-ModelYaml -->
+  
+<details><summary><strong>完整的yaml详情</strong></summary>    
+
+```yaml  
 ElectricVehicleMobility:    
   description: Daily observation of electric vehicle mobility patterns aggregated by location, vehicle brand, and geographic region.    
   properties:    
@@ -481,16 +526,25 @@ ElectricVehicleMobility:
   x-version: 0.0.1    
 ```  
 </details>    
-<!-- /60-ModelYaml -->  
-<!-- 70-MiddleNotes -->  
-<!-- /70-MiddleNotes -->  
-<!-- 80-Examples -->  
- 示例有效载荷  
- 电动车移动性 NGSI-v2 键值示例  
- 这是一个以JSON-LD格式表示的ElectricVehicleMobility示例，以键值对的形式呈现。当使用`options=keyValues`时，它与NGSI-v2兼容，并返回个体实体的上下文数据。  
+<!-- /60-ModelYaml -->
+  
+<!-- 70-MiddleNotes -->
+  
+<!-- /70-MiddleNotes -->
+  
+<!-- 80-Examples -->
+  
+
+## 示例载荷  
+
+#### 電動車輛移動性NGSI-v2鍵值示例  
+
+以下是一个以JSON-LD格式表示的 ElectricVehicleMobility 示例，以键值对形式呈现。当使用 `options=keyValues` 时，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>显示/隐藏示例</strong></summary>    
-```json  
-{  
+
+```json  
+
+{  
   "id": "urn:ngsi-ld:ElectricVehicleMobility:PT:OUTROS-GDPR:OUTROS-GDPR:20251215",  
   "type": "ElectricVehicleMobility",  
   "dateObserved": "2025-12-15",  
@@ -504,11 +558,15 @@ ElectricVehicleMobility:
 }  
 ```  
 </details>  
- 电动车辆移动性NGSI-v2标准化示例  
- 这是一个电动车移动性（ElectricVehicleMobility）在JSON-LD格式下的标准化示例。当不使用选项时，它与NGSI-v2兼容，并返回个体实体的上下文数据。  
-<details><summary><strong>顯示/隱藏範例</strong></summary>    
-```json  
-{  
+
+#### 电动车辆移动性 NGSI-v2 标准化示例  
+
+以下是一个归一化的JSON-LD格式的ElectricVehicleMobility示例。当不使用选项时，此示例与NGSI-v2兼容，并返回单个实体的上下文数据。  
+<details><summary><strong>显示/隐藏示例</strong></summary>    
+
+```json  
+
+{  
   "id": "urn:ngsi-ld:ElectricVehicleMobility:PT:OUTROS-GDPR:OUTROS-GDPR:20251215",  
   "type": "ElectricVehicleMobility",  
   "dateObserved": {  
@@ -546,11 +604,15 @@ ElectricVehicleMobility:
 }  
 ```  
 </details>  
- 电动车移动性NGSI-LD关键值示例  
- 以下是ElectricVehicleMobility在JSON-LD格式下的一个示例，以键值对的形式呈现。当使用`options=keyValues`时，它与NGSI-LD兼容，并返回个体实体的上下文数据。  
+
+#### 电动车辆移动性 NGSI-LD 键值示例  
+
+以下是一个以JSON-LD格式表示的电动汽车出行的例子，以键值对形式呈现。当使用`options=keyValues`时，它与NGSI-LD兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>显示/隐藏示例</strong></summary>    
-```json  
-{  
+
+```json  
+
+{  
   "id": "urn:ngsi-ld:ElectricVehicleMobility:PT:OUTROS-GDPR:OUTROS-GDPR:20251215",  
   "type": "ElectricVehicleMobility",  
   "dateObserved": "2025-12-15",  
@@ -567,11 +629,15 @@ ElectricVehicleMobility:
 }  
 ```  
 </details>  
- 电动汽车移动性NGSI-LD标准化示例  
- 这是一个电动车移动性（ElectricVehicleMobility）在JSON-LD格式下的示例，已经标准化。这与NGSI-LD兼容，当不使用选项时，返回单个实体的上下文数据。  
+
+#### 电动车辆移动性 NGSI-LD 标准化示例  
+
+以下是一个归一化的JSON-LD格式的ElectricVehicleMobility示例。当不使用选项时，此示例与NGSI-LD兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>显示/隐藏示例</strong></summary>    
-```json  
-{  
+
+```json  
+
+{  
   "id": "urn:ngsi-ld:ElectricVehicleMobility:PT:OUTROS-GDPR:OUTROS-GDPR:20251215",  
   "type": "ElectricVehicleMobility",  
   "dateObserved": {  
@@ -614,12 +680,21 @@ ElectricVehicleMobility:
   ]  
 }  
 ```  
-</details><!-- /80-Examples -->  
-<!-- 90-FooterNotes -->  
-<!-- /90-FooterNotes -->  
-<!-- 95-Units -->  
- 参见 [FAQ 10](https://smartdatamodels.org/index.php/faqs/) 以了解如何处理量级单位  
-<!-- /95-Units -->  
-<!-- 97-LastFooter -->  
+</details><!-- /80-Examples -->
+  
+<!-- 90-FooterNotes -->
+  
+<!-- /90-FooterNotes -->
+  
+<!-- 95-Units -->
+  
+
+参见[FAQ 10](https://smartdatamodels.org/index.php/faqs/)以获取有关如何处理量级单位的答案  
+<!-- /95-Units -->
+  
+<!-- 97-LastFooter -->
+  
 ---  
-[智能数据模型](https://smartdatamodels.org) +++ [贡献手册](https://bit.ly/contribution_manual)  
+
+[智能数据模型](https://smartdatamodels.org) +++ [贡献指南](https://bit.ly/contribution_manual)  
+  
