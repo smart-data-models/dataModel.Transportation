@@ -1,88 +1,178 @@
-<!-- 10-Header -->  
+<!-- 10-Header -->
+  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-エンティティ車両  
-========<!-- /10-Header -->  
-<!-- 15-License -->  
-[オープン・ライセンス](https://github.com/smart-data-models//dataModel.Transportation/blob/master/Vehicle/LICENSE.md)  
-[文書は自動的に生成される](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-<!-- /15-License -->  
-<!-- 20-Description -->  
-グローバルな記述：**このエンティティは、そのようなモデルに属する複数の車両インスタンスに共通するすべてのプロパティを含む、特定の車両モデルをモデル化する。  
-バージョン: 0.2.2  
-<!-- /20-Description -->  
-<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+実体: Vehicle  
+===============
+<!-- /10-Header -->
+  
+<!-- 15-License -->
+  
 
-<sup><sub>[*] 属性に型がない場合は、複数の型があるか、異なるフォーマット/パターンがある可能性があるためです</sub></sup>。  
-- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 国。例えば、スペイン  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: 番地がある地域と、その地域に含まれる地域  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: その地域がある地域、またその国がある地域  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
-	- `district[string]`: 地区とは行政区画の一種で、国によっては地方自治体によって管理されている。    
-	- `postOfficeBoxNumber[string]`: 私書箱の住所のための私書箱番号。例：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
-	- `postalCode[string]`: 郵便番号。例：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
-	- `streetAddress[string]`: 番地  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-	- `streetNr[string]`: 公道上の特定の物件を特定する番号    
-- `alternateName[string]`: この項目の別名  - `annotations[array]`: アイテムに関する注釈  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: サービスまたは提供品が提供される地理的地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `battery[number]`: 電気自動車、または電気自動車に接続された装置のバッテリー残量のパーセンテージ。  - `bearing[number]`: 真北から時計回りで測定した車両の GPS 角度を示す。GTFS Realtime message-Position(https://developers.google.com/transit/gtfs-realtime/reference#message-position)の'bearing'フィールドと同じ。  . Model: [https://schema.org/Number](https://schema.org/Number)- `cargoWeight[number]`: 現在の積載重量  . Model: [https://schema.org/Number](https://schema.org/Number)- `category[array]`: 外部から見た車両のカテゴリー。これは `vehicleType` プロパティで表される車両タイプ（自動車、ローリーなど）とは異なる。Enum:'municipalServices, nonTracked, private, public, specialUsage, tracked'.追跡車両とは、リモートシステムによって位置が常時追跡されている車両のことである。GPS受信機とネットワーク接続が組み込まれており、報告された位置（位置、速度、方位...）を定期的に更新する。  . Model: [https://schema.org/Text](https://schema.org/Text)- `color[string]`: 製品の色  . Model: [https://schema.org/color](https://schema.org/color)- `currentTripCount[number]`: この観測に対応する車両が、特定の運行日に行った現在のトリップ回数。  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: ハーモナイズされたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated[date-time]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateFirstUsed[date]`: 車両が最初に使用された時期を示すタイムスタンプ  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[date-time]`: エンティティの最終変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateVehicleFirstRegistered[date]`: 各公的機関への車両の最初の登録日  . Model: [https://schema.org/dateVehicleFirstRegistered](https://schema.org/dateVehicleFirstRegistered)- `description[string]`: この商品の説明  - `deviceBatteryStatus[string]`: 報告デバイスのバッテリ充電状態を示す。列挙型：「接続、切断  . Model: [https://schema.org/Text](https://schema.org/Text)- `deviceSimNumber[string]`: 車両に搭載されているデバイスのSIM番号をお知らせします。  . Model: [https://schema.org/Text](https://schema.org/Text)- `emergencyVehicleType[string]`: この観測に対応する緊急車両のタイプ。Enum:'policeCar、policeMotorcycle、policeVan、policeSWAT、fireEngine、waterTender、airAmbulance、ambulance、motorcycleAmbulance、rescueVehicle、hazardousMaterialsApparatus、towTruck  . Model: [https://schema.org/Text](https://schema.org/Text)- `feature[array]`: 車両に搭載されている機能。Enum:' abs, airbag, alarm, backCamera, disabledRamp, gps, internetConnection, overspeed, proximitySensor, wifi'.または、アプリケーションが必要とするその他のもの。1つの機能の複数のインスタンスを表すには、以下の構文を使用します：<feature>,<occurences>`。例えば、エアバッグが4つある車は`airbag,4`で表されます。  . Model: [https://schema.org/Text](https://schema.org/Text)- `fleetVehicleId[string]`: その車両が属する車両群におけるその車両の識別子。  . Model: [https://schema.org/Text](https://schema.org/Text)- `fuelEfficiency[number]`: 単位燃料使用量当たりの走行距離で、単位はキロメートル／リットル（km／L）。  . Model: [https://schema.org/Number](https://schema.org/Number)- `fuelFilled[number]`: この観測に対応する車両に充填された燃料量（リットル  . Model: [https://schema.org/Number](https://schema.org/Number)- `fuelType[string]`: 本観測に対応する車両のエンジンまたはエンジンに適した燃料の種類。  . Model: [https://schema.org/Text](https://schema.org/Text)- `heading[*]`: 車両の進行方向を表し、真北から時計回りに 0 <= `heading` < 360 の範囲で10進数で指定します。車両が静止している場合（つまり `speed` 属性の値が `0`）、heading 属性の値は `-1` に等しくなければなりません。  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: エンティティの一意識別子  - `ignitionStatus[boolean]`: 車両の点火状態を示す。真は点火済み  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `image[uri]`: 商品の画像  . Model: [https://schema.org/URL](https://schema.org/URL)- `license_plate[string]`: 車両のナンバープレート番号。SameAs: GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)' の license_plate フィールド。  . Model: [https://schema.org/Text](https://schema.org/Text)- `location[*]`: アイテムへの Geojson 参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygon のいずれか。  - `mileageFromOdometer[number]`: オドメーターから読み取った、特定の自動車が製造当初から走行した総距離。  . Model: [https://schema.org/mileageFromOdometer](https://schema.org/mileageFromOdometer)- `municipalityInfo[object]`: この観測に対応する自治体情報  . Model: [https://schema.org/Text](https://schema.org/Text)	- `cityId[string]`: この観測に対応する都市ID  . Model: [https://schema.org/Text](https://schema.org/Text)  
-	- `cityName[string]`: この観測に対応する都市名  . Model: [https://schema.org/Text](https://schema.org/Text)  
-	- `district[string]`: この観測に対応する地区名  . Model: [https://schema.org/Text](https://schema.org/Text)  
-	- `stateName[string]`: この観測に対応する州名  . Model: [https://schema.org/Text](https://schema.org/Text)  
-	- `ulbName[string]`: この観測に対応する都市自治体の名称  . Model: [https://schema.org/Text](https://schema.org/Text)  
-	- `wardId[string]`: この観察に対応する病棟ID  . Model: [https://schema.org/Text](https://schema.org/Text)  
-	- `wardName[string]`: この観測に対応する区名  . Model: [https://schema.org/Text](https://schema.org/Text)  
-	- `wardNum[number]`: この観測に対応する病棟番号  . Model: [https://schema.org/Number](https://schema.org/Number)  
-	- `zoneId[string]`: この観測に対応するゾーンID  . Model: [https://schema.org/Text](https://schema.org/Text)  
-	- `zoneName[string]`: この観測に対応するゾーン名  . Model: [https://schema.org/Text](https://schema.org/Text)  
-- `name[string]`: このアイテムの名前  - `observationDateTime[date-time]`: 最終観測報告時刻  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリスト。  - `previousLocation[*]`: アイテムへの Geojson 参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygon のいずれか。  - `purchaseDate[date-time]`: 現所有者が車両などを購入した日付  . Model: [https://schema.org/purchaseDate](https://schema.org/purchaseDate)- `refVehicleModel[*]`: VehicleModel への参照  . Model: [https://schema.org/URL](https://schema.org/URL)- `reportId[string]`: このオブザベーションに対応するissueまたはレポート、フィードバック、トランザクションに割り当てられた一意のID  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `serviceOnDuty[boolean]`: この観測に対応する緊急車両が提供したサービスの性質。Trueは、この観測に対応する緊急車両が緊急通報に対応/サービスしていることを示す。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `serviceProvided[array]`: 車両が提供できる、または割り当てられたサービス。Enum:'auxiliaryServices, cargoTransport, construction, fairground, garbageCollection, goodsSelling, maintenance, parksAndGardens, roadSignalling, specialTransport, streetCleaning, streetLighting, urbanTransit, wasteContainerCleaning'.または、特定のアプリケーションが必要とするその他の値  . Model: [https://schema.org/Text](https://schema.org/Text)- `serviceStatus[string]`: 車両の状態（サービス提供の観点から、自家用車には適用できない）。駐車中` : 車両は駐車中であり、現在サービスを提供していない。onRoute` : 車両はミッションを遂行中である。カンマで区切られた修飾子(複数可)を追加することで、その車両が現在どのようなミッションを遂行中であるかを示すことができる。例えば`onRoute,garbageCollection`は車両がルート上にあり、ゴミ収集のミッション中であることを示す。'broken' ：車両が一時的に故障している。outOfService` : 車両は道路上にあるが、ミッションは行っていない。Enum:'broken、onRoute、outOfService、parked'  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `source[string]`: エンティティ・データの元のソースを URL として示す一連の文字。ソース・プロバイダの完全修飾ドメイン名、またはソース・オブジェクトの URL を推奨する。  - `speed[*]`: 車両の現在速度の水平成分の大きさを表し、キロメートル毎時で指定する。指定する場合、speed属性の値は非負の実数でなければならない。何らかの理由で速度が一時的に不明な場合は `-1` を使用してもよい。  . Model: [https://schema.org/Number](https://schema.org/Number)- `tripNetWeightCollected[number]`: 走行終了時に、この観測に対応する車両が収集した正味重量。  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: NGSIエンティティタイプ。車両でなければならない。  - `vehicleAltitude[string]`: GPSを使用して車両の現在の高度を表示します。  . Model: [https://schema.org/Text](https://schema.org/Text)- `vehicleConfiguration[string]`: 例：「5dr hatchback ST 2.5 MT 225 hp」や「limited edition」など。  . Model: [https://schema.org/vehicleConfiguration](https://schema.org/vehicleConfiguration)- `vehicleIdentificationNumber[string]`: 車両識別番号（VIN）は、自動車業界が個々の自動車を識別するために使用する固有のシリアル番号である。  . Model: [https://schema.org/vehicleIdentificationNumber](https://schema.org/vehicleIdentificationNumber)- `vehiclePlateIdentifier[string]`: 公的な識別を目的として、車両に取り付けられた車両登録プレートに表示される識別子またはコード。登録識別子は数字または英数字で、発行機関の地域内で一意である。規格参照：DATEXII `vehicleRegistrationPlateIdentifier` （車両登録プレート識別子  . Model: [https://schema.org/Text](https://schema.org/Text)- `vehicleRunningStatus[string]`: 報告デバイスのバッテリ充電状態を示す。Enum:'実行中、待機中、停止中'  . Model: [https://schema.org/Text](https://schema.org/Text)- `vehicleSpecialUsage[string]`: 商用レンタル、自動車教習所、タクシーなど、特殊な目的で使用されているかどうかを示す。多くの国の法律では、自動車を販売する際にはこの情報を明らかにすることが義務付けられている。Enum:'救急車、消防隊、軍隊、警察、学校輸送、タクシー、ゴミ処理'  . Model: [https://schema.org/vehicleSpecialUsage](https://schema.org/vehicleSpecialUsage)- `vehicleTrackerDevice[string]`: この観測に対応する車両に取り付けられたGPS装置または追跡装置の設置状況。  . Model: [https://schema.org/Text](https://schema.org/Text)- `vehicleType[string]`: 車両の構造的特徴から見た車両のタイプ。これは車両カテゴリーとは異なる。列挙する：agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle、motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'.VehicleTypeEnum_および_VehicleTypeEnum2_、[DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)で定義され、他の用途のために拡張された以下の値。  . Model: [https://schema.org/Text](https://schema.org/Text)- `wardId[string]`: この観測に対応するエンティティのワードID  . Model: [https://schema.org/Text](https://schema.org/Text)- `wardName[string]`: このオブザベーションに対応するエンティティのワード名  . Model: [https://schema.org/Text](https://schema.org/Text)- `zoneName[string]`: この観測に対応するエンティティのゾーン名  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
-<!-- 35-RequiredProperties -->  
-必須プロパティ  
-- `category`  - `id`  - `location`  - `type`  - `vehicleType`  <!-- /35-RequiredProperties -->  
-<!-- 40-NotesYaml -->  
-<!-- /40-NotesYaml -->  
-<!-- 50-DataModelHeader -->  
-## プロパティのデータモデル記述  
-アルファベット順（クリックで詳細表示）  
-<!-- /50-DataModelHeader -->  
-<!-- 60-ModelYaml -->  
+[オープンライセンス](https://github.com/smart-data-models//dataModel.Transportation/blob/master/Vehicle/LICENSE.md)  
+
+[自動生成された文書](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->
+  
+<!-- 20-Description -->
+  
+
+Global description: **このエンティティは、特定の車両モデルを表し、そのモデルに属する複数の車両インスタンスに共通するすべてのプロパティを含む。**  
+
+version: 0.2.2  
+<!-- /20-Description -->
+  
+<!-- 30-PropertiesList -->
+  
+
+
+## プロパティの一覧  
+
+
+<sup><sub>[*] 属性に型がないのは、それが複数の型や異なる形式/パターンを持つ可能性があるためです。</sub></sup>  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)  
+	- `addressCountry[string]`: その国。例えば、スペイン  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)    
+	- `addressLocality[string]`: 住所が存在する地域、そしてその地域が存在する地域  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)    
+	- `addressRegion[string]`: その地域は、自治体が存在し、かつその国に位置する地域です。  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)    
+	- `district[string]`: 地区は、一部の国では地方自治体によって管理される行政区画の一種です。  
+	- `postOfficeBoxNumber[string]`: ポストオフィスボックス番号は、ポストオフィスボックスアドレスの場合。たとえば、03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)    
+	- `postalCode[string]`: 郵便番号。例えば、24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)    
+	- `streetAddress[string]`: 住所  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)    
+	- `streetNr[string]`: 公道上の特定の物件を識別する番号  
+- `alternateName[string]`: このアイテムの別名  
+- `annotations[array]`: アイテムについての注釈  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `areaServed[string]`: サービスまたは提供されるアイテムが提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `battery[number]`: 電気自動車の場合、または車両に接続されたデバイスの残りのバッテリーの現在のパーセンテージ  
+- `bearing[number]`: True Northから時計回りに測定された車両のGPS角度を示します。GTFS RealtimeメッセージのPosition(https://developers.google.com/transit/gtfs-realtime/reference#message-position)の'bearing'フィールドと同じです。  . Model: [https://schema.org/Number](https://schema.org/Number)  
+- `cargoWeight[number]`: 車両の貨物の現在の重量  . Model: [https://schema.org/Number](https://schema.org/Number)  
+- `category[array]`: 外部からの観点からの車両カテゴリ。車両タイプ（車、トラックなど）を表す`vehicleType`プロパティとは異なる。列挙型：'municipalServices, nonTracked, private, public, specialUsage, tracked'。トラックされた車両とは、常にリモートシステムによって位置が追跡される車両である。またはアプリケーションによって必要とされるもの。GPSレシーバーとネットワーク接続を組み合わせて、報告された位置（位置、速度、方角など）を定期的に更新する。  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `color[string]`: 製品の色  . Model: [https://schema.org/color](https://schema.org/color)  
+- `currentTripCount[number]`: この観測に対応する車両が運行日の当日に行った移動の現在の回数  . Model: [https://schema.org/Number](https://schema.org/Number)  
+- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する文字シーケンス  
+- `dateCreated[date-time]`: エンティティ作成タイムスタンプ。このタイムスタンプは通常、ストレージプラットフォームによって割り当てられる。  
+- `dateFirstUsed[date]`: 初めて使用された時刻を示すタイムスタンプ  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)  
+- `dateModified[date-time]`: エンティティの最後の変更のタイムスタンプ。このタイムスタンプは通常、ストレージプラットフォームによって割り当てられる。  
+- `dateVehicleFirstRegistered[date]`: その車両がそれぞれの公的機関に最初に登録された日付  . Model: [https://schema.org/dateVehicleFirstRegistered](https://schema.org/dateVehicleFirstRegistered)  
+- `description[string]`: このアイテムの説明  
+- `deviceBatteryStatus[string]`: レポートデバイスのバッテリー充電状態を示します。 Enum: '接続済み、接続解除済み'  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `deviceSimNumber[string]`: 車両内のデバイスのSIM番号を示します  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `emergencyVehicleType[string]`: この観測に対応する緊急車両の種類。 Enum:'policeCar, policeMotorcycle, policeVan, policeSWAT, fireEngine, waterTender, airAmbulance, ambulance, motorcycleAmbulance, rescueVehicle, hazardousMaterialsApparatus, towTruck  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `feature[array]`: 車両に搭載されている機能。列挙: 'abs、エアバッグ、警報装置、後部カメラ、車椅子用スロープ、GPS、インターネット接続、過速度、近接センサー、Wi-Fi'。または、アプリケーションで必要なその他のもの。複数の機能インスタンスを表すには、次の構文を使用できます: `<機能>,<発生回数>`。たとえば、4つのエアバッグを備えた車両は、`エアバッグ、4`で表されます。  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `fleetVehicleId[string]`: その車両が所属する車両のフリートの文脈における車両の識別子  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `fuelEfficiency[number]`: 燃料効率（英語版）とは、燃料を１単位使用したときに移動できる距離で、一般的には１リットルあたりのキロメートル（km/L）で表される。  . Model: [https://schema.org/Number](https://schema.org/Number)  
+- `fuelFilled[number]`: この観測に相当する車両に充填された燃料のリットル数  . Model: [https://schema.org/Number](https://schema.org/Number)  
+- `fuelType[string]`: この観測に対応する車両のエンジンまたはエンジンに適した燃料の種類  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `heading[*]`: 車両の移動方向を表し、10進度で指定され、0 <= `heading` < 360となり、真北を基準に時計回りに数える。如果車両が停止している場合（すなわち、`speed`属性の値が`0`の場合）、`heading`属性の値は`-1`に等しくなければならない。  . Model: [https://schema.org/Number](https://schema.org/Number)  
+- `id[*]`: エンティティのユニーク識別子  
+- `ignitionStatus[boolean]`: 車両の点火状態を示します。True は点火されたことを意味します。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)  
+- `image[uri]`: アイテムの画像  . Model: [https://schema.org/URL](https://schema.org/URL)  
+- `license_plate[string]`: 車両のナンバープレート番号を示します。 SameAs: GTFS Realtime メッセージの VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor) の license_plate フィールド  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `location[*]`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、またはMultiPolygonのいずれかになることができる。  
+- `mileageFromOdometer[number]`: その特定の車両が初期製造以来移動した総距離、そのオドメーターから読み取った距離  . Model: [https://schema.org/mileageFromOdometer](https://schema.org/mileageFromOdometer)  
+- `municipalityInfo[object]`: この観測に対応する自治体情報  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `cityId[string]`: この観測に対応する都市ID  . Model: [https://schema.org/Text](https://schema.org/Text)    
+	- `cityName[string]`: この観測に対応する都市名  . Model: [https://schema.org/Text](https://schema.org/Text)    
+	- `district[string]`: この観測に対応する地区名  . Model: [https://schema.org/Text](https://schema.org/Text)    
+	- `stateName[string]`: この観測に対応する州の名前  . Model: [https://schema.org/Text](https://schema.org/Text)    
+	- `ulbName[string]`: この観測に対応する都市地方自治体の名称  . Model: [https://schema.org/Text](https://schema.org/Text)    
+	- `wardId[string]`: この観測に対応するワードID  . Model: [https://schema.org/Text](https://schema.org/Text)    
+	- `wardName[string]`: この観測に対応するワード名  . Model: [https://schema.org/Text](https://schema.org/Text)    
+	- `wardNum[number]`: この観察に相当するワード番号  . Model: [https://schema.org/Number](https://schema.org/Number)    
+	- `zoneId[string]`: この観測に対応するゾーンID  . Model: [https://schema.org/Text](https://schema.org/Text)    
+	- `zoneName[string]`: この観測に対応するゾーン名  . Model: [https://schema.org/Text](https://schema.org/Text)    
+- `name[string]`: このアイテムの名前  
+- `observationDateTime[date-time]`: 観測の最終報告時間  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)  
+- `owner[array]`: 所有者のユニークIDを参照する文字シーケンスをJSONでエンコードしたものが含まれるリスト  
+- `previousLocation[*]`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、またはMultiPolygonのいずれかになります。  
+- `purchaseDate[date-time]`: 現在の所有者がアイテム（例：車両）を購入した日付  . Model: [https://schema.org/purchaseDate](https://schema.org/purchaseDate)  
+- `refVehicleModel[*]`: 車両モデルへの参照  . Model: [https://schema.org/URL](https://schema.org/URL)  
+- `reportId[string]`: この観察に対応する問題、報告、フィードバック、またはトランザクションに割り当てられた一意のID  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `seeAlso[*]`: アイテムに関する追加のリソースを指すURIのリスト  
+- `serviceOnDuty[boolean]`: この観察に対応する緊急車両が提供するサービスの性質。Trueは、この観察に対応する緊急車両が緊急の呼び出しに対応していることを示し、Falseはそうでないことを示す。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)  
+- `serviceProvided[array]`: 車両が提供できるサービス、または割り当てられたサービス。Enum: 'auxiliaryServices, cargoTransport, construction, fairground, garbageCollection, goodsSelling, maintenance, parksAndGardens, roadSignalling, specialTransport, streetCleaning, streetLighting, urbanTransit, wasteContainerCleaning'。または、特定のアプリケーションで必要なその他の値。  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `serviceStatus[string]`: 車両の状態（提供されるサービスからの観点で、したがって私有車両には適用できない可能性がある）。 `parked` ：車両は駐車されており、現在はサービスを提供していない。 `onRoute` ：車両はミッションを実行中である。コンマで区切られた修飾子（s）を追加して、車両が現在配達しているミッションを示すことができる。たとえば、`onRoute,garbageCollection`を使用して、車両がルート上にあり、ごみ収集ミッション中であることを示すことができる。 `broken` ：車両は一時的な故障を起こしている。 `outOfService` ：車両は道路上にあるが、ミッションを実行しておらず、駐車エリアに向かっている可能性がある。 Enum：`broken, onRoute, outOfService, parked`  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)  
+- `source[string]`: エンティティデータの元のソースをURLとして示す文字列のシーケンス。ソースプロバイダーの完全修飾ドメイン名、またはソースオブジェクトへのURLであることを推奨する。  
+- `speed[*]`: 車両の現在の速度の水平成分の大きさを表し、キロメートル毎時で指定される。如果提供される場合、speed 属性の値は非負の実数でなければならない。速度が一時的に何らかの理由で不明である場合、 `-1` を使用することができる。  . Model: [https://schema.org/Number](https://schema.org/Number)  
+- `tripNetWeightCollected[number]`: この観測に対応する車両が旅の終わりに収集したネット重量  . Model: [https://schema.org/Number](https://schema.org/Number)  
+- `type[string]`: NGSIエンティティタイプ。Vehicleでなければなりません。  
+- `vehicleAltitude[string]`: 車両の現在の高度をGPSを使用して取得する  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `vehicleConfiguration[string]`: 車両の設定を示す短いテキスト、例えば「5ドアハッチバックST 2.5 MT 225馬力」または「限定版」  . Model: [https://schema.org/vehicleConfiguration](https://schema.org/vehicleConfiguration)  
+- `vehicleIdentificationNumber[string]`: 車両識別番号（VIN）とは、自動車業界が個々の自動車を識別するために使用する一意のシリアル番号である。  . Model: [https://schema.org/vehicleIdentificationNumber](https://schema.org/vehicleIdentificationNumber)  
+- `vehiclePlateIdentifier[string]`:  車両に取り付けられた車両登録番号板に表示される識別子またはコードで、公的識別のために使用される。登録識別子は、数字またはアルファベットと数字の組み合わせで、発行機関の地域内では一意である。規範参照：DATEXII `vehicleRegistrationPlateIdentifier`  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `vehicleRunningStatus[string]`: レポートデバイスのバッテリー充電状態を示します。 Enum: '実行中, 待機中, 停止'  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `vehicleSpecialUsage[string]`: 車両が商用レンタル、ドライブスクール、またはタクシーとして使用されているかどうかを示します。多くの国では、車両を販売する際にこの情報を開示することが法律で義務付けられています。列挙:'救急車、消防署、軍事、警察、学校輸送、タクシー、ごみ処理'  . Model: [https://schema.org/vehicleSpecialUsage](https://schema.org/vehicleSpecialUsage)  
+- `vehicleTrackerDevice[string]`: この観測に対応する車両に取り付けられたGPSデバイスまたはトラッキングデバイスの設置状況  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `vehicleType[string]`: その構造的特性からの車両の種類。これは、車両カテゴリとは異なる。 Enum:'農業車両、任意の車両、連節車両、自転車、ごみ収集トロリー、バス、自動車、キャラバン、自動車または軽車両、キャラバン付自動車、トレーラー付自動車、清掃トロリー、建設または保守車両、四輪駆動車、高床車、トラック、ミニバス、原動機付自転車、オートバイ、サイドカー付きオートバイ、モータースクーター、掃除機、タンカー、三輪車、トレーラー、路面電車、สอง輪車、トロリー、バン、触媒コンバータなし車両、キャラバン付車両、トレーラー付車両、偶数のナンバープレート、奇数のナンバープレート、その他'。以下の値は、_VehicleTypeEnum_ と _VehicleTypeEnum2_ で定義され、[DATEX 2 バージョン 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm) で拡張されており、他の用途にも使用される。  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `wardId[string]`: この観測に対応するエンティティのワードID  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `wardName[string]`: この観測に対応するエンティティのワード名  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `zoneName[string]`: この観測に対応するエンティティのゾーン名  . Model: [https://schema.org/Text](https://schema.org/Text)  
+<!-- /30-PropertiesList -->
+  
+<!-- 35-RequiredProperties -->
+  
+
+必要なプロパティ  
+- `カテゴリ`  
+- `ID`  
+- `ロケーション`  
+- `タイプ`  
+`車両タイプ`  
+<!-- /35-RequiredProperties -->
+  
+<!-- 40-NotesYaml -->
+  
+<!-- /40-NotesYaml -->
+  
+<!-- 50-DataModelHeader -->
+  
+
+## データモデルのプロパティの説明  
+
+アルファベット順に並べ替え（詳細）  
+<!-- /50-DataModelHeader -->
+  
+<!-- 60-ModelYaml -->
+  
 <details><summary><strong>full yaml details</strong></summary>    
-```yaml  
+
+```yaml  
 Vehicle:    
-  description: 'This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.'    
+  description: This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.    
   properties:    
     address:    
       description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'The country. For example, Spain'    
+          description: The country. For example, Spain    
           type: string    
           x-ngsi:    
             model: https://schema.org/addressCountry    
             type: Property    
         addressLocality:    
-          description: 'The locality in which the street address is, and which is in the region'    
+          description: The locality in which the street address is, and which is in the region    
           type: string    
           x-ngsi:    
             model: https://schema.org/addressLocality    
             type: Property    
         addressRegion:    
-          description: 'The region in which the locality is, and which is in the country'    
+          description: The region in which the locality is, and which is in the country    
           type: string    
           x-ngsi:    
             model: https://schema.org/addressRegion    
             type: Property    
         district:    
-          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          description: A district is a type of administrative division that, in some countries, is managed by the local government    
           type: string    
           x-ngsi:    
             type: Property    
         postOfficeBoxNumber:    
-          description: 'The post office box number for PO box addresses. For example, 03578'    
+          description: The post office box number for PO box addresses. For example, 03578    
           type: string    
           x-ngsi:    
             model: https://schema.org/postOfficeBoxNumber    
             type: Property    
         postalCode:    
-          description: 'The postal code. For example, 24004'    
+          description: The postal code. For example, 24004    
           type: string    
           x-ngsi:    
             model: https://schema.org/https://schema.org/postalCode    
@@ -122,14 +212,14 @@ Vehicle:
         model: https://schema.org/Text    
         type: Property    
     battery:    
-      description: 'The current percentage of battery left in case of an electric vehicle, or a device connected to the vehicle'    
+      description: The current percentage of battery left in case of an electric vehicle, or a device connected to the vehicle    
       maximum: 1    
       minimum: 0    
       type: number    
       x-ngsi:    
         type: Property    
     bearing:    
-      description: "Gives the vehicle GPS angle measured in a clockwise direction from the True North. SameAs 'bearing' field from GTFS Realtime message-Position(https://developers.google.com/transit/gtfs-realtime/reference#message-position)"    
+      description: Gives the vehicle GPS angle measured in a clockwise direction from the True North. SameAs 'bearing' field from GTFS Realtime message-Position(https://developers.google.com/transit/gtfs-realtime/reference#message-position)    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
@@ -144,7 +234,7 @@ Vehicle:
         type: Property    
         units: Kilograms    
     category:    
-      description: 'Vehicle category(ies) from an external point of view. This is different than the vehicle type (car, lorry, etc.) represented by the `vehicleType` property. Enum:''municipalServices, nonTracked, private, public, specialUsage, tracked''. Tracked vehicles are those vehicles which position is permanently tracked by a remote system. Or any other needed by an application They incorporate a GPS receiver together with a network connection to periodically update a reported position (location, speed, heading ...)'    
+      description: Vehicle category(ies) from an external point of view. This is different than the vehicle type (car, lorry, etc.) represented by the `vehicleType` property. Enum:'municipalServices, nonTracked, private, public, specialUsage, tracked'. Tracked vehicles are those vehicles which position is permanently tracked by a remote system. Or any other needed by an application They incorporate a GPS receiver together with a network connection to periodically update a reported position (location, speed, heading ...)    
       items:    
         enum:    
           - municipalServices    
@@ -207,7 +297,7 @@ Vehicle:
       x-ngsi:    
         type: Property    
     deviceBatteryStatus:    
-      description: 'Gives the Battery charging status of the reporting device. Enum:''connected, disconnected'''    
+      description: Gives the Battery charging status of the reporting device. Enum:'connected, disconnected'    
       enum:    
         - connected    
         - disconnected    
@@ -222,7 +312,7 @@ Vehicle:
         model: https://schema.org/Text    
         type: Property    
     emergencyVehicleType:    
-      description: 'Type of emergency vehicle corresponding to this observation. Enum:''policeCar, policeMotorcycle, policeVan, policeSWAT, fireEngine, waterTender, airAmbulance, ambulance, motorcycleAmbulance, rescueVehicle, hazardousMaterialsApparatus, towTruck'    
+      description: Type of emergency vehicle corresponding to this observation. Enum:'policeCar, policeMotorcycle, policeVan, policeSWAT, fireEngine, waterTender, airAmbulance, ambulance, motorcycleAmbulance, rescueVehicle, hazardousMaterialsApparatus, towTruck    
       enum:    
         - policeCar    
         - policeMotorcycle    
@@ -266,7 +356,7 @@ Vehicle:
         model: https://schema.org/Text    
         type: Property    
     fuelEfficiency:    
-      description: 'The distance traveled per unit of fuel used, commonly in kilometers per liter (km/L)'    
+      description: The distance traveled per unit of fuel used, commonly in kilometers per liter (km/L)    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
@@ -284,7 +374,7 @@ Vehicle:
         model: https://schema.org/Text    
         type: Property    
     heading:    
-      description: 'Denotes the direction of travel of the vehicle and is specified in decimal degrees, where 0 <= `heading` < 360, counting clockwise relative to the true north. If the vehicle is stationary (i.e. the value of the `speed` attribute is `0`), then the value of the heading attribute must be equal to `-1`'    
+      description: Denotes the direction of travel of the vehicle and is specified in decimal degrees, where 0 <= `heading` < 360, counting clockwise relative to the true north. If the vehicle is stationary (i.e. the value of the `speed` attribute is `0`), then the value of the heading attribute must be equal to `-1`    
       oneOf:    
         - exclusiveMaximum: 360    
           maximum: 360    
@@ -313,7 +403,7 @@ Vehicle:
             type: Property    
       description: Unique identifier of the entity    
       x-ngsi:    
-        type: Property    
+        type: Relationship    
     ignitionStatus:    
       description: Gives the ignition status of the vehicle. True means ignited    
       type: boolean    
@@ -328,26 +418,32 @@ Vehicle:
         model: https://schema.org/URL    
         type: Property    
     license_plate:    
-      description: "Gives the License Plate number of the vehicle. SameAs: license_plate field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'"    
+      description: 'Gives the License Plate number of the vehicle. SameAs: license_plate field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'''    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     location:    
-      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+      description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon    
       oneOf:    
         - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
+              description: BBox of the  Point    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the Point    
               items:    
                 type: number    
               minItems: 2    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - Point    
@@ -362,11 +458,15 @@ Vehicle:
         - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
+              description: BBox coordinates of the LineString    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the LineString    
               items:    
                 items:    
                   type: number    
@@ -374,6 +474,8 @@ Vehicle:
                 type: array    
               minItems: 2    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - LineString    
@@ -388,11 +490,15 @@ Vehicle:
         - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
+              description: BBox coordinates of the Polygon    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the Polygon    
               items:    
                 items:    
                   items:    
@@ -402,6 +508,8 @@ Vehicle:
                 minItems: 4    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - Polygon    
@@ -416,17 +524,23 @@ Vehicle:
         - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
+              description: BBox coordinates of the LineString    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the MulitPoint    
               items:    
                 items:    
                   type: number    
                 minItems: 2    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - MultiPoint    
@@ -441,11 +555,15 @@ Vehicle:
         - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
+              description: BBox coordinates of the LineString    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the MultiLineString    
               items:    
                 items:    
                   items:    
@@ -455,6 +573,8 @@ Vehicle:
                 minItems: 2    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - MultiLineString    
@@ -474,6 +594,7 @@ Vehicle:
               minItems: 4    
               type: array    
             coordinates:    
+              description: Coordinates of the MultiPolygon    
               items:    
                 items:    
                   items:    
@@ -485,6 +606,8 @@ Vehicle:
                   type: array    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - MultiPolygon    
@@ -499,7 +622,7 @@ Vehicle:
       x-ngsi:    
         type: GeoProperty    
     mileageFromOdometer:    
-      description: 'The total distance travelled by the particular vehicle since its initial production, as read from its odometer'    
+      description: The total distance travelled by the particular vehicle since its initial production, as read from its odometer    
       type: number    
       x-ngsi:    
         model: https://schema.org/mileageFromOdometer    
@@ -601,25 +724,31 @@ Vehicle:
               type: Property    
         description: Unique identifier of the entity    
         x-ngsi:    
-          type: Property    
+          type: Relationship    
       type: array    
       x-ngsi:    
         type: Property    
     previousLocation:    
-      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+      description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon    
       oneOf:    
         - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
+              description: BBox of the  Point    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the Point    
               items:    
                 type: number    
               minItems: 2    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - Point    
@@ -634,11 +763,15 @@ Vehicle:
         - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
+              description: BBox coordinates of the LineString    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the LineString    
               items:    
                 items:    
                   type: number    
@@ -646,6 +779,8 @@ Vehicle:
                 type: array    
               minItems: 2    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - LineString    
@@ -660,11 +795,15 @@ Vehicle:
         - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
+              description: BBox coordinates of the Polygon    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the Polygon    
               items:    
                 items:    
                   items:    
@@ -674,6 +813,8 @@ Vehicle:
                 minItems: 4    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - Polygon    
@@ -688,17 +829,23 @@ Vehicle:
         - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
+              description: BBox coordinates of the LineString    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the MulitPoint    
               items:    
                 items:    
                   type: number    
                 minItems: 2    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - MultiPoint    
@@ -713,11 +860,15 @@ Vehicle:
         - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
+              description: BBox coordinates of the LineString    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the MultiLineString    
               items:    
                 items:    
                   items:    
@@ -727,6 +878,8 @@ Vehicle:
                 minItems: 2    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - MultiLineString    
@@ -746,6 +899,7 @@ Vehicle:
               minItems: 4    
               type: array    
             coordinates:    
+              description: Coordinates of the MultiPolygon    
               items:    
                 items:    
                   items:    
@@ -757,6 +911,8 @@ Vehicle:
                   type: array    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - MultiPolygon    
@@ -820,7 +976,7 @@ Vehicle:
         model: https://schema.org/Boolean    
         type: Property    
     serviceProvided:    
-      description: 'Service(s) the vehicle is capable of providing or it is assigned to. Enum:''auxiliaryServices, cargoTransport, construction, fairground, garbageCollection, goodsSelling, maintenance, parksAndGardens, roadSignalling, specialTransport, streetCleaning, streetLighting, urbanTransit, wasteContainerCleaning''. Or any other value needed by an specific application'    
+      description: Service(s) the vehicle is capable of providing or it is assigned to. Enum:'auxiliaryServices, cargoTransport, construction, fairground, garbageCollection, goodsSelling, maintenance, parksAndGardens, roadSignalling, specialTransport, streetCleaning, streetLighting, urbanTransit, wasteContainerCleaning'. Or any other value needed by an specific application    
       items:    
         enum:    
           - auxiliaryServices    
@@ -854,12 +1010,12 @@ Vehicle:
         model: https://schema.org/DateTime    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
+      description: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object    
       type: string    
       x-ngsi:    
         type: Property    
     speed:    
-      description: 'Denotes the magnitude of the horizontal component of the vehicle''s current velocity and is specified in Kilometers per Hour. If provided, the value of the speed attribute must be a non-negative real number. `-1` MAY be used if speed is transiently unknown for some reason'    
+      description: Denotes the magnitude of the horizontal component of the vehicle's current velocity and is specified in Kilometers per Hour. If provided, the value of the speed attribute must be a non-negative real number. `-1` MAY be used if speed is transiently unknown for some reason    
       oneOf:    
         - minimum: 0    
           type: number    
@@ -890,7 +1046,7 @@ Vehicle:
         model: https://schema.org/Text    
         type: Property    
     vehicleConfiguration:    
-      description: 'A short text indicating the configuration of the vehicle, e.g. ''5dr hatchback ST 2.5 MT 225 hp'' or ''limited edition'''    
+      description: A short text indicating the configuration of the vehicle, e.g. '5dr hatchback ST 2.5 MT 225 hp' or 'limited edition'    
       type: string    
       x-ngsi:    
         model: https://schema.org/vehicleConfiguration    
@@ -908,7 +1064,7 @@ Vehicle:
         model: https://schema.org/Text    
         type: Property    
     vehicleRunningStatus:    
-      description: 'Gives the Battery charging status of the reporting device. Enum:''running, waiting, stopped'''    
+      description: Gives the Battery charging status of the reporting device. Enum:'running, waiting, stopped'    
       enum:    
         - running    
         - stopped    
@@ -918,7 +1074,7 @@ Vehicle:
         model: https://schema.org/Text    
         type: Property    
     vehicleSpecialUsage:    
-      description: 'Indicates whether the vehicle is been used for special purposes, like commercial rental, driving school, or as a taxi. The legislation in many countries requires this information to be revealed when offering a car for sale. Enum:''ambulance, fireBrigade, military, police, schoolTransportation, taxi, trashManagement'''    
+      description: Indicates whether the vehicle is been used for special purposes, like commercial rental, driving school, or as a taxi. The legislation in many countries requires this information to be revealed when offering a car for sale. Enum:'ambulance, fireBrigade, military, police, schoolTransportation, taxi, trashManagement'    
       enum:    
         - ambulance    
         - fireBrigade    
@@ -938,7 +1094,7 @@ Vehicle:
         model: https://schema.org/Text    
         type: Property    
     vehicleType:    
-      description: 'Type of vehicle from the point of view of its structural characteristics. This is different than the vehicle category . Enum:''agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other''. The following values defined by _VehicleTypeEnum_ and _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm) and extended for other uses'    
+      description: Type of vehicle from the point of view of its structural characteristics. This is different than the vehicle category . Enum:'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'. The following values defined by _VehicleTypeEnum_ and _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm) and extended for other uses    
       enum:    
         - agriculturalVehicle    
         - ambulance    
@@ -1027,24 +1183,33 @@ Vehicle:
     - category    
     - location    
   type: object    
-  x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2024 Contributors to Smart Data Models Program'    
+  x-derived-from: ''    
+  x-disclaimer: Redistribution and use in source and binary forms...    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/Vehicle/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/Vehicle/schema.json    
-  x-model-tags: 'IUDX, SEDIMARK'    
+  x-model-tags: IUDX, SEDIMARK    
   x-version: 0.2.2    
 ```  
 </details>    
-<!-- /60-ModelYaml -->  
-<!-- 70-MiddleNotes -->  
-<!-- /70-MiddleNotes -->  
-<!-- 80-Examples -->  
-## ペイロードの例  
-#### 車両 NGSI-v2 キー値の例  
-JSON-LD形式のVehicleのkey-valuesの例です。これはNGSI-v2と互換性があり、`options=keyValues`を使用すると、個々のエンティティのコンテキストデータを返す。  
+<!-- /60-ModelYaml -->
+  
+<!-- 70-MiddleNotes -->
+  
+<!-- /70-MiddleNotes -->
+  
+<!-- 80-Examples -->
+  
+
+## 例のペイロード  
+
+#### 車両 NGSI-v2 キー値の例  
+
+ここでは、キーと値のペアで表されたJSON形式のVehicleの例を示します。これは、`options=keyValues`を使用してNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
-```json  
-{  
+
+```json  
+
+{  
   "id": "vehicle:WasteManagement:1",  
   "type": "Vehicle",  
   "vehicleType": "lorry",  
@@ -1105,11 +1270,15 @@ Vehicle:
 }  
 ```  
 </details>  
-#### 車両 NGSI-v2 正規化例  
-以下は、正規化された JSON-LD フォーマットの Vehicle の例です。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+
+#### 車両NGSI-v2正規化例  
+
+ここには、正規化されたJSON形式のVehicleの例が記載されています。これは、オプションを使用しない場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
-```json  
-{  
+
+```json  
+
+{  
   "id": "vehicle:WasteManagement:1",  
   "type": "Vehicle",  
   "category": {  
@@ -1281,11 +1450,15 @@ Vehicle:
 }  
 ```  
 </details>  
-#### 車両 NGSI-LD キー値の例  
-JSON-LD形式のVehicleのkey-valuesの例です。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+
+#### 車両NGSI-LDキー値の例  
+
+ここでは、キー値としてのJSON-LD形式のVehicleの例を示します。これは、`options=keyValues`を使用してNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
-```json  
-{  
+
+```json  
+
+{  
   "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",  
   "type": "Vehicle",  
   "areaServed": "Centro",  
@@ -1349,11 +1522,15 @@ Vehicle:
 }  
 ```  
 </details>  
-#### 車両 NGSI-LD 正規化例  
-以下は、正規化された JSON-LD フォーマットの Vehicle の例です。これは、オプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+
+#### 車両NGSI-LD正規化例  
+
+ここはJSON-LD形式のVehicleの例である。これはオプションを使用しない場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
 <details><summary><strong>show/hide example</strong></summary>    
-```json  
-{  
+
+```json  
+
+{  
   "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",  
   "type": "Vehicle",  
   "areaServed": {  
@@ -1521,12 +1698,21 @@ Vehicle:
   ]  
 }  
 ```  
-</details><!-- /80-Examples -->  
-<!-- 90-FooterNotes -->  
-<!-- /90-FooterNotes -->  
-<!-- 95-Units -->  
-マグニチュード単位の扱い方については、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照のこと。  
-<!-- /95-Units -->  
-<!-- 97-LastFooter -->  
+</details><!-- /80-Examples -->
+  
+<!-- 90-FooterNotes -->
+  
+<!-- /90-FooterNotes -->
+  
+<!-- 95-Units -->
+  
+
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
+<!-- /95-Units -->
+  
+<!-- 97-LastFooter -->
+  
 ---  
-[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
+
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->
+  
