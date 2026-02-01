@@ -166,5 +166,18 @@
       "zoneId": "2",
       "wardNum": 4
     }
+  },
+  "leasingInfo": {
+    "type": "StructuredValue",
+    "value": {
+      "leasingType": "Operating Lease",
+      "leasingStartDate": "2025-06-01T00:00:00.000Z",
+      "leasingEndDate": "2029-06-01T00:00:00.000Z",
+      "monthlyLeaseCost": 525,
+      "allowedAnnualDistance": 20000,
+      "allowedDistanceUnit": "kilometer",
+      "excessDistanceCost": 1,
+      "leasingProvider": "Municipality Leasing A/S"
+    }
   }
 }

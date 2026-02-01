@@ -56,8 +56,8 @@
     "value": "monoHull"
   },
   "laneId": {
-    "type": "Boolean",
-    "value": true
+    "type": "Number",
+    "value": 1
   },
   "laneDirection": {
     "type": "Text",

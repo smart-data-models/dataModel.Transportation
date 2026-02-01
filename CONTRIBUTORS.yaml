@@ -1,5 +1,12 @@
 description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
 contributors:
+  - name:
+    surname:
+    mail: os2fleetoptimiser@os2.eu
+    organization: OS2.eu
+    project: OS2 GPS-Connector
+    comments: Project funded by OS2 for danish municipalities.
+    year: 2025
   - name: Piet
     surname: Bikker
     mail: piet@arvoo.com

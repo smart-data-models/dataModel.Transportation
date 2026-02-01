@@ -24,4 +24,12 @@ currentAdopters:
  project: https://sedimark.eu/
  comments: 
  startDate:
+-
+  adopter: OS2 GPS-Connector
+  description: Open source project for danish municipalities to collect GPS data for analysis and optimisation
+  mail: os2fleetoptimiser@os2.eu
+  organization: https://www.os2.eu/
+  project: https://github.com/OS2sandbox/gps-connector
+  comments: Storing additional meta-data for vehicle, such as 'leasingInfo', is useful for the municipalities when managing their leased vehicles. Further, it is crucial for analysis and optimisation to bring in values such as 'monthlyLeaseCost' and 'allowedAnnualDistance' to account for the TCO of a vehicle.
+  startDate:
  

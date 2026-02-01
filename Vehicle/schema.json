@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$schemaVersion": "0.2.3",
+  "$schemaVersion": "0.2.4",
   "modelTags": "IUDX, SEDIMARK",
   "$id": "https://smart-data-models.github.io/dataModel.Transportation/Vehicle/schema.json",
   "title": "Smart Data Models - Vehicle",
@@ -416,6 +416,53 @@
             "wardNum": {
               "type": "number",
               "description": "Property. Model:'https://schema.org/Number'. Ward number corresponding to this observation"
+            }
+          }
+        },
+         "leasingInfo": {
+          "type": "object",
+          "description": "Property. Leasing contract information for the vehicle.",
+          "properties": {
+            "leasingType": {
+              "type": "string",
+              "description": "Property. Type of leasing contract"
+            },
+            "leasingStartDate": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Property. Model:'https://schema.org/DateTime'. Start date of the leasing contract"
+            },
+            "leasingEndDate": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Property. Model:'https://schema.org/DateTime'. End date of the leasing contract"
+            },
+            "monthlyLeaseCost": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Property. Fixed monthly lease payment amount in the contract currency"
+            },
+            "allowedAnnualDistance": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Property. Maximum allowed annual distance according to lease contract"
+            },
+            "allowedDistanceUnit": {
+              "type": "string",
+              "enum": [
+                "kilometer",
+                "mile"
+              ],
+              "description": "Property. Unit for distance measurements in the lease contract"
+            },
+            "excessDistanceCost": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Property. Cost per unit distance for exceeding the allowed annual distance"
+            },
+            "leasingProvider": {
+              "type": "string",
+              "description": "Property. Name or identifier of the leasing company"
             }
           }
         }
