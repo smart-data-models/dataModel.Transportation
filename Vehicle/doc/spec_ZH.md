@@ -1,88 +1,183 @@
-<!-- 10-Header -->  
+<!-- 10-Header -->
+  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-实体：车辆  
-=====<!-- /10-Header -->  
-<!-- 15-License -->  
-[开放许可](https://github.com/smart-data-models//dataModel.Transportation/blob/master/Vehicle/LICENSE.md)  
-[文件自动生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-<!-- /15-License -->  
-<!-- 20-Description -->  
-全局描述：**该实体模拟一个特定的车辆模型，包括属于该模型的多个车辆实例所共有的所有属性。  
-版本： 0.2.2  
-<!-- /20-Description -->  
-<!-- 30-PropertiesList -->  
 
-## 属性列表  
+实体: Vehicle  
+===============
+<!-- /10-Header -->
+  
+<!-- 15-License -->
+  
 
-<sup><sub>[*] 如果属性中没有类型，是因为它可能有多个类型或不同的格式/模式</sub></sup>。  
-- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 国家。例如，西班牙  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: 街道地址所在的地点，以及该地点所在的区域  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: 地点所在的地区，以及该地区位于哪个国家  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
-	- `district[string]`: 地区是一种行政区划，在一些国家由地方政府管理    
-	- `postOfficeBoxNumber[string]`: 用于邮政信箱地址的邮政信箱号码。例如：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
-	- `postalCode[string]`: 邮政编码。例如：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
-	- `streetAddress[string]`: 街道地址  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-	- `streetNr[string]`: 标识公共街道上特定房产的编号    
-- `alternateName[string]`: 该项目的替代名称  - `annotations[array]`: 项目说明  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: 提供服务或提供物品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `battery[number]`: 电动汽车或与汽车连接的设备当前剩余电池的百分比  - `bearing[number]`: 提供从真北方向顺时针方向测量的车辆 GPS 角度。与 GTFS 实时信息位置（https://developers.google.com/transit/gtfs-realtime/reference#message-position）中的 "方位 "字段相同。  . Model: [https://schema.org/Number](https://schema.org/Number)- `cargoWeight[number]`: 当前车辆货物重量  . Model: [https://schema.org/Number](https://schema.org/Number)- `category[array]`: 从外部角度看的车辆类别。这不同于 "车辆类型 "属性所代表的车辆类型（汽车、货车等）。枚举："市政服务、无轨、私人、公共、特殊用途、有轨"。跟踪车辆是指由远程系统永久跟踪位置的车辆。或应用程序所需的任何其他车辆。它们配有 GPS 接收器和网络连接，可定期更新报告的位置（位置、速度、航向......）。  . Model: [https://schema.org/Text](https://schema.org/Text)- `color[string]`: 产品的颜色  . Model: [https://schema.org/color](https://schema.org/color)- `currentTripCount[number]`: 该观测点对应的车辆在指定运行日的当前行程次数  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配  - `dateFirstUsed[date]`: 表示车辆首次使用时间的时间戳  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[date-time]`: 实体最后一次修改的时间戳。通常由存储平台分配  - `dateVehicleFirstRegistered[date]`: 车辆在相关公共机构首次登记的日期  . Model: [https://schema.org/dateVehicleFirstRegistered](https://schema.org/dateVehicleFirstRegistered)- `description[string]`: 项目描述  - `deviceBatteryStatus[string]`: 报告设备的电池充电状态。枚举："已连接，已断开  . Model: [https://schema.org/Text](https://schema.org/Text)- `deviceSimNumber[string]`: 提供车载设备的 SIM 卡号  . Model: [https://schema.org/Text](https://schema.org/Text)- `emergencyVehicleType[string]`: 与该观测点相对应的应急车辆类型。枚举：'警车、警用摩托车、警用货车、警用搜救车、消防车、供水车、空中救护车、救护车、摩托车救护车、救援车、危险品运输车、拖车  . Model: [https://schema.org/Text](https://schema.org/Text)- `feature[array]`: 车辆集成的功能。枚举：' abs, airbag, alarm, backCamera, disabledRamp, gps, internetConnection, overspeed, proximitySensor, wifi'。或应用程序所需的任何其他内容。为了表示一个功能的多个实例，可以使用以下语法：<特征>,<实例>`。例如，一辆汽车有 4 个安全气囊，可以用 `airbag,4` 表示。  . Model: [https://schema.org/Text](https://schema.org/Text)- `fleetVehicleId[string]`: 车辆在所属车队中的标识符  . Model: [https://schema.org/Text](https://schema.org/Text)- `fuelEfficiency[number]`: 单位燃料的行驶距离，通常以公里/升（km/L）表示  . Model: [https://schema.org/Number](https://schema.org/Number)- `fuelFilled[number]`: 与该观察结果相对应的车辆燃料加注量（升）。  . Model: [https://schema.org/Number](https://schema.org/Number)- `fuelType[string]`: 与该观测结果相对应的适合车辆发动机的燃料类型  . Model: [https://schema.org/Text](https://schema.org/Text)- `heading[*]`: 表示车辆的行驶方向，以十进制度表示，其中 0 <= `heading` < 360，相对于真正的北方顺时针计数。如果车辆静止不动（即 "速度 "属性的值为 "0"），则航向属性的值必须等于"-1"。  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: 实体的唯一标识符  - `ignitionStatus[boolean]`: 显示车辆的点火状态。真表示已点火  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `image[uri]`: 物品的图片  . Model: [https://schema.org/URL](https://schema.org/URL)- `license_plate[string]`: 提供车辆的车牌号码。与 GTFS 实时信息-车辆描述符（https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor）中的 license_plate 字段相同'  . Model: [https://schema.org/Text](https://schema.org/Text)- `location[*]`: 项目的 Geojson 引用。它可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `mileageFromOdometer[number]`: 从里程表上读出的特定车辆自首次生产以来的总行驶距离  . Model: [https://schema.org/mileageFromOdometer](https://schema.org/mileageFromOdometer)- `municipalityInfo[object]`: 与该观测结果相对应的城市信息  . Model: [https://schema.org/Text](https://schema.org/Text)	- `cityId[string]`: 该观测值对应的城市 ID  . Model: [https://schema.org/Text](https://schema.org/Text)  
-	- `cityName[string]`: 该观测值对应的城市名称  . Model: [https://schema.org/Text](https://schema.org/Text)  
-	- `district[string]`: 与该观测结果相对应的地区名称  . Model: [https://schema.org/Text](https://schema.org/Text)  
-	- `stateName[string]`: 该观测值对应的国家名称  . Model: [https://schema.org/Text](https://schema.org/Text)  
-	- `ulbName[string]`: 与该意见相对应的城市地方机构名称  . Model: [https://schema.org/Text](https://schema.org/Text)  
-	- `wardId[string]`: 该观察结果对应的病房编号  . Model: [https://schema.org/Text](https://schema.org/Text)  
-	- `wardName[string]`: 与该观察结果相对应的病房名称  . Model: [https://schema.org/Text](https://schema.org/Text)  
-	- `wardNum[number]`: 与该观察结果相对应的病房号  . Model: [https://schema.org/Number](https://schema.org/Number)  
-	- `zoneId[string]`: 该观测值对应的区域 ID  . Model: [https://schema.org/Text](https://schema.org/Text)  
-	- `zoneName[string]`: 该观测值对应的区域名称  . Model: [https://schema.org/Text](https://schema.org/Text)  
-- `name[string]`: 该项目的名称  - `observationDateTime[date-time]`: 最后报告的观察时间  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `owner[array]`: 包含一个 JSON 编码字符序列的列表，其中引用了所有者的唯一 Ids  - `previousLocation[*]`: 项目的 Geojson 引用。它可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `purchaseDate[date-time]`: 物品的购买日期，例如车辆由当前所有者购买的日期  . Model: [https://schema.org/purchaseDate](https://schema.org/purchaseDate)- `refVehicleModel[*]`: 对车辆模型的引用  . Model: [https://schema.org/URL](https://schema.org/URL)- `reportId[string]`: 为与该观察结果相对应的问题、报告、反馈或交易分配的唯一 ID  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: 指向有关该项目的其他资源的 uri 列表  - `serviceOnDuty[boolean]`: 与此观察结果相对应的应急车辆所提供服务的性质。为 "true "表示该观测点对应的应急车辆正在执行/服务于紧急任务，否则为 "false"。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `serviceProvided[array]`: 车辆能够提供或分配的服务。枚举："辅助服务、货物运输、建筑、游乐场、垃圾收集、货物销售、维护、公园和花园、道路信号、特殊运输、街道清洁、街道照明、城市交通、废物容器清洁"。或特定应用所需的任何其他值  . Model: [https://schema.org/Text](https://schema.org/Text)- `serviceStatus[string]`: 车辆状态（从提供服务的角度来看，因此不适用于私家车）。parked"（已停放）： 车辆已停放，目前不提供任何服务。onRoute`：车辆正在执行任务。可以添加逗号分隔的修饰符来表示车辆目前正在执行什么任务。例如，"onRoute,garbageCollection "可用于表示车辆正在执行垃圾收集任务。坏了"：车辆发生临时故障。outOfService"：车辆在路上，但不执行任何任务，可能是去停车区。枚举：'broken、onRoute、outOfService、parked  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `source[string]`: 以 URL 形式给出实体数据原始来源的字符串。建议使用源提供者的完全合格域名或源对象的 URL  - `speed[*]`: 表示车辆当前速度水平分量的大小，单位为公里/小时。如果提供，速度属性值必须是非负实数。如果由于某种原因速度暂时未知，可以使用 `-1`。  . Model: [https://schema.org/Number](https://schema.org/Number)- `tripNetWeightCollected[number]`: 该观测点对应的车辆在行程结束时收集的净重量  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: NGSI 实体类型。必须是车辆  - `vehicleAltitude[string]`: 使用 GPS 提供车辆当前的高度  . Model: [https://schema.org/Text](https://schema.org/Text)- `vehicleConfiguration[string]`: 简短文字说明车辆配置，例如 "5dr hatchback ST 2.5 MT 225 hp "或 "限量版"。  . Model: [https://schema.org/vehicleConfiguration](https://schema.org/vehicleConfiguration)- `vehicleIdentificationNumber[string]`: 车辆识别码 (VIN) 是汽车行业用于识别单个机动车的唯一序列号  . Model: [https://schema.org/vehicleIdentificationNumber](https://schema.org/vehicleIdentificationNumber)- `vehiclePlateIdentifier[string]`: 车辆登记牌上显示的用于官方识别的标识或代码。登记标识符为数字或字母数字，在发证机关所在区域内独一无二。规范性参考文件：DATEXII `车辆登记牌照标识符  . Model: [https://schema.org/Text](https://schema.org/Text)- `vehicleRunningStatus[string]`: 报告设备的电池充电状态。枚举："运行、等待、停止  . Model: [https://schema.org/Text](https://schema.org/Text)- `vehicleSpecialUsage[string]`: 说明车辆是否用于特殊用途，如商业租赁、驾校或出租车。许多国家的法律规定，在出售汽车时必须披露这些信息。枚举：'救护车、消防队、军队、警察、学校交通、出租车、垃圾管理'。  . Model: [https://schema.org/vehicleSpecialUsage](https://schema.org/vehicleSpecialUsage)- `vehicleTrackerDevice[string]`: 与此次观测相对应的车辆上安装的 GPS 设备或跟踪设备的安装状态  . Model: [https://schema.org/Text](https://schema.org/Text)- `vehicleType[string]`: 从结构特征的角度来看的车辆类型。这与车辆类别不同。枚举'农用车、任何车辆、铰接式车辆、自行车、垃圾车、公共汽车、轿车、大篷车、轻型车、带大篷车的车、带拖车的车、清洁车、建筑或维护车辆、四轮驱动、高边车、货车、小客车、轻便摩托车、摩托车、摩托车、带侧车的摩托车、摩托艇、扫地机、油罐车、三轮汽车、拖车、电车、两轮汽车、手推车、面包车、无催化转换器的车辆、带大篷车的车辆、带拖车的车辆、带偶数登记牌照的车辆、带奇数登记牌照的车辆、其他"。下列由 _VehicleTypeEnum_ 和 _VehicleTypeEnum2_, [DATEX 2 版本 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm) 定义并扩展用于其他用途的值  . Model: [https://schema.org/Text](https://schema.org/Text)- `wardId[string]`: 与该观察结果相对应的实体的 Ward ID  . Model: [https://schema.org/Text](https://schema.org/Text)- `wardName[string]`: 与该观测值相对应的实体名称  . Model: [https://schema.org/Text](https://schema.org/Text)- `zoneName[string]`: 与该观测值相对应的实体的区域名称  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
-<!-- 35-RequiredProperties -->  
-所需属性  
-- `category`  - `id`  - `location`  - `type`  - `vehicleType`  <!-- /35-RequiredProperties -->  
-<!-- 40-NotesYaml -->  
-<!-- /40-NotesYaml -->  
-<!-- 50-DataModelHeader -->  
-## 属性的数据模型描述  
-按字母顺序排列（点击查看详情）  
-<!-- /50-DataModelHeader -->  
-<!-- 60-ModelYaml -->  
+[开放许可证](https://github.com/smart-data-models//dataModel.Transportation/blob/master/Vehicle/LICENSE.md)  
+
+[自动生成的文档](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->
+  
+<!-- 20-Description -->
+  
+
+Global description: **该实体模拟一种特定的车辆型号，包括所有属于此型号的多个车辆实例的共同属性。**  
+
+version: 0.2.2  
+<!-- /20-Description -->
+  
+<!-- 30-PropertiesList -->
+  
+
+
+## 属性列表  
+
+
+<sup><sub>[*] 如果一个属性中没有指定类型，那是因为它可能有多种类型或不同的格式/模式</sub></sup>  
+- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)  
+	- `addressCountry[string]`: 该国。例如，西班牙  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)    
+	- `addressLocality[string]`: 该街道地址所在的地区，以及该地区所在的区域  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)    
+	- `addressRegion[string]`: 该地所在的地区，也是该国所在的地区  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)    
+	- `district[string]`: 区是某些国家的一种行政区划，由当地政府管理  
+	- `postOfficeBoxNumber[string]`: 邮政信箱的邮政信箱号码。例如，03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)    
+	- `postalCode[string]`: 邮政编码。例如，24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)    
+	- `streetAddress[string]`: 街道地址  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)    
+	- `streetNr[string]`: 公共街道上特定房产的识别号码  
+- `alternateName[string]`: 该物品的另一个名称  
+- `annotations[array]`: 关于该项的注释  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `areaServed[string]`: 提供服务或项目的区域  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `battery[number]`: 电动车辆中电池剩余的当前百分比，或连接到车辆的设备  
+- `bearing[number]`: 提供以真北为基准，顺时针方向测量的车辆GPS角度。与GTFS实时信息-位置（https://developers.google.com/transit/gtfs-realtime/reference#message-position）中的'bearing'字段相同。  . Model: [https://schema.org/Number](https://schema.org/Number)  
+- `cargoWeight[number]`: 车辆货物的当前重量  . Model: [https://schema.org/Number](https://schema.org/Number)  
+- `category[array]`: 从外部视角的车辆类别。这与由 `vehicleType` 属性表示的车辆类型（汽车、卡车等）不同。枚举：'municipalServices, nonTracked, private, public, specialUsage, tracked'。被跟踪的车辆是指其位置由远程系统永久跟踪的车辆。或者任何应用程序需要的其他车辆。它们结合GPS接收器和网络连接，定期更新报告位置（位置、速度、方向...）  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `color[string]`: 产品的颜色  . Model: [https://schema.org/color](https://schema.org/color)  
+- `currentTripCount[number]`: 该观察对应的车辆在给定营运日的行程当前计数  . Model: [https://schema.org/Number](https://schema.org/Number)  
+- `dataProvider[string]`: 识别和谐数据实体提供者的字符序列  
+- `dateCreated[date-time]`: 实体创建时间戳。这通常由存储平台分配  
+- `dateFirstUsed[date]`: 车辆首次使用的时间戳  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)  
+- `dateModified[date-time]`: 实体最后修改的时间戳。这通常由存储平台分配  
+- `dateVehicleFirstRegistered[date]`: 车辆首次向相关公共机构登记的日期  . Model: [https://schema.org/dateVehicleFirstRegistered](https://schema.org/dateVehicleFirstRegistered)  
+- `description[string]`: 对此项的描述  
+- `deviceBatteryStatus[string]`: 提供报告设备的电池充电状态。枚举：'已连接，已断开'  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `deviceSimNumber[string]`: 提供车辆内设备的SIM卡号码  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `emergencyVehicleType[string]`: 对应此观察的紧急车辆类型。枚举：'警车，警用摩托车，警用面包车，特警队，消防车，水罐车，空中救护车，救护车，摩托车救护车，救援车辆，危险品车，拖车'  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `feature[array]`: 车辆整合的功能。枚举：' abs, airbag, alarm, backCamera, disabledRamp, gps, internetConnection, overspeed, proximitySensor, wifi'。或者应用程序所需的其他功能。为了表示功能的多个实例，可以使用以下语法： `<功能>,<出现次数>`。例如，一辆车有4个安全气囊，将被表示为 `airbag,4`  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `fleetVehicleId[string]`: 该车辆在其所属车队中的标识符  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `fuelEfficiency[number]`: 每单位燃料消耗所行进的距离，通常用公里每升（公里/升）表示  . Model: [https://schema.org/Number](https://schema.org/Number)  
+- `fuelFilled[number]`: 本观察对应车辆所加油量（升）  . Model: [https://schema.org/Number](https://schema.org/Number)  
+- `fuelType[string]`: 该观察对应的车辆的发动机或发动机适用的燃料类型  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `heading[*]`: 表示车辆的行进方向，以十进制度为单位，范围为0 <= `heading` < 360，相对于真北顺时针计数。如果车辆静止（即`speed`属性的值为`0`），则`heading`属性的值必须等于`-1`。  . Model: [https://schema.org/Number](https://schema.org/Number)  
+- `id[*]`: 实体的唯一标识符  
+- `ignitionStatus[boolean]`: 提供车辆的点火状态。True 表示已点火  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)  
+- `image[uri]`: 该物品的图像  . Model: [https://schema.org/URL](https://schema.org/URL)  
+- `license_plate[string]`: 提供车辆的车牌号码。SameAs：GTFS实时信息中VehicleDescriptor（https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor）的license_plate字段。  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `location[*]`: GeoJSON指向该项的引用。它可以是Point、LineString、Polygon、MultiPoint、MultiLineString或MultiPolygon  
+- `mileageFromOdometer[number]`: 该车辆自初始生产以来行驶的总距离，以其里程表读数为准  . Model: [https://schema.org/mileageFromOdometer](https://schema.org/mileageFromOdometer)  
+- `municipalityInfo[object]`: 与此观察相对应的市政信息  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `cityId[string]`: 与此观测相对应的城市ID  . Model: [https://schema.org/Text](https://schema.org/Text)    
+	- `cityName[string]`: 与此观测相对应的城市名称  . Model: [https://schema.org/Text](https://schema.org/Text)    
+	- `district[string]`: 与此观测相对应的区名称  . Model: [https://schema.org/Text](https://schema.org/Text)    
+	- `stateName[string]`: 该观察结果对应的州名称  . Model: [https://schema.org/Text](https://schema.org/Text)    
+	- `ulbName[string]`: 与该观察相对应的城市地方机构名称  . Model: [https://schema.org/Text](https://schema.org/Text)    
+	- `wardId[string]`: 与此观察相对应的病房ID  . Model: [https://schema.org/Text](https://schema.org/Text)    
+	- `wardName[string]`: 与此观察相对应的病房名称  . Model: [https://schema.org/Text](https://schema.org/Text)    
+	- `wardNum[number]`: 与此观察相对应的病房编号  . Model: [https://schema.org/Number](https://schema.org/Number)    
+	- `zoneId[string]`: 与此观测相对应的区域ID  . Model: [https://schema.org/Text](https://schema.org/Text)    
+	- `zoneName[string]`: 对应此观测的区域名称  . Model: [https://schema.org/Text](https://schema.org/Text)    
+- `name[string]`: 该物品的名称  
+- `observationDateTime[date-time]`: 最近报告的观测时间  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)  
+- `owner[array]`: 包含对所有者唯一Id的JSON编码字符序列的列表  
+- `previousLocation[*]`: 对项目的Geojson引用。它可以是点、线字符串、多边形、多点、多线字符串或多多边形  
+- `purchaseDate[date-time]`: 该物品（例如车辆）被当前所有者购买的日期  . Model: [https://schema.org/purchaseDate](https://schema.org/purchaseDate)  
+- `refVehicleModel[*]`: 对VehicleModel的引用  . Model: [https://schema.org/URL](https://schema.org/URL)  
+- `reportId[string]`: 为此观察对应的问题、报告、反馈或事务分配的唯一ID  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `seeAlso[*]`: 关于该项目的附加资源的URI列表  
+- `serviceOnDuty[boolean]`: 本次观察对应的紧急车辆所提供的服务性质。若紧急车辆对应本次观察正在处理/服务紧急呼叫任务，则为True，否则为False。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)  
+- `serviceProvided[array]`: 车辆能够提供的服务或其被分配的服务。枚举：'auxiliaryServices, cargoTransport, construction, fairground, garbageCollection, goodsSelling, maintenance, parksAndGardens, roadSignalling, specialTransport, streetCleaning, streetLighting, urbanTransit, wasteContainerCleaning'。或者任何特定应用程序所需的其他值。  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `serviceStatus[string]`: 车辆状态（从提供的服务角度来看，因此不适用于私人车辆）。 
+`停车`：车辆已停车，目前不提供任何服务。 
+`行驶中`：车辆正在执行任务。可以添加逗号分隔的修饰符来指示车辆当前正在执行哪个任务。例如，`行驶中，垃圾收集`可以用来表示车辆正在行驶中并执行垃圾收集任务。 
+`故障`：车辆正在经历暂时的故障。 
+`不提供服务`：车辆在道路上但不执行任何任务，可能正在前往其停车区域。 
+枚举：`故障，行驶中，不提供服务，停车`  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)  
+- `source[string]`: 一个字符序列，给出实体数据的原始来源作为URL。建议为源提供者的全限定域名，或源对象的URL。  
+- `speed[*]`: 表示车辆当前速度的水平分量的大小，以公里每小时为单位指定。如果提供，速度属性的值必须是非负实数。 `-1` 可以在速度由于某种原因暂时未知时使用  . Model: [https://schema.org/Number](https://schema.org/Number)  
+- `tripNetWeightCollected[number]`: 该观察对应的车辆在行程结束时收集的净重量  . Model: [https://schema.org/Number](https://schema.org/Number)  
+- `type[string]`: NGSI 实体类型。它必须是车辆  
+- `vehicleAltitude[string]`: 使用GPS获取车辆的当前海拔高度  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `vehicleConfiguration[string]`: 一段简短的文本，指示车辆的配置，例如“5门掀背车ST 2.5手动变速箱225马力”或“限量版”  . Model: [https://schema.org/vehicleConfiguration](https://schema.org/vehicleConfiguration)  
+- `vehicleIdentificationNumber[string]`: 车辆识别号码（VIN）是汽车行业用来识别个别机动车辆的唯一序列号  . Model: [https://schema.org/vehicleIdentificationNumber](https://schema.org/vehicleIdentificationNumber)  
+- `vehiclePlateIdentifier[string]`:  用于官方识别目的的车辆注册板上的标识符或代码，附着在车辆上。注册标识符是数字或字母数字的，并且在发行机构的区域内是唯一的。规范性引用：DATEXII `vehicleRegistrationPlateIdentifier`  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `vehicleRunningStatus[string]`: 提供报告设备的电池充电状态。枚举：'运行，等待，停止'  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `vehicleSpecialUsage[string]`: 指示该车辆是否用于特殊用途，例如商业租赁、驾驶学校或出租车。许多国家的法律要求在出售汽车时披露此信息。枚举：'救护车，消防队，军事，警察，校车，出租车，垃圾管理'  . Model: [https://schema.org/vehicleSpecialUsage](https://schema.org/vehicleSpecialUsage)  
+- `vehicleTrackerDevice[string]`: 该观察对应车辆上GPS设备或跟踪设备的安装状态  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `vehicleType[string]`: 从其结构特征的角度来看的车辆类型。这与车辆类别不同。枚举：'农业车辆、任何车辆、半挂车、自行车、手推车、公共汽车、汽车、拖车、汽车或轻型车辆、带拖车的汽车、带拖车的汽车、清洁手推车、建筑或维护车辆、四轮驱动车、高边车、卡车、小型巴士、轻便摩托车、摩托车、带侧车的摩托车、摩托脚踏车、扫街机、油罐车、三轮车、拖车、有轨电车、两轮车、手推车、货车、无催化转换器的车辆、带拖车的车辆、带拖车的车辆、带有偶数注册牌的车辆、带有奇数注册牌的车辆、其他'。以下值由_VehicleTypeEnum_和_VehicleTypeEnum2_定义，[DATEX 2版本2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)并为其他用途扩展。  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `wardId[string]`: 与此观察相对应的实体的区域编号  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `wardName[string]`: 该观察对应的实体的行政区划名称  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `zoneName[string]`: 该观测对应实体的区域名称  . Model: [https://schema.org/Text](https://schema.org/Text)  
+<!-- /30-PropertiesList -->
+  
+<!-- 35-RequiredProperties -->
+  
+
+必需属性  
+- `类别`  
+- `id`  
+- `位置`  
+- `类型`  
+- `车辆类型`  
+<!-- /35-RequiredProperties -->
+  
+<!-- 40-NotesYaml -->
+  
+<!-- /40-NotesYaml -->
+  
+<!-- 50-DataModelHeader -->
+  
+
+## 数据模型属性描述  
+
+按字母顺序排序（点击查看详情）  
+<!-- /50-DataModelHeader -->
+  
+<!-- 60-ModelYaml -->
+  
 <details><summary><strong>full yaml details</strong></summary>    
-```yaml  
+
+```yaml  
 Vehicle:    
-  description: 'This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.'    
+  description: This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.    
   properties:    
     address:    
       description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'The country. For example, Spain'    
+          description: The country. For example, Spain    
           type: string    
           x-ngsi:    
             model: https://schema.org/addressCountry    
             type: Property    
         addressLocality:    
-          description: 'The locality in which the street address is, and which is in the region'    
+          description: The locality in which the street address is, and which is in the region    
           type: string    
           x-ngsi:    
             model: https://schema.org/addressLocality    
             type: Property    
         addressRegion:    
-          description: 'The region in which the locality is, and which is in the country'    
+          description: The region in which the locality is, and which is in the country    
           type: string    
           x-ngsi:    
             model: https://schema.org/addressRegion    
             type: Property    
         district:    
-          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          description: A district is a type of administrative division that, in some countries, is managed by the local government    
           type: string    
           x-ngsi:    
             type: Property    
         postOfficeBoxNumber:    
-          description: 'The post office box number for PO box addresses. For example, 03578'    
+          description: The post office box number for PO box addresses. For example, 03578    
           type: string    
           x-ngsi:    
             model: https://schema.org/postOfficeBoxNumber    
             type: Property    
         postalCode:    
-          description: 'The postal code. For example, 24004'    
+          description: The postal code. For example, 24004    
           type: string    
           x-ngsi:    
             model: https://schema.org/https://schema.org/postalCode    
@@ -122,14 +217,14 @@ Vehicle:
         model: https://schema.org/Text    
         type: Property    
     battery:    
-      description: 'The current percentage of battery left in case of an electric vehicle, or a device connected to the vehicle'    
+      description: The current percentage of battery left in case of an electric vehicle, or a device connected to the vehicle    
       maximum: 1    
       minimum: 0    
       type: number    
       x-ngsi:    
         type: Property    
     bearing:    
-      description: "Gives the vehicle GPS angle measured in a clockwise direction from the True North. SameAs 'bearing' field from GTFS Realtime message-Position(https://developers.google.com/transit/gtfs-realtime/reference#message-position)"    
+      description: Gives the vehicle GPS angle measured in a clockwise direction from the True North. SameAs 'bearing' field from GTFS Realtime message-Position(https://developers.google.com/transit/gtfs-realtime/reference#message-position)    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
@@ -144,7 +239,7 @@ Vehicle:
         type: Property    
         units: Kilograms    
     category:    
-      description: 'Vehicle category(ies) from an external point of view. This is different than the vehicle type (car, lorry, etc.) represented by the `vehicleType` property. Enum:''municipalServices, nonTracked, private, public, specialUsage, tracked''. Tracked vehicles are those vehicles which position is permanently tracked by a remote system. Or any other needed by an application They incorporate a GPS receiver together with a network connection to periodically update a reported position (location, speed, heading ...)'    
+      description: Vehicle category(ies) from an external point of view. This is different than the vehicle type (car, lorry, etc.) represented by the `vehicleType` property. Enum:'municipalServices, nonTracked, private, public, specialUsage, tracked'. Tracked vehicles are those vehicles which position is permanently tracked by a remote system. Or any other needed by an application They incorporate a GPS receiver together with a network connection to periodically update a reported position (location, speed, heading ...)    
       items:    
         enum:    
           - municipalServices    
@@ -207,7 +302,7 @@ Vehicle:
       x-ngsi:    
         type: Property    
     deviceBatteryStatus:    
-      description: 'Gives the Battery charging status of the reporting device. Enum:''connected, disconnected'''    
+      description: Gives the Battery charging status of the reporting device. Enum:'connected, disconnected'    
       enum:    
         - connected    
         - disconnected    
@@ -222,7 +317,7 @@ Vehicle:
         model: https://schema.org/Text    
         type: Property    
     emergencyVehicleType:    
-      description: 'Type of emergency vehicle corresponding to this observation. Enum:''policeCar, policeMotorcycle, policeVan, policeSWAT, fireEngine, waterTender, airAmbulance, ambulance, motorcycleAmbulance, rescueVehicle, hazardousMaterialsApparatus, towTruck'    
+      description: Type of emergency vehicle corresponding to this observation. Enum:'policeCar, policeMotorcycle, policeVan, policeSWAT, fireEngine, waterTender, airAmbulance, ambulance, motorcycleAmbulance, rescueVehicle, hazardousMaterialsApparatus, towTruck    
       enum:    
         - policeCar    
         - policeMotorcycle    
@@ -266,7 +361,7 @@ Vehicle:
         model: https://schema.org/Text    
         type: Property    
     fuelEfficiency:    
-      description: 'The distance traveled per unit of fuel used, commonly in kilometers per liter (km/L)'    
+      description: The distance traveled per unit of fuel used, commonly in kilometers per liter (km/L)    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
@@ -284,7 +379,7 @@ Vehicle:
         model: https://schema.org/Text    
         type: Property    
     heading:    
-      description: 'Denotes the direction of travel of the vehicle and is specified in decimal degrees, where 0 <= `heading` < 360, counting clockwise relative to the true north. If the vehicle is stationary (i.e. the value of the `speed` attribute is `0`), then the value of the heading attribute must be equal to `-1`'    
+      description: Denotes the direction of travel of the vehicle and is specified in decimal degrees, where 0 <= `heading` < 360, counting clockwise relative to the true north. If the vehicle is stationary (i.e. the value of the `speed` attribute is `0`), then the value of the heading attribute must be equal to `-1`    
       oneOf:    
         - exclusiveMaximum: 360    
           maximum: 360    
@@ -313,7 +408,7 @@ Vehicle:
             type: Property    
       description: Unique identifier of the entity    
       x-ngsi:    
-        type: Property    
+        type: Relationship    
     ignitionStatus:    
       description: Gives the ignition status of the vehicle. True means ignited    
       type: boolean    
@@ -328,26 +423,32 @@ Vehicle:
         model: https://schema.org/URL    
         type: Property    
     license_plate:    
-      description: "Gives the License Plate number of the vehicle. SameAs: license_plate field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'"    
+      description: 'Gives the License Plate number of the vehicle. SameAs: license_plate field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'''    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     location:    
-      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+      description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon    
       oneOf:    
         - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
+              description: BBox of the  Point    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the Point    
               items:    
                 type: number    
               minItems: 2    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - Point    
@@ -362,11 +463,15 @@ Vehicle:
         - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
+              description: BBox coordinates of the LineString    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the LineString    
               items:    
                 items:    
                   type: number    
@@ -374,6 +479,8 @@ Vehicle:
                 type: array    
               minItems: 2    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - LineString    
@@ -388,11 +495,15 @@ Vehicle:
         - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
+              description: BBox coordinates of the Polygon    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the Polygon    
               items:    
                 items:    
                   items:    
@@ -402,6 +513,8 @@ Vehicle:
                 minItems: 4    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - Polygon    
@@ -416,17 +529,23 @@ Vehicle:
         - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
+              description: BBox coordinates of the LineString    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the MulitPoint    
               items:    
                 items:    
                   type: number    
                 minItems: 2    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - MultiPoint    
@@ -441,11 +560,15 @@ Vehicle:
         - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
+              description: BBox coordinates of the LineString    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the MultiLineString    
               items:    
                 items:    
                   items:    
@@ -455,6 +578,8 @@ Vehicle:
                 minItems: 2    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - MultiLineString    
@@ -474,6 +599,7 @@ Vehicle:
               minItems: 4    
               type: array    
             coordinates:    
+              description: Coordinates of the MultiPolygon    
               items:    
                 items:    
                   items:    
@@ -485,6 +611,8 @@ Vehicle:
                   type: array    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - MultiPolygon    
@@ -499,7 +627,7 @@ Vehicle:
       x-ngsi:    
         type: GeoProperty    
     mileageFromOdometer:    
-      description: 'The total distance travelled by the particular vehicle since its initial production, as read from its odometer'    
+      description: The total distance travelled by the particular vehicle since its initial production, as read from its odometer    
       type: number    
       x-ngsi:    
         model: https://schema.org/mileageFromOdometer    
@@ -601,25 +729,31 @@ Vehicle:
               type: Property    
         description: Unique identifier of the entity    
         x-ngsi:    
-          type: Property    
+          type: Relationship    
       type: array    
       x-ngsi:    
         type: Property    
     previousLocation:    
-      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+      description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon    
       oneOf:    
         - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
+              description: BBox of the  Point    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the Point    
               items:    
                 type: number    
               minItems: 2    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - Point    
@@ -634,11 +768,15 @@ Vehicle:
         - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
+              description: BBox coordinates of the LineString    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the LineString    
               items:    
                 items:    
                   type: number    
@@ -646,6 +784,8 @@ Vehicle:
                 type: array    
               minItems: 2    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - LineString    
@@ -660,11 +800,15 @@ Vehicle:
         - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
+              description: BBox coordinates of the Polygon    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the Polygon    
               items:    
                 items:    
                   items:    
@@ -674,6 +818,8 @@ Vehicle:
                 minItems: 4    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - Polygon    
@@ -688,17 +834,23 @@ Vehicle:
         - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
+              description: BBox coordinates of the LineString    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the MulitPoint    
               items:    
                 items:    
                   type: number    
                 minItems: 2    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - MultiPoint    
@@ -713,11 +865,15 @@ Vehicle:
         - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
+              description: BBox coordinates of the LineString    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the MultiLineString    
               items:    
                 items:    
                   items:    
@@ -727,6 +883,8 @@ Vehicle:
                 minItems: 2    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - MultiLineString    
@@ -746,6 +904,7 @@ Vehicle:
               minItems: 4    
               type: array    
             coordinates:    
+              description: Coordinates of the MultiPolygon    
               items:    
                 items:    
                   items:    
@@ -757,6 +916,8 @@ Vehicle:
                   type: array    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - MultiPolygon    
@@ -820,7 +981,7 @@ Vehicle:
         model: https://schema.org/Boolean    
         type: Property    
     serviceProvided:    
-      description: 'Service(s) the vehicle is capable of providing or it is assigned to. Enum:''auxiliaryServices, cargoTransport, construction, fairground, garbageCollection, goodsSelling, maintenance, parksAndGardens, roadSignalling, specialTransport, streetCleaning, streetLighting, urbanTransit, wasteContainerCleaning''. Or any other value needed by an specific application'    
+      description: Service(s) the vehicle is capable of providing or it is assigned to. Enum:'auxiliaryServices, cargoTransport, construction, fairground, garbageCollection, goodsSelling, maintenance, parksAndGardens, roadSignalling, specialTransport, streetCleaning, streetLighting, urbanTransit, wasteContainerCleaning'. Or any other value needed by an specific application    
       items:    
         enum:    
           - auxiliaryServices    
@@ -854,12 +1015,12 @@ Vehicle:
         model: https://schema.org/DateTime    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
+      description: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object    
       type: string    
       x-ngsi:    
         type: Property    
     speed:    
-      description: 'Denotes the magnitude of the horizontal component of the vehicle''s current velocity and is specified in Kilometers per Hour. If provided, the value of the speed attribute must be a non-negative real number. `-1` MAY be used if speed is transiently unknown for some reason'    
+      description: Denotes the magnitude of the horizontal component of the vehicle's current velocity and is specified in Kilometers per Hour. If provided, the value of the speed attribute must be a non-negative real number. `-1` MAY be used if speed is transiently unknown for some reason    
       oneOf:    
         - minimum: 0    
           type: number    
@@ -890,7 +1051,7 @@ Vehicle:
         model: https://schema.org/Text    
         type: Property    
     vehicleConfiguration:    
-      description: 'A short text indicating the configuration of the vehicle, e.g. ''5dr hatchback ST 2.5 MT 225 hp'' or ''limited edition'''    
+      description: A short text indicating the configuration of the vehicle, e.g. '5dr hatchback ST 2.5 MT 225 hp' or 'limited edition'    
       type: string    
       x-ngsi:    
         model: https://schema.org/vehicleConfiguration    
@@ -908,7 +1069,7 @@ Vehicle:
         model: https://schema.org/Text    
         type: Property    
     vehicleRunningStatus:    
-      description: 'Gives the Battery charging status of the reporting device. Enum:''running, waiting, stopped'''    
+      description: Gives the Battery charging status of the reporting device. Enum:'running, waiting, stopped'    
       enum:    
         - running    
         - stopped    
@@ -918,7 +1079,7 @@ Vehicle:
         model: https://schema.org/Text    
         type: Property    
     vehicleSpecialUsage:    
-      description: 'Indicates whether the vehicle is been used for special purposes, like commercial rental, driving school, or as a taxi. The legislation in many countries requires this information to be revealed when offering a car for sale. Enum:''ambulance, fireBrigade, military, police, schoolTransportation, taxi, trashManagement'''    
+      description: Indicates whether the vehicle is been used for special purposes, like commercial rental, driving school, or as a taxi. The legislation in many countries requires this information to be revealed when offering a car for sale. Enum:'ambulance, fireBrigade, military, police, schoolTransportation, taxi, trashManagement'    
       enum:    
         - ambulance    
         - fireBrigade    
@@ -938,7 +1099,7 @@ Vehicle:
         model: https://schema.org/Text    
         type: Property    
     vehicleType:    
-      description: 'Type of vehicle from the point of view of its structural characteristics. This is different than the vehicle category . Enum:''agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other''. The following values defined by _VehicleTypeEnum_ and _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm) and extended for other uses'    
+      description: Type of vehicle from the point of view of its structural characteristics. This is different than the vehicle category . Enum:'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'. The following values defined by _VehicleTypeEnum_ and _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm) and extended for other uses    
       enum:    
         - agriculturalVehicle    
         - ambulance    
@@ -1027,24 +1188,33 @@ Vehicle:
     - category    
     - location    
   type: object    
-  x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2024 Contributors to Smart Data Models Program'    
+  x-derived-from: ''    
+  x-disclaimer: Redistribution and use in source and binary forms...    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/Vehicle/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/Vehicle/schema.json    
-  x-model-tags: 'IUDX, SEDIMARK'    
+  x-model-tags: IUDX, SEDIMARK    
   x-version: 0.2.2    
 ```  
 </details>    
-<!-- /60-ModelYaml -->  
-<!-- 70-MiddleNotes -->  
-<!-- /70-MiddleNotes -->  
-<!-- 80-Examples -->  
-## 有效载荷示例  
-#### 车辆 NGSI-v2 键值示例  
-下面是一个以 JSON-LD 格式作为键值的车辆示例。当使用 `options=keyValues` 时，这与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
+<!-- /60-ModelYaml -->
+  
+<!-- 70-MiddleNotes -->
+  
+<!-- /70-MiddleNotes -->
+  
+<!-- 80-Examples -->
+  
+
+## 示例有效载荷  
+
+#### 车辆NGSI-v2键值示例  
+
+这是JSON格式的车辆示例，以键值对的形式呈现。当使用`options=keyValues`时，这与NGSI-v2兼容，并返回个体实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
-```json  
-{  
+
+```json  
+
+{  
   "id": "vehicle:WasteManagement:1",  
   "type": "Vehicle",  
   "vehicleType": "lorry",  
@@ -1105,11 +1275,15 @@ Vehicle:
 }  
 ```  
 </details>  
-#### 车辆 NGSI-v2 标准化示例  
-下面是一个以 JSON-LD 格式规范化的车辆示例。在不使用选项的情况下，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
+
+#### 车辆NGSI-v2标准化示例  
+
+这是一个以JSON格式标准化的车辆示例。当不使用选项时，它与NGSI-v2兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
-```json  
-{  
+
+```json  
+
+{  
   "id": "vehicle:WasteManagement:1",  
   "type": "Vehicle",  
   "category": {  
@@ -1281,11 +1455,15 @@ Vehicle:
 }  
 ```  
 </details>  
-#### 车辆 NGSI-LD 键值示例  
-下面是一个以 JSON-LD 格式作为键值的车辆示例。当使用 `options=keyValues` 时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
+
+#### 车辆NGSI-LD键值示例  
+
+这是一个JSON-LD格式的车辆示例，以键值对的形式呈现。当使用`options=keyValues`时，它与NGSI-LD兼容，并返回个体实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
-```json  
-{  
+
+```json  
+
+{  
   "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",  
   "type": "Vehicle",  
   "areaServed": "Centro",  
@@ -1349,11 +1527,15 @@ Vehicle:
 }  
 ```  
 </details>  
-#### 车辆 NGSI-LD 标准化示例  
-下面是一个以 JSON-LD 格式规范化的车辆示例。在不使用选项时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
+
+#### 车辆NGSI-LD标准化示例  
+
+这是一个以JSON-LD格式标准化的车辆示例。当不使用选项时，它与NGSI-LD兼容，并返回个体实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
-```json  
-{  
+
+```json  
+
+{  
   "id": "urn:ngsi-ld:Vehicle:vehicle:WasteManagement:1",  
   "type": "Vehicle",  
   "areaServed": {  
@@ -1521,12 +1703,21 @@ Vehicle:
   ]  
 }  
 ```  
-</details><!-- /80-Examples -->  
-<!-- 90-FooterNotes -->  
-<!-- /90-FooterNotes -->  
-<!-- 95-Units -->  
-请参阅 [FAQ 10](https://smartdatamodels.org/index.php/faqs/)，获取如何处理幅度单位的答案。  
-<!-- /95-Units -->  
-<!-- 97-LastFooter -->  
+</details><!-- /80-Examples -->
+  
+<!-- 90-FooterNotes -->
+  
+<!-- /90-FooterNotes -->
+  
+<!-- 95-Units -->
+  
+
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
+<!-- /95-Units -->
+  
+<!-- 97-LastFooter -->
+  
 ---  
-[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
+
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->
+  
