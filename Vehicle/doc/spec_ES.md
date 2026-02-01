@@ -17,7 +17,7 @@ Entidad: Vehicle
 <!-- 20-Description -->
   
 
-Global description: **Esta entidad modela un modelo de vehículo en particular, incluyendo todas las propiedades que son comunes a varias instancias de vehículos que pertenecen a dicho modelo.**  
+Global description: **Esta entidad modela un modelo de vehículo en particular, incluyendo todas las propiedades que son comunes a múltiples instancias de vehículos que pertenecen a dicho modelo.**  
 
 version: 0.2.2  
 <!-- /20-Description -->
@@ -41,18 +41,18 @@ version: 0.2.2
 	- `streetNr[string]`: Número que identifica una propiedad específica en una calle pública  
 - `alternateName[string]`: Un nombre alternativo para este artículo  
 - `annotations[array]`: Anotaciones sobre el artículo  . Model: [https://schema.org/Text](https://schema.org/Text)  
-- `areaServed[string]`: El área geográfica donde se proporciona un servicio o artículo ofrecido  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `areaServed[string]`: El área geográfica donde se presta un servicio o artículo ofrecido  . Model: [https://schema.org/Text](https://schema.org/Text)  
 - `battery[number]`: El porcentaje actual de batería restante en caso de un vehículo eléctrico, o un dispositivo conectado al vehículo  
-- `bearing[number]`: Da el ángulo GPS del vehículo medido en dirección de las agujas del reloj desde el Norte Verdadero. SameAs 'campo de rumbo' desde el mensaje de GTFS Realtime-Position(https://developers.google.com/transit/gtfs-realtime/reference#message-position)  . Model: [https://schema.org/Number](https://schema.org/Number)  
+- `bearing[number]`: Proporciona el ángulo GPS del vehículo medido en dirección horaria desde el Norte Verdadero. Igual que el campo 'bearing' del mensaje GTFS Realtime-Position (https://developers.google.com/transit/gtfs-realtime/reference#message-position)  . Model: [https://schema.org/Number](https://schema.org/Number)  
 - `cargoWeight[number]`: Peso actual de la carga del vehículo  . Model: [https://schema.org/Number](https://schema.org/Number)  
-- `category[array]`: Categoría(s) de vehículo desde un punto de vista externo. Esto es diferente al tipo de vehículo (coche, camión, etc.) representado por la propiedad `vehicleType`. Enum: 'municipalServices, nonTracked, private, public, specialUsage, tracked'. Los vehículos rastreados son aquellos cuya posición es rastreada permanentemente por un sistema remoto. O cualquier otro necesario por una aplicación. Incorporan un receptor GPS junto con una conexión de red para actualizar periódicamente una posición reportada (ubicación, velocidad, dirección ...)  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `category[array]`: Categoría(s) de vehículo desde un punto de vista externo. Esto es diferente al tipo de vehículo (coche, camión, etc.) representado por la propiedad `vehicleType`. Enum: 'municipalServices, nonTracked, private, public, specialUsage, tracked'. Los vehículos rastreados son aquellos cuya posición es rastreada permanentemente por un sistema remoto. O cualquier otro necesario para una aplicación. Incorporan un receptor GPS junto con una conexión de red para actualizar periódicamente una posición informada (ubicación, velocidad, dirección...)  . Model: [https://schema.org/Text](https://schema.org/Text)  
 - `color[string]`: El color del producto  . Model: [https://schema.org/color](https://schema.org/color)  
 - `currentTripCount[number]`: La cuenta actual de los viajes realizados por el vehículo correspondiente a esta observación en el día de operación dado  . Model: [https://schema.org/Number](https://schema.org/Number)  
 - `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizados  
-- `dateCreated[date-time]`: Marca de tiempo de creación de la entidad. Esto generalmente será asignado por la plataforma de almacenamiento  
+- `dateCreated[date-time]`: Marca de tiempo de creación de entidad. Esto generalmente será asignado por la plataforma de almacenamiento  
 - `dateFirstUsed[date]`: Marca de tiempo que denota cuándo se utilizó el vehículo por primera vez  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)  
 - `dateModified[date-time]`: Marca de tiempo de la última modificación de la entidad. Esto generalmente será asignado por la plataforma de almacenamiento  
-- `dateVehicleFirstRegistered[date]`: La fecha de la primera inscripción del vehículo ante las autoridades públicas correspondientes  . Model: [https://schema.org/dateVehicleFirstRegistered](https://schema.org/dateVehicleFirstRegistered)  
+- `dateVehicleFirstRegistered[date]`: La fecha de la primera inscripción del vehículo ante las autoridades públicas respectivas  . Model: [https://schema.org/dateVehicleFirstRegistered](https://schema.org/dateVehicleFirstRegistered)  
 - `description[string]`: Una descripción de este artículo  
 - `deviceBatteryStatus[string]`: Proporciona el estado de carga de la batería del dispositivo que informa. Enum: 'conectado, desconectado'  . Model: [https://schema.org/Text](https://schema.org/Text)  
 - `deviceSimNumber[string]`: Proporciona el número de SIM del dispositivo en el vehículo  . Model: [https://schema.org/Text](https://schema.org/Text)  
@@ -67,31 +67,31 @@ version: 0.2.2
 - `ignitionStatus[boolean]`: Indica el estado de encendido del vehículo. True significa encendido  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)  
 - `image[uri]`: Una imagen del artículo  . Model: [https://schema.org/URL](https://schema.org/URL)  
 - `license_plate[string]`: Proporciona el número de matrícula del vehículo. SameAs: campo license_plate del mensaje VehicleDescriptor de GTFS Realtime (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)  . Model: [https://schema.org/Text](https://schema.org/Text)  
-- `location[*]`: Referencia Geojson al elemento. Puede ser Punto, LineaString, Polígono, MultiPunto, MultiLineaString o MultiPolígono  
+- `location[*]`: Referencia Geojson del elemento. Puede ser Punto, LineaString, Polígono, MultiPunto, MultiLineaString o MultiPolígono  
 - `mileageFromOdometer[number]`: La distancia total recorrida por el vehículo en particular desde su producción inicial, según se lee en su odómetro  . Model: [https://schema.org/mileageFromOdometer](https://schema.org/mileageFromOdometer)  
 - `municipalityInfo[object]`: Información municipal correspondiente a esta observación  . Model: [https://schema.org/Text](https://schema.org/Text)  
 	- `cityId[string]`: ID de ciudad correspondiente a esta observación  . Model: [https://schema.org/Text](https://schema.org/Text)    
 	- `cityName[string]`: Nombre de ciudad correspondiente a esta observación  . Model: [https://schema.org/Text](https://schema.org/Text)    
-	- `district[string]`: Nombre del distrito correspondiente a esta observación  . Model: [https://schema.org/Text](https://schema.org/Text)    
+	- `district[string]`: Nombre del distrito que corresponde a esta observación  . Model: [https://schema.org/Text](https://schema.org/Text)    
 	- `stateName[string]`: Nombre del estado correspondiente a esta observación  . Model: [https://schema.org/Text](https://schema.org/Text)    
 	- `ulbName[string]`: Nombre del organismo local urbano correspondiente a esta observación  . Model: [https://schema.org/Text](https://schema.org/Text)    
 	- `wardId[string]`: ID de Sala correspondiente a esta observación  . Model: [https://schema.org/Text](https://schema.org/Text)    
-	- `wardName[string]`: Nombre de la sección que corresponde a esta observación  . Model: [https://schema.org/Text](https://schema.org/Text)    
+	- `wardName[string]`: Nombre del distrito correspondiente a esta observación  . Model: [https://schema.org/Text](https://schema.org/Text)    
 	- `wardNum[number]`: Número de sala correspondiente a esta observación  . Model: [https://schema.org/Number](https://schema.org/Number)    
 	- `zoneId[string]`: ID de zona correspondiente a esta observación  . Model: [https://schema.org/Text](https://schema.org/Text)    
 	- `zoneName[string]`: Nombre de zona correspondiente a esta observación  . Model: [https://schema.org/Text](https://schema.org/Text)    
 - `name[string]`: El nombre de este artículo  
-- `observationDateTime[date-time]`: Último tiempo reportado de observación  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)  
+- `observationDateTime[date-time]`: Último momento reportado de observación  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)  
 - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los Ids únicos del(los) propietario(s)  
 - `previousLocation[*]`: Referencia Geojson al elemento. Puede ser Punto, LineaString, Polígono, MultiPunto, MultiLineaString o MultiPolígono  
 - `purchaseDate[date-time]`: La fecha en que el artículo, por ejemplo, el vehículo, fue comprado por el propietario actual  . Model: [https://schema.org/purchaseDate](https://schema.org/purchaseDate)  
 - `refVehicleModel[*]`: Referencia a un Modelo de Vehículo  . Model: [https://schema.org/URL](https://schema.org/URL)  
-- `reportId[string]`: Id único asignado para el problema o informe o comentario o transacción correspondiente a esta observación  . Model: [https://schema.org/Text](https://schema.org/Text)  
-- `seeAlso[*]`: Lista de uri que apuntan a recursos adicionales sobre el artículo  
-- `serviceOnDuty[boolean]`: Naturaleza del servicio proporcionado por el vehículo de emergencia que corresponde a esta observación. True indica que el vehículo de emergencia que corresponde a esta observación está atendiendo/brindando servicio a una llamada de emergencia y es False en caso contrario  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)  
+- `reportId[string]`: Id único asignado para el problema o informe o retroalimentación o transacción correspondiente a esta observación  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `seeAlso[*]`: Lista de uri que apuntan a recursos adicionales sobre el elemento  
+- `serviceOnDuty[boolean]`: Naturaleza del servicio proporcionado por el vehículo de emergencia que corresponde a esta observación. True indica que el vehículo de emergencia que corresponde a esta observación está atendiendo/ brindando servicio a una llamada de emergencia y es False en caso contrario  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)  
 - `serviceProvided[array]`: Servicio(s) que el vehículo es capaz de proporcionar o al que está asignado. Enum: 'auxiliaryServices, cargoTransport, construction, fairground, garbageCollection, goodsSelling, maintenance, parksAndGardens, roadSignalling, specialTransport, streetCleaning, streetLighting, urbanTransit, wasteContainerCleaning'. O cualquier otro valor necesario para una aplicación específica  . Model: [https://schema.org/Text](https://schema.org/Text)  
-- `serviceStatus[string]`: Estado del vehículo (desde el punto de vista del servicio proporcionado, por lo que podría no aplicarse a vehículos privados). `aparcado` : El vehículo está aparcado y no proporciona ningún servicio en este momento. `enRuta` : El vehículo está realizando una misión. Se puede agregar un modificador separado por comas para indicar qué misión está entregando actualmente el vehículo. Por ejemplo, `enRuta,recogidaDeBasura` se puede utilizar para denotar que el vehículo está en ruta y en una misión de recogida de basura. `averiado` : El vehículo sufre una avería temporal. `fueraDeServicio` : El vehículo está en la carretera pero no está realizando ninguna misión, probablemente dirigiéndose a su área de aparcamiento. Enum: 'averiado, enRuta, fueraDeServicio, aparcado'  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)  
-- `source[string]`: Una secuencia de caracteres que proporciona la fuente original de los datos de la entidad como una URL. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente o la URL del objeto de la fuente.  
+- `serviceStatus[string]`: Estado del vehículo (desde el punto de vista del servicio proporcionado, por lo que podría no aplicarse a vehículos privados). `estacionado` : El vehículo está estacionado y no está prestando ningún servicio en este momento. `enRuta` : El vehículo está realizando una misión. Se puede agregar uno o más modificadores separados por comas para indicar qué misión está realizando actualmente el vehículo. Por ejemplo, `enRuta,recogidaDeBasura` se puede utilizar para denotar que el vehículo está en ruta y en una misión de recogida de basura. `averiado` : El vehículo sufre una avería temporal. `fueraDeServicio` : El vehículo está en la carretera pero no está realizando ninguna misión, probablemente dirigiéndose a su área de estacionamiento. Enum: 'averiado, enRuta, fueraDeServicio, estacionado'  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)  
+- `source[string]`: Una secuencia de caracteres que da la fuente original de los datos de la entidad como una URL. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto de la fuente.  
 - `speed[*]`: Indica la magnitud del componente horizontal de la velocidad actual del vehículo y se especifica en kilómetros por hora. Si se proporciona, el valor del atributo de velocidad debe ser un número real no negativo. `-1` PUEDE usarse si la velocidad es transitoriamente desconocida por alguna razón.  . Model: [https://schema.org/Number](https://schema.org/Number)  
 - `tripNetWeightCollected[number]`: El peso neto recogido por el vehículo correspondiente a esta observación al final del viaje  . Model: [https://schema.org/Number](https://schema.org/Number)  
 - `type[string]`: Tipo de entidad NGSI. Tiene que ser Vehículo  
@@ -100,11 +100,11 @@ version: 0.2.2
 - `vehicleIdentificationNumber[string]`: El Número de Identificación del Vehículo (VIN) es un número de serie único utilizado por la industria automotriz para identificar los vehículos de motor individuales  . Model: [https://schema.org/vehicleIdentificationNumber](https://schema.org/vehicleIdentificationNumber)  
 - `vehiclePlateIdentifier[string]`:  Un identificador o código que se muestra en una placa de matrícula del vehículo adjunta al vehículo utilizado para fines de identificación oficial. El identificador de registro es numérico o alfanumérico y es único dentro de la región de la autoridad emisora. Referencias normativas: DATEXII `vehicleRegistrationPlateIdentifier`  . Model: [https://schema.org/Text](https://schema.org/Text)  
 - `vehicleRunningStatus[string]`: Proporciona el estado de carga de la batería del dispositivo que informa. Enum: 'en ejecución, en espera, detenido'  . Model: [https://schema.org/Text](https://schema.org/Text)  
-- `vehicleSpecialUsage[string]`: Indica si el vehículo ha sido utilizado para fines especiales, como alquiler comercial, escuela de conducción o como taxi. La legislación en muchos países requiere que se revele esta información al ofrecer un coche para la venta. Enum: 'ambulancia, brigada de bomberos, militar, policía, transporte escolar, taxi, gestión de residuos'  . Model: [https://schema.org/vehicleSpecialUsage](https://schema.org/vehicleSpecialUsage)  
+- `vehicleSpecialUsage[string]`: Indica si el vehículo ha sido utilizado para fines especiales, como alquiler comercial, escuela de conducción o como taxi. La legislación de muchos países requiere que se revele esta información al ofrecer un coche para la venta. Enum: 'ambulancia, brigada de bomberos, militar, policía, transporte escolar, taxi, gestión de residuos'  . Model: [https://schema.org/vehicleSpecialUsage](https://schema.org/vehicleSpecialUsage)  
 - `vehicleTrackerDevice[string]`: Estado de instalación del dispositivo GPS o del dispositivo de seguimiento instalado en el vehículo correspondiente a esta observación  . Model: [https://schema.org/Text](https://schema.org/Text)  
-- `vehicleType[string]`: Tipo de vehículo desde el punto de vista de sus características estructurales. Esto es diferente a la categoría de vehículo. Enum: 'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'. Los siguientes valores definidos por _VehicleTypeEnum_ y _VehicleTypeEnum2_, [DATEX 2 versión 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm) y extendidos para otros usos  . Model: [https://schema.org/Text](https://schema.org/Text)  
-- `wardId[string]`: ID de la sección censal de la entidad correspondiente a esta observación  . Model: [https://schema.org/Text](https://schema.org/Text)  
-- `wardName[string]`: Nombre del barrio de la entidad correspondiente a esta observación  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `vehicleType[string]`: Tipo de vehículo desde el punto de vista de sus características estructurales. Esto es diferente a la categoría de vehículo. Enum: 'agriculturalVehicle, anyVehicle, articulatedVehicle, bicicleta, binTrolley, autobús, coche, caravana, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, camión, minibús, motoneta, motocicleta, motorcycleWithSideCar, motorscooter, sweepingMachine, cisterna, threeWheeledVehicle, remolque, tranvía, twoWheeledVehicle, trolley, furgoneta, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, otro'. Los siguientes valores definidos por _VehicleTypeEnum_ y _VehicleTypeEnum2_, [DATEX 2 versión 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm) y extendidos para otros usos  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `wardId[string]`: ID de barrio de la entidad correspondiente a esta observación  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `wardName[string]`: Nombre del distrito del ente correspondiente a esta observación  . Model: [https://schema.org/Text](https://schema.org/Text)  
 - `zoneName[string]`: Nombre de zona de la entidad correspondiente a esta observación  . Model: [https://schema.org/Text](https://schema.org/Text)  
 <!-- /30-PropertiesList -->
   
@@ -128,7 +128,7 @@ Propiedades requeridas
 
 ## Descripción del modelo de datos de propiedades  
 
-Ordenado alfabéticamente (haga clic para obtener detalles)  
+Ordenado alfabéticamente (haga clic para detalles)  
 <!-- /50-DataModelHeader -->
   
 <!-- 60-ModelYaml -->
@@ -1202,7 +1202,7 @@ Vehicle:
 
 ## Cargas de ejemplo  
 
-#### Vehículo ejemplo de valores clave NGSI-v2  
+#### Vehículo ejemplo de clave-valor NGSI-v2  
 
 Aquí hay un ejemplo de un Vehículo en formato JSON como clave-valor. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
@@ -1271,7 +1271,7 @@ Aquí hay un ejemplo de un Vehículo en formato JSON como clave-valor. Esto es c
 ```  
 </details>  
 
-#### Vehículo NGSI-v2 normalizado Ejemplo  
+#### Vehículo ejemplo normalizado NGSI-v2  
 
 Aquí hay un ejemplo de un Vehículo en formato JSON normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
