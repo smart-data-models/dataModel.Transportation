@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$schemaVersion": "0.2.2",
+  "$schemaVersion": "0.2.3",
   "modelTags": "IUDX, SEDIMARK",
   "$id": "https://smart-data-models.github.io/dataModel.Transportation/Vehicle/schema.json",
   "title": "Smart Data Models - Vehicle",
@@ -36,7 +36,7 @@
             "autorickshaw",
             "bicycle",
             "binTrolley",
-            "BRT mini bus\u00b7",
+            "BRT mini bus",
             "BRT bus",
             "bus",
             "car",
@@ -107,7 +107,8 @@
               "public",
               "specialUsage",
               "tracked"
-            ]
+            ],
+            "description": "Property. Individual category items included for the vehicle"
           }
         },
         "previousLocation": {
@@ -201,7 +202,8 @@
               "overspeed",
               "proximitySensor",
               "wifi"
-            ]
+            ],
+            "description": "Property. Each of the features of the vehicle"
           }
         },
         "serviceProvided": {
@@ -355,7 +357,7 @@
         },
         "emergencyVehicleType": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Type of emergency vehicle corresponding to this observation. Enum:'policeCar, policeMotorcycle, policeVan, policeSWAT, fireEngine, waterTender, airAmbulance, ambulance, motorcycleAmbulance, rescueVehicle, hazardousMaterialsApparatus, towTruck",
+          "description": "Property. Model:'https://schema.org/Text'. Type of emergency vehicle corresponding to this observation. Enum:'policeCar, policeMotorcycle, policeVan, policeSWAT, fireEngine, waterTender, airAmbulance, ambulance, motorcycleAmbulance, rescueVehicle, hazardousMaterialsApparatus, towTruck'pip ins",
           "enum": [
             "policeCar",
             "policeMotorcycle",
@@ -373,7 +375,7 @@
         },
         "municipalityInfo": {
           "type": "object",
-          "description": "Property. Model:'https://schema.org/Text. Municipality information corresponding to this observation",
+          "description": "Property. Model:'https://schema.org/Text'. Municipality information corresponding to this observation",
           "properties": {
             "district": {
               "type": "string",
