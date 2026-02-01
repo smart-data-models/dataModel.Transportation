@@ -1167,6 +1167,16 @@ Vehicle:
     "wardName": "Bangalore Urban",  
     "zoneId": "2",  
     "wardNum": 4  
+  },  
+   "leasingInfo": {  
+    "leasingType": "Operating Lease",  
+    "leasingStartDate": "2025-06-01T00:00:00.000Z",  
+    "leasingEndDate": "2029-06-01T00:00:00.000Z",  
+    "monthlyLeaseCost": 525,  
+    "allowedAnnualDistance": 20000,  
+    "allowedDistanceUnit": "kilometer",  
+    "excessDistanceCost": 1,  
+    "leasingProvider": "Municipality Leasing A/S"  
   }  
 }  
 ```  
@@ -1343,6 +1353,19 @@ Vehicle:
       "zoneId": "2",  
       "wardNum": 4  
     }  
+  },  
+  "leasingInfo": {  
+    "type": "StructuredValue",  
+    "value": {  
+      "leasingType": "Operating Lease",  
+      "leasingStartDate": "2025-06-01T00:00:00.000Z",  
+      "leasingEndDate": "2029-06-01T00:00:00.000Z",  
+      "monthlyLeaseCost": 525,  
+      "allowedAnnualDistance": 20000,  
+      "allowedDistanceUnit": "kilometer",  
+      "excessDistanceCost": 1,  
+      "leasingProvider": "Municipality Leasing A/S"  
+    }  
   }  
 }  
 ```  
@@ -1409,6 +1432,16 @@ Vehicle:
   "wardId": "4",  
   "wardName": "Kempegowda Ward",  
   "zoneName": "South Zone",  
+  "leasingInfo": {  
+    "leasingType": "Operating Lease",  
+    "leasingStartDate": "2025-06-01T00:00:00.000Z",  
+    "leasingEndDate": "2029-06-01T00:00:00.000Z",  
+    "monthlyLeaseCost": 525,  
+    "allowedAnnualDistance": 20000,  
+    "allowedDistanceUnit": "kilometer",  
+    "excessDistanceCost": 1,  
+    "leasingProvider": "Municipality Leasing A/S"  
+  },  
   "@context": [  
     "https://smart-data-models.github.io/dataModel.Transportation/context.jsonld"  
   ]  
@@ -1581,6 +1614,19 @@ Vehicle:
   "zoneName": {  
     "type": "Property",  
     "value": "South Zone"  
+  },  
+    "leasingInfo": {  
+    "type": "Property",  
+    "value": {  
+      "leasingType": "Operating Lease",  
+      "leasingStartDate": "2025-06-01T00:00:00.000Z",  
+      "leasingEndDate": "2029-06-01T00:00:00.000Z",  
+      "monthlyLeaseCost": 525,  
+      "allowedAnnualDistance": 20000,  
+      "allowedDistanceUnit": "kilometer",  
+      "excessDistanceCost": 1,  
+      "leasingProvider": "Municipality Leasing A/S"  
+    }  
   },  
   "@context": [  
     "https://smart-data-models.github.io/dataModel.Transportation/context.jsonld"  
