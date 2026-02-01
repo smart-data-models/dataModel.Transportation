@@ -16,6 +16,10 @@ Entidad: OriginDestinationFlow
   
 <!-- 20-Description -->
   
+
+Global description: **Observación horaria de los flujos de movimiento de visitantes entre municipios de origen y destino, segmentados por nacionalidad. Cada entidad representa el recuento de flujo entre dos ubicaciones durante una hora específica.**  
+
+version: 0.0.1  
 <!-- /20-Description -->
   
 <!-- 30-PropertiesList -->
@@ -26,13 +30,50 @@ Entidad: OriginDestinationFlow
 
 
 <sup><sub>[*] Si no hay un tipo en un atributo es porque podría tener varios tipos o diferentes formatos/patrones</sub></sup>  
+- `address[object]`: La dirección de correo  . Model: [https://schema.org/address](https://schema.org/address)  
+	- `addressCountry[string]`: El país. Por ejemplo, España  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)    
+	- `addressLocality[string]`: La localidad en la que está la dirección de la calle, y que está en la región  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)    
+	- `addressRegion[string]`: La región en la que se encuentra la localidad, y que se encuentra en el país  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)    
+	- `district[string]`: Un distrito es un tipo de división administrativa que, en algunos países, es gestionado por el gobierno local  
+	- `postOfficeBoxNumber[string]`: El número de casilla de correos para las direcciones de casilla de correos. Por ejemplo, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)    
+	- `postalCode[string]`: El código postal. Por ejemplo, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)    
+	- `streetAddress[string]`: La dirección de la calle  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)    
+	- `streetNr[string]`: Número que identifica una propiedad específica en una calle pública  
+- `aggregationDateType[string]`: Tipo de agregación de fecha (p. ej., por hora, diaria, mensual)  
+- `alternateName[string]`: Un nombre alternativo para este artículo  
+- `areaServed[string]`: El área geográfica donde se proporciona un servicio o artículo ofrecido  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `countryCode[string]`: Código de país de origen asociado a las personas asociadas al flujo, por ejemplo, ES, IT, FR, etc...  
+- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizados  
+- `dateCreated[date-time]`: Marca de tiempo de creación de la entidad. Esto generalmente será asignado por la plataforma de almacenamiento  
+- `dateModified[date-time]`: Marca de tiempo de la última modificación de la entidad. Esto generalmente será asignado por la plataforma de almacenamiento  
+- `dateObserved[date-time]`: Fecha y hora de la observación en formato ISO 8601  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)  
+- `description[string]`: Una descripción de este artículo  
+- `destinationLocation[*]`: Referencia Geojson al elemento. Puede ser Punto, LineaString, Polígono, MultiPunto, MultiLineaString o MultiPolígono  
+- `destinationLocationCode[string]`: Código oficial del municipio de destino  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `destinationLocationName[string]`: Nombre del municipio de destino  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `flowCount[number]`: Número total de movimientos/flujos entre el origen y el destino durante esta hora  . Model: [https://schema.org/Number](https://schema.org/Number)  
+- `flowType[string]`: Tipo de flujo. Enum: 'turismo, desplazamiento, negocio, migración, mixto'  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `hour[number]`: Hora del día (0-23) para esta observación  . Model: [https://schema.org/Number](https://schema.org/Number)  
+- `id[*]`: Identificador único de la entidad  
+- `location[*]`: Referencia Geojson al elemento. Puede ser Punto, LineaString, Polígono, MultiPunto, MultiLineaString o MultiPolígono  
+- `name[string]`: El nombre de este artículo  
+- `nationality[string]`: Nacionalidad de los visitantes que realizan el movimiento. Código de país alpha-2 ISO 3166-1 (por ejemplo, ES, FR, GB, PT, DE)  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `nationalityName[string]`: Nombre completo de la nacionalidad del país (opcional, para legibilidad humana)  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `originLocation[*]`: Referencia Geojson del elemento. Puede ser Punto, LineaString, Polígono, MultiPunto, MultiLineaString o MultiPolígono  
+- `originLocationCode[string]`: Código oficial del municipio de origen  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `originLocationName[string]`: Nombre del municipio de origen  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los Ids únicos del(los) propietario(s)  
+- `seeAlso[*]`: Lista de uri que apuntan a recursos adicionales sobre el artículo  
+- `source[string]`: Una secuencia de caracteres que proporciona la fuente original de los datos de la entidad como una URL. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto de la fuente.  
+- `type[string]`: Tipo de entidad NGSI. Tiene que ser OriginDestinationFlow  
 <!-- /30-PropertiesList -->
   
 <!-- 35-RequiredProperties -->
   
 
 Propiedades requeridas  
-- No propiedades requeridas  
+- `id`  
+- `tipo`  
 <!-- /35-RequiredProperties -->
   
 <!-- 40-NotesYaml -->
@@ -911,19 +952,280 @@ OriginDestinationFlow:
 #### OrigenDestinoFlujo clave-valor Ejemplo NGSI-v2  
 
 Aquí hay un ejemplo de un OriginDestinationFlow en formato JSON como clave-valor. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
+
+```json  
+
+{  
+  "id": "OriginDestinationFlow:PT:CO0101:CO0102:DE:20241231T10",  
+  "type": "OriginDestinationFlow",  
+  "dateObserved": "2024-12-31T10:30:00.00Z",  
+  "aggregationDateType": "hourly",  
+  "hour": 10,  
+  "originLocationCode": "CO0101",  
+  "originLocationName": "Coimbra",  
+  "destinationLocationCode": "CO0102",  
+  "destinationLocationName": "Figueira da Foz",  
+  "nationality": "DE",  
+  "nationalityName": "Germany",  
+  "flowCount": 145,  
+  "flowType": "tourism",  
+  "countryCode": "PT",  
+  "originLocation": {  
+    "type": "Point",  
+    "coordinates": [-8.4103, 40.2033]  
+  },  
+  "destinationLocation": {  
+    "type": "Point",  
+    "coordinates": [-8.8618, 40.1508]  
+  },  
+  "description": "Hourly visitor flow from Coimbra to Figueira da Foz (German tourists) on 2024-12-31 at 10:00-11:00",  
+  "source": "MobilityDataPlatform",  
+  "dateCreated": "2024-12-31T11:00:00.00Z",  
+  "dateModified": "2024-12-31T11:00:00.00Z"  
+}  
+```  
+</details>  
 
 #### OrigenDestinoFlujo NGSI-v2 normalizado Ejemplo  
 
 Aquí hay un ejemplo de un OriginDestinationFlow en formato JSON normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 
-#### OrigenDestinoFlujo clave-valor de ejemplo de NGSI-LD  
+```json  
+
+{  
+  "id": "urn:ngsi-ld:OriginDestinationFlow:PT:CO0101:CO0102:DE:20241231T10",  
+  "type": "OriginDestinationFlow",  
+  "dateObserved": {  
+    "type": "DateTime",  
+    "value": "2024-12-31T10:30:00.00Z"  
+  },  
+  "aggregationDateType": {  
+    "type": "Text",  
+    "value": "hourly"  
+  },  
+  "hour": {  
+    "type": "Number",  
+    "value": 10  
+  },  
+  "originLocationCode": {  
+    "type": "Text",  
+    "value": "CO0101"  
+  },  
+  "originLocationName": {  
+    "type": "Text",  
+    "value": "Coimbra"  
+  },  
+  "destinationLocationCode": {  
+    "type": "Text",  
+    "value": "CO0102"  
+  },  
+  "destinationLocationName": {  
+    "type": "Text",  
+    "value": "Figueira da Foz"  
+  },  
+  "nationality": {  
+    "type": "Text",  
+    "value": "DE"  
+  },  
+  "nationalityName": {  
+    "type": "Text",  
+    "value": "Germany"  
+  },  
+  "flowCount": {  
+    "type": "Number",  
+    "value": 145  
+  },  
+  "flowType": {  
+    "type": "Text",  
+    "value": "tourism"  
+  },  
+  "countryCode": {  
+    "type": "Text",  
+    "value": "PT"  
+  },  
+  "originLocation": {  
+    "type": "geo:json",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -8.4103,  
+        40.2033  
+      ]  
+    }  
+  },  
+  "destinationLocation": {  
+    "type": "geo:json",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -8.8618,  
+        40.1508  
+      ]  
+    }  
+  },  
+  "description": {  
+    "type": "Text",  
+    "value": "Hourly visitor flow from Coimbra to Figueira da Foz (German tourists) on 2024-12-31 at 10:00-11:00"  
+  },  
+  "source": {  
+    "type": "Text",  
+    "value": "MobilityDataPlatform"  
+  },  
+  "dateCreated": {  
+    "type": "DateTime",  
+    "value": "2024-12-31T11:00:00.00Z"  
+  },  
+  "dateModified": {  
+    "type": "DateTime",  
+    "value": "2024-12-31T11:00:00.00Z"  
+  }  
+}  
+```  
+</details>  
+
+#### OrigenDestinoFlujo clave-valor de ejemplo NGSI-LD  
 
 Aquí hay un ejemplo de un OriginDestinationFlow en formato JSON-LD como clave-valor. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 
-#### OrigenDestinoFlujo NGSI-LD normalizado Ejemplo  
+```json  
+
+{  
+  "id": "urn:ngsi-ld:OriginDestinationFlow:PT:0602:0406:DE:20241231T10",  
+  "type": "OriginDestinationFlow",  
+  "dateObserved": "2024-12-31T10:00:00.00Z",  
+  "aggregationDateType": "hourly",  
+  "hour": 10,  
+  "originLocationCode": "0602",  
+  "originLocationName": "Coimbra",  
+  "destinationLocationCode": "0406",  
+  "destinationLocationName": "Figueira da Foz",  
+  "nationality": "DE",  
+  "nationalityName": "Germany",  
+  "flowCount": 145,  
+  "flowType": "tourism",  
+  "countryCode": "PT",  
+  "originLocation": {  
+    "type": "Point",  
+    "coordinates": [-8.4103, 40.2033]  
+  },  
+  "destinationLocation": {  
+    "type": "Point",  
+    "coordinates": [-8.8618, 40.1508]  
+  },  
+  "description": "Hourly visitor flow from Coimbra to Figueira da Foz (German tourists) on 2024-12-31 at 10:00-11:00",  
+  "source": "MobilityDataPlatform",  
+  "dateCreated": "2024-12-31T11:00:00.00Z",  
+  "dateModified": "2024-12-31T11:00:00.00Z",  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+  ]  
+}  
+```  
+</details>  
+
+#### OrigenDestinoFlujo ejemplo normalizado NGSI-LD  
 
 Aquí hay un ejemplo de un OriginDestinationFlow en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
-<!-- /80-Examples -->
+<details><summary><strong>show/hide example</strong></summary>    
+
+```json  
+
+{  
+  "id": "urn:ngsi-ld:OriginDestinationFlow:PT:CO0101:CO0102:DE:20241231T10",  
+  "type": "OriginDestinationFlow",  
+  "dateObserved": {  
+    "type": "Property",  
+    "value": "2024-12-31T10:30:00.00Z"  
+  },  
+  "aggregationDateType": {  
+    "type": "Property",  
+    "value": "hourly"  
+  },  
+  "hour": {  
+    "type": "Property",  
+    "value": 10  
+  },  
+  "originLocationCode": {  
+    "type": "Property",  
+    "value": "CO0101"  
+  },  
+  "originLocationName": {  
+    "type": "Property",  
+    "value": "Coimbra"  
+  },  
+  "destinationLocationCode": {  
+    "type": "Property",  
+    "value": "CO0102"  
+  },  
+  "destinationLocationName": {  
+    "type": "Property",  
+    "value": "Figueira da Foz"  
+  },  
+  "nationality": {  
+    "type": "Property",  
+    "value": "DE"  
+  },  
+  "nationalityName": {  
+    "type": "Property",  
+    "value": "Germany"  
+  },  
+  "flowCount": {  
+    "type": "Property",  
+    "value": 145  
+  },  
+  "flowType": {  
+    "type": "Property",  
+    "value": "tourism"  
+  },  
+  "countryCode": {  
+    "type": "Property",  
+    "value": "PT"  
+  },  
+  "originLocation": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -8.4103,  
+        40.2033  
+      ]  
+    }  
+  },  
+  "destinationLocation": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -8.8618,  
+        40.1508  
+      ]  
+    }  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "Hourly visitor flow from Coimbra to Figueira da Foz (German tourists) on 2024-12-31 at 10:00-11:00"  
+  },  
+  "source": {  
+    "type": "Property",  
+    "value": "MobilityDataPlatform"  
+  },  
+  "dateCreated": {  
+    "type": "Property",  
+    "value": "2024-12-31T11:00:00.00Z"  
+  },  
+  "dateModified": {  
+    "type": "Property",  
+    "value": "2024-12-31T11:00:00.00Z"  
+  },  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
+  ]  
+}  
+```  
+</details><!-- /80-Examples -->
   
 <!-- 90-FooterNotes -->
   
