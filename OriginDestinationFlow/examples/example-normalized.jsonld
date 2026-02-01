@@ -1,0 +1,91 @@
+{
+  "id": "urn:ngsi-ld:OriginDestinationFlow:PT:CO0101:CO0102:DE:20241231T10",
+  "type": "OriginDestinationFlow",
+  "dateObserved": {
+    "type": "Property",
+    "value": "2024-12-31T10:30:00.00Z"
+  },
+  "aggregationDateType": {
+    "type": "Property",
+    "value": "hourly"
+  },
+  "hour": {
+    "type": "Property",
+    "value": 10
+  },
+  "originLocationCode": {
+    "type": "Property",
+    "value": "CO0101"
+  },
+  "originLocationName": {
+    "type": "Property",
+    "value": "Coimbra"
+  },
+  "destinationLocationCode": {
+    "type": "Property",
+    "value": "CO0102"
+  },
+  "destinationLocationName": {
+    "type": "Property",
+    "value": "Figueira da Foz"
+  },
+  "nationality": {
+    "type": "Property",
+    "value": "DE"
+  },
+  "nationalityName": {
+    "type": "Property",
+    "value": "Germany"
+  },
+  "flowCount": {
+    "type": "Property",
+    "value": 145
+  },
+  "flowType": {
+    "type": "Property",
+    "value": "tourism"
+  },
+  "countryCode": {
+    "type": "Property",
+    "value": "PT"
+  },
+  "originLocation": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        -8.4103,
+        40.2033
+      ]
+    }
+  },
+  "destinationLocation": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        -8.8618,
+        40.1508
+      ]
+    }
+  },
+  "description": {
+    "type": "Property",
+    "value": "Hourly visitor flow from Coimbra to Figueira da Foz (German tourists) on 2024-12-31 at 10:00-11:00"
+  },
+  "source": {
+    "type": "Property",
+    "value": "MobilityDataPlatform"
+  },
+  "dateCreated": {
+    "type": "Property",
+    "value": "2024-12-31T11:00:00.00Z"
+  },
+  "dateModified": {
+    "type": "Property",
+    "value": "2024-12-31T11:00:00.00Z"
+  },
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schemaVersion": "0.0.1",
+  "$id": "https://smart-data-models.github.io/dataModel.Transportation/OriginDestinationFlow/schema.json",
+  "title": "Origin Destination Flow",
+  "modelTags": "",
+  "description": "Hourly observation of visitor movement flows between origin and destination municipalities, segmented by nationality. Each entity represents the flow count between two locations during a specific hour.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "OriginDestinationFlow"
+          ],
+          "description": "Property. NGSI entity type. It has to be OriginDestinationFlow"
+        },
+        "dateObserved": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Date and time of the observation in ISO 8601 format. Model:'https://schema.org/DateTime'"
+        },
+        "aggregationDateType": {
+          "type": "string",
+          "description": "Property. Type of date aggregation (e.g., hourly, daily, monthly)"
+        },
+        "hour": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 23,
+          "description": "Property. Hour of the day (0-23) for this observation. Model:'https://schema.org/Number'"
+        },
+        "originLocationCode": {
+          "type": "string",
+          "description": "Property. Official code of the origin municipality. Model:'https://schema.org/Text'"
+        },
+        "originLocationName": {
+          "type": "string",
+          "description": "Property. Name of the origin municipality. Model:'https://schema.org/Text'"
+        },
+        "originLocation": {
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+        },
+        "destinationLocationCode": {
+          "type": "string",
+          "description": "Property. Official code of the destination municipality. Model:'https://schema.org/Text'"
+        },
+        "destinationLocationName": {
+          "type": "string",
+          "description": "Property. Name of the destination municipality. Model:'https://schema.org/Text'"
+        },
+        "destinationLocation": {
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
+        },
+        "nationality": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$",
+          "description": "Property. Nationality of visitors making the movement. ISO 3166-1 alpha-2 country code (e.g., ES, FR, GB, PT, DE). Model:'https://schema.org/Text'"
+        },
+        "nationalityName": {
+          "type": "string",
+          "description": "Property. Full name of the nationality country (optional, for human readability). Model:'https://schema.org/Text'"
+        },
+        "flowCount": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Property. Total number of movements/flows between origin and destination during this hour. Units:'movements'. Model:'https://schema.org/Number'"
+        },
+        "flowType": {
+          "type": "string",
+          "enum": [
+            "tourism",
+            "commuting",
+            "business",
+            "migration",
+            "mixed"
+          ],
+          "description": "Property. Type of flow. Enum:'tourism, commuting, business, migration, mixed'. Model:'https://schema.org/Text'"
+        },
+        "countryCode": {
+          "type": "string",
+          "description": "Property. Origin country code associated to the people associated to the flow, eg. ES, IT, FR, etc..."
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type"
+  ]
+}
