@@ -1,40 +1,40 @@
 Vehicle:
-  description: 'This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.'
+  description: This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.
   properties:
     address:
       description: The mailing address
       properties:
         addressCountry:
-          description: 'The country. For example, Spain'
+          description: The country. For example, Spain
           type: string
           x-ngsi:
             model: https://schema.org/addressCountry
             type: Property
         addressLocality:
-          description: 'The locality in which the street address is, and which is in the region'
+          description: The locality in which the street address is, and which is in the region
           type: string
           x-ngsi:
             model: https://schema.org/addressLocality
             type: Property
         addressRegion:
-          description: 'The region in which the locality is, and which is in the country'
+          description: The region in which the locality is, and which is in the country
           type: string
           x-ngsi:
             model: https://schema.org/addressRegion
             type: Property
         district:
-          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'
+          description: A district is a type of administrative division that, in some countries, is managed by the local government
           type: string
           x-ngsi:
             type: Property
         postOfficeBoxNumber:
-          description: 'The post office box number for PO box addresses. For example, 03578'
+          description: The post office box number for PO box addresses. For example, 03578
           type: string
           x-ngsi:
             model: https://schema.org/postOfficeBoxNumber
             type: Property
         postalCode:
-          description: 'The postal code. For example, 24004'
+          description: The postal code. For example, 24004
           type: string
           x-ngsi:
             model: https://schema.org/https://schema.org/postalCode
@@ -74,14 +74,14 @@ Vehicle:
         model: https://schema.org/Text
         type: Property
     battery:
-      description: 'The current percentage of battery left in case of an electric vehicle, or a device connected to the vehicle'
+      description: The current percentage of battery left in case of an electric vehicle, or a device connected to the vehicle
       maximum: 1
       minimum: 0
       type: number
       x-ngsi:
         type: Property
     bearing:
-      description: "Gives the vehicle GPS angle measured in a clockwise direction from the True North. SameAs 'bearing' field from GTFS Realtime message-Position(https://developers.google.com/transit/gtfs-realtime/reference#message-position)"
+      description: Gives the vehicle GPS angle measured in a clockwise direction from the True North. SameAs 'bearing' field from GTFS Realtime message-Position(https://developers.google.com/transit/gtfs-realtime/reference#message-position)
       type: number
       x-ngsi:
         model: https://schema.org/Number
@@ -96,7 +96,7 @@ Vehicle:
         type: Property
         units: Kilograms
     category:
-      description: 'Vehicle category(ies) from an external point of view. This is different than the vehicle type (car, lorry, etc.) represented by the `vehicleType` property. Enum:''municipalServices, nonTracked, private, public, specialUsage, tracked''. Tracked vehicles are those vehicles which position is permanently tracked by a remote system. Or any other needed by an application They incorporate a GPS receiver together with a network connection to periodically update a reported position (location, speed, heading ...)'
+      description: Vehicle category(ies) from an external point of view. This is different than the vehicle type (car, lorry, etc.) represented by the `vehicleType` property. Enum:'municipalServices, nonTracked, private, public, specialUsage, tracked'. Tracked vehicles are those vehicles which position is permanently tracked by a remote system. Or any other needed by an application They incorporate a GPS receiver together with a network connection to periodically update a reported position (location, speed, heading ...)
       items:
         enum:
           - municipalServices
@@ -159,7 +159,7 @@ Vehicle:
       x-ngsi:
         type: Property
     deviceBatteryStatus:
-      description: 'Gives the Battery charging status of the reporting device. Enum:''connected, disconnected'''
+      description: Gives the Battery charging status of the reporting device. Enum:'connected, disconnected'
       enum:
         - connected
         - disconnected
@@ -174,7 +174,7 @@ Vehicle:
         model: https://schema.org/Text
         type: Property
     emergencyVehicleType:
-      description: 'Type of emergency vehicle corresponding to this observation. Enum:''policeCar, policeMotorcycle, policeVan, policeSWAT, fireEngine, waterTender, airAmbulance, ambulance, motorcycleAmbulance, rescueVehicle, hazardousMaterialsApparatus, towTruck'
+      description: Type of emergency vehicle corresponding to this observation. Enum:'policeCar, policeMotorcycle, policeVan, policeSWAT, fireEngine, waterTender, airAmbulance, ambulance, motorcycleAmbulance, rescueVehicle, hazardousMaterialsApparatus, towTruck
       enum:
         - policeCar
         - policeMotorcycle
@@ -218,7 +218,7 @@ Vehicle:
         model: https://schema.org/Text
         type: Property
     fuelEfficiency:
-      description: 'The distance traveled per unit of fuel used, commonly in kilometers per liter (km/L)'
+      description: The distance traveled per unit of fuel used, commonly in kilometers per liter (km/L)
       type: number
       x-ngsi:
         model: https://schema.org/Number
@@ -236,7 +236,7 @@ Vehicle:
         model: https://schema.org/Text
         type: Property
     heading:
-      description: 'Denotes the direction of travel of the vehicle and is specified in decimal degrees, where 0 <= `heading` < 360, counting clockwise relative to the true north. If the vehicle is stationary (i.e. the value of the `speed` attribute is `0`), then the value of the heading attribute must be equal to `-1`'
+      description: Denotes the direction of travel of the vehicle and is specified in decimal degrees, where 0 <= `heading` < 360, counting clockwise relative to the true north. If the vehicle is stationary (i.e. the value of the `speed` attribute is `0`), then the value of the heading attribute must be equal to `-1`
       oneOf:
         - exclusiveMaximum: 360
           maximum: 360
@@ -265,7 +265,7 @@ Vehicle:
             type: Property
       description: Unique identifier of the entity
       x-ngsi:
-        type: Property
+        type: Relationship
     ignitionStatus:
       description: Gives the ignition status of the vehicle. True means ignited
       type: boolean
@@ -280,26 +280,32 @@ Vehicle:
         model: https://schema.org/URL
         type: Property
     license_plate:
-      description: "Gives the License Plate number of the vehicle. SameAs: license_plate field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'"
+      description: 'Gives the License Plate number of the vehicle. SameAs: license_plate field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'''
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     location:
-      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+      description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
       oneOf:
         - description: Geojson reference to the item. Point
           properties:
             bbox:
+              description: BBox of the  Point
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the Point
               items:
                 type: number
               minItems: 2
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - Point
@@ -314,11 +320,15 @@ Vehicle:
         - description: Geojson reference to the item. LineString
           properties:
             bbox:
+              description: BBox coordinates of the LineString
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the LineString
               items:
                 items:
                   type: number
@@ -326,6 +336,8 @@ Vehicle:
                 type: array
               minItems: 2
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - LineString
@@ -340,11 +352,15 @@ Vehicle:
         - description: Geojson reference to the item. Polygon
           properties:
             bbox:
+              description: BBox coordinates of the Polygon
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the Polygon
               items:
                 items:
                   items:
@@ -354,6 +370,8 @@ Vehicle:
                 minItems: 4
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - Polygon
@@ -368,17 +386,23 @@ Vehicle:
         - description: Geojson reference to the item. MultiPoint
           properties:
             bbox:
+              description: BBox coordinates of the LineString
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the MulitPoint
               items:
                 items:
                   type: number
                 minItems: 2
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - MultiPoint
@@ -393,11 +417,15 @@ Vehicle:
         - description: Geojson reference to the item. MultiLineString
           properties:
             bbox:
+              description: BBox coordinates of the LineString
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the MultiLineString
               items:
                 items:
                   items:
@@ -407,6 +435,8 @@ Vehicle:
                 minItems: 2
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - MultiLineString
@@ -426,6 +456,7 @@ Vehicle:
               minItems: 4
               type: array
             coordinates:
+              description: Coordinates of the MultiPolygon
               items:
                 items:
                   items:
@@ -437,6 +468,8 @@ Vehicle:
                   type: array
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - MultiPolygon
@@ -451,7 +484,7 @@ Vehicle:
       x-ngsi:
         type: GeoProperty
     mileageFromOdometer:
-      description: 'The total distance travelled by the particular vehicle since its initial production, as read from its odometer'
+      description: The total distance travelled by the particular vehicle since its initial production, as read from its odometer
       type: number
       x-ngsi:
         model: https://schema.org/mileageFromOdometer
@@ -553,25 +586,31 @@ Vehicle:
               type: Property
         description: Unique identifier of the entity
         x-ngsi:
-          type: Property
+          type: Relationship
       type: array
       x-ngsi:
         type: Property
     previousLocation:
-      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+      description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
       oneOf:
         - description: Geojson reference to the item. Point
           properties:
             bbox:
+              description: BBox of the  Point
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the Point
               items:
                 type: number
               minItems: 2
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - Point
@@ -586,11 +625,15 @@ Vehicle:
         - description: Geojson reference to the item. LineString
           properties:
             bbox:
+              description: BBox coordinates of the LineString
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the LineString
               items:
                 items:
                   type: number
@@ -598,6 +641,8 @@ Vehicle:
                 type: array
               minItems: 2
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - LineString
@@ -612,11 +657,15 @@ Vehicle:
         - description: Geojson reference to the item. Polygon
           properties:
             bbox:
+              description: BBox coordinates of the Polygon
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the Polygon
               items:
                 items:
                   items:
@@ -626,6 +675,8 @@ Vehicle:
                 minItems: 4
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - Polygon
@@ -640,17 +691,23 @@ Vehicle:
         - description: Geojson reference to the item. MultiPoint
           properties:
             bbox:
+              description: BBox coordinates of the LineString
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the MulitPoint
               items:
                 items:
                   type: number
                 minItems: 2
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - MultiPoint
@@ -665,11 +722,15 @@ Vehicle:
         - description: Geojson reference to the item. MultiLineString
           properties:
             bbox:
+              description: BBox coordinates of the LineString
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the MultiLineString
               items:
                 items:
                   items:
@@ -679,6 +740,8 @@ Vehicle:
                 minItems: 2
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - MultiLineString
@@ -698,6 +761,7 @@ Vehicle:
               minItems: 4
               type: array
             coordinates:
+              description: Coordinates of the MultiPolygon
               items:
                 items:
                   items:
@@ -709,6 +773,8 @@ Vehicle:
                   type: array
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - MultiPolygon
@@ -772,7 +838,7 @@ Vehicle:
         model: https://schema.org/Boolean
         type: Property
     serviceProvided:
-      description: 'Service(s) the vehicle is capable of providing or it is assigned to. Enum:''auxiliaryServices, cargoTransport, construction, fairground, garbageCollection, goodsSelling, maintenance, parksAndGardens, roadSignalling, specialTransport, streetCleaning, streetLighting, urbanTransit, wasteContainerCleaning''. Or any other value needed by an specific application'
+      description: Service(s) the vehicle is capable of providing or it is assigned to. Enum:'auxiliaryServices, cargoTransport, construction, fairground, garbageCollection, goodsSelling, maintenance, parksAndGardens, roadSignalling, specialTransport, streetCleaning, streetLighting, urbanTransit, wasteContainerCleaning'. Or any other value needed by an specific application
       items:
         enum:
           - auxiliaryServices
@@ -806,12 +872,12 @@ Vehicle:
         model: https://schema.org/DateTime
         type: Property
     source:
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'
+      description: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object
       type: string
       x-ngsi:
         type: Property
     speed:
-      description: 'Denotes the magnitude of the horizontal component of the vehicle''s current velocity and is specified in Kilometers per Hour. If provided, the value of the speed attribute must be a non-negative real number. `-1` MAY be used if speed is transiently unknown for some reason'
+      description: Denotes the magnitude of the horizontal component of the vehicle's current velocity and is specified in Kilometers per Hour. If provided, the value of the speed attribute must be a non-negative real number. `-1` MAY be used if speed is transiently unknown for some reason
       oneOf:
         - minimum: 0
           type: number
@@ -842,7 +908,7 @@ Vehicle:
         model: https://schema.org/Text
         type: Property
     vehicleConfiguration:
-      description: 'A short text indicating the configuration of the vehicle, e.g. ''5dr hatchback ST 2.5 MT 225 hp'' or ''limited edition'''
+      description: A short text indicating the configuration of the vehicle, e.g. '5dr hatchback ST 2.5 MT 225 hp' or 'limited edition'
       type: string
       x-ngsi:
         model: https://schema.org/vehicleConfiguration
@@ -860,7 +926,7 @@ Vehicle:
         model: https://schema.org/Text
         type: Property
     vehicleRunningStatus:
-      description: 'Gives the Battery charging status of the reporting device. Enum:''running, waiting, stopped'''
+      description: Gives the Battery charging status of the reporting device. Enum:'running, waiting, stopped'
       enum:
         - running
         - stopped
@@ -870,7 +936,7 @@ Vehicle:
         model: https://schema.org/Text
         type: Property
     vehicleSpecialUsage:
-      description: 'Indicates whether the vehicle is been used for special purposes, like commercial rental, driving school, or as a taxi. The legislation in many countries requires this information to be revealed when offering a car for sale. Enum:''ambulance, fireBrigade, military, police, schoolTransportation, taxi, trashManagement'''
+      description: Indicates whether the vehicle is been used for special purposes, like commercial rental, driving school, or as a taxi. The legislation in many countries requires this information to be revealed when offering a car for sale. Enum:'ambulance, fireBrigade, military, police, schoolTransportation, taxi, trashManagement'
       enum:
         - ambulance
         - fireBrigade
@@ -890,7 +956,7 @@ Vehicle:
         model: https://schema.org/Text
         type: Property
     vehicleType:
-      description: 'Type of vehicle from the point of view of its structural characteristics. This is different than the vehicle category . Enum:''agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other''. The following values defined by _VehicleTypeEnum_ and _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm) and extended for other uses'
+      description: Type of vehicle from the point of view of its structural characteristics. This is different than the vehicle category . Enum:'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'. The following values defined by _VehicleTypeEnum_ and _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm) and extended for other uses
       enum:
         - agriculturalVehicle
         - ambulance
@@ -979,9 +1045,9 @@ Vehicle:
     - category
     - location
   type: object
-  x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2024 Contributors to Smart Data Models Program'
+  x-derived-from: ''
+  x-disclaimer: Redistribution and use in source and binary forms...
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/Vehicle/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/Vehicle/schema.json
-  x-model-tags: 'IUDX, SEDIMARK'
+  x-model-tags: IUDX, SEDIMARK
   x-version: 0.2.2
