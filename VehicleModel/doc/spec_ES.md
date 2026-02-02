@@ -17,9 +17,9 @@ Entidad: VehicleModel
 <!-- 20-Description -->
   
 
-Global description: **Esta entidad modela un modelo de vehículo en particular, incluyendo todas las propiedades que son comunes a múltiples instancias de vehículos que pertenecen a dicho modelo.**  
+Global description: **Esta entidad modela un modelo de vehículo particular, incluyendo todas las propiedades que son comunes a varias instancias de vehículos que pertenecen a dicho modelo.**  
 
-version: 0.0.1  
+version: 0.0.2  
 <!-- /20-Description -->
   
 <!-- 30-PropertiesList -->
@@ -35,7 +35,7 @@ version: 0.0.1
 	- `addressLocality[string]`: La localidad en la que está la dirección de la calle, y que está en la región  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)    
 	- `addressRegion[string]`: La región en la que se encuentra la localidad, y que se encuentra en el país  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)    
 	- `district[string]`: Un distrito es un tipo de división administrativa que, en algunos países, es gestionado por el gobierno local  
-	- `postOfficeBoxNumber[string]`: El número de casilla de correo para direcciones de casilla de correo. Por ejemplo, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)    
+	- `postOfficeBoxNumber[string]`: El número de casilla de correo para las direcciones de casilla de correo. Por ejemplo, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)    
 	- `postalCode[string]`: El código postal. Por ejemplo, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)    
 	- `streetAddress[string]`: La dirección de la calle  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)    
 	- `streetNr[string]`: Número que identifica una propiedad específica en una calle pública  
@@ -46,7 +46,7 @@ version: 0.0.1
 - `cargoVolume[number]`: El volumen disponible para carga o equipaje. Para automóviles, este suele ser el volumen del maletero. Si solo se proporciona un valor único (tipo Número) se referirá al volumen máximo  . Model: [https://schema.org/cargoVolume](https://schema.org/cargoVolume)  
 - `color[string]`: El color del producto  . Model: [https://schema.org/color](https://schema.org/color)  
 - `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizados  
-- `dateCreated[date-time]`: Marca de tiempo de creación de la entidad. Esto generalmente será asignado por la plataforma de almacenamiento  
+- `dateCreated[date-time]`: Marca de tiempo de creación de entidad. Esto generalmente será asignado por la plataforma de almacenamiento  
 - `dateModified[date-time]`: Marca de tiempo de la última modificación de la entidad. Esto generalmente será asignado por la plataforma de almacenamiento  
 - `depth[number]`: Profundidad del vehículo  . Model: [https://schema.org/depth](https://schema.org/depth)  
 - `description[string]`: Una descripción de este artículo  
@@ -55,18 +55,18 @@ version: 0.0.1
 - `height[number]`: Altura del vehículo  . Model: [https://schema.org/height](https://schema.org/height)  
 - `id[*]`: Identificador único de la entidad  
 - `image[uri]`: Una imagen del artículo  . Model: [https://schema.org/URL](https://schema.org/URL)  
-- `location[*]`: Referencia Geojson al elemento. Puede ser Punto, LineaString, Polígono, MultiPunto, MultiLineaString o MultiPolígono  
+- `location[*]`: Referencia Geojson al elemento. Puede ser Punto, LineaString, Poligono, MultiPunto, MultiLineaString o MultiPoligono  
 - `manufacturerName[string]`: Nombre del fabricante del vehículo  . Model: [https://schema.org/Text](https://schema.org/Text)  
 - `modelName[string]`: Nombre del modelo del vehículo  . Model: [https://schema.org/model](https://schema.org/model)  
 - `name[string]`: El nombre de este artículo  
 - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los Ids únicos del(los) propietario(s)  
 - `seeAlso[*]`: Lista de uri que apuntan a recursos adicionales sobre el artículo  
-- `source[string]`: Una secuencia de caracteres que proporciona la fuente original de los datos de la entidad como una URL. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto de la fuente.  
+- `source[string]`: Una secuencia de caracteres que da la fuente original de los datos de la entidad como una URL. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto de la fuente.  
 - `type[string]`: Tipo de entidad NGSI. Tiene que ser VehicleModel  
 - `url[uri]`: URL que proporciona una descripción de este modelo de vehículo  . Model: [https://schema.org/URL](https://schema.org/URL)  
 - `vehicleEngine[string]`: Información sobre el motor o motores del vehículo  . Model: [https://schema.org/vehicleEngine](https://schema.org/vehicleEngine)  
 - `vehicleModelDate[date-time]`: La fecha de lanzamiento de un modelo de vehículo (a menudo utilizado para diferenciar versiones del mismo fabricante y modelo)  . Model: [https://schema.org/vehicleModelDate](https://schema.org/vehicleModelDate)  
-- `vehicleType[string]`: Tipo de vehículo desde el punto de vista de sus características estructurales. Esto es diferente a la categoría de vehículo. Enum: 'vehículoAgrícola, cualquierVehículo, vehículoArticulado, bicicleta, carretilla, autobús, coche, caravana, cocheOvehículoLigero, cocheConCaravana, cocheConRemolque, carretillaDeLimpieza, vehículoDeConstrucciónOMantenimiento, tracciónEnLasCuatroRuedas, vehículoDeLadosAltos, camión, minibús, ciclomotor, motocicleta, motocicletaConSidecar, motoneta, máquinaBarredora, cisterna, vehículoDeTresRuedas, remolque, tranvía, vehículoDeDosRuedas, carretilla, furgoneta, vehículoSinConvertidorCatalítico, vehículoConCaravana, vehículoConRemolque, conMatrículasConNúmerosPares, conMatrículasConNúmerosImpares, otro'. Los siguientes valores definidos por _VehicleTypeEnum_ y _VehicleTypeEnum2_, [DATEX 2 versión 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `vehicleType[string]`: Tipo de vehículo desde el punto de vista de sus características estructurales. Esto es diferente a la categoría de vehículo. Enum: 'agriculturalVehicle, anyVehicle, articulatedVehicle, bicicleta, binTrolley, autobús, coche, caravana, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, camión, minibús, ciclomotor, motocicleta, motorcycleWithSideCar, motorscooter, sweepingMachine, cisterna, threeWheeledVehicle, remolque, tranvía, twoWheeledVehicle, trolley, furgoneta, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, otro'. Los siguientes valores están definidos por _VehicleTypeEnum_ y _VehicleTypeEnum2_, [DATEX 2 versión 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)  . Model: [https://schema.org/Text](https://schema.org/Text)  
 - `weight[number]`: Peso del vehículo  . Model: [https://schema.org/weigth](https://schema.org/weigth)  
 - `width[number]`: Anchura del vehículo  . Model: [https://schema.org/width](https://schema.org/width)  
 <!-- /30-PropertiesList -->
@@ -102,42 +102,42 @@ Ordenado alfabéticamente (haga clic para detalles)
 
 ```yaml  
 VehicleModel:    
-  description: 'This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.'    
+  description: This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.    
   properties:    
     address:    
       description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'The country. For example, Spain'    
+          description: The country. For example, Spain    
           type: string    
           x-ngsi:    
             model: https://schema.org/addressCountry    
             type: Property    
         addressLocality:    
-          description: 'The locality in which the street address is, and which is in the region'    
+          description: The locality in which the street address is, and which is in the region    
           type: string    
           x-ngsi:    
             model: https://schema.org/addressLocality    
             type: Property    
         addressRegion:    
-          description: 'The region in which the locality is, and which is in the country'    
+          description: The region in which the locality is, and which is in the country    
           type: string    
           x-ngsi:    
             model: https://schema.org/addressRegion    
             type: Property    
         district:    
-          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          description: A district is a type of administrative division that, in some countries, is managed by the local government    
           type: string    
           x-ngsi:    
             type: Property    
         postOfficeBoxNumber:    
-          description: 'The post office box number for PO box addresses. For example, 03578'    
+          description: The post office box number for PO box addresses. For example, 03578    
           type: string    
           x-ngsi:    
             model: https://schema.org/postOfficeBoxNumber    
             type: Property    
         postalCode:    
-          description: 'The postal code. For example, 24004'    
+          description: The postal code. For example, 24004    
           type: string    
           x-ngsi:    
             model: https://schema.org/https://schema.org/postalCode    
@@ -165,7 +165,10 @@ VehicleModel:
     annotations:    
       description: Annotations about the item    
       items:    
+        description: Eventy element in the annotations    
         type: string    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -183,7 +186,7 @@ VehicleModel:
         model: https://schema.org/brand    
         type: Property    
     cargoVolume:    
-      description: 'The available volume for cargo or luggage. For automobiles, this is usually the trunk volume. If only a single value is provided (type Number) it will refer to the maximum volume'    
+      description: The available volume for cargo or luggage. For automobiles, this is usually the trunk volume. If only a single value is provided (type Number) it will refer to the maximum volume    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -234,7 +237,7 @@ VehicleModel:
         type: Property    
         units: liters per 100 kilometer    
     fuelType:    
-      description: 'The type of fuel suitable for the engine or engines of the vehicle. Enum:''autogas, biodiesel, ethanol, cng, diesel, electric, gasoline, hybrid electric/diesel, hybrid electric/petrol, hydrogen, lpg, petrol, petrol(unleaded), petrol(leaded), other'''    
+      description: The type of fuel suitable for the engine or engines of the vehicle. Enum:'autogas, biodiesel, ethanol, cng, diesel, electric, gasoline, hybrid electric/diesel, hybrid electric/petrol, hydrogen, lpg, petrol, petrol(unleaded), petrol(leaded), other'    
       enum:    
         - autogas    
         - biodiesel    
@@ -278,7 +281,7 @@ VehicleModel:
             type: Property    
       description: Unique identifier of the entity    
       x-ngsi:    
-        type: Property    
+        type: Relationship    
     image:    
       description: An image of the item    
       format: uri    
@@ -287,20 +290,26 @@ VehicleModel:
         model: https://schema.org/URL    
         type: Property    
     location:    
-      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+      description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon    
       oneOf:    
         - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
+              description: BBox of the  Point    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the Point    
               items:    
                 type: number    
               minItems: 2    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - Point    
@@ -315,11 +324,15 @@ VehicleModel:
         - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
+              description: BBox coordinates of the LineString    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the LineString    
               items:    
                 items:    
                   type: number    
@@ -327,6 +340,8 @@ VehicleModel:
                 type: array    
               minItems: 2    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - LineString    
@@ -341,11 +356,15 @@ VehicleModel:
         - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
+              description: BBox coordinates of the Polygon    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the Polygon    
               items:    
                 items:    
                   items:    
@@ -355,6 +374,8 @@ VehicleModel:
                 minItems: 4    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - Polygon    
@@ -369,17 +390,23 @@ VehicleModel:
         - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
+              description: BBox coordinates of the LineString    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the MulitPoint    
               items:    
                 items:    
                   type: number    
                 minItems: 2    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - MultiPoint    
@@ -394,11 +421,15 @@ VehicleModel:
         - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
+              description: BBox coordinates of the LineString    
               items:    
                 type: number    
               minItems: 4    
               type: array    
+              x-ngsi:    
+                type: Property    
             coordinates:    
+              description: Coordinates of the MultiLineString    
               items:    
                 items:    
                   items:    
@@ -408,6 +439,8 @@ VehicleModel:
                 minItems: 2    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - MultiLineString    
@@ -427,6 +460,7 @@ VehicleModel:
               minItems: 4    
               type: array    
             coordinates:    
+              description: Coordinates of the MultiPolygon    
               items:    
                 items:    
                   items:    
@@ -438,6 +472,8 @@ VehicleModel:
                   type: array    
                 type: array    
               type: array    
+              x-ngsi:    
+                type: Property    
             type:    
               enum:    
                 - MultiPolygon    
@@ -486,7 +522,7 @@ VehicleModel:
               type: Property    
         description: Unique identifier of the entity    
         x-ngsi:    
-          type: Property    
+          type: Relationship    
       type: array    
       x-ngsi:    
         type: Property    
@@ -503,7 +539,7 @@ VehicleModel:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
+      description: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object    
       type: string    
       x-ngsi:    
         type: Property    
@@ -535,7 +571,7 @@ VehicleModel:
         model: https://schema.org/vehicleModelDate    
         type: Property    
     vehicleType:    
-      description: 'Type of vehicle from the point of view of its structural characteristics. This is different than the vehicle category . Enum:''agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other''. The following values defined by _VehicleTypeEnum_ and _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)'    
+      description: Type of vehicle from the point of view of its structural characteristics. This is different than the vehicle category . Enum:'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'. The following values defined by _VehicleTypeEnum_ and _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)    
       enum:    
         - agriculturalVehicle    
         - bicycle    
@@ -586,12 +622,12 @@ VehicleModel:
     - modelName    
     - manufacturerName    
   type: object    
-  x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-derived-from: ''    
+  x-disclaimer: Redistribution and use in source and binary forms...    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/VehicleModel/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/VehicleModel/schema.json    
-  x-model-tags: ""    
-  x-version: 0.0.1    
+  x-model-tags: ''    
+  x-version: 0.0.2    
 ```  
 </details>    
 <!-- /60-ModelYaml -->
@@ -605,7 +641,7 @@ VehicleModel:
 
 ## Cargas de ejemplo  
 
-#### ModeloDeVehículo clave-valor de ejemplo NGSI-v2  
+#### ModeloDeVehículo ejemplo de valores clave NGSI-v2  
 
 Aquí hay un ejemplo de un VehicleModel en formato JSON como clave-valor. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
@@ -668,7 +704,7 @@ Aquí hay un ejemplo de un VehicleModel en formato JSON normalizado. Esto es com
 ```  
 </details>  
 
-#### ModeloDeVehículo clave-valor de ejemplo NGSI-LD  
+#### ModeloDeVehículo claves-valor de ejemplo NGSI-LD  
 
 Aquí hay un ejemplo de un VehicleModel en formato JSON-LD como clave-valor. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
