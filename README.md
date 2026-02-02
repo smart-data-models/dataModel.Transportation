@@ -63,7 +63,7 @@ The following entity types are available:
 - [VehicleModel](https://github.com/smart-data-models/dataModel.Transportation/blob/master/VehicleModel/README.md). This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.
 
 ### Contributors
-[Link](https://github.com/smart-data-models/dataModel.Transportation/blob/master/CONTRIBUTORS.yaml) to the 21 current contributors.
+[Link](https://github.com/smart-data-models/dataModel.Transportation/blob/master/CONTRIBUTORS.yaml) to the 22 current contributors.
 
 ### Contribution
 You can raise an [issue](https://github.com/smart-data-models/dataModel.Transportation/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.Transportation/pulls) on existing data models.
