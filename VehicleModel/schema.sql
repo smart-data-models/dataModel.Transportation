@@ -1,3 +1,39 @@
-/* (Beta) Export of data model VehicleModel of the subject dataModel.Transportation for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE fuelType_type AS ENUM ('autogas','biodiesel','cng','diesel','electric','ethanol','gasoline','hybrid_electric_diesel','hybrid_electric_petrol','hydrogen','lpg','petrol','petrol(unleaded)','petrol(leaded)','other');CREATE TYPE VehicleModel_type AS ENUM ('VehicleModel');CREATE TYPE vehicleType_type AS ENUM ('agriculturalVehicle','bicycle','binTrolley','bus','car','caravan','carWithCaravan','carWithTrailer','cleaningTrolley','constructionOrMaintenanceVehicle','lorry','minibus','moped','motorcycle','motorcycleWithSideCar','motorscooter','sweepingMachine','tanker','trailer','tram','van','trolley');
-CREATE TABLE VehicleModel (address JSON, alternateName TEXT, annotations JSON, areaServed TEXT, brandName TEXT, cargoVolume NUMERIC, color TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, depth NUMERIC, description TEXT, fuelConsumption NUMERIC, fuelType fuelType_type, height NUMERIC, id TEXT PRIMARY KEY, image TEXT, location JSON, manufacturerName TEXT, modelName TEXT, name TEXT, owner JSON, seeAlso JSON, source TEXT, type VehicleModel_type, url TEXT, vehicleEngine TEXT, vehicleModelDate TIMESTAMP, vehicleType vehicleType_type, weight NUMERIC, width NUMERIC);
+/* (Beta) Export of data model VehicleModel of the subject dataModel.Transportation 
+for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE fuelType_type AS ENUM ('autogas', 'biodiesel', 'cng', 'diesel', 'electric', 'ethanol', 'gasoline', 'hybrid_electric_diesel', 'hybrid_electric_petrol', 'hydrogen', 'lpg', 'petrol', 'petrol(unleaded)', 'petrol(leaded)', 'other');
+CREATE TYPE VehicleModel_type AS ENUM ('VehicleModel');
+CREATE TYPE vehicleType_type AS ENUM ('agriculturalVehicle', 'bicycle', 'binTrolley', 'bus', 'car', 'caravan', 'carWithCaravan', 'carWithTrailer', 'cleaningTrolley', 'constructionOrMaintenanceVehicle', 'lorry', 'minibus', 'moped', 'motorcycle', 'motorcycleWithSideCar', 'motorscooter', 'sweepingMachine', 'tanker', 'trailer', 'tram', 'van', 'trolley');
+
+CREATE TABLE VehicleModel (
+    address JSON,
+    alternateName TEXT,
+    annotations JSON,
+    areaServed TEXT,
+    brandName TEXT,
+    cargoVolume NUMERIC,
+    color TEXT,
+    dataProvider TEXT,
+    dateCreated TIMESTAMP,
+    dateModified TIMESTAMP,
+    depth NUMERIC,
+    description TEXT,
+    fuelConsumption NUMERIC,
+    fuelType fuelType_type,
+    height NUMERIC,
+    id TEXT PRIMARY KEY,
+    image TEXT,
+    location JSON,
+    manufacturerName TEXT,
+    modelName TEXT,
+    name TEXT,
+    owner JSON,
+    seeAlso JSON,
+    source TEXT,
+    type VehicleModel_type,
+    url TEXT,
+    vehicleEngine TEXT,
+    vehicleModelDate TIMESTAMP,
+    vehicleType vehicleType_type,
+    weight NUMERIC,
+    width NUMERIC
+);
