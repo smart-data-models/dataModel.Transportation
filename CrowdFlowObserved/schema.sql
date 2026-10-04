@@ -1,3 +1,31 @@
 /* (Beta) Export of data model CrowdFlowObserved of the subject dataModel.Transportation for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE direction_type AS ENUM ('inbound','outbound');CREATE TYPE CrowdFlowObserved_type AS ENUM ('CrowdFlowObserved');
-CREATE TABLE CrowdFlowObserved (address JSON, alternateName TEXT, areaServed TEXT, averageCrowdSpeed NUMERIC, averageHeadwayTime NUMERIC, congested BOOLEAN, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, dateObserved TEXT, dateObservedFrom TIMESTAMP, dateObservedTo TIMESTAMP, description TEXT, direction direction_type, id TEXT PRIMARY KEY, location JSON, name TEXT, occupancy NUMERIC, owner JSON, peopleCount NUMERIC, peopleCountAway NUMERIC, peopleCountTowards NUMERIC, seeAlso JSON, source TEXT, type CrowdFlowObserved_type);
+CREATE TYPE direction_type AS ENUM ('inbound', 'outbound');
+CREATE TYPE CrowdFlowObserved_type AS ENUM ('CrowdFlowObserved');
+CREATE TABLE CrowdFlowObserved (
+  "address" JSON,
+  "alternateName" TEXT,
+  "areaServed" TEXT,
+  "averageCrowdSpeed" NUMERIC,
+  "averageHeadwayTime" NUMERIC,
+  "congested" BOOLEAN,
+  "dataProvider" TEXT,
+  "dateCreated" TIMESTAMP,
+  "dateModified" TIMESTAMP,
+  "dateObserved" TEXT,
+  "dateObservedFrom" TIMESTAMP,
+  "dateObservedTo" TIMESTAMP,
+  "description" TEXT,
+  "direction" direction_type,
+  "id" TEXT PRIMARY KEY,
+  "location" JSON,
+  "name" TEXT,
+  "occupancy" NUMERIC,
+  "owner" JSON,
+  "peopleCount" NUMERIC,
+  "peopleCountAway" NUMERIC,
+  "peopleCountTowards" NUMERIC,
+  "refRoadSegment" JSON,
+  "seeAlso" JSON,
+  "source" TEXT,
+  "type" CrowdFlowObserved_type
+);
