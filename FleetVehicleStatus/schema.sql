@@ -1,3 +1,32 @@
 /* (Beta) Export of data model FleetVehicleStatus of the subject dataModel.Transportation for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE currentStatus_type AS ENUM ('deployed','finished','servicing','starting','terminated');CREATE TYPE FleetVehicleStatus_type AS ENUM ('FleetVehicleStatus');
-CREATE TABLE FleetVehicleStatus (address JSON, alternateName TEXT, areaServed TEXT, battery NUMERIC, bearing NUMERIC, currentOperative JSON, currentStatus currentStatus_type, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, id TEXT PRIMARY KEY, inRestrictedArea BOOLEAN, lastFuellingAmount NUMERIC, lastKnownPosition JSON, lastKnownPositionUpdatedAt TIMESTAMP, location JSON, mileageFromOdometer NUMERIC, name TEXT, owner JSON, restFuelAmount NUMERIC, seeAlso JSON, source TEXT, speed NUMERIC, type FleetVehicleStatus_type);
+CREATE TYPE currentStatus_type AS ENUM ('deployed', 'finished', 'servicing', 'starting', 'terminated');
+CREATE TYPE FleetVehicleStatus_type AS ENUM ('FleetVehicleStatus');
+CREATE TABLE FleetVehicleStatus (
+  "address" JSON,
+  "alternateName" TEXT,
+  "areaServed" TEXT,
+  "battery" NUMERIC,
+  "bearing" NUMERIC,
+  "currentOperative" JSON,
+  "currentStatus" currentStatus_type,
+  "dataProvider" TEXT,
+  "dateCreated" TIMESTAMP,
+  "dateModified" TIMESTAMP,
+  "description" TEXT,
+  "fleetVehicle" JSON,
+  "fleetVehicleOperation" JSON,
+  "id" TEXT PRIMARY KEY,
+  "inRestrictedArea" BOOLEAN,
+  "lastFuellingAmount" NUMERIC,
+  "lastKnownPosition" JSON,
+  "lastKnownPositionUpdatedAt" TIMESTAMP,
+  "location" JSON,
+  "mileageFromOdometer" NUMERIC,
+  "name" TEXT,
+  "owner" JSON,
+  "restFuelAmount" NUMERIC,
+  "seeAlso" JSON,
+  "source" TEXT,
+  "speed" NUMERIC,
+  "type" FleetVehicleStatus_type
+);
