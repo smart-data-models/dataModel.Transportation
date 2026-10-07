@@ -1,5 +1,5 @@
 /* (Beta) Export of data model BikeHireDockingStation of the subject dataModel.Transportation for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE status_type AS ENUM ('almostEmpty', 'almostFull', 'empty', 'full', 'outOfService', 'withIncidence', 'working');
+CREATE TYPE BikeHireDockingStation_status_type AS ENUM ('almostEmpty', 'almostFull', 'empty', 'full', 'outOfService', 'withIncidence', 'working');
 CREATE TYPE BikeHireDockingStation_type AS ENUM ('BikeHireDockingStation');
 CREATE TABLE BikeHireDockingStation (
   "address" JSON,
@@ -28,7 +28,7 @@ CREATE TABLE BikeHireDockingStation (
   "source" TEXT,
   "stationCode" TEXT,
   "stationName" TEXT,
-  "status" status_type,
+  "status" BikeHireDockingStation_status_type,
   "totalSlotNumber" NUMERIC,
   "type" BikeHireDockingStation_type
 );
