@@ -1,7 +1,7 @@
 /* (Beta) Export of data model EVChargingStation of the subject dataModel.Transportation for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE status_type AS ENUM ('almostEmpty', 'almostFull', 'empty', 'full', 'outOfService', 'withIncidence', 'working');
+CREATE TYPE EVChargingStation_status_type AS ENUM ('almostEmpty', 'almostFull', 'empty', 'full', 'outOfService', 'withIncidence', 'working');
 CREATE TYPE EVChargingStation_type AS ENUM ('EVChargingStation');
-CREATE TYPE vehicleType_type AS ENUM ('agriculturalVehicle', 'ambulance', 'articulatedVehicle', 'autorickshaw', 'bicycle', 'binTrolley', 'BRT bus', 'BRT minibus', 'bus', 'car', 'caravan', 'carOrLightVehicle', 'carWithCaravan', 'carWithTrailer', 'cleaningTrolley', 'compactor', 'constructionOrMaintenanceVehicle', 'dumper', 'e-moped', 'e-scooter', 'e-motorcycle', 'fire tender', 'fourWheelDrive', 'highSidedVehicle', 'hopper', 'lorry', 'minibus', 'moped', 'motorcycle', 'motorcycleWithSideCar', 'motorscooter', 'police van', 'sweepingMachine', 'tanker', 'tempo', 'threeWheeledVehicle', 'tipper', 'trailer', 'tram', 'twoWheeledVehicle', 'trolley', 'van');
+CREATE TYPE EVChargingStation_vehicleType_type AS ENUM ('agriculturalVehicle', 'ambulance', 'articulatedVehicle', 'autorickshaw', 'bicycle', 'binTrolley', 'BRT bus', 'BRT minibus', 'bus', 'car', 'caravan', 'carOrLightVehicle', 'carWithCaravan', 'carWithTrailer', 'cleaningTrolley', 'compactor', 'constructionOrMaintenanceVehicle', 'dumper', 'e-moped', 'e-scooter', 'e-motorcycle', 'fire tender', 'fourWheelDrive', 'highSidedVehicle', 'hopper', 'lorry', 'minibus', 'moped', 'motorcycle', 'motorcycleWithSideCar', 'motorscooter', 'police van', 'sweepingMachine', 'tanker', 'tempo', 'threeWheeledVehicle', 'tipper', 'trailer', 'tram', 'twoWheeledVehicle', 'trolley', 'van');
 CREATE TABLE EVChargingStation (
   "acceptedPaymentMethod" JSON,
   "address" JSON,
@@ -36,11 +36,11 @@ CREATE TABLE EVChargingStation (
   "source" TEXT,
   "startDateTime" TIMESTAMP,
   "stationName" TEXT,
-  "status" status_type,
+  "status" EVChargingStation_status_type,
   "taxAmountCollected" NUMERIC,
   "transactionId" TEXT,
   "transactionType" TEXT,
   "type" EVChargingStation_type,
-  "vehicleType" vehicleType_type,
+  "vehicleType" EVChargingStation_vehicleType_type,
   "voltage" NUMERIC
 );
