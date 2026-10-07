@@ -1,11 +1,11 @@
 /* (Beta) Export of data model Vehicle of the subject dataModel.Transportation for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE deviceBatteryStatus_type AS ENUM ('connected', 'disconnected');
-CREATE TYPE emergencyVehicleType_type AS ENUM ('policeCar', 'policeMotorcycle', 'policeVan', 'policeSWAT', 'fireEngine', 'waterTender', 'airAmbulance', 'ambulance', 'motorcycleAmbulance', 'rescueVehicle', 'hazardousMaterialsApparatus', 'towTruck');
-CREATE TYPE serviceStatus_type AS ENUM ('broken', 'onRoute', 'outOfService', 'parked');
+CREATE TYPE Vehicle_deviceBatteryStatus_type AS ENUM ('connected', 'disconnected');
+CREATE TYPE Vehicle_emergencyVehicleType_type AS ENUM ('policeCar', 'policeMotorcycle', 'policeVan', 'policeSWAT', 'fireEngine', 'waterTender', 'airAmbulance', 'ambulance', 'motorcycleAmbulance', 'rescueVehicle', 'hazardousMaterialsApparatus', 'towTruck');
+CREATE TYPE Vehicle_serviceStatus_type AS ENUM ('broken', 'onRoute', 'outOfService', 'parked');
 CREATE TYPE Vehicle_type AS ENUM ('Vehicle');
-CREATE TYPE vehicleRunningStatus_type AS ENUM ('running', 'stopped', 'waiting');
-CREATE TYPE vehicleSpecialUsage_type AS ENUM ('ambulance', 'fireBrigade', 'military', 'police', 'schoolTransportation', 'taxi', 'trashManagement');
-CREATE TYPE vehicleType_type AS ENUM ('agriculturalVehicle', 'ambulance', 'anyVehicle', 'articulatedVehicle', 'autorickshaw', 'bicycle', 'binTrolley', 'BRT mini bus', 'BRT bus', 'bus', 'car', 'caravan', 'carOrLightVehicle', 'carWithCaravan', 'carWithTrailer', 'cleaningTrolley', 'compactor', 'constructionOrMaintenanceVehicle', 'dumper', 'e-bike', 'e-moped', 'e-scooter', 'e-motorcycle', 'fireTender', 'fourWheelDrive', 'highSidedVehicle', 'hopper', 'lorry', 'minibus', 'moped', 'motorcycle', 'motorcycleWithSideCar', 'motorscooter', 'policeVan', 'publicMotor', 'sweepingMachine', 'tanker', 'tempo', 'threeWheeledVehicle', 'tipper', 'trailer', 'tram', 'trolley', 'twoWheeledVehicle', 'van', 'vehicleWithoutCatalyticConverter', 'vehicleWithCaravan', 'vehicleWithTrailer', 'withEvenNumberedRegistrationPlates', 'withOddNumberedRegistrationPlates', 'pilotVessel', 'passengerVessel', 'cargoVessel', 'tug', 'militaryVessel', 'sailingVessel', 'vessel', 'other');
+CREATE TYPE Vehicle_vehicleRunningStatus_type AS ENUM ('running', 'stopped', 'waiting');
+CREATE TYPE Vehicle_vehicleSpecialUsage_type AS ENUM ('ambulance', 'fireBrigade', 'military', 'police', 'schoolTransportation', 'taxi', 'trashManagement');
+CREATE TYPE Vehicle_vehicleType_type AS ENUM ('agriculturalVehicle', 'ambulance', 'anyVehicle', 'articulatedVehicle', 'autorickshaw', 'bicycle', 'binTrolley', 'BRT mini bus', 'BRT bus', 'bus', 'car', 'caravan', 'carOrLightVehicle', 'carWithCaravan', 'carWithTrailer', 'cleaningTrolley', 'compactor', 'constructionOrMaintenanceVehicle', 'dumper', 'e-bike', 'e-moped', 'e-scooter', 'e-motorcycle', 'fireTender', 'fourWheelDrive', 'highSidedVehicle', 'hopper', 'lorry', 'minibus', 'moped', 'motorcycle', 'motorcycleWithSideCar', 'motorscooter', 'policeVan', 'publicMotor', 'sweepingMachine', 'tanker', 'tempo', 'threeWheeledVehicle', 'tipper', 'trailer', 'tram', 'trolley', 'twoWheeledVehicle', 'van', 'vehicleWithoutCatalyticConverter', 'vehicleWithCaravan', 'vehicleWithTrailer', 'withEvenNumberedRegistrationPlates', 'withOddNumberedRegistrationPlates', 'pilotVessel', 'passengerVessel', 'cargoVessel', 'tug', 'militaryVessel', 'sailingVessel', 'vessel', 'other');
 CREATE TABLE Vehicle (
   "address" JSON,
   "alternateName" TEXT,
@@ -23,9 +23,9 @@ CREATE TABLE Vehicle (
   "dateModified" TIMESTAMP,
   "dateVehicleFirstRegistered" DATE,
   "description" TEXT,
-  "deviceBatteryStatus" deviceBatteryStatus_type,
+  "deviceBatteryStatus" Vehicle_deviceBatteryStatus_type,
   "deviceSimNumber" TEXT,
-  "emergencyVehicleType" emergencyVehicleType_type,
+  "emergencyVehicleType" Vehicle_emergencyVehicleType_type,
   "feature" JSON,
   "fleetVehicleId" TEXT,
   "fuelEfficiency" NUMERIC,
@@ -50,7 +50,7 @@ CREATE TABLE Vehicle (
   "seeAlso" JSON,
   "serviceOnDuty" BOOLEAN,
   "serviceProvided" JSON,
-  "serviceStatus" serviceStatus_type,
+  "serviceStatus" Vehicle_serviceStatus_type,
   "source" TEXT,
   "speed" JSON,
   "tripNetWeightCollected" NUMERIC,
@@ -59,10 +59,10 @@ CREATE TABLE Vehicle (
   "vehicleConfiguration" TEXT,
   "vehicleIdentificationNumber" TEXT,
   "vehiclePlateIdentifier" TEXT,
-  "vehicleRunningStatus" vehicleRunningStatus_type,
-  "vehicleSpecialUsage" vehicleSpecialUsage_type,
+  "vehicleRunningStatus" Vehicle_vehicleRunningStatus_type,
+  "vehicleSpecialUsage" Vehicle_vehicleSpecialUsage_type,
   "vehicleTrackerDevice" TEXT,
-  "vehicleType" vehicleType_type,
+  "vehicleType" Vehicle_vehicleType_type,
   "wardId" TEXT,
   "wardName" TEXT,
   "zoneName" TEXT
