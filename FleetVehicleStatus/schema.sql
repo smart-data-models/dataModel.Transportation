@@ -1,5 +1,5 @@
 /* (Beta) Export of data model FleetVehicleStatus of the subject dataModel.Transportation for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE currentStatus_type AS ENUM ('deployed', 'finished', 'servicing', 'starting', 'terminated');
+CREATE TYPE FleetVehicleStatus_currentStatus_type AS ENUM ('deployed', 'finished', 'servicing', 'starting', 'terminated');
 CREATE TYPE FleetVehicleStatus_type AS ENUM ('FleetVehicleStatus');
 CREATE TABLE FleetVehicleStatus (
   "address" JSON,
@@ -8,7 +8,7 @@ CREATE TABLE FleetVehicleStatus (
   "battery" NUMERIC,
   "bearing" NUMERIC,
   "currentOperative" JSON,
-  "currentStatus" currentStatus_type,
+  "currentStatus" FleetVehicleStatus_currentStatus_type,
   "dataProvider" TEXT,
   "dateCreated" TIMESTAMP,
   "dateModified" TIMESTAMP,
