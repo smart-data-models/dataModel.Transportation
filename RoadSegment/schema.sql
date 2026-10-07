@@ -1,7 +1,7 @@
 /* (Beta) Export of data model RoadSegment of the subject dataModel.Transportation for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE cyclePathPlacement_type AS ENUM ('BOTH', 'LEFT', 'NOT_AVAILABLE', 'RIGHT');
-CREATE TYPE roadClass_type AS ENUM ('MAJOR_DISTRICT_ROAD', 'MAJOR_CITY_ROAD', 'MINOR_CITY_ROAD', 'NATIONAL_HIGHWAY', 'OTHER_DISTRICT_ROAD', 'OTHER_PUBLIC_ROAD', 'PORT_ROAD', 'PRIVATE_ROAD', 'SERVICE_ROAD', 'STATE_HIGHWAY');
-CREATE TYPE roadWork_type AS ENUM ('COLLAPSE', 'DERAILMENT', 'FIRE', 'FLOOD', 'GASLEAK', 'LANDSLIDE', 'OTHER', 'POWERCUT', 'ROCKFALL', 'SAGGING', 'WATERLEAK');
+CREATE TYPE RoadSegment_cyclePathPlacement_type AS ENUM ('BOTH', 'LEFT', 'NOT_AVAILABLE', 'RIGHT');
+CREATE TYPE RoadSegment_roadClass_type AS ENUM ('MAJOR_DISTRICT_ROAD', 'MAJOR_CITY_ROAD', 'MINOR_CITY_ROAD', 'NATIONAL_HIGHWAY', 'OTHER_DISTRICT_ROAD', 'OTHER_PUBLIC_ROAD', 'PORT_ROAD', 'PRIVATE_ROAD', 'SERVICE_ROAD', 'STATE_HIGHWAY');
+CREATE TYPE RoadSegment_roadWork_type AS ENUM ('COLLAPSE', 'DERAILMENT', 'FIRE', 'FLOOD', 'GASLEAK', 'LANDSLIDE', 'OTHER', 'POWERCUT', 'ROCKFALL', 'SAGGING', 'WATERLEAK');
 CREATE TYPE RoadSegment_type AS ENUM ('RoadSegment');
 CREATE TABLE RoadSegment (
   "address" JSON,
@@ -19,7 +19,7 @@ CREATE TABLE RoadSegment (
   "cyclePathLeftHeight" NUMERIC,
   "cyclePathLeftWidth" NUMERIC,
   "cyclePathMaterial" TEXT,
-  "cyclePathPlacement" cyclePathPlacement_type,
+  "cyclePathPlacement" RoadSegment_cyclePathPlacement_type,
   "cyclePathRightHeight" NUMERIC,
   "cyclePathRightWidth" NUMERIC,
   "dataDescriptor" JSON,
@@ -54,12 +54,12 @@ CREATE TABLE RoadSegment (
   "pedestrianPathRightWidth" NUMERIC,
   "refRoad" JSON,
   "rightOfWayWidth" NUMERIC,
-  "roadClass" roadClass_type,
+  "roadClass" RoadSegment_roadClass_type,
   "roadDirection" TEXT,
   "roadId" TEXT,
   "roadMaterial" TEXT,
   "roadName" TEXT,
-  "roadWork" roadWork_type,
+  "roadWork" RoadSegment_roadWork_type,
   "seeAlso" JSON,
   "source" TEXT,
   "startKilometer" NUMERIC,
