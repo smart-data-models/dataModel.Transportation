@@ -1,5 +1,5 @@
 /* (Beta) Export of data model OriginDestinationFlow of the subject dataModel.Transportation for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE flowType_type AS ENUM ('tourism', 'commuting', 'business', 'migration', 'mixed');
+CREATE TYPE OriginDestinationFlow_flowType_type AS ENUM ('tourism', 'commuting', 'business', 'migration', 'mixed');
 CREATE TYPE OriginDestinationFlow_type AS ENUM ('OriginDestinationFlow');
 CREATE TABLE OriginDestinationFlow (
   "address" JSON,
@@ -16,7 +16,7 @@ CREATE TABLE OriginDestinationFlow (
   "destinationLocationCode" TEXT,
   "destinationLocationName" TEXT,
   "flowCount" NUMERIC,
-  "flowType" flowType_type,
+  "flowType" OriginDestinationFlow_flowType_type,
   "hour" NUMERIC,
   "id" TEXT PRIMARY KEY,
   "location" JSON,
