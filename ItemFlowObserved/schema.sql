@@ -1,6 +1,6 @@
 /* (Beta) Export of data model ItemFlowObserved of the subject dataModel.Transportation for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE itemType_type AS ENUM ('people', 'ship', 'vehicle', 'yacht');
-CREATE TYPE laneDirection_type AS ENUM ('forward', 'backward', 'inbound', 'outbound', 'right', 'left');
+CREATE TYPE ItemFlowObserved_itemType_type AS ENUM ('people', 'ship', 'vehicle', 'yacht');
+CREATE TYPE ItemFlowObserved_laneDirection_type AS ENUM ('forward', 'backward', 'inbound', 'outbound', 'right', 'left');
 CREATE TYPE ItemFlowObserved_type AS ENUM ('ItemFlowObserved');
 CREATE TABLE ItemFlowObserved (
   "address" JSON,
@@ -21,8 +21,8 @@ CREATE TABLE ItemFlowObserved (
   "id" TEXT PRIMARY KEY,
   "intensity" NUMERIC,
   "itemSubType" TEXT,
-  "itemType" itemType_type,
-  "laneDirection" laneDirection_type,
+  "itemType" ItemFlowObserved_itemType_type,
+  "laneDirection" ItemFlowObserved_laneDirection_type,
   "laneId" NUMERIC,
   "location" JSON,
   "maxSpeed" NUMERIC,
