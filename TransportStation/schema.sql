@@ -1,8 +1,8 @@
 /* (Beta) Export of data model TransportStation of the subject dataModel.Transportation for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE installationMode_type AS ENUM ('aerial', 'ground', 'underGround', 'underSea');
-CREATE TYPE locationType_type AS ENUM ('0', '1', '2', '3', '4');
+CREATE TYPE TransportStation_installationMode_type AS ENUM ('aerial', 'ground', 'underGround', 'underSea');
+CREATE TYPE TransportStation_locationType_type AS ENUM ('0', '1', '2', '3', '4');
 CREATE TYPE TransportStation_type AS ENUM ('TransportStation');
-CREATE TYPE wheelChairAccessible_type AS ENUM ('0', '1', '2');
+CREATE TYPE TransportStation_wheelChairAccessible_type AS ENUM ('0', '1', '2');
 CREATE TABLE TransportStation (
   "address" JSON,
   "alternateName" TEXT,
@@ -22,11 +22,11 @@ CREATE TABLE TransportStation (
   "dimension" JSON,
   "featuredArtist" JSON,
   "id" TEXT PRIMARY KEY,
-  "installationMode" installationMode_type,
+  "installationMode" TransportStation_installationMode_type,
   "inventory" JSON,
   "levelId" NUMERIC,
   "location" JSON,
-  "locationType" locationType_type,
+  "locationType" TransportStation_locationType_type,
   "name" TEXT,
   "openingHoursSpecification" JSON,
   "owner" JSON,
@@ -41,6 +41,6 @@ CREATE TABLE TransportStation (
   "stationType" JSON,
   "type" TransportStation_type,
   "webSite" TEXT,
-  "wheelChairAccessible" wheelChairAccessible_type,
+  "wheelChairAccessible" TransportStation_wheelChairAccessible_type,
   "zoneId" TEXT
 );
