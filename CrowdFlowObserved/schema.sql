@@ -1,5 +1,5 @@
 /* (Beta) Export of data model CrowdFlowObserved of the subject dataModel.Transportation for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE direction_type AS ENUM ('inbound', 'outbound');
+CREATE TYPE CrowdFlowObserved_direction_type AS ENUM ('inbound', 'outbound');
 CREATE TYPE CrowdFlowObserved_type AS ENUM ('CrowdFlowObserved');
 CREATE TABLE CrowdFlowObserved (
   "address" JSON,
@@ -15,7 +15,7 @@ CREATE TABLE CrowdFlowObserved (
   "dateObservedFrom" TIMESTAMP,
   "dateObservedTo" TIMESTAMP,
   "description" TEXT,
-  "direction" direction_type,
+  "direction" CrowdFlowObserved_direction_type,
   "id" TEXT PRIMARY KEY,
   "location" JSON,
   "name" TEXT,
