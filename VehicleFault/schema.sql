@@ -1,5 +1,5 @@
 /* (Beta) Export of data model VehicleFault of the subject dataModel.Transportation for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE eventType_type AS ENUM ('collision', 'emergency', 'harshAccel', 'harshDecel', 'auxBatteryWarn', 'milWarn');
+CREATE TYPE VehicleFault_eventType_type AS ENUM ('collision', 'emergency', 'harshAccel', 'harshDecel', 'auxBatteryWarn', 'milWarn');
 CREATE TYPE VehicleFault_type AS ENUM ('VehicleFault');
 CREATE TABLE VehicleFault (
   "address" JSON,
@@ -10,7 +10,7 @@ CREATE TABLE VehicleFault (
   "dateModified" TIMESTAMP,
   "description" TEXT,
   "dtCode" TEXT,
-  "eventType" eventType_type,
+  "eventType" VehicleFault_eventType_type,
   "faultLog" TEXT,
   "id" TEXT PRIMARY KEY,
   "location" JSON,
