@@ -1,7 +1,7 @@
 /* (Beta) Export of data model ElectricVehicleMobility of the subject dataModel.Transportation for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE region_type AS ENUM ('CONTINENTE', 'AÇORES', 'MADEIRA', 'Outros - GDPR');
+CREATE TYPE ElectricVehicleMobility_region_type AS ENUM ('CONTINENTE', 'AÇORES', 'MADEIRA', 'Outros - GDPR');
 CREATE TYPE ElectricVehicleMobility_type AS ENUM ('ElectricVehicleMobility');
-CREATE TYPE vehicleType_type AS ENUM ('BEV', 'PHEV', 'HEV', 'FCEV', 'unknown');
+CREATE TYPE ElectricVehicleMobility_vehicleType_type AS ENUM ('BEV', 'PHEV', 'HEV', 'FCEV', 'unknown');
 CREATE TABLE ElectricVehicleMobility (
   "address" JSON,
   "alternateName" TEXT,
@@ -21,9 +21,9 @@ CREATE TABLE ElectricVehicleMobility (
   "n" NUMERIC,
   "name" TEXT,
   "owner" JSON,
-  "region" region_type,
+  "region" ElectricVehicleMobility_region_type,
   "seeAlso" JSON,
   "source" TEXT,
   "type" ElectricVehicleMobility_type,
-  "vehicleType" vehicleType_type
+  "vehicleType" ElectricVehicleMobility_vehicleType_type
 );
