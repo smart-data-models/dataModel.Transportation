@@ -1,7 +1,7 @@
 /* (Beta) Export of data model CityWork of the subject dataModel.Transportation for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE CityWork_type AS ENUM ('CityWork');
-CREATE TYPE typeOfInterventionRequest_type AS ENUM ('authorizationRequest', 'interventionNotice', 'other', 'urgentWorks');
-CREATE TYPE workState_type AS ENUM ('all', 'approved', 'authorized', 'canceled', 'completed', 'decreeToBeSigned', 'draft', 'editedDecrees', 'instructionInProgress', 'investigated', 'nonCompliantOccupation', 'open', 'other', 'pendingAuthorization', 'pendingCancellation', 'planningCompleted', 'pendingDocument', 'pendingExtension', 'pendingPlanning', 'planned', 'received', 'reject', 'supported', 'validatedInPlanning');
+CREATE TYPE CityWork_typeOfInterventionRequest_type AS ENUM ('authorizationRequest', 'interventionNotice', 'other', 'urgentWorks');
+CREATE TYPE CityWork_workState_type AS ENUM ('all', 'approved', 'authorized', 'canceled', 'completed', 'decreeToBeSigned', 'draft', 'editedDecrees', 'instructionInProgress', 'investigated', 'nonCompliantOccupation', 'open', 'other', 'pendingAuthorization', 'pendingCancellation', 'planningCompleted', 'pendingDocument', 'pendingExtension', 'pendingPlanning', 'planned', 'received', 'reject', 'supported', 'validatedInPlanning');
 CREATE TABLE CityWork (
   "address" JSON,
   "allowedVehicle" JSON,
@@ -55,7 +55,7 @@ CREATE TABLE CityWork (
   "territorialArea" TEXT,
   "tramwayImpacted" JSON,
   "type" CityWork_type,
-  "typeOfInterventionRequest" typeOfInterventionRequest_type,
+  "typeOfInterventionRequest" CityWork_typeOfInterventionRequest_type,
   "workDate" TEXT,
   "workDisposition" JSON,
   "workLastDateUpdate" TIMESTAMP,
@@ -64,7 +64,7 @@ CREATE TABLE CityWork (
   "workNumber" TEXT,
   "workOtherImpact" JSON,
   "workReason" JSON,
-  "workState" workState_type,
+  "workState" CityWork_workState_type,
   "workTarget" JSON,
   "workZone" JSON
 );
