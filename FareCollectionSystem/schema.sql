@@ -1,6 +1,6 @@
 /* (Beta) Export of data model FareCollectionSystem of the subject dataModel.Transportation for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE equipmentTypeCode_type AS ENUM ('1B', '42', '02', '8', '41');
-CREATE TYPE occupancyLevel_type AS ENUM ('Red', 'Yellow', 'Green');
+CREATE TYPE FareCollectionSystem_equipmentTypeCode_type AS ENUM ('1B', '42', '02', '8', '41');
+CREATE TYPE FareCollectionSystem_occupancyLevel_type AS ENUM ('Red', 'Yellow', 'Green');
 CREATE TYPE FareCollectionSystem_type AS ENUM ('FareCollectionSystem');
 CREATE TABLE FareCollectionSystem (
   "address" JSON,
@@ -22,7 +22,7 @@ CREATE TABLE FareCollectionSystem (
   "equipmentSequenceNumber" NUMERIC,
   "equipmentStopId" TEXT,
   "equipmentType" TEXT,
-  "equipmentTypeCode" equipmentTypeCode_type,
+  "equipmentTypeCode" FareCollectionSystem_equipmentTypeCode_type,
   "exitAreaCode" TEXT,
   "fareForAdult" NUMERIC,
   "fareForChild" NUMERIC,
@@ -30,7 +30,7 @@ CREATE TABLE FareCollectionSystem (
   "location" JSON,
   "name" TEXT,
   "observationDateTime" TIMESTAMP,
-  "occupancyLevel" occupancyLevel_type,
+  "occupancyLevel" FareCollectionSystem_occupancyLevel_type,
   "originDestinationCode" TEXT,
   "originStopCategory" TEXT,
   "originStopId" TEXT,
