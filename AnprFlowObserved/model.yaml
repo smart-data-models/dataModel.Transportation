@@ -494,8 +494,7 @@ AnprFlowObserved:
                       description: Coordinates of the Polygon
                       items:
                         items:
-                          items:
-                            type: number
+                          items: {}
                           minItems: 2
                           type: array
                         minItems: 4
@@ -559,8 +558,7 @@ AnprFlowObserved:
                       description: Coordinates of the MultiLineString
                       items:
                         items:
-                          items:
-                            type: number
+                          items: {}
                           minItems: 2
                           type: array
                         minItems: 2
@@ -590,11 +588,7 @@ AnprFlowObserved:
                       description: Coordinates of the MultiPolygon
                       items:
                         items:
-                          items:
-                            items:
-                              type: number
-                            minItems: 2
-                            type: array
+                          items: {}
                           minItems: 4
                           type: array
                         type: array
@@ -760,7 +754,7 @@ AnprFlowObserved:
     - dateObserved
   type: object
   x-derived-from: ''
-  x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2025 Contributors to Smart Data Models Program
+  x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/AnprFlowObserved/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/AnprFlowObserved/schema.json
   x-model-tags: ''

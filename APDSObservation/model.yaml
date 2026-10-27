@@ -1,40 +1,40 @@
 APDSObservation:
-  description: 'This entity models a particular observation of a set of ANPR camera. The Observation might be done with several ANPR cameras, but is limited to the observation of ONE vehicle. It implements the APDS data model https://www.allianceforparkingdatastandards.org/'
+  description: This entity models a particular observation of a set of ANPR camera. The Observation might be done with several ANPR cameras, but is limited to the observation of ONE vehicle. It implements the APDS data model https://www.allianceforparkingdatastandards.org/
   properties:
     address:
       description: The mailing address
       properties:
         addressCountry:
-          description: 'The country. For example, Spain'
+          description: The country. For example, Spain
           type: string
           x-ngsi:
             model: https://schema.org/addressCountry
             type: Property
         addressLocality:
-          description: 'The locality in which the street address is, and which is in the region'
+          description: The locality in which the street address is, and which is in the region
           type: string
           x-ngsi:
             model: https://schema.org/addressLocality
             type: Property
         addressRegion:
-          description: 'The region in which the locality is, and which is in the country'
+          description: The region in which the locality is, and which is in the country
           type: string
           x-ngsi:
             model: https://schema.org/addressRegion
             type: Property
         district:
-          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'
+          description: A district is a type of administrative division that, in some countries, is managed by the local government
           type: string
           x-ngsi:
             type: Property
         postOfficeBoxNumber:
-          description: 'The post office box number for PO box addresses. For example, 03578'
+          description: The post office box number for PO box addresses. For example, 03578
           type: string
           x-ngsi:
             model: https://schema.org/postOfficeBoxNumber
             type: Property
         postalCode:
-          description: 'The postal code. For example, 24004'
+          description: The postal code. For example, 24004
           type: string
           x-ngsi:
             model: https://schema.org/https://schema.org/postalCode
@@ -108,9 +108,9 @@ APDSObservation:
             type: Property
       description: Unique identifier of the entity
       x-ngsi:
-        type: Property
+        type: Relationship
     images:
-      description: 'Array of links to images. The array element contain the URLs of the images and additional info. As an alternative to the images URL, the image itself can be included in the binaryContent attribute.'
+      description: Array of links to images. The array element contain the URLs of the images and additional info. As an alternative to the images URL, the image itself can be included in the binaryContent attribute.
       items:
         items:
           description: Every element in the array of images
@@ -157,24 +157,30 @@ APDSObservation:
       x-ngsi:
         type: Property
     location:
-      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+      description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
       oneOf:
         - description: Geojson reference to the item. Point
           properties:
             bbox:
+              description: BBox of the  Point
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the Point
               items:
                 type: number
               minItems: 2
               type: array
+              x-ngsi:
+                type: Property
             type:
-              type: string
               enum:
                 - Point
+              type: string
           required:
             - type
             - coordinates
@@ -185,11 +191,15 @@ APDSObservation:
         - description: Geojson reference to the item. LineString
           properties:
             bbox:
+              description: BBox coordinates of the LineString
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the LineString
               items:
                 items:
                   type: number
@@ -197,6 +207,8 @@ APDSObservation:
                 type: array
               minItems: 2
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - LineString
@@ -211,11 +223,15 @@ APDSObservation:
         - description: Geojson reference to the item. Polygon
           properties:
             bbox:
+              description: BBox coordinates of the Polygon
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the Polygon
               items:
                 items:
                   items:
@@ -225,6 +241,8 @@ APDSObservation:
                 minItems: 4
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - Polygon
@@ -239,17 +257,23 @@ APDSObservation:
         - description: Geojson reference to the item. MultiPoint
           properties:
             bbox:
+              description: BBox coordinates of the LineString
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the MulitPoint
               items:
                 items:
                   type: number
                 minItems: 2
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - MultiPoint
@@ -264,11 +288,15 @@ APDSObservation:
         - description: Geojson reference to the item. MultiLineString
           properties:
             bbox:
+              description: BBox coordinates of the LineString
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the MultiLineString
               items:
                 items:
                   items:
@@ -278,6 +306,8 @@ APDSObservation:
                 minItems: 2
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - MultiLineString
@@ -297,6 +327,7 @@ APDSObservation:
               minItems: 4
               type: array
             coordinates:
+              description: Coordinates of the MultiPolygon
               items:
                 items:
                   items:
@@ -308,6 +339,8 @@ APDSObservation:
                   type: array
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - MultiPolygon
@@ -364,17 +397,17 @@ APDSObservation:
       x-ngsi:
         type: Property
     observedCredentialCountry:
-      description: 'Country Code following the 2 character ISO3166 standard (https://www.iban.com/country-codes). Note that the International vehicle registration code should not be used to avoid ambiguity (https://en.wikipedia.org/wiki/International_vehicle_registration_code). If the country-code could not be determined, set ''XX'' as for this attribute.'
+      description: Country Code following the 2 character ISO3166 standard (https://www.iban.com/country-codes). Note that the International vehicle registration code should not be used to avoid ambiguity (https://en.wikipedia.org/wiki/International_vehicle_registration_code). If the country-code could not be determined, set 'XX' as for this attribute.
       type: string
       x-ngsi:
         type: Property
     observedCredentialId:
-      description: 'Specific identifier to the referenced observed credential. The credential is specified by observedCredentialType and may be an RFID tag, ticket number from a paystation, license plate number, etc. In case of a licensePlate only alpha numerical values (no spaces or hyphens) are allowed. Optionally an '':'' can be used to indicate the position of e.g. the German City Seal (https://www.europeanplates.com/information/german-city-codes.html).'
+      description: Specific identifier to the referenced observed credential. The credential is specified by observedCredentialType and may be an RFID tag, ticket number from a paystation, license plate number, etc. In case of a licensePlate only alpha numerical values (no spaces or hyphens) are allowed. Optionally an ':' can be used to indicate the position of e.g. the German City Seal (https://www.europeanplates.com/information/german-city-codes.html).
       type: string
       x-ngsi:
         type: Property
     observedCredentialType:
-      description: 'Type of the credential referenced within  the observation. Allowed values are specified in the APDS CredentialType. Enum:''barcode, bluetooth, eticket, hangtag, licensePlate, permit, qrCode, rfid, ticket, other'''
+      description: Type of the credential referenced within  the observation. Allowed values are specified in the APDS CredentialType. Enum:'barcode, bluetooth, eticket, hangtag, licensePlate, permit, qrCode, rfid, ticket, other'
       enum:
         - barcode
         - bluetooth
@@ -390,7 +423,7 @@ APDSObservation:
       x-ngsi:
         type: Property
     observedHeading:
-      description: 'Denotes the direction of travel of the observer and is specified in decimal degrees, where 0 <= ''heading'' < 360, counting clockwise relative to the true north.If the vehicle is stationary(i.e. the value of the ''speed'' attribute is ''0''), then the value of the heading attribute must be equal to ''-1''. (UN code DD)'
+      description: Denotes the direction of travel of the observer and is specified in decimal degrees, where 0 <= 'heading' < 360, counting clockwise relative to the true north.If the vehicle is stationary(i.e. the value of the 'speed' attribute is '0'), then the value of the heading attribute must be equal to '-1'. (UN code DD)
       oneOf:
         - exclusiveMaximum: 360
           maximum: 360
@@ -410,36 +443,36 @@ APDSObservation:
           description: The mailing address
           properties:
             addressCountry:
-              description: 'The country. For example, Spain'
+              description: The country. For example, Spain
               type: string
               x-ngsi:
                 model: https://schema.org/addressCountry
                 type: Property
             addressLocality:
-              description: 'The locality in which the street address is, and which is in the region'
+              description: The locality in which the street address is, and which is in the region
               type: string
               x-ngsi:
                 model: https://schema.org/addressLocality
                 type: Property
             addressRegion:
-              description: 'The region in which the locality is, and which is in the country'
+              description: The region in which the locality is, and which is in the country
               type: string
               x-ngsi:
                 model: https://schema.org/addressRegion
                 type: Property
             district:
-              description: 'A district is a type of administrative division that, in some countries, is managed by the local government'
+              description: A district is a type of administrative division that, in some countries, is managed by the local government
               type: string
               x-ngsi:
                 type: Property
             postOfficeBoxNumber:
-              description: 'The post office box number for PO box addresses. For example, 03578'
+              description: The post office box number for PO box addresses. For example, 03578
               type: string
               x-ngsi:
                 model: https://schema.org/postOfficeBoxNumber
                 type: Property
             postalCode:
-              description: 'The postal code. For example, 24004'
+              description: The postal code. For example, 24004
               type: string
               x-ngsi:
                 model: https://schema.org/https://schema.org/postalCode
@@ -466,28 +499,38 @@ APDSObservation:
             model: https://schema.org/Text
             type: Property
         location:
-          description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+          description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
           oneOf:
             - bbox:
+                description: BBox of the  Point
                 items:
                   type: number
                 minItems: 4
                 type: array
+                x-ngsi:
+                  type: Property
               coordinates:
+                description: Coordinates of the Point
                 items:
                   type: number
                 minItems: 2
                 type: array
+                x-ngsi:
+                  type: Property
               type:
                 enum:
                   - Point
                 type: string
             - bbox:
+                description: BBox coordinates of the LineString
                 items:
                   type: number
                 minItems: 4
                 type: array
+                x-ngsi:
+                  type: Property
               coordinates:
+                description: Coordinates of the LineString
                 items:
                   items:
                     type: number
@@ -495,58 +538,78 @@ APDSObservation:
                   type: array
                 minItems: 2
                 type: array
+                x-ngsi:
+                  type: Property
               type:
                 enum:
                   - LineString
                 type: string
             - bbox:
+                description: BBox coordinates of the Polygon
                 items:
                   type: number
                 minItems: 4
                 type: array
+                x-ngsi:
+                  type: Property
               coordinates:
+                description: Coordinates of the Polygon
                 items:
                   items:
-                    items:
+                    items: {}
                     minItems: 2
                     type: array
                   minItems: 4
                   type: array
                 type: array
+                x-ngsi:
+                  type: Property
               type:
                 enum:
                   - Polygon
                 type: string
             - bbox:
+                description: BBox coordinates of the LineString
                 items:
                   type: number
                 minItems: 4
                 type: array
+                x-ngsi:
+                  type: Property
               coordinates:
+                description: Coordinates of the MulitPoint
                 items:
                   items:
                     type: number
                   minItems: 2
                   type: array
                 type: array
+                x-ngsi:
+                  type: Property
               type:
                 enum:
                   - MultiPoint
                 type: string
             - bbox:
+                description: BBox coordinates of the LineString
                 items:
                   type: number
                 minItems: 4
                 type: array
+                x-ngsi:
+                  type: Property
               coordinates:
+                description: Coordinates of the MultiLineString
                 items:
                   items:
-                    items:
+                    items: {}
                     minItems: 2
                     type: array
                   minItems: 2
                   type: array
                 type: array
+                x-ngsi:
+                  type: Property
               type:
                 enum:
                   - MultiLineString
@@ -557,13 +620,16 @@ APDSObservation:
                 minItems: 4
                 type: array
               coordinates:
+                description: Coordinates of the MultiPolygon
                 items:
                   items:
-                    items:
+                    items: {}
                     minItems: 4
                     type: array
                   type: array
                 type: array
+                x-ngsi:
+                  type: Property
               type:
                 enum:
                   - MultiPolygon
@@ -580,7 +646,7 @@ APDSObservation:
         type: Property
         units: meters
     observedMethod:
-      description: 'The method of observation recorded for this observation element as defined by APDS (ObservationType). Enum:''anpr, chalk, visual, scanner, rfTranspoder, other'''
+      description: The method of observation recorded for this observation element as defined by APDS (ObservationType). Enum:'anpr, chalk, visual, scanner, rfTranspoder, other'
       enum:
         - anpr
         - chalk
@@ -592,7 +658,7 @@ APDSObservation:
       x-ngsi:
         type: Property
     observedSpeed:
-      description: 'Denotes the magnitude of the horizontal component of the observed vehicles current velocity and is specified in kilometers per hour. If provided, the value of the speed attribute must be a non - negative real number.''-1'' MAY be used if speed is transiently unknown for some reason. (UN Code KMH).'
+      description: Denotes the magnitude of the horizontal component of the observed vehicles current velocity and is specified in kilometers per hour. If provided, the value of the speed attribute must be a non - negative real number.'-1' MAY be used if speed is transiently unknown for some reason. (UN Code KMH).
       oneOf:
         - minimum: 0
           type: number
@@ -614,7 +680,7 @@ APDSObservation:
       x-ngsi:
         type: Property
     observedVehicleType:
-      description: 'Type of vehicle from the point of view of its structural characteristics. This is different than the vehicle category . Enum:''agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other''. The following values defined by _VehicleTypeEnum_ and _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm) and extended for other uses'
+      description: Type of vehicle from the point of view of its structural characteristics. This is different than the vehicle category . Enum:'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'. The following values defined by _VehicleTypeEnum_ and _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm) and extended for other uses
       enum:
         - agriculturalVehicle
         - ambulance
@@ -691,7 +757,7 @@ APDSObservation:
       x-ngsi:
         type: Property
     observerHeading:
-      description: 'Denotes the direction of travel of the observer and is specified in decimal degrees, where 0 <= ''heading'' < 360, counting clockwise relative to the true north. If the vehicle is stationary(i.e. the value of the ''speed'' attribute is ''0''), then the value of the heading attribute must be equal to ''-1'''
+      description: Denotes the direction of travel of the observer and is specified in decimal degrees, where 0 <= 'heading' < 360, counting clockwise relative to the true north. If the vehicle is stationary(i.e. the value of the 'speed' attribute is '0'), then the value of the heading attribute must be equal to '-1'
       oneOf:
         - exclusiveMaximum: 360
           maximum: 360
@@ -711,36 +777,36 @@ APDSObservation:
           description: The mailing address
           properties:
             addressCountry:
-              description: 'The country. For example, Spain'
+              description: The country. For example, Spain
               type: string
               x-ngsi:
                 model: https://schema.org/addressCountry
                 type: Property
             addressLocality:
-              description: 'The locality in which the street address is, and which is in the region'
+              description: The locality in which the street address is, and which is in the region
               type: string
               x-ngsi:
                 model: https://schema.org/addressLocality
                 type: Property
             addressRegion:
-              description: 'The region in which the locality is, and which is in the country'
+              description: The region in which the locality is, and which is in the country
               type: string
               x-ngsi:
                 model: https://schema.org/addressRegion
                 type: Property
             district:
-              description: 'A district is a type of administrative division that, in some countries, is managed by the local government'
+              description: A district is a type of administrative division that, in some countries, is managed by the local government
               type: string
               x-ngsi:
                 type: Property
             postOfficeBoxNumber:
-              description: 'The post office box number for PO box addresses. For example, 03578'
+              description: The post office box number for PO box addresses. For example, 03578
               type: string
               x-ngsi:
                 model: https://schema.org/postOfficeBoxNumber
                 type: Property
             postalCode:
-              description: 'The postal code. For example, 24004'
+              description: The postal code. For example, 24004
               type: string
               x-ngsi:
                 model: https://schema.org/https://schema.org/postalCode
@@ -767,28 +833,38 @@ APDSObservation:
             model: https://schema.org/Text
             type: Property
         location:
-          description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+          description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
           oneOf:
             - bbox:
+                description: BBox of the  Point
                 items:
                   type: number
                 minItems: 4
                 type: array
+                x-ngsi:
+                  type: Property
               coordinates:
+                description: Coordinates of the Point
                 items:
                   type: number
                 minItems: 2
                 type: array
+                x-ngsi:
+                  type: Property
               type:
                 enum:
                   - Point
                 type: string
             - bbox:
+                description: BBox coordinates of the LineString
                 items:
                   type: number
                 minItems: 4
                 type: array
+                x-ngsi:
+                  type: Property
               coordinates:
+                description: Coordinates of the LineString
                 items:
                   items:
                     type: number
@@ -796,58 +872,78 @@ APDSObservation:
                   type: array
                 minItems: 2
                 type: array
+                x-ngsi:
+                  type: Property
               type:
                 enum:
                   - LineString
                 type: string
             - bbox:
+                description: BBox coordinates of the Polygon
                 items:
                   type: number
                 minItems: 4
                 type: array
+                x-ngsi:
+                  type: Property
               coordinates:
+                description: Coordinates of the Polygon
                 items:
                   items:
-                    items:
+                    items: {}
                     minItems: 2
                     type: array
                   minItems: 4
                   type: array
                 type: array
+                x-ngsi:
+                  type: Property
               type:
                 enum:
                   - Polygon
                 type: string
             - bbox:
+                description: BBox coordinates of the LineString
                 items:
                   type: number
                 minItems: 4
                 type: array
+                x-ngsi:
+                  type: Property
               coordinates:
+                description: Coordinates of the MulitPoint
                 items:
                   items:
                     type: number
                   minItems: 2
                   type: array
                 type: array
+                x-ngsi:
+                  type: Property
               type:
                 enum:
                   - MultiPoint
                 type: string
             - bbox:
+                description: BBox coordinates of the LineString
                 items:
                   type: number
                 minItems: 4
                 type: array
+                x-ngsi:
+                  type: Property
               coordinates:
+                description: Coordinates of the MultiLineString
                 items:
                   items:
-                    items:
+                    items: {}
                     minItems: 2
                     type: array
                   minItems: 2
                   type: array
                 type: array
+                x-ngsi:
+                  type: Property
               type:
                 enum:
                   - MultiLineString
@@ -858,13 +954,16 @@ APDSObservation:
                 minItems: 4
                 type: array
               coordinates:
+                description: Coordinates of the MultiPolygon
                 items:
                   items:
-                    items:
+                    items: {}
                     minItems: 4
                     type: array
                   type: array
                 type: array
+                x-ngsi:
+                  type: Property
               type:
                 enum:
                   - MultiPolygon
@@ -881,7 +980,7 @@ APDSObservation:
         type: Property
         units: meters.
     observerSpeed:
-      description: 'Denotes the magnitude of the horizontal component of the observer current velocity and is specified in kilometers per hour. If provided, the value of the speed attribute must be a non - negative real number. ''-1'' MAY be used if speed is transiently unknown for some reason'
+      description: Denotes the magnitude of the horizontal component of the observer current velocity and is specified in kilometers per hour. If provided, the value of the speed attribute must be a non - negative real number. '-1' MAY be used if speed is transiently unknown for some reason
       oneOf:
         - minimum: 0
           type: number
@@ -910,7 +1009,7 @@ APDSObservation:
               type: Property
         description: Unique identifier of the entity
         x-ngsi:
-          type: Property
+          type: Relationship
       type: array
       x-ngsi:
         type: Property
@@ -927,7 +1026,7 @@ APDSObservation:
       x-ngsi:
         type: Property
     source:
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'
+      description: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object
       type: string
       x-ngsi:
         type: Property
@@ -952,8 +1051,8 @@ APDSObservation:
     - type
   type: object
   x-derived-from: https://www.allianceforparkingdatastandards.org/
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
+  x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/APDSObservation/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/APDSObservation/schema.json
-  x-model-tags: ""
+  x-model-tags: ''
   x-version: 0.0.1

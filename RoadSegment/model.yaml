@@ -5,36 +5,36 @@ RoadSegment:
       description: The mailing address
       properties:
         addressCountry:
-          description: 'The country. For example, Spain'
+          description: The country. For example, Spain
           type: string
           x-ngsi:
             model: https://schema.org/addressCountry
             type: Property
         addressLocality:
-          description: 'The locality in which the street address is, and which is in the region'
+          description: The locality in which the street address is, and which is in the region
           type: string
           x-ngsi:
             model: https://schema.org/addressLocality
             type: Property
         addressRegion:
-          description: 'The region in which the locality is, and which is in the country'
+          description: The region in which the locality is, and which is in the country
           type: string
           x-ngsi:
             model: https://schema.org/addressRegion
             type: Property
         district:
-          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'
+          description: A district is a type of administrative division that, in some countries, is managed by the local government
           type: string
           x-ngsi:
             type: Property
         postOfficeBoxNumber:
-          description: 'The post office box number for PO box addresses. For example, 03578'
+          description: The post office box number for PO box addresses. For example, 03578
           type: string
           x-ngsi:
             model: https://schema.org/postOfficeBoxNumber
             type: Property
         postalCode:
-          description: 'The postal code. For example, 24004'
+          description: The postal code. For example, 24004
           type: string
           x-ngsi:
             model: https://schema.org/https://schema.org/postalCode
@@ -55,7 +55,7 @@ RoadSegment:
         model: https://schema.org/address
         type: Property
     agency_name:
-      description: "The agency_name field contains the full name of the agency or organisation responsible for maintenance of the entity under consideration. SameAs: 'agency_name' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)"
+      description: 'The agency_name field contains the full name of the agency or organisation responsible for maintenance of the entity under consideration. SameAs: ''agency_name'' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)'
       type: string
       x-ngsi:
         type: Property
@@ -93,7 +93,10 @@ RoadSegment:
     annotations:
       description: Annotations about the item
       items:
+        description: Eventy element in the annotations
         type: string
+        x-ngsi:
+          type: Property
       type: array
       x-ngsi:
         model: https://schema.org/Text
@@ -158,7 +161,7 @@ RoadSegment:
       x-ngsi:
         type: Property
     cyclePathPlacement:
-      description: 'Describes the placement of cycle track along the road segment corresponding to this observation. Enum:'' [''RIGHT, LEFT, BOTH, NOT_AVAILABLE'''
+      description: Describes the placement of cycle track along the road segment corresponding to this observation. Enum:' ['RIGHT, LEFT, BOTH, NOT_AVAILABLE'
       enum:
         - BOTH
         - LEFT
@@ -224,20 +227,26 @@ RoadSegment:
         model: https://schema.org/Number
         type: Property
     endPoint:
-      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+      description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
       oneOf:
         - description: Geojson reference to the item. Point
           properties:
             bbox:
+              description: BBox of the  Point
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the Point
               items:
                 type: number
               minItems: 2
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - Point
@@ -252,11 +261,15 @@ RoadSegment:
         - description: Geojson reference to the item. LineString
           properties:
             bbox:
+              description: BBox coordinates of the LineString
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the LineString
               items:
                 items:
                   type: number
@@ -264,6 +277,8 @@ RoadSegment:
                 type: array
               minItems: 2
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - LineString
@@ -278,11 +293,15 @@ RoadSegment:
         - description: Geojson reference to the item. Polygon
           properties:
             bbox:
+              description: BBox coordinates of the Polygon
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the Polygon
               items:
                 items:
                   items:
@@ -292,6 +311,8 @@ RoadSegment:
                 minItems: 4
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - Polygon
@@ -306,17 +327,23 @@ RoadSegment:
         - description: Geojson reference to the item. MultiPoint
           properties:
             bbox:
+              description: BBox coordinates of the LineString
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the MulitPoint
               items:
                 items:
                   type: number
                 minItems: 2
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - MultiPoint
@@ -331,11 +358,15 @@ RoadSegment:
         - description: Geojson reference to the item. MultiLineString
           properties:
             bbox:
+              description: BBox coordinates of the LineString
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the MultiLineString
               items:
                 items:
                   items:
@@ -345,6 +376,8 @@ RoadSegment:
                 minItems: 2
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - MultiLineString
@@ -364,6 +397,7 @@ RoadSegment:
               minItems: 4
               type: array
             coordinates:
+              description: Coordinates of the MultiPolygon
               items:
                 items:
                   items:
@@ -375,6 +409,8 @@ RoadSegment:
                   type: array
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - MultiPolygon
@@ -404,7 +440,7 @@ RoadSegment:
             type: Property
       description: Unique identifier of the entity
       x-ngsi:
-        type: Property
+        type: Relationship
     image:
       description: An image of the item
       format: uri
@@ -416,7 +452,7 @@ RoadSegment:
       description: Describes the aspects of lanes of the road corresponding to this observation
       properties:
         laneDirection:
-          description: 'Describes the direction in which vehicles are plying on the lane corresponding to this observation. Enum:''FORWARD, BACKWARD, INBOUND, OUTBOUND, RIGHT, LEFT'''
+          description: Describes the direction in which vehicles are plying on the lane corresponding to this observation. Enum:'FORWARD, BACKWARD, INBOUND, OUTBOUND, RIGHT, LEFT'
           enum:
             - BACKWARD
             - FORWARD
@@ -465,20 +501,26 @@ RoadSegment:
         type: Property
         units: Kilometer (Km)
     location:
-      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+      description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
       oneOf:
         - description: Geojson reference to the item. Point
           properties:
             bbox:
+              description: BBox of the  Point
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the Point
               items:
                 type: number
               minItems: 2
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - Point
@@ -493,11 +535,15 @@ RoadSegment:
         - description: Geojson reference to the item. LineString
           properties:
             bbox:
+              description: BBox coordinates of the LineString
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the LineString
               items:
                 items:
                   type: number
@@ -505,6 +551,8 @@ RoadSegment:
                 type: array
               minItems: 2
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - LineString
@@ -519,11 +567,15 @@ RoadSegment:
         - description: Geojson reference to the item. Polygon
           properties:
             bbox:
+              description: BBox coordinates of the Polygon
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the Polygon
               items:
                 items:
                   items:
@@ -533,6 +585,8 @@ RoadSegment:
                 minItems: 4
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - Polygon
@@ -547,17 +601,23 @@ RoadSegment:
         - description: Geojson reference to the item. MultiPoint
           properties:
             bbox:
+              description: BBox coordinates of the LineString
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the MulitPoint
               items:
                 items:
                   type: number
                 minItems: 2
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - MultiPoint
@@ -572,11 +632,15 @@ RoadSegment:
         - description: Geojson reference to the item. MultiLineString
           properties:
             bbox:
+              description: BBox coordinates of the LineString
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the MultiLineString
               items:
                 items:
                   items:
@@ -586,6 +650,8 @@ RoadSegment:
                 minItems: 2
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - MultiLineString
@@ -605,6 +671,7 @@ RoadSegment:
               minItems: 4
               type: array
             coordinates:
+              description: Coordinates of the MultiPolygon
               items:
                 items:
                   items:
@@ -616,6 +683,8 @@ RoadSegment:
                   type: array
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - MultiPolygon
@@ -638,7 +707,7 @@ RoadSegment:
         type: Property
         units: Meter (m)
     maximumAllowedSpeed:
-      description: 'Maximum allowed speed plying the road segment. More restrictive limits might be applied to specific vehicle types (trucks, caravans, etc.)'
+      description: Maximum allowed speed plying the road segment. More restrictive limits might be applied to specific vehicle types (trucks, caravans, etc.)
       minimum: 0
       type: number
       x-ngsi:
@@ -771,7 +840,7 @@ RoadSegment:
               type: Property
         description: Unique identifier of the entity
         x-ngsi:
-          type: Property
+          type: Relationship
       type: array
       x-ngsi:
         type: Property
@@ -791,7 +860,7 @@ RoadSegment:
       x-ngsi:
         type: Property
     pedestrianPathPlacement:
-      description: 'Describes the presence and placement of pedestrian along the road segment corresponding to this observation. Enum:''RIGHT, LEFT, BOTH, NOT_AVAILABLE'''
+      description: Describes the presence and placement of pedestrian along the road segment corresponding to this observation. Enum:'RIGHT, LEFT, BOTH, NOT_AVAILABLE'
       type: string
       x-ngsi:
         type: Property
@@ -823,7 +892,7 @@ RoadSegment:
       x-ngsi:
         type: Relationship
     rightOfWayWidth:
-      description: 'Right of Way (RoW) is the total land area available for the roadway. Its width accommodates for carriages way + other necessities + future extension, along the road''s alignment'
+      description: Right of Way (RoW) is the total land area available for the roadway. Its width accommodates for carriages way + other necessities + future extension, along the road's alignment
       type: number
       x-ngsi:
         type: Property
@@ -844,7 +913,7 @@ RoadSegment:
       x-ngsi:
         type: Property
     roadDirection:
-      description: 'Represents the direction the road is heading to. Enum:'' [''N, S, E, W''. The values N,S,E,W represent North,South,East,West respectively'
+      description: Represents the direction the road is heading to. Enum:' ['N, S, E, W'. The values N,S,E,W represent North,South,East,West respectively
       type: string
       x-ngsi:
         type: Property
@@ -854,7 +923,7 @@ RoadSegment:
       x-ngsi:
         type: Property
     roadMaterial:
-      description: 'The construction material used for laying the carriageway corresponding to this observation. For eg. concrete, earthen, tar etc'
+      description: The construction material used for laying the carriageway corresponding to this observation. For eg. concrete, earthen, tar etc
       type: string
       x-ngsi:
         type: Property
@@ -864,7 +933,7 @@ RoadSegment:
       x-ngsi:
         type: Property
     roadWork:
-      description: 'Reasons for the road work in case of urgent intervention. A combination of these values. Enum:''COLLAPSE, DERAILMENT, FIRE, FLOOD, GASLEAK, LANDSLIDE, OTHER, POWERCUT, ROCKFALL, SAGGING, WATERLEAK'''
+      description: Reasons for the road work in case of urgent intervention. A combination of these values. Enum:'COLLAPSE, DERAILMENT, FIRE, FLOOD, GASLEAK, LANDSLIDE, OTHER, POWERCUT, ROCKFALL, SAGGING, WATERLEAK'
       enum:
         - COLLAPSE
         - DERAILMENT
@@ -893,7 +962,7 @@ RoadSegment:
       x-ngsi:
         type: Property
     source:
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'
+      description: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object
       type: string
       x-ngsi:
         type: Property
@@ -905,20 +974,26 @@ RoadSegment:
         model: https://schema.org/Number
         type: Property
     startPoint:
-      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+      description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
       oneOf:
         - description: Geojson reference to the item. Point
           properties:
             bbox:
+              description: BBox of the  Point
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the Point
               items:
                 type: number
               minItems: 2
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - Point
@@ -933,11 +1008,15 @@ RoadSegment:
         - description: Geojson reference to the item. LineString
           properties:
             bbox:
+              description: BBox coordinates of the LineString
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the LineString
               items:
                 items:
                   type: number
@@ -945,6 +1024,8 @@ RoadSegment:
                 type: array
               minItems: 2
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - LineString
@@ -959,11 +1040,15 @@ RoadSegment:
         - description: Geojson reference to the item. Polygon
           properties:
             bbox:
+              description: BBox coordinates of the Polygon
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the Polygon
               items:
                 items:
                   items:
@@ -973,6 +1058,8 @@ RoadSegment:
                 minItems: 4
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - Polygon
@@ -987,17 +1074,23 @@ RoadSegment:
         - description: Geojson reference to the item. MultiPoint
           properties:
             bbox:
+              description: BBox coordinates of the LineString
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the MulitPoint
               items:
                 items:
                   type: number
                 minItems: 2
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - MultiPoint
@@ -1012,11 +1105,15 @@ RoadSegment:
         - description: Geojson reference to the item. MultiLineString
           properties:
             bbox:
+              description: BBox coordinates of the LineString
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the MultiLineString
               items:
                 items:
                   items:
@@ -1026,6 +1123,8 @@ RoadSegment:
                 minItems: 2
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - MultiLineString
@@ -1045,6 +1144,7 @@ RoadSegment:
               minItems: 4
               type: array
             coordinates:
+              description: Coordinates of the MultiPolygon
               items:
                 items:
                   items:
@@ -1056,6 +1156,8 @@ RoadSegment:
                   type: array
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - MultiPolygon
@@ -1131,8 +1233,8 @@ RoadSegment:
     - endPoint
     - allowedVehicleType
   type: object
-  x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
+  x-derived-from: ''
+  x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/RoadSegment/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/RoadSegment/schema.json
   x-model-tags: IUDX

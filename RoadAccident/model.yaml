@@ -13,96 +13,96 @@ RoadAccident:
         of visual devices for cycles'
       items:
         enum:
-          - 0
-          - 1
-          - 2
-          - 3
-          - 4
-          - 5
-          - 6
-          - 7
-          - 8
-          - 9
-          - 10
-          - 11
-          - 12
-          - 13
-          - 14
-          - 15
-          - 16
-          - 17
-          - 18
-          - 19
-          - 20
-          - 21
-          - 22
-          - 23
-          - 24
-          - 25
-          - 26
-          - 27
-          - 28
-          - 29
-          - 30
-          - 31
-          - 32
-          - 33
-          - 34
-          - 35
-          - 36
-          - 37
-          - 38
-          - 39
-          - 40
-          - 41
-          - 42
-          - 43
-          - 44
-          - 45
-          - 46
-          - 47
-          - 48
-          - 49
-          - 50
-          - 51
-          - 52
-          - 53
-          - 54
-          - 55
-          - 56
-          - 57
-          - 58
-          - 59
-          - 60
-          - 61
-          - 62
-          - 63
-          - 64
-          - 65
-          - 66
-          - 67
-          - 68
-          - 69
-          - 70
-          - 71
-          - 72
-          - 73
-          - 74
-          - 75
-          - 76
-          - 77
-          - 78
-          - 79
-          - 80
-          - 81
-          - 82
-          - 83
-          - 84
-          - 85
-          - 86
-          - 87
-          - 88
-          - 89
+          - '0'
+          - '1'
+          - '2'
+          - '3'
+          - '4'
+          - '5'
+          - '6'
+          - '7'
+          - '8'
+          - '9'
+          - '10'
+          - '11'
+          - '12'
+          - '13'
+          - '14'
+          - '15'
+          - '16'
+          - '17'
+          - '18'
+          - '19'
+          - '20'
+          - '21'
+          - '22'
+          - '23'
+          - '24'
+          - '25'
+          - '26'
+          - '27'
+          - '28'
+          - '29'
+          - '30'
+          - '31'
+          - '32'
+          - '33'
+          - '34'
+          - '35'
+          - '36'
+          - '37'
+          - '38'
+          - '39'
+          - '40'
+          - '41'
+          - '42'
+          - '43'
+          - '44'
+          - '45'
+          - '46'
+          - '47'
+          - '48'
+          - '49'
+          - '50'
+          - '51'
+          - '52'
+          - '53'
+          - '54'
+          - '55'
+          - '56'
+          - '57'
+          - '58'
+          - '59'
+          - '60'
+          - '61'
+          - '62'
+          - '63'
+          - '64'
+          - '65'
+          - '66'
+          - '67'
+          - '68'
+          - '69'
+          - '70'
+          - '71'
+          - '72'
+          - '73'
+          - '74'
+          - '75'
+          - '76'
+          - '77'
+          - '78'
+          - '79'
+          - '80'
+          - '81'
+          - '82'
+          - '83'
+          - '84'
+          - '85'
+          - '86'
+          - '87'
+          - '88'
+          - '89'
         type: string
       type: array
       x-ngsi:
@@ -111,21 +111,21 @@ RoadAccident:
     accidentLocation:
       description: 'Brief description if the accident took place in a urban or extra-urban area. 0: Regional within the urban area 1: Urban road in the town 2: Provincial road within the town 3: State road within the village 4: Extra-urban road 5: Provincial 6: State road 7: Highway 8: Another way 9: Regional road'
       enum:
-        - 0
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        - 6
-        - 7
-        - 8
-        - 9
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
+        - '6'
+        - '7'
+        - '8'
+        - '9'
       type: string
       x-ngsi:
         type: Property
     accidentStatisticalDate:
-      description: 'approximate datetime of the accident (often original accident data source reports only statistical attributes such as season, weekday and approximate hour'
+      description: approximate datetime of the accident (often original accident data source reports only statistical attributes such as season, weekday and approximate hour
       properties:
         hour:
           type: integer
@@ -152,18 +152,18 @@ RoadAccident:
       description: 'Quick classification this Road Accident. 1: Frontal collision; 2: Frontal-lateral collision; 3: Side crash; 4: Collision; 5: Pedestrian investment; 6: Impact with vehicle stopped or stopped; 7: Impact with parked vehicle; 8: Impact with obstacle; 9: Impact with train; 10: Spill, slip; 11: Accident due to sudden braking; 12: Accident due to falling from a vehicle;. '
       items:
         enum:
-          - 1
-          - 2
-          - 3
-          - 4
-          - 5
-          - 6
-          - 7
-          - 8
-          - 9
-          - 10
-          - 11
-          - 12
+          - '1'
+          - '2'
+          - '3'
+          - '4'
+          - '5'
+          - '6'
+          - '7'
+          - '8'
+          - '9'
+          - '10'
+          - '11'
+          - '12'
         type: string
       type: array
       x-ngsi:
@@ -172,36 +172,36 @@ RoadAccident:
       description: The mailing address
       properties:
         addressCountry:
-          description: 'The country. For example, Spain'
+          description: The country. For example, Spain
           type: string
           x-ngsi:
             model: https://schema.org/addressCountry
             type: Property
         addressLocality:
-          description: 'The locality in which the street address is, and which is in the region'
+          description: The locality in which the street address is, and which is in the region
           type: string
           x-ngsi:
             model: https://schema.org/addressLocality
             type: Property
         addressRegion:
-          description: 'The region in which the locality is, and which is in the country'
+          description: The region in which the locality is, and which is in the country
           type: string
           x-ngsi:
             model: https://schema.org/addressRegion
             type: Property
         district:
-          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'
+          description: A district is a type of administrative division that, in some countries, is managed by the local government
           type: string
           x-ngsi:
             type: Property
         postOfficeBoxNumber:
-          description: 'The post office box number for PO box addresses. For example, 03578'
+          description: The post office box number for PO box addresses. For example, 03578
           type: string
           x-ngsi:
             model: https://schema.org/postOfficeBoxNumber
             type: Property
         postalCode:
-          description: 'The postal code. For example, 24004'
+          description: The postal code. For example, 24004
           type: string
           x-ngsi:
             model: https://schema.org/https://schema.org/postalCode
@@ -270,7 +270,7 @@ RoadAccident:
             type: Property
       description: Unique identifier of the entity
       x-ngsi:
-        type: Property
+        type: Relationship
     localId:
       description: Unique identifier from the source data set
       type: string
@@ -278,20 +278,26 @@ RoadAccident:
         model: https://schema.org/Text
         type: Property
     location:
-      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+      description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
       oneOf:
         - description: Geojson reference to the item. Point
           properties:
             bbox:
+              description: BBox of the  Point
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the Point
               items:
                 type: number
               minItems: 2
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - Point
@@ -306,11 +312,15 @@ RoadAccident:
         - description: Geojson reference to the item. LineString
           properties:
             bbox:
+              description: BBox coordinates of the LineString
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the LineString
               items:
                 items:
                   type: number
@@ -318,6 +328,8 @@ RoadAccident:
                 type: array
               minItems: 2
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - LineString
@@ -332,11 +344,15 @@ RoadAccident:
         - description: Geojson reference to the item. Polygon
           properties:
             bbox:
+              description: BBox coordinates of the Polygon
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the Polygon
               items:
                 items:
                   items:
@@ -346,6 +362,8 @@ RoadAccident:
                 minItems: 4
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - Polygon
@@ -360,17 +378,23 @@ RoadAccident:
         - description: Geojson reference to the item. MultiPoint
           properties:
             bbox:
+              description: BBox coordinates of the LineString
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the MulitPoint
               items:
                 items:
                   type: number
                 minItems: 2
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - MultiPoint
@@ -385,11 +409,15 @@ RoadAccident:
         - description: Geojson reference to the item. MultiLineString
           properties:
             bbox:
+              description: BBox coordinates of the LineString
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the MultiLineString
               items:
                 items:
                   items:
@@ -399,6 +427,8 @@ RoadAccident:
                 minItems: 2
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - MultiLineString
@@ -418,6 +448,7 @@ RoadAccident:
               minItems: 4
               type: array
             coordinates:
+              description: Coordinates of the MultiPolygon
               items:
                 items:
                   items:
@@ -429,6 +460,8 @@ RoadAccident:
                   type: array
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - MultiPolygon
@@ -493,7 +526,7 @@ RoadAccident:
               type: Property
         description: Unique identifier of the entity
         x-ngsi:
-          type: Property
+          type: Relationship
       type: array
       x-ngsi:
         type: Property
@@ -511,68 +544,68 @@ RoadAccident:
     roadIntersection:
       description: 'Brief description of the piece of the road where the accident took place.   1: Crossroad; 2: Roundabout; 3: Reported intersection; 4: Intersection with traffic light; 5: Intersection not reported; 6: Rail crossing; 7: Straight; 8: Curve; 9: Bump, bottleneck; 10: Slope; 11: Illuminated gallery; 12: Unlit gallery;'
       enum:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        - 6
-        - 7
-        - 8
-        - 9
-        - 10
-        - 11
-        - 12
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
+        - '6'
+        - '7'
+        - '8'
+        - '9'
+        - '10'
+        - '11'
+        - '12'
       type: string
       x-ngsi:
         type: Property
     roadPaving:
       description: 'Road paving. 1: Paved road; 2: Rough paved road; 3: Unpaved road;'
       enum:
-        - 1
-        - 2
-        - 3
+        - '1'
+        - '2'
+        - '3'
       type: string
       x-ngsi:
         type: Property
     roadSign:
       description: 'Brief description of the road sign where the accident took place. 1: Absent; 2: Vertical; 3: Horizontal; 4: Vertical and horizontal; 5: Temporary by construction site;'
       enum:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
       type: string
       x-ngsi:
         type: Property
     roadSurface:
       description: 'Brief description of the condition of the road during the accident. 1: Dry; 2: Wet; 3: Slippery; 4: frozen; 5: Snowcapped;'
       enum:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
       type: string
       x-ngsi:
         type: Property
     roadTrunk:
       description: 'Brief description of type of trunk of the road where the accident took place. 1: Road branch; 2: Secondary branch; 3: Minor branch; 4: Junction branch; 5: Road junction; 6: Motorway left lane; 7: Highway carriageway right; 8: Motorway junction entrance; 9: Highway exit junction; 10: Highway junction trunk; 11: Highway station; 12: Other cases; 15: Extra urban road'
       enum:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        - 6
-        - 7
-        - 8
-        - 9
-        - 10
-        - 11
-        - 12
-        - 15
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
+        - '6'
+        - '7'
+        - '8'
+        - '9'
+        - '10'
+        - '11'
+        - '12'
+        - '15'
       type: string
       x-ngsi:
         type: Property
@@ -589,12 +622,12 @@ RoadAccident:
       x-ngsi:
         type: Property
     source:
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'
+      description: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object
       type: string
       x-ngsi:
         type: Property
     status:
-      description: 'Status of the Road Accident. Enum:''archived, onGoing, solved'''
+      description: Status of the Road Accident. Enum:'archived, onGoing, solved'
       enum:
         - archived
         - onGoing
@@ -635,31 +668,31 @@ RoadAccident:
       description: 'List of the vehicles (and pedestrians) involved because the accident 0 : pedestrian 1 : bicycle 2 : agriculturalVehicle 3 : bus 4 : minibus 5 : car 6 : caravan 7 : tram 8 : tanker 9 : carWithCaravan 10 : carWithTrailer 11 : lorry 12 : moped 13 : tanker 14 : motorcycle 15 : motorcycleWithSideCar 16 : motorscooter 17 : trailer 18 : van 19 : caravan 20 : constructionOrMaintenanceVehicle 21 : trolley 22 : binTrolley 23 : sweepingMachine 24 : cleaningTrolley'
       items:
         enum:
-          - 0
-          - 1
-          - 2
-          - 3
-          - 4
-          - 5
-          - 6
-          - 7
-          - 8
-          - 9
-          - 10
-          - 11
-          - 12
-          - 13
-          - 14
-          - 15
-          - 16
-          - 17
-          - 18
-          - 19
-          - 20
-          - 21
-          - 22
-          - 23
-          - 24
+          - '0'
+          - '1'
+          - '2'
+          - '3'
+          - '4'
+          - '5'
+          - '6'
+          - '7'
+          - '8'
+          - '9'
+          - '10'
+          - '11'
+          - '12'
+          - '13'
+          - '14'
+          - '15'
+          - '16'
+          - '17'
+          - '18'
+          - '19'
+          - '20'
+          - '21'
+          - '22'
+          - '23'
+          - '24'
         type: string
       type: array
       x-ngsi:
@@ -667,31 +700,31 @@ RoadAccident:
     weakestSubject:
       description: 'vehicle that represent the weakest subject involved because the accident (usually pedestrian). 0 : pedestrian 1 : bicycle 2 : agriculturalVehicle 3 : bus 4 : minibus 5 : car 6 : caravan 7 : tram 8 : tanker 9 : carWithCaravan 10 : carWithTrailer 11 : lorry 12 : moped 13 : tanker 14 : motorcycle 15 : motorcycleWithSideCar 16 : motorscooter 17 : trailer 18 : van 19 : caravan 20 : constructionOrMaintenanceVehicle 21 : trolley 22 : binTrolley 23 : sweepingMachine 24 : cleaningTrolley'
       enum:
-        - 0
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        - 6
-        - 7
-        - 8
-        - 9
-        - 10
-        - 11
-        - 12
-        - 13
-        - 14
-        - 15
-        - 16
-        - 17
-        - 18
-        - 19
-        - 20
-        - 21
-        - 22
-        - 23
-        - 24
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
+        - '6'
+        - '7'
+        - '8'
+        - '9'
+        - '10'
+        - '11'
+        - '12'
+        - '13'
+        - '14'
+        - '15'
+        - '16'
+        - '17'
+        - '18'
+        - '19'
+        - '20'
+        - '21'
+        - '22'
+        - '23'
+        - '24'
       type: string
       x-ngsi:
         type: Property
@@ -699,32 +732,32 @@ RoadAccident:
       description: 'Brief description of weather conditions during this Road Accident. 0 : clearNight 1 : sunnyDay 2 : slightlyCloudy 3 : partlyCloudy 4 : mist 5 : fog 6 : highClouds 7 : cloudy 8 : veryCloudy 9 : overcast 10 : lightRainShower 11 : drizzle 12 : lightRain 13 : heavyRainShower 14 : heavyRain 15 : sleetShower 16 : sleet 17 : hailShower 18 : hail 19 : shower 20 : lightSnow 21 : snow 22 : heavySnowShower 23 : heavySnow 24 : thunderShower 25 : thunder'
       items:
         enum:
-          - 0
-          - 1
-          - 2
-          - 3
-          - 4
-          - 5
-          - 6
-          - 7
-          - 8
-          - 9
-          - 10
-          - 11
-          - 12
-          - 13
-          - 14
-          - 15
-          - 16
-          - 17
-          - 18
-          - 19
-          - 20
-          - 21
-          - 22
-          - 23
-          - 24
-          - 25
+          - '0'
+          - '1'
+          - '2'
+          - '3'
+          - '4'
+          - '5'
+          - '6'
+          - '7'
+          - '8'
+          - '9'
+          - '10'
+          - '11'
+          - '12'
+          - '13'
+          - '14'
+          - '15'
+          - '16'
+          - '17'
+          - '18'
+          - '19'
+          - '20'
+          - '21'
+          - '22'
+          - '23'
+          - '24'
+          - '25'
         type: string
       type: array
       x-ngsi:
@@ -734,9 +767,9 @@ RoadAccident:
     - type
     - status
   type: object
-  x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
+  x-derived-from: ''
+  x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/RoadAccident/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/RoadAccident/schema.json
-  x-model-tags: ""
+  x-model-tags: ''
   x-version: 0.0.1

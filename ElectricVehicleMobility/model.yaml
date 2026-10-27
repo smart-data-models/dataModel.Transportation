@@ -429,7 +429,7 @@ ElectricVehicleMobility:
     - type
   type: object
   x-derived-from: ''
-  x-disclaimer: Redistribution and use in source and binary forms...
+  x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/ElectricVehicleMobility/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/ElectricVehicleMobility/schema.json
   x-model-tags: transportation,electricVehicle,mobility,statistics

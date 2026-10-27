@@ -1,40 +1,40 @@
 CityWork:
-  description: 'The Data Model is a contextual description of urban works carried out on a road axis and which can impact individual (Cars, motorcycle, bicycles, .…) or common transport (Tram, Bus, subway). It contains a geographic representation making it possible to locate its work from a specific JSON Object and at a more global level (Road segment, Road, District, ...) in order to assess the potential impacts on the circulation. A GeoJSON object may represent a region of space (a Geometry), a spatially-bounded entity (a Feature), or a list of features (a Feature Collection). refer to the document [geojson](https://tools.ietf.org/pdf/draft-ietf-geojson-03.pdf) for more information about the modeling and the possible value.'
+  description: The Data Model is a contextual description of urban works carried out on a road axis and which can impact individual (Cars, motorcycle, bicycles, .…) or common transport (Tram, Bus, subway). It contains a geographic representation making it possible to locate its work from a specific JSON Object and at a more global level (Road segment, Road, District, ...) in order to assess the potential impacts on the circulation. A GeoJSON object may represent a region of space (a Geometry), a spatially-bounded entity (a Feature), or a list of features (a Feature Collection). refer to the document [geojson](https://tools.ietf.org/pdf/draft-ietf-geojson-03.pdf) for more information about the modeling and the possible value.
   properties:
     address:
       description: The mailing address
       properties:
         addressCountry:
-          description: 'The country. For example, Spain'
+          description: The country. For example, Spain
           type: string
           x-ngsi:
             model: https://schema.org/addressCountry
             type: Property
         addressLocality:
-          description: 'The locality in which the street address is, and which is in the region'
+          description: The locality in which the street address is, and which is in the region
           type: string
           x-ngsi:
             model: https://schema.org/addressLocality
             type: Property
         addressRegion:
-          description: 'The region in which the locality is, and which is in the country'
+          description: The region in which the locality is, and which is in the country
           type: string
           x-ngsi:
             model: https://schema.org/addressRegion
             type: Property
         district:
-          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'
+          description: A district is a type of administrative division that, in some countries, is managed by the local government
           type: string
           x-ngsi:
             type: Property
         postOfficeBoxNumber:
-          description: 'The post office box number for PO box addresses. For example, 03578'
+          description: The post office box number for PO box addresses. For example, 03578
           type: string
           x-ngsi:
             model: https://schema.org/postOfficeBoxNumber
             type: Property
         postalCode:
-          description: 'The postal code. For example, 24004'
+          description: The postal code. For example, 24004
           type: string
           x-ngsi:
             model: https://schema.org/https://schema.org/postalCode
@@ -55,7 +55,7 @@ CityWork:
         model: https://schema.org/address
         type: Property
     allowedVehicle:
-      description: 'Type of vehicle authorized to circulate. A combination of these values. Enum:''all Vehicle, bicycle, bus, car, companiesTrucks,  emergencyVehicle, firefighters, lorry, motorcycle, police, subway, sweepingMachine, trailer, tramway, trucks, van'''
+      description: Type of vehicle authorized to circulate. A combination of these values. Enum:'all Vehicle, bicycle, bus, car, companiesTrucks,  emergencyVehicle, firefighters, lorry, motorcycle, police, subway, sweepingMachine, trailer, tramway, trucks, van'
       items:
         enum:
           - allVehicle
@@ -90,7 +90,7 @@ CityWork:
         model: https://schema.org/Text
         type: Property
     busImpacted:
-      description: 'Bus lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of ''lineId / lineName / lineLocation''. Second subproperties, one of ''segmentId / segmentName / segmentLocation'''
+      description: Bus lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of 'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId / segmentName / segmentLocation'
       items:
         properties:
           lineId:
@@ -109,22 +109,28 @@ CityWork:
                   type: Property
             description: Unique identifier of the entity
             x-ngsi:
-              type: Property
+              type: Relationship
           lineLocation:
-            description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+            description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
             oneOf:
               - description: Geojson reference to the item. Point
                 properties:
                   bbox:
+                    description: BBox of the  Point
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Point
                     items:
                       type: number
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Point
@@ -139,11 +145,15 @@ CityWork:
               - description: Geojson reference to the item. LineString
                 properties:
                   bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the LineString
                     items:
                       items:
                         type: number
@@ -151,6 +161,8 @@ CityWork:
                       type: array
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - LineString
@@ -165,11 +177,15 @@ CityWork:
               - description: Geojson reference to the item. Polygon
                 properties:
                   bbox:
+                    description: BBox coordinates of the Polygon
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Polygon
                     items:
                       items:
                         items:
@@ -179,6 +195,8 @@ CityWork:
                       minItems: 4
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Polygon
@@ -193,17 +211,23 @@ CityWork:
               - description: Geojson reference to the item. MultiPoint
                 properties:
                   bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MulitPoint
                     items:
                       items:
                         type: number
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPoint
@@ -218,11 +242,15 @@ CityWork:
               - description: Geojson reference to the item. MultiLineString
                 properties:
                   bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MultiLineString
                     items:
                       items:
                         items:
@@ -232,6 +260,8 @@ CityWork:
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiLineString
@@ -251,16 +281,19 @@ CityWork:
                     minItems: 4
                     type: array
                   coordinates:
+                    description: Coordinates of the MultiPolygon
                     items:
                       items:
                         items:
-                          items:
+                          items: {}
                           minItems: 2
                           type: array
                         minItems: 4
                         type: array
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPolygon
@@ -278,28 +311,38 @@ CityWork:
             type: string
           segmentId:
             items:
-              description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
               oneOf:
                 - bbox:
+                    description: BBox of the  Point
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Point
                     items:
                       type: number
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Point
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the LineString
                     items:
                       items:
                         type: number
@@ -307,58 +350,78 @@ CityWork:
                       type: array
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - LineString
                     type: string
                 - bbox:
+                    description: BBox coordinates of the Polygon
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Polygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 4
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Polygon
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MulitPoint
                     items:
                       items:
                         type: number
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPoint
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MultiLineString
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiLineString
@@ -369,13 +432,16 @@ CityWork:
                     minItems: 4
                     type: array
                   coordinates:
+                    description: Coordinates of the MultiPolygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 4
                         type: array
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPolygon
@@ -386,28 +452,38 @@ CityWork:
           segmentLocation:
             description: Geoproperty. Segment Location of the bus impacted
             items:
-              description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
               oneOf:
                 - bbox:
+                    description: BBox of the  Point
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Point
                     items:
                       type: number
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Point
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the LineString
                     items:
                       items:
                         type: number
@@ -415,58 +491,78 @@ CityWork:
                       type: array
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - LineString
                     type: string
                 - bbox:
+                    description: BBox coordinates of the Polygon
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Polygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 4
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Polygon
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MulitPoint
                     items:
                       items:
                         type: number
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPoint
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MultiLineString
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiLineString
@@ -477,13 +573,16 @@ CityWork:
                     minItems: 4
                     type: array
                   coordinates:
+                    description: Coordinates of the MultiPolygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 4
                         type: array
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPolygon
@@ -530,7 +629,7 @@ CityWork:
                 type: Property
           description: This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class
           x-ngsi:
-            model: http://schema.org/hoursAvailable
+            model: https://schema.org/hoursAvailable
             type: Relationship
         availableLanguage:
           anyOf:
@@ -539,7 +638,7 @@ CityWork:
                 - items:
                     type: string
                   type: array
-          description: 'A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language'
+          description: A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language
           x-ngsi:
             model: http://schema.org/availableLanguage
             type: Property
@@ -565,10 +664,10 @@ CityWork:
           x-ngsi:
             type: Property
         faxNumber:
-          description: The fax number
+          description: The fax number of the item
           type: string
           x-ngsi:
-            model: http://schema.org/Text
+            model: https://schema.org/Text
             type: Property
         name:
           description: The name of this item
@@ -579,7 +678,7 @@ CityWork:
           description: The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. 'iPhone') or a general category of products or services (e.g. 'smartphones')
           type: string
           x-ngsi:
-            model: http://schema.org/Text
+            model: https://schema.org/Text
             type: Property
         telephone:
           description: Telephone of this contact
@@ -639,7 +738,7 @@ CityWork:
         model: https://schema.org/Number
         type: Property
     countOfSchoolImpacted:
-      description: 'Count of University, School, or other educational resource impacted by the works'
+      description: Count of University, School, or other educational resource impacted by the works
       type: number
       x-ngsi:
         model: https://schema.org/Number
@@ -730,7 +829,7 @@ CityWork:
       x-ngsi:
         type: Property
     encroachment:
-      description: 'Impact of the works on public, private area. A combination of these values. Enum:''other, private, public'''
+      description: Impact of the works on public, private area. A combination of these values. Enum:'other, private, public'
       items:
         enum:
           - other
@@ -749,7 +848,7 @@ CityWork:
         model: https://schema.org/DateTime
         type: Property
     eventsImpacted:
-      description: 'List of free text or to the entity [Events](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/Event/doc/spec.md) if exist'
+      description: List of free text or to the entity [Events](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/Event/doc/spec.md) if exist
       items:
         type: string
       type: array
@@ -771,7 +870,7 @@ CityWork:
             type: Property
       description: Unique identifier of the entity
       x-ngsi:
-        type: Property
+        type: Relationship
     infrastructureFunction:
       description: ' Function of the infrastructure impacted by the works. Enum:''collection, distribution, other, transportation'''
       items:
@@ -786,7 +885,7 @@ CityWork:
         model: https://schema.org/Text
         type: Property
     isMainRoadImpactedHTR:
-      description: 'Value to indicate whether the main traffic road is impacted. Default false. https://schema.org/Boolean'
+      description: Value to indicate whether the main traffic road is impacted. Default false. https://schema.org/Boolean
       type: boolean
       x-ngsi:
         type: Property
@@ -797,20 +896,26 @@ CityWork:
         model: https://schema.org/Boolean
         type: Property
     location:
-      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+      description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
       oneOf:
         - description: Geojson reference to the item. Point
           properties:
             bbox:
+              description: BBox of the  Point
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the Point
               items:
                 type: number
               minItems: 2
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - Point
@@ -825,11 +930,15 @@ CityWork:
         - description: Geojson reference to the item. LineString
           properties:
             bbox:
+              description: BBox coordinates of the LineString
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the LineString
               items:
                 items:
                   type: number
@@ -837,6 +946,8 @@ CityWork:
                 type: array
               minItems: 2
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - LineString
@@ -851,11 +962,15 @@ CityWork:
         - description: Geojson reference to the item. Polygon
           properties:
             bbox:
+              description: BBox coordinates of the Polygon
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the Polygon
               items:
                 items:
                   items:
@@ -865,6 +980,8 @@ CityWork:
                 minItems: 4
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - Polygon
@@ -879,17 +996,23 @@ CityWork:
         - description: Geojson reference to the item. MultiPoint
           properties:
             bbox:
+              description: BBox coordinates of the LineString
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the MulitPoint
               items:
                 items:
                   type: number
                 minItems: 2
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - MultiPoint
@@ -904,11 +1027,15 @@ CityWork:
         - description: Geojson reference to the item. MultiLineString
           properties:
             bbox:
+              description: BBox coordinates of the LineString
               items:
                 type: number
               minItems: 4
               type: array
+              x-ngsi:
+                type: Property
             coordinates:
+              description: Coordinates of the MultiLineString
               items:
                 items:
                   items:
@@ -918,6 +1045,8 @@ CityWork:
                 minItems: 2
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - MultiLineString
@@ -937,6 +1066,7 @@ CityWork:
               minItems: 4
               type: array
             coordinates:
+              description: Coordinates of the MultiPolygon
               items:
                 items:
                   items:
@@ -948,6 +1078,8 @@ CityWork:
                   type: array
                 type: array
               type: array
+              x-ngsi:
+                type: Property
             type:
               enum:
                 - MultiPolygon
@@ -968,7 +1100,7 @@ CityWork:
         model: https://schema.org/Text
         type: Property
     maxAuthorizedTonnage:
-      description: 'Roads impacted by the works with Maximum tonnage authorized. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of ''roadId / roadName / roadLocation''. Second subproperties, ''maxTonnage'''
+      description: Roads impacted by the works with Maximum tonnage authorized. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of 'roadId / roadName / roadLocation'. Second subproperties, 'maxTonnage'
       items:
         properties:
           maxTonnage:
@@ -992,24 +1124,30 @@ CityWork:
                   type: Property
             description: Unique identifier of the entity
             x-ngsi:
-              type: Property
+              type: Relationship
           roadImpacted:
             type: string
           roadLocation:
-            description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+            description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
             oneOf:
               - description: Geojson reference to the item. Point
                 properties:
                   bbox:
+                    description: BBox of the  Point
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Point
                     items:
                       type: number
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Point
@@ -1024,11 +1162,15 @@ CityWork:
               - description: Geojson reference to the item. LineString
                 properties:
                   bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the LineString
                     items:
                       items:
                         type: number
@@ -1036,6 +1178,8 @@ CityWork:
                       type: array
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - LineString
@@ -1050,11 +1194,15 @@ CityWork:
               - description: Geojson reference to the item. Polygon
                 properties:
                   bbox:
+                    description: BBox coordinates of the Polygon
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Polygon
                     items:
                       items:
                         items:
@@ -1064,6 +1212,8 @@ CityWork:
                       minItems: 4
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Polygon
@@ -1078,17 +1228,23 @@ CityWork:
               - description: Geojson reference to the item. MultiPoint
                 properties:
                   bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MulitPoint
                     items:
                       items:
                         type: number
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPoint
@@ -1103,11 +1259,15 @@ CityWork:
               - description: Geojson reference to the item. MultiLineString
                 properties:
                   bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MultiLineString
                     items:
                       items:
                         items:
@@ -1117,6 +1277,8 @@ CityWork:
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiLineString
@@ -1136,16 +1298,19 @@ CityWork:
                     minItems: 4
                     type: array
                   coordinates:
+                    description: Coordinates of the MultiPolygon
                     items:
                       items:
                         items:
-                          items:
+                          items: {}
                           minItems: 2
                           type: array
                         minItems: 4
                         type: array
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPolygon
@@ -1178,7 +1343,7 @@ CityWork:
       items:
         properties:
           closes:
-            description: ' 	The closing hour of the place or service on the given day(s) of the week'
+            description: " \tThe closing hour of the place or service on the given day(s) of the week"
             format: time
             type: string
             x-ngsi:
@@ -1211,7 +1376,7 @@ CityWork:
                 type: string
                 x-ngsi:
                   type: Property
-            description: 'The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays)'
+            description: The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays)
             type: string
             x-ngsi:
               model: http://schema.org/dayOfWeek
@@ -1224,36 +1389,36 @@ CityWork:
               type: Property
           validFrom:
             anyOf:
-              - description: ""
+              - description: ''
                 format: date
                 type: string
                 x-ngsi:
                   model: http://schema.org/Date
                   type: Property
-              - description: ""
+              - description: ''
                 format: date-time
                 type: string
                 x-ngsi:
                   model: http://schema.org/DateTime
                   type: Property
-            description: 'The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format'
+            description: The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format
             x-ngsi:
               type: Property
           validThrough:
             anyOf:
-              - description: ""
+              - description: ''
                 format: date
                 type: string
                 x-ngsi:
                   model: http://schema.org/Date
                   type: Property
-              - description: ""
+              - description: ''
                 format: date-time
                 type: string
                 x-ngsi:
                   model: http://schema.org/DateTime
                   type: Property
-            description: 'The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format'
+            description: The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format
             type: string
             x-ngsi:
               type: Property
@@ -1288,12 +1453,12 @@ CityWork:
               type: Property
         description: Unique identifier of the entity
         x-ngsi:
-          type: Property
+          type: Relationship
       type: array
       x-ngsi:
         type: Property
     railwayImpacted:
-      description: 'Rail lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of ''lineId / lineName / lineLocation''. Second subproperties, one of ''segmentId / segmentName / segmentLocation'''
+      description: Rail lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of 'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId / segmentName / segmentLocation'
       items:
         properties:
           lineId:
@@ -1312,22 +1477,28 @@ CityWork:
                   type: Property
             description: Unique identifier of the entity
             x-ngsi:
-              type: Property
+              type: Relationship
           lineLocation:
-            description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+            description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
             oneOf:
               - description: Geojson reference to the item. Point
                 properties:
                   bbox:
+                    description: BBox of the  Point
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Point
                     items:
                       type: number
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Point
@@ -1342,11 +1513,15 @@ CityWork:
               - description: Geojson reference to the item. LineString
                 properties:
                   bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the LineString
                     items:
                       items:
                         type: number
@@ -1354,6 +1529,8 @@ CityWork:
                       type: array
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - LineString
@@ -1368,11 +1545,15 @@ CityWork:
               - description: Geojson reference to the item. Polygon
                 properties:
                   bbox:
+                    description: BBox coordinates of the Polygon
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Polygon
                     items:
                       items:
                         items:
@@ -1382,6 +1563,8 @@ CityWork:
                       minItems: 4
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Polygon
@@ -1396,17 +1579,23 @@ CityWork:
               - description: Geojson reference to the item. MultiPoint
                 properties:
                   bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MulitPoint
                     items:
                       items:
                         type: number
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPoint
@@ -1421,11 +1610,15 @@ CityWork:
               - description: Geojson reference to the item. MultiLineString
                 properties:
                   bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MultiLineString
                     items:
                       items:
                         items:
@@ -1435,6 +1628,8 @@ CityWork:
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiLineString
@@ -1454,16 +1649,19 @@ CityWork:
                     minItems: 4
                     type: array
                   coordinates:
+                    description: Coordinates of the MultiPolygon
                     items:
                       items:
                         items:
-                          items:
+                          items: {}
                           minItems: 2
                           type: array
                         minItems: 4
                         type: array
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPolygon
@@ -1481,28 +1679,38 @@ CityWork:
             type: string
           segmentId:
             items:
-              description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
               oneOf:
                 - bbox:
+                    description: BBox of the  Point
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Point
                     items:
                       type: number
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Point
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the LineString
                     items:
                       items:
                         type: number
@@ -1510,58 +1718,78 @@ CityWork:
                       type: array
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - LineString
                     type: string
                 - bbox:
+                    description: BBox coordinates of the Polygon
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Polygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 4
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Polygon
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MulitPoint
                     items:
                       items:
                         type: number
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPoint
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MultiLineString
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiLineString
@@ -1572,13 +1800,16 @@ CityWork:
                     minItems: 4
                     type: array
                   coordinates:
+                    description: Coordinates of the MultiPolygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 4
                         type: array
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPolygon
@@ -1589,28 +1820,38 @@ CityWork:
           segmentLocation:
             description: Geoproperty. Segment Location of the railwayImpacted
             items:
-              description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
               oneOf:
                 - bbox:
+                    description: BBox of the  Point
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Point
                     items:
                       type: number
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Point
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the LineString
                     items:
                       items:
                         type: number
@@ -1618,58 +1859,78 @@ CityWork:
                       type: array
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - LineString
                     type: string
                 - bbox:
+                    description: BBox coordinates of the Polygon
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Polygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 4
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Polygon
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MulitPoint
                     items:
                       items:
                         type: number
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPoint
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MultiLineString
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiLineString
@@ -1680,13 +1941,16 @@ CityWork:
                     minItems: 4
                     type: array
                   coordinates:
+                    description: Coordinates of the MultiPolygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 4
                         type: array
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPolygon
@@ -1725,22 +1989,28 @@ CityWork:
                   type: Property
             description: Unique identifier of the entity
             x-ngsi:
-              type: Property
+              type: Relationship
           roadLocation:
-            description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+            description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
             oneOf:
               - description: Geojson reference to the item. Point
                 properties:
                   bbox:
+                    description: BBox of the  Point
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Point
                     items:
                       type: number
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Point
@@ -1755,11 +2025,15 @@ CityWork:
               - description: Geojson reference to the item. LineString
                 properties:
                   bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the LineString
                     items:
                       items:
                         type: number
@@ -1767,6 +2041,8 @@ CityWork:
                       type: array
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - LineString
@@ -1781,11 +2057,15 @@ CityWork:
               - description: Geojson reference to the item. Polygon
                 properties:
                   bbox:
+                    description: BBox coordinates of the Polygon
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Polygon
                     items:
                       items:
                         items:
@@ -1795,6 +2075,8 @@ CityWork:
                       minItems: 4
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Polygon
@@ -1809,17 +2091,23 @@ CityWork:
               - description: Geojson reference to the item. MultiPoint
                 properties:
                   bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MulitPoint
                     items:
                       items:
                         type: number
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPoint
@@ -1834,11 +2122,15 @@ CityWork:
               - description: Geojson reference to the item. MultiLineString
                 properties:
                   bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MultiLineString
                     items:
                       items:
                         items:
@@ -1848,6 +2140,8 @@ CityWork:
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiLineString
@@ -1867,16 +2161,19 @@ CityWork:
                     minItems: 4
                     type: array
                   coordinates:
+                    description: Coordinates of the MultiPolygon
                     items:
                       items:
                         items:
-                          items:
+                          items: {}
                           minItems: 2
                           type: array
                         minItems: 4
                         type: array
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPolygon
@@ -1897,28 +2194,38 @@ CityWork:
               type: Property
           segmentId:
             items:
-              description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
               oneOf:
                 - bbox:
+                    description: BBox of the  Point
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Point
                     items:
                       type: number
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Point
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the LineString
                     items:
                       items:
                         type: number
@@ -1926,58 +2233,78 @@ CityWork:
                       type: array
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - LineString
                     type: string
                 - bbox:
+                    description: BBox coordinates of the Polygon
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Polygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 4
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Polygon
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MulitPoint
                     items:
                       items:
                         type: number
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPoint
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MultiLineString
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiLineString
@@ -1988,13 +2315,16 @@ CityWork:
                     minItems: 4
                     type: array
                   coordinates:
+                    description: Coordinates of the MultiPolygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 4
                         type: array
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPolygon
@@ -2005,28 +2335,38 @@ CityWork:
           segmentLocation:
             description: Geoproperty. Segment Location of the road impacted
             items:
-              description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
               oneOf:
                 - bbox:
+                    description: BBox of the  Point
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Point
                     items:
                       type: number
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Point
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the LineString
                     items:
                       items:
                         type: number
@@ -2034,58 +2374,78 @@ CityWork:
                       type: array
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - LineString
                     type: string
                 - bbox:
+                    description: BBox coordinates of the Polygon
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Polygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 4
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Polygon
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MulitPoint
                     items:
                       items:
                         type: number
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPoint
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MultiLineString
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiLineString
@@ -2096,13 +2456,16 @@ CityWork:
                     minItems: 4
                     type: array
                   coordinates:
+                    description: Coordinates of the MultiPolygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 4
                         type: array
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPolygon
@@ -2122,21 +2485,21 @@ CityWork:
       x-ngsi:
         type: Property
     roadImpactedMT:
-      description: 'A list of roads defined as Major Traffic, impacted by the works. Values are also included in the roadImpacted attribute'
+      description: A list of roads defined as Major Traffic, impacted by the works. Values are also included in the roadImpacted attribute
       items:
         type: string
       type: array
       x-ngsi:
         type: Property
     roadImpactedSA:
-      description: 'A list of roads defined as sensitive areas, impacted by the works. Values are also included in the roadImpacted attribute'
+      description: A list of roads defined as sensitive areas, impacted by the works. Values are also included in the roadImpacted attribute
       items:
         type: string
       type: array
       x-ngsi:
         type: Property
     schoolBusImpacted:
-      description: 'Scholl Bus lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of ''lineId / lineName / lineLocation''. Second subproperties, one of ''segmentId / segmentName / segmentLocation'''
+      description: Scholl Bus lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of 'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId / segmentName / segmentLocation'
       items:
         properties:
           lineId:
@@ -2155,22 +2518,28 @@ CityWork:
                   type: Property
             description: Unique identifier of the entity
             x-ngsi:
-              type: Property
+              type: Relationship
           lineLocation:
-            description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+            description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
             oneOf:
               - description: Geojson reference to the item. Point
                 properties:
                   bbox:
+                    description: BBox of the  Point
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Point
                     items:
                       type: number
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Point
@@ -2185,11 +2554,15 @@ CityWork:
               - description: Geojson reference to the item. LineString
                 properties:
                   bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the LineString
                     items:
                       items:
                         type: number
@@ -2197,6 +2570,8 @@ CityWork:
                       type: array
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - LineString
@@ -2211,11 +2586,15 @@ CityWork:
               - description: Geojson reference to the item. Polygon
                 properties:
                   bbox:
+                    description: BBox coordinates of the Polygon
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Polygon
                     items:
                       items:
                         items:
@@ -2225,6 +2604,8 @@ CityWork:
                       minItems: 4
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Polygon
@@ -2239,17 +2620,23 @@ CityWork:
               - description: Geojson reference to the item. MultiPoint
                 properties:
                   bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MulitPoint
                     items:
                       items:
                         type: number
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPoint
@@ -2264,11 +2651,15 @@ CityWork:
               - description: Geojson reference to the item. MultiLineString
                 properties:
                   bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MultiLineString
                     items:
                       items:
                         items:
@@ -2278,6 +2669,8 @@ CityWork:
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiLineString
@@ -2297,16 +2690,19 @@ CityWork:
                     minItems: 4
                     type: array
                   coordinates:
+                    description: Coordinates of the MultiPolygon
                     items:
                       items:
                         items:
-                          items:
+                          items: {}
                           minItems: 2
                           type: array
                         minItems: 4
                         type: array
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPolygon
@@ -2324,28 +2720,38 @@ CityWork:
             type: string
           segmentId:
             items:
-              description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
               oneOf:
                 - bbox:
+                    description: BBox of the  Point
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Point
                     items:
                       type: number
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Point
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the LineString
                     items:
                       items:
                         type: number
@@ -2353,58 +2759,78 @@ CityWork:
                       type: array
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - LineString
                     type: string
                 - bbox:
+                    description: BBox coordinates of the Polygon
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Polygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 4
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Polygon
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MulitPoint
                     items:
                       items:
                         type: number
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPoint
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MultiLineString
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiLineString
@@ -2415,13 +2841,16 @@ CityWork:
                     minItems: 4
                     type: array
                   coordinates:
+                    description: Coordinates of the MultiPolygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 4
                         type: array
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPolygon
@@ -2432,28 +2861,38 @@ CityWork:
           segmentLocation:
             description: Geoproperty. Segment Location of the school Bus Impacted
             items:
-              description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
               oneOf:
                 - bbox:
+                    description: BBox of the  Point
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Point
                     items:
                       type: number
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Point
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the LineString
                     items:
                       items:
                         type: number
@@ -2461,58 +2900,78 @@ CityWork:
                       type: array
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - LineString
                     type: string
                 - bbox:
+                    description: BBox coordinates of the Polygon
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Polygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 4
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Polygon
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MulitPoint
                     items:
                       items:
                         type: number
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPoint
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MultiLineString
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiLineString
@@ -2523,13 +2982,16 @@ CityWork:
                     minItems: 4
                     type: array
                   coordinates:
+                    description: Coordinates of the MultiPolygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 4
                         type: array
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPolygon
@@ -2568,7 +3030,7 @@ CityWork:
       x-ngsi:
         type: Property
     source:
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'
+      description: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object
       type: string
       x-ngsi:
         type: Property
@@ -2580,11 +3042,11 @@ CityWork:
         model: https://schema.org/DateTime
         type: Property
     stationImpacted:
-      description: 'Station Impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, ''stationType''. Second subproperties, one of ''stationId / stationName / stationLocation'''
+      description: Station Impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, 'stationType'. Second subproperties, one of 'stationId / stationName / stationLocation'
       items:
         properties:
           stationId:
-            description: 'List of free text or reference to the entity [TransportStation](https://github.com/smart-data-models/dataModel.Transportation/blob/master/TransportStation/doc/spec.md) if used'
+            description: List of free text or reference to the entity [TransportStation](https://github.com/smart-data-models/dataModel.Transportation/blob/master/TransportStation/doc/spec.md) if used
             items:
               anyOf:
                 - description: Identifier format of any NGSI entity
@@ -2601,35 +3063,45 @@ CityWork:
                     type: Property
               description: Unique identifier of the entity
               x-ngsi:
-                type: Property
+                type: Relationship
             type: array
             x-ngsi:
               type: Property
           stationLocation:
             description: Geoproperty. Station Location of the stationImpacted
             items:
-              description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
               oneOf:
                 - bbox:
+                    description: BBox of the  Point
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Point
                     items:
                       type: number
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Point
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the LineString
                     items:
                       items:
                         type: number
@@ -2637,58 +3109,78 @@ CityWork:
                       type: array
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - LineString
                     type: string
                 - bbox:
+                    description: BBox coordinates of the Polygon
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Polygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 4
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Polygon
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MulitPoint
                     items:
                       items:
                         type: number
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPoint
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MultiLineString
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiLineString
@@ -2699,13 +3191,16 @@ CityWork:
                     minItems: 4
                     type: array
                   coordinates:
+                    description: Coordinates of the MultiPolygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 4
                         type: array
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPolygon
@@ -2721,7 +3216,7 @@ CityWork:
             x-ngsi:
               type: Property
           stationType:
-            description: "A unique value of free text or from the urban transport Mode GFTS standard [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt). Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, tram, trolleybus'"
+            description: A unique value of free text or from the urban transport Mode GFTS standard [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt). Enum:'aerialLift, bus, cableTram, ferry, funicular, monorail, rail, subway, tram, trolleybus'
             enum:
               - aerialLift
               - bus
@@ -2741,7 +3236,7 @@ CityWork:
       x-ngsi:
         type: Property
     subwayImpacted:
-      description: 'Subway lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of ''lineId / lineName / lineLocation''. Second subproperties, one of ''segmentId / segmentName / segmentLocation'''
+      description: Subway lines impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of 'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId / segmentName / segmentLocation'
       items:
         properties:
           lineId:
@@ -2760,22 +3255,28 @@ CityWork:
                   type: Property
             description: Unique identifier of the entity
             x-ngsi:
-              type: Property
+              type: Relationship
           lineLocation:
-            description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+            description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
             oneOf:
               - description: Geojson reference to the item. Point
                 properties:
                   bbox:
+                    description: BBox of the  Point
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Point
                     items:
                       type: number
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Point
@@ -2790,11 +3291,15 @@ CityWork:
               - description: Geojson reference to the item. LineString
                 properties:
                   bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the LineString
                     items:
                       items:
                         type: number
@@ -2802,6 +3307,8 @@ CityWork:
                       type: array
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - LineString
@@ -2816,11 +3323,15 @@ CityWork:
               - description: Geojson reference to the item. Polygon
                 properties:
                   bbox:
+                    description: BBox coordinates of the Polygon
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Polygon
                     items:
                       items:
                         items:
@@ -2830,6 +3341,8 @@ CityWork:
                       minItems: 4
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Polygon
@@ -2844,17 +3357,23 @@ CityWork:
               - description: Geojson reference to the item. MultiPoint
                 properties:
                   bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MulitPoint
                     items:
                       items:
                         type: number
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPoint
@@ -2869,11 +3388,15 @@ CityWork:
               - description: Geojson reference to the item. MultiLineString
                 properties:
                   bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MultiLineString
                     items:
                       items:
                         items:
@@ -2883,6 +3406,8 @@ CityWork:
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiLineString
@@ -2902,16 +3427,19 @@ CityWork:
                     minItems: 4
                     type: array
                   coordinates:
+                    description: Coordinates of the MultiPolygon
                     items:
                       items:
                         items:
-                          items:
+                          items: {}
                           minItems: 2
                           type: array
                         minItems: 4
                         type: array
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPolygon
@@ -2929,28 +3457,38 @@ CityWork:
             type: string
           segmentId:
             items:
-              description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
               oneOf:
                 - bbox:
+                    description: BBox of the  Point
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Point
                     items:
                       type: number
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Point
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the LineString
                     items:
                       items:
                         type: number
@@ -2958,58 +3496,78 @@ CityWork:
                       type: array
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - LineString
                     type: string
                 - bbox:
+                    description: BBox coordinates of the Polygon
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Polygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 4
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Polygon
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MulitPoint
                     items:
                       items:
                         type: number
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPoint
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MultiLineString
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiLineString
@@ -3020,13 +3578,16 @@ CityWork:
                     minItems: 4
                     type: array
                   coordinates:
+                    description: Coordinates of the MultiPolygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 4
                         type: array
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPolygon
@@ -3037,28 +3598,38 @@ CityWork:
           segmentLocation:
             description: Geoproperty. Segment Location of the subwayImpacted
             items:
-              description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
               oneOf:
                 - bbox:
+                    description: BBox of the  Point
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Point
                     items:
                       type: number
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Point
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the LineString
                     items:
                       items:
                         type: number
@@ -3066,58 +3637,78 @@ CityWork:
                       type: array
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - LineString
                     type: string
                 - bbox:
+                    description: BBox coordinates of the Polygon
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Polygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 4
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Polygon
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MulitPoint
                     items:
                       items:
                         type: number
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPoint
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MultiLineString
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiLineString
@@ -3128,13 +3719,16 @@ CityWork:
                     minItems: 4
                     type: array
                   coordinates:
+                    description: Coordinates of the MultiPolygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 4
                         type: array
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPolygon
@@ -3157,7 +3751,7 @@ CityWork:
         model: https://schema.org/Text
         type: Property
     tramwayImpacted:
-      description: 'Tramway Line impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of ''lineId / lineName / lineLocation''. Second subproperties, one of ''segmentId / segmentName / segmentLocation'''
+      description: Tramway Line impacted by the works. A structured value from 0 to N occurrences with 2 subproperties per item. First subproperties, one of 'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId / segmentName / segmentLocation'
       items:
         properties:
           lineId:
@@ -3176,22 +3770,28 @@ CityWork:
                   type: Property
             description: Unique identifier of the entity
             x-ngsi:
-              type: Property
+              type: Relationship
           lineLocation:
-            description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+            description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
             oneOf:
               - description: Geojson reference to the item. Point
                 properties:
                   bbox:
+                    description: BBox of the  Point
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Point
                     items:
                       type: number
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Point
@@ -3206,11 +3806,15 @@ CityWork:
               - description: Geojson reference to the item. LineString
                 properties:
                   bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the LineString
                     items:
                       items:
                         type: number
@@ -3218,6 +3822,8 @@ CityWork:
                       type: array
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - LineString
@@ -3232,11 +3838,15 @@ CityWork:
               - description: Geojson reference to the item. Polygon
                 properties:
                   bbox:
+                    description: BBox coordinates of the Polygon
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Polygon
                     items:
                       items:
                         items:
@@ -3246,6 +3856,8 @@ CityWork:
                       minItems: 4
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Polygon
@@ -3260,17 +3872,23 @@ CityWork:
               - description: Geojson reference to the item. MultiPoint
                 properties:
                   bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MulitPoint
                     items:
                       items:
                         type: number
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPoint
@@ -3285,11 +3903,15 @@ CityWork:
               - description: Geojson reference to the item. MultiLineString
                 properties:
                   bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MultiLineString
                     items:
                       items:
                         items:
@@ -3299,6 +3921,8 @@ CityWork:
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiLineString
@@ -3318,16 +3942,19 @@ CityWork:
                     minItems: 4
                     type: array
                   coordinates:
+                    description: Coordinates of the MultiPolygon
                     items:
                       items:
                         items:
-                          items:
+                          items: {}
                           minItems: 2
                           type: array
                         minItems: 4
                         type: array
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPolygon
@@ -3348,28 +3975,38 @@ CityWork:
               type: Property
           segmentId:
             items:
-              description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
               oneOf:
                 - bbox:
+                    description: BBox of the  Point
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Point
                     items:
                       type: number
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Point
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the LineString
                     items:
                       items:
                         type: number
@@ -3377,58 +4014,78 @@ CityWork:
                       type: array
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - LineString
                     type: string
                 - bbox:
+                    description: BBox coordinates of the Polygon
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Polygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 4
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Polygon
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MulitPoint
                     items:
                       items:
                         type: number
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPoint
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MultiLineString
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiLineString
@@ -3439,13 +4096,16 @@ CityWork:
                     minItems: 4
                     type: array
                   coordinates:
+                    description: Coordinates of the MultiPolygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 4
                         type: array
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPolygon
@@ -3456,28 +4116,38 @@ CityWork:
           segmentLocation:
             description: Geoproperty. Segment Location of the tramwayImpacted
             items:
-              description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+              description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
               oneOf:
                 - bbox:
+                    description: BBox of the  Point
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Point
                     items:
                       type: number
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Point
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the LineString
                     items:
                       items:
                         type: number
@@ -3485,58 +4155,78 @@ CityWork:
                       type: array
                     minItems: 2
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - LineString
                     type: string
                 - bbox:
+                    description: BBox coordinates of the Polygon
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the Polygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 4
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - Polygon
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MulitPoint
                     items:
                       items:
                         type: number
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPoint
                     type: string
                 - bbox:
+                    description: BBox coordinates of the LineString
                     items:
                       type: number
                     minItems: 4
                     type: array
+                    x-ngsi:
+                      type: Property
                   coordinates:
+                    description: Coordinates of the MultiLineString
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 2
                         type: array
                       minItems: 2
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiLineString
@@ -3547,13 +4237,16 @@ CityWork:
                     minItems: 4
                     type: array
                   coordinates:
+                    description: Coordinates of the MultiPolygon
                     items:
                       items:
-                        items:
+                        items: {}
                         minItems: 4
                         type: array
                       type: array
                     type: array
+                    x-ngsi:
+                      type: Property
                   type:
                     enum:
                       - MultiPolygon
@@ -3577,7 +4270,7 @@ CityWork:
       x-ngsi:
         type: Property
     typeOfInterventionRequest:
-      description: 'Initial type of request to do the works. Enum:''authorizationRequest,  interventionNotice,  other,  urgentWorks'''
+      description: Initial type of request to do the works. Enum:'authorizationRequest,  interventionNotice,  other,  urgentWorks'
       enum:
         - authorizationRequest
         - interventionNotice
@@ -3649,7 +4342,7 @@ CityWork:
         model: https://schema.org/DateTime
         type: Property
     workLevel:
-      description: 'Positioning of the works in relation to a ground reference system. A combination of these elements. Enum:''aerial, ground, mixed, other, roofing, surface, underground, wall'''
+      description: Positioning of the works in relation to a ground reference system. A combination of these elements. Enum:'aerial, ground, mixed, other, roofing, surface, underground, wall'
       items:
         enum:
           - aerial
@@ -3665,7 +4358,7 @@ CityWork:
       x-ngsi:
         type: Property
     workNature:
-      description: 'Nature of the works. A combination of these values.Enum:''additionalInvestigations, brushCutting, cleaning, collection, connection, consolidation, construction, control, counting, craneLifting, creation, demolition, drivingSwitch, experimentation, extension, filmShooting, Installation-OR-layout, investigation, landFill, maintenance, manholeOpening, ManholeOpeningToRestoreService, miscellaneousInstallation, miscellaneousWorks, mowingDeburring, other, overheadLinesWorksIntervention, pruning, pulling, refurbishment, rehabilitation, reinforcement, renewal, renovation, repair, replacement, riprap, roadSign, safetyAndComplianceWork, safetyRailsInstallation, securingPerimeter, siteInstallation, staking, supportImplantation, surfaceOccupationAuthorization, survey, tarring, tonnageExemption, treeCutting, trenchOpening, upgrading'''
+      description: Nature of the works. A combination of these values.Enum:'additionalInvestigations, brushCutting, cleaning, collection, connection, consolidation, construction, control, counting, craneLifting, creation, demolition, drivingSwitch, experimentation, extension, filmShooting, Installation-OR-layout, investigation, landFill, maintenance, manholeOpening, ManholeOpeningToRestoreService, miscellaneousInstallation, miscellaneousWorks, mowingDeburring, other, overheadLinesWorksIntervention, pruning, pulling, refurbishment, rehabilitation, reinforcement, renewal, renovation, repair, replacement, riprap, roadSign, safetyAndComplianceWork, safetyRailsInstallation, securingPerimeter, siteInstallation, staking, supportImplantation, surfaceOccupationAuthorization, survey, tarring, tonnageExemption, treeCutting, trenchOpening, upgrading'
       items:
         enum:
           - additionalInvestigations
@@ -3738,7 +4431,7 @@ CityWork:
         model: https://schema.org/Text
         type: Property
     workReason:
-      description: 'Reasons of the works in case of urgent intervention. A combination of these values. Enum:''collapse, derailment, fire, flood, gasLeak, landslide, other, powerCut, rockfall, sagging, waterLeak'''
+      description: Reasons of the works in case of urgent intervention. A combination of these values. Enum:'collapse, derailment, fire, flood, gasLeak, landslide, other, powerCut, rockfall, sagging, waterLeak'
       items:
         enum:
           - collapse
@@ -3757,7 +4450,7 @@ CityWork:
       x-ngsi:
         type: Property
     workState:
-      description: 'Number assigned to the work. Enum:''all, approved, authorized, canceled, completed, decreeToBeSigned, draft, editedDecrees, instructionInProgress, investigated, nonCompliantOccupation, open, pendingAuthorization, pendingCancellation, planningCompleted, pendingDocument, pendingExtension, pendingPlanning, planned, received, reject, supported, validatedInPlanning'''
+      description: Number assigned to the work. Enum:'all, approved, authorized, canceled, completed, decreeToBeSigned, draft, editedDecrees, instructionInProgress, investigated, nonCompliantOccupation, open, pendingAuthorization, pendingCancellation, planningCompleted, pendingDocument, pendingExtension, pendingPlanning, planned, received, reject, supported, validatedInPlanning'
       enum:
         - all
         - approved
@@ -3788,7 +4481,7 @@ CityWork:
         model: https://schema.org/Text
         type: Property
     workTarget:
-      description: 'Categories of works regarding the different profession. A combination of these elements. Enum:''bicyclePath, busCorridor, catainers, cityMotorBike, cityBike, cityCar, cityScooter, coldAndAirCon, coldGroup, copperCable, CoringPenetrometry, drinkingWater, electricityNetworks, exploratoryWork, fireHydrants, frameRoof, gasNetworks, generator, historicalMonuments, infrastructure, landscapedArea, movingHoistNacelleTruck, networks, offStreetParking, opticalFibers, other, overheadLine, papersCollection, pavement, publicDecorativeLighting, publicDomain, publicTransport, railway, rainyWaters, riprap, rMTNetworks, roads, roadsAndPublicDomain, sanitation, scaffolding, sideWalk, speedReductionDevices, streetParking, surfaceOccupation, supportStructures, tagsAndPosters, telecomNetworks, telecom-RMT-VideoNetworks, trafficSignalingRegulation, tramway, urbanFurniture, urbanHeating, variousWorks, videoNetworks, vrd'''
+      description: Categories of works regarding the different profession. A combination of these elements. Enum:'bicyclePath, busCorridor, catainers, cityMotorBike, cityBike, cityCar, cityScooter, coldAndAirCon, coldGroup, copperCable, CoringPenetrometry, drinkingWater, electricityNetworks, exploratoryWork, fireHydrants, frameRoof, gasNetworks, generator, historicalMonuments, infrastructure, landscapedArea, movingHoistNacelleTruck, networks, offStreetParking, opticalFibers, other, overheadLine, papersCollection, pavement, publicDecorativeLighting, publicDomain, publicTransport, railway, rainyWaters, riprap, rMTNetworks, roads, roadsAndPublicDomain, sanitation, scaffolding, sideWalk, speedReductionDevices, streetParking, surfaceOccupation, supportStructures, tagsAndPosters, telecomNetworks, telecom-RMT-VideoNetworks, trafficSignalingRegulation, tramway, urbanFurniture, urbanHeating, variousWorks, videoNetworks, vrd'
       items:
         enum:
           - bicyclePath
@@ -3851,7 +4544,7 @@ CityWork:
       x-ngsi:
         type: Property
     workZone:
-      description: 'Zone of Works. A combination of these values. Enum:'' airport, beach, bicyclePath, bridge, busCorridor, dock, floodArea, harbor, heliport, mountainousArea, offRoad, other, parking, parksGardens, path, protectArea, railwayLine, riskArea, river, road, rockyArea, sevesoArea, sideWalk, subwayLine, tramwayLine, tunnel'''
+      description: Zone of Works. A combination of these values. Enum:' airport, beach, bicyclePath, bridge, busCorridor, dock, floodArea, harbor, heliport, mountainousArea, offRoad, other, parking, parksGardens, path, protectArea, railwayLine, riskArea, river, road, rockyArea, sevesoArea, sideWalk, subwayLine, tramwayLine, tunnel'
       items:
         enum:
           - airport
@@ -3889,9 +4582,9 @@ CityWork:
     - type
     - location
   type: object
-  x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
+  x-derived-from: ''
+  x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/CityWork/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/CityWork/schema.json
-  x-model-tags: ""
+  x-model-tags: ''
   x-version: 0.4.1

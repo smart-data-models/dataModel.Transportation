@@ -62,7 +62,10 @@ Vehicle:
     annotations:
       description: Annotations about the item
       items:
+        description: Eventy element in the annotations
         type: string
+        x-ngsi:
+          type: Property
       type: array
       x-ngsi:
         model: https://schema.org/Text
@@ -98,6 +101,7 @@ Vehicle:
     category:
       description: Vehicle category(ies) from an external point of view. This is different than the vehicle type (car, lorry, etc.) represented by the `vehicleType` property. Enum:'municipalServices, nonTracked, private, public, specialUsage, tracked'. Tracked vehicles are those vehicles which position is permanently tracked by a remote system. Or any other needed by an application They incorporate a GPS receiver together with a network connection to periodically update a reported position (location, speed, heading ...)
       items:
+        description: Individual category items included for the vehicle
         enum:
           - municipalServices
           - nonTracked
@@ -106,6 +110,8 @@ Vehicle:
           - specialUsage
           - tracked
         type: string
+        x-ngsi:
+          type: Property
       type: array
       x-ngsi:
         model: https://schema.org/Text
@@ -174,7 +180,7 @@ Vehicle:
         model: https://schema.org/Text
         type: Property
     emergencyVehicleType:
-      description: Type of emergency vehicle corresponding to this observation. Enum:'policeCar, policeMotorcycle, policeVan, policeSWAT, fireEngine, waterTender, airAmbulance, ambulance, motorcycleAmbulance, rescueVehicle, hazardousMaterialsApparatus, towTruck
+      description: Type of emergency vehicle corresponding to this observation. Enum:'policeCar, policeMotorcycle, policeVan, policeSWAT, fireEngine, waterTender, airAmbulance, ambulance, motorcycleAmbulance, rescueVehicle, hazardousMaterialsApparatus, towTruck'pip ins
       enum:
         - policeCar
         - policeMotorcycle
@@ -195,6 +201,7 @@ Vehicle:
     feature:
       description: 'Feature(s) incorporated by the vehicle. Enum:'' abs, airbag, alarm, backCamera, disabledRamp, gps, internetConnection, overspeed, proximitySensor, wifi''. Or any other needed by the application. In order to represent multiple instances of a feature it can be used the following syntax: `<feature>,<occurences>`. For example, a car with 4 airbags will be represented by `airbag,4`'
       items:
+        description: Each of the features of the vehicle
         enum:
           - abs
           - airbag
@@ -207,6 +214,8 @@ Vehicle:
           - proximitySensor
           - wifi
         type: string
+        x-ngsi:
+          type: Property
       type: array
       x-ngsi:
         model: https://schema.org/Text
@@ -278,6 +287,62 @@ Vehicle:
       type: string
       x-ngsi:
         model: https://schema.org/URL
+        type: Property
+    leasingInfo:
+      description: Leasing contract information for the vehicle.
+      properties:
+        allowedAnnualDistance:
+          description: Maximum allowed annual distance according to lease contract
+          minimum: 0
+          type: number
+          x-ngsi:
+            type: Property
+        allowedDistanceUnit:
+          description: Unit for distance measurements in the lease contract
+          enum:
+            - kilometer
+            - mile
+          type: string
+          x-ngsi:
+            type: Property
+        excessDistanceCost:
+          description: Cost per unit distance for exceeding the allowed annual distance
+          minimum: 0
+          type: number
+          x-ngsi:
+            type: Property
+        leasingEndDate:
+          description: End date of the leasing contract
+          format: date-time
+          type: string
+          x-ngsi:
+            model: https://schema.org/DateTime
+            type: Property
+        leasingProvider:
+          description: Name or identifier of the leasing company
+          type: string
+          x-ngsi:
+            type: Property
+        leasingStartDate:
+          description: Start date of the leasing contract
+          format: date-time
+          type: string
+          x-ngsi:
+            model: https://schema.org/DateTime
+            type: Property
+        leasingType:
+          description: Type of leasing contract
+          type: string
+          x-ngsi:
+            type: Property
+        monthlyLeaseCost:
+          description: Fixed monthly lease payment amount in the contract currency
+          minimum: 0
+          type: number
+          x-ngsi:
+            type: Property
+      type: object
+      x-ngsi:
         type: Property
     license_plate:
       description: 'Gives the License Plate number of the vehicle. SameAs: license_plate field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'''
@@ -965,7 +1030,7 @@ Vehicle:
         - autorickshaw
         - bicycle
         - binTrolley
-        - BRT mini bus·
+        - BRT mini bus
         - BRT bus
         - bus
         - car
@@ -1046,8 +1111,8 @@ Vehicle:
     - location
   type: object
   x-derived-from: ''
-  x-disclaimer: Redistribution and use in source and binary forms...
+  x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/Vehicle/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/Vehicle/schema.json
   x-model-tags: IUDX, SEDIMARK
-  x-version: 0.2.2
+  x-version: 0.2.4
