@@ -1,11 +1,12 @@
 {
-  "id": "vehiclemodel:econic",
+  "id": "vehiclemodel:buzz",
   "type": "VehicleModel",
-  "name": "MBenz-Econic2014",
-  "brandName": "Mercedes Benz",
-  "modelName": "Econic",
-  "manufacturerName": "Daimler",
-  "vehicleType": "lorry",
-  "cargoVolume": 1000,
-  "fuelType": "diesel"
+  "name": "VW-IDBuzz",
+  "brandName": "Volkswagen",
+  "modelName": "ID. Buzz",
+  "manufacturerName": "Volkswagen",
+  "vehicleType": "car",
+  "fuelType": "electric",
+  "fuelConsumption": 20.7,
+  "tractionBatteryCapacity": 79
 }

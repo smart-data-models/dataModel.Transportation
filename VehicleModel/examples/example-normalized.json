@@ -1,32 +1,36 @@
 {
-  "id": "vehiclemodel:econic",
+  "id": "vehiclemodel:buzz",
   "type": "VehicleModel",
   "name": {
     "type": "Text",
-    "value": "MBenz-Econic2014"
-  },
-  "cargoVolume": {
-    "type": "Number",
-    "value": 1000
-  },
-  "modelName": {
-    "type": "Text",
-    "value": "Econic"
+    "value": "VW-IDBuzz"
   },
   "brandName": {
     "type": "Text",
-    "value": "Mercedes Benz"
+    "value": "Volkswagen"
+  },
+  "modelName": {
+    "type": "Text",
+    "value": "ID. Buzz"
   },
   "manufacturerName": {
     "type": "Text",
-    "value": "Daimler"
-  },
-  "fuelType": {
-    "type": "Text",
-    "value": "diesel"
+    "value": "Volkswagen"
   },
   "vehicleType": {
     "type": "Text",
-    "value": "lorry"
+    "value": "car"
+  },
+  "fuelType": {
+    "type": "Text",
+    "value": "electric"
+  },
+  "fuelConsumption": {
+    "type": "Number",
+    "value": 20.7
+  },
+  "tractionBatteryCapacity": {
+    "type": "Number",
+    "value": 79
   }
 }

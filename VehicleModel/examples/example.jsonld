@@ -1,13 +1,14 @@
 {
-  "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",
+  "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:buzz",
   "type": "VehicleModel",
-  "brandName": "Mercedes Benz",
-  "cargoVolume": 1000,
-  "fuelType": "diesel",
-  "manufacturerName": "Daimler",
-  "modelName": "Econic",
-  "name": "MBenz-Econic2014",
-  "vehicleType": "lorry",
+  "name": "VW-IDBuzz",
+  "brandName": "Volkswagen",
+  "modelName": "ID. Buzz",
+  "manufacturerName": "Volkswagen",
+  "vehicleType": "car",
+  "fuelType": "electric",
+  "fuelConsumption": 20.7,
+  "tractionBatteryCapacity": 79,
   "@context": [
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"

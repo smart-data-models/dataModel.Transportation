@@ -126,15 +126,15 @@ VehicleModel:
       x-ngsi:
         type: Property
     fuelConsumption:
-      description: The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km)
+      description: The amount of fuel or energy consumed for traveling a particular distance or temporal duration with the given vehicle. For combustion engines it is expressed in liters per 100 km, for electric vehicles (fuelType electric) in kilowatt hours per 100 km
       minimum: 0
       type: number
       x-ngsi:
         model: https://schema.org/fuelConsumption
         type: Property
-        units: liters per 100 kilometer
+        units: liters per 100 kilometer or kilowatt hour per 100 kilometer
     fuelType:
-      description: The type of fuel suitable for the engine or engines of the vehicle. Enum:'autogas, biodiesel, ethanol, cng, diesel, electric, gasoline, hybrid electric/diesel, hybrid electric/petrol, hydrogen, lpg, petrol, petrol(unleaded), petrol(leaded), other'
+      description: The type of fuel suitable for the engine or engines of the vehicle. Enum:'autogas, biodiesel, cng, diesel, electric, ethanol, gasoline, hybrid_electric_diesel, hybrid_electric_petrol, hydrogen, lpg, petrol, petrol(unleaded), petrol(leaded), other'
       enum:
         - autogas
         - biodiesel
@@ -153,7 +153,7 @@ VehicleModel:
         - other
       type: string
       x-ngsi:
-        model: https://schema.org/DateTime
+        model: https://schema.org/fuelType
         type: Property
     height:
       description: Vehicle's height
@@ -440,6 +440,14 @@ VehicleModel:
       type: string
       x-ngsi:
         type: Property
+    tractionBatteryCapacity:
+      description: Usable energy capacity of the traction battery of vehicles fully or partly powered by electricity (battery electric, plug-in hybrid or hybrid vehicles). Allows, for instance, estimating the driving range together with fuelConsumption
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: kilowatt hour
     type:
       description: NGSI Entity type. It has to be VehicleModel
       enum:
@@ -497,11 +505,11 @@ VehicleModel:
         model: https://schema.org/Text
         type: Property
     weight:
-      description: Vehicle's weigth
+      description: Vehicle's weight
       minimum: 0
       type: number
       x-ngsi:
-        model: https://schema.org/weigth
+        model: https://schema.org/weight
         type: Property
     width:
       description: Vehicle's width
@@ -524,4 +532,4 @@ VehicleModel:
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/VehicleModel/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/VehicleModel/schema.json
   x-model-tags: ''
-  x-version: 0.0.2
+  x-version: 0.0.3

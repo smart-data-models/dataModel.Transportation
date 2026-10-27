@@ -3,12 +3,12 @@
 Entity: VehicleModel  
 ====================<!-- /10-Header -->  
 <!-- 15-License -->  
-[Open License](https://github.com/smart-data-models//dataModel.Transportation/blob/master/VehicleModel/LICENSE.md)  
+[Open License](https://github.com/smart-data-models/dataModel.Transportation/blob/master/VehicleModel/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
 Global description: **This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.**  
-version: 0.0.2  
+version: 0.0.3  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
@@ -23,7 +23,7 @@
 	- `postalCode[string]`: The postal code. For example, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: The street address  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
 	- `streetNr[string]`: Number identifying a specific property on a public street    
-- `alternateName[string]`: An alternative name for this item  - `annotations[array]`: Annotations about the item  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `brandName[string]`: Vehicle's brand name  . Model: [https://schema.org/brand](https://schema.org/brand)- `cargoVolume[number]`: The available volume for cargo or luggage. For automobiles, this is usually the trunk volume. If only a single value is provided (type Number) it will refer to the maximum volume  . Model: [https://schema.org/cargoVolume](https://schema.org/cargoVolume)- `color[string]`: The color of the product  . Model: [https://schema.org/color](https://schema.org/color)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `depth[number]`: Vehicle's depth  . Model: [https://schema.org/depth](https://schema.org/depth)- `description[string]`: A description of this item  - `fuelConsumption[number]`: The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km)  . Model: [https://schema.org/fuelConsumption](https://schema.org/fuelConsumption)- `fuelType[string]`: The type of fuel suitable for the engine or engines of the vehicle. Enum:'autogas, biodiesel, ethanol, cng, diesel, electric, gasoline, hybrid electric/diesel, hybrid electric/petrol, hydrogen, lpg, petrol, petrol(unleaded), petrol(leaded), other'  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `height[number]`: Vehicle's height  . Model: [https://schema.org/height](https://schema.org/height)- `id[*]`: Unique identifier of the entity  - `image[uri]`: An image of the item  . Model: [https://schema.org/URL](https://schema.org/URL)- `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `manufacturerName[string]`: Vehicle's manufacturer name  . Model: [https://schema.org/Text](https://schema.org/Text)- `modelName[string]`: Vehicle's model name  . Model: [https://schema.org/model](https://schema.org/model)- `name[string]`: The name of this item  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `type[string]`: NGSI Entity type. It has to be VehicleModel  - `url[uri]`: URL which provides a description of this vehicle model  . Model: [https://schema.org/URL](https://schema.org/URL)- `vehicleEngine[string]`: Information about the engine or engines of the vehicle  . Model: [https://schema.org/vehicleEngine](https://schema.org/vehicleEngine)- `vehicleModelDate[date-time]`: The release date of a vehicle model (often used to differentiate versions of the same make and model)  . Model: [https://schema.org/vehicleModelDate](https://schema.org/vehicleModelDate)- `vehicleType[string]`: Type of vehicle from the point of view of its structural characteristics. This is different than the vehicle category . Enum:'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'. The following values defined by _VehicleTypeEnum_ and _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)  . Model: [https://schema.org/Text](https://schema.org/Text)- `weight[number]`: Vehicle's weigth  . Model: [https://schema.org/weigth](https://schema.org/weigth)- `width[number]`: Vehicle's width  . Model: [https://schema.org/width](https://schema.org/width)<!-- /30-PropertiesList -->  
+- `alternateName[string]`: An alternative name for this item  - `annotations[array]`: Annotations about the item  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `brandName[string]`: Vehicle's brand name  . Model: [https://schema.org/brand](https://schema.org/brand)- `cargoVolume[number]`: The available volume for cargo or luggage. For automobiles, this is usually the trunk volume. If only a single value is provided (type Number) it will refer to the maximum volume  . Model: [https://schema.org/cargoVolume](https://schema.org/cargoVolume)- `color[string]`: The color of the product  . Model: [https://schema.org/color](https://schema.org/color)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `depth[number]`: Vehicle's depth  . Model: [https://schema.org/depth](https://schema.org/depth)- `description[string]`: A description of this item  - `fuelConsumption[number]`: The amount of fuel or energy consumed for traveling a particular distance or temporal duration with the given vehicle. For combustion engines it is expressed in liters per 100 km, for electric vehicles (fuelType electric) in kilowatt hours per 100 km  . Model: [https://schema.org/fuelConsumption](https://schema.org/fuelConsumption)- `fuelType[string]`: The type of fuel suitable for the engine or engines of the vehicle. Enum:'autogas, biodiesel, cng, diesel, electric, ethanol, gasoline, hybrid_electric_diesel, hybrid_electric_petrol, hydrogen, lpg, petrol, petrol(unleaded), petrol(leaded), other'  . Model: [https://schema.org/fuelType](https://schema.org/fuelType)- `height[number]`: Vehicle's height  . Model: [https://schema.org/height](https://schema.org/height)- `id[*]`: Unique identifier of the entity  - `image[uri]`: An image of the item  . Model: [https://schema.org/URL](https://schema.org/URL)- `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `manufacturerName[string]`: Vehicle's manufacturer name  . Model: [https://schema.org/Text](https://schema.org/Text)- `modelName[string]`: Vehicle's model name  . Model: [https://schema.org/model](https://schema.org/model)- `name[string]`: The name of this item  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `tractionBatteryCapacity[number]`: Usable energy capacity of the traction battery of vehicles fully or partly powered by electricity (battery electric, plug-in hybrid or hybrid vehicles). Allows, for instance, estimating the driving range together with fuelConsumption  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: NGSI Entity type. It has to be VehicleModel  - `url[uri]`: URL which provides a description of this vehicle model  . Model: [https://schema.org/URL](https://schema.org/URL)- `vehicleEngine[string]`: Information about the engine or engines of the vehicle  . Model: [https://schema.org/vehicleEngine](https://schema.org/vehicleEngine)- `vehicleModelDate[date-time]`: The release date of a vehicle model (often used to differentiate versions of the same make and model)  . Model: [https://schema.org/vehicleModelDate](https://schema.org/vehicleModelDate)- `vehicleType[string]`: Type of vehicle from the point of view of its structural characteristics. This is different than the vehicle category . Enum:'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'. The following values defined by _VehicleTypeEnum_ and _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)  . Model: [https://schema.org/Text](https://schema.org/Text)- `weight[number]`: Vehicle's weight  . Model: [https://schema.org/weight](https://schema.org/weight)- `width[number]`: Vehicle's width  . Model: [https://schema.org/width](https://schema.org/width)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Required properties  
 - `brandName`  - `id`  - `manufacturerName`  - `modelName`  - `name`  - `type`  - `vehicleType`  <!-- /35-RequiredProperties -->  
@@ -164,15 +164,15 @@ VehicleModel:
       x-ngsi:    
         type: Property    
     fuelConsumption:    
-      description: The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km)    
+      description: The amount of fuel or energy consumed for traveling a particular distance or temporal duration with the given vehicle. For combustion engines it is expressed in liters per 100 km, for electric vehicles (fuelType electric) in kilowatt hours per 100 km    
       minimum: 0    
       type: number    
       x-ngsi:    
         model: https://schema.org/fuelConsumption    
         type: Property    
-        units: liters per 100 kilometer    
+        units: liters per 100 kilometer or kilowatt hour per 100 kilometer    
     fuelType:    
-      description: The type of fuel suitable for the engine or engines of the vehicle. Enum:'autogas, biodiesel, ethanol, cng, diesel, electric, gasoline, hybrid electric/diesel, hybrid electric/petrol, hydrogen, lpg, petrol, petrol(unleaded), petrol(leaded), other'    
+      description: The type of fuel suitable for the engine or engines of the vehicle. Enum:'autogas, biodiesel, cng, diesel, electric, ethanol, gasoline, hybrid_electric_diesel, hybrid_electric_petrol, hydrogen, lpg, petrol, petrol(unleaded), petrol(leaded), other'    
       enum:    
         - autogas    
         - biodiesel    
@@ -191,7 +191,7 @@ VehicleModel:
         - other    
       type: string    
       x-ngsi:    
-        model: https://schema.org/DateTime    
+        model: https://schema.org/fuelType    
         type: Property    
     height:    
       description: Vehicle's height    
@@ -478,6 +478,14 @@ VehicleModel:
       type: string    
       x-ngsi:    
         type: Property    
+    tractionBatteryCapacity:    
+      description: Usable energy capacity of the traction battery of vehicles fully or partly powered by electricity (battery electric, plug-in hybrid or hybrid vehicles). Allows, for instance, estimating the driving range together with fuelConsumption    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: kilowatt hour    
     type:    
       description: NGSI Entity type. It has to be VehicleModel    
       enum:    
@@ -535,11 +543,11 @@ VehicleModel:
         model: https://schema.org/Text    
         type: Property    
     weight:    
-      description: Vehicle's weigth    
+      description: Vehicle's weight    
       minimum: 0    
       type: number    
       x-ngsi:    
-        model: https://schema.org/weigth    
+        model: https://schema.org/weight    
         type: Property    
     width:    
       description: Vehicle's width    
@@ -558,11 +566,11 @@ VehicleModel:
     - manufacturerName    
   type: object    
   x-derived-from: ''    
-  x-disclaimer: Redistribution and use in source and binary forms...    
+  x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/VehicleModel/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/VehicleModel/schema.json    
   x-model-tags: ''    
-  x-version: 0.0.2    
+  x-version: 0.0.3    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -571,56 +579,61 @@ VehicleModel:
 <!-- 80-Examples -->  
 ## Example payloads    
 #### VehicleModel NGSI-v2 key-values Example    
-Here is an example of a VehicleModel in JSON format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+Here is an example of a VehicleModel in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "vehiclemodel:econic",  
+  "id": "vehiclemodel:buzz",  
   "type": "VehicleModel",  
-  "name": "MBenz-Econic2014",  
-  "brandName": "Mercedes Benz",  
-  "modelName": "Econic",  
-  "manufacturerName": "Daimler",  
-  "vehicleType": "lorry",  
-  "cargoVolume": 1000,  
-  "fuelType": "diesel"  
+  "name": "VW-IDBuzz",  
+  "brandName": "Volkswagen",  
+  "modelName": "ID. Buzz",  
+  "manufacturerName": "Volkswagen",  
+  "vehicleType": "car",  
+  "fuelType": "electric",  
+  "fuelConsumption": 20.7,  
+  "tractionBatteryCapacity": 79  
 }  
 ```  
 </details>  
 #### VehicleModel NGSI-v2 normalized Example    
-Here is an example of a VehicleModel in JSON format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+Here is an example of a VehicleModel in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "vehiclemodel:econic",  
+  "id": "vehiclemodel:buzz",  
   "type": "VehicleModel",  
   "name": {  
     "type": "Text",  
-    "value": "MBenz-Econic2014"  
-  },  
-  "cargoVolume": {  
-    "type": "Number",  
-    "value": 1000  
-  },  
-  "modelName": {  
-    "type": "Text",  
-    "value": "Econic"  
+    "value": "VW-IDBuzz"  
   },  
   "brandName": {  
     "type": "Text",  
-    "value": "Mercedes Benz"  
+    "value": "Volkswagen"  
+  },  
+  "modelName": {  
+    "type": "Text",  
+    "value": "ID. Buzz"  
   },  
   "manufacturerName": {  
     "type": "Text",  
-    "value": "Daimler"  
-  },  
-  "fuelType": {  
-    "type": "Text",  
-    "value": "diesel"  
+    "value": "Volkswagen"  
   },  
   "vehicleType": {  
     "type": "Text",  
-    "value": "lorry"  
+    "value": "car"  
+  },  
+  "fuelType": {  
+    "type": "Text",  
+    "value": "electric"  
+  },  
+  "fuelConsumption": {  
+    "type": "Number",  
+    "value": 20.7  
+  },  
+  "tractionBatteryCapacity": {  
+    "type": "Number",  
+    "value": 79  
   }  
 }  
 ```  
@@ -630,15 +643,16 @@ VehicleModel:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",  
+  "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:buzz",  
   "type": "VehicleModel",  
-  "brandName": "Mercedes Benz",  
-  "cargoVolume": 1000,  
-  "fuelType": "diesel",  
-  "manufacturerName": "Daimler",  
-  "modelName": "Econic",  
-  "name": "MBenz-Econic2014",  
-  "vehicleType": "lorry",  
+  "name": "VW-IDBuzz",  
+  "brandName": "Volkswagen",  
+  "modelName": "ID. Buzz",  
+  "manufacturerName": "Volkswagen",  
+  "vehicleType": "car",  
+  "fuelType": "electric",  
+  "fuelConsumption": 20.7,  
+  "tractionBatteryCapacity": 79,  
   "@context": [  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
@@ -651,35 +665,39 @@ VehicleModel:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",  
+    "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:buzz",  
     "type": "VehicleModel",  
+    "name": {  
+        "type": "Property",  
+        "value": "VW-IDBuzz"  
+    },  
     "brandName": {  
         "type": "Property",  
-        "value": "Mercedes Benz"  
-    },  
-    "cargoVolume": {  
-        "type": "Property",  
-        "value": 1000  
-    },  
-    "fuelType": {  
-        "type": "Property",  
-        "value": "diesel"  
-    },  
-    "manufacturerName": {  
-        "type": "Property",  
-        "value": "Daimler"  
+        "value": "Volkswagen"  
     },  
     "modelName": {  
         "type": "Property",  
-        "value": "Econic"  
+        "value": "ID. Buzz"  
     },  
-    "name": {  
+    "manufacturerName": {  
         "type": "Property",  
-        "value": "MBenz-Econic2014"  
+        "value": "Volkswagen"  
     },  
     "vehicleType": {  
         "type": "Property",  
-        "value": "lorry"  
+        "value": "car"  
+    },  
+    "fuelType": {  
+        "type": "Property",  
+        "value": "electric"  
+    },  
+    "fuelConsumption": {  
+        "type": "Property",  
+        "value": 20.7  
+    },  
+    "tractionBatteryCapacity": {  
+        "type": "Property",  
+        "value": 79  
     },  
     "@context": [  
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  

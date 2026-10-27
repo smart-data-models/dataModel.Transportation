@@ -1,2 +1,2 @@
-"id_", "type_", "brandName_", "cargoVolume_", "fuelType_", "manufacturerName_", "modelName_", "name_", "vehicleType_", "@context__0_", "@context__1_"
-"urn:ngsi-ld:VehicleModel:vehiclemodel:econic", "VehicleModel", "Mercedes Benz", "1000", "diesel", "Daimler", "Econic", "MBenz-Econic2014", "lorry", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld", "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
+"id", "type", "name", "brandName", "modelName", "manufacturerName", "vehicleType", "fuelType", "fuelConsumption", "tractionBatteryCapacity", "@context__0", "@context__1"
+"urn:ngsi-ld:VehicleModel:vehiclemodel:buzz", "VehicleModel", "VW-IDBuzz", "Volkswagen", "ID. Buzz", "Volkswagen", "car", "electric", "20.7", "79", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld", "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"

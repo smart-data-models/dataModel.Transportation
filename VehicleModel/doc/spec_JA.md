@@ -1,106 +1,41 @@
-<!-- 10-Header -->
-  
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティ: VehicleModel  
+====================<!-- /10-Header -->  
+<!-- 15-License -->  
+[オープンライセンス](https://github.com/smart-data-models/dataModel.Transportation/blob/master/VehicleModel/LICENSE.md)  
+[自動生成されたドキュメント](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバル説明: **このエンティティは、特定の車両モデルをモデル化しており、そのモデルに属する複数の車両インスタンスに共通するすべてのプロパティを含みます。**  
+version: 0.0.3  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-実体: VehicleModel  
-====================
-<!-- /10-Header -->
-  
-<!-- 15-License -->
-  
+## プロパティリスト  
 
-[オープンライセンス](https://github.com/smart-data-models//dataModel.Transportation/blob/master/VehicleModel/LICENSE.md)  
-
-[自動生成された文書](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-<!-- /15-License -->
-  
-<!-- 20-Description -->
-  
-
-Global description: **このエンティティは、特定の車両モデルをモデル化し、そのようなモデルに属する複数の車両インスタンスに共通するすべてのプロパティを含む。**  
-
-version: 0.0.2  
-<!-- /20-Description -->
-  
-<!-- 30-PropertiesList -->
-  
-
-
-## プロパティの一覧  
-
-
-<sup><sub>[*] 属性に型がないのは、それが複数の型や異なる形式/パターンを持つ可能性があるためです。</sub></sup>  
-- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)  
-	- `addressCountry[string]`: その国。例えば、スペイン  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)    
-	- `addressLocality[string]`: 住所が存在する地域、およびその地域が存在する地域  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)    
-	- `addressRegion[string]`: その地域は、自治体が存在し、かつその国に位置する地域です。  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)    
-	- `district[string]`: 地区は、行政区画の一種であり、一部の国では地方自治体によって管理される  
-	- `postOfficeBoxNumber[string]`: ポストオフィスボックス番号は、ポストオフィスボックス住所の場合。たとえば、03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)    
-	- `postalCode[string]`: 郵便番号。例えば、24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)    
-	- `streetAddress[string]`: 住所  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)    
-	- `streetNr[string]`: 公道上の特定の物件を識別する番号  
-- `alternateName[string]`: このアイテムの別名  
-- `annotations[array]`: アイテムに関する注釈  . Model: [https://schema.org/Text](https://schema.org/Text)  
-- `areaServed[string]`: サービスまたは提供されるアイテムが提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)  
-- `brandName[string]`: 車のブランド名  . Model: [https://schema.org/brand](https://schema.org/brand)  
-- `cargoVolume[number]`: 貨物または手荷物のために利用可能な容積。自動車の場合、これは通常トランクの容積です。単一の値のみが提供される場合（タイプ Number）は、最大容積を参照します。  . Model: [https://schema.org/cargoVolume](https://schema.org/cargoVolume)  
-- `color[string]`: 製品の色  . Model: [https://schema.org/color](https://schema.org/color)  
-- `dataProvider[string]`: 調和データエンティティの提供者を識別する文字列のシーケンス  
-- `dateCreated[date-time]`: エンティティ作成タイムスタンプ。このタイムスタンプは通常、ストレージプラットフォームによって割り当てられる  
-- `dateModified[date-time]`: エンティティの最後の変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  
-- `depth[number]`: 車両の深さ  . Model: [https://schema.org/depth](https://schema.org/depth)  
-- `description[string]`: このアイテムの説明  
-- `fuelConsumption[number]`: 特定の距離または時間間隔を移動するために与えられた車両（例：100kmあたりのリットル）で消費される燃料の量  . Model: [https://schema.org/fuelConsumption](https://schema.org/fuelConsumption)  
-- `fuelType[string]`: 車両のエンジンまたはエンジンに適した燃料の種類。 Enum:'オートガス、バイオディーゼル、エタノール、CNG、ディーゼル、電気、ガソリン、ハイブリッド電気/ディーゼル、ハイブリッド電気/ガソリン、水素、LPG、ガソリン、無鉛ガソリン、有鉛ガソリン、その他'  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)  
-- `height[number]`: 車両の高さ  . Model: [https://schema.org/height](https://schema.org/height)  
-- `id[*]`: エンティティの固有識別子  
-- `image[uri]`: アイテムの画像  . Model: [https://schema.org/URL](https://schema.org/URL)  
-- `location[*]`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、またはMultiPolygonのいずれかになります。  
-- `manufacturerName[string]`: 車の製造元名  . Model: [https://schema.org/Text](https://schema.org/Text)  
-- `modelName[string]`: 車のモデル名  . Model: [https://schema.org/model](https://schema.org/model)  
-- `name[string]`: このアイテムの名前  
-- `owner[array]`: 所有者のユニークIDを参照する文字シーケンスのJSONエンコードされたシーケンスを含むリスト  
-- `seeAlso[*]`: アイテムに関する追加のリソースを指すURIのリスト  
-- `source[string]`: エンティティデータの元の情報源をURLとして表す文字列のシーケンス。情報源プロバイダーの完全修飾ドメイン名、または情報源オブジェクトへのURLであることが推奨される。  
-- `type[string]`: NGSIエンティティタイプ。VehicleModelでなければなりません。  
-- `url[uri]`: この車両モデルについての説明を提供するURL  . Model: [https://schema.org/URL](https://schema.org/URL)  
-- `vehicleEngine[string]`: 車両のエンジンまたはエンジンの情報  . Model: [https://schema.org/vehicleEngine](https://schema.org/vehicleEngine)  
-- `vehicleModelDate[date-time]`: 自動車のモデル（同一メーカー・同一モデルのバージョンを区別するためによく使用される）発売日  . Model: [https://schema.org/vehicleModelDate](https://schema.org/vehicleModelDate)  
-- `vehicleType[string]`: 車両の構造的特性からの車両の種類。これは、車両カテゴリとは異なる。列挙型：'農業車両、任意の車両、連節車両、自転車、ごみ収集トロリー、バス、乗用車、キャラバン、乗用車または軽車両、キャラバン付車両、トレーラー付車両、清掃トロリー、建設またはメンテナンス車両、四輪駆動車、高床車、トラック、ミニバス、原動機付自転車、オートバイ、サイドカー付オートバイ、モペッド、清掃機、タンカー、三輪車、トレーラー、路面電車、สอง輪車、トロリー、バン、触媒コンバータなし車両、キャラバン付車両、トレーラー付車両、偶数のナンバープレート、奇数のナンバープレート、その他'。以下の値は、_VehicleTypeEnum_および_VehicleTypeEnum2_によって定義され、[DATEX 2バージョン2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)によって参照される。  . Model: [https://schema.org/Text](https://schema.org/Text)  
-- `weight[number]`: 車両重量  . Model: [https://schema.org/weigth](https://schema.org/weigth)  
-- `width[number]`: 車両の幅  . Model: [https://schema.org/width](https://schema.org/width)  
-<!-- /30-PropertiesList -->
-  
-<!-- 35-RequiredProperties -->
-  
-
-必須プロパティ  
-- `ブランド名`  
-- `ID`  
-- `manufacturerName` → メーカー名  
-- `モデル名`  
-- `名前`  
-- `タイプ`  
-- `車両タイプ`  
-<!-- /35-RequiredProperties -->
-  
-<!-- 40-NotesYaml -->
-  
-<!-- /40-NotesYaml -->
-  
-<!-- 50-DataModelHeader -->
-  
-
-## データモデルのプロパティの説明  
-
-アルファベット順に並べ替え（詳細）  
-<!-- /50-DataModelHeader -->
-  
-<!-- 60-ModelYaml -->
-  
+<sup><sub>[*] 属性に型がない場合、それは複数の型または異なる形式/パターンを持つ可能性があるためです。</sub></sup>  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 国。例：スペイン  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: 番地が存在し、その地域内にある場所（都市/町村など）  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: その場所が存在し、その国内にある地域  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 地区とは、一部の国において地方政府によって管理される行政区画の一種です。    
+	- `postOfficeBoxNumber[string]`: 私書箱住所の私書箱番号。例：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: 郵便番号。例：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: 番地  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: 公道上の特定の物件を識別する番号    
+- `alternateName[string]`: このアイテムの別名  - `annotations[array]`: アイテムに関する注釈  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: サービスまたは提供されるアイテムが提供される地理的領域  . Model: [https://schema.org/Text](https://schema.org/Text)- `brandName[string]`: 車両のブランド名  . Model: [https://schema.org/brand](https://schema.org/brand)- `cargoVolume[number]`: 貨物または荷物の利用可能な容積。自動車の場合、通常はトランク容積です。単一の値（型がNumber）のみが提供される場合、それは最大容積を指します。  . Model: [https://schema.org/cargoVolume](https://schema.org/cargoVolume)- `color[string]`: 製品の色  . Model: [https://schema.org/color](https://schema.org/color)- `dataProvider[string]`: 統合されたデータエンティティのプロバイダーを識別する一連の文字  - `dateCreated[date-time]`: エンティティ作成日時。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified[date-time]`: エンティティの最終変更のタイムスタンプ。通常、ストレージプラットフォームによって割り当てられます。  - `depth[number]`: 車両の奥行き  . Model: [https://schema.org/depth](https://schema.org/depth)- `description[string]`: このアイテムの説明  - `fuelConsumption[number]`: 与えられた車両で特定の距離または時間移動するために消費される燃料またはエネルギーの量。内燃機関の場合、100kmあたりリットルで表され、電気自動車（fuelType electric）の場合、100kmあたりキロワット時で表されます。  . Model: [https://schema.org/fuelConsumption](https://schema.org/fuelConsumption)- `fuelType[string]`: 車両のエンジンに適した燃料のタイプ。Enum: 'autogas, biodiesel, cng, diesel, electric, ethanol, gasoline, hybrid_electric_diesel, hybrid_electric_petrol, hydrogen, lpg, petrol, petrol(unleaded), petrol(leaded), other'  . Model: [https://schema.org/fuelType](https://schema.org/fuelType)- `height[number]`: 車両の高さ  . Model: [https://schema.org/height](https://schema.org/height)- `id[*]`: エンティティの一意な識別子  - `image[uri]`: アイテムの画像  . Model: [https://schema.org/URL](https://schema.org/URL)- `location[*]`: アイテムへのGeoJSON参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `manufacturerName[string]`: 車両の製造者名  . Model: [https://schema.org/Text](https://schema.org/Text)- `modelName[string]`: 車両のモデル名  . Model: [https://schema.org/model](https://schema.org/model)- `name[string]`: このアイテムの名前  - `owner[array]`: 所有者の一意のIDを参照する、JSONエンコードされた文字のシーケンスを含むリスト  - `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `source[string]`: エンティティデータの元のソースをURLとして示す一連の文字。ソースプロバイダーの完全修飾ドメイン名、またはソースオブジェクトへのURLであることが推奨されます。  - `tractionBatteryCapacity[number]`: 全体的または部分的に電力で駆動される車両（バッテリーEV、プラグインハイブリッド、またはハイブリッド車両）の駆動用バッテリーの利用可能なエネルギー容量。これにより、例えば、燃費と合わせて航続距離を推定することができます。  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: NGSIエンティティタイプ。VehicleModelである必要があります。  - `url[uri]`: この車両モデルの説明を提供するURL。  . Model: [https://schema.org/URL](https://schema.org/URL)- `vehicleEngine[string]`: 車両のエンジンに関する情報  . Model: [https://schema.org/vehicleEngine](https://schema.org/vehicleEngine)- `vehicleModelDate[date-time]`: 車両モデルのリリース日（同じメーカーとモデルのバージョンを区別するためによく使用されます）。  . Model: [https://schema.org/vehicleModelDate](https://schema.org/vehicleModelDate)- `vehicleType[string]`: 構造的特性から見た車両のタイプ。これは車両カテゴリとは異なります。Enum: 'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'。以下の値は_VehicleTypeEnum_と_VehicleTypeEnum2_、[DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)によって定義されています。  . Model: [https://schema.org/Text](https://schema.org/Text)- `weight[number]`: 車両の重量  . Model: [https://schema.org/weight](https://schema.org/weight)- `width[number]`: 車両の幅  . Model: [https://schema.org/width](https://schema.org/width)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必須プロパティ  
+- `brandName`  - `id`  - `manufacturerName`  - `modelName`  - `name`  - `type`  - `vehicleType`  <!-- /35-RequiredProperties -->  
+<!-- 40-NotesYaml -->  
+<!-- /40-NotesYaml -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順にソートされています（詳細はこちらをクリック）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
-
-```yaml  
+```yaml  
 VehicleModel:    
   description: This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.    
   properties:    
@@ -229,15 +164,15 @@ VehicleModel:
       x-ngsi:    
         type: Property    
     fuelConsumption:    
-      description: The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km)    
+      description: The amount of fuel or energy consumed for traveling a particular distance or temporal duration with the given vehicle. For combustion engines it is expressed in liters per 100 km, for electric vehicles (fuelType electric) in kilowatt hours per 100 km    
       minimum: 0    
       type: number    
       x-ngsi:    
         model: https://schema.org/fuelConsumption    
         type: Property    
-        units: liters per 100 kilometer    
+        units: liters per 100 kilometer or kilowatt hour per 100 kilometer    
     fuelType:    
-      description: The type of fuel suitable for the engine or engines of the vehicle. Enum:'autogas, biodiesel, ethanol, cng, diesel, electric, gasoline, hybrid electric/diesel, hybrid electric/petrol, hydrogen, lpg, petrol, petrol(unleaded), petrol(leaded), other'    
+      description: The type of fuel suitable for the engine or engines of the vehicle. Enum:'autogas, biodiesel, cng, diesel, electric, ethanol, gasoline, hybrid_electric_diesel, hybrid_electric_petrol, hydrogen, lpg, petrol, petrol(unleaded), petrol(leaded), other'    
       enum:    
         - autogas    
         - biodiesel    
@@ -256,7 +191,7 @@ VehicleModel:
         - other    
       type: string    
       x-ngsi:    
-        model: https://schema.org/DateTime    
+        model: https://schema.org/fuelType    
         type: Property    
     height:    
       description: Vehicle's height    
@@ -543,6 +478,14 @@ VehicleModel:
       type: string    
       x-ngsi:    
         type: Property    
+    tractionBatteryCapacity:    
+      description: Usable energy capacity of the traction battery of vehicles fully or partly powered by electricity (battery electric, plug-in hybrid or hybrid vehicles). Allows, for instance, estimating the driving range together with fuelConsumption    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: kilowatt hour    
     type:    
       description: NGSI Entity type. It has to be VehicleModel    
       enum:    
@@ -600,11 +543,11 @@ VehicleModel:
         model: https://schema.org/Text    
         type: Property    
     weight:    
-      description: Vehicle's weigth    
+      description: Vehicle's weight    
       minimum: 0    
       type: number    
       x-ngsi:    
-        model: https://schema.org/weigth    
+        model: https://schema.org/weight    
         type: Property    
     width:    
       description: Vehicle's width    
@@ -623,104 +566,93 @@ VehicleModel:
     - manufacturerName    
   type: object    
   x-derived-from: ''    
-  x-disclaimer: Redistribution and use in source and binary forms...    
+  x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/VehicleModel/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/VehicleModel/schema.json    
   x-model-tags: ''    
-  x-version: 0.0.2    
+  x-version: 0.0.3    
 ```  
 </details>    
-<!-- /60-ModelYaml -->
-  
-<!-- 70-MiddleNotes -->
-  
-<!-- /70-MiddleNotes -->
-  
-<!-- 80-Examples -->
-  
-
-## 例のペイロード  
-
-#### VehicleModel NGSI-v2 キー値の例  
-
-ここでは、キーと値のペアとしてのJSON形式のVehicleModelの例を示します。これは、`options=keyValues`を使用してNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
+## 例のペイロード  
+#### VehicleModel NGSI-v2 キーバリューの例  
+キーバリュー形式のJSON-LD形式のVehicleModelの例を以下に示します。これは`options=keyValues`を使用する場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
-
-```json  
-
-{  
-  "id": "vehiclemodel:econic",  
+```json  
+{  
+  "id": "vehiclemodel:buzz",  
   "type": "VehicleModel",  
-  "name": "MBenz-Econic2014",  
-  "brandName": "Mercedes Benz",  
-  "modelName": "Econic",  
-  "manufacturerName": "Daimler",  
-  "vehicleType": "lorry",  
-  "cargoVolume": 1000,  
-  "fuelType": "diesel"  
+  "name": "VW-IDBuzz",  
+  "brandName": "Volkswagen",  
+  "modelName": "ID. Buzz",  
+  "manufacturerName": "Volkswagen",  
+  "vehicleType": "car",  
+  "fuelType": "electric",  
+  "fuelConsumption": 20.7,  
+  "tractionBatteryCapacity": 79  
 }  
 ```  
 </details>  
-
-#### VehicleModel NGSI-v2 正規化例  
-
-ここでは、正規化されたJSON形式のVehicleModelの例を示します。これは、オプションを使用しない場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### VehicleModel NGSI-v2 正規化された例  
+正規化されたJSON-LD形式のVehicleModelの例を以下に示します。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
-
-```json  
-
-{  
-  "id": "vehiclemodel:econic",  
+```json  
+{  
+  "id": "vehiclemodel:buzz",  
   "type": "VehicleModel",  
   "name": {  
     "type": "Text",  
-    "value": "MBenz-Econic2014"  
-  },  
-  "cargoVolume": {  
-    "type": "Number",  
-    "value": 1000  
-  },  
-  "modelName": {  
-    "type": "Text",  
-    "value": "Econic"  
+    "value": "VW-IDBuzz"  
   },  
   "brandName": {  
     "type": "Text",  
-    "value": "Mercedes Benz"  
+    "value": "Volkswagen"  
+  },  
+  "modelName": {  
+    "type": "Text",  
+    "value": "ID. Buzz"  
   },  
   "manufacturerName": {  
     "type": "Text",  
-    "value": "Daimler"  
-  },  
-  "fuelType": {  
-    "type": "Text",  
-    "value": "diesel"  
+    "value": "Volkswagen"  
   },  
   "vehicleType": {  
     "type": "Text",  
-    "value": "lorry"  
+    "value": "car"  
+  },  
+  "fuelType": {  
+    "type": "Text",  
+    "value": "electric"  
+  },  
+  "fuelConsumption": {  
+    "type": "Number",  
+    "value": 20.7  
+  },  
+  "tractionBatteryCapacity": {  
+    "type": "Number",  
+    "value": 79  
   }  
 }  
 ```  
 </details>  
-
-#### VehicleModel NGSI-LD キー値の例  
-
-ここでは、JSON-LD形式のキーワード値のVehicleModelの例を示します。これは、`options=keyValues`を使用してNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### VehicleModel NGSI-LD キーバリューの例  
+キーバリュー形式のJSON-LD形式のVehicleModelの例を以下に示します。これは`options=keyValues`を使用する場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
-
-```json  
-
-{  
-  "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",  
+```json  
+{  
+  "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:buzz",  
   "type": "VehicleModel",  
-  "brandName": "Mercedes Benz",  
-  "cargoVolume": 1000,  
-  "fuelType": "diesel",  
-  "manufacturerName": "Daimler",  
-  "modelName": "Econic",  
-  "name": "MBenz-Econic2014",  
-  "vehicleType": "lorry",  
+  "name": "VW-IDBuzz",  
+  "brandName": "Volkswagen",  
+  "modelName": "ID. Buzz",  
+  "manufacturerName": "Volkswagen",  
+  "vehicleType": "car",  
+  "fuelType": "electric",  
+  "fuelConsumption": 20.7,  
+  "tractionBatteryCapacity": 79,  
   "@context": [  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
@@ -728,44 +660,44 @@ VehicleModel:
 }  
 ```  
 </details>  
-
-#### VehicleModel NGSI-LD 正規化例  
-
-ここでは、正規化されたJSON-LD形式のVehicleModelの例を示します。これは、オプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### VehicleModel NGSI-LD 正規化された例  
+正規化されたJSON-LD形式のVehicleModelの例を以下に示します。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
-
-```json  
-
-{  
-    "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",  
+```json  
+{  
+    "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:buzz",  
     "type": "VehicleModel",  
+    "name": {  
+        "type": "Property",  
+        "value": "VW-IDBuzz"  
+    },  
     "brandName": {  
         "type": "Property",  
-        "value": "Mercedes Benz"  
-    },  
-    "cargoVolume": {  
-        "type": "Property",  
-        "value": 1000  
-    },  
-    "fuelType": {  
-        "type": "Property",  
-        "value": "diesel"  
-    },  
-    "manufacturerName": {  
-        "type": "Property",  
-        "value": "Daimler"  
+        "value": "Volkswagen"  
     },  
     "modelName": {  
         "type": "Property",  
-        "value": "Econic"  
+        "value": "ID. Buzz"  
     },  
-    "name": {  
+    "manufacturerName": {  
         "type": "Property",  
-        "value": "MBenz-Econic2014"  
+        "value": "Volkswagen"  
     },  
     "vehicleType": {  
         "type": "Property",  
-        "value": "lorry"  
+        "value": "car"  
+    },  
+    "fuelType": {  
+        "type": "Property",  
+        "value": "electric"  
+    },  
+    "fuelConsumption": {  
+        "type": "Property",  
+        "value": 20.7  
+    },  
+    "tractionBatteryCapacity": {  
+        "type": "Property",  
+        "value": 79  
     },  
     "@context": [  
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
@@ -773,21 +705,12 @@ VehicleModel:
     ]  
 }  
 ```  
-</details><!-- /80-Examples -->
-  
-<!-- 90-FooterNotes -->
-  
-<!-- /90-FooterNotes -->
-  
-<!-- 95-Units -->
-  
-
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
-<!-- /95-Units -->
-  
-<!-- 97-LastFooter -->
-  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+規模単位の扱い方については、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
 ---  
-
-[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->
-  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  

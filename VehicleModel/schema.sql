@@ -27,6 +27,7 @@ CREATE TABLE VehicleModel (
   "owner" JSON,
   "seeAlso" JSON,
   "source" TEXT,
+  "tractionBatteryCapacity" NUMERIC,
   "type" VehicleModel_type,
   "url" TEXT,
   "vehicleEngine" TEXT,

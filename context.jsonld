@@ -459,6 +459,7 @@
         "totalPedestrianPathWidth": "https://smartdatamodels.org/dataModel.Transportation/totalPedestrianPathWidth",
         "totalSlotNumber": "https://smartdatamodels.org/dataModel.Transportation/totalSlotNumber",
         "towardsObserver": "https://smartdatamodels.org/dataModel.Transportation/towardsObserver",
+        "tractionBatteryCapacity": "https://smartdatamodels.org/dataModel.Transportation/tractionBatteryCapacity",
         "tramwayImpacted": "https://smartdatamodels.org/dataModel.Transportation/tramwayImpacted",
         "transactionDateTime": "https://smartdatamodels.org/dataModel.Transportation/transactionDateTime",
         "transactionId": "https://smartdatamodels.org/dataModel.Transportation/transactionId",

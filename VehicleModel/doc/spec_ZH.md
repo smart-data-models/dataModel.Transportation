@@ -1,106 +1,41 @@
-<!-- 10-Header -->
-  
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+实体：VehicleModel  
+===============<!-- /10-Header -->  
+<!-- 15-License -->  
+[开放许可](https://github.com/smart-data-models/dataModel.Transportation/blob/master/VehicleModel/LICENSE.md)  
+[自动生成的文档](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+全局描述：**此实体建模特定的车辆型号，包括属于该型号的多个车辆实例共有的所有属性。**  
+version: 0.0.3  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-实体: VehicleModel  
-====================
-<!-- /10-Header -->
-  
-<!-- 15-License -->
-  
+## 属性列表  
 
-[开放许可证](https://github.com/smart-data-models//dataModel.Transportation/blob/master/VehicleModel/LICENSE.md)  
-
-[自动生成文档](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-<!-- /15-License -->
-  
-<!-- 20-Description -->
-  
-
-Global description: **该实体模拟一种特定的车辆型号，包括所有属于此型号的多个车辆实例的共同属性。**  
-
-version: 0.0.2  
-<!-- /20-Description -->
-  
-<!-- 30-PropertiesList -->
-  
-
-
-## 属性列表  
-
-
-<sup><sub>[*] 如果一个属性中没有指定类型，是因为它可能有多种类型或不同的格式/模式</sub></sup>  
-- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)  
-	- `addressCountry[string]`: 这个国家。例如，西班牙  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)    
-	- `addressLocality[string]`: 街道地址所在的地区，以及该地区所在的区域  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)    
-	- `addressRegion[string]`: 该地所在的地区，以及该国所在的地区  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)    
-	- `district[string]`: 區域是一種行政區劃類型，在一些國家由地方政府管理  
-	- `postOfficeBoxNumber[string]`: 邮政信箱的邮政信箱编号。例如，03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)    
-	- `postalCode[string]`: 邮政编码。例如，24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)    
-	- `streetAddress[string]`: 街道地址  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)    
-	- `streetNr[string]`: 公共街道上特定房产的编号  
-- `alternateName[string]`: 该物品的另一个名称  
-- `annotations[array]`: 关于该项的注释  . Model: [https://schema.org/Text](https://schema.org/Text)  
-- `areaServed[string]`: 提供服务或商品的地域范围  . Model: [https://schema.org/Text](https://schema.org/Text)  
-- `brandName[string]`: 车辆的品牌名称  . Model: [https://schema.org/brand](https://schema.org/brand)  
-- `cargoVolume[number]`: 货物或行李的可用体积。对于汽车，这通常是行李厢的体积。如果只提供一个值（类型为Number），则它将指最大体积  . Model: [https://schema.org/cargoVolume](https://schema.org/cargoVolume)  
-- `color[string]`: 产品的颜色  . Model: [https://schema.org/color](https://schema.org/color)  
-- `dataProvider[string]`: 识别和谐数据实体提供者的字符序列  
-- `dateCreated[date-time]`: 实体创建时间戳。这通常由存储平台分配  
-- `dateModified[date-time]`: 实体最后修改的时间戳。这通常由存储平台分配  
-- `depth[number]`: 车辆的深度  . Model: [https://schema.org/depth](https://schema.org/depth)  
-- `description[string]`: 对此项的描述  
-- `fuelConsumption[number]`: 行駛特定距離或時間所消耗的燃料量（例如每100公里的升數）  . Model: [https://schema.org/fuelConsumption](https://schema.org/fuelConsumption)  
-- `fuelType[string]`: 车辆发动机或发动机所适用的燃料类型。枚举：'汽车气体，生物柴油，乙醇，压缩天然气，柴油，电动，汽油，混合动力电动/柴油，混合动力电动/汽油，氢，液化石油气，汽油，汽油（无铅），汽油（有铅），其他'  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)  
-- `height[number]`: 车辆高度  . Model: [https://schema.org/height](https://schema.org/height)  
-- `id[*]`: 实体的唯一标识符  
-- `image[uri]`: 该物品的图像  . Model: [https://schema.org/URL](https://schema.org/URL)  
-- `location[*]`: GeoJSON指向该项的引用。它可以是Point、LineString、Polygon、MultiPoint、MultiLineString或MultiPolygon  
-- `manufacturerName[string]`: 车辆制造商名称  . Model: [https://schema.org/Text](https://schema.org/Text)  
-- `modelName[string]`: 車輛的型號名稱  . Model: [https://schema.org/model](https://schema.org/model)  
-- `name[string]`: 该物品的名称  
-- `owner[array]`: 一个包含JSON编码序列的列表，该序列引用了所有者（们）的唯一ID的字符序列  
-- `seeAlso[*]`: 关于该项目的其他资源的URI列表  
-- `source[string]`: 实体数据的原始来源的字符序列，以URL的形式给出。建议使用源提供者的全限定域名，或源对象的URL。  
-- `type[string]`: NGSI 实体类型。它必须是 VehicleModel  
-- `url[uri]`: 提供此車型描述的URL  . Model: [https://schema.org/URL](https://schema.org/URL)  
-- `vehicleEngine[string]`: 关于车辆的发动机或发动机的信息  . Model: [https://schema.org/vehicleEngine](https://schema.org/vehicleEngine)  
-- `vehicleModelDate[date-time]`: 车辆型号的发布日期（通常用于区分同一品牌和型号的不同版本）  . Model: [https://schema.org/vehicleModelDate](https://schema.org/vehicleModelDate)  
-- `vehicleType[string]`: 从结构特征的角度来看的车辆类型。这与车辆类别不同。枚举：'农业车辆、任何车辆、半挂车、自行车、手推车、公共汽车、汽车、拖车、汽车或轻型车辆、带拖车的汽车、带拖车的汽车、清洁手推车、建筑或维护车辆、四轮驱动车、高边车、卡车、小巴、摩托车、带侧车的摩托车、摩托车、扫地机、油罐车、三轮车、拖车、有轨电车、两轮车、手推车、货车、没有催化转换器的车辆、带拖车的车辆、带拖车的车辆、带有偶数注册牌的车辆、带有奇数注册牌的车辆、其他'。以下值由_VehicleTypeEnum_和_VehicleTypeEnum2_定义，[DATEX 2版本2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)  . Model: [https://schema.org/Text](https://schema.org/Text)  
-- `weight[number]`: 车辆重量  . Model: [https://schema.org/weigth](https://schema.org/weigth)  
-- `width[number]`: 车辆宽度  . Model: [https://schema.org/width](https://schema.org/width)  
-<!-- /30-PropertiesList -->
-  
-<!-- 35-RequiredProperties -->
-  
-
-所需属性  
-- `品牌名称`  
-- `id`  
-- `manufacturerName` 制造商名称  
-- `模型名称`  
-- `名称`  
-- `类型`  
-车辆类型  
-<!-- /35-RequiredProperties -->
-  
-<!-- 40-NotesYaml -->
-  
-<!-- /40-NotesYaml -->
-  
-<!-- 50-DataModelHeader -->
-  
-
-## 数据模型属性描述  
-
-按字母顺序排列（点击查看详细信息）  
-<!-- /50-DataModelHeader -->
-  
-<!-- 60-ModelYaml -->
-  
+<sup><sub>[*] 如果属性中没有类型，则可能是因为它有多种类型或不同的格式/模式</sub></sup>  
+- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 国家。例如，西班牙  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: 街道地址所在的城镇，该城镇位于该区域内  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: 城镇所在的区域，该区域位于该国家内  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 区是一种行政区划类型，在某些国家由地方政府管理    
+	- `postOfficeBoxNumber[string]`: 邮政信箱地址的邮政信箱号码。例如，03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: 邮政编码。例如，24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: 街道地址  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: 标识公共街道上特定属性的编号    
+- `alternateName[string]`: 此项目的替代名称  - `annotations[array]`: 关于该项目的注释  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: 提供服务或商品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `brandName[string]`: 车辆品牌名称  . Model: [https://schema.org/brand](https://schema.org/brand)- `cargoVolume[number]`: 可用于货物或行李的可用容积。对于汽车，这通常指行李箱容积。如果只提供一个值（类型为 Number），则表示最大容积。  . Model: [https://schema.org/cargoVolume](https://schema.org/cargoVolume)- `color[string]`: 产品的颜色  . Model: [https://schema.org/color](https://schema.org/color)- `dataProvider[string]`: 标识协调数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。这通常由存储平台分配。  - `dateModified[date-time]`: 实体上次修改的时间戳。这通常由存储平台分配  - `depth[number]`: 车辆深度  . Model: [https://schema.org/depth](https://schema.org/depth)- `description[string]`: 此项目的描述  - `fuelConsumption[number]`: 给定车辆行驶特定距离或持续时间所消耗的燃料或能量量。对于内燃机，以每 100 公里升数表示；对于电动汽车（燃料类型为电动），以每 100 公里千瓦时表示。  . Model: [https://schema.org/fuelConsumption](https://schema.org/fuelConsumption)- `fuelType[string]`: 适用于车辆发动机的燃料类型。枚举值：'autogas, biodiesel, cng, diesel, electric, ethanol, gasoline, hybrid_electric_diesel, hybrid_electric_petrol, hydrogen, lpg, petrol, petrol(unleaded), petrol(leaded), other'  . Model: [https://schema.org/fuelType](https://schema.org/fuelType)- `height[number]`: 车辆高度  . Model: [https://schema.org/height](https://schema.org/height)- `id[*]`: 实体的唯一标识符  - `image[uri]`: 该项目的图片  . Model: [https://schema.org/URL](https://schema.org/URL)- `location[*]`: 项目的 Geojson 引用。它可以是 Point、LineString、Polygon、MultiPoint、MultiLineString 或 MultiPolygon  - `manufacturerName[string]`: 车辆制造商名称  . Model: [https://schema.org/Text](https://schema.org/Text)- `modelName[string]`: 车辆型号名称  . Model: [https://schema.org/model](https://schema.org/model)- `name[string]`: 此项目的名称  - `owner[array]`: 一个包含 JSON 编码字符序列的列表，该序列引用所有者（一个或多个）的唯一 ID  - `seeAlso[*]`: 指向有关该项目的其他资源的 URI 列表。  - `source[string]`: 以 URL 形式提供实体数据原始来源的字符序列。建议使用来源提供者的完全限定域名，或指向来源对象的 URL  - `tractionBatteryCapacity[number]`: 完全或部分由电力驱动的车辆（纯电动、插电式混合动力或混合动力汽车）的牵引电池可用能量容量。例如，可以结合油耗估算续航里程。  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: NGSI 实体类型。必须是 VehicleModel。  - `url[uri]`: 提供此车辆型号描述的 URL  . Model: [https://schema.org/URL](https://schema.org/URL)- `vehicleEngine[string]`: 车辆发动机信息  . Model: [https://schema.org/vehicleEngine](https://schema.org/vehicleEngine)- `vehicleModelDate[date-time]`: 车辆型号的发布日期（通常用于区分同一品牌和型号的不同版本）  . Model: [https://schema.org/vehicleModelDate](https://schema.org/vehicleModelDate)- `vehicleType[string]`: 从结构特征角度划分的车辆类型。这与车辆类别不同。枚举值：'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'。以下值由 _VehicleTypeEnum_ 和 _VehicleTypeEnum2_ 定义，[DATEX 2 版本 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)  . Model: [https://schema.org/Text](https://schema.org/Text)- `weight[number]`: 车辆重量  . Model: [https://schema.org/weight](https://schema.org/weight)- `width[number]`: 车辆宽度  . Model: [https://schema.org/width](https://schema.org/width)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必填属性  
+- `brandName`  - `id`  - `manufacturerName`  - `modelName`  - `name`  - `type`  - `vehicleType`  <!-- /35-RequiredProperties -->  
+<!-- 40-NotesYaml -->  
+<!-- /40-NotesYaml -->  
+<!-- 50-DataModelHeader -->  
+## 属性的数据模型描述  
+按字母顺序排序（点击查看详情）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
-
-```yaml  
+```yaml  
 VehicleModel:    
   description: This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.    
   properties:    
@@ -229,15 +164,15 @@ VehicleModel:
       x-ngsi:    
         type: Property    
     fuelConsumption:    
-      description: The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km)    
+      description: The amount of fuel or energy consumed for traveling a particular distance or temporal duration with the given vehicle. For combustion engines it is expressed in liters per 100 km, for electric vehicles (fuelType electric) in kilowatt hours per 100 km    
       minimum: 0    
       type: number    
       x-ngsi:    
         model: https://schema.org/fuelConsumption    
         type: Property    
-        units: liters per 100 kilometer    
+        units: liters per 100 kilometer or kilowatt hour per 100 kilometer    
     fuelType:    
-      description: The type of fuel suitable for the engine or engines of the vehicle. Enum:'autogas, biodiesel, ethanol, cng, diesel, electric, gasoline, hybrid electric/diesel, hybrid electric/petrol, hydrogen, lpg, petrol, petrol(unleaded), petrol(leaded), other'    
+      description: The type of fuel suitable for the engine or engines of the vehicle. Enum:'autogas, biodiesel, cng, diesel, electric, ethanol, gasoline, hybrid_electric_diesel, hybrid_electric_petrol, hydrogen, lpg, petrol, petrol(unleaded), petrol(leaded), other'    
       enum:    
         - autogas    
         - biodiesel    
@@ -256,7 +191,7 @@ VehicleModel:
         - other    
       type: string    
       x-ngsi:    
-        model: https://schema.org/DateTime    
+        model: https://schema.org/fuelType    
         type: Property    
     height:    
       description: Vehicle's height    
@@ -543,6 +478,14 @@ VehicleModel:
       type: string    
       x-ngsi:    
         type: Property    
+    tractionBatteryCapacity:    
+      description: Usable energy capacity of the traction battery of vehicles fully or partly powered by electricity (battery electric, plug-in hybrid or hybrid vehicles). Allows, for instance, estimating the driving range together with fuelConsumption    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: kilowatt hour    
     type:    
       description: NGSI Entity type. It has to be VehicleModel    
       enum:    
@@ -600,11 +543,11 @@ VehicleModel:
         model: https://schema.org/Text    
         type: Property    
     weight:    
-      description: Vehicle's weigth    
+      description: Vehicle's weight    
       minimum: 0    
       type: number    
       x-ngsi:    
-        model: https://schema.org/weigth    
+        model: https://schema.org/weight    
         type: Property    
     width:    
       description: Vehicle's width    
@@ -623,104 +566,93 @@ VehicleModel:
     - manufacturerName    
   type: object    
   x-derived-from: ''    
-  x-disclaimer: Redistribution and use in source and binary forms...    
+  x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program    
   x-license-url: https://github.com/smart-data-models/dataModel.Transportation/blob/master/VehicleModel/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Transportation/VehicleModel/schema.json    
   x-model-tags: ''    
-  x-version: 0.0.2    
+  x-version: 0.0.3    
 ```  
 </details>    
-<!-- /60-ModelYaml -->
-  
-<!-- 70-MiddleNotes -->
-  
-<!-- /70-MiddleNotes -->
-  
-<!-- 80-Examples -->
-  
-
-## 示例有效载荷  
-
-#### 车辆模型NGSI-v2键值示例  
-
-这里是一个以JSON格式的键值对表示的VehicleModel示例。当使用`options=keyValues`时，它与NGSI-v2兼容，并返回单个实体的上下文数据。  
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
+## 示例载荷    
+#### VehicleModel NGSI-v2 键值对示例  
+这是键值对形式的 JSON-LD 格式的 VehicleModel 示例。当使用 `options=keyValues` 时，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
-
-```json  
-
-{  
-  "id": "vehiclemodel:econic",  
+```json  
+{  
+  "id": "vehiclemodel:buzz",  
   "type": "VehicleModel",  
-  "name": "MBenz-Econic2014",  
-  "brandName": "Mercedes Benz",  
-  "modelName": "Econic",  
-  "manufacturerName": "Daimler",  
-  "vehicleType": "lorry",  
-  "cargoVolume": 1000,  
-  "fuelType": "diesel"  
+  "name": "VW-IDBuzz",  
+  "brandName": "Volkswagen",  
+  "modelName": "ID. Buzz",  
+  "manufacturerName": "Volkswagen",  
+  "vehicleType": "car",  
+  "fuelType": "electric",  
+  "fuelConsumption": 20.7,  
+  "tractionBatteryCapacity": 79  
 }  
 ```  
 </details>  
-
-#### 车辆模型NGSI-v2标准化示例  
-
-这是一个VehicleModel在JSON格式的标准化示例。当不使用选项时，它与NGSI-v2兼容，并返回单个实体的上下文数据。  
+#### VehicleModel NGSI-v2 规范化示例  
+这是规范化后的 JSON-LD 格式的 VehicleModel 示例。当不使用 `options` 时，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
-
-```json  
-
-{  
-  "id": "vehiclemodel:econic",  
+```json  
+{  
+  "id": "vehiclemodel:buzz",  
   "type": "VehicleModel",  
   "name": {  
     "type": "Text",  
-    "value": "MBenz-Econic2014"  
-  },  
-  "cargoVolume": {  
-    "type": "Number",  
-    "value": 1000  
-  },  
-  "modelName": {  
-    "type": "Text",  
-    "value": "Econic"  
+    "value": "VW-IDBuzz"  
   },  
   "brandName": {  
     "type": "Text",  
-    "value": "Mercedes Benz"  
+    "value": "Volkswagen"  
+  },  
+  "modelName": {  
+    "type": "Text",  
+    "value": "ID. Buzz"  
   },  
   "manufacturerName": {  
     "type": "Text",  
-    "value": "Daimler"  
-  },  
-  "fuelType": {  
-    "type": "Text",  
-    "value": "diesel"  
+    "value": "Volkswagen"  
   },  
   "vehicleType": {  
     "type": "Text",  
-    "value": "lorry"  
+    "value": "car"  
+  },  
+  "fuelType": {  
+    "type": "Text",  
+    "value": "electric"  
+  },  
+  "fuelConsumption": {  
+    "type": "Number",  
+    "value": 20.7  
+  },  
+  "tractionBatteryCapacity": {  
+    "type": "Number",  
+    "value": 79  
   }  
 }  
 ```  
 </details>  
-
-#### 车辆模型NGSI-LD键值示例  
-
-这是一个以JSON-LD格式的VehicleModel示例，以键值对的形式表示。当使用`options=keyValues`时，它与NGSI-LD兼容，并返回单个实体的上下文数据。  
+#### VehicleModel NGSI-LD 键值对示例  
+这是键值对形式的 JSON-LD 格式的 VehicleModel 示例。当使用 `options=keyValues` 时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
-
-```json  
-
-{  
-  "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",  
+```json  
+{  
+  "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:buzz",  
   "type": "VehicleModel",  
-  "brandName": "Mercedes Benz",  
-  "cargoVolume": 1000,  
-  "fuelType": "diesel",  
-  "manufacturerName": "Daimler",  
-  "modelName": "Econic",  
-  "name": "MBenz-Econic2014",  
-  "vehicleType": "lorry",  
+  "name": "VW-IDBuzz",  
+  "brandName": "Volkswagen",  
+  "modelName": "ID. Buzz",  
+  "manufacturerName": "Volkswagen",  
+  "vehicleType": "car",  
+  "fuelType": "electric",  
+  "fuelConsumption": 20.7,  
+  "tractionBatteryCapacity": 79,  
   "@context": [  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"  
@@ -728,44 +660,44 @@ VehicleModel:
 }  
 ```  
 </details>  
-
-#### 车辆模型NGSI-LD标准化示例  
-
-这是一个以JSON-LD格式标准化的VehicleModel示例。当不使用选项时，它与NGSI-LD兼容，并返回个体实体的上下文数据。  
+#### VehicleModel NGSI-LD 规范化示例  
+这是规范化后的 JSON-LD 格式的 VehicleModel 示例。当不使用 `options` 时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
-
-```json  
-
-{  
-    "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",  
+```json  
+{  
+    "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:buzz",  
     "type": "VehicleModel",  
+    "name": {  
+        "type": "Property",  
+        "value": "VW-IDBuzz"  
+    },  
     "brandName": {  
         "type": "Property",  
-        "value": "Mercedes Benz"  
-    },  
-    "cargoVolume": {  
-        "type": "Property",  
-        "value": 1000  
-    },  
-    "fuelType": {  
-        "type": "Property",  
-        "value": "diesel"  
-    },  
-    "manufacturerName": {  
-        "type": "Property",  
-        "value": "Daimler"  
+        "value": "Volkswagen"  
     },  
     "modelName": {  
         "type": "Property",  
-        "value": "Econic"  
+        "value": "ID. Buzz"  
     },  
-    "name": {  
+    "manufacturerName": {  
         "type": "Property",  
-        "value": "MBenz-Econic2014"  
+        "value": "Volkswagen"  
     },  
     "vehicleType": {  
         "type": "Property",  
-        "value": "lorry"  
+        "value": "car"  
+    },  
+    "fuelType": {  
+        "type": "Property",  
+        "value": "electric"  
+    },  
+    "fuelConsumption": {  
+        "type": "Property",  
+        "value": 20.7  
+    },  
+    "tractionBatteryCapacity": {  
+        "type": "Property",  
+        "value": 79  
     },  
     "@context": [  
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
@@ -773,21 +705,12 @@ VehicleModel:
     ]  
 }  
 ```  
-</details><!-- /80-Examples -->
-  
-<!-- 90-FooterNotes -->
-  
-<!-- /90-FooterNotes -->
-  
-<!-- 95-Units -->
-  
-
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
-<!-- /95-Units -->
-  
-<!-- 97-LastFooter -->
-  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+请参阅 [常见问题 10](https://smartdatamodels.org/index.php/faqs/)，了解如何处理数量单位的答案  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
 ---  
-
-[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->
-  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  

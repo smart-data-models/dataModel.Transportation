@@ -1,33 +1,37 @@
 {
-    "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:econic",
+    "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:buzz",
     "type": "VehicleModel",
+    "name": {
+        "type": "Property",
+        "value": "VW-IDBuzz"
+    },
     "brandName": {
         "type": "Property",
-        "value": "Mercedes Benz"
-    },
-    "cargoVolume": {
-        "type": "Property",
-        "value": 1000
-    },
-    "fuelType": {
-        "type": "Property",
-        "value": "diesel"
-    },
-    "manufacturerName": {
-        "type": "Property",
-        "value": "Daimler"
+        "value": "Volkswagen"
     },
     "modelName": {
         "type": "Property",
-        "value": "Econic"
+        "value": "ID. Buzz"
     },
-    "name": {
+    "manufacturerName": {
         "type": "Property",
-        "value": "MBenz-Econic2014"
+        "value": "Volkswagen"
     },
     "vehicleType": {
         "type": "Property",
-        "value": "lorry"
+        "value": "car"
+    },
+    "fuelType": {
+        "type": "Property",
+        "value": "electric"
+    },
+    "fuelConsumption": {
+        "type": "Property",
+        "value": 20.7
+    },
+    "tractionBatteryCapacity": {
+        "type": "Property",
+        "value": 79
     },
     "@context": [
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",

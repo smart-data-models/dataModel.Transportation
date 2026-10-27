@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$schemaVersion": "0.0.2",
+  "$schemaVersion": "0.0.3",
   "modelTags": "",
   "$id": "https://smart-data-models.github.io/dataModel.Transportation/VehicleModel/schema.json",
   "title": " - Vehicle / Vehicle Model",
@@ -77,7 +77,7 @@
         },
         "fuelType": {
           "type": "string",
-          "description": "Property. The type of fuel suitable for the engine or engines of the vehicle. Model:'https://schema.org/DateTime'. Enum:'autogas, biodiesel, ethanol, cng, diesel, electric, gasoline, hybrid electric/diesel, hybrid electric/petrol, hydrogen, lpg, petrol, petrol(unleaded), petrol(leaded), other'",
+          "description": "Property. The type of fuel suitable for the engine or engines of the vehicle. Model:'https://schema.org/fuelType'. Enum:'autogas, biodiesel, cng, diesel, electric, ethanol, gasoline, hybrid_electric_diesel, hybrid_electric_petrol, hydrogen, lpg, petrol, petrol(unleaded), petrol(leaded), other'",
           "enum": [
             "autogas",
             "biodiesel",
@@ -99,7 +99,12 @@
         "fuelConsumption": {
           "type": "number",
           "minimum": 0,
-          "description": "Property. The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km). Model:'https://schema.org/fuelConsumption'. Units:'liters per 100 kilometer'"
+          "description": "Property. The amount of fuel or energy consumed for traveling a particular distance or temporal duration with the given vehicle. For combustion engines it is expressed in liters per 100 km, for electric vehicles (fuelType electric) in kilowatt hours per 100 km. Model:'https://schema.org/fuelConsumption'. Units:'liters per 100 kilometer or kilowatt hour per 100 kilometer'"
+        },
+        "tractionBatteryCapacity": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Usable energy capacity of the traction battery of vehicles fully or partly powered by electricity (battery electric, plug-in hybrid or hybrid vehicles). Allows, for instance, estimating the driving range together with fuelConsumption. Model:'https://schema.org/Number'. Units:'kilowatt hour'"
         },
         "height": {
           "type": "number",
@@ -119,7 +124,7 @@
         "weight": {
           "type": "number",
           "minimum": 0,
-          "description": "Property. Vehicle's weigth. Model:'https://schema.org/weigth'"
+          "description": "Property. Vehicle's weight. Model:'https://schema.org/weight'"
         },
         "vehicleEngine": {
           "type": "string",

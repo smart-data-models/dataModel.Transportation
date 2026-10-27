@@ -1,5 +1,4 @@
 # dataModel.Transportation
-
 These data models describe the main entities involved with smart applications that deal with transportation issues. This set of entities is primarily associated with the Automotive and Smart City vertical segments and related IoT applications.
 When feasible, references to existing schema.org entity types and attributes are included.
 These models have been devised to be as generic as possible, thus allowing to deal with different scenarios
@@ -8,11 +7,11 @@ These models have been devised to be as generic as possible, thus allowing to de
 ### List of data models
 
 The following entity types are available:
+- [APDSObservation](https://github.com/smart-data-models/dataModel.Transportation/blob/master/APDSObservation/README.md). This entity models a particular observation of a set of ANPR camera. The Observation might be done with several ANPR cameras, but is limited to the observation of ONE vehicle. It implements the APDS data model https://www.allianceforparkingdatastandards.org/
+
 - [AnonymousCommuterId](https://github.com/smart-data-models/dataModel.Transportation/blob/master/AnonymousCommuterId/README.md). Anonymized identifier for flow monitoring. Includes an origin and destiny property to map its path.
 
 - [AnprFlowObserved](https://github.com/smart-data-models/dataModel.Transportation/blob/master/AnprFlowObserved/README.md). The data model represents an observation linked to the passing of a vehicle at a certain location and at a given time. This Data Model is based on the [dataModel.Transportation/ItemFlowObserved], extended with ANPR specific properties and links to the observation images.
-
-- [APDSObservation](https://github.com/smart-data-models/dataModel.Transportation/blob/master/APDSObservation/README.md). This entity models a particular observation of a set of ANPR camera. The Observation might be done with several ANPR cameras, but is limited to the observation of ONE vehicle. It implements the APDS data model https://www.allianceforparkingdatastandards.org/
 
 - [BikeHireDockingStation](https://github.com/smart-data-models/dataModel.Transportation/blob/master/BikeHireDockingStation/README.md). Bike Hire Docking Station
 
@@ -22,9 +21,9 @@ The following entity types are available:
 
 - [CrowdFlowObserved](https://github.com/smart-data-models/dataModel.Transportation/blob/master/CrowdFlowObserved/README.md). CrowdFlowObserved
 
-- [ElectricVehicleMobility](https://github.com/smart-data-models/dataModel.Transportation/blob/master/ElectricVehicleMobility/README.md). Daily observation of electric vehicle mobility patterns aggregated by location, vehicle brand, and geographic region.
-
 - [EVChargingStation](https://github.com/smart-data-models/dataModel.Transportation/blob/master/EVChargingStation/README.md). EV Charging Station
+
+- [ElectricVehicleMobility](https://github.com/smart-data-models/dataModel.Transportation/blob/master/ElectricVehicleMobility/README.md). Daily observation of electric vehicle mobility patterns aggregated by location, vehicle brand, and geographic region.
 
 - [FareCollectionSystem](https://github.com/smart-data-models/dataModel.Transportation/blob/master/FareCollectionSystem/README.md). A public transit fare collection system Data Model
 
@@ -62,8 +61,11 @@ The following entity types are available:
 
 - [VehicleModel](https://github.com/smart-data-models/dataModel.Transportation/blob/master/VehicleModel/README.md). This entity models a particular vehicle model, including all properties which are common to multiple vehicle instances belonging to such model.
 
+
+
 ### Contributors
-[Link](https://github.com/smart-data-models/dataModel.Transportation/blob/master/CONTRIBUTORS.yaml) to the 22 current contributors.
+[Link](https://github.com/smart-data-models/dataModel.Transportation/blob/master/CONTRIBUTORS.yaml) to the 22 current contributors of the data models of this Subject.
+
 
 ### Contribution
-You can raise an [issue](https://github.com/smart-data-models/dataModel.Transportation/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.Transportation/pulls) on existing data models.
+You can raise an [issue](https://github.com/smart-data-models/dataModel.Transportation/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.Transportation/pulls) on existing data models
